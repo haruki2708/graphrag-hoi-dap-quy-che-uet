@@ -8,6 +8,14 @@ Dự án: chatbot GraphRAG hỏi đáp quy chế đào tạo Trường ĐH Công
 
 T1 (17–23/10/2026) — xem dòng T1 trong `docs/PLAN.md` mục 5. Chủ dự án sẽ tự cập nhật dòng này mỗi tuần.
 
+## Đầu mỗi phiên làm việc
+
+1. Đọc `docs/weekly/wN.md` của tuần hiện tại, nhất là phần việc còn lại.
+2. Chạy `git status`; có thay đổi chưa commit hoặc `main` lệch `origin/main` thì báo trước.
+3. Báo ngắn: đang tuần mấy, việc nào xong, việc nào còn. Sau đó mới làm.
+
+Schema đồ thị: `docs/schema_v1.md`. Mục nào ở cột "Quyết định" (S1–S5, Q2–Q11) còn trống thì không code theo mục đó; nêu phương án và hỏi.
+
 ## Quy tắc bắt buộc
 
 - Trả lời và viết comment, docstring, commit message mô tả bằng **tiếng Việt**; tên biến, hàm, file bằng tiếng Anh.
