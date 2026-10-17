@@ -1,0 +1,17 @@
+# Neo4j Community 5.26 (LTS) kèm APOC cho dự án GraphRAG quy chế UET.
+# Biến NEO4J_USER, NEO4J_PASSWORD đọc tự động từ file .env cùng thư mục.
+services:
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: graphrag-neo4j
+    restart: unless-stopped
+    ports:
+      - "7474:7474" # Neo4j Browser (HTTP)
+      - "7687:7687" # Bolt (driver Python)
+    environment:
+      NEO4J_AUTH: "${NEO4J_USER:?Thiếu NEO4J_USER trong .env}/${NEO4J_PASSWORD:?Thiếu NEO4J_PASSWORD trong .env}"
+      NEO4J_PLUGINS: '["apoc"]'
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/logs:/logs
+      - ./neo4j/plugins:/plugins
