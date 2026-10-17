@@ -26,4 +26,8 @@ Cập nhật `docs/weekly/wN.md` (N = tuần hiện tại): đã làm gì, số 
 
 ## Cách chạy
 
-Chưa có — bổ sung khi có môi trường (T1).
+Chi tiết trong `README.md`. Tóm tắt (từ thư mục gốc repo, Python 3.12, venv tại `.venv/`):
+
+- Neo4j: `docker compose up -d` (Neo4j 5.26 Community + APOC; Browser http://localhost:7474)
+- Kiểm tra kết nối: `.venv/Scripts/python scripts/check_neo4j.py` → `RETURN 1 -> 1`
+- Tách văn bản: `.venv/Scripts/python src/ingest/parse_regulation.py` → `data/processed/qc3626.json` (51 điều, báo `ĐẠT`)
