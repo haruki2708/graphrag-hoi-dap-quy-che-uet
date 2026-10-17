@@ -1,0 +1,41 @@
+{
+  "doc_id": "qc3626",
+  "description": "Sửa tay các đoạn trích chữ bị vỡ (công thức font Symbol, bảng). Mỗi mục: chuỗi 'find' phải xuất hiện đúng 1 lần trong own_text của đơn vị; đã đối chiếu với ảnh trang PDF.",
+  "overrides": [
+    {
+      "unit_id": "qc3626.d8.k1.b",
+      "page": 6,
+      "find": "- Học phí được tính theo công thức:    k i i jn h a M 1 (j = 1 ÷ 4) trong đó:",
+      "replace": "- Học phí được tính theo công thức: M = a × Σ(i=1→k) h_j × n_i (j = 1 ÷ 4), trong đó:",
+      "note": "Công thức học phí bị vỡ (ký hiệu Σ, = dùng font Symbol). Viết lại dạng chữ theo ảnh trang 6."
+    },
+    {
+      "unit_id": "qc3626.d17.k2",
+      "page": 15,
+      "find": "sinh viên được xếp năm đào tạo như sau: Năm đào tạo Chương trình đào tạo chuẩn Chương trình đào tạo chất lượng cao Chương trình đào tạo tài năng Năm thứ nhất Dưới 35 tín chỉ Dưới 40 tín chỉ Dưới 45 tín chỉ Năm thứ hai Từ 35 - 70 tín chỉ Từ 40 – 80 tín chỉ Từ 45 – 90 tín chỉ Năm thứ ba Từ 71 – 105 tín chỉ Từ 81 – 115 tín chỉ Từ 91 – 130 tín chỉ Năm thứ tư Từ 106 – 140 tín chỉ Từ 116 – 155 tín chỉ Từ 131 –170 tín chỉ Năm thứ năm Từ 141 – 175 tín chỉ - - Năm thứ sáu Từ 176 – 225 tín chỉ - -",
+      "replace": "sinh viên được xếp năm đào tạo như sau:\n| Năm đào tạo | Chương trình đào tạo chuẩn | Chương trình đào tạo chất lượng cao | Chương trình đào tạo tài năng |\n| --- | --- | --- | --- |\n| Năm thứ nhất | Dưới 35 tín chỉ | Dưới 40 tín chỉ | Dưới 45 tín chỉ |\n| Năm thứ hai | Từ 35 - 70 tín chỉ | Từ 40 – 80 tín chỉ | Từ 45 – 90 tín chỉ |\n| Năm thứ ba | Từ 71 – 105 tín chỉ | Từ 81 – 115 tín chỉ | Từ 91 – 130 tín chỉ |\n| Năm thứ tư | Từ 106 – 140 tín chỉ | Từ 116 – 155 tín chỉ | Từ 131 –170 tín chỉ |\n| Năm thứ năm | Từ 141 – 175 tín chỉ | - | - |\n| Năm thứ sáu | Từ 176 – 225 tín chỉ | - | - |",
+      "note": "Bảng xếp năm đào tạo bị dàn thành một dòng. Dựng lại bảng Markdown, giữ nguyên chữ trong từng ô theo ảnh trang 15."
+    },
+    {
+      "unit_id": "qc3626.d43.k1",
+      "page": 44,
+      "find": "được quy đổi thành điểm số như sau: A+ tương ứng với 4,0 A tương ứng với 3,7 B+ tương ứng với 3,5 B tương ứng với 3,0 C+ tương ứng với 2,5 C tương ứng với 2,0 D+ tương ứng với 1,5 D tương ứng với 1,0 F tương ứng với 0",
+      "replace": "được quy đổi thành điểm số như sau:\n- A+ tương ứng với 4,0\n- A tương ứng với 3,7\n- B+ tương ứng với 3,5\n- B tương ứng với 3,0\n- C+ tương ứng với 2,5\n- C tương ứng với 2,0\n- D+ tương ứng với 1,5\n- D tương ứng với 1,0\n- F tương ứng với 0",
+      "note": "Bảng quy đổi điểm chữ → điểm số bị dàn thành một dòng. Tách mỗi mức một dòng, chữ giữ nguyên theo ảnh trang 44–45."
+    },
+    {
+      "unit_id": "qc3626.d43.k2",
+      "page": 45,
+      "find": "được làm tròn đến 2 chữ số thập phân: trong đó:",
+      "replace": "được làm tròn đến 2 chữ số thập phân: A = [Σ(i=1→n) a_i × n_i] / [Σ(i=1→n) n_i], trong đó:",
+      "note": "Công thức điểm trung bình chung bị mất ở vị trí gốc (font Symbol). Viết lại theo ảnh trang 45."
+    },
+    {
+      "unit_id": "qc3626.d43.k2",
+      "page": 45,
+      "find": "      n i i n i i i n n a A 1 1 Điểm trung bình chung các học phần",
+      "replace": " Điểm trung bình chung các học phần",
+      "note": "Bỏ mảnh vỡ của công thức điểm trung bình chung bị đẩy xuống giữa đoạn văn."
+    }
+  ]
+}

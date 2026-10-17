@@ -16,6 +16,10 @@ Quy tắc nhận diện:
 - Khoản: dòng bắt đầu "M. " với M = khoản trước + 1. Điểm: dòng bắt đầu "x) " theo thứ tự chữ cái
   tiếng Việt (a, b, c, d, đ, e, g, ...). Điều kiện liên tiếp giúp tránh nhận nhầm dòng bị ngắt giữa câu.
 - Bỏ dòng số trang và header/footer lặp lại ở mép trên/dưới trang.
+
+Sửa tay: nếu có data/raw/core/<doc_id>.overrides.json thì áp các cặp find/replace vào own_text của
+đơn vị tương ứng (công thức, bảng bị vỡ khi trích chữ). Mỗi chuỗi find phải xuất hiện đúng 1 lần,
+nếu không thì dừng — tránh sửa sai chỗ khi parser thay đổi. Đơn vị đã sửa có trường "overrides".
 """
 
 import json
@@ -40,6 +44,8 @@ RE_ARTICLE = re.compile(r"^Điều\s+(\d+)\s*\.\s*(.*)$")
 RE_CLAUSE = re.compile(r"^(\d{1,2})\.\s+\S")
 RE_POINT = re.compile(r"^([a-zđ])\)\s*\S")
 RE_PAGE_NUMBER = re.compile(r"^\d{1,3}$")
+# Ký tự vùng dùng riêng (Private Use Area): thường là ký hiệu font Symbol bị trích sai
+RE_PRIVATE_USE = re.compile(r"[-]")
 
 # Dòng nằm trong dải này (tỷ lệ chiều cao trang) mới được xét là header/footer
 EDGE_BAND = 0.08
@@ -63,6 +69,7 @@ class Unit:
     title: str | None = None
     lines: list[Line] = field(default_factory=list)
     children: list["Unit"] = field(default_factory=list)
+    patches: list[dict] = field(default_factory=list)  # các mục sửa tay từ file overrides
 
 
 def roman_to_int(s: str) -> int:
@@ -235,8 +242,38 @@ def join_lines(lines: list[Line]) -> str:
     return out
 
 
+def walk(unit: Unit):
+    yield unit
+    for c in unit.children:
+        yield from walk(c)
+
+
+def attach_overrides(chapters: list[Unit], doc_id: str) -> int:
+    """Gắn các mục sửa tay vào đơn vị; trả về số mục. Dừng nếu mã đơn vị không tồn tại."""
+    path = RAW_DIR / f"{doc_id}.overrides.json"
+    if not path.exists():
+        return 0
+    items = json.loads(path.read_text(encoding="utf-8"))["overrides"]
+    units = {u.id: u for ch in chapters for u in walk(ch)}
+    for item in items:
+        if item["unit_id"] not in units:
+            raise ValueError(f"{path.name}: không có đơn vị {item['unit_id']}")
+        units[item["unit_id"]].patches.append(item)
+    return len(items)
+
+
+def own_text(unit: Unit) -> str:
+    text = join_lines(unit.lines)
+    for p in unit.patches:
+        count = text.count(p["find"])
+        if count != 1:
+            raise ValueError(f"Sửa tay {unit.id}: chuỗi find xuất hiện {count} lần (cần đúng 1): {p['find'][:60]!r}")
+        text = text.replace(p["find"], p["replace"])
+    return text
+
+
 def full_text(unit: Unit) -> str:
-    parts = [join_lines(unit.lines)] if unit.lines else []
+    parts = [own_text(unit)] if unit.lines else []
     parts += [full_text(c) for c in unit.children]
     return "\n".join(p for p in parts if p)
 
@@ -258,13 +295,15 @@ def flatten(unit: Unit) -> list[dict]:
         "title": unit.title,
         "page_start": min(pages),
         "page_end": max(pages),
-        "own_text": join_lines(unit.lines),  # chỉ phần của chính đơn vị, không gồm đơn vị con
+        "own_text": own_text(unit),  # chỉ phần của chính đơn vị, không gồm đơn vị con
         "text": full_text(unit),  # nguyên văn đầy đủ, gồm đơn vị con
     }
     if unit.type == "chuong":
         record["roman"] = unit.roman
     if unit.type == "dieu":
         record["n_khoan"] = sum(c.type == "khoan" for c in unit.children)
+    if unit.patches:
+        record["overrides"] = [p["note"] for p in unit.patches]
     records = [record]
     for c in unit.children:
         records += flatten(c)
@@ -291,6 +330,7 @@ def print_report(meta: dict, chapters: list[Unit], removed: list[str], warnings:
 
     ok = numbers == list(range(1, 52)) and len(chapters) == 9
     print(f"Tổng: {len(chapters)} chương, {len(articles)} điều, {n_clauses} khoản, {n_points} điểm")
+    print(f"Sửa tay đã áp dụng: {meta.get('n_overrides', 0)} mục")
     print(f"Kiểm tra 9 chương & Điều 1→51 liên tiếp, không thiếu/lặp: {'ĐẠT' if ok else 'KHÔNG ĐẠT'}")
     if warnings:
         print("Cảnh báo:")
@@ -301,7 +341,8 @@ def print_report(meta: dict, chapters: list[Unit], removed: list[str], warnings:
 
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
-    pdfs = sorted(RAW_DIR.glob("*.pdf"))
+    # Bỏ file khóa tạm "~$..." do Word/WPS tạo khi đang mở file
+    pdfs = sorted(p for p in RAW_DIR.glob("*.pdf") if not p.name.startswith("~$"))
     if not pdfs:
         print(f"Không có PDF trong {RAW_DIR}", file=sys.stderr)
         return 1
@@ -316,8 +357,12 @@ def main() -> int:
             return 1
         meta, chapters, warnings = parse(lines, doc_id)
         meta["source_file"] = pdf.relative_to(REPO_ROOT).as_posix()
+        meta["n_overrides"] = attach_overrides(chapters, doc_id)
 
         units = [u for ch in chapters for u in flatten(ch)]
+        for u in units:
+            if RE_PRIVATE_USE.search(u["own_text"]):
+                warnings.append(f"{u['id']} (tr. {u['page_start']}): còn ký tự lạ (font Symbol?) — cần sửa tay")
         out_path = OUT_DIR / f"{doc_id}.json"
         out_path.write_text(
             json.dumps({"document": meta, "units": units}, ensure_ascii=False, indent=2),

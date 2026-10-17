@@ -105,6 +105,9 @@ Kết quả: `data/processed/<mã văn bản>.json` (ví dụ `qc3626.json`) g�
 mỗi đơn vị có mã ổn định (`qc3626.d12.k2`), số trang và nguyên văn. Script in danh sách điều theo chương
 và báo `ĐẠT` khi đủ 9 chương, Điều 1→51 liên tiếp.
 
+Công thức và bảng bị vỡ khi trích chữ được sửa tay trong `data/raw/core/<mã văn bản>.overrides.json`
+(cặp `find`/`replace` kèm số trang và lý do). Script cảnh báo nếu còn ký tự lạ chưa được sửa.
+
 ## Cấu trúc thư mục
 
 Xem [docs/PLAN.md](docs/PLAN.md) mục 7.
