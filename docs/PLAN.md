@@ -65,7 +65,7 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 
 | Tuần | Mục tiêu | Việc chính | Xong khi |
 | --- | --- | --- | --- |
-| T1 · 17–23/10 | Dữ liệu sạch, môi trường | Repo, `CLAUDE.md`, `docker-compose.yml` cho Neo4j; script đọc văn bản và tách chương/điều/khoản; schema v1 bản nháp (chủ dự án làm) | Script đếm đúng 51 điều, khớp mục lục; Neo4j Browser mở được |
+| T1 · 17–23/10 | Dữ liệu sạch, môi trường | Repo, `CLAUDE.md`, `docker-compose.yml` cho Neo4j; script đọc văn bản và tách chương/điều/khoản; schema v1 bản nháp (chủ dự án làm) | Script đếm đúng 51 điều, khớp mục lục; Neo4j Browser mở được; repo có commit; có bản nháp schema v1 |
 | T2 · 24–30/10 | Baseline | `rag_baseline` (chunk theo khoản, top-k, trích dẫn); `llm_only`; so 2 embedding; bộ câu hỏi v1 (~60 câu, 4 loại); script đánh giá | Script đánh giá chạy hết v1 cho 2 baseline, xuất CSV; có Recall@5 |
 | T3 · 31/10–6/11 | Lớp cấu trúc | Schema (LLM gợi ý, chủ dự án duyệt); nạp VanBan–Chuong–Dieu–Khoan; cạnh DAN_CHIEU; vector index | Cypher đếm ra 51 điều; truy vấn "khoản nào dẫn chiếu Điều X" đúng trên 5 ví dụ kiểm tay |
 | T4 · 7–13/11 | Lớp ngữ nghĩa | Trích thực thể–quan hệ theo schema, chạy thử 5 điều trước; gộp thực thể trùng; xuất mẫu 30 bộ ba để kiểm tay | Tỷ lệ bộ ba đúng ghi trong `docs/weekly/w4.md` |
