@@ -1,1 +1,99 @@
-# graphrag-hoi-dap-quy-che-uet
+# PLAN — GraphRAG hỏi đáp quy chế đào tạo UET
+
+> Bản kế hoạch dành cho Claude Code. Tiến độ và quyết định được theo dõi chính trên Notion của chủ dự án.
+> Cập nhật lần cuối: 17/10/2026 (đổi sang 10 tuần theo chốt của giảng viên). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
+
+## 1. Mục tiêu
+
+Chatbot trả lời câu hỏi tiếng Việt về quy chế đào tạo của Trường ĐH Công nghệ (UET – ĐHQGHN).
+Ngữ cảnh cho LLM được lấy từ **đồ thị tri thức** dựng từ văn bản quy chế (GraphRAG), không chỉ từ đoạn văn giống câu hỏi.
+Phải **chứng minh bằng số liệu** đồ thị giúp trả lời tốt hơn RAG thường.
+
+Mỗi câu trả lời gồm: (1) câu trả lời ngắn; (2) căn cứ "Điều X, khoản Y, [tên văn bản]"; (3) đoạn trích nguyên văn.
+Không tìm thấy căn cứ → nói rõ là không tìm thấy, không đoán.
+
+## 2. Phạm vi dữ liệu
+
+| Văn bản | Trạng thái |
+| --- | --- |
+| Quy chế đào tạo đại học ĐHQGHN, QĐ 3626/QĐ-ĐHQGHN ngày 21/10/2022 — 9 chương, 51 điều | Văn bản lõi, làm trước. Chưa kiểm tra văn bản sửa đổi sau 2022 |
+| Quy định, hướng dẫn riêng của UET (học bổng, tốt nghiệp, POHE…) | Chưa có danh sách. Chỉ thêm khi pipeline đã ổn và còn thời gian |
+| Thông tư 08/2021/TT-BGDĐT (quy chế đào tạo đại học của Bộ) | Tùy chọn, tuần 5 |
+
+**Không dùng dữ liệu sinh viên thật** (điểm, họ tên, mã SV). Cần demo cá nhân hóa → dữ liệu giả lập.
+
+## 3. Kiến trúc
+
+Luồng A — dựng chỉ mục (chạy một lần):
+1. `src/ingest/`: đọc PDF/DOCX → chuẩn hóa Unicode (NFC) → tách chương / điều / khoản / điểm bằng regex → `data/processed/*.json`, mỗi nút có mã ổn định (ví dụ `qc3626.d12.k2`).
+2. `src/kg/` lớp cấu trúc (quy tắc, không dùng LLM): nút `VanBan`, `Chuong`, `Dieu`, `Khoan`; cạnh `THUOC`, `DAN_CHIEU` (bắt "theo quy định tại Điều X" bằng regex), `SUA_DOI`.
+3. `src/kg/` lớp ngữ nghĩa (LLM, theo schema đã duyệt): khái niệm, đối tượng, điều kiện, ngưỡng, hệ quả; mỗi thực thể/quan hệ giữ liên kết về `Khoan` nguồn. Có bước gộp thực thể trùng.
+4. Vector index trên nội dung từng `Khoan` (và mô tả thực thể nếu cần).
+
+Luồng B — hỏi đáp (mỗi câu hỏi):
+1. `src/retrieval/`: tìm điểm vào bằng vector (+ từ khóa) trên khoản/thực thể.
+2. Mở rộng 1–2 bước theo cạnh trên đồ thị; Text2Cypher cho câu hỏi đếm/liệt kê.
+3. `src/qa/`: LLM sinh câu trả lời từ ngữ cảnh đã gom, kèm trích dẫn mã khoản.
+
+Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
+- `llm_only`: LLM không có tài liệu.
+- `rag_baseline`: chỉ vector index trên khoản → sinh câu trả lời.
+- `graphrag`: luồng B đầy đủ (hybrid vector + đồ thị).
+- (tùy chọn) `lightrag`: LightRAG đóng gói sẵn.
+
+## 4. Quyết định kỹ thuật
+
+**Claude Code không tự chọn các mục chưa chốt.** Nếu việc đang làm phụ thuộc vào mục chưa chốt: dừng, nêu các phương án + khuyến nghị, hỏi chủ dự án.
+
+| # | Quyết định | Khuyến nghị / lựa chọn | Trạng thái |
+| --- | --- | --- | --- |
+| 1 | Khung GraphRAG | Tự xây trên Neo4j (gói `neo4j-graphrag` + code riêng); LightRAG làm hệ so sánh nếu kịp; Microsoft GraphRAG chỉ đọc paper | Chưa chốt, cần hỏi thầy |
+| 2 | Nguồn LLM | API trả phí cho trích xuất KG; code gọi qua chuẩn OpenAI-compatible để đổi sang Ollama | Chưa chốt |
+| 3 | CSDL đồ thị | Neo4j qua Docker; NetworkX chỉ là dự phòng | Chưa chốt |
+| 4 | Embedding | `AITeamVN/Vietnamese_Embedding` (+ `AITeamVN/Vietnamese_Reranker`); so với `BAAI/bge-m3` ở tuần 2 trước khi chốt | Chưa chốt |
+| 5 | Phạm vi văn bản | Linh hoạt theo tiến độ: làm QĐ 3626 trước, thêm văn bản khi pipeline đã ổn | **Đã chốt** |
+| 6 | Giao diện | Streamlit | Chưa chốt |
+| 7 | Thời lượng | 10 tuần, 17/10–25/12/2026 | **Đã chốt** |
+| 8 | Ngôn ngữ code, comment, commit | Đề xuất tiếng Anh (theo mô tả Project); hiện giữ quy tắc trong CLAUDE.md | Chưa chốt |
+| 9 | Nơi ghi nhật ký | Notion cho theo dõi; trong repo dùng `docs/weekly/wN.md` | Chưa chốt |
+| 10 | Quy mô bộ câu hỏi | Khoảng 100 câu, tách dev/test | Chưa chốt |
+
+## 5. Kế hoạch 10 tuần
+
+Đã chốt: T1 bắt đầu thứ Bảy 17/10/2026, T10 kết thúc 25/12/2026. Mỗi tuần từ thứ Bảy đến thứ Sáu.
+"Xong khi" là tiêu chí kiểm chứng được — chỉ báo xong khi đã chạy và thấy kết quả.
+
+| Tuần | Mục tiêu | Việc chính | Xong khi |
+| --- | --- | --- | --- |
+| T1 · 17–23/10 | Dữ liệu sạch, môi trường | Repo, `CLAUDE.md`, `docker-compose.yml` cho Neo4j; script đọc văn bản và tách chương/điều/khoản; schema v1 bản nháp (chủ dự án làm) | Script đếm đúng 51 điều, khớp mục lục; Neo4j Browser mở được |
+| T2 · 24–30/10 | Baseline | `rag_baseline` (chunk theo khoản, top-k, trích dẫn); `llm_only`; so 2 embedding; bộ câu hỏi v1 (~60 câu, 4 loại); script đánh giá | Script đánh giá chạy hết v1 cho 2 baseline, xuất CSV; có Recall@5 |
+| T3 · 31/10–6/11 | Lớp cấu trúc | Schema (LLM gợi ý, chủ dự án duyệt); nạp VanBan–Chuong–Dieu–Khoan; cạnh DAN_CHIEU; vector index | Cypher đếm ra 51 điều; truy vấn "khoản nào dẫn chiếu Điều X" đúng trên 5 ví dụ kiểm tay |
+| T4 · 7–13/11 | Lớp ngữ nghĩa | Trích thực thể–quan hệ theo schema, chạy thử 5 điều trước; gộp thực thể trùng; xuất mẫu 30 bộ ba để kiểm tay | Tỷ lệ bộ ba đúng ghi trong `docs/weekly/w4.md` |
+| T5 · 14–20/11 | Pipeline GraphRAG | Điểm vào bằng vector; mở rộng 1–2 bước; Text2Cypher; hybrid | Trả lời hết tập dev không lỗi; mọi trích dẫn trỏ tới mã khoản có thật |
+| T6 · 21–27/11 | Số liệu so sánh | Bộ câu hỏi v2 (~100 câu), tách dev/test; chạy các hệ trên dev; phân tích lỗi theo loại câu | Bảng kết quả theo 4 loại câu; 10 lỗi tiêu biểu có nguyên nhân |
+| T7 · 28/11–4/12 | Phân tích lỗi, cải tiến | Sửa theo 10 lỗi tiêu biểu (prompt, schema, truy xuất); chạy lại trên dev; nếu còn thời gian: thêm văn bản hoặc chạy LightRAG | Bảng trước/sau trên dev; mỗi thay đổi có lý do và kết quả |
+| T8 · 5–11/12 | Demo | UI Streamlit (chat, trích dẫn, đoạn gốc); README cài và chạy; đóng băng code cuối tuần | Người khác clone repo, làm theo README và chạy được demo |
+| T9 · 12–18/12 | Kết quả cuối | Chạy tập test **đúng một lần**; hỗ trợ viết báo cáo | Kết quả test lưu kèm mã commit |
+| T10 · 19–25/12 | Nộp | Báo cáo, slide, video demo; **không thêm tính năng** | Tag `v1.0` |
+
+## 6. Đánh giá
+
+- Bộ câu hỏi: `data/eval/questions_v*.jsonl`, mỗi dòng: `id`, `question`, `answer`, `source_ids` (mã khoản), `type` ∈ {`single`, `multi`, `conditional`, `out_of_scope`}, `split` ∈ {`dev`, `test`}.
+- Retrieval: Recall@k, MRR trên `source_ids`.
+- Câu trả lời: độ chính xác (so đáp án, có thể LLM-as-judge), faithfulness, trích dẫn đúng, từ chối đúng với `out_of_scope`.
+- Chỉ chỉnh prompt/tham số trên `dev`. `test` chỉ chạy ở T9.
+- Mọi kết quả lưu `eval/results/<ngày>_<hệ>_<split>.csv` kèm commit hash và cấu hình.
+
+## 7. Cấu trúc thư mục
+
+```text
+README.md, CLAUDE.md, .gitignore, .env.example, requirements.txt, docker-compose.yml
+data/raw/          # văn bản gốc
+data/processed/    # JSON đã tách điều khoản
+data/eval/         # bộ câu hỏi
+src/ingest/  src/kg/  src/retrieval/  src/qa/  src/app/
+eval/              # script + results/
+notebooks/
+docs/PLAN.md       # file này
+docs/weekly/       # w1.md … w10.md
+```
