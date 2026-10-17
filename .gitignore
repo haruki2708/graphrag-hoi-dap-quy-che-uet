@@ -20,5 +20,6 @@ neo4j/
 .idea/
 *.swp
 *~
+~$*
 .DS_Store
 Thumbs.db
