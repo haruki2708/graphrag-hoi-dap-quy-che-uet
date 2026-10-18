@@ -18,7 +18,7 @@ Schema đồ thị: `docs/schema_v1.md`. Mục nào ở cột "Quyết định" 
 
 ## Quy tắc bắt buộc
 
-- Trả lời và viết comment, docstring, commit message mô tả bằng **tiếng Việt**; tên biến, hàm, file bằng tiếng Anh.
+- Trả lời chủ dự án bằng tiếng Việt. Comment, docstring, commit message bằng **tiếng Anh**. Tên biến, hàm, file bằng tiếng Anh, trừ thuật ngữ của văn bản quy chế (VanBan, Dieu, Khoan, Diem, DAN_CHIEU, doan_khong_so…) giữ tiếng Việt không dấu theo `docs/schema_v1.md` — không đổi tên các thuật ngữ này. Tài liệu trong `docs/` và `README.md` viết tiếng Việt. Comment tiếng Việt cũ: chỉ dịch khi đang sửa file đó, không tạo commit riêng để dịch.
 - **Hỏi trước khi**: cài hoặc gỡ thư viện, tạo/sửa `docker-compose.yml`, xóa hay đổi tên file, chạy lệnh git làm thay đổi lịch sử (reset, rebase, force), gọi API trả phí trên toàn bộ dữ liệu.
 - **Không tự `git push`**, không tự tạo tag. Khi một phần đã xong và đã kiểm chứng: ghi rõ "phần này push được", liệt kê file nên `git add` và đề xuất commit message dạng `loại(phần): mô tả` (feat, fix, docs, eval, chore).
 - Không bao giờ ghi API key vào code hay commit `.env`. Biến môi trường khai báo trong `.env.example` (không có giá trị thật).

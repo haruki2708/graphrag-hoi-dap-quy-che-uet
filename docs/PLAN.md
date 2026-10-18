@@ -1,7 +1,7 @@
 # PLAN — GraphRAG hỏi đáp quy chế đào tạo UET
 
 > Bản kế hoạch dành cho Claude Code. Tiến độ và quyết định được theo dõi chính trên Notion của chủ dự án.
-> Cập nhật lần cuối: 17/10/2026 (đổi sang 10 tuần theo chốt của giảng viên). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
+> Cập nhật lần cuối: 18/10/2026 (chốt #2 nguồn LLM, #8 ngôn ngữ). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
 
 ## 1. Mục tiêu
 
@@ -48,13 +48,13 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 | # | Quyết định | Khuyến nghị / lựa chọn | Trạng thái |
 | --- | --- | --- | --- |
 | 1 | Khung GraphRAG | Tự xây trên Neo4j (gói `neo4j-graphrag` + code riêng); LightRAG làm hệ so sánh nếu kịp; Microsoft GraphRAG chỉ đọc paper | Chưa chốt, cần hỏi thầy |
-| 2 | Nguồn LLM | API trả phí cho trích xuất KG; code gọi qua chuẩn OpenAI-compatible để đổi sang Ollama | Chưa chốt |
+| 2 | Nguồn LLM | Sinh câu trả lời (cả 3 hệ): Claude Haiku 5.5 (`claude-haiku-5-5`). Trích xuất KG: mặc định Haiku 5.5; đầu T4 so với Sonnet 5.5 (`claude-sonnet-5-5`) trên 5 điều rồi chọn theo tỷ lệ bộ ba đúng. Giám khảo: Gemini 3.8 Flash (`gemini-3.8-flash`, free tier). Gọi LLM qua `src/llm/`, provider/model đọc từ cấu hình, không viết cứng; ghi model ID + ngày vào mọi file kết quả. Haiku 5.5 không nhận temperature/top_p/top_k → mỗi cấu hình đánh giá chạy 3 lần, báo trung bình | **Đã chốt** (18/10/2026) |
 | 3 | CSDL đồ thị | Neo4j 5.26 Community (LTS) + APOC qua Docker; NetworkX chỉ là dự phòng | **Đã chốt** (17/10/2026) |
 | 4 | Embedding | `AITeamVN/Vietnamese_Embedding` (+ `AITeamVN/Vietnamese_Reranker`); so với `BAAI/bge-m3` ở tuần 2 trước khi chốt | Chưa chốt |
 | 5 | Phạm vi văn bản | Linh hoạt theo tiến độ: làm QĐ 3626 trước, thêm văn bản khi pipeline đã ổn | **Đã chốt** |
 | 6 | Giao diện | Streamlit | Chưa chốt |
 | 7 | Thời lượng | 10 tuần, 17/10–25/12/2026 | **Đã chốt** |
-| 8 | Ngôn ngữ code, comment, commit | Đề xuất tiếng Anh (theo mô tả Project); hiện giữ quy tắc trong CLAUDE.md | Chưa chốt |
+| 8 | Ngôn ngữ code, comment, commit | Comment, docstring, commit message tiếng Anh. Tên biến/hàm/file tiếng Anh, trừ thuật ngữ quy chế giữ tiếng Việt không dấu theo `docs/schema_v1.md`. `docs/`, README, báo cáo và trao đổi bằng tiếng Việt. Comment tiếng Việt cũ chỉ dịch khi sửa file đó | **Đã chốt** (18/10/2026) |
 | 9 | Nơi ghi nhật ký | Notion cho theo dõi; trong repo dùng `docs/weekly/wN.md` | Chưa chốt |
 | 10 | Quy mô bộ câu hỏi | Khoảng 100 câu, tách dev/test | Chưa chốt |
 
@@ -91,7 +91,7 @@ README.md, CLAUDE.md, .gitignore, .env.example, requirements.txt, docker-compose
 data/raw/          # văn bản gốc
 data/processed/    # JSON đã tách điều khoản
 data/eval/         # bộ câu hỏi
-src/ingest/  src/kg/  src/retrieval/  src/qa/  src/app/
+src/ingest/  src/kg/  src/retrieval/  src/qa/  src/app/  src/llm/
 eval/              # script + results/
 notebooks/
 scripts/           # script tiện ích (kiểm tra kết nối, ...)
