@@ -1,3 +1,5 @@
 neo4j==6.4.1
 python-dotenv==1.2.4
 pymupdf==1.28.2
+anthropic==2.2.0
+google-genai==2.33.0
