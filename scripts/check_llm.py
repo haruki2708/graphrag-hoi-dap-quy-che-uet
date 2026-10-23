@@ -1,11 +1,13 @@
 """Check that the LLM API keys in .env work: one tiny call to Claude and one to Gemini.
 
 Run from the repo root:  python scripts/check_llm.py
+Diagnose with another Gemini model:  python scripts/check_llm.py --gemini-model gemini-3.6-flash
 
 For each provider, prints the model and its reply, then ĐẠT (OK) or LỖI (error).
 API keys are never printed; any key value found in an error message is masked.
 """
 
+import argparse
 import os
 import sys
 from pathlib import Path
@@ -76,7 +78,7 @@ def check_claude() -> bool:
     return True
 
 
-def check_gemini() -> bool:
+def check_gemini(model_id: str = GEMINI_MODEL) -> bool:
     provider = "Gemini"
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
@@ -94,16 +96,16 @@ def check_gemini() -> bool:
     # Metadata lookup first: it validates the key without spending a generation request,
     # so an overloaded model (503/504 below) is not mistaken for a bad key.
     try:
-        client.models.get(model=GEMINI_MODEL)
+        client.models.get(model=model_id)
     except errors.APIError as e:
         return fail(provider, f"key hoặc model không hợp lệ, HTTP {getattr(e, 'code', '?')}: {getattr(e, 'message', e)}")
     except Exception as e:
         return fail(provider, f"{type(e).__name__}: {e}")
-    print(f"[{provider}] key hợp lệ, model {GEMINI_MODEL} tồn tại")
+    print(f"[{provider}] key hợp lệ, model {model_id} tồn tại")
 
     try:
         response = client.models.generate_content(
-            model=GEMINI_MODEL,
+            model=model_id,
             contents=PROMPT,
             # Thinking models spend output tokens on reasoning; leave headroom for the reply.
             config=types.GenerateContentConfig(max_output_tokens=256),
@@ -117,7 +119,7 @@ def check_gemini() -> bool:
         return fail(provider, f"{type(e).__name__}: {e}")
 
     text = (response.text or "").strip()
-    model = getattr(response, "model_version", None) or GEMINI_MODEL
+    model = getattr(response, "model_version", None) or model_id
     finish = response.candidates[0].finish_reason if response.candidates else None
     print(f"[{provider}] model: {model} | trả lời: {text!r} | finish_reason: {finish}")
     if not text:
@@ -127,12 +129,21 @@ def check_gemini() -> bool:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Check that the LLM API keys in .env work.")
+    parser.add_argument(
+        "--gemini-model",
+        default=GEMINI_MODEL,
+        help=f"Gemini model to call (default: {GEMINI_MODEL}, the judge from decision #2); "
+        "another model is for diagnosis only",
+    )
+    args = parser.parse_args()
+
     # Windows consoles may not default to UTF-8; force it so Vietnamese prints correctly.
     # Line buffering shows each result as soon as it is printed, even when output is piped.
     sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
     load_dotenv(REPO_ROOT / ".env")
 
-    results = [check_claude(), check_gemini()]
+    results = [check_claude(), check_gemini(args.gemini_model)]
     return 0 if all(results) else 1
 
 
