@@ -1,7 +1,7 @@
 # PLAN — GraphRAG hỏi đáp quy chế đào tạo UET
 
 > Bản kế hoạch dành cho Claude Code. Tiến độ và quyết định được theo dõi chính trên Notion của chủ dự án.
-> Cập nhật lần cuối: 18/10/2026 (chốt #1 khung GraphRAG, #2 nguồn LLM, #8 ngôn ngữ). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
+> Cập nhật lần cuối: 24/10/2026 (đổi giám khảo #2 sang GLM-5.3-Flash qua NVIDIA NIM). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
 
 ## 1. Mục tiêu
 
@@ -48,7 +48,7 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 | # | Quyết định | Khuyến nghị / lựa chọn | Trạng thái |
 | --- | --- | --- | --- |
 | 1 | Khung GraphRAG | Tự xây trên Neo4j: lớp cấu trúc bằng quy tắc; lớp ngữ nghĩa bằng prompt riêng theo `docs/schema_v1.md` (JSON ép schema, mỗi bộ ba gắn mã khoản nguồn), không dùng `SimpleKGPipeline`. Truy xuất và sinh câu trả lời dùng gói `neo4j-graphrag` (`VectorCypherRetriever`/`HybridCypherRetriever`, `Text2CypherRetriever`, lớp `GraphRAG`). LightRAG làm hệ so sánh nếu kịp (T7). Microsoft GraphRAG chỉ đọc paper | **Đã chốt** (18/10/2026, thầy đồng ý) |
-| 2 | Nguồn LLM | Sinh câu trả lời (cả 3 hệ): Claude Haiku 5.5 (`claude-haiku-5-5`). Trích xuất KG: mặc định Haiku 5.5; đầu T4 so với Sonnet 5.5 (`claude-sonnet-5-5`) trên 5 điều rồi chọn theo tỷ lệ bộ ba đúng. Giám khảo: Gemini 3.8 Flash (`gemini-3.8-flash`, free tier). Gọi LLM qua `src/llm/`, provider/model đọc từ cấu hình, không viết cứng; ghi model ID + ngày vào mọi file kết quả. Haiku 5.5 không nhận temperature/top_p/top_k → mỗi cấu hình đánh giá chạy 3 lần, báo trung bình | **Đã chốt** (18/10/2026) |
+| 2 | Nguồn LLM | Sinh câu trả lời (cả 3 hệ): Claude Haiku 5.5 (`claude-haiku-5-5`). Trích xuất KG: mặc định Haiku 5.5; đầu T4 so với Sonnet 5.5 (`claude-sonnet-5-5`) trên 5 điều rồi chọn theo tỷ lệ bộ ba đúng. Giám khảo: GLM-5.3-Flash (`z-ai/glm-5.3-flash`) qua NVIDIA NIM free, structured output; xác nhận chính thức sau hiệu chỉnh 30 câu (độ trùng với chấm tay ≥ ~85–90%). Dự phòng: cùng GLM-5.3-Flash trả phí qua Z.ai; sau đó Gemini 3.8/3.6 Flash. Mỗi lượt đánh giá chỉ dùng một giám khảo. Gọi LLM qua `src/llm/`, provider/model đọc từ cấu hình; ghi model ID + nhà cung cấp + ngày vào mọi file kết quả. Haiku 5.5 không nhận temperature/top_p/top_k → mỗi cấu hình đánh giá chạy 3 lần, báo trung bình | **Đã chốt** (18/10/2026; đổi giám khảo 24/10/2026) |
 | 3 | CSDL đồ thị | Neo4j 5.26 Community (LTS) + APOC qua Docker; NetworkX chỉ là dự phòng | **Đã chốt** (17/10/2026) |
 | 4 | Embedding | `AITeamVN/Vietnamese_Embedding` (+ `AITeamVN/Vietnamese_Reranker`); so với `BAAI/bge-m3` ở tuần 2 trước khi chốt | Chưa chốt |
 | 5 | Phạm vi văn bản | Linh hoạt theo tiến độ: làm QĐ 3626 trước, thêm văn bản khi pipeline đã ổn | **Đã chốt** |

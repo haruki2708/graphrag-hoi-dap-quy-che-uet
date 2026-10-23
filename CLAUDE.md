@@ -6,7 +6,7 @@ Dự án: chatbot GraphRAG hỏi đáp quy chế đào tạo Trường ĐH Công
 
 ## Tuần hiện tại
 
-T1 (17–23/10/2026) — xem dòng T1 trong `docs/PLAN.md` mục 5. Chủ dự án sẽ tự cập nhật dòng này mỗi tuần.
+T2 (24–30/10/2026) — xem dòng T2 trong `docs/PLAN.md` mục 5 và mục "Chốt T1 → Chuyển sang T2" trong `docs/weekly/w1.md`. Chủ dự án sẽ tự cập nhật dòng này mỗi tuần.
 
 ## Đầu mỗi phiên làm việc
 
