@@ -1,7 +1,7 @@
 # PLAN — GraphRAG hỏi đáp quy chế đào tạo UET
 
 > Bản kế hoạch dành cho Claude Code. Tiến độ và quyết định được theo dõi chính trên Notion của chủ dự án.
-> Cập nhật lần cuối: 24/10/2026 (đổi giám khảo #2 sang GLM-5.3-Flash qua NVIDIA NIM). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
+> Cập nhật lần cuối: 27/10/2026 (chốt #10 bộ câu hỏi; schema S1, S2, Q11 = B: vector index trên `:DonViNoiDung`, trường câu hỏi mới). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
 
 ## 1. Mục tiêu
 
@@ -28,7 +28,7 @@ Luồng A — dựng chỉ mục (chạy một lần):
 1. `src/ingest/`: đọc PDF/DOCX → chuẩn hóa Unicode (NFC) → tách chương / điều / khoản / điểm bằng regex → `data/processed/*.json`, mỗi nút có mã ổn định (ví dụ `qc3626.d12.k2`).
 2. `src/kg/` lớp cấu trúc (quy tắc, không dùng LLM): nút `VanBan`, `Chuong`, `Dieu`, `Khoan`; cạnh `THUOC`, `DAN_CHIEU` (bắt "theo quy định tại Điều X" bằng regex), `SUA_DOI`.
 3. `src/kg/` lớp ngữ nghĩa (LLM, theo schema đã duyệt): khái niệm, đối tượng, điều kiện, ngưỡng, hệ quả; mỗi thực thể/quan hệ giữ liên kết về `Khoan` nguồn. Có bước gộp thực thể trùng.
-4. Vector index trên nội dung từng `Khoan` (và mô tả thực thể nếu cần).
+4. Vector index trên các đơn vị nội dung `:DonViNoiDung` (192 đơn vị = 179 `Khoan` + phần dẫn của 12 `Dieu` + `d35`; `docs/schema_v1.md` S2), không chỉ `Khoan` (và mô tả thực thể nếu cần).
 
 Luồng B — hỏi đáp (mỗi câu hỏi):
 1. `src/retrieval/`: tìm điểm vào bằng vector (+ từ khóa) trên khoản/thực thể.
@@ -37,7 +37,7 @@ Luồng B — hỏi đáp (mỗi câu hỏi):
 
 Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 - `llm_only`: LLM không có tài liệu.
-- `rag_baseline`: chỉ vector index trên khoản → sinh câu trả lời.
+- `rag_baseline`: chỉ vector index trên `:DonViNoiDung` → sinh câu trả lời.
 - `graphrag`: luồng B đầy đủ (hybrid vector + đồ thị).
 - (tùy chọn) `lightrag`: LightRAG đóng gói sẵn.
 
@@ -56,7 +56,7 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 | 7 | Thời lượng | 10 tuần, 17/10–25/12/2026 | **Đã chốt** |
 | 8 | Ngôn ngữ code, comment, commit | Comment, docstring, commit message tiếng Anh. Tên biến/hàm/file tiếng Anh, trừ thuật ngữ quy chế giữ tiếng Việt không dấu theo `docs/schema_v1.md`. `docs/`, README, báo cáo và trao đổi bằng tiếng Việt. Comment tiếng Việt cũ chỉ dịch khi sửa file đó | **Đã chốt** (18/10/2026) |
 | 9 | Nơi ghi nhật ký | Notion cho theo dõi; trong repo dùng `docs/weekly/wN.md` | Chưa chốt |
-| 10 | Quy mô bộ câu hỏi | Khoảng 100 câu, tách dev/test | Chưa chốt |
+| 10 | Quy mô bộ câu hỏi | Khoảng 100 câu, đủ 4 loại. Tách dev/test ngay từ v1: `test` ~20 câu do chủ dự án tự soạn, khóa từ lúc tách, chỉ chạy ở T9. Câu do LLM sinh (`origin: generated`, chủ dự án duyệt từng câu), 11 câu thử ở `docs/schema_v1.md` mục 3 và câu demo của `judge_smoke` chỉ vào `dev`. T6 bổ sung đến ~100; câu `test` mới vẫn do chủ dự án tự soạn. Kết quả trên `dev` báo tách theo `origin` | **Đã chốt** (27/10/2026) |
 
 ## 5. Kế hoạch 10 tuần
 
@@ -66,7 +66,7 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 | Tuần | Mục tiêu | Việc chính | Xong khi |
 | --- | --- | --- | --- |
 | T1 · 17–23/10 | Dữ liệu sạch, môi trường | Repo, `CLAUDE.md`, `docker-compose.yml` cho Neo4j; script đọc văn bản và tách chương/điều/khoản; schema v1 bản nháp (chủ dự án làm) | Script đếm đúng 51 điều, khớp mục lục; Neo4j Browser mở được; repo có commit; có bản nháp schema v1 |
-| T2 · 24–30/10 | Baseline | `rag_baseline` (chunk theo khoản, top-k, trích dẫn); `llm_only`; so 2 embedding; bộ câu hỏi v1 (~60 câu, 4 loại); script đánh giá | Script đánh giá chạy hết v1 cho 2 baseline, xuất CSV; có Recall@5 |
+| T2 · 24–30/10 | Baseline | `rag_baseline` (chunk theo `:DonViNoiDung`, top-k, trích dẫn); `llm_only`; so 2 embedding; bộ câu hỏi v1 (~70 câu, 4 loại: ~50 dev, ~20 test); script đánh giá | Script đánh giá chạy hết phần dev của bộ câu hỏi v1 cho 2 baseline, xuất CSV; có Recall@5 |
 | T3 · 31/10–6/11 | Lớp cấu trúc | Schema (LLM gợi ý, chủ dự án duyệt); nạp VanBan–Chuong–Dieu–Khoan; cạnh DAN_CHIEU; vector index | Cypher đếm ra 51 điều; truy vấn "khoản nào dẫn chiếu Điều X" đúng trên 5 ví dụ kiểm tay |
 | T4 · 7–13/11 | Lớp ngữ nghĩa | Trích thực thể–quan hệ theo schema, chạy thử 5 điều trước; gộp thực thể trùng; xuất mẫu 30 bộ ba để kiểm tay | Tỷ lệ bộ ba đúng ghi trong `docs/weekly/w4.md` |
 | T5 · 14–20/11 | Pipeline GraphRAG | Điểm vào bằng vector; mở rộng 1–2 bước; Text2Cypher; hybrid | Trả lời hết tập dev không lỗi; mọi trích dẫn trỏ tới mã khoản có thật |
@@ -78,8 +78,10 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 
 ## 6. Đánh giá
 
-- Bộ câu hỏi: `data/eval/questions_v*.jsonl`, mỗi dòng: `id`, `question`, `answer`, `source_ids` (mã khoản), `type` ∈ {`single`, `multi`, `conditional`, `out_of_scope`}, `split` ∈ {`dev`, `test`}.
-- Retrieval: Recall@k, MRR trên `source_ids`.
+- Bộ câu hỏi: `data/eval/questions_v*.jsonl`, mỗi dòng: `id`, `question`, `answer`, `source_ids`, `type` ∈ {`single`, `multi`, `conditional`, `out_of_scope`}, `split` ∈ {`dev`, `test`}, `delegated` (bool: nội dung quy chế giao cho đơn vị đào tạo quy định; `docs/schema_v1.md` Q11), `origin` ∈ {`manual`, `generated`}, `ref_points` (mã điểm cụ thể để tra cứu, không dùng để chấm).
+- Quy tắc chấm (`docs/schema_v1.md` mục 3): `source_ids` ghi ở mức `:DonViNoiDung` (điểm quy về khoản cha; điều không có khoản, hoặc nội dung ở phần dẫn / `doan_khong_so` mức điều, thì tính là điều); chỉ ghi nguồn bắt buộc, tối đa 5. Mã do hệ thống trả về cũng quy về mức này trước khi chấm.
+- Retrieval: Recall@5, Recall@10, MRR trên `source_ids`.
+- Nguồn gốc câu và tách dev/test (quyết định #10): `test` do chủ dự án tự soạn (`origin: manual`), khóa từ lúc tách, chỉ chạy ở T9; câu `generated` (LLM sinh, chủ dự án duyệt từng câu), 11 câu thử ở `docs/schema_v1.md` mục 3 và câu demo `judge_smoke` chỉ vào `dev`. Kết quả trên `dev` báo tách theo `origin`.
 - Câu trả lời: độ chính xác (so đáp án, có thể LLM-as-judge), faithfulness, trích dẫn đúng, từ chối đúng với `out_of_scope`.
 - Chỉ chỉnh prompt/tham số trên `dev`. `test` chỉ chạy ở T9.
 - Mọi kết quả lưu `eval/results/<ngày>_<hệ>_<split>.csv` kèm commit hash và cấu hình.
