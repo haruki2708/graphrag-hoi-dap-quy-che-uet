@@ -1,0 +1,3 @@
+# Question sets are locked by sha256 (docs/weekly/w2.md): keep their bytes exactly as committed
+# (LF line endings, no CRLF conversion on checkout with core.autocrlf=true).
+data/eval/*.jsonl -text
