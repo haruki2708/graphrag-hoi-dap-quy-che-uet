@@ -95,6 +95,8 @@ src/ingest/  src/kg/  src/retrieval/  src/qa/  src/app/  src/llm/
 eval/              # script + results/
 notebooks/
 scripts/           # script tiện ích (kiểm tra kết nối, ...)
+configs/           # cấu hình (llm.toml: provider/model cho từng vai)
+tests/             # unit test (unittest; chạy: python -m unittest discover -s tests -t .)
 docs/PLAN.md       # file này
 docs/weekly/       # w1.md … w10.md
 ```

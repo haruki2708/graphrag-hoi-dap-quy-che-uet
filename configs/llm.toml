@@ -1,0 +1,53 @@
+# LLM roles used through src/llm (docs/PLAN.md section 4, decision #2).
+# Every role: provider, model, max_tokens, timeout_s; optional base_url; [roles.<name>.params] are
+# provider-specific and part of the cache key. Changing any value here gives new cache entries.
+
+[retry]
+# One retry layer for every provider (SDK-level retries are switched off).
+max_retries = 6        # retries after the first attempt
+base_delay_s = 2.0     # exponential backoff base, with jitter
+max_delay_s = 60.0     # cap per wait; a Retry-After header from the server takes precedence
+
+# Answer generation for all three systems (llm_only, rag_baseline, graphrag).
+# Claude Haiku 5.5: temperature/top_p/top_k are rejected (400) and not sent. Adaptive thinking is on by
+# default and counts toward max_tokens; effort defaults to "medium" (set explicitly so it is recorded).
+[roles.answer]
+provider = "anthropic"
+model = "claude-haiku-5-5"
+max_tokens = 4096
+timeout_s = 120
+
+[roles.answer.params]
+effort = "medium"
+
+# Semantic-layer KG extraction (T4). Early T4 compares with claude-sonnet-5-5 on 5 articles.
+[roles.extract]
+provider = "anthropic"
+model = "claude-haiku-5-5"
+max_tokens = 8192
+timeout_s = 180
+
+[roles.extract.params]
+effort = "medium"
+
+# Judge: GLM-5.3-Flash on NVIDIA NIM (free), OpenAI-compatible endpoint, structured output.
+[roles.judge]
+provider = "nvidia"
+model = "z-ai/glm-5.3-flash"
+base_url = "https://integrate.api.nvidia.com/v1"
+max_tokens = 4096
+timeout_s = 90
+
+[roles.judge.params]
+
+# First fallback: the same GLM-5.3-Flash, paid, via Z.ai. No key yet - add a role here once there is one.
+
+# Second fallback: Gemini 3.8 Flash (free tier; often overloaded, 503/504).
+# max_tokens is high because thinking spends output tokens (MAX_TOKENS was hit at 256).
+[roles.judge_fallback]
+provider = "gemini"
+model = "gemini-3.8-flash"
+max_tokens = 4096
+timeout_s = 90
+
+[roles.judge_fallback.params]
