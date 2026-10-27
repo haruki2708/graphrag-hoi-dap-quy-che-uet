@@ -1,0 +1,199 @@
+{
+  "version": "judge_calib_v1",
+  "created": "2026-10-27T17:31:55+07:00",
+  "seed": 20261031,
+  "source_commit": "1c95013330cf8d7f7ba6ee88859887584417ec72",
+  "sources": {
+    "llm_only": {
+      "file": "eval/results/2026-10-27_llm_only_dev_judged.csv",
+      "sha256": "305e9000717035220432b334d1fd47fa9c7a916b05559eee702c0c616ec20f51"
+    },
+    "rag_baseline": {
+      "file": "eval/results/2026-10-27_rag_baseline_dev_judged.csv",
+      "sha256": "5cf661c680889232c9b6ed12ecabf29e02b5ea408236d3fdb4ce9dc116dbfba1"
+    }
+  },
+  "note": "Contains NO judge label. Do not open before the sheet is graded (it reveals the system of each stt).",
+  "samples": {
+    "1": {
+      "system": "llm_only",
+      "id": "dev-m026",
+      "run": 0,
+      "reason": "câu out_of_scope chọn ngẫu nhiên, khác câu của hệ kia (seed 20261031)"
+    },
+    "2": {
+      "system": "llm_only",
+      "id": "dev-m018",
+      "run": 0,
+      "reason": "câu ổn định giữa 3 lượt, bốc ngẫu nhiên theo quota loại conditional (seed 20261031)"
+    },
+    "3": {
+      "system": "llm_only",
+      "id": "dev-s01",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "4": {
+      "system": "rag_baseline",
+      "id": "dev-m012",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.5); loại multi"
+    },
+    "5": {
+      "system": "llm_only",
+      "id": "dev-m006",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "6": {
+      "system": "llm_only",
+      "id": "dev-m019",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "7": {
+      "system": "rag_baseline",
+      "id": "dev-m027",
+      "run": 0,
+      "reason": "câu out_of_scope chọn ngẫu nhiên (seed 20261031)"
+    },
+    "8": {
+      "system": "rag_baseline",
+      "id": "dev-s03",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.5); loại multi"
+    },
+    "9": {
+      "system": "rag_baseline",
+      "id": "dev-s04",
+      "run": 0,
+      "reason": "mẫu cố định theo yêu cầu (a)"
+    },
+    "10": {
+      "system": "llm_only",
+      "id": "dev-m029",
+      "run": 0,
+      "reason": "câu out_of_scope chọn ngẫu nhiên, khác câu của hệ kia (seed 20261031)"
+    },
+    "11": {
+      "system": "llm_only",
+      "id": "dev-m015",
+      "run": 0,
+      "reason": "câu ổn định giữa 3 lượt, bốc ngẫu nhiên theo quota loại multi (seed 20261031)"
+    },
+    "12": {
+      "system": "rag_baseline",
+      "id": "dev-m019",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.6667); loại conditional"
+    },
+    "13": {
+      "system": "llm_only",
+      "id": "dev-m017",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "14": {
+      "system": "rag_baseline",
+      "id": "dev-s11",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.6667); loại conditional"
+    },
+    "15": {
+      "system": "llm_only",
+      "id": "dev-m005",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "16": {
+      "system": "llm_only",
+      "id": "dev-m004",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "17": {
+      "system": "llm_only",
+      "id": "dev-s07",
+      "run": 0,
+      "reason": "câu ổn định giữa 3 lượt, bốc ngẫu nhiên theo quota loại single (seed 20261031)"
+    },
+    "18": {
+      "system": "llm_only",
+      "id": "dev-m014",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "19": {
+      "system": "llm_only",
+      "id": "dev-s06",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "20": {
+      "system": "rag_baseline",
+      "id": "dev-m004",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.3333); loại single"
+    },
+    "21": {
+      "system": "rag_baseline",
+      "id": "dev-m013",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.6667); loại multi"
+    },
+    "22": {
+      "system": "rag_baseline",
+      "id": "dev-m016",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.6667); loại multi"
+    },
+    "23": {
+      "system": "rag_baseline",
+      "id": "dev-s05",
+      "run": 0,
+      "reason": "mẫu cố định theo yêu cầu (a)"
+    },
+    "24": {
+      "system": "llm_only",
+      "id": "dev-m009",
+      "run": 0,
+      "reason": "câu ổn định giữa 3 lượt, bốc ngẫu nhiên theo quota loại multi (seed 20261031)"
+    },
+    "25": {
+      "system": "llm_only",
+      "id": "dev-s10",
+      "run": 0,
+      "reason": "câu ổn định giữa 3 lượt, bốc ngẫu nhiên theo quota loại multi (seed 20261031)"
+    },
+    "26": {
+      "system": "llm_only",
+      "id": "dev-m010",
+      "run": 0,
+      "reason": "câu ổn định giữa 3 lượt, bốc ngẫu nhiên theo quota loại multi (seed 20261031)"
+    },
+    "27": {
+      "system": "llm_only",
+      "id": "dev-m021",
+      "run": 0,
+      "reason": "nhãn của giám khảo đổi giữa 3 lượt (ưu tiên); lấy lượt 0"
+    },
+    "28": {
+      "system": "llm_only",
+      "id": "dev-s08",
+      "run": 0,
+      "reason": "câu ổn định giữa 3 lượt, bốc ngẫu nhiên theo quota loại conditional (seed 20261031)"
+    },
+    "29": {
+      "system": "rag_baseline",
+      "id": "dev-m006",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.3333); loại single"
+    },
+    "30": {
+      "system": "rag_baseline",
+      "id": "dev-m020",
+      "run": 0,
+      "reason": "nằm trong 9 câu có citation_precision thấp nhất (lượt 0: 0.5); loại conditional"
+    }
+  }
+}
