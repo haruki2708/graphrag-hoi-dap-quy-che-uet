@@ -1,0 +1,582 @@
+{
+  "computed_at": "2026-10-27T20:25:00+07:00",
+  "sheet": "judge_calib_v1_filled.xlsx",
+  "manifest": "judge_calib_v1_manifest.json",
+  "manifest_source_commit": "1c95013330cf8d7f7ba6ee88859887584417ec72",
+  "agreement_metric": "3-label exact agreement (human vs GLM); thresholds from PLAN #2",
+  "labels_order": [
+    "sai",
+    "mot_phan",
+    "dung"
+  ],
+  "overall": {
+    "n": 30,
+    "agree": 25,
+    "agreement": 0.8333333333333334,
+    "agreement_ci95": [
+      0.6644,
+      0.9266
+    ],
+    "kappa": 0.7448979591836735,
+    "kappa_linear_weighted": 0.7738693467336684,
+    "binary_agree": 28,
+    "binary_agreement": 0.9333333333333333,
+    "glm_more_lenient": 3,
+    "glm_stricter": 2,
+    "confusion_human_x_glm": [
+      [
+        6,
+        2,
+        1
+      ],
+      [
+        1,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        12
+      ]
+    ]
+  },
+  "thresholds_on_3_label_agreement": {
+    "85%": {
+      "pass": false,
+      "needed": 26
+    },
+    "90%": {
+      "pass": false,
+      "needed": 27
+    }
+  },
+  "by_system": {
+    "llm_only": {
+      "n": 18,
+      "agree": 14,
+      "agreement": 0.7777777777777778,
+      "agreement_ci95": [
+        0.5478,
+        0.91
+      ],
+      "kappa": 0.6381909547738693,
+      "kappa_linear_weighted": 0.625,
+      "binary_agree": 17,
+      "binary_agreement": 0.9444444444444444,
+      "glm_more_lenient": 3,
+      "glm_stricter": 1,
+      "confusion_human_x_glm": [
+        [
+          6,
+          2,
+          1
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "rag_baseline": {
+      "n": 12,
+      "agree": 11,
+      "agreement": 0.9166666666666666,
+      "agreement_ci95": [
+        0.6461,
+        0.9851
+      ],
+      "kappa": 0.625,
+      "kappa_linear_weighted": 0.625,
+      "binary_agree": 11,
+      "binary_agreement": 0.9166666666666666,
+      "glm_more_lenient": 0,
+      "glm_stricter": 1,
+      "confusion_human_x_glm": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          10
+        ]
+      ]
+    }
+  },
+  "mismatches": [
+    {
+      "stt": 3,
+      "system": "llm_only",
+      "id": "dev-s01",
+      "run": 0,
+      "type": "single",
+      "human": "sai",
+      "glm": "dung",
+      "direction": "glm_more_lenient",
+      "question": "Điểm chữ C+ được quy đổi thành bao nhiêu điểm theo thang 4?",
+      "glm_reason": "Câu trả lời nêu đúng ngưỡng quy đổi (C+ = 2,5 theo thang điểm 4) phù hợp với quy chế; việc dẫn điều không thể kiểm chứng từ nguyên văn được cung cấp nhưng không ảnh hưởng đến kết luận và giá trị quy đổi.",
+      "human_note": "Sai điều 24, đáng ra là điều 43 khoảng 1"
+    },
+    {
+      "stt": 13,
+      "system": "llm_only",
+      "id": "dev-m017",
+      "run": 0,
+      "type": "conditional",
+      "human": "sai",
+      "glm": "mot_phan",
+      "direction": "glm_more_lenient",
+      "question": "Kế hoạch chuẩn của em trung bình 20 tín chỉ mỗi kỳ. Đây không phải kỳ cuối, em muốn đăng ký 31 tín chỉ trong kỳ chính, không có GDTC, GDQP, kỹ năng bổ trợ, học cải thiện hay tự chọn tự do. Có vượt mức cho phép không?",
+      "glm_reason": "Kết luận đúng (31 vượt ngưỡng 30) nhưng không nêu căn cứ 3/2 khối lượng trung bình theo kế hoạch chuẩn và quy sai điều khoản (Điều 14 khoản 2 thay vì Điều 21 khoản 1).",
+      "human_note": "Đúng câu trả lời nhưng sai dẫn chứng. Điều 14 khoản 2 chỉ là \"thiết kế chương trình đào tạo\", chỉ ra chêch lệch số tín các các chương trình đào tạo, ví dụ như chương trình đào tạo tài năng được thiết kế hơn chương trình đào tạo chuẩn là 30 tín chứ không phải được đăng ký quá 30 tín."
+    },
+    {
+      "stt": 18,
+      "system": "llm_only",
+      "id": "dev-m014",
+      "run": 0,
+      "type": "multi",
+      "human": "mot_phan",
+      "glm": "sai",
+      "direction": "glm_stricter",
+      "question": "Em có thể tham gia NCKH bằng sinh hoạt học thuật và viết bài báo không, và cấp nào tổ chức hội nghị, đánh giá, khen thưởng công trình của sinh viên?",
+      "glm_reason": "Câu trả lời gán việc tổ chức hội nghị, đánh giá, khen thưởng cho thủ trưởng đơn vị đào tạo và nói quy chế không quy định thống nhất, trong khi Điều 31 khoản 1 điểm c giao rõ cho đơn vị đào tạo, và không nêu được căn cứ Điều 30, Điều 31.",
+      "human_note": "chưa có dẫn chứng từ qc3626.d30.k1 qc3626.d31.k1"
+    },
+    {
+      "stt": 19,
+      "system": "llm_only",
+      "id": "dev-s06",
+      "run": 0,
+      "type": "multi",
+      "human": "sai",
+      "glm": "mot_phan",
+      "direction": "glm_more_lenient",
+      "question": "Khi nào SV bị buộc thôi học?",
+      "glm_reason": "Câu trả lời nêu đúng hướng một số trường hợp (vượt thời gian tối đa, cảnh báo học tập, không đăng ký học) nhưng sai điều khoản viện dẫn, thiếu các trường hợp kỷ luật thi hộ/xóa tên và hết hạn nghỉ tạm thời, đồng thời thêm lý do không có trong quy chế (nghĩa vụ học phí).",
+      "human_note": "Sai điều khoản ( các trường hợp buộc thôi học cau_tra_loi đều lấy dẫn chứng từ Điều 24 khoản 1 là sai), thiếu trường hợp \"Sau khi hết hạn nghỉ học tạm thời sinh viên không có đơn xin học trở lại theo quy định tại khoản 3, Điều 36 của Quy chế này\"."
+    },
+    {
+      "stt": 23,
+      "system": "rag_baseline",
+      "id": "dev-s05",
+      "run": 0,
+      "type": "multi",
+      "human": "dung",
+      "glm": "mot_phan",
+      "direction": "glm_stricter",
+      "question": "SV CTĐT chất lượng cao cần những điều kiện gì để được xét tốt nghiệp?",
+      "glm_reason": "Câu trả lời nêu đủ 8 điều kiện a–h, ngưỡng điểm TBC 2,50 và điều kiện điểm e theo quy định của ĐHQGHN và đơn vị đào tạo, nhưng thiếu ngưỡng cụ thể 'trình độ ngoại ngữ bậc 4' (chỉ dẫn chiếu Điều 13 khoản 3 mà không nêu rõ bậc 4).",
+      "human_note": "cau_tra_loi rất đầy đủ, đầy đủ hơn nguyên văn"
+    }
+  ],
+  "judge_models": [
+    "z-ai/glm-5.3-flash"
+  ],
+  "samples": [
+    {
+      "stt": 1,
+      "system": "llm_only",
+      "id": "dev-m026",
+      "run": 0,
+      "type": "out_of_scope",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời khớp với đáp án mẫu khi khẳng định quy chế đào tạo không quy định về phí gửi xe máy và không đưa ra thông tin sai lệch.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "",
+      "question": "Em gửi xe máy ở trường theo tháng thì phí gửi xe là bao nhiêu?"
+    },
+    {
+      "stt": 2,
+      "system": "llm_only",
+      "id": "dev-m018",
+      "run": 0,
+      "type": "conditional",
+      "human": "sai",
+      "glm": "sai",
+      "glm_reason": "Câu trả lời khẳng định quy chế không quy định mức trần, trong khi Điều 22 khoản 4 quy định rõ tín chỉ công nhận từ trao đổi tại cơ sở ngoài ĐHQGHN không vượt quá 25% tổng khối lượng chương trình (30 tín chỉ), nên kết luận mâu thuẫn với quy chế.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "",
+      "question": "Chương trình của em có tổng cộng 120 tín chỉ. Sau đợt trao đổi tại trường ngoài ĐHQGHN, em muốn được công nhận 40 tín chỉ từ đợt đó, có vượt trần không?"
+    },
+    {
+      "stt": 3,
+      "system": "llm_only",
+      "id": "dev-s01",
+      "run": 0,
+      "type": "single",
+      "human": "sai",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời nêu đúng ngưỡng quy đổi (C+ = 2,5 theo thang điểm 4) phù hợp với quy chế; việc dẫn điều không thể kiểm chứng từ nguyên văn được cung cấp nhưng không ảnh hưởng đến kết luận và giá trị quy đổi.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Sai điều 24, đáng ra là điều 43 khoảng 1",
+      "question": "Điểm chữ C+ được quy đổi thành bao nhiêu điểm theo thang 4?"
+    },
+    {
+      "stt": 4,
+      "system": "rag_baseline",
+      "id": "dev-m012",
+      "run": 0,
+      "type": "multi",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: thời hạn thêm môn/đổi lớp (2 tuần đầu kỳ chính, 1 tuần đầu kỳ phụ), thời hạn rút bớt môn được hoàn học phí (giống nhau) và hệ quả quá hạn (giữ học phần, nhận điểm F, không hoàn học phí), kèm căn cứ Điều 21 khoản 3 và Điều 23 khoản 2.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "cau_tra_loi đầy đủ, còn thêm ý bổ sung căn cứ nắm chắc so với đáp án là đoạn \"Ngoài ra, khi rút bớt học phần sau khi đã có danh sách lớp chính thức, sinh viên phải viết đơn gửi Phòng Đào tạo, được thủ trưởng đơn vị đào tạo chấp nhận, và không vi phạm quy định về khối lượng đăng ký tại Điều 21 khoản 1 (Điều 23 khoản 3)\".",
+      "question": "Đầu kỳ em được thêm môn hoặc đổi lớp đến lúc nào, và hạn bỏ bớt môn để được hoàn học phí có giống vậy không?"
+    },
+    {
+      "stt": 5,
+      "system": "llm_only",
+      "id": "dev-m006",
+      "run": 0,
+      "type": "single",
+      "human": "mot_phan",
+      "glm": "mot_phan",
+      "glm_reason": "Câu trả lời nhận diện đúng ba ký hiệu nhưng giải nghĩa thiếu và sai lệch ý chính so với quy chế (X không nêu 'chưa có kết quả thi kết thúc học phần', R thiếu 'đánh giá đầu học kỳ' và thêm ý không có trong quy chế về không tính vào GPA), đồng thời không nêu căn cứ Điều 41 khoản 2.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "thiếu thông tin kết luận ( điều 41 khoảng 2).                                                                              Sai phần ký hiệu R.thông tin đúng của  R là viết sau điểm học phần dùng cho học phần được thủ trưởng đơn vị đào tạo cho phép công nhận tín chỉ, chuyển điểm hoặc được đánh giá đầu học kỳ, nếu có. (Điều 41 khoản 2).",
+      "question": "Trên bảng điểm, các ký hiệu I, X và chữ R ghi sau điểm có nghĩa gì vậy ạ?"
+    },
+    {
+      "stt": 6,
+      "system": "llm_only",
+      "id": "dev-m019",
+      "run": 0,
+      "type": "conditional",
+      "human": "mot_phan",
+      "glm": "mot_phan",
+      "glm_reason": "Kết luận xếp loại 'yếu' đúng nhưng không nêu được ngưỡng đăng ký tối đa 18 tín chỉ mỗi học kỳ chính và nêu khoảng xếp loại (1,00 đến dưới 2,00) không trùng với quy định (dưới 2,0).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Thiếu thông tin kết luận **Học lực:** ( vì chưa xác định chính xác được điều khoản).                                                                                                                                                        Không xác định được **Số tín chỉ tối đa kỳ chính tiếp theo:**  vì không tìm thấy được điều khoản.",
+      "question": "TBC học kỳ của em là 1,90 trên thang 4 và em chưa thuộc diện bị buộc thôi học. Em bị xếp học lực gì, kỳ chính tiếp theo được đăng ký tối đa bao nhiêu tín chỉ?"
+    },
+    {
+      "stt": 7,
+      "system": "rag_baseline",
+      "id": "dev-m027",
+      "run": 0,
+      "type": "out_of_scope",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời khẳng định đúng rằng quy chế không quy định giờ phục vụ của căng tin, đồng thời bổ sung chính xác ý về thời gian giảng dạy (Điều 19) và gợi ý hỏi đơn vị quản lý căng tin, không mâu thuẫn với đáp án mẫu.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "",
+      "question": "Căng tin của trường phục vụ bữa trưa đến mấy giờ để em sắp xếp đi ăn?"
+    },
+    {
+      "stt": 8,
+      "system": "rag_baseline",
+      "id": "dev-s03",
+      "run": 0,
+      "type": "multi",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời nêu đúng định nghĩa theo Điều 42 khoản 5, đúng công thức A = Σ(aᵢ × nᵢ)/Σ(nᵢ) và làm tròn 2 chữ số thập phân như đáp án mẫu; các chi tiết bổ sung không mâu thuẫn với quy chế.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "trả lời rất xuất sắc, sát ý với nguyên bản nhất",
+      "question": "Điểm TBC tích lũy được tính thế nào?"
+    },
+    {
+      "stt": 9,
+      "system": "rag_baseline",
+      "id": "dev-s04",
+      "run": 0,
+      "type": "multi",
+      "human": "mot_phan",
+      "glm": "mot_phan",
+      "glm_reason": "Câu trả lời nêu đúng học phần điều kiện và học phần loại P nhưng thiếu hai ý chính của đáp án mẫu: học phần tự chọn tự do (Điều 21 khoản 2 điểm d) và học phần chưa đạt (Điều 42 khoản 5).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "thiếu \"học phần tự chọn tự do\" (Điều 21 khoản 2 điểm d)",
+      "question": "Những học phần nào không được tính vào điểm TBC tích lũy?"
+    },
+    {
+      "stt": 10,
+      "system": "llm_only",
+      "id": "dev-m029",
+      "run": 0,
+      "type": "out_of_scope",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời khớp với đáp án mẫu: khẳng định Quy chế QĐ 3626 không quy định mức phí cấp lại thẻ sinh viên.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "",
+      "question": "Em làm mất thẻ sinh viên, xin cấp lại thẻ thì phải nộp phí bao nhiêu?"
+    },
+    {
+      "stt": 11,
+      "system": "llm_only",
+      "id": "dev-m015",
+      "run": 0,
+      "type": "multi",
+      "human": "sai",
+      "glm": "sai",
+      "glm_reason": "Câu trả lời không đưa ra kết luận nào về nghĩa vụ NCKH của sinh viên CLC cũng như mốc chậm nhất từ học kỳ thứ tư được bố trí giảng viên hướng dẫn, mà chỉ khuyến nghị hỏi phòng đào tạo.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "không tìm thấy điều khoản gì cho câu hỏi nên không xác định được câu trả lời và trả lời sai",
+      "question": "Em muốn tìm hiểu nghĩa vụ của sinh viên CLC: phải tham gia, báo cáo việc nghiên cứu và hoàn thành chương trình ra sao; chậm nhất khi nào được bố trí thầy cô hướng dẫn NCKH?"
+    },
+    {
+      "stt": 12,
+      "system": "rag_baseline",
+      "id": "dev-m019",
+      "run": 0,
+      "type": "conditional",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời đúng khi nêu học lực Yếu vì TBC học kỳ dưới 2,00 nhưng chưa thuộc diện buộc thôi học (Điều 45 khoản 2 điểm đ) và được đăng ký tối đa 18 tín chỉ mỗi học kỳ chính (Điều 23 khoản 1 điểm c), đủ các ý chính của đáp án mẫu.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "",
+      "question": "TBC học kỳ của em là 1,90 trên thang 4 và em chưa thuộc diện bị buộc thôi học. Em bị xếp học lực gì, kỳ chính tiếp theo được đăng ký tối đa bao nhiêu tín chỉ?"
+    },
+    {
+      "stt": 13,
+      "system": "llm_only",
+      "id": "dev-m017",
+      "run": 0,
+      "type": "conditional",
+      "human": "sai",
+      "glm": "mot_phan",
+      "glm_reason": "Kết luận đúng (31 vượt ngưỡng 30) nhưng không nêu căn cứ 3/2 khối lượng trung bình theo kế hoạch chuẩn và quy sai điều khoản (Điều 14 khoản 2 thay vì Điều 21 khoản 1).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Đúng câu trả lời nhưng sai dẫn chứng. Điều 14 khoản 2 chỉ là \"thiết kế chương trình đào tạo\", chỉ ra chêch lệch số tín các các chương trình đào tạo, ví dụ như chương trình đào tạo tài năng được thiết kế hơn chương trình đào tạo chuẩn là 30 tín chứ không phải được đăng ký quá 30 tín.",
+      "question": "Kế hoạch chuẩn của em trung bình 20 tín chỉ mỗi kỳ. Đây không phải kỳ cuối, em muốn đăng ký 31 tín chỉ trong kỳ chính, không có GDTC, GDQP, kỹ năng bổ trợ, học cải thiện hay tự chọn tự do. Có vượt mức cho phép không?"
+    },
+    {
+      "stt": 14,
+      "system": "rag_baseline",
+      "id": "dev-s11",
+      "run": 0,
+      "type": "conditional",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Kết luận đúng (không được chuyển ngành) và nêu đủ căn cứ Điều 28 khoản 1 điểm d cùng điều kiện từ năm thứ hai tại khoản 2 như đáp án mẫu.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "dẫn chứng tốt",
+      "question": "SV đang bị cảnh báo học vụ có được chuyển ngành không?"
+    },
+    {
+      "stt": 15,
+      "system": "llm_only",
+      "id": "dev-m005",
+      "run": 0,
+      "type": "single",
+      "human": "sai",
+      "glm": "sai",
+      "glm_reason": "Kết luận sai vì quy chế (Điều 32 khoản 2) thực tế có quy định rõ mức cộng không quá 0,2 điểm cho công bố quốc tế, trong nước, chỉ thiếu phần nói mức cụ thể do thủ trưởng đơn vị đào tạo quy định bằng văn bản.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Không tìm được điều khoản , dẫn chứng nên trả lời sai",
+      "question": "Em muốn biết sinh viên có bài báo được công bố thì được cộng chính xác bao nhiêu điểm thành tích NCKH?"
+    },
+    {
+      "stt": 16,
+      "system": "llm_only",
+      "id": "dev-m004",
+      "run": 0,
+      "type": "single",
+      "human": "mot_phan",
+      "glm": "mot_phan",
+      "glm_reason": "Kết luận đúng (không ấn định số cụ thể, thủ trưởng đơn vị đào tạo quy định và cần đăng ký học phần khác để đủ khối lượng) nhưng thiếu căn cứ cụ thể (Điều 20 khoản 2) và không nêu rõ quy định lớp không được tổ chức nếu dưới sĩ số tối thiểu cùng điều kiện 'nếu chưa đủ khối lượng học tập tối thiểu của học kỳ', thậm chí còn tỏ ra không chắc quy chế có quy định điểm này.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "ĐÚNG nhưng chưa nêu dẫn chứng ở điều khoản nào?",
+      "question": "Lớp môn học em định đăng ký cần tối thiểu bao nhiêu người mới mở được, và nếu lớp không mở thì em phải làm gì?"
+    },
+    {
+      "stt": 17,
+      "system": "llm_only",
+      "id": "dev-s07",
+      "run": 0,
+      "type": "single",
+      "human": "mot_phan",
+      "glm": "mot_phan",
+      "glm_reason": "Kết luận đúng rằng quy chế không quy định mức học phí cụ thể, nhưng không nêu căn cứ chính (công thức tính học phí và việc giao thủ trưởng đơn vị đào tạo xây dựng định mức học phí cho một tín chỉ tại Điều 8 khoản 1 điểm b).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Không có dẫn chứng từ qc3626.d8.k1 nên chỉ cho mot_phan",
+      "question": "Học phí ngành KHMT năm 2026 là bao nhiêu?"
+    },
+    {
+      "stt": 18,
+      "system": "llm_only",
+      "id": "dev-m014",
+      "run": 0,
+      "type": "multi",
+      "human": "mot_phan",
+      "glm": "sai",
+      "glm_reason": "Câu trả lời gán việc tổ chức hội nghị, đánh giá, khen thưởng cho thủ trưởng đơn vị đào tạo và nói quy chế không quy định thống nhất, trong khi Điều 31 khoản 1 điểm c giao rõ cho đơn vị đào tạo, và không nêu được căn cứ Điều 30, Điều 31.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "chưa có dẫn chứng từ qc3626.d30.k1 qc3626.d31.k1",
+      "question": "Em có thể tham gia NCKH bằng sinh hoạt học thuật và viết bài báo không, và cấp nào tổ chức hội nghị, đánh giá, khen thưởng công trình của sinh viên?"
+    },
+    {
+      "stt": 19,
+      "system": "llm_only",
+      "id": "dev-s06",
+      "run": 0,
+      "type": "multi",
+      "human": "sai",
+      "glm": "mot_phan",
+      "glm_reason": "Câu trả lời nêu đúng hướng một số trường hợp (vượt thời gian tối đa, cảnh báo học tập, không đăng ký học) nhưng sai điều khoản viện dẫn, thiếu các trường hợp kỷ luật thi hộ/xóa tên và hết hạn nghỉ tạm thời, đồng thời thêm lý do không có trong quy chế (nghĩa vụ học phí).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Sai điều khoản ( các trường hợp buộc thôi học cau_tra_loi đều lấy dẫn chứng từ Điều 24 khoản 1 là sai), thiếu trường hợp \"Sau khi hết hạn nghỉ học tạm thời sinh viên không có đơn xin học trở lại theo quy định tại khoản 3, Điều 36 của Quy chế này\".",
+      "question": "Khi nào SV bị buộc thôi học?"
+    },
+    {
+      "stt": 20,
+      "system": "rag_baseline",
+      "id": "dev-m004",
+      "run": 0,
+      "type": "single",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời đúng và đủ các ý chính: quy chế không ấn định con số cụ thể mà do thủ trưởng đơn vị đào tạo quy định sĩ số tối thiểu/tối đa (Điều 20 khoản 2 điểm c), và nếu lớp không mở thì sinh viên phải đăng ký học phần khác nếu chưa đủ khối lượng học tập tối thiểu của kỳ; các thông tin bổ sung không mâu thuẫn với quy chế.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "cau_tra_loi đầy đủ hơn so với đáp án mẫu",
+      "question": "Lớp môn học em định đăng ký cần tối thiểu bao nhiêu người mới mở được, và nếu lớp không mở thì em phải làm gì?"
+    },
+    {
+      "stt": 21,
+      "system": "rag_baseline",
+      "id": "dev-m013",
+      "run": 0,
+      "type": "multi",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời nêu đúng ngưỡng 2 tuần trước khi hết hạn nghỉ (Điều 36 khoản 3), đúng việc giữ nguyên mã sinh viên và được bố trí vào lớp phù hợp với khối lượng kiến thức tích lũy chứ không nhất thiết lớp cũ (Điều 20 khoản 1 điểm c).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "cau_tra_loi rất đầy đủ, đầy đủ hơn nguyên văn",
+      "question": "Em tìm hiểu thủ tục quay lại sau thời gian nghỉ học tạm thời: phải nộp đơn trước lúc nào, rồi có phải đổi mã sinh viên và học lại với lớp cũ không?"
+    },
+    {
+      "stt": 22,
+      "system": "rag_baseline",
+      "id": "dev-m016",
+      "run": 0,
+      "type": "multi",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: Hiệu trưởng quyết định công nhận tốt nghiệp trên cơ sở đề nghị của Hội đồng xét tốt nghiệp, Hiệu trưởng ký và đóng dấu vào bằng, thời hạn 3 tháng tính từ khi sinh viên đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với đơn vị đào tạo, với căn cứ Điều 47 khoản 2 và Điều 48 khoản 2; các chi tiết bổ sung về Điều 47 khoản 1 nằm ngoài phạm vi đáp án mẫu nhưng không mâu thuẫn với nguyên văn quy chế được cung cấp.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "",
+      "question": "Em muốn biết ở UET ai quyết định công nhận tốt nghiệp, ai ký bằng, và thời hạn cấp bằng được tính thế nào?"
+    },
+    {
+      "stt": 23,
+      "system": "rag_baseline",
+      "id": "dev-s05",
+      "run": 0,
+      "type": "multi",
+      "human": "dung",
+      "glm": "mot_phan",
+      "glm_reason": "Câu trả lời nêu đủ 8 điều kiện a–h, ngưỡng điểm TBC 2,50 và điều kiện điểm e theo quy định của ĐHQGHN và đơn vị đào tạo, nhưng thiếu ngưỡng cụ thể 'trình độ ngoại ngữ bậc 4' (chỉ dẫn chiếu Điều 13 khoản 3 mà không nêu rõ bậc 4).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "cau_tra_loi rất đầy đủ, đầy đủ hơn nguyên văn",
+      "question": "SV CTĐT chất lượng cao cần những điều kiện gì để được xét tốt nghiệp?"
+    },
+    {
+      "stt": 24,
+      "system": "llm_only",
+      "id": "dev-m009",
+      "run": 0,
+      "type": "multi",
+      "human": "sai",
+      "glm": "sai",
+      "glm_reason": "Câu trả lời kết luận sai khi nói một tín chỉ tương ứng 45 giờ (Điều 3) trong khi quy chế quy định 15 giờ tín chỉ (Điều 4 khoản 2), đồng thời không nêu được giờ tín chỉ lý thuyết bằng 1 tiết, ít nhất 2 tiết chuẩn bị cá nhân và tiết học 50 phút (Điều 4 khoản 3, Điều 19).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Sai cả câu trả lời lẫn trích dẫn",
+      "question": "Em muốn hình dung thời lượng học: một tín chỉ tương ứng bao nhiêu giờ tín chỉ, một giờ tín chỉ lý thuyết dài mấy tiết, mỗi tiết bao nhiêu phút và em phải chuẩn bị thêm bao lâu?"
+    },
+    {
+      "stt": 25,
+      "system": "llm_only",
+      "id": "dev-s10",
+      "run": 0,
+      "type": "multi",
+      "human": "mot_phan",
+      "glm": "mot_phan",
+      "glm_reason": "Kết luận đúng (GDTC không tính vào TBC tích lũy nhưng là điều kiện tốt nghiệp) nhưng không nêu được căn cứ cụ thể theo quy chế (Điều 5 khoản 2 điểm g, Điều 43 khoản 2, Điều 46 khoản 1 điểm g).",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "trả lời đúng nhưng không xác định được dẫn chứng ở điều khoản nào",
+      "question": "Học phần GDTC có tính vào điểm TBC tích lũy không, có cần để tốt nghiệp không?"
+    },
+    {
+      "stt": 26,
+      "system": "llm_only",
+      "id": "dev-m010",
+      "run": 0,
+      "type": "multi",
+      "human": "sai",
+      "glm": "sai",
+      "glm_reason": "Câu trả lời không nêu được kết luận nào (không cho biết số tín chỉ tối thiểu thêm và yêu cầu ngoại ngữ) dù quy chế quy định rõ CLC thêm ít nhất 15 tín chỉ, tài năng thêm ít nhất 30 tín chỉ và cả hai yêu cầu bậc 4, nên không thể được coi là đáp án đúng.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Không trả lời được do không tìm được dẫn chứng từ điều khoản",
+      "question": "Em đang tìm hiểu CLC và tài năng: hai chương trình này học thêm tối thiểu bao nhiêu tín chỉ so với chuẩn và yêu cầu ngoại ngữ đầu ra có khác nhau không?"
+    },
+    {
+      "stt": 27,
+      "system": "llm_only",
+      "id": "dev-m021",
+      "run": 0,
+      "type": "conditional",
+      "human": "mot_phan",
+      "glm": "mot_phan",
+      "glm_reason": "Kết luận đúng (chưa đủ điều kiện) và nêu đúng việc thiếu điều kiện trúng tuyển của chương trình thứ hai, nhưng không nêu ngưỡng TBC từ 2,5 cho nhánh chỉ đạt ngưỡng bảo đảm chất lượng đầu vào nên thiếu ý chính của đáp án mẫu.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Đúng nhưng chưa đưa ra dẫn chứng từ điều khoản cụ thể",
+      "question": "Em học chính quy, đã học xong 2 học kỳ, muốn đăng ký thêm ngành khác và đã có đơn, sẵn sàng đóng học phí. TBC tất cả học phần từ đầu khóa của em là 2,30 trên thang 4; em chỉ đạt ngưỡng bảo đảm chất lượng đầu vào, chưa đáp ứng điều kiện trúng tuyển chương trình thứ hai. Em đủ điều kiện đăng ký chưa?"
+    },
+    {
+      "stt": 28,
+      "system": "llm_only",
+      "id": "dev-s08",
+      "run": 0,
+      "type": "conditional",
+      "human": "sai",
+      "glm": "sai",
+      "glm_reason": "Kết luận đúng (1,35 < 1,40) nhưng căn cứ mâu thuẫn với quy chế: trích nhầm Điều 16 khoản 1 điểm b (đúng là Điều 17 khoản 2 và Điều 44 khoản 1 điểm a), nêu sai khoảng tín chỉ '30 đến dưới 60' (CLC năm thứ hai là 40–80) và bỏ qua ý thủ trưởng đơn vị được chọn 1–2 trong 3 điều kiện cảnh báo.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "Trả lời đúng nhưng đưa ra dẫn chứng, điều khoản sai",
+      "question": "SV CLC tích lũy 50 tín chỉ, TBC tích lũy 1,35 thì có bị cảnh báo học vụ không?"
+    },
+    {
+      "stt": 29,
+      "system": "rag_baseline",
+      "id": "dev-m006",
+      "run": 0,
+      "type": "single",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời nêu đúng và đủ ý nghĩa của cả ba ký hiệu I, X, R kèm căn cứ Điều 41 khoản 2 (điểm d và đ) khớp với đáp án mẫu và nguyên văn quy chế, phần bổ sung về khoản 5 không mâu thuẫn.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "",
+      "question": "Trên bảng điểm, các ký hiệu I, X và chữ R ghi sau điểm có nghĩa gì vậy ạ?"
+    },
+    {
+      "stt": 30,
+      "system": "rag_baseline",
+      "id": "dev-m020",
+      "run": 0,
+      "type": "conditional",
+      "human": "dung",
+      "glm": "dung",
+      "glm_reason": "Câu trả lời đúng: không được bảo lưu kết quả nhưng được tự học và dự thi vì 70% nằm trong khoảng 50% đến dưới 80% theo Điều 25 khoản 2; phần nêu thêm về khoản 4 chỉ là thông tin bổ sung, không mâu thuẫn với quy chế.",
+      "glm_model": "z-ai/glm-5.3-flash",
+      "human_note": "điều khoản đúng, có bổ sung thêm trích dẫn từ điều khoản đúng",
+      "question": "Em học văn bằng thứ hai, có một môn ở ngành cũ trùng 70% nội dung với môn ở ngành mới. Em được giữ kết quả cũ, tự ôn để thi hay bắt buộc phải học trên lớp?"
+    }
+  ]
+}
