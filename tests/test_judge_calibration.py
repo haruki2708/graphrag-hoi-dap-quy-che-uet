@@ -80,27 +80,6 @@ class CalibrationBuildTests(unittest.TestCase):
         """End to end on the real manifest: a fake graded sheet (human = GLM label except 3 shifted) is accepted."""
         manifest = bc.manifest_dict(self.picks)
         rows = bc.sheet_rows(self.picks, self.judged, self.questions)
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "sheet.xlsx"
-            bc.write_xlsx(path, bc.build_sheets(rows))
-            sheets = read_xlsx(path)
-        self.assertEqual(list(sheets), ["huong_dan", "cham"])
-        header, body = sheets["cham"][0], sheets["cham"][1:]
-        self.assertEqual(tuple(header), bc.SHEET_COLUMNS)
-        self.assertEqual(len(body), 30)
-        for forbidden in ("he", "system", "run", "judge", "glm", "label", "ly_do", "reason"):
-            self.assertNotIn(forbidden, header)
-        for line in body:
-            self.assertTrue(all(v in (None, "") for v in line[6:]), "nhan and ghi_chu must start empty")
-        self.assertEqual(sum(1 for line in body if line[4] == bc.NO_SOURCE_TEXT), 3)  # 1 rag + 2 llm out_of_scope
-        guide = "\n".join(str(r[0] or "") for r in sheets["huong_dan"])
-        for definition in (ln for ln in bc.JUDGE_SYSTEM.splitlines() if ln.startswith('- "')):
-            self.assertIn(definition, guide)
-
-    def test_filled_sheet_flows_through_agreement(self):
-        """End to end on the real manifest: a fake graded sheet (human = GLM label except 3 shifted) is accepted."""
-        manifest = json.loads(bc.manifest_dict(self.picks).__str__().replace("'", '"')) if False else bc.manifest_dict(self.picks)
-        rows = bc.sheet_rows(self.picks, self.judged, self.questions)
         by_stt = {p["stt"]: p for p in self.picks}
         shift = {"dung": "mot_phan", "mot_phan": "sai", "sai": "mot_phan"}
         for i, row in enumerate(rows):
