@@ -81,7 +81,7 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 - Bộ câu hỏi: `data/eval/questions_v*.jsonl`, mỗi dòng: `id`, `question`, `answer`, `source_ids`, `type` ∈ {`single`, `multi`, `conditional`, `out_of_scope`}, `split` ∈ {`dev`, `test`}, `delegated` (bool: nội dung quy chế giao cho đơn vị đào tạo quy định; `docs/schema_v1.md` Q11), `origin` ∈ {`manual`, `generated`}, `ref_points` (mã điểm cụ thể để tra cứu, không dùng để chấm).
 - Quy tắc chấm (`docs/schema_v1.md` mục 3): `source_ids` ghi ở mức `:DonViNoiDung` (điểm quy về khoản cha; điều không có khoản, hoặc nội dung ở phần dẫn / `doan_khong_so` mức điều, thì tính là điều); chỉ ghi nguồn bắt buộc, tối đa 5. Mã do hệ thống trả về cũng quy về mức này trước khi chấm.
 - Retrieval: Recall@5, Recall@10, MRR trên `source_ids`.
-- Nguồn gốc câu và tách dev/test (quyết định #10): `test` do chủ dự án tự soạn (`origin: manual`), khóa từ lúc tách, chỉ chạy ở T9; câu `generated` (LLM sinh, chủ dự án duyệt từng câu), 11 câu thử ở `docs/schema_v1.md` mục 3 và câu demo `judge_smoke` chỉ vào `dev`. Kết quả trên `dev` báo tách theo `origin`.
+- Nguồn gốc câu và tách dev/test (quyết định #10): `test` do chủ dự án tự soạn (`origin: manual`), khóa từ lúc tách, chỉ chạy ở T9; không dùng LLM sinh câu hỏi; câu `generated` là 11 câu thử ở `docs/schema_v1.md` mục 3, chỉ vào `dev` (nếu sau này có câu LLM sinh cũng chỉ vào `dev`). Kết quả trên `dev` báo tách theo `origin`.
 - Câu trả lời: độ chính xác (so đáp án, có thể LLM-as-judge), faithfulness, trích dẫn đúng, từ chối đúng với `out_of_scope`.
 - Chỉ chỉnh prompt/tham số trên `dev`. `test` chỉ chạy ở T9.
 - Mọi kết quả lưu `eval/results/<ngày>_<hệ>_<split>.csv` kèm commit hash và cấu hình.
