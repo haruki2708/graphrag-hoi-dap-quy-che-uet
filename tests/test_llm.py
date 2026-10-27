@@ -158,6 +158,91 @@ class CacheTests(LLMTestCase):
         self.assertFalse((Path(self.tmp.name) / "judge").exists())
 
 
+class TruncationAndQuotaTests(LLMTestCase):
+    def test_truncated_reply_is_returned_but_not_cached(self):
+        body = ok_body()
+        body["choices"][0]["finish_reason"] = "length"
+        with mock.patch.object(providers.httpx, "post", return_value=http_response(200, body)) as post:
+            first = self.call()
+            second = self.call()
+        self.assertTrue(first.truncated)
+        self.assertFalse(second.from_cache)
+        self.assertEqual(post.call_count, 2)
+        self.assertFalse((Path(self.tmp.name) / "judge").exists())
+
+    def test_retry_after_above_cap_raises_without_sleeping(self):
+        with mock.patch.object(providers.httpx, "post", return_value=http_response(429, headers={"Retry-After": "300"})):
+            with self.assertRaises(core.LLMError) as ctx:
+                self.call()
+        self.assertIn("cap", str(ctx.exception))
+        self.assertEqual(ctx.exception.http_code, 429)
+        self.sleep.assert_not_called()
+
+    def test_params_override_changes_cache_key(self):
+        with mock.patch.object(providers.httpx, "post", return_value=http_response(200, ok_body())) as post:
+            base = core.complete("judge", "s", [{"role": "user", "content": "hi"}])
+            low = core.complete("judge", "s", [{"role": "user", "content": "hi"}], params_override={"x": 1})
+        self.assertEqual(post.call_count, 2)
+        self.assertFalse(low.from_cache)
+        self.assertEqual((base.params, low.params), ({}, {"x": 1}))
+
+
+class RoleConfigTests(unittest.TestCase):
+    """Per-role settings in the real configs/llm.toml."""
+
+    def test_judge_fallback_has_its_own_retries_and_timeout(self):
+        from src.llm.config import load_config
+
+        config = load_config()
+        fallback = config.role("judge_fallback")
+        self.assertEqual((fallback.max_retries, fallback.timeout_s), (2, 60.0))
+        for name in ("answer", "extract", "judge"):
+            self.assertIsNone(config.role(name).max_retries, name)  # global [retry].max_retries applies
+        self.assertEqual(config.retry.max_retries, 6)
+        self.assertEqual((config.role("answer").timeout_s, config.role("judge").timeout_s), (120.0, 90.0))
+
+    def test_role_max_retries_overrides_global(self):
+        cfg = make_config()
+        role = RoleConfig(name="judge", provider="nvidia", model="test/model", max_tokens=64, timeout_s=5,
+                          base_url="https://nim.example/v1", max_retries=1)
+        custom = LLMConfig(retry=cfg.retry, roles={"judge": role})
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        with mock.patch.object(core, "CACHE_DIR", Path(tmp.name)), mock.patch.object(core, "load_config", lambda: custom), \
+                mock.patch.object(core, "load_dotenv", lambda *a, **k: None), \
+                mock.patch.dict("os.environ", {"NVIDIA_API_KEY": FAKE_KEY}), mock.patch.object(core, "_sleep"), \
+                mock.patch.object(providers.httpx, "post", return_value=http_response(503)) as post, \
+                redirect_stdout(io.StringIO()):
+            with self.assertRaises(core.LLMError):
+                core.complete("judge", "s", [{"role": "user", "content": "hi"}])
+        self.assertEqual(post.call_count, 2)  # 1 attempt + max_retries=1 (global is 3 in make_config)
+
+
+class AnthropicStructuredFallbackTests(unittest.TestCase):
+    def test_400_on_schema_falls_back_to_prompt_json(self):
+        import anthropic
+        import httpx2
+        from types import SimpleNamespace
+
+        cfg = RoleConfig(name="answer", provider="anthropic", model="claude-haiku-5-5", max_tokens=64, timeout_s=5,
+                         params={"effort": "low"})
+        request = httpx2.Request("POST", "https://api.anthropic.com/v1/messages")
+        rejected = anthropic.APIStatusError("bad schema", response=httpx2.Response(400, request=request), body=None)
+        ok = SimpleNamespace(content=[SimpleNamespace(type="thinking"), SimpleNamespace(type="text", text='{"a": 1}')],
+                             model="claude-haiku-5-5", stop_reason="end_turn",
+                             usage=SimpleNamespace(input_tokens=5, output_tokens=3))
+        with mock.patch.dict("os.environ", {"ANTHROPIC_API_KEY": "sk-ant-test"}), \
+                mock.patch.object(anthropic.resources.Messages, "create", side_effect=[rejected, ok]) as create:
+            raw = providers.call_anthropic(cfg, "sys", [{"role": "user", "content": "hi"}], {"type": "object"})
+        self.assertFalse(raw.structured_output)
+        self.assertEqual(raw.text, '{"a": 1}')
+        first, second = create.call_args_list
+        self.assertEqual(first.kwargs["output_config"]["format"]["type"], "json_schema")
+        self.assertNotIn("format", second.kwargs["output_config"])
+        self.assertEqual(second.kwargs["output_config"]["effort"], "low")
+        self.assertIn("JSON Schema", second.kwargs["system"])
+
+
 class SecretTests(LLMTestCase):
     def test_key_never_printed_or_raised(self):
         # The server echoes the key back in its error body and in a retryable error first

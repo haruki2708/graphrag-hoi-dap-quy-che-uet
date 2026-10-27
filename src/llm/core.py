@@ -5,6 +5,7 @@ backoff and jitter (honouring Retry-After), caches successful results on disk, a
 carrying the metadata that must go into every result file (PLAN section 4, decision #2).
 """
 
+import dataclasses
 import hashlib
 import json
 import os
@@ -24,6 +25,8 @@ CACHE_DIR = REPO_ROOT / "data" / "cache" / "llm"
 # Vietnam has no daylight saving time, so a fixed offset is exact (zoneinfo needs tzdata on Windows)
 VN_TZ = timezone(timedelta(hours=7))
 CACHE_FORMAT = 1  # bump when the cached record layout changes
+# finish_reason values meaning the reply hit the output cap (Anthropic, OpenAI-compatible NIM, Gemini)
+TRUNCATED_REASONS = frozenset({"max_tokens", "length", "MAX_TOKENS"})
 
 
 @dataclass
@@ -43,6 +46,8 @@ class LLMResult:
     called_at: str
     from_cache: bool
     structured_output: bool
+    truncated: bool = False  # hit the output cap; returned but never cached
+    params: dict | None = None  # provider params actually used (config merged with params_override)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -132,6 +137,11 @@ def _call_with_retry(cfg: RoleConfig, retry: RetryConfig, system: str, messages:
         except PermanentError as e:
             raise LLMError(mask_secrets(str(e)), cfg.name, cfg.provider, e.http_code, attempt) from None
         except TransientError as e:
+            if e.retry_after_s is not None and e.retry_after_s > retry.retry_after_cap_s:
+                raise LLMError(
+                    mask_secrets(f"server asked to wait {e.retry_after_s:.0f}s (> cap {retry.retry_after_cap_s:.0f}s), "
+                                 f"quota likely exhausted: {e}"), cfg.name, cfg.provider, e.http_code, attempt
+                ) from None
             if attempt > retry.max_retries:
                 raise LLMError(
                     mask_secrets(f"gave up after {attempt} attempts: {e}"), cfg.name, cfg.provider, e.http_code, attempt
@@ -143,16 +153,20 @@ def _call_with_retry(cfg: RoleConfig, retry: RetryConfig, system: str, messages:
 
 
 def complete(role: str, system: str, messages: list[dict], json_schema: dict | None = None,
-             run: int = 0, use_cache: bool = True) -> LLMResult:
+             run: int = 0, use_cache: bool = True, params_override: dict | None = None) -> LLMResult:
     """Call the model configured for role and return the reply with its metadata.
 
     messages: [{"role": "user" | "assistant", "content": str}, ...]; system is passed separately.
     json_schema: JSON Schema of the expected object; parsed is None when the reply does not fit.
     run: repetition index (0, 1, 2 for the three runs per configuration); part of the cache key.
+    params_override: provider params replacing the role's config for this call (e.g. {"effort": "low"});
+    they are part of the cache key.
     """
     load_dotenv(REPO_ROOT / ".env")
     config = load_config()
     cfg = config.role(role)
+    if params_override:
+        cfg = dataclasses.replace(cfg, params={**cfg.params, **params_override})
     key = cache_key(cfg, system, messages, json_schema, run)
     cache_file = CACHE_DIR / role / f"{key}.json"
 
@@ -162,9 +176,12 @@ def complete(role: str, system: str, messages: list[dict], json_schema: dict | N
         result.from_cache = True
         return result
 
+    retry = config.retry
+    if cfg.max_retries is not None:
+        retry = dataclasses.replace(retry, max_retries=cfg.max_retries)
     started = datetime.now(VN_TZ)
     t0 = time.perf_counter()
-    raw, attempts = _call_with_retry(cfg, config.retry, system, messages, json_schema)
+    raw, attempts = _call_with_retry(cfg, retry, system, messages, json_schema)
     result = LLMResult(
         text=raw.text,
         parsed=parse_json(raw.text, json_schema) if json_schema is not None else None,
@@ -181,10 +198,12 @@ def complete(role: str, system: str, messages: list[dict], json_schema: dict | N
         called_at=started.isoformat(timespec="seconds"),
         from_cache=False,
         structured_output=raw.structured_output,
+        truncated=raw.finish_reason in TRUNCATED_REASONS,
+        params=dict(cfg.params),
     )
 
-    # Errors raise above and are never cached; refusals are not cached either
-    if use_cache and result.finish_reason != "refusal":
+    # Errors raise above and are never cached; refusals and truncated replies are not cached either
+    if use_cache and result.finish_reason != "refusal" and not result.truncated:
         cache_file.parent.mkdir(parents=True, exist_ok=True)
         record = {"format": CACHE_FORMAT, "key": key, "result": result.to_dict()}
         cache_file.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")

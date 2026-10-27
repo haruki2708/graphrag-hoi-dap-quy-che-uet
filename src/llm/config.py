@@ -15,6 +15,7 @@ class RetryConfig:
     max_retries: int = 6
     base_delay_s: float = 2.0
     max_delay_s: float = 60.0
+    retry_after_cap_s: float = 120.0  # a longer Retry-After means quota exhausted: fail instead of sleeping
 
 
 @dataclass(frozen=True)
@@ -26,6 +27,7 @@ class RoleConfig:
     timeout_s: float
     base_url: str | None = None
     params: dict = field(default_factory=dict)
+    max_retries: int | None = None  # per-role override of [retry].max_retries
 
 
 @dataclass(frozen=True)
@@ -55,5 +57,6 @@ def load_config(path: Path = CONFIG_PATH) -> LLMConfig:
             timeout_s=float(raw["timeout_s"]),
             base_url=raw.get("base_url"),
             params=dict(raw.get("params", {})),
+            max_retries=int(raw["max_retries"]) if "max_retries" in raw else None,
         )
     return LLMConfig(retry=RetryConfig(**data.get("retry", {})), roles=roles)

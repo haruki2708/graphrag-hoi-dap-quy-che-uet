@@ -7,6 +7,7 @@
 max_retries = 6        # retries after the first attempt
 base_delay_s = 2.0     # exponential backoff base, with jitter
 max_delay_s = 60.0     # cap per wait; a Retry-After header from the server takes precedence
+retry_after_cap_s = 120.0  # Retry-After above this means the quota is gone: raise LLMError, do not sleep
 
 # Answer generation for all three systems (llm_only, rag_baseline, graphrag).
 # Claude Haiku 5.5: temperature/top_p/top_k are rejected (400) and not sent. Adaptive thinking is on by
@@ -44,10 +45,22 @@ timeout_s = 90
 
 # Second fallback: Gemini 3.8 Flash (free tier; often overloaded, 503/504).
 # max_tokens is high because thinking spends output tokens (MAX_TOKENS was hit at 256).
+# Fewer retries and a shorter timeout than [retry]: an overloaded call would otherwise block ~12 minutes.
 [roles.judge_fallback]
 provider = "gemini"
 model = "gemini-3.8-flash"
 max_tokens = 4096
-timeout_s = 90
+timeout_s = 60
+max_retries = 2
 
 [roles.judge_fallback.params]
+
+# Prices in USD per 1M tokens, used only for cost estimates in eval result files.
+# Source: platform.claude.com/docs/en/about-claude/pricing, checked 2026-10-27. Haiku 5.5 has two rate
+# cards by prompt length; these are for prompts of 100K tokens or fewer (all prompts here are far shorter).
+[pricing."claude-haiku-5-5"]
+input_per_mtok = 0.10
+output_per_mtok = 0.50
+source = "platform.claude.com/docs/en/about-claude/pricing"
+checked = "2026-10-27"
+note = "prompt <= 100K tokens; $0.50 / $2.50 above that"

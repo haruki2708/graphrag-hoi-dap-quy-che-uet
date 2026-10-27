@@ -80,39 +80,50 @@ def call_anthropic(cfg: RoleConfig, system: str, messages: list[dict], json_sche
     # max_retries=0: core.py is the only retry layer. Explicit api_key: a v2 client holds one credential.
     client = anthropic.Anthropic(api_key=api_key("anthropic"), max_retries=0, timeout=cfg.timeout_s)
     params = dict(cfg.params)
-    output_config = {}
-    if "effort" in params:
-        output_config["effort"] = params.pop("effort")
-    if json_schema is not None:
-        output_config["format"] = {"type": "json_schema", "schema": json_schema}
+    effort = params.pop("effort", None)
     kwargs = {}
     if "thinking" in params:
         kwargs["thinking"] = {"type": params.pop("thinking")}
     if params:
         raise PermanentError(f"unsupported anthropic params in config: {sorted(params)}")
-    if output_config:
-        kwargs["output_config"] = output_config
-    if system:
-        kwargs["system"] = system
 
-    try:
-        response = client.messages.create(model=cfg.model, max_tokens=cfg.max_tokens, messages=messages, **kwargs)
-    except anthropic.APIStatusError as e:
-        raise status_error(f"anthropic HTTP {e.status_code}: {e.message}", e.status_code,
-                           e.response.headers.get("retry-after")) from e
-    except anthropic.APIConnectionError as e:  # includes APITimeoutError
-        raise TransientError(f"anthropic {type(e).__name__}: {e}") from e
+    # SDK 2.2.0: output_config is OutputConfigParam {effort, format}; format is JSONOutputFormatParam
+    # {"type": "json_schema", "schema": ...}. If the API rejects the schema (400/422), ask for JSON in the
+    # system prompt instead and let core.parse_json check the reply.
+    attempts = [True, False] if json_schema is not None else [False]
+    for structured in attempts:
+        output_config = {"effort": effort} if effort else {}
+        sys_text = system
+        if structured:
+            output_config["format"] = {"type": "json_schema", "schema": json_schema}
+        elif json_schema is not None:
+            sys_text = (system or "") + json_instruction(json_schema)
+        call = dict(kwargs)
+        if output_config:
+            call["output_config"] = output_config
+        if sys_text:
+            call["system"] = sys_text
+        try:
+            response = client.messages.create(model=cfg.model, max_tokens=cfg.max_tokens, messages=messages, **call)
+        except anthropic.APIStatusError as e:
+            if structured and e.status_code in (400, 422):
+                continue
+            raise status_error(f"anthropic HTTP {e.status_code}: {e.message}", e.status_code,
+                               e.response.headers.get("retry-after")) from e
+        except anthropic.APIConnectionError as e:  # includes APITimeoutError
+            raise TransientError(f"anthropic {type(e).__name__}: {e}") from e
 
-    # Responses can start with thinking blocks: read text blocks by type, never by position
-    text = "".join(b.text for b in response.content if b.type == "text")
-    return RawResponse(
-        text=text,
-        model_served=response.model,
-        finish_reason=response.stop_reason,
-        input_tokens=response.usage.input_tokens,
-        output_tokens=response.usage.output_tokens,
-        structured_output=json_schema is not None,
-    )
+        # Responses can start with thinking blocks: read text blocks by type, never by position
+        text = "".join(b.text for b in response.content if b.type == "text")
+        return RawResponse(
+            text=text,
+            model_served=response.model,
+            finish_reason=response.stop_reason,
+            input_tokens=response.usage.input_tokens,
+            output_tokens=response.usage.output_tokens,
+            structured_output=structured,
+        )
+    raise PermanentError("anthropic: no request was sent")  # unreachable: attempts is never empty
 
 
 # --- NVIDIA NIM (OpenAI-compatible) --------------------------------------------------------------

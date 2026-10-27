@@ -1,5 +1,6 @@
-"""Real-call smoke test of src/llm: one answer call, one judge call with a JSON schema, then the
-answer call again (run=0) which must come from the disk cache. Costs a few hundred tokens.
+"""Real-call smoke test of src/llm: one answer call, one judge call with a JSON schema, the answer call
+again (run=0, must come from the disk cache), one Anthropic call with a JSON schema (structured output),
+and one judge_fallback (Gemini) call. Costs a few hundred tokens.
 
 Run from the repo root:  python scripts/llm_smoke.py
 """
@@ -20,6 +21,13 @@ VERDICT_SCHEMA = {
         "reason": {"type": "string"},
     },
     "required": ["label", "reason"],
+    "additionalProperties": False,
+}
+
+CAPITAL_SCHEMA = {
+    "type": "object",
+    "properties": {"thu_do": {"type": "string"}},
+    "required": ["thu_do"],
     "additionalProperties": False,
 }
 
@@ -59,11 +67,37 @@ def main() -> int:
         print(f"LỖI [{e.role}/{e.provider}] HTTP {e.http_code} sau {e.attempts} lần: {e}")
         return 1
 
+    # (c) Anthropic structured output with a small schema (falls back to prompt JSON on 400/422)
+    try:
+        structured = complete("answer", "Trả về JSON.", [{"role": "user", "content": "Thủ đô của Việt Nam là gì?"}],
+                              json_schema=CAPITAL_SCHEMA, run=0)
+        show("answer + json_schema (Anthropic structured output)", structured)
+    except LLMError as e:
+        print(f"LỖI [{e.role}/{e.provider}] HTTP {e.http_code} sau {e.attempts} lần: {e}")
+        return 1
+
+    # (d) judge_fallback (Gemini) through complete(); 503/504 is Google overload, recorded but not a failure
+    fallback_note = None
+    try:
+        fallback = complete("judge_fallback", JUDGE_SYSTEM, JUDGE_MESSAGES, json_schema=VERDICT_SCHEMA, run=0)
+        show("judge_fallback (Gemini, json_schema)", fallback)
+    except LLMError as e:
+        fallback = None
+        fallback_note = f"HTTP {e.http_code} sau {e.attempts} lần: {e}"
+        print(f"--- judge_fallback: LỖI {fallback_note}")
+
     checks = {
         "Haiku trả lời có chữ": bool(first.text.strip()),
         "GLM trả JSON hợp lệ": judge.parsed is not None,
         "Lần gọi lại lấy từ cache": again.from_cache,
+        "Anthropic structured output trả JSON hợp lệ": structured.parsed is not None,
     }
+    if fallback is not None:
+        checks["Gemini (judge_fallback) trả JSON hợp lệ"] = fallback.parsed is not None
+    elif fallback_note and any(f"HTTP {c}" in fallback_note for c in (503, 504)):
+        print(f"Ghi nhận: judge_fallback quá tải ({fallback_note[:12]}) — không tính là lỗi")
+    else:
+        checks["Gemini (judge_fallback) gọi được"] = False
     print()
     for name, passed in checks.items():
         print(f"{'ĐẠT' if passed else 'LỖI'}: {name}")
