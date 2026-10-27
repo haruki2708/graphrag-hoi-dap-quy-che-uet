@@ -1,0 +1,23 @@
+id,origin,type,delegated,source_ids,retrieved_ids,recall@5,recall@10,mrr,answer,cited_ids,coarse_citations,invalid_citations,citation_recall,citation_precision,finish_reason,truncated,input_tokens,output_tokens,latency_s,from_cache,run,effort,model_served,called_at
+dev-m001,manual,single,False,qc3626.d16,qc3626.d16 qc3626.d38.k3 qc3626.d44 qc3626.d17.k2 qc3626.d23.k2 qc3626.d17.k1 qc3626.d38.k2 qc3626.d21.k3 qc3626.d21.k1 qc3626.d5.k1,1.0,1.0,1.0,"Mỗi năm học có **2 học kỳ chính** và **1 học kỳ phụ** (Điều 16).
+
+- **Học kỳ chính:** 15 tuần học, 3-4 tuần thi và 1 tuần dự phòng (Điều 16).
+- **Học kỳ phụ:** ít nhất 5 tuần học và 1 tuần thi. Học kỳ này được tổ chức giữa hai học kỳ chính (Điều 16).",qc3626.d16,,,1.0,1.0,end_turn,False,1938,334,4.002,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:15+07:00
+dev-m004,manual,single,True,qc3626.d20.k2,qc3626.d20.k2 qc3626.d21.k1 qc3626.d23.k3 qc3626.d18.k5 qc3626.d20.k1 qc3626.d22.k3 qc3626.d18.k6 qc3626.d20.k3 qc3626.d21.k7 qc3626.d44.k2,1.0,1.0,1.0,"**Số sinh viên tối thiểu:** Quy chế không quy định con số cụ thể. Thủ trưởng đơn vị đào tạo quy định số lượng sinh viên tối thiểu và tối đa cho mỗi lớp học phần (Điều 20 khoản 2 điểm c). Em nên xem thông báo thời khóa biểu của đơn vị đào tạo phụ trách học phần, thường được công bố chậm nhất 01 tháng trước khi học kỳ bắt đầu (Điều 18 khoản 5 điểm a).
+
+**Nếu lớp không được mở:** Theo Điều 20 khoản 2 điểm c, lớp học phần sẽ không được tổ chức nếu số sinh viên đăng ký thấp hơn mức tối thiểu. Khi đó, nếu em chưa đủ khối lượng học tập tối thiểu của học kỳ, em phải đăng ký học phần khác.
+
+Lưu ý thêm: khối lượng đăng ký tối thiểu trong học kỳ chính không được thấp hơn 2/3 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn (Điều 21 khoản 1). Nếu em muốn đăng ký ít hơn mức này, em cần được thủ trưởng đơn vị đào tạo đồng ý.",qc3626.d20.k2 qc3626.d18.k5 qc3626.d21.k1,,,1.0,0.3333,end_turn,False,2628,772,3.807,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:19+07:00
+dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,qc3626.d31.k1 qc3626.d35 qc3626.d30.k2 qc3626.d34.k3 qc3626.d27.k2 qc3626.d31 qc3626.d33.k1 qc3626.d30.k1 qc3626.d38.k1 qc3626.d39.k5,1.0,1.0,0.5,"**Nghĩa vụ của sinh viên chương trình tài năng, chất lượng cao** (Điều 35):
+
+- **Tham gia nghiên cứu khoa học:** Tích cực tham gia nghiên cứu khoa học dưới sự hướng dẫn của giảng viên hướng dẫn và tham gia các nhóm nghiên cứu.
+- **Báo cáo tình hình:** Thường xuyên phản ánh tình hình học tập, nghiên cứu, sinh hoạt và rèn luyện cho đơn vị đào tạo thông qua giảng viên hướng dẫn học tập, nghiên cứu khoa học.
+- **Hoàn thành chương trình:** Hoàn thành chương trình đào tạo đúng thời hạn chuẩn, không tính thời gian kéo dài.
+
+**Thời điểm được bố trí giảng viên hướng dẫn NCKH:** Chậm nhất từ học kỳ thứ tư, mỗi sinh viên được một giảng viên hướng dẫn nghiên cứu khoa học (Điều 27 khoản 2 điểm g).",qc3626.d35 qc3626.d27.k2,,,1.0,1.0,end_turn,False,3642,903,3.852,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:23+07:00
+dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,qc3626.d21.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1 qc3626.d42.k4 qc3626.d47.k7 qc3626.d41.k2 qc3626.d41.k5 qc3626.d44.k1,1.0,1.0,0.3333,"**Xếp học lực:** Yếu. Điểm trung bình chung học kỳ dưới 2,00 nhưng chưa thuộc diện bị buộc thôi học thì được xếp loại Yếu (Điều 45 khoản 2 điểm đ).
+
+**Khối lượng đăng ký tối đa:** 18 tín chỉ cho mỗi học kỳ chính (Điều 23 khoản 1 điểm c). Loại học lực là căn cứ xác định khối lượng được đăng ký trong học kỳ kế tiếp (Điều 45 khoản 1).",qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1,,,1.0,0.6667,end_turn,False,2397,481,2.639,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:27+07:00
+dev-m026,manual,out_of_scope,False,,qc3626.d23.k2 qc3626.d8.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d44.k1 qc3626.d18.k7 qc3626.d41.k2 qc3626.d36.k2 qc3626.d5.k1 qc3626.d16,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định về phí gửi xe máy theo tháng, nên mình không có căn cứ để trả lời mức phí cụ thể.
+
+Quy chế chỉ quy định về kinh phí đào tạo, gồm ngân sách nhà nước, học phí và các nguồn hợp pháp khác (Điều 8 khoản 1). Học phí được tính theo công thức tín chỉ, không bao gồm phí gửi xe.",qc3626.d8.k1,,,,,end_turn,False,3185,321,3.105,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:30+07:00

@@ -1,0 +1,9 @@
+# Dense retrieval over the 192 :DonViNoiDung units (decision #4, chosen 27/10/2026).
+# Basis: eval/results/2026-10-27_embedding_compare_dev.json (dev v1, 4 configurations).
+[dense]
+model_id = "BAAI/bge-m3"
+revision = "5617a9f61b028005a4858fdac845db406aefb181"  # Hub commit, pinned
+with_heading = false     # embed the unit text only; the heading is not prepended
+max_seq_length = 8192    # from the model card; longest unit is 656 tokens, none truncated
+query_prefix = ""        # card: bge-m3 "no longer requires adding instructions to the queries"
+top_k = 5                # units passed to the answer prompt by rag_baseline

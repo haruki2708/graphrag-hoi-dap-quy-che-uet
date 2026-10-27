@@ -1,0 +1,54 @@
+{
+  "run_at": "2026-10-27T14:33:25+07:00",
+  "git_commit": "40f5f49fba34c079e0e1ac873f40b3b74b1bb119",
+  "system": "llm_only",
+  "split": "dev",
+  "question_ids": [
+    "dev-m001",
+    "dev-m004",
+    "dev-m015",
+    "dev-m019",
+    "dev-m026"
+  ],
+  "runs": 1,
+  "effort": "medium",
+  "answer_role": {
+    "provider": "anthropic",
+    "model": "claude-haiku-5-5",
+    "max_tokens": 4096,
+    "timeout_s": 120,
+    "params": {
+      "effort": "medium"
+    }
+  },
+  "retrieval_config": null,
+  "retrieval_index": null,
+  "system_prompt_sha256": "9626e05cf0b6d4dfa274c7e5ef471fd63eda7474f9bc932b9c6bfe0a80a8cb54",
+  "system_prompt": "Bạn là trợ lý trả lời câu hỏi của sinh viên về Quy chế đào tạo đại học tại Đại học Quốc gia Hà Nội, ban hành kèm theo Quyết định số 3626/QĐ-ĐHQGHN ngày 21/10/2022, áp dụng cho các khóa tuyển sinh từ năm 2022.\n\nQuy tắc trả lời:\n1. Chỉ trả lời theo quy chế này. Nếu tin nhắn có kèm phần NGỮ CẢNH trích từ quy chế, dựa vào phần đó. Nếu tin nhắn không kèm NGỮ CẢNH, trả lời theo hiểu biết của bạn về quy chế; không nói rằng thiếu tài liệu, thiếu ngữ cảnh hay thiếu đoạn trích.\n2. Nêu căn cứ cho từng ý theo dạng \"Điều X khoản Y\", thêm \"điểm z\" khi cần (ví dụ: Điều 44 khoản 1 điểm a). Với điều không chia khoản, ghi \"Điều X\".\n3. Nếu quy chế giao cho đơn vị đào tạo (thủ trưởng đơn vị đào tạo) quy định chi tiết, hãy nói rõ điều đó và nêu căn cứ; không đoán quy định cụ thể của Trường Đại học Công nghệ.\n4. Nếu quy chế không quy định nội dung được hỏi, hãy nói rõ là quy chế không quy định; không suy đoán. Không giới thiệu đơn vị, phòng ban hay địa chỉ liên hệ mà bạn không chắc chắn.\n5. Trả lời ngắn gọn, đi thẳng vào câu hỏi.",
+  "libraries": {
+    "anthropic": "2.2.0",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.14.1+cu126",
+    "numpy": "2.5.4"
+  },
+  "tokens": {
+    "input": 3508,
+    "output": 5842
+  },
+  "pricing": {
+    "input_per_mtok": 0.1,
+    "output_per_mtok": 0.5,
+    "source": "platform.claude.com/docs/en/about-claude/pricing",
+    "checked": "2026-10-27",
+    "note": "prompt <= 100K tokens; $0.50 / $2.50 above that"
+  },
+  "cost_usd": 0.003272,
+  "answers_first_called_at": "2026-10-27T14:27:55+07:00",
+  "cost_usd_this_invocation": 0.0,
+  "fresh_calls_this_invocation": 0,
+  "cached_calls_this_invocation": 5,
+  "truncated_rows": [],
+  "n_coarse_citations": 0,
+  "rows_with_coarse_citations": {},
+  "rows_with_invalid_citations": {}
+}

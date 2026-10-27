@@ -1,0 +1,26 @@
+id,origin,type,delegated,source_ids,retrieved_ids,recall@5,recall@10,mrr,answer,cited_ids,coarse_citations,invalid_citations,citation_recall,citation_precision,finish_reason,truncated,input_tokens,output_tokens,latency_s,from_cache,run,effort,model_served,called_at
+dev-m001,manual,single,False,qc3626.d16,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), năm học được chia thành **2 học kỳ chính** và có thể tổ chức thêm **học kỳ phụ** (thường là học kỳ hè). Học kỳ phụ là tùy chọn, không bắt buộc.
+
+Về số tuần dành cho học, thi và dự phòng trong từng kỳ, tôi không có căn cứ chắc chắn để nêu con số cụ thể. Quy chế giao việc xây dựng kế hoạch đào tạo hằng năm và lịch học cho thủ trưởng đơn vị đào tạo, nên cách phân bổ tuần sẽ theo thông báo lịch đào tạo của năm học mà đơn vị em đang theo học. Em nên xem lịch đó để biết chính xác số tuần học, tuần thi và tuần dự phòng của từng kỳ.",,,,0.0,,end_turn,False,704,1408,8.814,True,0,medium,claude-haiku-5-5,2026-10-27T14:27:55+07:00
+dev-m004,manual,single,True,qc3626.d20.k2,,,,,"Quy chế không quy định một con số cố định về số sinh viên tối thiểu để mở lớp học phần. Việc này được giao cho **thủ trưởng đơn vị đào tạo** quy định chi tiết (theo quy định về tổ chức lớp học phần trong Quy chế). Em nên xem thông báo đăng ký học phần của khoa/trường quản lý môn học để biết ngưỡng cụ thể.
+
+Về trường hợp lớp không mở, quy chế không có quy định riêng mà tôi có thể trích dẫn chắc chắn. Em nên:
+- Đăng ký một lớp học phần khác của cùng môn (nếu có) hoặc học phần khác trong kế hoạch học tập để đủ khối lượng tín chỉ.
+- Theo dõi thông báo của đơn vị đào tạo về điều chỉnh đăng ký và thời hạn đăng ký bổ sung.
+- Hỏi trực tiếp đơn vị quản lý môn học hoặc cố vấn học tập nếu cần xếp lại thời khóa biểu.
+
+Em nên đối chiếu với các điều về đăng ký học phần và tổ chức lớp học phần trong Quy chế đào tạo để có căn cứ chính xác.",,,,0.0,,end_turn,False,686,1167,6.149,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:03+07:00
+dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,,,,,"Tôi chưa xác định chắc chắn điều khoản cụ thể trong Quy chế 3626/QĐ-ĐHQGHN quy định nghĩa vụ NCKH của sinh viên chương trình chất lượng cao và thời điểm chậm nhất được bố trí người hướng dẫn. Vì vậy tôi không nêu số điều, khoản cụ thể để tránh trích dẫn sai.
+
+Theo cấu trúc chung của quy chế, em nên kiểm tra các nội dung sau:
+
+- **Nghĩa vụ của sinh viên chương trình chất lượng cao** (tham gia NCKH, báo cáo kết quả, hoàn thành chương trình): thường nằm trong phần quy định về chương trình chất lượng cao hoặc quyền và nghĩa vụ của người học.
+- **Thời điểm bố trí người hướng dẫn NCKH**: nếu quy chế có mốc thời gian chung thì sẽ ghi ở phần này. Nếu quy chế giao việc này cho thủ trưởng đơn vị đào tạo quy định chi tiết, thì mốc cụ thể sẽ nằm trong quy định của đơn vị đào tạo (ở đây là Trường Đại học Công nghệ), không có trong quy chế chung.
+
+Em nên hỏi trực tiếp phòng đào tạo hoặc văn phòng khoa/trường quản lý chương trình chất lượng cao để biết mốc thời gian và quy định chi tiết hiện hành.",,,,0.0,,end_turn,False,729,1291,6.512,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:10+07:00
+dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,,,,,"**Học lực:** Với TBC học kỳ 1,90 trên thang 4, em thuộc loại **yếu** theo thang xếp loại học lực của quy chế (từ 1,00 đến dưới 2,00). Căn cứ là điều quy định xếp loại học lực trong Quy chế 3626/QĐ-ĐHQGHN, mà tôi chưa xác định chính xác số điều và khoản.
+
+**Số tín chỉ tối đa kỳ chính tiếp theo:** Tôi không chắc chắn về con số cụ thể. Giới hạn đăng ký tín chỉ phụ thuộc vào kết quả học tập và tình trạng cảnh báo học tập. Nếu em bị cảnh báo học tập, quy chế thường giới hạn số tín chỉ đăng ký ở mức thấp hơn mức bình thường. Em nên đối chiếu trực tiếp điều quy định về đăng ký khối lượng học tập và điều về cảnh báo học tập trong quy chế, hoặc hỏi phòng đào tạo của trường để biết chính xác.",,,,0.0,,end_turn,False,723,1639,7.996,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:16+07:00
+dev-m026,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định về phí gửi xe máy theo tháng, nên mình không có căn cứ để trả lời mức phí cụ thể.
+
+Em có thể liên hệ trực tiếp với bộ phận quản lý bãi gửi xe hoặc phòng công tác sinh viên của trường để được hướng dẫn.",,,,,,end_turn,False,666,337,2.479,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:24+07:00

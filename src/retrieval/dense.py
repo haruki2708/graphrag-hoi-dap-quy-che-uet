@@ -1,8 +1,8 @@
 """Dense retrieval over the 192 :DonViNoiDung content units (schema S2 = B).
 
-    from src.retrieval.dense import DenseIndex, load_units
-    index = DenseIndex("BAAI/bge-m3", with_heading=False)
-    index.search("câu hỏi", k=10)  # -> [(unit_id, cosine score), ...]
+    from src.retrieval.dense import DenseIndex
+    index = DenseIndex.from_config()      # decision #4, from configs/retrieval.toml
+    index.search("câu hỏi", k=10)         # -> [(unit_id, cosine score), ...]
 
 Unit embeddings are cached in data/cache/embeddings/, keyed by model id, model revision (Hub commit),
 with_heading, sha256 of the units file and max_seq_length, so a rerun does not re-encode.
@@ -23,7 +23,10 @@ load_dotenv(REPO_ROOT / ".env")
 
 import numpy as np  # noqa: E402
 
+import tomllib  # noqa: E402
+
 UNITS_PATH = REPO_ROOT / "data" / "processed" / "qc3626_content_units.jsonl"
+RETRIEVAL_CONFIG = REPO_ROOT / "configs" / "retrieval.toml"
 CACHE_DIR = REPO_ROOT / "data" / "cache" / "embeddings"
 BATCH_SIZE = 8  # small batches for a 4 GB laptop GPU
 
@@ -44,6 +47,12 @@ MODEL_SPECS = {
     # Card: up to 8192 tokens; "the BGE-M3 model no longer requires adding instructions to the queries".
     "BAAI/bge-m3": ModelSpec("BAAI/bge-m3", 8192),
 }
+
+
+def load_retrieval_config(path: Path = RETRIEVAL_CONFIG) -> dict:
+    """The [dense] table of configs/retrieval.toml (decision #4)."""
+    with open(path, "rb") as f:
+        return tomllib.load(f)["dense"]
 
 
 def hf_hub_cache() -> str:
@@ -74,18 +83,26 @@ def model_revision(model_id: str) -> str:
 
 class DenseIndex:
     def __init__(self, model_id: str, with_heading: bool, units_path: Path = UNITS_PATH,
-                 batch_size: int = BATCH_SIZE):
+                 batch_size: int = BATCH_SIZE, revision: str | None = None, max_seq_length: int | None = None,
+                 query_prefix: str | None = None):
+        """revision/max_seq_length/query_prefix default to the Hub head and MODEL_SPECS (model card values)."""
         import torch
         from sentence_transformers import SentenceTransformer
 
         if not torch.cuda.is_available():
             raise RuntimeError("CUDA is not available; refusing to fall back to CPU")
-        self.spec = MODEL_SPECS[model_id]
+        base = MODEL_SPECS[model_id]
+        self.spec = ModelSpec(
+            model_id,
+            max_seq_length if max_seq_length is not None else base.max_seq_length,
+            base.query_prefix if query_prefix is None else query_prefix,
+            base.passage_prefix,
+        )
         self.model_id = model_id
         self.with_heading = with_heading
         self.units = load_units(units_path)
         self.unit_ids = [u["id"] for u in self.units]
-        self.revision = model_revision(model_id)
+        self.revision = revision or model_revision(model_id)
         self.units_sha256 = file_sha256(units_path)
 
         # Pin the exact revision; fp16 on the GPU
@@ -122,6 +139,15 @@ class DenseIndex:
             }, indent=2), encoding="utf-8")
         if self.matrix.shape[0] != len(self.units):
             raise ValueError(f"cached matrix has {self.matrix.shape[0]} rows, expected {len(self.units)}")
+
+    @classmethod
+    def from_config(cls, path: Path = RETRIEVAL_CONFIG) -> "DenseIndex":
+        """The index chosen in decision #4, entirely from configs/retrieval.toml."""
+        cfg = load_retrieval_config(path)
+        index = cls(cfg["model_id"], bool(cfg["with_heading"]), revision=cfg["revision"],
+                    max_seq_length=int(cfg["max_seq_length"]), query_prefix=cfg.get("query_prefix", ""))
+        index.top_k = int(cfg["top_k"])
+        return index
 
     def encode_query(self, query: str) -> np.ndarray:
         vector = self.model.encode([self.spec.query_prefix + query], normalize_embeddings=True,
