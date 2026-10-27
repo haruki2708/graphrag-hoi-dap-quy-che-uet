@@ -56,7 +56,7 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 | 7 | Thời lượng | 10 tuần, 17/10–25/12/2026 | **Đã chốt** |
 | 8 | Ngôn ngữ code, comment, commit | Comment, docstring, commit message tiếng Anh. Tên biến/hàm/file tiếng Anh, trừ thuật ngữ quy chế giữ tiếng Việt không dấu theo `docs/schema_v1.md`. `docs/`, README, báo cáo và trao đổi bằng tiếng Việt. Comment tiếng Việt cũ chỉ dịch khi sửa file đó | **Đã chốt** (18/10/2026) |
 | 9 | Nơi ghi nhật ký | Notion cho theo dõi; trong repo dùng `docs/weekly/wN.md` | Chưa chốt |
-| 10 | Quy mô bộ câu hỏi | Khoảng 100 câu, đủ 4 loại. Tách dev/test ngay từ v1: `test` ~20 câu do chủ dự án tự soạn, khóa từ lúc tách, chỉ chạy ở T9. Câu do LLM sinh (`origin: generated`, chủ dự án duyệt từng câu), 11 câu thử ở `docs/schema_v1.md` mục 3 và câu demo của `judge_smoke` chỉ vào `dev`. T6 bổ sung đến ~100; câu `test` mới vẫn do chủ dự án tự soạn. Kết quả trên `dev` báo tách theo `origin` | **Đã chốt** (27/10/2026) |
+| 10 | Quy mô bộ câu hỏi | Khoảng 100 câu, đủ 4 loại. Tách dev/test ngay từ v1. Không dùng LLM (Claude, GPT) sinh câu hỏi hay gợi ý chủ đề. v1: `test` 20 câu `manual` do chủ dự án tự soạn, khóa ở commit `d9f9ddf`, chỉ chạy ở T9; `dev` = 30 câu `manual` + 11 câu thử ở `docs/schema_v1.md` mục 3 (`origin: generated`). T6 bổ sung đến ~100; câu `test` mới vẫn do chủ dự án tự soạn. Nếu sau này có câu LLM sinh thì chỉ vào `dev`. Kết quả trên `dev` báo tách theo `origin` | **Đã chốt** (27/10/2026) |
 
 ## 5. Kế hoạch 10 tuần
 

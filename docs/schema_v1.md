@@ -41,6 +41,8 @@
 
 **Nhãn phụ `:DonViNoiDung`** (nếu S2 = B) gắn cho mọi `Khoan`, và cho `Dieu` có phần dẫn (12 điều, trong đó 4 điều không có khoản). Vector index đặt trên nhãn này, tổng 191 đơn vị. Nếu S1 = B thì thêm `d35` (có `doan_khong_so` mức điều, không nằm trong khoản nào): **13 điều, 192 đơn vị**. Nội dung đem embedding của một `Dieu` là phần dẫn cộng `doan_khong_so`, **không** gồm các khoản (tránh trùng với `Khoan`).
 
+**Thực tế (28/10/2026, sau khi áp S1):** 192 đơn vị = 179 `Khoan` + 13 `Dieu` (d11, d12, d16, d19, d22, d30, d31, d35, d40, d42, d44, d49, d51), xuất bằng `src/ingest/export_units.py` ra `data/processed/qc3626_content_units.jsonl`. Phủ đủ: tổng ký tự (không tính khoảng trắng) của 192 đơn vị = thân 51 điều (70.087).
+
 Văn bản dài: khoản dài nhất là `d14.k2` (2.769 ký tự). Trung vị 345 ký tự, nên không cần cắt nhỏ khoản.
 
 ### 1.2. Cạnh
@@ -84,6 +86,8 @@ Có 8 chỗ đã xác nhận trên PDF là đoạn văn riêng (xuống dòng, t
 | `d41.k5.b` | "Trừ các trường hợp đặc biệt do thủ trưởng đơn vị đào tạo quy định…" | `d41.k5` | `d41.k5.b` | cuối danh sách |
 | `d32.k2.b` | "Nếu công trình nghiên cứu khoa học do nhiều sinh viên…"; "Đối với các sinh viên có công bố quốc tế…" (2 đoạn) | `d32.k2` | `d32.k2.b` | cuối danh sách |
 | `d23.k3.c` | "Sinh viên chỉ được phép không lên lớp đối với học phần xin rút bớt…" | `d23.k3` | `d23.k3.c` | cuối danh sách |
+
+Đã áp dụng 28/10/2026 (moves trong qc3626.overrides.json): 10 đoạn vào 8 đơn vị.
 
 Vấn đề nhỏ khác, không ảnh hưởng schema:
 - Tiêu đề khoản dính vào nội dung, ví dụ `d44.k1` = "1. Cảnh báo học vụ Đơn vị đào tạo thực hiện…". Có thể thêm `Khoan.title` sau, không gấp.
@@ -351,3 +355,4 @@ Tổng: 22 cụm = 21 nội bộ (**31 cạnh**) + 1 ra ngoài. Cụm 11 và 21 
 | 18/10/2026 | v1 sửa sau kiểm tra (Cowork) | Đồng ý 3 thay đổi kéo theo (`d35` gắn `:DonViNoiDung`, 192 đơn vị; bước sửa PLAN ở mục 5; thang `hoc_luc`). Câu 3b: `source_ids` = `d5.k2`, `d21.k2`, `d41.k2`, `d42.k5`, đáp án thêm học phần P và học phần chưa đạt, `d43.k2` chuyển sang tra cứu; thêm thang `hang_tot_nghiep` (bảng 2.1a, `d47.k7` = `thu_tu − 1`); ghi chú cột "Ví dụ thật" là `ten` dạng chuẩn |
 | 27/10/2026 | v1, chốt một phần | Chủ dự án chốt S1 = B (chuyển 8 đoạn vào `doan_khong_so` của `Khoan`/`Dieu`, kèm `sau`; `d35` mức điều), S2 = B (`:DonViNoiDung` = 179 `Khoan` + phần dẫn 12 `Dieu` + `d35` = 192 đơn vị: chunk của `rag_baseline`, vector index T3, mức ghi `source_ids`), Q11 = B (giữ 4 loại câu, thêm trường `delegated`). S3–S5, Q2–Q10 còn trống |
 | 27/10/2026 | v1, nhãn câu thử | Câu thử 6 đổi nhãn `out_of_scope (giao quyền)` → `single, delegated` (Q11 = B: câu giao quyền không gắn `out_of_scope`). 11 câu thử mục 3 đưa vào `data/eval/questions_v1_dev.jsonl` thành `dev-s01` … `dev-s11` (`origin: generated`). Theo quy tắc chọn type (PLAN mục 6): câu 3a `single` → `multi` (nguồn ở 2 điều, d43 và d42), câu 5 `conditional` → `multi` (không có tình huống cụ thể, ghép nhiều điều) |
+| 28/10/2026 | v1, áp S1 + xuất S2 | Áp S1: 10 đoạn chuyển vào `doan_khong_so` của 8 đơn vị (`moves` trong `qc3626.overrides.json`); 9/51/179/262 không đổi; cụm dẫn chiếu 13 (Phụ lục A) nay nằm ở `doan_khong_so` của `d36.k3`. Xuất 192 `:DonViNoiDung` (179 + 13) ra `qc3626_content_units.jsonl`, phủ đủ thân 51 điều |
