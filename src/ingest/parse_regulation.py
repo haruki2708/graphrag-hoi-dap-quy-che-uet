@@ -17,9 +17,16 @@ Quy tắc nhận diện:
   tiếng Việt (a, b, c, d, đ, e, g, ...). Điều kiện liên tiếp giúp tránh nhận nhầm dòng bị ngắt giữa câu.
 - Bỏ dòng số trang và header/footer lặp lại ở mép trên/dưới trang.
 
-Sửa tay: nếu có data/raw/core/<doc_id>.overrides.json thì áp các cặp find/replace vào own_text của
-đơn vị tương ứng (công thức, bảng bị vỡ khi trích chữ). Mỗi chuỗi find phải xuất hiện đúng 1 lần,
-nếu không thì dừng — tránh sửa sai chỗ khi parser thay đổi. Đơn vị đã sửa có trường "overrides".
+Manual fixes live in data/raw/core/<doc_id>.overrides.json:
+- "moves" (schema S1 = B): unnumbered paragraphs that the line rules attach to the preceding point are
+  moved, line by line, into doan_khong_so of the clause or article they belong to. Each move names the
+  source point (unit_id), the paragraph's first line (start, verbatim), the target (move_to) and the
+  child it follows (sau). The paragraph runs to the end of the source point, or to the next move's
+  start in the same point. Anything ambiguous raises ValueError. Units that receive paragraphs get a
+  "doan_khong_so" field; their text keeps the original reading order.
+- "overrides": find/replace pairs applied to own_text after the moves (formulas and tables broken by
+  text extraction). Each find string must occur exactly once, otherwise ValueError, so a parser change
+  cannot silently patch the wrong place. Patched units get an "overrides" field.
 """
 
 import json
@@ -70,6 +77,8 @@ class Unit:
     lines: list[Line] = field(default_factory=list)
     children: list["Unit"] = field(default_factory=list)
     patches: list[dict] = field(default_factory=list)  # các mục sửa tay từ file overrides
+    # Moved unnumbered paragraphs: (id of the child they follow, their lines), in reading order
+    doan_khong_so: list[tuple[str, list[Line]]] = field(default_factory=list)
 
 
 def roman_to_int(s: str) -> int:
@@ -262,6 +271,66 @@ def attach_overrides(chapters: list[Unit], doc_id: str) -> int:
     return len(items)
 
 
+def load_moves(doc_id: str) -> list[dict]:
+    path = RAW_DIR / f"{doc_id}.overrides.json"
+    if not path.exists():
+        return []
+    return json.loads(path.read_text(encoding="utf-8")).get("moves", [])
+
+
+def apply_moves(chapters: list[Unit], moves: list[dict]) -> int:
+    """Move unnumbered paragraphs out of their source points into doan_khong_so (schema S1 = B).
+
+    Works on Line objects, before any text is joined. Returns the number of paragraphs moved.
+    Raises ValueError on a missing unit, a start that matches zero or several lines (or only
+    mid-line), or a "sau" that is not a direct child of move_to containing the source point.
+    """
+    units = {u.id: u for ch in chapters for u in walk(ch)}
+    # Global reading order of every line, to keep several paragraphs in one target in order
+    order = {id(ln): i for i, ln in enumerate(ln for ch in chapters for u in walk(ch) for ln in u.lines)}
+
+    by_source: dict[str, list[dict]] = {}
+    for move in moves:
+        for key in ("unit_id", "move_to", "sau"):
+            if move[key] not in units:
+                raise ValueError(f"move {move['unit_id']}: unknown unit {move[key]}")
+        target, sau = units[move["move_to"]], units[move["sau"]]
+        if sau.parent_id != target.id:
+            raise ValueError(f"move {move['unit_id']}: sau {sau.id} is not a direct child of {target.id}")
+        if not (move["unit_id"] == sau.id or move["unit_id"].startswith(sau.id + ".")):
+            raise ValueError(f"move {move['unit_id']}: sau {sau.id} does not contain the source point")
+        by_source.setdefault(move["unit_id"], []).append(move)
+
+    moved = 0
+    for source_id, source_moves in by_source.items():
+        source = units[source_id]
+        starts = []
+        for move in source_moves:
+            hits = [i for i, ln in enumerate(source.lines) if ln.text.startswith(move["start"])]
+            if not hits:
+                mid = any(move["start"] in ln.text for ln in source.lines)
+                where = "only in the middle of a line" if mid else "on no line"
+                raise ValueError(f"move {source_id}: start {move['start'][:40]!r} found {where}")
+            if len(hits) > 1:
+                raise ValueError(f"move {source_id}: start {move['start'][:40]!r} matches {len(hits)} lines")
+            if hits[0] == 0:
+                raise ValueError(f"move {source_id}: start is the point's own first line")
+            starts.append((hits[0], move))
+        starts.sort(key=lambda pair: pair[0])
+        # Each paragraph ends just before the next move's start, or at the end of the source point
+        bounds = [i for i, _ in starts] + [len(source.lines)]
+        segments = []
+        for (begin, move), end in zip(starts, bounds[1:]):
+            segments.append((move, source.lines[begin:end]))
+        source.lines = source.lines[: bounds[0]]
+        for move, seg_lines in segments:
+            target = units[move["move_to"]]
+            target.doan_khong_so.append((move["sau"], seg_lines))
+            target.doan_khong_so.sort(key=lambda item: order[id(item[1][0])])
+            moved += 1
+    return moved
+
+
 def own_text(unit: Unit) -> str:
     text = join_lines(unit.lines)
     for p in unit.patches:
@@ -273,13 +342,18 @@ def own_text(unit: Unit) -> str:
 
 
 def full_text(unit: Unit) -> str:
+    """own_text, then each child, each moved paragraph right after the child it follows."""
     parts = [own_text(unit)] if unit.lines else []
-    parts += [full_text(c) for c in unit.children]
+    for c in unit.children:
+        parts.append(full_text(c))
+        parts += [join_lines(seg) for sau, seg in unit.doan_khong_so if sau == c.id]
     return "\n".join(p for p in parts if p)
 
 
 def all_pages(unit: Unit) -> list[int]:
     pages = [ln.page for ln in unit.lines]
+    for _, seg in unit.doan_khong_so:
+        pages += [ln.page for ln in seg]
     for c in unit.children:
         pages += all_pages(c)
     return pages
@@ -304,6 +378,8 @@ def flatten(unit: Unit) -> list[dict]:
         record["n_khoan"] = sum(c.type == "khoan" for c in unit.children)
     if unit.patches:
         record["overrides"] = [p["note"] for p in unit.patches]
+    if unit.doan_khong_so:
+        record["doan_khong_so"] = [{"sau": sau, "text": join_lines(seg)} for sau, seg in unit.doan_khong_so]
     records = [record]
     for c in unit.children:
         records += flatten(c)
@@ -331,6 +407,7 @@ def print_report(meta: dict, chapters: list[Unit], removed: list[str], warnings:
     ok = numbers == list(range(1, 52)) and len(chapters) == 9
     print(f"Tổng: {len(chapters)} chương, {len(articles)} điều, {n_clauses} khoản, {n_points} điểm")
     print(f"Sửa tay đã áp dụng: {meta.get('n_overrides', 0)} mục")
+    print(f"Chuyển đoạn: {meta.get('n_moves', 0)} đoạn vào {meta.get('n_move_targets', 0)} đơn vị")
     print(f"Kiểm tra 9 chương & Điều 1→51 liên tiếp, không thiếu/lặp: {'ĐẠT' if ok else 'KHÔNG ĐẠT'}")
     if warnings:
         print("Cảnh báo:")
@@ -339,10 +416,44 @@ def print_report(meta: dict, chapters: list[Unit], removed: list[str], warnings:
     return ok
 
 
+def build_tree(pdf: Path) -> tuple[dict, list[Unit], list[str], list[str]]:
+    """Parse one PDF and apply moves then overrides; returns (meta, chapters, removed, warnings)."""
+    doc_id = doc_id_from_filename(pdf)
+    lines, removed = read_lines(pdf)
+    if sum(len(ln.text) for ln in lines) < 1000:
+        raise ValueError(f"{pdf.name}: gần như không có lớp chữ (bản scan?)")
+    meta, chapters, warnings = parse(lines, doc_id)
+    meta["source_file"] = pdf.relative_to(REPO_ROOT).as_posix()
+    moves = load_moves(doc_id)
+    meta["n_moves"] = apply_moves(chapters, moves)
+    meta["n_move_targets"] = len({m["move_to"] for m in moves})
+    meta["n_overrides"] = attach_overrides(chapters, doc_id)
+    return meta, chapters, removed, warnings
+
+
+def flatten_all(chapters: list[Unit], warnings: list[str]) -> list[dict]:
+    """Unit records in reading order; warns about leftover Private Use Area characters."""
+    units = [u for ch in chapters for u in flatten(ch)]
+    for u in units:
+        if RE_PRIVATE_USE.search(u["own_text"]):
+            warnings.append(f"{u['id']} (tr. {u['page_start']}): còn ký tự lạ (font Symbol?) — cần sửa tay")
+    return units
+
+
+def build(pdf: Path) -> tuple[dict, list[dict], list[str]]:
+    """(meta, flattened unit records, warnings) without writing any file - used by tests."""
+    meta, chapters, _, warnings = build_tree(pdf)
+    return meta, flatten_all(chapters, warnings), warnings
+
+
+def find_pdfs() -> list[Path]:
+    # Bỏ file khóa tạm "~$..." do Word/WPS tạo khi đang mở file
+    return sorted(p for p in RAW_DIR.glob("*.pdf") if not p.name.startswith("~$"))
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
-    # Bỏ file khóa tạm "~$..." do Word/WPS tạo khi đang mở file
-    pdfs = sorted(p for p in RAW_DIR.glob("*.pdf") if not p.name.startswith("~$"))
+    pdfs = find_pdfs()
     if not pdfs:
         print(f"Không có PDF trong {RAW_DIR}", file=sys.stderr)
         return 1
@@ -351,18 +462,12 @@ def main() -> int:
     all_ok = True
     for pdf in pdfs:
         doc_id = doc_id_from_filename(pdf)
-        lines, removed = read_lines(pdf)
-        if sum(len(ln.text) for ln in lines) < 1000:
-            print(f"{pdf.name}: gần như không có lớp chữ (bản scan?) — dừng.", file=sys.stderr)
+        try:
+            meta, chapters, removed, warnings = build_tree(pdf)
+            units = flatten_all(chapters, warnings)
+        except ValueError as e:
+            print(f"{e} — dừng.", file=sys.stderr)
             return 1
-        meta, chapters, warnings = parse(lines, doc_id)
-        meta["source_file"] = pdf.relative_to(REPO_ROOT).as_posix()
-        meta["n_overrides"] = attach_overrides(chapters, doc_id)
-
-        units = [u for ch in chapters for u in flatten(ch)]
-        for u in units:
-            if RE_PRIVATE_USE.search(u["own_text"]):
-                warnings.append(f"{u['id']} (tr. {u['page_start']}): còn ký tự lạ (font Symbol?) — cần sửa tay")
         out_path = OUT_DIR / f"{doc_id}.json"
         out_path.write_text(
             json.dumps({"document": meta, "units": units}, ensure_ascii=False, indent=2),

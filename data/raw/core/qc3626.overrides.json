@@ -1,6 +1,6 @@
 {
   "doc_id": "qc3626",
-  "description": "Sửa tay các đoạn trích chữ bị vỡ (công thức font Symbol, bảng). Mỗi mục: chuỗi 'find' phải xuất hiện đúng 1 lần trong own_text của đơn vị; đã đối chiếu với ảnh trang PDF.",
+  "description": "Sửa tay các đoạn trích chữ bị vỡ (công thức font Symbol, bảng). Mỗi mục: chuỗi 'find' phải xuất hiện đúng 1 lần trong own_text của đơn vị; đã đối chiếu với ảnh trang PDF. Mục \"moves\" (S1 = B, 28/10/2026): chuyển đoạn không đánh số từ điểm nguồn vào doan_khong_so của khoản/điều; start là nguyên văn dòng PDF mở đầu đoạn.",
   "overrides": [
     {
       "unit_id": "qc3626.d8.k1.b",
@@ -36,6 +36,88 @@
       "find": "      n i i n i i i n n a A 1 1 Điểm trung bình chung các học phần",
       "replace": " Điểm trung bình chung các học phần",
       "note": "Bỏ mảnh vỡ của công thức điểm trung bình chung bị đẩy xuống giữa đoạn văn."
+    }
+  ],
+  "moves": [
+    {
+      "unit_id": "qc3626.d44.k1.c",
+      "start": "Tùy theo đặc điểm của từng đơn vị đào tạo, thủ trưởng đơn vị quy định áp dụng",
+      "move_to": "qc3626.d44.k1",
+      "sau": "qc3626.d44.k1.c",
+      "page": 46,
+      "note": "Giao quyền chọn 1–2 trong 3 điều kiện cảnh báo, áp dụng cho cả khoản 1; cuối danh sách (ảnh tr. 46)."
+    },
+    {
+      "unit_id": "qc3626.d44.k2.d",
+      "start": "Chậm nhất là 1 tháng sau khi sinh viên có quyết định buộc thôi học, đơn vị",
+      "move_to": "qc3626.d44.k2",
+      "sau": "qc3626.d44.k2.d",
+      "page": 47,
+      "note": "Thông báo về địa phương sau buộc thôi học, áp dụng cho cả khoản 2; xen giữa d) và đ) (ảnh tr. 47)."
+    },
+    {
+      "unit_id": "qc3626.d35.k4.d",
+      "start": "Ngoài những nghĩa vụ chung như đối với sinh viên chương trình đào tạo",
+      "move_to": "qc3626.d35",
+      "sau": "qc3626.d35.k4",
+      "page": 36,
+      "note": "Nghĩa vụ riêng của SV tài năng, CLC: đoạn cuối điều 35, khác chủ đề khoản 4 (ảnh tr. 36)."
+    },
+    {
+      "unit_id": "qc3626.d35.k4.c",
+      "start": "Các hình thức kỷ luật nói trên do cán bộ coi thi lập biên bản, thu tang vật và",
+      "move_to": "qc3626.d35.k4",
+      "sau": "qc3626.d35.k4.c",
+      "page": 36,
+      "note": "Thủ tục lập biên bản áp dụng cho các hình thức kỷ luật của khoản 4; xen giữa c) và d). Đoạn \"Sinh viên bị kỷ luật đình chỉ thi\" đứng trước và ở lại điểm c (ảnh tr. 36)."
+    },
+    {
+      "unit_id": "qc3626.d36.k3.d",
+      "start": "Sinh viên nghỉ học tạm thời nếu muốn học tiếp phải có đơn đề nghị thủ",
+      "move_to": "qc3626.d36.k3",
+      "sau": "qc3626.d36.k3.d",
+      "page": 37,
+      "note": "Thủ tục học tiếp sau nghỉ học tạm thời, áp dụng cho cả khoản 3; đoạn 1/2 (ảnh tr. 37)."
+    },
+    {
+      "unit_id": "qc3626.d36.k3.d",
+      "start": "Các đối tượng ở điểm a, b,c khoản 3, Điều này thời gian nghỉ học tạm thời",
+      "move_to": "qc3626.d36.k3",
+      "sau": "qc3626.d36.k3.d",
+      "page": 37,
+      "note": "Đối tượng điểm a, b, c không tính thời gian nghỉ vào thời gian tối đa; đoạn 2/2 (ảnh tr. 37)."
+    },
+    {
+      "unit_id": "qc3626.d41.k5.b",
+      "start": "Trừ các trường hợp đặc biệt do thủ trưởng đơn vị đào tạo quy định, trong",
+      "move_to": "qc3626.d41.k5",
+      "sau": "qc3626.d41.k5.b",
+      "page": 44,
+      "note": "Thời hạn trả nợ điểm I, áp dụng cho cả khoản 5; cuối danh sách (ảnh tr. 44)."
+    },
+    {
+      "unit_id": "qc3626.d32.k2.b",
+      "start": "Nếu công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện thì điểm",
+      "move_to": "qc3626.d32.k2",
+      "sau": "qc3626.d32.k2.b",
+      "page": 31,
+      "note": "Chia điểm thưởng khi nhiều SV cùng làm, áp dụng cho cả khoản 2; đoạn 1/2 (ảnh tr. 31)."
+    },
+    {
+      "unit_id": "qc3626.d32.k2.b",
+      "start": "Đối với các sinh viên có công bố quốc tế, trong nước, bằng sở hữu trí tuệ được",
+      "move_to": "qc3626.d32.k2",
+      "sau": "qc3626.d32.k2.b",
+      "page": 31,
+      "note": "Điểm cộng cho công bố, áp dụng cho cả khoản 2; đoạn 2/2 (ảnh tr. 31)."
+    },
+    {
+      "unit_id": "qc3626.d23.k3.c",
+      "start": "Sinh viên chỉ được phép không lên lớp đối với học phần xin rút bớt sau khi",
+      "move_to": "qc3626.d23.k3",
+      "sau": "qc3626.d23.k3.c",
+      "page": 21,
+      "note": "Điều kiện không lên lớp sau khi rút, áp dụng cho cả khoản 3; cuối danh sách (ảnh tr. 21)."
     }
   ]
 }
