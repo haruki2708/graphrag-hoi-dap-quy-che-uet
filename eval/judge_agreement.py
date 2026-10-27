@@ -2,10 +2,13 @@
 
 Run from the repo root:
   python eval/judge_agreement.py <filled sheet.xlsx> [--manifest <json>] [--out <json>] [--overwrite]
+                                 [--judged <system>=<judged csv> ...] [--label <name>]
 
 Inputs: the graded sheet (sheet "cham", column nhan), data/eval/calibration/judge_calib_v1_manifest.json (stt ->
 system, id, run) and the two *_judged.csv files named in the manifest; the GLM labels are joined back from the CSVs.
-Prints and writes eval/results/<date>_judge_agreement_v1.json: 3-label agreement (the PLAN #2 threshold metric),
+--judged system=path (one per system in the manifest, all or none) replaces those files, e.g. with the v2-prompt
+results of eval/judge_answers.py --manifest; the csv only needs the manifest's rows.
+Prints and writes eval/results/<date>_judge_agreement_<label>.json (label defaults to v1): 3-label agreement (the PLAN #2 threshold metric),
 Cohen's kappa (unweighted and linear-weighted, order sai < mot_phan < dung), binary agreement (dung vs not dung),
 confusion matrix (human x GLM), per-system results and the list of disagreements.
 An empty or misspelt nhan cell, or a sheet that does not match the manifest, is reported by stt and nothing is computed.
@@ -136,11 +139,14 @@ def read_graded_sheet(path: Path) -> list[dict]:
     return rows
 
 
-def load_judged(manifest: dict) -> dict:
-    """{(system, id, run): csv row} from the CSVs named in the manifest."""
+def load_judged(manifest: dict, overrides: dict[str, Path] | None = None) -> dict:
+    """{(system, id, run): csv row} from the CSVs named in the manifest, or from `overrides` ({system: path})."""
+    overrides = overrides or {}
+    if overrides and set(overrides) != set(manifest["sources"]):
+        raise ValueError(f"--judged must cover exactly the systems {sorted(manifest['sources'])}, got {sorted(overrides)}")
     rows = {}
     for system, info in manifest["sources"].items():
-        with (REPO_ROOT / info["file"]).open(encoding="utf-8") as f:
+        with (overrides.get(system) or REPO_ROOT / info["file"]).open(encoding="utf-8") as f:
             for row in csv.DictReader(f):
                 rows[(system, row["id"], int(row["run"]))] = row
     return rows
@@ -184,6 +190,7 @@ def join_samples(sheet_rows: list[dict], manifest: dict, judged: dict, questions
         samples.append({
             "stt": stt, "system": entry["system"], "id": entry["id"], "run": entry["run"], "type": question["type"],
             "human": human, "glm": glm, "glm_reason": csv_row["judge_reason"], "glm_model": csv_row["judge_model"],
+            "glm_prompt": csv_row.get("judge_prompt") or "v1",
             "human_note": str(row["ghi_chu"] or "").strip(), "question": question["question"],
         })
     for stt in sorted(int(k) for k in manifest["samples"] if int(k) not in seen):
@@ -211,6 +218,7 @@ def analyze(samples: list[dict]) -> dict:
                       for system in sorted({s["system"] for s in samples})},
         "mismatches": mismatches,
         "judge_models": sorted({s["glm_model"] for s in samples}),
+        "judge_prompt_versions": sorted({s["glm_prompt"] for s in samples}),
     }
 
 
@@ -222,7 +230,7 @@ def fmt(value, digits: int = 3) -> str:
 
 def print_report(result: dict) -> None:
     o = result["overall"]
-    print(f"Mẫu: {o['n']} | giám khảo: {', '.join(result['judge_models'])}")
+    print(f"Mẫu: {o['n']} | giám khảo: {', '.join(result['judge_models'])} | prompt: {', '.join(result['judge_prompt_versions'])}")
     print(f"Độ trùng 3 nhãn: {o['agree']}/{o['n']} = {fmt(o['agreement'])} (CI95 Wilson {o['agreement_ci95'][0]:.2f}–{o['agreement_ci95'][1]:.2f})")
     print(f"Cohen's kappa: {fmt(o['kappa'])} | có trọng số tuyến tính: {fmt(o['kappa_linear_weighted'])}")
     print(f"Độ trùng nhị phân (dung / không dung): {o['binary_agree']}/{o['n']} = {fmt(o['binary_agreement'])}")
@@ -249,26 +257,45 @@ def main(argv: list[str]) -> int:
             stream.reconfigure(encoding="utf-8")
     overwrite = "--overwrite" in argv
     args = [a for a in argv if a != "--overwrite"]
-    options = {}
-    for flag in ("--manifest", "--out"):
-        if flag in args:
+    options, judged_args, bad_usage = {}, [], False
+    for flag in ("--manifest", "--out", "--label", "--judged"):
+        while flag in args:
             i = args.index(flag)
-            options[flag] = Path(args[i + 1]) if i + 1 < len(args) else None
+            if i + 1 >= len(args):
+                bad_usage = True
+                del args[i:]
+                break
+            value = args[i + 1]
             del args[i:i + 2]
-    if len(args) != 1 or None in options.values():
-        print("Cách dùng: python eval/judge_agreement.py <phiếu đã chấm .xlsx> [--manifest <json>] [--out <json>] [--overwrite]",
-              file=sys.stderr)
+            if flag == "--judged":
+                judged_args.append(value)
+            else:
+                options[flag] = value
+    overrides = {}
+    for item in judged_args:
+        system, sep, path = item.partition("=")
+        if not (sep and system and path):
+            bad_usage = True
+        else:
+            overrides[system] = Path(path)
+    if len(args) != 1 or bad_usage:
+        print("Cách dùng: python eval/judge_agreement.py <phiếu đã chấm .xlsx> [--manifest <json>] [--out <json>] "
+              "[--overwrite] [--judged <hệ>=<csv> ...] [--label <tên>]", file=sys.stderr)
         return 2
-    manifest_path = options.get("--manifest", MANIFEST_PATH)
+    manifest_path = Path(options.get("--manifest") or MANIFEST_PATH)
+    label = options.get("--label", "v1")
     date = datetime.now(VN_TZ).strftime("%Y-%m-%d")
-    out_path = options.get("--out", RESULTS_DIR / f"{date}_judge_agreement_v1.json")
+    out_path = Path(options["--out"]) if "--out" in options else RESULTS_DIR / f"{date}_judge_agreement_{label}.json"
     if out_path.exists() and not overwrite:
         print(f"LỖI: đã có {out_path.name}; không ghi đè (dùng --overwrite).", file=sys.stderr)
         return 2
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     questions = {q["id"]: q for q in rm.load_dev_questions()}
     try:
-        samples = join_samples(read_graded_sheet(Path(args[0])), manifest, load_judged(manifest), questions)
+        samples = join_samples(read_graded_sheet(Path(args[0])), manifest, load_judged(manifest, overrides), questions)
+    except (ValueError, OSError) as e:
+        print(f"LỖI: {e}", file=sys.stderr)
+        return 2
     except SheetError as e:
         print(f"LỖI: phiếu chưa dùng được, không tính gì ({len(e.problems)} vấn đề):", file=sys.stderr)
         for stt, message in e.problems:
@@ -279,7 +306,8 @@ def main(argv: list[str]) -> int:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps({
         "computed_at": datetime.now(VN_TZ).isoformat(timespec="seconds"),
-        "sheet": Path(args[0]).name, "manifest": manifest_path.name, "manifest_source_commit": manifest["source_commit"],
+        "sheet": Path(args[0]).name, "manifest": manifest_path.name, "label": label,
+        "judged_files": {s: str(p) for s, p in overrides.items()} or "as listed in the manifest", "manifest_source_commit": manifest["source_commit"],
         "agreement_metric": "3-label exact agreement (human vs GLM); thresholds from PLAN #2",
         **result, "samples": samples,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
