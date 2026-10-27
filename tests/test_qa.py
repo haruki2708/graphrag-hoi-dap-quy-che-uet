@@ -5,7 +5,7 @@ Run from the repo root:  python -m unittest discover -s tests -t .
 import io
 import json
 import unittest
-from contextlib import redirect_stderr
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 from eval import run_eval
@@ -155,6 +155,31 @@ class RunEvalTests(unittest.TestCase):
         rows = run_eval.evaluate("llm_only", [question(sources=(), qtype="out_of_scope")], 1, None, UNITS, ARTICLES,
                                  complete_fn=fake_complete)
         self.assertEqual((rows[0]["citation_recall"], rows[0]["citation_precision"]), (None, None))
+
+    def test_failed_call_gives_error_row_and_continues(self):
+        from src.llm import LLMError
+
+        calls = []
+
+        def flaky(role, system, messages, **kwargs):
+            calls.append(kwargs["run"])
+            if kwargs["run"] == 0:
+                raise LLMError("boom", "answer", "fake", 503, 7)
+            return fake_complete(role, system, messages, **kwargs)
+
+        with redirect_stdout(io.StringIO()):
+            rows = run_eval.evaluate("llm_only", [question()], 2, None, UNITS, ARTICLES, complete_fn=flaky)
+        self.assertEqual(calls, [0, 1])
+        self.assertTrue(rows[0]["error"].startswith("HTTP 503"))
+        self.assertIsNone(rows[0]["answer"])
+        self.assertIsNone(rows[1]["error"])
+        self.assertEqual(rows[1]["cited_ids"], ids("d44.k1"))
+
+    def test_cost_cap_stops_the_run(self):
+        pricing = {"input_per_mtok": 1_000_000.0, "output_per_mtok": 0.0}  # every fresh call costs $10
+        with self.assertRaises(run_eval.CostCapExceeded):
+            run_eval.evaluate("llm_only", [question()], 3, None, UNITS, ARTICLES, complete_fn=fake_complete,
+                              pricing=pricing, max_cost=15.0)
 
     def test_same_prompt_for_both_systems(self):
         self.assertIs(systems.SYSTEM_PROMPT, SYSTEM_PROMPT)

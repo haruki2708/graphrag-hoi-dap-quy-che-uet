@@ -1,16 +1,52 @@
 {
-  "run_at": "2026-10-27T14:33:26+07:00",
-  "git_commit": "40f5f49fba34c079e0e1ac873f40b3b74b1bb119",
+  "run_at": "2026-10-27T15:02:56+07:00",
+  "git_commit": "90caef05e2e6cc9a394f7c8dfb6ac6a452ba014d",
   "system": "rag_baseline",
   "split": "dev",
   "question_ids": [
     "dev-m001",
+    "dev-m002",
+    "dev-m003",
     "dev-m004",
+    "dev-m005",
+    "dev-m006",
+    "dev-m007",
+    "dev-m008",
+    "dev-m009",
+    "dev-m010",
+    "dev-m011",
+    "dev-m012",
+    "dev-m013",
+    "dev-m014",
     "dev-m015",
+    "dev-m016",
+    "dev-m017",
+    "dev-m018",
     "dev-m019",
-    "dev-m026"
+    "dev-m020",
+    "dev-m021",
+    "dev-m022",
+    "dev-m023",
+    "dev-m024",
+    "dev-m025",
+    "dev-m026",
+    "dev-m027",
+    "dev-m028",
+    "dev-m029",
+    "dev-m030",
+    "dev-s01",
+    "dev-s02",
+    "dev-s03",
+    "dev-s04",
+    "dev-s05",
+    "dev-s06",
+    "dev-s07",
+    "dev-s08",
+    "dev-s09",
+    "dev-s10",
+    "dev-s11"
   ],
-  "runs": 1,
+  "runs": 3,
   "effort": "medium",
   "answer_role": {
     "provider": "anthropic",
@@ -57,8 +93,8 @@
     "numpy": "2.5.4"
   },
   "tokens": {
-    "input": 13790,
-    "output": 2811
+    "input": 320985,
+    "output": 76045
   },
   "pricing": {
     "input_per_mtok": 0.1,
@@ -67,13 +103,28 @@
     "checked": "2026-10-27",
     "note": "prompt <= 100K tokens; $0.50 / $2.50 above that"
   },
-  "cost_usd": 0.002785,
+  "cost_usd": 0.070121,
   "answers_first_called_at": "2026-10-27T14:29:15+07:00",
-  "cost_usd_this_invocation": 0.0,
-  "fresh_calls_this_invocation": 0,
+  "cost_usd_this_invocation": 0.067336,
+  "fresh_calls_this_invocation": 118,
   "cached_calls_this_invocation": 5,
+  "max_cost_usd": 1.0,
+  "errors": [],
   "truncated_rows": [],
-  "n_coarse_citations": 0,
-  "rows_with_coarse_citations": {},
+  "n_coarse_citations": 6,
+  "rows_with_coarse_citations": {
+    "dev-m030#run0": [
+      "qc3626.d21",
+      "qc3626.d18"
+    ],
+    "dev-m030#run2": [
+      "qc3626.d21",
+      "qc3626.d18",
+      "qc3626.d38"
+    ],
+    "dev-s11#run2": [
+      "qc3626.d28"
+    ]
+  },
   "rows_with_invalid_citations": {}
 }

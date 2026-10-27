@@ -17,6 +17,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 import csv  # noqa: E402
 import json  # noqa: E402
+import time  # noqa: E402
 from datetime import datetime, timedelta, timezone  # noqa: E402
 
 from eval import retrieval_metrics as rm  # noqa: E402
@@ -41,7 +42,10 @@ Gán đúng một nhãn cho CÂU TRẢ LỜI CẦN CHẤM:
 - "sai": kết luận sai, hoặc nêu căn cứ/ngưỡng mâu thuẫn với quy chế.
 Chỉ trả về một đối tượng JSON: {"label": "dung" | "sai" | "mot_phan", "reason": "<một câu ngắn bằng tiếng Việt>"}."""
 
-NO_SOURCE_TEXT = "(Không có nguyên văn: câu hỏi nằm ngoài nội dung quy chế; chấm theo đáp án mẫu.)"
+MAX_JUDGE_CALLS_PER_MIN = 37.5  # stay under 40 new judge calls per minute on the NIM free tier
+MAX_CONSECUTIVE_ERRORS = 5      # GLM failing this many times in a row: stop (never switch judge mid-run)
+
+NO_SOURCE_TEXT ="(Không có nguyên văn: câu hỏi nằm ngoài nội dung quy chế; chấm theo đáp án mẫu.)"
 
 
 def judge_prompt(question: dict, answer: str, unit_text: dict[str, str]) -> str:
@@ -50,9 +54,16 @@ def judge_prompt(question: dict, answer: str, unit_text: dict[str, str]) -> str:
             f"NGUYÊN VĂN QUY CHẾ:\n{sources}\n\nCÂU TRẢ LỜI CẦN CHẤM:\n{answer}")
 
 
+def _utf8_console() -> None:
+    """UTF-8 stdout/stderr on Windows consoles; skipped for streams that cannot be reconfigured (tests)."""
+    for stream, kwargs in ((sys.stdout, {"encoding": "utf-8", "line_buffering": True}),
+                           (sys.stderr, {"encoding": "utf-8"})):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(**kwargs)
+
+
 def main(argv: list[str]) -> int:
-    sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
-    sys.stderr.reconfigure(encoding="utf-8")
+    _utf8_console()
     overwrite = "--overwrite" in argv
     args = [a for a in argv if a != "--overwrite"]
     if len(args) != 1:
@@ -75,20 +86,42 @@ def main(argv: list[str]) -> int:
     print(f"Chấm {len(rows)} câu trả lời → tối đa {len(rows)} lời gọi judge (cache dùng lại nếu có)")
 
     out_rows, fresh, errors, first_called = [], 0, [], ""
+    consecutive_errors, next_fresh_at = 0, 0.0
     for row in rows:
         question = questions[row["id"]]  # KeyError if the CSV holds a non-dev id
+        if row.get("error"):
+            out_rows.append({**row, "judge_label": "", "judge_reason": "", "judge_model": "",
+                             "judge_error": "answer call failed; not judged"})
+            continue
+        # Keep new judge calls under MAX_JUDGE_CALLS_PER_MIN (cached results return at once)
+        wait = next_fresh_at - time.monotonic()
+        if wait > 0:
+            time.sleep(wait)
+        started = time.monotonic()
         try:
             result = complete("judge", JUDGE_SYSTEM,
                               [{"role": "user", "content": judge_prompt(question, row["answer"], unit_text)}],
                               json_schema=VERDICT_SCHEMA, run=0)
-            fresh += not result.from_cache
+            consecutive_errors = 0
+            if not result.from_cache:
+                fresh += 1
+                next_fresh_at = started + 60.0 / MAX_JUDGE_CALLS_PER_MIN
             first_called = min(first_called, result.called_at) if first_called else result.called_at
             verdict = result.parsed or {}
             out_rows.append({**row, "judge_label": verdict.get("label", ""), "judge_reason": verdict.get("reason", ""),
-                             "judge_model": result.model_served or result.model_requested})
+                             "judge_model": result.model_served or result.model_requested,
+                             "judge_error": "" if result.parsed else "reply is not a valid verdict JSON"})
         except LLMError as e:
+            consecutive_errors += 1
+            next_fresh_at = started + 60.0 / MAX_JUDGE_CALLS_PER_MIN
             errors.append({"id": row["id"], "run": row["run"], "http_code": e.http_code, "error": str(e)[:200]})
-            out_rows.append({**row, "judge_label": "", "judge_reason": f"LỖI: {e}"[:200], "judge_model": ""})
+            out_rows.append({**row, "judge_label": "", "judge_reason": "", "judge_model": "",
+                             "judge_error": f"HTTP {e.http_code}: {e}"[:200]})
+            print(f"  LỖI judge {row['id']} run {row['run']}: HTTP {e.http_code}")
+            if consecutive_errors >= MAX_CONSECUTIVE_ERRORS:
+                print(f"DỪNG: GLM lỗi {consecutive_errors} lần liên tiếp; không chuyển sang giám khảo khác. "
+                      "Không ghi file; phần đã chấm nằm trong cache.", file=sys.stderr)
+                return 3
 
     out_csv = outputs[0]
     with out_csv.open("w", encoding="utf-8", newline="") as f:
@@ -100,7 +133,9 @@ def main(argv: list[str]) -> int:
         "judge_role": "judge", "judge_calibrated": False,
         "note": "Giám khảo CHƯA được hiệu chỉnh (hiệu chỉnh 30 câu theo PLAN #2 chưa làm); nhãn chỉ để tham khảo.",
         "judge_system_prompt": JUDGE_SYSTEM, "fresh_judge_calls_this_invocation": fresh,
-        "judge_calls_total": len(out_rows) - len(errors),
+        "judge_calls_total": sum(bool(r["judge_label"]) or bool(r["judge_reason"]) for r in out_rows),
+        "max_judge_calls_per_min": MAX_JUDGE_CALLS_PER_MIN,
+        "not_judged_answer_errors": sum(r["judge_error"] == "answer call failed; not judged" for r in out_rows),
         "judge_first_called_at": first_called or None, "errors": errors,
         "labels": {label: sum(r["judge_label"] == label for r in out_rows) for label in LABELS},
     }, ensure_ascii=False, indent=2), encoding="utf-8")

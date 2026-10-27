@@ -31,6 +31,7 @@ from datetime import datetime, timedelta, timezone  # noqa: E402
 from importlib.metadata import version  # noqa: E402
 
 from eval import retrieval_metrics as rm  # noqa: E402
+from src.llm import LLMError  # noqa: E402
 from src.qa import citations as cit  # noqa: E402
 from src.qa import systems  # noqa: E402
 from src.qa.answer import SYSTEM_PROMPT, prompt_sha256  # noqa: E402
@@ -46,7 +47,7 @@ CSV_FIELDS = ["id", "origin", "type", "delegated", "source_ids", "retrieved_ids"
               "answer", "cited_ids", "coarse_citations", "invalid_citations", "citation_recall", "citation_precision",
               "finish_reason",
               "truncated", "input_tokens", "output_tokens", "latency_s", "from_cache", "run", "effort",
-              "model_served", "called_at"]
+              "model_served", "called_at", "error"]
 
 
 def load_unit_ids() -> tuple[set[str], set[str]]:
@@ -76,19 +77,41 @@ def citation_scores(cited: list[str], sources: list[str]) -> tuple[float | None,
     return recall, precision
 
 
+class CostCapExceeded(Exception):
+    """Cumulative cost of new answer calls passed --max-cost."""
+
+
 def evaluate(system: str, questions: list[dict], runs: int, effort: str | None, unit_ids: set[str],
-             article_ids: set[str], complete_fn=None, index=None) -> list[dict]:
-    """One row per question x run. complete_fn/index can be injected for tests."""
+             article_ids: set[str], complete_fn=None, index=None, pricing: dict | None = None,
+             max_cost: float | None = None) -> list[dict]:
+    """One row per question x run. complete_fn/index can be injected for tests.
+
+    A call that still fails after the LLM layer's retries gives a row with "error" set; the loop goes on.
+    With pricing and max_cost, raises CostCapExceeded once the new calls' cost passes max_cost.
+    """
     kwargs = {"complete_fn": complete_fn} if complete_fn else {}
-    rows = []
+    rows, spent = [], 0.0
     for q in questions:
         if q.get("split") != "dev":
             raise ValueError(f"{q['id']}: only dev questions may be evaluated")
         for run in range(runs):
-            if system == "llm_only":
-                result, retrieved = systems.llm_only(q["question"], run=run, effort=effort, **kwargs)
-            else:
-                result, retrieved = systems.rag_baseline(q["question"], index, run=run, effort=effort, **kwargs)
+            try:
+                if system == "llm_only":
+                    result, retrieved = systems.llm_only(q["question"], run=run, effort=effort, **kwargs)
+                else:
+                    result, retrieved = systems.rag_baseline(q["question"], index, run=run, effort=effort, **kwargs)
+            except LLMError as e:
+                print(f"  LỖI {q['id']} run {run}: HTTP {e.http_code} sau {e.attempts} lần")
+                rows.append({**{k: None for k in CSV_FIELDS}, "id": q["id"], "origin": q["origin"], "type": q["type"],
+                             "delegated": q["delegated"], "source_ids": q["source_ids"], "run": run,
+                             "effort": effort, "from_cache": False, "truncated": False,
+                             "error": f"HTTP {e.http_code}: {e}"[:300]})
+                continue
+            if pricing and not result.from_cache:
+                spent += ((result.input_tokens or 0) * pricing["input_per_mtok"]
+                          + (result.output_tokens or 0) * pricing["output_per_mtok"]) / 1e6
+                if max_cost is not None and spent > max_cost:
+                    raise CostCapExceeded(f"new answer calls cost ${spent:.4f} > cap ${max_cost} at {q['id']} run {run}")
             # Coarse (whole-article) citations count neither for nor against precision/recall
             cited, coarse, invalid = cit.citations(result.text, unit_ids, article_ids)
             c_recall, c_precision = citation_scores(cited, q["source_ids"])
@@ -105,7 +128,7 @@ def evaluate(system: str, questions: list[dict], runs: int, effort: str | None, 
                 "input_tokens": result.input_tokens, "output_tokens": result.output_tokens,
                 "latency_s": result.latency_s, "from_cache": result.from_cache, "run": run,
                 "effort": (result.params or {}).get("effort", effort), "model_served": result.model_served,
-                "called_at": result.called_at,
+                "called_at": result.called_at, "error": None,
             })
     return rows
 
@@ -139,9 +162,16 @@ def git_commit() -> str:
     return subprocess.run(["git", "rev-parse", "HEAD"], cwd=REPO_ROOT, capture_output=True, text=True).stdout.strip()
 
 
+def _utf8_console() -> None:
+    """UTF-8 stdout/stderr on Windows consoles; skipped for streams that cannot be reconfigured (tests)."""
+    for stream, kwargs in ((sys.stdout, {"encoding": "utf-8", "line_buffering": True}),
+                           (sys.stderr, {"encoding": "utf-8"})):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(**kwargs)
+
+
 def main(argv: list[str] | None = None) -> int:
-    sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
-    sys.stderr.reconfigure(encoding="utf-8")
+    _utf8_console()
     parser = argparse.ArgumentParser(description="Run a baseline on the dev split.")
     parser.add_argument("--system", choices=SYSTEMS, required=True)
     parser.add_argument("--split", default="dev")
@@ -151,6 +181,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--runs", type=int, default=1)
     parser.add_argument("--effort", choices=("low", "medium", "high", "xhigh", "max"))
     parser.add_argument("--overwrite", action="store_true", help="replace existing result files")
+    parser.add_argument("--max-cost", type=float, default=1.0,
+                        help="stop when new answer calls in this invocation cost more than this (USD)")
     args = parser.parse_args(argv)
     if args.split != "dev":
         print(f"LỖI: split {args.split!r} bị từ chối; chỉ chạy trên dev (test chỉ chạy ở T9).", file=sys.stderr)
@@ -177,9 +209,14 @@ def main(argv: list[str] | None = None) -> int:
 
         index = DenseIndex.from_config()
     unit_ids, article_ids = load_unit_ids()
-    rows = evaluate(args.system, questions, args.runs, args.effort, unit_ids, article_ids, index=index)
-
     pricing = llm_cfg["pricing"][answer_cfg["model"]]
+    try:
+        rows = evaluate(args.system, questions, args.runs, args.effort, unit_ids, article_ids, index=index,
+                        pricing=pricing, max_cost=args.max_cost)
+    except CostCapExceeded as e:
+        print(f"DỪNG: {e}. Không ghi file kết quả; câu trả lời đã có vẫn nằm trong cache.", file=sys.stderr)
+        return 3
+
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     write_csv(RESULTS_DIR / f"{stem}.csv", rows)
     meta = {
@@ -194,20 +231,25 @@ def main(argv: list[str] | None = None) -> int:
                    "output": sum(r["output_tokens"] or 0 for r in rows)},
         "pricing": pricing,
         "cost_usd": cost_usd(rows, pricing, fresh_only=False),
-        "answers_first_called_at": min(r["called_at"] for r in rows),
+        "answers_first_called_at": min((r["called_at"] for r in rows if r["called_at"]), default=None),
         "cost_usd_this_invocation": cost_usd(rows, pricing, fresh_only=True),
-        "fresh_calls_this_invocation": sum(not r["from_cache"] for r in rows),
-        "cached_calls_this_invocation": sum(r["from_cache"] for r in rows),
-        "truncated_rows": [r["id"] for r in rows if r["truncated"]],
-        "n_coarse_citations": sum(len(r["coarse_citations"]) for r in rows),
-        "rows_with_coarse_citations": {r["id"]: r["coarse_citations"] for r in rows if r["coarse_citations"]},
-        "rows_with_invalid_citations": {r["id"]: r["invalid_citations"] for r in rows if r["invalid_citations"]},
+        "fresh_calls_this_invocation": sum(not r["from_cache"] and not r["error"] for r in rows),
+        "cached_calls_this_invocation": sum(bool(r["from_cache"]) for r in rows),
+        "max_cost_usd": args.max_cost,
+        "errors": [{"id": r["id"], "run": r["run"], "error": r["error"]} for r in rows if r["error"]],
+        "truncated_rows": [f"{r['id']}#run{r['run']}" for r in rows if r["truncated"]],
+        "n_coarse_citations": sum(len(r["coarse_citations"] or []) for r in rows),
+        "rows_with_coarse_citations": {f"{r['id']}#run{r['run']}": r["coarse_citations"]
+                                       for r in rows if r["coarse_citations"]},
+        "rows_with_invalid_citations": {f"{r['id']}#run{r['run']}": r["invalid_citations"]
+                                        for r in rows if r["invalid_citations"]},
     }
     (RESULTS_DIR / f"{stem}.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Ghi eval/results/{stem}.csv (.json) | lời gọi mới {meta['fresh_calls_this_invocation']}, từ cache "
           f"{meta['cached_calls_this_invocation']} | chi phí kết quả ≈ ${meta['cost_usd']} (lần chạy này "
-          f"${meta['cost_usd_this_invocation']}) | trích dẫn cả điều: {meta['n_coarse_citations']}")
-    return 0
+          f"${meta['cost_usd_this_invocation']}) | trích dẫn cả điều: {meta['n_coarse_citations']} "
+          f"| lỗi: {len(meta['errors'])}")
+    return 1 if meta["errors"] else 0
 
 
 if __name__ == "__main__":

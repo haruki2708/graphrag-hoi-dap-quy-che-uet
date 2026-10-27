@@ -1,23 +1,744 @@
-id,origin,type,delegated,source_ids,retrieved_ids,recall@5,recall@10,mrr,answer,cited_ids,coarse_citations,invalid_citations,citation_recall,citation_precision,finish_reason,truncated,input_tokens,output_tokens,latency_s,from_cache,run,effort,model_served,called_at,judge_label,judge_reason,judge_model
+id,origin,type,delegated,source_ids,retrieved_ids,recall@5,recall@10,mrr,answer,cited_ids,coarse_citations,invalid_citations,citation_recall,citation_precision,finish_reason,truncated,input_tokens,output_tokens,latency_s,from_cache,run,effort,model_served,called_at,error,judge_label,judge_reason,judge_model,judge_error
 dev-m001,manual,single,False,qc3626.d16,qc3626.d16 qc3626.d38.k3 qc3626.d44 qc3626.d17.k2 qc3626.d23.k2 qc3626.d17.k1 qc3626.d38.k2 qc3626.d21.k3 qc3626.d21.k1 qc3626.d5.k1,1.0,1.0,1.0,"Mỗi năm học có **2 học kỳ chính** và **1 học kỳ phụ** (Điều 16).
 
 - **Học kỳ chính:** 15 tuần học, 3-4 tuần thi và 1 tuần dự phòng (Điều 16).
-- **Học kỳ phụ:** ít nhất 5 tuần học và 1 tuần thi. Học kỳ này được tổ chức giữa hai học kỳ chính (Điều 16).",qc3626.d16,,,1.0,1.0,end_turn,False,1938,334,4.002,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:15+07:00,dung,"Câu trả lời nêu đúng và đủ: 2 học kỳ chính, 1 học kỳ phụ; kỳ chính 15 tuần học, 3–4 tuần thi, 1 tuần dự phòng; kỳ phụ ít nhất 5 tuần học, 1 tuần thi và tổ chức giữa hai kỳ chính, đúng Điều 16.",z-ai/glm-5.3-flash
+- **Học kỳ phụ:** ít nhất 5 tuần học và 1 tuần thi. Học kỳ này được tổ chức giữa hai học kỳ chính (Điều 16).",qc3626.d16,,,1.0,1.0,end_turn,False,1938,334,4.002,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:15+07:00,,dung,"Câu trả lời nêu đúng và đủ: 2 học kỳ chính, 1 học kỳ phụ; kỳ chính 15 tuần học, 3–4 tuần thi, 1 tuần dự phòng; kỳ phụ ít nhất 5 tuần học, 1 tuần thi và tổ chức giữa hai kỳ chính, đúng Điều 16.",z-ai/glm-5.3-flash,
+dev-m001,manual,single,False,qc3626.d16,qc3626.d16 qc3626.d38.k3 qc3626.d44 qc3626.d17.k2 qc3626.d23.k2 qc3626.d17.k1 qc3626.d38.k2 qc3626.d21.k3 qc3626.d21.k1 qc3626.d5.k1,1.0,1.0,1.0,"Theo **Điều 16**, mỗi năm học có:
+
+- **2 học kỳ chính.** Mỗi học kỳ chính gồm 15 tuần học, 3-4 tuần thi và 1 tuần dự phòng.
+- **1 học kỳ phụ.** Học kỳ phụ có ít nhất 5 tuần học và 1 tuần thi, tổ chức giữa hai học kỳ chính.
+
+Quy chế không quy định số tuần cụ thể cho học kỳ phụ ngoài mức tối thiểu nói trên.",qc3626.d16,,,1.0,1.0,end_turn,False,1938,374,5.116,False,1,medium,claude-haiku-5-5,2026-10-27T15:03:39+07:00,,dung,"Câu trả lời nêu đúng và đủ: 2 kỳ chính (15 tuần học, 3–4 tuần thi, 1 tuần dự phòng), 1 kỳ phụ (ít nhất 5 tuần học, 1 tuần thi, giữa hai kỳ chính), đúng theo Điều 16.",z-ai/glm-5.3-flash,
+dev-m001,manual,single,False,qc3626.d16,qc3626.d16 qc3626.d38.k3 qc3626.d44 qc3626.d17.k2 qc3626.d23.k2 qc3626.d17.k1 qc3626.d38.k2 qc3626.d21.k3 qc3626.d21.k1 qc3626.d5.k1,1.0,1.0,1.0,"Theo **Điều 16**, mỗi năm học có:
+
+- **2 học kỳ chính**. Mỗi học kỳ chính gồm:
+  - 15 tuần học
+  - 3–4 tuần thi
+  - 1 tuần dự phòng
+- **1 học kỳ phụ**. Học kỳ này có ít nhất 5 tuần học và 1 tuần thi, được tổ chức giữa hai học kỳ chính.",qc3626.d16,,,1.0,1.0,end_turn,False,1938,310,2.128,False,2,medium,claude-haiku-5-5,2026-10-27T15:03:44+07:00,,dung,"Câu trả lời nêu đúng và đủ số kỳ chính/phụ, số tuần học, thi, dự phòng theo Điều 16, khớp hoàn toàn với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m002,manual,single,True,qc3626.d19,qc3626.d16 qc3626.d19 qc3626.d20.k2 qc3626.d20.k1 qc3626.d17.k1 qc3626.d38.k3 qc3626.d23.k2 qc3626.d7.k1 qc3626.d4.k3 qc3626.d44,1.0,1.0,0.5,"**Khung giờ:** Từ 06 giờ đến 20 giờ hàng ngày, trừ Chủ nhật. Khung giờ này thống nhất trong toàn Đại học Quốc gia Hà Nội (Điều 19). Một tiết học là 50 phút, và thời gian nghỉ giữa hai tiết không quá 10 phút (Điều 19).
+
+**Học Chủ nhật:** Quy chế không cho phép tổ chức giảng dạy và học tập vào Chủ nhật (Điều 19).
+
+**Hoạt động đặc thù:** Thời gian tổ chức các hoạt động đặc thù của chương trình đào tạo do **đơn vị đào tạo** quy định (Điều 19). Quy chế không nêu cụ thể chức danh người ký; nếu cần, em nên hỏi đơn vị đào tạo quản lý chương trình của mình.",qc3626.d19,,,1.0,1.0,end_turn,False,2811,664,4.718,False,0,medium,claude-haiku-5-5,2026-10-27T15:03:47+07:00,,dung,"Câu trả lời nêu đúng khung giờ 06–20 hàng ngày trừ Chủ nhật, khẳng định không học Chủ nhật và hoạt động đặc thù do đơn vị đào tạo quy định, phù hợp với Điều 19.",z-ai/glm-5.3-flash,
+dev-m002,manual,single,True,qc3626.d19,qc3626.d16 qc3626.d19 qc3626.d20.k2 qc3626.d20.k1 qc3626.d17.k1 qc3626.d38.k3 qc3626.d23.k2 qc3626.d7.k1 qc3626.d4.k3 qc3626.d44,1.0,1.0,0.5,"- **Khung giờ:** Hoạt động giảng dạy và học tập chính quy diễn ra từ **06 giờ đến 20 giờ** hàng ngày. Một tiết học là 50 phút, và thời gian nghỉ giữa hai tiết không quá 10 phút (Điều 19).
+- **Chủ nhật:** Không học vào Chủ nhật (Điều 19).
+- **Hoạt động đặc thù:** Thời gian tổ chức các hoạt động đặc thù của chương trình đào tạo do **đơn vị đào tạo** quy định (Điều 19). Quy chế không nêu cụ thể cấp nào trong đơn vị ký quyết định, nên bạn nên hỏi trực tiếp đơn vị quản lý chương trình của mình.
+
+Ngoài ra, lịch của từng lớp học phần được bố trí đều trong các tuần của học kỳ. Nếu cần xếp lịch tập trung, số giờ giảng của một học phần không vượt quá 15 giờ/tuần và 4 giờ/ngày (Điều 20 khoản 2 điểm d).",qc3626.d19 qc3626.d20.k2,,,1.0,0.5,end_turn,False,2811,714,4.595,False,1,medium,claude-haiku-5-5,2026-10-27T15:03:52+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: khung giờ 06–20 giờ hằng ngày, không học Chủ nhật, và thời gian hoạt động đặc thù do đơn vị đào tạo quy định (Điều 19).",z-ai/glm-5.3-flash,
+dev-m002,manual,single,True,qc3626.d19,qc3626.d16 qc3626.d19 qc3626.d20.k2 qc3626.d20.k1 qc3626.d17.k1 qc3626.d38.k3 qc3626.d23.k2 qc3626.d7.k1 qc3626.d4.k3 qc3626.d44,1.0,1.0,0.5,"Theo quy chế:
+
+- **Khung giờ:** Hoạt động giảng dạy và học tập theo hình thức chính quy diễn ra từ 06 giờ đến 20 giờ hàng ngày, và thống nhất trong toàn Đại học Quốc gia Hà Nội. Một tiết học là 50 phút; thời gian nghỉ giữa hai tiết không quá 10 phút (Điều 19).
+- **Chủ nhật:** Không học vào Chủ nhật (Điều 19).
+- **Hoạt động đặc thù:** Thời gian tổ chức những hoạt động đặc thù của chương trình đào tạo do **đơn vị đào tạo** quy định (Điều 19). Quy chế không nêu cụ thể nội dung quy định đó, nên bạn cần tham khảo quy định của đơn vị đào tạo quản lý chương trình của mình.",qc3626.d19,,,1.0,1.0,end_turn,False,2811,311,3.432,False,2,medium,claude-haiku-5-5,2026-10-27T15:03:56+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính: khung giờ 06–20 hàng ngày trừ Chủ nhật và hoạt động đặc thù do đơn vị đào tạo quy định theo Điều 19, kèm chi tiết phụ hợp lệ (tiết 50 phút, nghỉ không quá 10 phút).",z-ai/glm-5.3-flash,
+dev-m003,manual,single,False,qc3626.d51,qc3626.d51 qc3626.d17.k2 qc3626.d50.k1 qc3626.d47.k1 qc3626.d3.k5 qc3626.d9.k1 qc3626.d21.k1 qc3626.d17.k1 qc3626.d7.k1 qc3626.d5.k2,1.0,1.0,1.0,"Quy chế có hiệu lực kể từ ngày ký (Quyết định số 3626/QĐ-ĐHQGHN ngày 21/10/2022) và áp dụng cho các khóa tuyển sinh từ năm 2022 trở đi. Những quy định trước đây trái với quy chế này đều bãi bỏ.
+
+Căn cứ: Điều 51.",qc3626.d51,,,1.0,1.0,end_turn,False,2258,131,1.245,False,0,medium,claude-haiku-5-5,2026-10-27T15:04:00+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính: hiệu lực kể từ ngày ký, áp dụng cho các khóa tuyển sinh từ năm 2022 trở đi, bãi bỏ quy định trước đây trái với quy chế, kèm căn cứ Điều 51.",z-ai/glm-5.3-flash,
+dev-m003,manual,single,False,qc3626.d51,qc3626.d51 qc3626.d17.k2 qc3626.d50.k1 qc3626.d47.k1 qc3626.d3.k5 qc3626.d9.k1 qc3626.d21.k1 qc3626.d17.k1 qc3626.d7.k1 qc3626.d5.k2,1.0,1.0,1.0,"Quy chế có hiệu lực thi hành kể từ ngày ký và áp dụng cho các khóa tuyển sinh từ năm 2022 trở đi (Điều 51). Quyết định 3626/QĐ-ĐHQGHN được ký ngày 21/10/2022, nên hiệu lực tính từ ngày đó.
+
+Căn cứ: Điều 51.",qc3626.d51,,,1.0,1.0,end_turn,False,2258,133,1.256,False,1,medium,claude-haiku-5-5,2026-10-27T15:04:01+07:00,,dung,"Câu trả lời nêu đúng hiệu lực kể từ ngày ký, áp dụng cho các khóa tuyển sinh từ năm 2022 trở đi và căn cứ Điều 51 như đáp án mẫu; thông tin bổ sung ngày ký không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m003,manual,single,False,qc3626.d51,qc3626.d51 qc3626.d17.k2 qc3626.d50.k1 qc3626.d47.k1 qc3626.d3.k5 qc3626.d9.k1 qc3626.d21.k1 qc3626.d17.k1 qc3626.d7.k1 qc3626.d5.k2,1.0,1.0,1.0,"Theo Điều 51, Quy chế có hiệu lực thi hành kể từ ngày ký và áp dụng cho các khóa tuyển sinh từ năm 2022 trở đi. Những quy định trước đây trái với Quy chế này đều bãi bỏ.
+
+Căn cứ: Điều 51.",qc3626.d51,,,1.0,1.0,end_turn,False,2258,110,1.252,False,2,medium,claude-haiku-5-5,2026-10-27T15:04:02+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của Điều 51: hiệu lực kể từ ngày ký, áp dụng cho khóa tuyển sinh từ năm 2022 trở đi, và các quy định trước đây trái quy chế đều bị bãi bỏ.",z-ai/glm-5.3-flash,
 dev-m004,manual,single,True,qc3626.d20.k2,qc3626.d20.k2 qc3626.d21.k1 qc3626.d23.k3 qc3626.d18.k5 qc3626.d20.k1 qc3626.d22.k3 qc3626.d18.k6 qc3626.d20.k3 qc3626.d21.k7 qc3626.d44.k2,1.0,1.0,1.0,"**Số sinh viên tối thiểu:** Quy chế không quy định con số cụ thể. Thủ trưởng đơn vị đào tạo quy định số lượng sinh viên tối thiểu và tối đa cho mỗi lớp học phần (Điều 20 khoản 2 điểm c). Em nên xem thông báo thời khóa biểu của đơn vị đào tạo phụ trách học phần, thường được công bố chậm nhất 01 tháng trước khi học kỳ bắt đầu (Điều 18 khoản 5 điểm a).
 
 **Nếu lớp không được mở:** Theo Điều 20 khoản 2 điểm c, lớp học phần sẽ không được tổ chức nếu số sinh viên đăng ký thấp hơn mức tối thiểu. Khi đó, nếu em chưa đủ khối lượng học tập tối thiểu của học kỳ, em phải đăng ký học phần khác.
 
-Lưu ý thêm: khối lượng đăng ký tối thiểu trong học kỳ chính không được thấp hơn 2/3 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn (Điều 21 khoản 1). Nếu em muốn đăng ký ít hơn mức này, em cần được thủ trưởng đơn vị đào tạo đồng ý.",qc3626.d20.k2 qc3626.d18.k5 qc3626.d21.k1,,,1.0,0.3333,end_turn,False,2628,772,3.807,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:19+07:00,dung,"Câu trả lời đúng và đủ các ý chính: quy chế không ấn định con số cụ thể mà do thủ trưởng đơn vị đào tạo quy định sĩ số tối thiểu/tối đa (Điều 20 khoản 2 điểm c), và nếu lớp không mở thì sinh viên phải đăng ký học phần khác nếu chưa đủ khối lượng học tập tối thiểu của kỳ; các thông tin bổ sung không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash
+Lưu ý thêm: khối lượng đăng ký tối thiểu trong học kỳ chính không được thấp hơn 2/3 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn (Điều 21 khoản 1). Nếu em muốn đăng ký ít hơn mức này, em cần được thủ trưởng đơn vị đào tạo đồng ý.",qc3626.d20.k2 qc3626.d18.k5 qc3626.d21.k1,,,1.0,0.3333,end_turn,False,2628,772,3.807,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:19+07:00,,dung,"Câu trả lời đúng và đủ các ý chính: quy chế không ấn định con số cụ thể mà do thủ trưởng đơn vị đào tạo quy định sĩ số tối thiểu/tối đa (Điều 20 khoản 2 điểm c), và nếu lớp không mở thì sinh viên phải đăng ký học phần khác nếu chưa đủ khối lượng học tập tối thiểu của kỳ; các thông tin bổ sung không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m004,manual,single,True,qc3626.d20.k2,qc3626.d20.k2 qc3626.d21.k1 qc3626.d23.k3 qc3626.d18.k5 qc3626.d20.k1 qc3626.d22.k3 qc3626.d18.k6 qc3626.d20.k3 qc3626.d21.k7 qc3626.d44.k2,1.0,1.0,1.0,"**Số sinh viên tối thiểu:** Quy chế không quy định con số cụ thể. Thủ trưởng đơn vị đào tạo quy định số lượng sinh viên tối thiểu và tối đa cho mỗi lớp học phần (Điều 20 khoản 2 điểm c). Em cần xem thông báo của đơn vị đào tạo phụ trách học phần để biết con số áp dụng cho lớp này.
+
+**Nếu lớp không được mở:** Theo Điều 20 khoản 2 điểm c, lớp học phần sẽ không được tổ chức nếu số sinh viên đăng ký ít hơn mức tối thiểu. Khi đó:
+- Em phải đăng ký học phần khác, nếu số tín chỉ đã đăng ký chưa đạt khối lượng học tập tối thiểu của học kỳ.
+- Khối lượng đăng ký tối thiểu là không ít hơn 2/3 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn (Điều 21 khoản 1). Nếu em muốn đăng ký ít hơn mức này, cần có sự đồng ý của thủ trưởng đơn vị đào tạo (Điều 21 khoản 1).
+
+Thời gian và cách thức đăng ký học phần do đơn vị đào tạo thông báo trước khi học kỳ bắt đầu ít nhất 01 tháng (Điều 18 khoản 5 điểm b).",qc3626.d20.k2 qc3626.d21.k1 qc3626.d18.k5,,,1.0,0.3333,end_turn,False,2628,769,4.26,False,1,medium,claude-haiku-5-5,2026-10-27T15:04:04+07:00,,dung,"Câu trả lời đúng khi khẳng định quy chế không ấn định sĩ số tối thiểu (do thủ trưởng đơn vị đào tạo quy định) và sinh viên phải đăng ký học phần khác nếu lớp không mở mà chưa đủ khối lượng học tập tối thiểu của kỳ, đúng theo Điều 20 khoản 2 điểm c; các ý bổ sung không mâu thuẫn với nguyên văn được cung cấp.",z-ai/glm-5.3-flash,
+dev-m004,manual,single,True,qc3626.d20.k2,qc3626.d20.k2 qc3626.d21.k1 qc3626.d23.k3 qc3626.d18.k5 qc3626.d20.k1 qc3626.d22.k3 qc3626.d18.k6 qc3626.d20.k3 qc3626.d21.k7 qc3626.d44.k2,1.0,1.0,1.0,"**Số sinh viên tối thiểu:** Quy chế không quy định con số cụ thể. Thủ trưởng đơn vị đào tạo quy định số lượng sinh viên tối thiểu và tối đa cho mỗi lớp học phần (Điều 20 khoản 2 điểm c). Em cần xem thông báo của đơn vị đào tạo phụ trách học phần để biết con số áp dụng.
+
+**Nếu lớp không mở:** Theo Điều 20 khoản 2 điểm c, lớp học phần sẽ không được tổ chức nếu số sinh viên đăng ký ít hơn mức tối thiểu. Khi đó, em phải đăng ký học phần khác, nếu số tín chỉ đăng ký còn chưa đủ khối lượng học tập tối thiểu của học kỳ.
+
+Lưu ý thêm: khối lượng đăng ký tối thiểu mỗi học kỳ chính là không ít hơn 2/3 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn. Nếu em muốn đăng ký ít hơn mức này, em cần được thủ trưởng đơn vị đào tạo đồng ý (Điều 21 khoản 1).",qc3626.d20.k2 qc3626.d21.k1,,,1.0,0.5,end_turn,False,2628,694,4.129,False,2,medium,claude-haiku-5-5,2026-10-27T15:04:08+07:00,,dung,"Câu trả lời khớp đầy đủ các ý chính của đáp án mẫu: quy chế không ấn định con số cụ thể mà do thủ trưởng đơn vị đào tạo quy định sĩ số tối thiểu/tối đa, lớp không mở nếu dưới mức tối thiểu và sinh viên phải đăng ký học phần khác nếu chưa đủ khối lượng học tập tối thiểu của kỳ (Điều 20 khoản 2 điểm c), phần bổ sung không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m005,manual,single,True,qc3626.d32.k2,qc3626.d32.k2 qc3626.d39.k2 qc3626.d32.k1 qc3626.d32.k3 qc3626.d32.k4 qc3626.d47.k5 qc3626.d41.k1 qc3626.d39.k3 qc3626.d41.k2 qc3626.d30.k1,1.0,1.0,1.0,"Quy chế **không quy định mức điểm cụ thể** cho bài báo đã công bố. Theo Điều 32 khoản 2, sinh viên có công bố quốc tế, trong nước hoặc bằng sở hữu trí tuệ được cộng **không quá 0,2 điểm**. Mức điểm cụ thể do **thủ trưởng đơn vị đào tạo quy định bằng văn bản**.
+
+Vì vậy, em cần tra văn bản của đơn vị đào tạo quản lý ngành của mình để biết chính xác số điểm được cộng.",qc3626.d32.k2,,,1.0,1.0,end_turn,False,2073,514,3.436,False,0,medium,claude-haiku-5-5,2026-10-27T15:04:12+07:00,,dung,"Câu trả lời đúng kết luận và nêu đủ căn cứ như đáp án mẫu: quy chế chỉ quy định cộng không quá 0,2 điểm cho công bố quốc tế, trong nước (Điều 32 khoản 2), mức cụ thể do thủ trưởng đơn vị đào tạo quy định bằng văn bản nên không thể xác định chính xác.",z-ai/glm-5.3-flash,
+dev-m005,manual,single,True,qc3626.d32.k2,qc3626.d32.k2 qc3626.d39.k2 qc3626.d32.k1 qc3626.d32.k3 qc3626.d32.k4 qc3626.d47.k5 qc3626.d41.k1 qc3626.d39.k3 qc3626.d41.k2 qc3626.d30.k1,1.0,1.0,1.0,"Quy chế **không quy định mức điểm cụ thể** cho bài báo được công bố. Căn cứ **Điều 32 khoản 2** (đoạn cuối), sinh viên có công bố quốc tế hoặc trong nước được cộng **không quá 0,2 điểm**. Mức điểm cụ thể do **thủ trưởng đơn vị đào tạo quy định bằng văn bản**.
+
+Em nên hỏi đơn vị đào tạo quản lý ngành của mình để biết văn bản quy định mức điểm áp dụng.",qc3626.d32.k2,,,1.0,1.0,end_turn,False,2073,435,2.907,False,1,medium,claude-haiku-5-5,2026-10-27T15:04:16+07:00,,dung,"Câu trả lời khớp với đáp án mẫu: nêu đúng căn cứ Điều 32 khoản 2, ngưỡng không quá 0,2 điểm và mức cụ thể do thủ trưởng đơn vị đào tạo quy định bằng văn bản, kết luận không thể xác định chính xác từ quy chế.",z-ai/glm-5.3-flash,
+dev-m005,manual,single,True,qc3626.d32.k2,qc3626.d32.k2 qc3626.d39.k2 qc3626.d32.k1 qc3626.d32.k3 qc3626.d32.k4 qc3626.d47.k5 qc3626.d41.k1 qc3626.d39.k3 qc3626.d41.k2 qc3626.d30.k1,1.0,1.0,1.0,"Quy chế **không quy định mức điểm chính xác** cho bài báo được công bố.
+
+- Điều 32 khoản 2: điểm thưởng cho sinh viên có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ **không vượt quá 0,2 điểm**.
+- Mức điểm cụ thể do **thủ trưởng đơn vị đào tạo quy định bằng văn bản** (Điều 32 khoản 2). Em cần tham khảo văn bản này của đơn vị quản lý ngành/khoa của mình.
+
+Ngoài ra, điểm thưởng này được cộng vào điểm trung bình chung học kỳ và tích lũy để xét học bổng, xét chuyển tiếp sau đại học và các quyền lợi khác. Điểm thưởng không dùng để xếp loại học lực hoặc xác định hạng tốt nghiệp (Điều 32 khoản 1).",qc3626.d32.k2 qc3626.d32.k1,,,1.0,0.5,end_turn,False,2073,657,3.488,False,2,medium,claude-haiku-5-5,2026-10-27T15:04:19+07:00,,dung,"Câu trả lời kết luận đúng rằng quy chế không nêu điểm chính xác, và nêu đủ căn cứ (Điều 32 khoản 2), ngưỡng (không quá 0,2 điểm) cùng cơ chế thủ trưởng đơn vị đào tạo quy định bằng văn bản như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m006,manual,single,False,qc3626.d41.k2,qc3626.d41.k2 qc3626.d41.k3 qc3626.d41.k5 qc3626.d37.k1 qc3626.d41.k1 qc3626.d41.k6 qc3626.d43.k1 qc3626.d39.k2 qc3626.d43.k2 qc3626.d37.k6,1.0,1.0,1.0,"Trên bảng điểm, ba ký hiệu này có nghĩa như sau:
+
+- **I**: Học phần chưa đủ điểm đánh giá bộ phận. Sinh viên được xếp I khi ốm, tai nạn hoặc vì lý do khách quan không thể dự kiểm tra hoặc thi, và được thủ trưởng đơn vị đào tạo cho phép hoặc chấp thuận (Điều 41 khoản 2 điểm d; Điều 41 khoản 5). Trong học kỳ kế tiếp, sinh viên phải hoàn thành các nội dung kiểm tra còn nợ để được chuyển điểm, trừ trường hợp đặc biệt do thủ trưởng đơn vị đào tạo quy định (Điều 41 khoản 5).
+
+- **X**: Học phần chưa có kết quả thi kết thúc học phần (Điều 41 khoản 2 điểm d). Khi có kết quả thi, X được chuyển thành điểm chữ (Điều 41 khoản 3 điểm c).
+
+- **R**: Ký hiệu viết sau điểm học phần, cho biết học phần đó được công nhận tín chỉ, chuyển điểm, hoặc được đánh giá đầu học kỳ, theo cho phép của thủ trưởng đơn vị đào tạo (Điều 41 khoản 2 điểm đ).",qc3626.d41.k2 qc3626.d41.k5 qc3626.d41.k3,,,1.0,0.3333,end_turn,False,2358,913,4.171,False,0,medium,claude-haiku-5-5,2026-10-27T15:04:23+07:00,,dung,"Câu trả lời nêu đúng và đủ ý nghĩa của cả ba ký hiệu I, X, R kèm căn cứ Điều 41 khoản 2 (điểm d và đ) khớp với đáp án mẫu và nguyên văn quy chế, phần bổ sung về khoản 5 không mâu thuẫn.",z-ai/glm-5.3-flash,
+dev-m006,manual,single,False,qc3626.d41.k2,qc3626.d41.k2 qc3626.d41.k3 qc3626.d41.k5 qc3626.d37.k1 qc3626.d41.k1 qc3626.d41.k6 qc3626.d43.k1 qc3626.d39.k2 qc3626.d43.k2 qc3626.d37.k6,1.0,1.0,1.0,"Trên bảng điểm, các ký hiệu có nghĩa như sau:
+
+- **I**: Học phần chưa đủ điểm đánh giá bộ phận (Điều 41 khoản 2 điểm d). Thường do sinh viên bị ốm, tai nạn hoặc có lý do khách quan nên không thể dự kiểm tra hoặc thi và được thủ trưởng đơn vị đào tạo cho phép (Điều 41 khoản 5). Trừ trường hợp đặc biệt do thủ trưởng đơn vị đào tạo quy định, sinh viên phải hoàn thành các nội dung kiểm tra còn nợ trong học kỳ kế tiếp thì mới được chuyển điểm (Điều 41 khoản 5).
+
+- **X**: Học phần chưa có kết quả thi kết thúc học phần (Điều 41 khoản 2 điểm d). Khi có kết quả thi, ký hiệu này sẽ được chuyển thành điểm chữ (Điều 41 khoản 3 điểm c).
+
+- **R** (ghi sau điểm học phần): Học phần được thủ trưởng đơn vị đào tạo cho phép công nhận tín chỉ, chuyển điểm hoặc được đánh giá đầu học kỳ (Điều 41 khoản 2 điểm đ).",qc3626.d41.k2 qc3626.d41.k5 qc3626.d41.k3,,,1.0,0.3333,end_turn,False,2358,877,4.622,False,1,medium,claude-haiku-5-5,2026-10-27T15:04:27+07:00,,dung,"Câu trả lời nêu đúng và đủ ý chính của đáp án mẫu: I là chưa đủ điểm đánh giá bộ phận, X là chưa có kết quả thi kết thúc học phần, R ghi sau điểm dùng cho học phần được công nhận tín chỉ, chuyển điểm hoặc đánh giá đầu học kỳ, với căn cứ đúng tại Điều 41 khoản 2; các ý bổ sung không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m006,manual,single,False,qc3626.d41.k2,qc3626.d41.k2 qc3626.d41.k3 qc3626.d41.k5 qc3626.d37.k1 qc3626.d41.k1 qc3626.d41.k6 qc3626.d43.k1 qc3626.d39.k2 qc3626.d43.k2 qc3626.d37.k6,1.0,1.0,1.0,"Các ký hiệu này được quy định tại Điều 41 khoản 2 điểm d và điểm đ:
+
+- **I**: Chưa đủ điểm đánh giá bộ phận (Điều 41 khoản 2 điểm d). Thường gặp khi sinh viên bị ốm, tai nạn hoặc có lý do khách quan không thể dự kiểm tra, được thủ trưởng đơn vị đào tạo cho phép hoặc chấp thuận (Điều 41 khoản 5 điểm a, b). Trong học kỳ kế tiếp, sinh viên phải trả xong các nội dung kiểm tra còn nợ để được chuyển điểm, trừ trường hợp đặc biệt do thủ trưởng đơn vị đào tạo quy định (Điều 41 khoản 5). Khi đủ điểm, học phần được chuyển sang điểm chữ (Điều 41 khoản 3 điểm b).
+
+- **X**: Chưa có kết quả thi kết thúc học phần (Điều 41 khoản 2 điểm d). Khi có kết quả thi, học phần được chuyển sang điểm chữ (Điều 41 khoản 3 điểm c).
+
+- **R** (ghi sau điểm học phần): Học phần được thủ trưởng đơn vị đào tạo cho phép công nhận tín chỉ, chuyển điểm hoặc đánh giá đầu học kỳ (Điều 41 khoản 2 điểm đ).
+
+Lưu ý: Học phần mang ký hiệu I hoặc X chưa được đưa vào tính điểm trung bình chung học kỳ cho đến khi được chuyển thành điểm chữ (Điều 41 khoản 2 điểm d).",qc3626.d41.k2 qc3626.d41.k5 qc3626.d41.k3,,,1.0,0.3333,end_turn,False,2358,1155,4.821,False,2,medium,claude-haiku-5-5,2026-10-27T15:04:32+07:00,,dung,"Câu trả lời nêu đúng nghĩa của I, X và R đúng như Điều 41 khoản 2 điểm d và điểm đ, khớp với đáp án mẫu và có dẫn nguồn căn cứ đầy đủ; các chi tiết bổ sung không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m007,manual,single,False,qc3626.d24.k1,qc3626.d24.k1 qc3626.d24.k2 qc3626.d36.k1 qc3626.d28.k2 qc3626.d29.k3 qc3626.d47.k7 qc3626.d36.k2 qc3626.d11.k1 qc3626.d47.k4 qc3626.d47.k10,1.0,1.0,1.0,"Theo **Điều 24 khoản 1 điểm a**, sinh viên được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh nếu thuộc một trong các trường hợp sau:
+
+- Có bằng tốt nghiệp học viện, trường sĩ quan quân đội hoặc công an.
+- Đã có chứng chỉ giáo dục quốc phòng - an ninh.
+- Là người nước ngoài.
+
+Ngoài ra, **Điều 24 khoản 1 điểm b** cho phép miễn học, miễn thi từng học phần hoặc nội dung nếu sinh viên có giấy xác nhận kết quả đạt từ 5,0 điểm trở lên (thang 10). Đây là miễn một phần, không phải miễn toàn bộ.",qc3626.d24.k1,,,1.0,1.0,end_turn,False,2934,501,3.691,False,0,medium,claude-haiku-5-5,2026-10-27T15:04:37+07:00,,dung,"Câu trả lời nêu đúng và đủ ba đối tượng được miễn học toàn bộ (bằng tốt nghiệp học viện/trường sĩ quan quân đội, công an; đã có chứng chỉ GDQP-AN; là người nước ngoài) theo Điều 24 khoản 1, phần bổ sung về miễn một phần điểm b cũng chính xác và không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m007,manual,single,False,qc3626.d24.k1,qc3626.d24.k1 qc3626.d24.k2 qc3626.d36.k1 qc3626.d28.k2 qc3626.d29.k3 qc3626.d47.k7 qc3626.d36.k2 qc3626.d11.k1 qc3626.d47.k4 qc3626.d47.k10,1.0,1.0,1.0,"Theo **Điều 24 khoản 1 điểm a**, sinh viên được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh nếu thuộc một trong các trường hợp sau:
+
+- Có bằng tốt nghiệp học viện, trường sĩ quan quân đội hoặc công an.
+- Đã có chứng chỉ giáo dục quốc phòng - an ninh.
+- Là người nước ngoài.
+
+Ngoài ra, sinh viên có giấy xác nhận kết quả học tập đạt từ 5,0 điểm trở lên (thang 10) đối với một số học phần hoặc nội dung thì được miễn học, miễn thi phần đó theo **Điều 24 khoản 1 điểm b**. Trường hợp này chỉ miễn một phần, không phải toàn bộ.",qc3626.d24.k1,,,1.0,1.0,end_turn,False,2934,458,3.712,False,1,medium,claude-haiku-5-5,2026-10-27T15:04:40+07:00,,dung,"Câu trả lời nêu đúng và đủ ba trường hợp được miễn học toàn bộ môn GDQP-AN theo Điều 24 khoản 1 điểm a, và phần bổ sung về miễn một phần theo điểm b cũng chính xác.",z-ai/glm-5.3-flash,
+dev-m007,manual,single,False,qc3626.d24.k1,qc3626.d24.k1 qc3626.d24.k2 qc3626.d36.k1 qc3626.d28.k2 qc3626.d29.k3 qc3626.d47.k7 qc3626.d36.k2 qc3626.d11.k1 qc3626.d47.k4 qc3626.d47.k10,1.0,1.0,1.0,"Theo **Điều 24 khoản 1 điểm a**, sinh viên thuộc các đối tượng sau được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh:
+
+- Sinh viên có bằng tốt nghiệp học viện, trường sĩ quan quân đội hoặc công an.
+- Sinh viên đã có chứng chỉ giáo dục quốc phòng - an ninh.
+- Sinh viên là người nước ngoài.
+
+Ngoài ra, sinh viên có giấy xác nhận kết quả học tập đạt từ 5,0 điểm trở lên (thang 10) đối với một học phần hoặc nội dung nào đó thì được miễn học, miễn thi phần đó (**Điều 24 khoản 1 điểm b**). Đây là miễn một phần, không phải toàn bộ.",qc3626.d24.k1,,,1.0,1.0,end_turn,False,2934,484,3.828,False,2,medium,claude-haiku-5-5,2026-10-27T15:04:44+07:00,,dung,"Câu trả lời nêu đúng và đủ ba đối tượng được miễn học toàn bộ theo Điều 24 khoản 1 điểm a, phần bổ sung về miễn một phần tại điểm b không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m008,manual,single,True,qc3626.d39.k1,qc3626.d39.k1 qc3626.d50.k2 qc3626.d20.k3 qc3626.d49 qc3626.d50.k3 qc3626.d25.k4 qc3626.d24.k1 qc3626.d10.k2 qc3626.d3.k5 qc3626.d38.k7,1.0,1.0,1.0,"**Quy trình bảo vệ KLTN do ai quy định?**
+
+Thủ trưởng đơn vị đào tạo quy định cụ thể quy trình thực hiện bảo vệ và đánh giá khóa luận, đồ án tốt nghiệp (Điều 39 khoản 1). Quy chế không quy định chi tiết quy trình này, nên không nêu cụ thể ở đây.
+
+**Yêu cầu để bảo vệ trực tuyến**
+
+Chỉ khi đơn vị không thể tổ chức bảo vệ trực tiếp thì mới được bảo vệ trực tuyến, và phải đáp ứng đủ các điều kiện sau (Điều 39 khoản 1):
+
+- **Điểm a:** Việc đánh giá được thực hiện qua một hội đồng chuyên môn gồm ít nhất 3 thành viên.
+- **Điểm b:** Hình thức bảo vệ trực tuyến được sự đồng thuận của các thành viên hội đồng và người học.
+- **Điểm c:** Toàn bộ diễn biến buổi bảo vệ được ghi hình, ghi âm đầy đủ và lưu trữ theo quy định.
+
+Hội đồng bảo vệ phải có ít nhất 3 thành viên, do Chủ nhiệm khoa hoặc Chủ nhiệm bộ môn đề nghị, và được thành lập bằng quyết định (Điều 39 khoản 1).",qc3626.d39.k1,,,1.0,1.0,end_turn,False,3051,702,3.405,False,0,medium,claude-haiku-5-5,2026-10-27T15:04:48+07:00,,dung,"Câu trả lời nêu đúng người quy định (Thủ trưởng đơn vị đào tạo) và đủ cả ba điều kiện bảo vệ trực tuyến (hội đồng chuyên môn ít nhất 3 thành viên, đồng thuận của hội đồng và người học, ghi hình ghi âm lưu trữ) cùng điều kiện không thể tổ chức trực tiếp, khớp với Điều 39 khoản 1.",z-ai/glm-5.3-flash,
+dev-m008,manual,single,True,qc3626.d39.k1,qc3626.d39.k1 qc3626.d50.k2 qc3626.d20.k3 qc3626.d49 qc3626.d50.k3 qc3626.d25.k4 qc3626.d24.k1 qc3626.d10.k2 qc3626.d3.k5 qc3626.d38.k7,1.0,1.0,1.0,"**Quy trình bảo vệ KLTN do ai quy định?**
+
+Thủ trưởng đơn vị đào tạo quy định cụ thể quy trình thực hiện bảo vệ và đánh giá khóa luận, đồ án tốt nghiệp (Điều 39 khoản 1). Hội đồng bảo vệ gồm ít nhất 3 thành viên, do Chủ nhiệm khoa (đối với trường đại học thành viên) hoặc Chủ nhiệm bộ môn (đối với Trường/Khoa trực thuộc) đề nghị (Điều 39 khoản 1).
+
+**Muốn bảo vệ trực tuyến phải đáp ứng yêu cầu gì?**
+
+Việc bảo vệ chỉ được tổ chức trực tuyến khi đơn vị không thể tổ chức bảo vệ trực tiếp, và phải đáp ứng đồng thời các điều kiện sau (Điều 39 khoản 1):
+
+- **Điểm a:** Việc đánh giá được thực hiện thông qua một hội đồng chuyên môn gồm ít nhất 3 thành viên.
+- **Điểm b:** Hình thức bảo vệ và đánh giá trực tuyến được sự đồng thuận của các thành viên hội đồng và người học.
+- **Điểm c:** Diễn biến buổi bảo vệ trực tuyến được ghi hình, ghi âm đầy đủ và lưu trữ theo quy định.",qc3626.d39.k1,,,1.0,1.0,end_turn,False,3051,797,3.952,False,1,medium,claude-haiku-5-5,2026-10-27T15:04:52+07:00,,dung,"Câu trả lời nêu đúng Thủ trưởng đơn vị đào tạo là người quy định và đầy đủ cả ba điều kiện bảo vệ trực tuyến (hội đồng ít nhất 3 thành viên, sự đồng thuận, ghi hình ghi âm lưu trữ) cùng căn cứ Điều 39 khoản 1.",z-ai/glm-5.3-flash,
+dev-m008,manual,single,True,qc3626.d39.k1,qc3626.d39.k1 qc3626.d50.k2 qc3626.d20.k3 qc3626.d49 qc3626.d50.k3 qc3626.d25.k4 qc3626.d24.k1 qc3626.d10.k2 qc3626.d3.k5 qc3626.d38.k7,1.0,1.0,1.0,"**Quy trình bảo vệ KLTN do ai quy định?**
+Thủ trưởng đơn vị đào tạo quy định cụ thể quy trình thực hiện bảo vệ và đánh giá khóa luận, đồ án tốt nghiệp (Điều 39 khoản 1). Quy chế này không quy định chi tiết quy trình đó.
+
+**Muốn bảo vệ trực tuyến cần đáp ứng những yêu cầu gì?**
+Việc bảo vệ chỉ được tổ chức trực tuyến khi đơn vị không thể tổ chức bảo vệ trực tiếp, và phải đáp ứng đủ các điều kiện sau (Điều 39 khoản 1):
+
+- **a)** Việc đánh giá được thực hiện thông qua một hội đồng chuyên môn gồm ít nhất 3 thành viên.
+- **b)** Hình thức bảo vệ và đánh giá trực tuyến được sự đồng thuận của các thành viên hội đồng và người học.
+- **c)** Diễn biến buổi bảo vệ trực tuyến được ghi hình, ghi âm đầy đủ và lưu trữ theo quy định.",qc3626.d39.k1,,,1.0,1.0,end_turn,False,3051,739,3.494,False,2,medium,claude-haiku-5-5,2026-10-27T15:04:56+07:00,,dung,"Câu trả lời nêu đúng Thủ trưởng đơn vị đào tạo là người quy định quy trình và đầy đủ cả ba điều kiện bảo vệ trực tuyến (hội đồng ít nhất 3 thành viên, sự đồng thuận của hội đồng và người học, ghi hình ghi âm lưu trữ) kèm điều kiện không thể tổ chức trực tiếp, đúng Điều 39 khoản 1.",z-ai/glm-5.3-flash,
+dev-m009,manual,multi,False,qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,qc3626.d4.k3 qc3626.d4.k2 qc3626.d5.k1 qc3626.d17.k1 qc3626.d19 qc3626.d5.k2 qc3626.d21.k1 qc3626.d17.k2 qc3626.d16 qc3626.d42.k1,1.0,1.0,1.0,"**Tóm tắt:**
+
+- **1 tín chỉ = 15 giờ tín chỉ** (Điều 4 khoản 2).
+- **1 giờ tín chỉ lý thuyết = 1 tiết lý thuyết**, và để tiếp thu được nội dung đó, sinh viên phải dành **ít nhất 2 tiết chuẩn bị cá nhân** (Điều 4 khoản 3 điểm a).
+- **1 tiết học = 50 phút**, thời gian nghỉ giữa hai tiết không quá 10 phút (Điều 19).
+
+**Quy đổi:**
+
+- 1 giờ tín chỉ lý thuyết: 1 tiết trên lớp + tối thiểu 2 tiết tự chuẩn bị = **ít nhất 3 tiết, tức khoảng 150 phút**.
+- 1 tín chỉ lý thuyết (15 giờ tín chỉ): khoảng 15 tiết trên lớp + tối thiểu 30 tiết chuẩn bị = **ít nhất 45 tiết, tức khoảng 37,5 giờ**.
+
+Quy chế chỉ quy định thời lượng chuẩn bị là ""ít nhất 2 tiết"" cho mỗi giờ tín chỉ lý thuyết, nên con số trên là mức tối thiểu.",qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,,,1.0,1.0,end_turn,False,2507,978,4.527,False,0,medium,claude-haiku-5-5,2026-10-27T15:04:59+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: 1 tín chỉ = 15 giờ tín chỉ (Điều 4 khoản 2), 1 giờ tín chỉ lý thuyết = 1 tiết lý thuyết và cần ít nhất 2 tiết chuẩn bị cá nhân (Điều 4 khoản 3a), 1 tiết = 50 phút (Điều 19), kèm căn cứ đúng và các quy đổi nhất quán với quy chế.",z-ai/glm-5.3-flash,
+dev-m009,manual,multi,False,qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,qc3626.d4.k3 qc3626.d4.k2 qc3626.d5.k1 qc3626.d17.k1 qc3626.d19 qc3626.d5.k2 qc3626.d21.k1 qc3626.d17.k2 qc3626.d16 qc3626.d42.k1,1.0,1.0,1.0,"**Căn cứ:** Điều 4 khoản 2, Điều 4 khoản 3 điểm a, Điều 19.
+
+- **1 tín chỉ = 15 giờ tín chỉ** (Điều 4 khoản 2).
+- **1 giờ tín chỉ lý thuyết = 1 tiết lý thuyết** (Điều 4 khoản 3 điểm a).
+- **1 tiết = 50 phút** (Điều 19).
+- **Chuẩn bị cá nhân:** để tiếp thu 1 giờ tín chỉ lý thuyết, sinh viên phải dành **ít nhất 2 tiết** chuẩn bị cá nhân (Điều 4 khoản 3 điểm a).
+
+**Quy đổi cho học phần lý thuyết:**
+
+- Mỗi giờ tín chỉ lý thuyết: 50 phút trên lớp + ít nhất 100 phút chuẩn bị = **ít nhất 150 phút (khoảng 2,5 giờ)**.
+- Mỗi tín chỉ (15 giờ tín chỉ): khoảng **15 tiết trên lớp (12,5 giờ)** + **ít nhất 30 tiết chuẩn bị (ít nhất 25 giờ)**.
+
+Quy chế chỉ đặt mức tối thiểu cho thời gian chuẩn bị. Với học phần thực hành, bài tập, thực tập hoặc tiểu luận, cách quy đổi tiết khác (Điều 4 khoản 3 điểm b, c).",qc3626.d4.k2 qc3626.d19 qc3626.d4.k3,,,1.0,1.0,end_turn,False,2507,1304,6.045,False,1,medium,claude-haiku-5-5,2026-10-27T15:05:04+07:00,,dung,"Câu trả lời nêu đủ và đúng các ý chính của đáp án mẫu (1 tín chỉ = 15 giờ tín chỉ, 1 giờ tín chỉ lý thuyết = 1 tiết, ít nhất 2 tiết chuẩn bị cá nhân, 1 tiết = 50 phút) với căn cứ Điều 4 khoản 2, khoản 3 và Điều 19; phần quy đổi bổ sung cũng nhất quán với quy chế.",z-ai/glm-5.3-flash,
+dev-m009,manual,multi,False,qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,qc3626.d4.k3 qc3626.d4.k2 qc3626.d5.k1 qc3626.d17.k1 qc3626.d19 qc3626.d5.k2 qc3626.d21.k1 qc3626.d17.k2 qc3626.d16 qc3626.d42.k1,1.0,1.0,1.0,"**Tóm tắt:**
+
+- **1 tín chỉ = 15 giờ tín chỉ** (Điều 4 khoản 2).
+- **1 giờ tín chỉ lý thuyết = 1 tiết lý thuyết** (Điều 4 khoản 3 điểm a).
+- **1 tiết học = 50 phút**, nghỉ giữa hai tiết không quá 10 phút (Điều 19).
+- **Chuẩn bị cá nhân: ít nhất 2 tiết cho mỗi giờ tín chỉ lý thuyết** (Điều 4 khoản 3 điểm a).
+
+**Quy đổi cho 1 tín chỉ lý thuyết:**
+
+- Lên lớp: 15 tiết ≈ 750 phút (khoảng 12,5 giờ).
+- Chuẩn bị cá nhân tối thiểu: 15 × 2 = 30 tiết ≈ 1.500 phút (khoảng 25 giờ).
+
+Đây là mức tối thiểu theo quy chế. Thời lượng chuẩn bị thực tế có thể nhiều hơn.",qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,,,1.0,1.0,end_turn,False,2507,980,4.42,False,2,medium,claude-haiku-5-5,2026-10-27T15:05:10+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: 1 tín chỉ = 15 giờ tín chỉ, 1 giờ tín chỉ lý thuyết = 1 tiết, mỗi tiết 50 phút, và cần ít nhất 2 tiết chuẩn bị cá nhân, với căn cứ điều khoản chính xác.",z-ai/glm-5.3-flash,
+dev-m010,manual,multi,False,qc3626.d14.k2 qc3626.d13.k3,qc3626.d13.k1 qc3626.d27.k4 qc3626.d13.k3 qc3626.d14.k2 qc3626.d21.k1 qc3626.d33.k3 qc3626.d46.k2 qc3626.d39.k5 qc3626.d27.k3 qc3626.d38.k9,1.0,1.0,0.3333,"**Số tín chỉ tối thiểu so với chương trình chuẩn:**
+- **Chương trình chất lượng cao:** thiết kế nhiều hơn chương trình chuẩn tương ứng **ít nhất 15 tín chỉ** (Điều 14 khoản 2 điểm b).
+- **Chương trình tài năng:** thiết kế nhiều hơn chương trình chuẩn tương ứng **ít nhất 30 tín chỉ** (Điều 14 khoản 2 điểm c).
+
+**Yêu cầu ngoại ngữ đầu ra:** Có khác nhau.
+- **Chương trình chuẩn:** tương đương **bậc 3** theo Khung năng lực ngoại ngữ 6 bậc (Điều 13 khoản 3 điểm a).
+- **Chương trình tài năng và chất lượng cao:** tương đương **bậc 4** theo Khung năng lực ngoại ngữ 6 bậc (Điều 13 khoản 3 điểm b).",qc3626.d14.k2 qc3626.d13.k3,,,1.0,1.0,end_turn,False,4084,590,2.989,False,0,medium,claude-haiku-5-5,2026-10-27T15:05:14+07:00,,dung,"Câu trả lời nêu đúng ngưỡng tín chỉ (CLC ít nhất 15, tài năng ít nhất 30 tín chỉ hơn chương trình chuẩn) và đúng yêu cầu ngoại ngữ (cả hai chương trình bậc 4, khác với chương trình chuẩn bậc 3), phù hợp Điều 14 khoản 2 và Điều 13 khoản 3.",z-ai/glm-5.3-flash,
+dev-m010,manual,multi,False,qc3626.d14.k2 qc3626.d13.k3,qc3626.d13.k1 qc3626.d27.k4 qc3626.d13.k3 qc3626.d14.k2 qc3626.d21.k1 qc3626.d33.k3 qc3626.d46.k2 qc3626.d39.k5 qc3626.d27.k3 qc3626.d38.k9,1.0,1.0,0.3333,"**Số tín chỉ tối thiểu so với chương trình chuẩn:**
+- **Chương trình chất lượng cao:** nhiều hơn chương trình chuẩn tương ứng ít nhất **15 tín chỉ** (Điều 14 khoản 2 điểm b).
+- **Chương trình tài năng:** nhiều hơn chương trình chuẩn tương ứng ít nhất **30 tín chỉ** (Điều 14 khoản 2 điểm c).
+
+**Yêu cầu ngoại ngữ đầu ra:** Có khác nhau.
+- **Chương trình chuẩn:** tương đương **bậc 3** Khung năng lực ngoại ngữ 6 bậc (Điều 13 khoản 3 điểm a).
+- **Chương trình chất lượng cao và tài năng:** tương đương **bậc 4** (Điều 13 khoản 3 điểm b).",qc3626.d14.k2 qc3626.d13.k3,,,1.0,1.0,end_turn,False,4084,568,3.075,False,1,medium,claude-haiku-5-5,2026-10-27T15:05:18+07:00,,dung,"Câu trả lời nêu đúng ngưỡng tín chỉ (CLC +15, tài năng +30 theo Điều 14 khoản 2) và yêu cầu ngoại ngữ (chuẩn bậc 3, CLC và tài năng cùng bậc 4 theo Điều 13 khoản 3), khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m010,manual,multi,False,qc3626.d14.k2 qc3626.d13.k3,qc3626.d13.k1 qc3626.d27.k4 qc3626.d13.k3 qc3626.d14.k2 qc3626.d21.k1 qc3626.d33.k3 qc3626.d46.k2 qc3626.d39.k5 qc3626.d27.k3 qc3626.d38.k9,1.0,1.0,0.3333,"**Số tín chỉ tối thiểu so với chương trình chuẩn:**
+- **Chất lượng cao:** thiết kế nhiều hơn chương trình chuẩn tương ứng **ít nhất 15 tín chỉ** (Điều 14 khoản 2 điểm b).
+- **Tài năng:** thiết kế nhiều hơn chương trình chuẩn tương ứng **ít nhất 30 tín chỉ** (Điều 14 khoản 2 điểm c).
+
+**Yêu cầu ngoại ngữ đầu ra:** Có khác nhau.
+- **Chương trình chuẩn** (cùng các chương trình ngành chính - ngành phụ, song ngành): tương đương **bậc 3** Khung năng lực ngoại ngữ 6 bậc (Điều 13 khoản 3 điểm a).
+- **Chương trình tài năng và chất lượng cao:** tương đương **bậc 4** Khung năng lực ngoại ngữ 6 bậc (Điều 13 khoản 3 điểm b).",qc3626.d14.k2 qc3626.d13.k3,,,1.0,1.0,end_turn,False,4084,629,3.114,False,2,medium,claude-haiku-5-5,2026-10-27T15:05:21+07:00,,dung,"Câu trả lời nêu đúng cả hai ngưỡng tín chỉ (CLC +15, tài năng +30 so với chuẩn) và yêu cầu ngoại ngữ bậc 4 cho cả hai chương trình (khác với chương trình chuẩn bậc 3), phù hợp Điều 14 khoản 2 và Điều 13 khoản 3 của quy chế.",z-ai/glm-5.3-flash,
+dev-m011,manual,multi,False,qc3626.d18.k5 qc3626.d38.k3,qc3626.d38.k3 qc3626.d18.k5 qc3626.d16 qc3626.d21.k3 qc3626.d18.k1 qc3626.d17.k1 qc3626.d50.k3 qc3626.d44 qc3626.d38.k6 qc3626.d18.k4,1.0,1.0,1.0,"**Thời khóa biểu:** Chậm nhất 01 tháng trước khi học kỳ mới bắt đầu, đơn vị đào tạo thông báo thời khóa biểu của các lớp học phần dự kiến giảng dạy (Điều 18 khoản 5 điểm a).
+
+**Lịch thi:**
+- Kỳ thi chính: thông báo trước ít nhất 1 tháng (Điều 38 khoản 3).
+- Kỳ thi phụ: thông báo trước ít nhất 1 tuần (Điều 38 khoản 3).",qc3626.d18.k5 qc3626.d38.k3,,,1.0,1.0,end_turn,False,1756,454,3.38,False,0,medium,claude-haiku-5-5,2026-10-27T15:05:24+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính: thời khóa biểu chậm nhất 01 tháng trước học kỳ mới (Điều 18 khoản 5), lịch thi chính trước ít nhất 1 tháng và lịch thi phụ trước ít nhất 1 tuần (Điều 38 khoản 3).",z-ai/glm-5.3-flash,
+dev-m011,manual,multi,False,qc3626.d18.k5 qc3626.d38.k3,qc3626.d38.k3 qc3626.d18.k5 qc3626.d16 qc3626.d21.k3 qc3626.d18.k1 qc3626.d17.k1 qc3626.d50.k3 qc3626.d44 qc3626.d38.k6 qc3626.d18.k4,1.0,1.0,1.0,"**Thời khóa biểu:** Chậm nhất 01 tháng trước khi học kỳ mới bắt đầu, đơn vị đào tạo thông báo thời khóa biểu của các lớp học phần dự kiến giảng dạy (Điều 18 khoản 5 điểm a).
+
+**Lịch thi:**
+- Kỳ thi chính: thông báo trước ít nhất 1 tháng (Điều 38 khoản 3).
+- Kỳ thi phụ: thông báo trước ít nhất 1 tuần (Điều 38 khoản 3).",qc3626.d18.k5 qc3626.d38.k3,,,1.0,1.0,end_turn,False,1756,309,1.87,False,1,medium,claude-haiku-5-5,2026-10-27T15:05:27+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính: thời khóa biểu chậm nhất 01 tháng trước học kỳ mới (Điều 18 khoản 5), lịch thi chính trước ít nhất 1 tháng và lịch thi phụ trước ít nhất 1 tuần (Điều 38 khoản 3).",z-ai/glm-5.3-flash,
+dev-m011,manual,multi,False,qc3626.d18.k5 qc3626.d38.k3,qc3626.d38.k3 qc3626.d18.k5 qc3626.d16 qc3626.d21.k3 qc3626.d18.k1 qc3626.d17.k1 qc3626.d50.k3 qc3626.d44 qc3626.d38.k6 qc3626.d18.k4,1.0,1.0,1.0,"**Thời khóa biểu:** Chậm nhất 01 tháng trước khi học kỳ mới bắt đầu, đơn vị đào tạo thông báo thời khóa biểu của các lớp học phần dự kiến giảng dạy (Điều 18 khoản 5 điểm a).
+
+**Lịch thi:**
+- Kỳ thi chính: thông báo trước ít nhất 1 tháng (Điều 38 khoản 3).
+- Kỳ thi phụ: thông báo trước ít nhất 1 tuần (Điều 38 khoản 3).",qc3626.d18.k5 qc3626.d38.k3,,,1.0,1.0,end_turn,False,1756,392,2.343,False,2,medium,claude-haiku-5-5,2026-10-27T15:05:29+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính: thời khóa biểu chậm nhất 01 tháng trước học kỳ mới (Điều 18 khoản 5), lịch thi chính trước ít nhất 1 tháng và lịch thi phụ trước ít nhất 1 tuần (Điều 38 khoản 3).",z-ai/glm-5.3-flash,
+dev-m012,manual,multi,False,qc3626.d21.k3 qc3626.d23.k2,qc3626.d23.k2 qc3626.d21.k3 qc3626.d23.k1 qc3626.d23.k3 qc3626.d21.k1 qc3626.d38.k1 qc3626.d16 qc3626.d41.k5 qc3626.d28.k1 qc3626.d44.k2,1.0,1.0,1.0,"**Thêm môn/đổi lớp:** Trong **2 tuần đầu** của học kỳ chính hoặc **1 tuần đầu** của học kỳ phụ (Điều 21 khoản 3 điểm c).
+
+**Bỏ bớt môn để được hoàn học phí:** Cũng là **2 tuần** đầu học kỳ chính hoặc **1 tuần** đầu học kỳ phụ. Trong thời hạn này, học phần được rút bớt và sinh viên được trả lại học phí (Điều 23 khoản 2).
+
+Hai thời hạn này giống nhau. Sau thời hạn, học phần vẫn giữ nguyên trong phiếu đăng ký. Nếu không học, sinh viên sẽ nhận điểm F và không được hoàn học phí (Điều 23 khoản 2).
+
+Ngoài ra, khi rút bớt học phần sau khi đã có danh sách lớp chính thức, sinh viên phải viết đơn gửi Phòng Đào tạo, được thủ trưởng đơn vị đào tạo chấp nhận, và không vi phạm quy định về khối lượng đăng ký tại Điều 21 khoản 1 (Điều 23 khoản 3).",qc3626.d21.k3 qc3626.d23.k2 qc3626.d21.k1 qc3626.d23.k3,,,1.0,0.5,end_turn,False,2128,943,5.929,False,0,medium,claude-haiku-5-5,2026-10-27T15:05:32+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: thời hạn thêm môn/đổi lớp (2 tuần đầu kỳ chính, 1 tuần đầu kỳ phụ), thời hạn rút bớt môn được hoàn học phí (giống nhau) và hệ quả quá hạn (giữ học phần, nhận điểm F, không hoàn học phí), kèm căn cứ Điều 21 khoản 3 và Điều 23 khoản 2.",z-ai/glm-5.3-flash,
+dev-m012,manual,multi,False,qc3626.d21.k3 qc3626.d23.k2,qc3626.d23.k2 qc3626.d21.k3 qc3626.d23.k1 qc3626.d23.k3 qc3626.d21.k1 qc3626.d38.k1 qc3626.d16 qc3626.d41.k5 qc3626.d28.k1 qc3626.d44.k2,1.0,1.0,1.0,"Có, hai mốc này giống nhau:
+
+- **Thêm môn hoặc đổi lớp:** Trong 2 tuần đầu học kỳ chính hoặc 1 tuần đầu học kỳ phụ (Điều 21 khoản 3 điểm c).
+- **Bỏ bớt môn và được hoàn học phí:** Cũng trong 2 tuần đầu học kỳ chính hoặc 1 tuần đầu học kỳ phụ (Điều 23 khoản 2).
+
+Nếu rút sau hạn này, học phần vẫn giữ trong phiếu đăng ký. Nếu không học, sinh viên nhận điểm F và không được hoàn học phí (Điều 23 khoản 2).
+
+Việc rút bớt môn còn phải đáp ứng các điều kiện: sinh viên tự viết đơn gửi Phòng Đào tạo, được thủ trưởng đơn vị đào tạo chấp nhận, và không vi phạm Điều 21 khoản 1 (Điều 23 khoản 3).",qc3626.d21.k3 qc3626.d23.k2 qc3626.d21.k1 qc3626.d23.k3,,,1.0,0.5,end_turn,False,2128,867,5.454,False,1,medium,claude-haiku-5-5,2026-10-27T15:05:38+07:00,,dung,"Câu trả lời nêu đúng kết luận và đủ các ý chính của đáp án mẫu: cả hai mốc đều là 2 tuần đầu học kỳ chính/1 tuần đầu học kỳ phụ, có căn cứ Điều 21 khoản 3 và Điều 23 khoản 2, kèm hậu quả quá hạn (giữ học phần, điểm F, không hoàn học phí).",z-ai/glm-5.3-flash,
+dev-m012,manual,multi,False,qc3626.d21.k3 qc3626.d23.k2,qc3626.d23.k2 qc3626.d21.k3 qc3626.d23.k1 qc3626.d23.k3 qc3626.d21.k1 qc3626.d38.k1 qc3626.d16 qc3626.d41.k5 qc3626.d28.k1 qc3626.d44.k2,1.0,1.0,1.0,"Có, hai thời hạn này giống nhau:
+
+- **Thêm học phần hoặc đổi lớp:** Trong 2 tuần đầu của học kỳ chính hoặc 1 tuần đầu của học kỳ phụ (Điều 21 khoản 3 điểm c).
+- **Rút bớt học phần được hoàn học phí:** Cũng trong 2 tuần đầu học kỳ chính hoặc 1 tuần đầu học kỳ phụ (Điều 23 khoản 2).
+
+Sau thời hạn này, học phần vẫn giữ nguyên trong phiếu đăng ký. Nếu không học, sinh viên sẽ nhận điểm F và không được hoàn học phí (Điều 23 khoản 2).
+
+Việc rút bớt còn phải đáp ứng điều kiện tại Điều 23 khoản 3: phải có đơn gửi Phòng Đào tạo, được thủ trưởng đơn vị đào tạo chấp nhận, và không vi phạm quy định về khối lượng đăng ký tại Điều 21 khoản 1.",qc3626.d21.k3 qc3626.d23.k2 qc3626.d23.k3 qc3626.d21.k1,,,1.0,0.5,end_turn,False,2128,745,3.829,False,2,medium,claude-haiku-5-5,2026-10-27T15:05:43+07:00,,dung,"Câu trả lời kết luận đúng hai thời hạn giống nhau (2 tuần đầu kỳ chính, 1 tuần đầu kỳ phụ), nêu đủ căn cứ Điều 21 khoản 3 và Điều 23 khoản 2 cùng hệ quả quá hạn nhận F, không hoàn học phí; phần bổ sung về Điều 23 khoản 3 không mâu thuẫn với quy chế được cung cấp.",z-ai/glm-5.3-flash,
+dev-m013,manual,multi,False,qc3626.d36.k3 qc3626.d20.k1,qc3626.d36.k3 qc3626.d44.k2 qc3626.d20.k1 qc3626.d23.k2 qc3626.d47.k10 qc3626.d21.k3 qc3626.d18.k5 qc3626.d23.k3 qc3626.d21.k4 qc3626.d50.k1,1.0,1.0,1.0,"**1. Nộp đơn trước lúc nào?**
+Chậm nhất **2 tuần trước khi hết thời hạn nghỉ học tạm thời**, sinh viên phải có đơn đề nghị gửi thủ trưởng đơn vị đào tạo (Điều 36 khoản 3).
+
+Lưu ý: nếu sau khi hết hạn nghỉ học tạm thời mà sinh viên không có đơn xin học trở lại thì có thể bị buộc thôi học (Điều 44 khoản 2 điểm đ).
+
+Nếu nghỉ vì lý do cá nhân khác (Điều 36 khoản 3 điểm d), sinh viên phải đã học tối thiểu 01 học kỳ, không thuộc diện bị xem xét buộc thôi học hoặc kỷ luật, và đạt điểm trung bình chung tích lũy tối thiểu 2,0.
+
+**2. Có phải đổi mã sinh viên không?**
+Không. Sinh viên được giữ nguyên mã sinh viên đã được cấp (Điều 20 khoản 1 điểm c).
+
+**3. Có học lại với lớp cũ không?**
+Không nhất thiết. Khi quay lại, sinh viên được xếp vào lớp khóa học phù hợp với khối lượng kiến thức đã tích lũy (Điều 20 khoản 1 điểm c), chứ quy chế không quy định phải trở về đúng lớp cũ.
+
+Nếu chương trình đào tạo của lớp mới khác với chương trình sinh viên học trước khi nghỉ, thủ trưởng đơn vị đào tạo sẽ quyết định cho bảo lưu hoặc yêu cầu học bổ sung các học phần tương đương (Điều 20 khoản 1 điểm c).",qc3626.d36.k3 qc3626.d44.k2 qc3626.d20.k1,,,1.0,0.6667,end_turn,False,2729,1123,5.622,False,0,medium,claude-haiku-5-5,2026-10-27T15:05:47+07:00,,dung,"Câu trả lời nêu đúng ngưỡng 2 tuần trước khi hết hạn nghỉ (Điều 36 khoản 3), đúng việc giữ nguyên mã sinh viên và được bố trí vào lớp phù hợp với khối lượng kiến thức tích lũy chứ không nhất thiết lớp cũ (Điều 20 khoản 1 điểm c).",z-ai/glm-5.3-flash,
+dev-m013,manual,multi,False,qc3626.d36.k3 qc3626.d20.k1,qc3626.d36.k3 qc3626.d44.k2 qc3626.d20.k1 qc3626.d23.k2 qc3626.d47.k10 qc3626.d21.k3 qc3626.d18.k5 qc3626.d23.k3 qc3626.d21.k4 qc3626.d50.k1,1.0,1.0,1.0,"**1. Thời hạn nộp đơn:** Sinh viên muốn học tiếp phải có đơn đề nghị gửi thủ trưởng đơn vị đào tạo. Đơn phải được giải quyết **chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời** (Điều 36 khoản 3). Quy chế không quy định cụ thể thời điểm nộp đơn, nên bạn nên nộp sớm để đơn kịp được giải quyết trong mốc này.
+
+**2. Mã sinh viên:** Không phải đổi. Khi quay lại, sinh viên **giữ nguyên mã sinh viên** đã được cấp (Điều 20 khoản 1 điểm c).
+
+**3. Lớp học:** Sinh viên được bố trí vào lớp khóa học phù hợp với khối lượng kiến thức đã tích lũy, không nhất thiết là lớp cũ (Điều 20 khoản 1 điểm c). Nếu lớp mới có học phần khác biệt so với chương trình cũ, thủ trưởng đơn vị đào tạo quyết định cho bảo lưu kết quả hoặc yêu cầu học bổ sung các học phần tương đương (Điều 20 khoản 1 điểm c).
+
+**4. Lưu ý:** Nếu hết hạn nghỉ học tạm thời mà sinh viên không có đơn xin học trở lại, sinh viên sẽ bị buộc thôi học (Điều 44 khoản 2 điểm đ).",qc3626.d36.k3 qc3626.d20.k1 qc3626.d44.k2,,,1.0,0.6667,end_turn,False,2729,1194,5.926,False,1,medium,claude-haiku-5-5,2026-10-27T15:05:53+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: nộp đơn chậm nhất 2 tuần trước khi hết hạn nghỉ (Điều 36 khoản 3), giữ nguyên mã sinh viên và được bố trí vào lớp phù hợp với khối lượng kiến thức đã tích lũy (Điều 20 khoản 1); phần lưu ý bổ sung không mâu thuẫn với quy chế được cung cấp.",z-ai/glm-5.3-flash,
+dev-m013,manual,multi,False,qc3626.d36.k3 qc3626.d20.k1,qc3626.d36.k3 qc3626.d44.k2 qc3626.d20.k1 qc3626.d23.k2 qc3626.d47.k10 qc3626.d21.k3 qc3626.d18.k5 qc3626.d23.k3 qc3626.d21.k4 qc3626.d50.k1,1.0,1.0,1.0,"**1. Nộp đơn trước khi nào?**
+Sinh viên muốn học tiếp phải có đơn đề nghị gửi thủ trưởng đơn vị đào tạo, chậm nhất **2 tuần trước khi hết thời hạn nghỉ học tạm thời** (Điều 36 khoản 3). Nếu không có đơn xin học trở lại sau khi hết hạn nghỉ, sinh viên có thể bị buộc thôi học (Điều 44 khoản 2 điểm đ).
+
+**2. Có phải đổi mã sinh viên không?**
+Không. Khi trở lại học, sinh viên **giữ nguyên mã sinh viên** đã được cấp (Điều 20 khoản 1 điểm c).
+
+**3. Có phải học lại với lớp cũ không?**
+Không nhất thiết. Sinh viên được bố trí vào **lớp khóa học phù hợp với khối lượng kiến thức đã tích lũy**, không nhất thiết là lớp cũ (Điều 20 khoản 1 điểm c).
+Nếu lớp mới có học phần khác với chương trình sinh viên đã học trước khi nghỉ, thủ trưởng đơn vị đào tạo sẽ quyết định cho **bảo lưu** hoặc **phải học bổ sung** các học phần tương đương (Điều 20 khoản 1 điểm c).
+
+Quy chế không quy định mẫu đơn hay thủ tục nộp cụ thể; các nội dung đó do đơn vị đào tạo quy định, em nên hỏi trực tiếp đơn vị quản lý sinh viên của mình.",qc3626.d36.k3 qc3626.d44.k2 qc3626.d20.k1,,,1.0,0.6667,end_turn,False,2729,968,4.874,False,2,medium,claude-haiku-5-5,2026-10-27T15:05:59+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: nộp đơn chậm nhất 2 tuần trước khi hết hạn nghỉ (Điều 36 khoản 3), giữ nguyên mã sinh viên và được bố trí vào lớp phù hợp với khối lượng kiến thức đã tích lũy chứ không nhất thiết lớp cũ (Điều 20 khoản 1).",z-ai/glm-5.3-flash,
+dev-m014,manual,multi,False,qc3626.d30.k1 qc3626.d31.k1,qc3626.d30.k1 qc3626.d32.k4 qc3626.d30.k2 qc3626.d31.k1 qc3626.d31 qc3626.d32.k1 qc3626.d39.k5 qc3626.d27.k2 qc3626.d32.k3 qc3626.d35.k3,1.0,1.0,1.0,"**1. Có thể tham gia NCKH bằng sinh hoạt học thuật và viết bài báo.** Theo Điều 30 khoản 1, sinh viên có thể:
+- Tham gia câu lạc bộ khoa học sinh viên;
+- Sinh hoạt chuyên đề khoa học;
+- Báo cáo khoa học tại hội nghị, hội thảo khoa học;
+- Công bố bài báo khoa học trên tạp chí chuyên ngành.
+
+**2. Cấp tổ chức hội nghị, đánh giá, khen thưởng công trình.** Theo Điều 31 khoản 1 điểm c, **đơn vị đào tạo** tổ chức hội nghị khoa học sinh viên, đánh giá, xếp loại và khen thưởng công trình nghiên cứu của sinh viên. Việc thành lập câu lạc bộ khoa học sinh viên và tổ chức sinh hoạt chuyên đề cũng thuộc trách nhiệm của đơn vị đào tạo (Điều 31 khoản 1 điểm d).
+
+Quy chế không nêu cụ thể tên đơn vị đào tạo nào đảm nhiệm trong trường hợp của bạn.",qc3626.d30.k1 qc3626.d31.k1,,,1.0,1.0,end_turn,False,1956,699,4.36,False,0,medium,claude-haiku-5-5,2026-10-27T15:06:04+07:00,,dung,"Câu trả lời khẳng định đúng việc tham gia NCKH qua sinh hoạt học thuật và công bố bài báo theo Điều 30 khoản 1, và đúng chỉ rõ đơn vị đào tạo là cấp tổ chức hội nghị, đánh giá, xếp loại, khen thưởng công trình theo Điều 31 khoản 1 điểm c.",z-ai/glm-5.3-flash,
+dev-m014,manual,multi,False,qc3626.d30.k1 qc3626.d31.k1,qc3626.d30.k1 qc3626.d32.k4 qc3626.d30.k2 qc3626.d31.k1 qc3626.d31 qc3626.d32.k1 qc3626.d39.k5 qc3626.d27.k2 qc3626.d32.k3 qc3626.d35.k3,1.0,1.0,1.0,"**1. Tham gia NCKH bằng sinh hoạt học thuật và viết bài báo:** Có. Theo Điều 30 khoản 1, sinh viên có thể tham gia câu lạc bộ khoa học sinh viên, sinh hoạt chuyên đề khoa học, báo cáo khoa học tại hội nghị, hội thảo, và công bố bài báo khoa học trên tạp chí chuyên ngành.
+
+**2. Cấp tổ chức hội nghị, đánh giá, khen thưởng công trình:** Đơn vị đào tạo. Theo Điều 31 khoản 1 điểm c, đơn vị đào tạo tổ chức hội nghị khoa học sinh viên, đánh giá, xếp loại và khen thưởng công trình nghiên cứu của sinh viên. Đơn vị đào tạo cũng thành lập câu lạc bộ khoa học sinh viên và tổ chức sinh hoạt chuyên đề (Điều 31 khoản 1 điểm d).",qc3626.d30.k1 qc3626.d31.k1,,,1.0,1.0,end_turn,False,1956,877,5.097,False,1,medium,claude-haiku-5-5,2026-10-27T15:06:09+07:00,,dung,"Câu trả lời khẳng định đúng sinh viên có thể tham gia sinh hoạt học thuật và công bố bài báo theo Điều 30 khoản 1, đồng thời nêu đúng đơn vị đào tạo là cấp tổ chức hội nghị, đánh giá, xếp loại, khen thưởng theo Điều 31 khoản 1 điểm c, đủ các ý chính của đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m014,manual,multi,False,qc3626.d30.k1 qc3626.d31.k1,qc3626.d30.k1 qc3626.d32.k4 qc3626.d30.k2 qc3626.d31.k1 qc3626.d31 qc3626.d32.k1 qc3626.d39.k5 qc3626.d27.k2 qc3626.d32.k3 qc3626.d35.k3,1.0,1.0,1.0,"**1. Tham gia NCKH bằng sinh hoạt học thuật và viết bài báo:** Có. Sinh viên có thể tham gia câu lạc bộ khoa học sinh viên, sinh hoạt chuyên đề khoa học, báo cáo khoa học tại hội nghị, hội thảo, và công bố bài báo khoa học trên tạp chí chuyên ngành (Điều 30 khoản 1).
+
+**2. Cấp tổ chức hội nghị, đánh giá, khen thưởng:** Đơn vị đào tạo là cấp thực hiện. Theo Điều 31 khoản 1 điểm c, đơn vị đào tạo tổ chức hội nghị khoa học sinh viên, đánh giá, xếp loại và khen thưởng công trình nghiên cứu của sinh viên. Đơn vị đào tạo cũng là nơi thành lập câu lạc bộ khoa học sinh viên (Điều 31 khoản 1 điểm d).
+
+**Lưu ý:** Nếu công trình được tính điểm thưởng hoặc thay thế học phần tự chọn, Hội đồng cấp khoa là bên đánh giá cho điểm và quyết định thay học phần (Điều 32 khoản 4 điểm a).",qc3626.d30.k1 qc3626.d31.k1 qc3626.d32.k4,,,1.0,0.6667,end_turn,False,1956,1017,5.091,False,2,medium,claude-haiku-5-5,2026-10-27T15:06:14+07:00,,dung,"Câu trả lời khẳng định đúng sinh viên có thể tham gia các hoạt động NCKH và công bố bài báo (Điều 30 khoản 1), và đúng đơn vị đào tạo là cấp tổ chức hội nghị, đánh giá, xếp loại, khen thưởng công trình (Điều 31 khoản 1 điểm c), đầy đủ căn cứ và ý chính của đáp án mẫu; phần lưu ý bổ sung không mâu thuẫn với quy chế được cung cấp.",z-ai/glm-5.3-flash,
 dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,qc3626.d31.k1 qc3626.d35 qc3626.d30.k2 qc3626.d34.k3 qc3626.d27.k2 qc3626.d31 qc3626.d33.k1 qc3626.d30.k1 qc3626.d38.k1 qc3626.d39.k5,1.0,1.0,0.5,"**Nghĩa vụ của sinh viên chương trình tài năng, chất lượng cao** (Điều 35):
 
 - **Tham gia nghiên cứu khoa học:** Tích cực tham gia nghiên cứu khoa học dưới sự hướng dẫn của giảng viên hướng dẫn và tham gia các nhóm nghiên cứu.
 - **Báo cáo tình hình:** Thường xuyên phản ánh tình hình học tập, nghiên cứu, sinh hoạt và rèn luyện cho đơn vị đào tạo thông qua giảng viên hướng dẫn học tập, nghiên cứu khoa học.
 - **Hoàn thành chương trình:** Hoàn thành chương trình đào tạo đúng thời hạn chuẩn, không tính thời gian kéo dài.
 
-**Thời điểm được bố trí giảng viên hướng dẫn NCKH:** Chậm nhất từ học kỳ thứ tư, mỗi sinh viên được một giảng viên hướng dẫn nghiên cứu khoa học (Điều 27 khoản 2 điểm g).",qc3626.d35 qc3626.d27.k2,,,1.0,1.0,end_turn,False,3642,903,3.852,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:23+07:00,dung,"Câu trả lời nêu đủ ba nghĩa vụ (tích cực NCKH/tham gia nhóm nghiên cứu, phản ánh tình hình qua giảng viên hướng dẫn, hoàn thành chương trình đúng thời hạn chuẩn không tính thời gian kéo dài) và ngưỡng thời gian chính xác (chậm nhất từ học kỳ thứ tư, mỗi sinh viên một giảng viên hướng dẫn), có dẫn chiếu Điều 35 và Điều 27 khoản 2 đúng với quy chế.",z-ai/glm-5.3-flash
+**Thời điểm được bố trí giảng viên hướng dẫn NCKH:** Chậm nhất từ học kỳ thứ tư, mỗi sinh viên được một giảng viên hướng dẫn nghiên cứu khoa học (Điều 27 khoản 2 điểm g).",qc3626.d35 qc3626.d27.k2,,,1.0,1.0,end_turn,False,3642,903,3.852,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:23+07:00,,dung,"Câu trả lời nêu đủ ba nghĩa vụ (tích cực NCKH/tham gia nhóm nghiên cứu, phản ánh tình hình qua giảng viên hướng dẫn, hoàn thành chương trình đúng thời hạn chuẩn không tính thời gian kéo dài) và ngưỡng thời gian chính xác (chậm nhất từ học kỳ thứ tư, mỗi sinh viên một giảng viên hướng dẫn), có dẫn chiếu Điều 35 và Điều 27 khoản 2 đúng với quy chế.",z-ai/glm-5.3-flash,
+dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,qc3626.d31.k1 qc3626.d35 qc3626.d30.k2 qc3626.d34.k3 qc3626.d27.k2 qc3626.d31 qc3626.d33.k1 qc3626.d30.k1 qc3626.d38.k1 qc3626.d39.k5,1.0,1.0,0.5,"**Nghĩa vụ của sinh viên chương trình tài năng, chất lượng cao** (Điều 35), ngoài các nghĩa vụ chung:
+
+- **Tham gia nghiên cứu khoa học:** Tích cực tham gia NCKH dưới sự hướng dẫn của giảng viên hướng dẫn và tham gia các nhóm nghiên cứu.
+- **Báo cáo tình hình:** Thường xuyên phản ánh tình hình học tập, nghiên cứu, sinh hoạt và rèn luyện cho đơn vị đào tạo thông qua giảng viên hướng dẫn học tập, nghiên cứu khoa học.
+- **Hoàn thành chương trình:** Hoàn thành chương trình đào tạo đúng thời hạn chuẩn (không tính thời gian kéo dài).
+- **Bồi hoàn kinh phí:** Nếu không tiếp tục theo học chương trình đã đăng ký thì phải bồi hoàn kinh phí đào tạo đã được cấp.
+
+**Thời điểm được bố trí giảng viên hướng dẫn NCKH:** Chậm nhất từ học kỳ thứ tư, mỗi sinh viên được một giảng viên hướng dẫn nghiên cứu khoa học (Điều 27 khoản 2 điểm g).",qc3626.d35 qc3626.d27.k2,,,1.0,1.0,end_turn,False,3642,857,4.412,False,1,medium,claude-haiku-5-5,2026-10-27T15:06:19+07:00,,dung,"Câu trả lời nêu đủ các nghĩa vụ chính (tham gia NCKH dưới sự hướng dẫn và tham gia nhóm nghiên cứu, phản ánh tình hình qua giảng viên hướng dẫn, hoàn thành chương trình đúng thời hạn chuẩn không tính thời gian kéo dài) và đúng ngưỡng chậm nhất từ học kỳ thứ tư mỗi sinh viên được một giảng viên hướng dẫn NCKH, với căn cứ Điều 35 và Điều 27 khoản 2 khớp với quy chế.",z-ai/glm-5.3-flash,
+dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,qc3626.d31.k1 qc3626.d35 qc3626.d30.k2 qc3626.d34.k3 qc3626.d27.k2 qc3626.d31 qc3626.d33.k1 qc3626.d30.k1 qc3626.d38.k1 qc3626.d39.k5,1.0,1.0,0.5,"**Nghĩa vụ của sinh viên chương trình tài năng, chất lượng cao (CLC):** Ngoài nghĩa vụ chung của sinh viên chương trình chuẩn, sinh viên CLC phải (Điều 35):
+
+- **Tham gia nghiên cứu khoa học:** tích cực tham gia NCKH dưới sự hướng dẫn của giảng viên và tham gia các nhóm nghiên cứu (Điều 35). Hình thức có thể gồm khảo sát thực địa, thực tập, thực nghiệm, khóa luận, đồ án, đề tài nghiên cứu (Điều 30 khoản 2).
+- **Báo cáo tình hình:** thường xuyên phản ánh tình hình học tập, nghiên cứu, sinh hoạt và rèn luyện cho đơn vị đào tạo thông qua giảng viên hướng dẫn học tập, nghiên cứu khoa học (Điều 35).
+- **Hoàn thành chương trình:** đúng thời hạn chuẩn, không tính thời gian kéo dài (Điều 35).
+
+**Thời điểm được bố trí giảng viên hướng dẫn NCKH:** chậm nhất từ học kỳ thứ tư, mỗi sinh viên CLC được một giảng viên hướng dẫn nghiên cứu khoa học (Điều 27 khoản 2 điểm g).",qc3626.d35 qc3626.d30.k2 qc3626.d27.k2,,,1.0,0.6667,end_turn,False,3642,869,4.51,False,2,medium,claude-haiku-5-5,2026-10-27T15:06:24+07:00,,dung,"Câu trả lời nêu đủ các ý chính của đáp án mẫu: tham gia NCKH dưới sự hướng dẫn của giảng viên và nhóm nghiên cứu, thường xuyên phản ánh tình hình học tập/nghiên cứu/sinh hoạt/rèn luyện, hoàn thành chương trình đúng thời hạn chuẩn không tính thời gian kéo dài, và chậm nhất từ học kỳ thứ tư mỗi sinh viên được một giảng viên hướng dẫn NCKH, với căn cứ Điều 35 và Điều 27 khoản 2 đúng.",z-ai/glm-5.3-flash,
+dev-m016,manual,multi,False,qc3626.d47.k2 qc3626.d48.k2,qc3626.d47.k1 qc3626.d47.k2 qc3626.d48.k2 qc3626.d48.k3 qc3626.d26.k7 qc3626.d38.k6 qc3626.d38.k1 qc3626.d47.k9 qc3626.d39.k2 qc3626.d47.k4,1.0,1.0,0.5,"Ở Trường Đại học Công nghệ (UET), một trường đại học thành viên của ĐHQGHN:
+
+- **Ai quyết định công nhận tốt nghiệp:** Hiệu trưởng ra quyết định công nhận tốt nghiệp và cấp bằng, dựa trên đề nghị của Hội đồng xét tốt nghiệp (Điều 47 khoản 2). Hội đồng do thủ trưởng hoặc cấp phó của thủ trưởng đơn vị đào tạo làm Chủ tịch, được thành lập theo quyết định của thủ trưởng đơn vị đào tạo (Điều 47 khoản 1).
+- **Ai ký bằng:** Hiệu trưởng ký và đóng dấu của trường vào bằng tốt nghiệp đại học, căn cứ vào quyết định công nhận tốt nghiệp (Điều 48 khoản 2).
+- **Thời hạn cấp bằng:** Trong thời hạn 03 tháng, tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo (Điều 47 khoản 1 và khoản 2).
+- **Đợt xét:** Hội đồng xét tốt nghiệp được thành lập định kỳ 4 lần mỗi năm (tháng 3, 6, 7, 9 và 12) (Điều 47 khoản 1).
+
+Quy chế không quy định chi tiết thành phần cụ thể của Hội đồng tại UET; việc này thuộc thẩm quyền của thủ trưởng đơn vị đào tạo.",qc3626.d47.k2 qc3626.d47.k1 qc3626.d48.k2,,,1.0,0.6667,end_turn,False,1984,1051,4.244,False,0,medium,claude-haiku-5-5,2026-10-27T15:06:28+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: Hiệu trưởng quyết định công nhận tốt nghiệp trên cơ sở đề nghị của Hội đồng xét tốt nghiệp, Hiệu trưởng ký và đóng dấu vào bằng, thời hạn 3 tháng tính từ khi sinh viên đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với đơn vị đào tạo, với căn cứ Điều 47 khoản 2 và Điều 48 khoản 2; các chi tiết bổ sung về Điều 47 khoản 1 nằm ngoài phạm vi đáp án mẫu nhưng không mâu thuẫn với nguyên văn quy chế được cung cấp.",z-ai/glm-5.3-flash,
+dev-m016,manual,multi,False,qc3626.d47.k2 qc3626.d48.k2,qc3626.d47.k1 qc3626.d47.k2 qc3626.d48.k2 qc3626.d48.k3 qc3626.d26.k7 qc3626.d38.k6 qc3626.d38.k1 qc3626.d47.k9 qc3626.d39.k2 qc3626.d47.k4,1.0,1.0,0.5,"**Ai quyết định công nhận tốt nghiệp?**
+Hiệu trưởng trường đại học thành viên ra quyết định công nhận tốt nghiệp và cấp bằng, dựa trên đề nghị của Hội đồng xét tốt nghiệp. Hội đồng do thủ trưởng hoặc cấp phó của thủ trưởng đơn vị đào tạo làm Chủ tịch, do đại diện lãnh đạo Phòng Đào tạo làm ủy viên thư ký (Điều 47 khoản 1 và khoản 2). Với UET, là trường đại học thành viên, thẩm quyền này thuộc Hiệu trưởng Trường.
+
+**Ai ký bằng?**
+Hiệu trưởng trường đại học thành viên ký và đóng dấu của trường vào bằng tốt nghiệp, căn cứ vào quyết định công nhận tốt nghiệp (Điều 48 khoản 2).
+
+**Thời hạn cấp bằng?**
+Trong thời hạn 03 tháng, tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với đơn vị đào tạo (Điều 47 khoản 1 và khoản 2).
+
+Hội đồng xét tốt nghiệp được thành lập định kỳ, theo quy định là các tháng 3, 6, 7, 9 và 12 (Điều 47 khoản 1).
+
+Quy chế không quy định chi tiết thủ tục nội bộ của UET (như hồ sơ, lịch xét cụ thể hay phòng ban thực hiện), nên em cần tham khảo thông báo của Trường hoặc Phòng Đào tạo.",qc3626.d47.k1 qc3626.d48.k2,,,0.5,0.5,end_turn,False,1984,1182,4.965,False,1,medium,claude-haiku-5-5,2026-10-27T15:06:33+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: Hiệu trưởng trường thành viên quyết định công nhận tốt nghiệp/cấp bằng trên cơ sở đề nghị của Hội đồng xét tốt nghiệp, thời hạn 3 tháng tính từ khi đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với đơn vị đào tạo, Hiệu trưởng ký và đóng dấu của trường (Điều 47 khoản 2, Điều 48 khoản 2); các chi tiết bổ sung về Hội đồng không mâu thuẫn với quy chế được cung cấp.",z-ai/glm-5.3-flash,
+dev-m016,manual,multi,False,qc3626.d47.k2 qc3626.d48.k2,qc3626.d47.k1 qc3626.d47.k2 qc3626.d48.k2 qc3626.d48.k3 qc3626.d26.k7 qc3626.d38.k6 qc3626.d38.k1 qc3626.d47.k9 qc3626.d39.k2 qc3626.d47.k4,1.0,1.0,0.5,"**Ai quyết định công nhận tốt nghiệp:** Hiệu trưởng Trường Đại học Công nghệ, với tư cách là hiệu trưởng trường đại học thành viên, ra quyết định công nhận tốt nghiệp và cấp bằng cho sinh viên đào tạo tại trường, dựa trên đề nghị của Hội đồng xét tốt nghiệp (Điều 47 khoản 2). Hội đồng này do thủ trưởng hoặc cấp phó của thủ trưởng đơn vị đào tạo làm Chủ tịch, được lập định kỳ 4 lần mỗi năm (tháng 3, 6, 7, 9 và 12) (Điều 47 khoản 1).
+
+**Ai ký bằng:** Hiệu trưởng ký và đóng dấu của trường vào bằng tốt nghiệp đại học, căn cứ vào quyết định công nhận tốt nghiệp (Điều 48 khoản 2).
+
+**Thời hạn cấp bằng:** Trong thời hạn 03 tháng, tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo (Điều 47 khoản 1, khoản 2).",qc3626.d47.k2 qc3626.d47.k1 qc3626.d48.k2,,,1.0,0.6667,end_turn,False,1984,899,3.89,False,2,medium,claude-haiku-5-5,2026-10-27T15:06:38+07:00,,dung,"Câu trả lời nêu đúng các ý chính của đáp án mẫu: Hiệu trưởng trường đại học thành viên (UET) quyết định công nhận tốt nghiệp và cấp bằng trên cơ sở đề nghị của Hội đồng xét tốt nghiệp, thời hạn 3 tháng tính từ khi sinh viên đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với đơn vị đào tạo, và Hiệu trưởng ký, đóng dấu của trường vào bằng (Điều 47 khoản 2, Điều 48 khoản 2).",z-ai/glm-5.3-flash,
+dev-m017,manual,conditional,False,qc3626.d21.k1,qc3626.d21.k1 qc3626.d17.k2 qc3626.d23.k1 qc3626.d14.k2 qc3626.d22.k4 qc3626.d21.k5 qc3626.d27.k3 qc3626.d27.k4 qc3626.d17.k1 qc3626.d44.k1,1.0,1.0,1.0,"**Có, vượt mức cho phép.**
+
+- Khối lượng tối đa mỗi học kỳ chính = 3/2 × 20 = **30 tín chỉ** (Điều 21 khoản 1). Vì đây không phải học kỳ cuối khóa, quy định này áp dụng với em.
+- Em đăng ký 31 tín chỉ, vượt 1 tín chỉ so với mức tối đa.
+
+Căn cứ: Điều 21 khoản 1.",qc3626.d21.k1,,,1.0,1.0,end_turn,False,3666,405,2.489,False,0,medium,claude-haiku-5-5,2026-10-27T15:06:42+07:00,,dung,"Câu trả lời kết luận đúng, tính đúng ngưỡng tối đa 3/2 × 20 = 30 tín chỉ, chỉ ra 31 tín chỉ vượt mức và nêu đúng căn cứ Điều 21 khoản 1.",z-ai/glm-5.3-flash,
+dev-m017,manual,conditional,False,qc3626.d21.k1,qc3626.d21.k1 qc3626.d17.k2 qc3626.d23.k1 qc3626.d14.k2 qc3626.d22.k4 qc3626.d21.k5 qc3626.d27.k3 qc3626.d27.k4 qc3626.d17.k1 qc3626.d44.k1,1.0,1.0,1.0,"**Có, vượt mức cho phép.**
+
+- Kế hoạch chuẩn trung bình 20 tín chỉ/kỳ, nên khối lượng tối đa là 3/2 × 20 = **30 tín chỉ** (học kỳ chính, không phải học kỳ cuối khóa).
+- Em đăng ký 31 tín chỉ, vượt 1 tín chỉ so với mức tối đa.
+
+Căn cứ: Điều 21 khoản 1.
+
+Quy chế không nêu trường hợp ngoại lệ cho việc vượt khối lượng tối đa. Em nên đăng ký tối đa 30 tín chỉ.",qc3626.d21.k1,,,1.0,1.0,end_turn,False,3666,454,2.777,False,1,medium,claude-haiku-5-5,2026-10-27T15:06:44+07:00,,dung,"Câu trả lời khẳng định đúng là vượt mức, nêu đủ căn cứ (3/2 khối lượng trung bình theo Điều 21 khoản 1) và ngưỡng chính xác (30 tín chỉ) so với 31 tín chỉ đăng ký.",z-ai/glm-5.3-flash,
+dev-m017,manual,conditional,False,qc3626.d21.k1,qc3626.d21.k1 qc3626.d17.k2 qc3626.d23.k1 qc3626.d14.k2 qc3626.d22.k4 qc3626.d21.k5 qc3626.d27.k3 qc3626.d27.k4 qc3626.d17.k1 qc3626.d44.k1,1.0,1.0,1.0,"**Có, 31 tín chỉ vượt mức cho phép.**
+
+- Khối lượng tối đa trong một học kỳ chính là 3/2 × 20 = **30 tín chỉ** (Điều 21 khoản 1). Vì đây không phải học kỳ cuối khóa và các học phần em đăng ký đều không thuộc nhóm được loại trừ, toàn bộ 31 tín chỉ được tính vào giới hạn này.
+- Em chỉ có thể đăng ký tối đa **30 tín chỉ**.",qc3626.d21.k1,,,1.0,1.0,end_turn,False,3666,362,2.929,False,2,medium,claude-haiku-5-5,2026-10-27T15:06:47+07:00,,dung,"Câu trả lời kết luận đúng (31 tín chỉ vượt mức), nêu đủ căn cứ Điều 21 khoản 1 và ngưỡng tối đa 3/2 × 20 = 30 tín chỉ như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m018,manual,conditional,False,qc3626.d22.k4,qc3626.d22.k4 qc3626.d22.k3 qc3626.d46.k1 qc3626.d14.k2 qc3626.d22 qc3626.d17.k2 qc3626.d21.k1 qc3626.d25.k4 qc3626.d27.k3 qc3626.d22.k2,1.0,1.0,1.0,"**Có, vượt trần.** Theo Điều 22 khoản 4, số tín chỉ tích lũy tại cơ sở đào tạo ngoài Đại học Quốc gia Hà Nội được công nhận trong trao đổi sinh viên không vượt quá 25% tổng khối lượng chương trình đào tạo.
+
+- Trần: 25% × 120 = **30 tín chỉ**
+- Em đề nghị: **40 tín chỉ**, vượt **10 tín chỉ**
+
+Em chỉ có thể được công nhận tối đa 30 tín chỉ từ đợt trao đổi này.",qc3626.d22.k4,,,1.0,1.0,end_turn,False,3552,553,2.842,False,0,medium,claude-haiku-5-5,2026-10-27T15:06:50+07:00,,dung,"Câu trả lời kết luận đúng (vượt trần), nêu đủ căn cứ Điều 22 khoản 4 (25% tổng khối lượng) và tính đúng ngưỡng 30 tín chỉ khi so với 40 tín chỉ đề nghị.",z-ai/glm-5.3-flash,
+dev-m018,manual,conditional,False,qc3626.d22.k4,qc3626.d22.k4 qc3626.d22.k3 qc3626.d46.k1 qc3626.d14.k2 qc3626.d22 qc3626.d17.k2 qc3626.d21.k1 qc3626.d25.k4 qc3626.d27.k3 qc3626.d22.k2,1.0,1.0,1.0,"**Có, vượt trần.** Theo Điều 22 khoản 4, số tín chỉ tích lũy tại cơ sở đào tạo ngoài ĐHQGHN được công nhận trong trao đổi sinh viên không vượt quá 25% tổng khối lượng chương trình đào tạo.
+
+Với chương trình 120 tín chỉ, trần là 25% × 120 = **30 tín chỉ**. Đề nghị 40 tín chỉ vượt 10 tín chỉ, nên em chỉ được công nhận tối đa 30 tín chỉ từ đợt trao đổi này.
+
+Giới hạn chung 50% khối lượng tối thiểu (tức 60 tín chỉ) tại Điều 22 khoản 3 không phải điều kiện ràng buộc trong trường hợp này, vì trần riêng cho trao đổi sinh viên thấp hơn.",qc3626.d22.k4 qc3626.d22.k3,,,1.0,0.5,end_turn,False,3552,585,3.106,False,1,medium,claude-haiku-5-5,2026-10-27T15:06:53+07:00,,dung,"Câu trả lời kết luận đúng (vượt trần), nêu đúng căn cứ Điều 22 khoản 4 với ngưỡng 25% và tính đúng trần 30 tín chỉ trên chương trình 120 tín chỉ, khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m018,manual,conditional,False,qc3626.d22.k4,qc3626.d22.k4 qc3626.d22.k3 qc3626.d46.k1 qc3626.d14.k2 qc3626.d22 qc3626.d17.k2 qc3626.d21.k1 qc3626.d25.k4 qc3626.d27.k3 qc3626.d22.k2,1.0,1.0,1.0,"**Có, vượt trần.** Với chương trình 120 tín chỉ, giới hạn công nhận tín chỉ tích lũy tại cơ sở đào tạo ngoài ĐHQGHN trong trao đổi sinh viên là 25% × 120 = **30 tín chỉ** (Điều 22 khoản 4). Yêu cầu 40 tín chỉ vượt 10 tín chỉ.
+
+Giới hạn 50% tại Điều 22 khoản 3 (tối đa 60 tín chỉ) là trần chung cho việc công nhận và chuyển đổi, nhưng với trao đổi sinh viên, khoản 4 áp dụng mức 25% nên mức 30 tín chỉ là giới hạn cần tuân thủ.",qc3626.d22.k4 qc3626.d22.k3,,,1.0,0.5,end_turn,False,3552,590,3.221,False,2,medium,claude-haiku-5-5,2026-10-27T15:06:56+07:00,,dung,"Câu trả lời kết luận đúng (40 tín chỉ vượt trần), nêu đủ căn cứ (25% tổng khối lượng, Điều 22 khoản 4) và ngưỡng (25% × 120 = 30 tín chỉ) như đáp án mẫu.",z-ai/glm-5.3-flash,
 dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,qc3626.d21.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1 qc3626.d42.k4 qc3626.d47.k7 qc3626.d41.k2 qc3626.d41.k5 qc3626.d44.k1,1.0,1.0,0.3333,"**Xếp học lực:** Yếu. Điểm trung bình chung học kỳ dưới 2,00 nhưng chưa thuộc diện bị buộc thôi học thì được xếp loại Yếu (Điều 45 khoản 2 điểm đ).
 
-**Khối lượng đăng ký tối đa:** 18 tín chỉ cho mỗi học kỳ chính (Điều 23 khoản 1 điểm c). Loại học lực là căn cứ xác định khối lượng được đăng ký trong học kỳ kế tiếp (Điều 45 khoản 1).",qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1,,,1.0,0.6667,end_turn,False,2397,481,2.639,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:27+07:00,dung,"Câu trả lời đúng khi nêu học lực Yếu vì TBC học kỳ dưới 2,00 nhưng chưa thuộc diện buộc thôi học (Điều 45 khoản 2 điểm đ) và được đăng ký tối đa 18 tín chỉ mỗi học kỳ chính (Điều 23 khoản 1 điểm c), đủ các ý chính của đáp án mẫu.",z-ai/glm-5.3-flash
+**Khối lượng đăng ký tối đa:** 18 tín chỉ cho mỗi học kỳ chính (Điều 23 khoản 1 điểm c). Loại học lực là căn cứ xác định khối lượng được đăng ký trong học kỳ kế tiếp (Điều 45 khoản 1).",qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1,,,1.0,0.6667,end_turn,False,2397,481,2.639,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:27+07:00,,dung,"Câu trả lời đúng khi nêu học lực Yếu vì TBC học kỳ dưới 2,00 nhưng chưa thuộc diện buộc thôi học (Điều 45 khoản 2 điểm đ) và được đăng ký tối đa 18 tín chỉ mỗi học kỳ chính (Điều 23 khoản 1 điểm c), đủ các ý chính của đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,qc3626.d21.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1 qc3626.d42.k4 qc3626.d47.k7 qc3626.d41.k2 qc3626.d41.k5 qc3626.d44.k1,1.0,1.0,0.3333,"**Học lực:** Em được xếp loại **Yếu**. Điểm trung bình chung học kỳ dưới 2,0 nhưng chưa thuộc diện bị buộc thôi học (Điều 45 khoản 2 điểm đ).
+
+**Số tín chỉ tối đa:** Kỳ chính tiếp theo, em được đăng ký **không quá 18 tín chỉ** (Điều 23 khoản 1 điểm c; Điều 45 khoản 1).",qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1,,,1.0,0.6667,end_turn,False,2397,386,2.36,False,1,medium,claude-haiku-5-5,2026-10-27T15:07:00+07:00,,dung,"Kết luận đúng (học lực Yếu, đăng ký không quá 18 tín chỉ) với căn cứ và ngưỡng đầy đủ theo Điều 45 khoản 2 điểm đ và Điều 23 khoản 1 điểm c, dù có trích dẫn thừa Điều 45 khoản 1 không gây mâu thuẫn.",z-ai/glm-5.3-flash,
+dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,qc3626.d21.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d23.k1 qc3626.d45.k1 qc3626.d42.k4 qc3626.d47.k7 qc3626.d41.k2 qc3626.d41.k5 qc3626.d44.k1,1.0,1.0,0.3333,"**Học lực:** Yếu. Điểm trung bình chung học kỳ 1,90 dưới 2,00 và em chưa thuộc diện bị buộc thôi học, nên theo **Điều 45 khoản 2 điểm đ**, em được xếp loại Yếu.
+
+**Số tín chỉ tối đa kỳ chính tiếp theo:** 18 tín chỉ. Theo **Điều 23 khoản 1 điểm c**, sinh viên có điểm trung bình chung học kỳ dưới 2,00 nhưng chưa bị buộc thôi học được đăng ký không quá 18 tín chỉ trong mỗi học kỳ chính.",qc3626.d45.k2 qc3626.d23.k1,,,1.0,1.0,end_turn,False,2397,443,2.624,False,2,medium,claude-haiku-5-5,2026-10-27T15:07:02+07:00,,dung,"Câu trả lời đúng: xếp loại học lực Yếu theo Điều 45 khoản 2 điểm đ (TBC 1,90 dưới 2,00 nhưng chưa thuộc diện buộc thôi học) và được đăng ký tối đa 18 tín chỉ mỗi học kỳ chính theo Điều 23 khoản 1 điểm c, đầy đủ căn cứ và ngưỡng như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m020,manual,conditional,False,qc3626.d25.k2,qc3626.d25.k2 qc3626.d47.k6 qc3626.d28.k3 qc3626.d25.k4 qc3626.d26.k4 qc3626.d5.k2 qc3626.d22 qc3626.d25.k1 qc3626.d26.k7 qc3626.d26.k5,1.0,1.0,1.0,"Em **không được bảo lưu kết quả cũ** và **không bắt buộc phải học lại trên lớp**. Theo Điều 25 khoản 2, học phần có nội dung tương đương từ 50% đến dưới 80% thì người học có thể tự học và dự thi để lấy điểm.
+
+Môn của em (70%) nằm trong khoảng này, nên em có thể tự ôn và đăng ký dự thi.
+
+Ngoài ra, theo Điều 25 khoản 4, đơn vị đào tạo phải công bố công khai tiêu chí và quy trình công nhận giá trị chuyển đổi kết quả học tập trên trang thông tin điện tử của đơn vị trước khi tổ chức đào tạo. Em nên xem thông tin này để biết thủ tục đăng ký dự thi.",qc3626.d25.k2 qc3626.d25.k4,,,1.0,0.5,end_turn,False,1772,515,2.761,False,0,medium,claude-haiku-5-5,2026-10-27T15:07:05+07:00,,dung,"Câu trả lời đúng: không được bảo lưu kết quả nhưng được tự học và dự thi vì 70% nằm trong khoảng 50% đến dưới 80% theo Điều 25 khoản 2; phần nêu thêm về khoản 4 chỉ là thông tin bổ sung, không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m020,manual,conditional,False,qc3626.d25.k2,qc3626.d25.k2 qc3626.d47.k6 qc3626.d28.k3 qc3626.d25.k4 qc3626.d26.k4 qc3626.d5.k2 qc3626.d22 qc3626.d25.k1 qc3626.d26.k7 qc3626.d26.k5,1.0,1.0,1.0,"Em **không được giữ kết quả cũ** và **không bắt buộc học lại trên lớp**. Với học phần có nội dung tương đương từ 50% đến dưới 80%, em được tự học và dự thi để lấy điểm (Điều 25 khoản 2).
+
+Lưu ý: nếu môn đó có nội dung tương đương từ 80% trở lên thì em mới được bảo lưu kết quả cũ, khi đạt điểm D trở lên (Điều 25 khoản 2). Nếu dưới 50% hoặc chưa học thì em phải dự học mới được dự thi (Điều 25 khoản 2).
+
+Ngoài ra, đơn vị đào tạo phải công bố công khai tiêu chí và quy trình công nhận giá trị chuyển đổi kết quả học tập trước khi tổ chức đào tạo (Điều 25 khoản 4). Em nên xem thông tin này trên trang thông tin điện tử của đơn vị đào tạo.",qc3626.d25.k2 qc3626.d25.k4,,,1.0,0.5,end_turn,False,1772,603,3.113,False,1,medium,claude-haiku-5-5,2026-10-27T15:07:08+07:00,,dung,"Câu trả lời khẳng định đúng không được bảo lưu kết quả cũ nhưng được tự học và dự thi lấy điểm vì mức tương đương 70% nằm trong khoảng 50% đến dưới 80%, có căn cứ Điều 25 khoản 2, các lưu ý bổ sung đều phù hợp quy chế.",z-ai/glm-5.3-flash,
+dev-m020,manual,conditional,False,qc3626.d25.k2,qc3626.d25.k2 qc3626.d47.k6 qc3626.d28.k3 qc3626.d25.k4 qc3626.d26.k4 qc3626.d5.k2 qc3626.d22 qc3626.d25.k1 qc3626.d26.k7 qc3626.d26.k5,1.0,1.0,1.0,"Em **không được giữ kết quả cũ** và **không bắt buộc học lại trên lớp**. Em có thể **tự học và dự thi để lấy điểm** cho học phần đó.
+
+Căn cứ: Điều 25 khoản 2. Học phần có nội dung tương đương từ 50% đến dưới 80% thuộc trường hợp này. Chỉ những học phần có nội dung tương đương từ 80% trở lên và đạt điểm D trở lên mới được bảo lưu kết quả.",qc3626.d25.k2,,,1.0,1.0,end_turn,False,1772,392,2.492,False,2,medium,claude-haiku-5-5,2026-10-27T15:07:11+07:00,,dung,"Kết luận đúng (không bảo lưu, được tự học và dự thi), nêu đủ căn cứ Điều 25 khoản 2 và ngưỡng tương đương từ 50% đến dưới 80% khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m021,manual,conditional,False,qc3626.d26.k1,qc3626.d21.k1 qc3626.d26.k1 qc3626.d25.k2 qc3626.d26.k4 qc3626.d26.k7 qc3626.d27.k4 qc3626.d25.k4 qc3626.d17.k1 qc3626.d17.k2 qc3626.d46.k2,1.0,1.0,0.5,"**Chưa đủ điều kiện.**
+
+Theo Điều 26 khoản 1 điểm c, điểm trung bình chung tích lũy phải đáp ứng một trong hai phương án:
+
+- **Phương án 1:** GPA từ 2,5 trở lên **và** đáp ứng ngưỡng bảo đảm chất lượng đầu vào của chương trình thứ hai. Em có GPA 2,30 nên không đạt mốc 2,5.
+- **Phương án 2:** GPA từ 2,0 trở lên **và** đáp ứng điều kiện trúng tuyển của chương trình thứ hai. Em đạt mốc 2,0 nhưng chưa đáp ứng điều kiện trúng tuyển.
+
+Các điều kiện khác của Điều 26 khoản 1:
+- Điểm a (ngành chính khác ngành của chương trình thứ nhất): đáp ứng nếu ngành em muốn học khác ngành hiện tại.
+- Điểm b (đã học ít nhất hai học kỳ): em đã đáp ứng.
+- Điểm d (có đơn và đóng học phí theo quy định): em đã đáp ứng.
+
+Em sẽ đủ điều kiện khi đạt GPA từ 2,5 trở lên và đáp ứng ngưỡng đầu vào của chương trình thứ hai, hoặc khi đáp ứng điều kiện trúng tuyển của chương trình thứ hai theo năm tuyển sinh.",qc3626.d26.k1,,,1.0,1.0,end_turn,False,2439,915,4.761,False,0,medium,claude-haiku-5-5,2026-10-27T15:07:13+07:00,,dung,"Câu trả lời kết luận đúng (chưa đủ điều kiện) và nêu đủ hai nhánh điều kiện tại Điều 26 khoản 1: TBC từ 2,5 kèm ngưỡng đầu vào hoặc TBC từ 2,0 kèm điều kiện trúng tuyển, đồng thời chỉ rõ sinh viên không đáp ứng nhánh nào.",z-ai/glm-5.3-flash,
+dev-m021,manual,conditional,False,qc3626.d26.k1,qc3626.d21.k1 qc3626.d26.k1 qc3626.d25.k2 qc3626.d26.k4 qc3626.d26.k7 qc3626.d27.k4 qc3626.d25.k4 qc3626.d17.k1 qc3626.d17.k2 qc3626.d46.k2,1.0,1.0,0.5,"**Chưa đủ điều kiện.**
+
+Theo Điều 26 khoản 1 điểm c, để học thêm chương trình thứ hai, điểm trung bình chung tích lũy từ đầu khóa phải thuộc một trong hai trường hợp:
+
+- Đạt từ 2,5 trở lên **và** đáp ứng ngưỡng bảo đảm chất lượng đầu vào của chương trình thứ hai trong năm tuyển sinh; hoặc
+- Đạt từ 2,0 trở lên **và** đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh.
+
+TBC của bạn là 2,30 nên không đạt mốc 2,5. Bạn chỉ có thể dựa vào trường hợp thứ hai, nhưng lại chưa đáp ứng điều kiện trúng tuyển của chương trình thứ hai.
+
+Các điều kiện khác bạn đã đáp ứng hoặc có thể đáp ứng:
+
+- Đã học ít nhất hai học kỳ của chương trình thứ nhất (Điều 26 khoản 1 điểm b).
+- Có đơn xin học thêm và sẵn sàng trả học phí (Điều 26 khoản 1 điểm d).
+- Ngành học chính của chương trình thứ hai phải khác ngành của chương trình thứ nhất (Điều 26 khoản 1 điểm a).
+
+Bạn cần đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh thì mới đủ điều kiện đăng ký.",qc3626.d26.k1,,,1.0,1.0,end_turn,False,2439,929,4.359,False,1,medium,claude-haiku-5-5,2026-10-27T15:07:18+07:00,,dung,"Kết luận đúng và nêu đủ hai nhánh điều kiện điểm (2,5 kèm ngưỡng đầu vào hoặc 2,0 kèm điều kiện trúng tuyển) cùng lý do sinh viên không đáp ứng nhánh nào.",z-ai/glm-5.3-flash,
+dev-m021,manual,conditional,False,qc3626.d26.k1,qc3626.d21.k1 qc3626.d26.k1 qc3626.d25.k2 qc3626.d26.k4 qc3626.d26.k7 qc3626.d27.k4 qc3626.d25.k4 qc3626.d17.k1 qc3626.d17.k2 qc3626.d46.k2,1.0,1.0,0.5,"**Chưa đủ điều kiện.** Em chưa đáp ứng điều kiện về điểm trung bình chung theo Điều 26 khoản 1 điểm c.
+
+Điều kiện này có hai nhánh, và em không thỏa nhánh nào:
+- **Nhánh 1:** TBC từ 2,5 trở lên và đáp ứng ngưỡng bảo đảm chất lượng đầu vào. TBC 2,30 chưa đạt 2,5.
+- **Nhánh 2:** TBC từ 2,0 trở lên và đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh. Em đạt 2,30 nhưng chưa đáp ứng điều kiện trúng tuyển.
+
+Các điều kiện khác em đã đáp ứng, gồm đã học ít nhất hai học kỳ (Điều 26 khoản 1 điểm b) và có đơn cùng cam kết đóng học phí (Điều 26 khoản 1 điểm d). Ngành thứ hai cần khác ngành chính thứ nhất (Điều 26 khoản 1 điểm a).
+
+Để đủ điều kiện, em cần đạt TBC từ 2,5 trở lên và đáp ứng ngưỡng đầu vào của chương trình thứ hai, hoặc đạt TBC từ 2,0 trở lên và đáp ứng điều kiện trúng tuyển của chương trình đó.",qc3626.d26.k1,,,1.0,1.0,end_turn,False,2439,889,4.826,False,2,medium,claude-haiku-5-5,2026-10-27T15:07:23+07:00,,dung,"Câu trả lời kết luận đúng (chưa đủ điều kiện) và nêu đủ hai nhánh của điểm c Điều 26 khoản 1: TBC từ 2,5 kèm ngưỡng bảo đảm chất lượng đầu vào hoặc TBC từ 2,0 kèm điều kiện trúng tuyển, chỉ rõ người học không thỏa nhánh nào, phù hợp hoàn toàn với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m022,manual,conditional,False,qc3626.d27.k3,qc3626.d41.k5 qc3626.d27.k3 qc3626.d39.k4 qc3626.d41.k3 qc3626.d47.k7 qc3626.d21.k4 qc3626.d47.k10 qc3626.d23.k2 qc3626.d46.k3 qc3626.d41.k4,1.0,1.0,0.5,"**Không.** Em sẽ phải chuyển sang học chương trình đào tạo chuẩn chính quy của ngành tương ứng, dù TBC đạt 3,00.
+
+Căn cứ là Điều 27 khoản 3 điểm a: sinh viên CLC chưa bị buộc thôi học phải chuyển sang chương trình chuẩn nếu vi phạm một trong các trường hợp được liệt kê. Một trong số đó là có một học phần nâng cao, bổ sung đạt điểm F. Điều kiện này độc lập với điểm trung bình, nên TBC 3,00 không cứu được trường hợp này.
+
+Khi chuyển, học phần nâng cao đã đạt F vẫn giữ điểm F, còn số tín chỉ được quy đổi theo chương trình chuẩn (Điều 27 khoản 3 điểm b).",qc3626.d27.k3,,,1.0,1.0,end_turn,False,2329,629,3.797,False,0,medium,claude-haiku-5-5,2026-10-27T15:07:28+07:00,,dung,"Kết luận đúng (không được tiếp tục, phải chuyển sang chương trình chuẩn) và nêu đủ căn cứ theo Điều 27 khoản 3 điểm a với giải thích đúng rằng điều kiện học phần nâng cao bị F độc lập với TBC 3,00.",z-ai/glm-5.3-flash,
+dev-m022,manual,conditional,False,qc3626.d27.k3,qc3626.d41.k5 qc3626.d27.k3 qc3626.d39.k4 qc3626.d41.k3 qc3626.d47.k7 qc3626.d21.k4 qc3626.d47.k10 qc3626.d23.k2 qc3626.d46.k3 qc3626.d41.k4,1.0,1.0,0.5,"**Không.** Em sẽ phải chuyển sang chương trình đào tạo chuẩn chính quy của ngành tương ứng.
+
+Căn cứ là **Điều 27 khoản 3 điểm a**: sinh viên CLC chưa bị buộc thôi học phải chuyển sang chương trình chuẩn nếu có **một học phần nâng cao, bổ sung đạt điểm F**. Điều kiện này độc lập với điểm trung bình, nên TBC 3,00 (trên ngưỡng 2,5) không làm thay đổi kết luận.
+
+Khi chuyển, theo **Điều 27 khoản 3 điểm b**, điểm của học phần nâng cao được giữ nguyên, còn số tín chỉ được quy đổi theo chương trình chuẩn.",qc3626.d27.k3,,,1.0,1.0,end_turn,False,2329,563,3.376,False,1,medium,claude-haiku-5-5,2026-10-27T15:07:32+07:00,,dung,"Kết luận đúng (phải chuyển sang chương trình chuẩn) và nêu đủ căn cứ Điều 27 khoản 3 điểm a (một học phần nâng cao bị F) kèm giải thích ngưỡng TBC 2,5 không ảnh hưởng, phù hợp đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m022,manual,conditional,False,qc3626.d27.k3,qc3626.d41.k5 qc3626.d27.k3 qc3626.d39.k4 qc3626.d41.k3 qc3626.d47.k7 qc3626.d21.k4 qc3626.d47.k10 qc3626.d23.k2 qc3626.d46.k3 qc3626.d41.k4,1.0,1.0,0.5,"**Không.** Em sẽ phải chuyển sang chương trình đào tạo chuẩn chính quy của ngành tương ứng.
+
+Căn cứ: Điều 27 khoản 3 điểm a. Sinh viên CLC chưa bị buộc thôi học phải chuyển sang chương trình chuẩn nếu có **một học phần nâng cao, bổ sung đạt điểm F**. Điểm trung bình chung 3,00 đáp ứng ngưỡng 2,5 nên không phải lý do chuyển, nhưng điểm F ở học phần nâng cao vẫn đủ để chuyển.
+
+Khi chuyển, theo Điều 27 khoản 3 điểm b, học phần nâng cao được giữ nguyên điểm, còn số tín chỉ được quy đổi theo chương trình chuẩn.",qc3626.d27.k3,,,1.0,1.0,end_turn,False,2329,626,3.933,False,2,medium,claude-haiku-5-5,2026-10-27T15:07:35+07:00,,dung,"Kết luận đúng (phải chuyển sang chương trình chuẩn) và nêu đủ căn cứ Điều 27 khoản 3 điểm a (một học phần nâng cao đạt điểm F) kèm giải thích đúng ngưỡng TBC 3,00 không phải lý do chuyển, thông tin bổ sung về quy đổi tín chỉ cũng phù hợp điểm b.",z-ai/glm-5.3-flash,
+dev-m023,manual,conditional,False,qc3626.d35.k4,qc3626.d35.k4 qc3626.d41.k1 qc3626.d40.k2 qc3626.d40.k1 qc3626.d47.k7 qc3626.d38.k1 qc3626.d39.k2 qc3626.d40 qc3626.d41.k2 qc3626.d44.k1,1.0,1.0,1.0,"Em còn **6,0 điểm**.
+
+Căn cứ: Điều 35 khoản 4 điểm a. Sinh viên bị khiển trách vì nhìn bài người khác sẽ bị trừ 25% số điểm đạt được của bài thi học phần đó. Tính như sau: 8,0 × 75% = 6,0 điểm (bị trừ 2,0 điểm).",qc3626.d35.k4,,,1.0,1.0,end_turn,False,2471,327,2.177,False,0,medium,claude-haiku-5-5,2026-10-27T15:07:39+07:00,,dung,"Kết luận 6,0 điểm đúng, nêu đủ căn cứ (Điều 35 khoản 4 điểm a, trừ 25% điểm đạt được) và tính toán 8,0 × 75% = 6,0 khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m023,manual,conditional,False,qc3626.d35.k4,qc3626.d35.k4 qc3626.d41.k1 qc3626.d40.k2 qc3626.d40.k1 qc3626.d47.k7 qc3626.d38.k1 qc3626.d39.k2 qc3626.d40 qc3626.d41.k2 qc3626.d44.k1,1.0,1.0,1.0,"Sau xử lý, bài thi của em còn **6,0 điểm**.
+
+Căn cứ: Điều 35 khoản 4 điểm a. Sinh viên bị khiển trách khi nhìn bài người khác sẽ bị trừ 25% số điểm đạt được của bài thi học phần đó. Tính như sau: 8,0 × 25% = 2,0 điểm bị trừ, còn lại 8,0 − 2,0 = 6,0 điểm.",qc3626.d35.k4,,,1.0,1.0,end_turn,False,2471,295,3.344,False,1,medium,claude-haiku-5-5,2026-10-27T15:07:41+07:00,,dung,"Kết luận 6,0 điểm đúng, nêu đúng căn cứ Điều 35 khoản 4 điểm a và ngưỡng trừ 25% số điểm đạt được, phép tính nhất quán với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m023,manual,conditional,False,qc3626.d35.k4,qc3626.d35.k4 qc3626.d41.k1 qc3626.d40.k2 qc3626.d40.k1 qc3626.d47.k7 qc3626.d38.k1 qc3626.d39.k2 qc3626.d40 qc3626.d41.k2 qc3626.d44.k1,1.0,1.0,1.0,"Sau xử lý, bài thi của em còn **6,0 điểm**.
+
+Căn cứ: Điều 35 khoản 4 điểm a quy định sinh viên bị khiển trách vì nhìn bài của người khác sẽ bị trừ 25% số điểm đạt được của bài thi học phần đó. Tính toán: 8,0 × 25% = 2,0 điểm bị trừ, còn 8,0 − 2,0 = 6,0 điểm.",qc3626.d35.k4,,,1.0,1.0,end_turn,False,2471,315,2.098,False,2,medium,claude-haiku-5-5,2026-10-27T15:07:45+07:00,,dung,"Kết luận còn 6,0 điểm đúng, nêu đủ căn cứ (Điều 35 khoản 4 điểm a, trừ 25% số điểm đạt được) và tính toán khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m024,manual,conditional,False,qc3626.d47.k5 qc3626.d47.k7,qc3626.d47.k7 qc3626.d47.k5 qc3626.d47.k6 qc3626.d17.k2 qc3626.d26.k4 qc3626.d21.k1 qc3626.d5.k2 qc3626.d46.k1 qc3626.d22.k1 qc3626.d42.k4,1.0,1.0,1.0,"Em được xếp hạng tốt nghiệp **Giỏi**.
+
+- Với TBC tích lũy toàn khóa 3,65, em đạt hạng **Xuất sắc** (từ 3,60 đến 4,00) theo Điều 47 khoản 5 điểm a.
+- Tuy nhiên, khối lượng các học phần phải học lại chiếm 6%, vượt ngưỡng 5% tổng tín chỉ chương trình. Theo Điều 47 khoản 7, sinh viên đạt hạng xuất sắc hoặc giỏi sẽ bị hạ một hạng trong trường hợp này. Vì em không bị kỷ luật, chỉ việc vượt ngưỡng học lại đã đủ để hạ hạng.",qc3626.d47.k5 qc3626.d47.k7,,,1.0,1.0,end_turn,False,2151,470,2.698,False,0,medium,claude-haiku-5-5,2026-10-27T15:07:47+07:00,,dung,"Câu trả lời nêu đúng kết luận (hạng Giỏi), căn cứ TBC 3,65 đạt mức Xuất sắc và ngưỡng học lại 6% vượt 5% dẫn đến hạ một hạng theo Điều 47 khoản 5 và khoản 7, đầy đủ như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m024,manual,conditional,False,qc3626.d47.k5 qc3626.d47.k7,qc3626.d47.k7 qc3626.d47.k5 qc3626.d47.k6 qc3626.d17.k2 qc3626.d26.k4 qc3626.d21.k1 qc3626.d5.k2 qc3626.d46.k1 qc3626.d22.k1 qc3626.d42.k4,1.0,1.0,1.0,"Em được xếp hạng **Giỏi**.
+
+- TBC tích lũy 3,65 thuộc khoảng 3,60–4,00, nên đủ điều kiện hạng Xuất sắc (Điều 47 khoản 5 điểm a).
+- Tuy nhiên, khối lượng học phần phải học lại là 6%, vượt ngưỡng 5% tổng tín chỉ toàn chương trình. Theo Điều 47 khoản 7, sinh viên có hạng Xuất sắc hoặc Giỏi sẽ bị hạ một hạng trong trường hợp này. Do đó hạng Xuất sắc bị hạ xuống Giỏi.
+
+Vì em không bị kỷ luật nên chỉ có điều kiện học lại làm giảm hạng.",qc3626.d47.k5 qc3626.d47.k7,,,1.0,1.0,end_turn,False,2151,467,2.501,False,1,medium,claude-haiku-5-5,2026-10-27T15:07:50+07:00,,dung,"Câu trả lời đúng khi nêu hạng Giỏi, căn cứ TBC 3,65 thuộc mức xuất sắc (3,60–4,00) nhưng 6% tín chỉ phải học lại vượt ngưỡng 5% nên bị hạ một hạng theo Điều 47 khoản 5 và khoản 7.",z-ai/glm-5.3-flash,
+dev-m024,manual,conditional,False,qc3626.d47.k5 qc3626.d47.k7,qc3626.d47.k7 qc3626.d47.k5 qc3626.d47.k6 qc3626.d17.k2 qc3626.d26.k4 qc3626.d21.k1 qc3626.d5.k2 qc3626.d46.k1 qc3626.d22.k1 qc3626.d42.k4,1.0,1.0,1.0,"Em được xếp hạng tốt nghiệp **Giỏi**.
+
+- Với TBC tích lũy 3,65, em đạt hạng **Xuất sắc** theo Điều 47 khoản 5 điểm a.
+- Tuy nhiên, theo Điều 47 khoản 7, sinh viên đạt hạng Xuất sắc hoặc Giỏi sẽ bị hạ một hạng nếu khối lượng các học phần phải học lại vượt quá 5% tổng số tín chỉ của chương trình. Em có 6% nên vượt ngưỡng này và bị hạ từ Xuất sắc xuống Giỏi.",qc3626.d47.k5 qc3626.d47.k7,,,1.0,1.0,end_turn,False,2151,419,2.434,False,2,medium,claude-haiku-5-5,2026-10-27T15:07:53+07:00,,dung,"Kết luận đúng (hạng Giỏi) với đầy đủ căn cứ: TBC 3,65 thuộc mức Xuất sắc theo khoản 5 và bị hạ một hạng vì học lại 6% vượt ngưỡng 5% theo khoản 7 Điều 47.",z-ai/glm-5.3-flash,
+dev-m025,manual,out_of_scope,False,,qc3626.d47.k4 qc3626.d36.k4 qc3626.d35.k2 qc3626.d29.k3 qc3626.d22.k4 qc3626.d4.k2 qc3626.d18.k4 qc3626.d47.k10 qc3626.d32.k3 qc3626.d35.k4,,,,Quy chế đào tạo đại học của Đại học Quốc gia Hà Nội không quy định về mật khẩu Wi-Fi dành cho sinh viên. Em nên liên hệ trực tiếp Trường Đại học Công nghệ để được hướng dẫn.,,,,,,end_turn,False,2284,447,2.907,False,0,medium,claude-haiku-5-5,2026-10-27T15:07:55+07:00,,dung,"Câu trả lời khớp với đáp án mẫu: quy chế đào tạo không quy định về mật khẩu Wi-Fi cho sinh viên, phần khuyên liên hệ Trường chỉ là bổ sung không mâu thuẫn.",z-ai/glm-5.3-flash,
+dev-m025,manual,out_of_scope,False,,qc3626.d47.k4 qc3626.d36.k4 qc3626.d35.k2 qc3626.d29.k3 qc3626.d22.k4 qc3626.d4.k2 qc3626.d18.k4 qc3626.d47.k10 qc3626.d32.k3 qc3626.d35.k4,,,,"Quy chế đào tạo đại học của Đại học Quốc gia Hà Nội không quy định về tài khoản hay mật khẩu Wi-Fi cho sinh viên, nên tôi không có thông tin để trả lời câu hỏi này. Bạn nên hỏi trực tiếp đơn vị đào tạo hoặc bộ phận quản lý công nghệ thông tin của Trường Đại học Công nghệ.",,,,,,end_turn,False,2284,439,2.942,False,1,medium,claude-haiku-5-5,2026-10-27T15:07:58+07:00,,dung,"Câu trả lời khẳng định đúng rằng quy chế đào tạo không quy định về mật khẩu Wi-Fi sinh viên, phù hợp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m025,manual,out_of_scope,False,,qc3626.d47.k4 qc3626.d36.k4 qc3626.d35.k2 qc3626.d29.k3 qc3626.d22.k4 qc3626.d4.k2 qc3626.d18.k4 qc3626.d47.k10 qc3626.d32.k3 qc3626.d35.k4,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định về việc cấp hoặc cung cấp mật khẩu Wi-Fi cho sinh viên, nên tôi không có căn cứ để trả lời câu hỏi này.
+
+Em có thể hỏi trực tiếp bộ phận quản lý mạng hoặc phòng công tác sinh viên của Trường Đại học Công nghệ.",,,,,,end_turn,False,2284,327,2.382,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:01+07:00,,dung,"Câu trả lời khớp với đáp án mẫu: quy chế đào tạo không quy định về mật khẩu Wi-Fi, và phần gợi ý thêm không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
 dev-m026,manual,out_of_scope,False,,qc3626.d23.k2 qc3626.d8.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d44.k1 qc3626.d18.k7 qc3626.d41.k2 qc3626.d36.k2 qc3626.d5.k1 qc3626.d16,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định về phí gửi xe máy theo tháng, nên mình không có căn cứ để trả lời mức phí cụ thể.
 
-Quy chế chỉ quy định về kinh phí đào tạo, gồm ngân sách nhà nước, học phí và các nguồn hợp pháp khác (Điều 8 khoản 1). Học phí được tính theo công thức tín chỉ, không bao gồm phí gửi xe.",qc3626.d8.k1,,,,,end_turn,False,3185,321,3.105,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:30+07:00,dung,"Câu trả lời đúng khi khẳng định quy chế đào tạo không quy định về phí gửi xe máy theo tháng, phù hợp với đáp án mẫu và không nêu thông tin mâu thuẫn.",z-ai/glm-5.3-flash
+Quy chế chỉ quy định về kinh phí đào tạo, gồm ngân sách nhà nước, học phí và các nguồn hợp pháp khác (Điều 8 khoản 1). Học phí được tính theo công thức tín chỉ, không bao gồm phí gửi xe.",qc3626.d8.k1,,,,,end_turn,False,3185,321,3.105,True,0,medium,claude-haiku-5-5,2026-10-27T14:29:30+07:00,,dung,"Câu trả lời đúng khi khẳng định quy chế đào tạo không quy định về phí gửi xe máy theo tháng, phù hợp với đáp án mẫu và không nêu thông tin mâu thuẫn.",z-ai/glm-5.3-flash,
+dev-m026,manual,out_of_scope,False,,qc3626.d23.k2 qc3626.d8.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d44.k1 qc3626.d18.k7 qc3626.d41.k2 qc3626.d36.k2 qc3626.d5.k1 qc3626.d16,,,,"Quy chế đào tạo đại học này không quy định về phí gửi xe máy. Nội dung này nằm ngoài phạm vi điều chỉnh của quy chế, nên mình không có căn cứ để trả lời.
+
+Bạn có thể hỏi trực tiếp bộ phận quản lý cơ sở vật chất hoặc phòng công tác sinh viên của trường để biết mức phí gửi xe theo tháng.",,,,,,end_turn,False,3185,151,2.823,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:04+07:00,,dung,"Câu trả lời đúng khớp với đáp án mẫu: khẳng định quy chế không quy định về phí gửi xe máy và nội dung này nằm ngoài phạm vi quy chế, kèm gợi ý liên hệ bộ phận phù hợp.",z-ai/glm-5.3-flash,
+dev-m026,manual,out_of_scope,False,,qc3626.d23.k2 qc3626.d8.k1 qc3626.d17.k2 qc3626.d45.k2 qc3626.d44.k1 qc3626.d18.k7 qc3626.d41.k2 qc3626.d36.k2 qc3626.d5.k1 qc3626.d16,,,,"Quy chế đào tạo này không quy định về phí gửi xe máy. Các điều khoản trong ngữ cảnh chỉ đề cập đến học phí, rút học phần, xếp năm đào tạo, xếp loại học lực và xử lý học vụ.
+
+Bạn có thể hỏi phòng quản lý cơ sở vật chất hoặc phòng công tác sinh viên của trường để biết mức phí gửi xe theo tháng.",,,,,,end_turn,False,3185,158,2.058,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:07+07:00,,dung,"Câu trả lời khớp với đáp án mẫu: quy chế đào tạo không quy định về phí gửi xe máy, phần bổ sung gợi ý liên hệ phòng ban không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m027,manual,out_of_scope,False,,qc3626.d19 qc3626.d4.k3 qc3626.d38.k4 qc3626.d38.k6 qc3626.d38.k1 qc3626.d18.k5 qc3626.d20.k2 qc3626.d47.k10 qc3626.d4.k2 qc3626.d16,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định giờ hoạt động của căng tin, nên tôi không thể trả lời chính xác thời gian phục vụ bữa trưa.
+
+Quy chế chỉ quy định thời gian hoạt động giảng dạy và học tập theo hình thức chính quy: từ 06 giờ đến 20 giờ hàng ngày (trừ Chủ nhật) (Điều 19). Quy định này không liên quan đến căng tin.
+
+Em có thể hỏi trực tiếp đơn vị quản lý căng tin hoặc xem thông báo của trường.",qc3626.d19,,,,,end_turn,False,2231,371,4.773,False,0,medium,claude-haiku-5-5,2026-10-27T15:08:09+07:00,,dung,"Câu trả lời khẳng định đúng rằng quy chế không quy định giờ phục vụ của căng tin, đồng thời bổ sung chính xác ý về thời gian giảng dạy (Điều 19) và gợi ý hỏi đơn vị quản lý căng tin, không mâu thuẫn với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m027,manual,out_of_scope,False,,qc3626.d19 qc3626.d4.k3 qc3626.d38.k4 qc3626.d38.k6 qc3626.d38.k1 qc3626.d18.k5 qc3626.d20.k2 qc3626.d47.k10 qc3626.d4.k2 qc3626.d16,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định giờ phục vụ của căng tin. Điều 19 chỉ quy định thời gian hoạt động giảng dạy và học tập (từ 06 giờ đến 20 giờ hàng ngày, trừ Chủ nhật), không liên quan đến căng tin.",qc3626.d19,,,,,end_turn,False,2231,297,2.089,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:14+07:00,,dung,"Câu trả lời khớp với đáp án mẫu khi khẳng định quy chế không quy định giờ phục vụ của căng tin, phần bổ sung về Điều 19 không mâu thuẫn với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m027,manual,out_of_scope,False,,qc3626.d19 qc3626.d4.k3 qc3626.d38.k4 qc3626.d38.k6 qc3626.d38.k1 qc3626.d18.k5 qc3626.d20.k2 qc3626.d47.k10 qc3626.d4.k2 qc3626.d16,,,,"Quy chế đào tạo không quy định giờ phục vụ của căng tin. Điều 19 chỉ quy định thời gian hoạt động giảng dạy và học tập (từ 06 giờ đến 20 giờ hàng ngày, trừ Chủ nhật), không đề cập đến căng tin.",qc3626.d19,,,,,end_turn,False,2231,275,1.884,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:16+07:00,,dung,"Câu trả lời khớp với đáp án mẫu: khẳng định quy chế không quy định giờ phục vụ căng tin, không có căn cứ nào mâu thuẫn.",z-ai/glm-5.3-flash,
+dev-m028,manual,out_of_scope,False,,qc3626.d19 qc3626.d4.k3 qc3626.d44.k2 qc3626.d20.k1 qc3626.d51 qc3626.d18.k4 qc3626.d4.k2 qc3626.d23.k2 qc3626.d39.k2 qc3626.d18.k3,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định về lịch chạy hay giờ xuất phát của xe buýt giữa các cơ sở. Em nên xem thông báo chính thức của nhà trường về nội dung này.
+
+Quy chế chỉ quy định thời gian hoạt động giảng dạy và học tập theo hình thức chính quy từ 06 giờ đến 20 giờ hàng ngày (trừ Chủ nhật), tại Điều 19.",qc3626.d19,,,,,end_turn,False,2569,435,2.719,False,0,medium,claude-haiku-5-5,2026-10-27T15:08:18+07:00,,dung,"Câu trả lời khớp với đáp án mẫu khi khẳng định quy chế không quy định về lịch/giờ chạy xe buýt giữa các cơ sở, phần bổ sung về Điều 19 (giờ giảng dạy 06h–20h trừ Chủ nhật) không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m028,manual,out_of_scope,False,,qc3626.d19 qc3626.d4.k3 qc3626.d44.k2 qc3626.d20.k1 qc3626.d51 qc3626.d18.k4 qc3626.d4.k2 qc3626.d23.k2 qc3626.d39.k2 qc3626.d18.k3,,,,"Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN) **không quy định** về lịch xe buýt hay giờ xuất phát của xe đưa đón giữa các cơ sở. Em nên tìm thông tin này qua kênh thông báo chính thức của Trường Đại học Công nghệ hoặc các đơn vị phụ trách của trường.
+
+Quy chế chỉ quy định khung thời gian hoạt động giảng dạy và học tập (Điều 19), không đề cập đến phương tiện di chuyển giữa các cơ sở.",qc3626.d19,,,,,end_turn,False,2569,373,2.339,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:21+07:00,,dung,"Câu trả lời kết luận đúng rằng quy chế QĐ 3626 không quy định về lịch/giờ xe buýt giữa các cơ sở, phù hợp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-m028,manual,out_of_scope,False,,qc3626.d19 qc3626.d4.k3 qc3626.d44.k2 qc3626.d20.k1 qc3626.d51 qc3626.d18.k4 qc3626.d4.k2 qc3626.d23.k2 qc3626.d39.k2 qc3626.d18.k3,,,,Quy chế đào tạo đại học của ĐHQGHN không quy định về xe buýt đưa đón hay lịch xuất phát giữa các cơ sở của Trường Đại học Công nghệ. Em nên xem thông báo chính thức của trường về lịch xe.,,,,,,end_turn,False,2569,370,2.558,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:23+07:00,,dung,"Câu trả lời khẳng định đúng rằng quy chế đào tạo không quy định về xe buýt đưa đón giữa các cơ sở, phù hợp với đáp án mẫu; phần gợi ý xem thông báo của trường không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m029,manual,out_of_scope,False,,qc3626.d23.k2 qc3626.d47.k4 qc3626.d8.k1 qc3626.d21.k4 qc3626.d36.k2 qc3626.d21.k5 qc3626.d23.k1 qc3626.d17.k2 qc3626.d26.k4 qc3626.d23.k3,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định mức phí cấp lại thẻ sinh viên, nên tôi không thể cho bạn con số cụ thể.
+
+Bạn nên hỏi trực tiếp đơn vị quản lý sinh viên của trường để biết mức phí và thủ tục cấp lại thẻ.",,,,,,end_turn,False,2230,436,2.864,False,0,medium,claude-haiku-5-5,2026-10-27T15:08:26+07:00,,dung,Câu trả lời khớp với đáp án mẫu khi khẳng định quy chế đào tạo không quy định mức phí cấp lại thẻ sinh viên và không nêu thông tin mâu thuẫn.,z-ai/glm-5.3-flash,
+dev-m029,manual,out_of_scope,False,,qc3626.d23.k2 qc3626.d47.k4 qc3626.d8.k1 qc3626.d21.k4 qc3626.d36.k2 qc3626.d21.k5 qc3626.d23.k1 qc3626.d17.k2 qc3626.d26.k4 qc3626.d23.k3,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định mức phí cấp lại thẻ sinh viên, nên tôi không thể trả lời con số cụ thể. Bạn nên hỏi trực tiếp đơn vị quản lý sinh viên của trường.",,,,,,end_turn,False,2230,258,2.033,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:29+07:00,,dung,Câu trả lời khớp với đáp án mẫu: quy chế không quy định mức phí cấp lại thẻ sinh viên và không nêu con số cụ thể.,z-ai/glm-5.3-flash,
+dev-m029,manual,out_of_scope,False,,qc3626.d23.k2 qc3626.d47.k4 qc3626.d8.k1 qc3626.d21.k4 qc3626.d36.k2 qc3626.d21.k5 qc3626.d23.k1 qc3626.d17.k2 qc3626.d26.k4 qc3626.d23.k3,,,,Quy chế đào tạo đại học của ĐHQGHN không quy định mức phí cấp lại thẻ sinh viên. Em nên hỏi trực tiếp đơn vị quản lý sinh viên của trường để biết mức phí và thủ tục.,,,,,,end_turn,False,2230,359,2.438,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:31+07:00,,dung,Câu trả lời khớp với đáp án mẫu: quy chế không quy định mức phí cấp lại thẻ sinh viên.,z-ai/glm-5.3-flash,
+dev-m030,manual,out_of_scope,False,,qc3626.d21.k2 qc3626.d18.k6 qc3626.d38.k4 qc3626.d21.k4 qc3626.d18.k5 qc3626.d21.k5 qc3626.d21.k7 qc3626.d18.k4 qc3626.d44 qc3626.d21.k3,,,,"Quy chế đào tạo đại học của Đại học Quốc gia Hà Nội không quy định việc đặt sân bóng đá hay sử dụng cơ sở thể thao của trường sau giờ học.
+
+Quy chế chỉ quy định về đăng ký học phần, đăng ký học lại và kế hoạch đào tạo (ví dụ Điều 21 và Điều 18). Em có thể hỏi trực tiếp phòng quản lý cơ sở vật chất hoặc đơn vị phụ trách thể thao của trường để biết cách đặt sân.",,qc3626.d21 qc3626.d18,,,,end_turn,False,2266,391,3.451,False,0,medium,claude-haiku-5-5,2026-10-27T15:08:33+07:00,,dung,"Câu trả lời kết luận đúng rằng quy chế đào tạo không quy định việc đặt sân bóng, khớp với đáp án mẫu; phần gợi ý thêm không làm sai kết luận.",z-ai/glm-5.3-flash,
+dev-m030,manual,out_of_scope,False,,qc3626.d21.k2 qc3626.d18.k6 qc3626.d38.k4 qc3626.d21.k4 qc3626.d18.k5 qc3626.d21.k5 qc3626.d21.k7 qc3626.d18.k4 qc3626.d44 qc3626.d21.k3,,,,"Quy chế đào tạo đại học của Đại học Quốc gia Hà Nội không quy định nội dung này. Các điều khoản trong phần ngữ cảnh chỉ nói về đăng ký học phần, kế hoạch đào tạo và thi kết thúc học phần, không đề cập đến việc đặt sân thể thao.
+
+Bạn có thể hỏi trực tiếp đơn vị quản lý cơ sở vật chất hoặc phòng công tác sinh viên của trường.",,,,,,end_turn,False,2266,351,2.867,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:37+07:00,,dung,"Câu trả lời khẳng định đúng rằng quy chế đào tạo không quy định việc đăng ký đặt sân thể thao, phù hợp với đáp án mẫu; phần gợi ý thêm không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-m030,manual,out_of_scope,False,,qc3626.d21.k2 qc3626.d18.k6 qc3626.d38.k4 qc3626.d21.k4 qc3626.d18.k5 qc3626.d21.k5 qc3626.d21.k7 qc3626.d18.k4 qc3626.d44 qc3626.d21.k3,,,,"Quy chế đào tạo đại học của Đại học Quốc gia Hà Nội không quy định về việc đặt sân bóng đá hay sử dụng cơ sở vật chất thể thao của trường, nên tôi không thể trả lời câu hỏi này.
+
+Quy chế chỉ điều chỉnh các nội dung về đào tạo, như đăng ký học phần (Điều 21), kế hoạch đào tạo (Điều 18) và tổ chức thi kết thúc học phần (Điều 38). Để biết cách đặt sân, bạn nên hỏi trực tiếp đơn vị quản lý cơ sở vật chất của trường hoặc phòng công tác sinh viên.",,qc3626.d21 qc3626.d18 qc3626.d38,,,,end_turn,False,2266,340,2.378,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:40+07:00,,dung,"Câu trả lời khẳng định đúng rằng quy chế đào tạo không quy định về việc đặt sân bóng, phù hợp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s01,generated,single,False,qc3626.d43.k1,qc3626.d43.k1 qc3626.d41.k3 qc3626.d41.k2 qc3626.d41.k1 qc3626.d47.k5 qc3626.d21.k5 qc3626.d39.k2 qc3626.d37.k1 qc3626.d42.k4 qc3626.d43.k2,1.0,1.0,1.0,"Điểm chữ C+ tương ứng với **2,5** trên thang điểm 4.
+
+Căn cứ: Điều 43 khoản 1.",qc3626.d43.k1,,,1.0,1.0,end_turn,False,2225,53,1.089,False,0,medium,claude-haiku-5-5,2026-10-27T15:08:42+07:00,,dung,"Câu trả lời nêu đúng kết luận C+ tương ứng 2,5 điểm thang 4 và căn cứ đúng Điều 43 khoản 1 của quy chế.",z-ai/glm-5.3-flash,
+dev-s01,generated,single,False,qc3626.d43.k1,qc3626.d43.k1 qc3626.d41.k3 qc3626.d41.k2 qc3626.d41.k1 qc3626.d47.k5 qc3626.d21.k5 qc3626.d39.k2 qc3626.d37.k1 qc3626.d42.k4 qc3626.d43.k2,1.0,1.0,1.0,"Điểm chữ C+ tương ứng với **2,5** trên thang 4.
+
+Căn cứ: Điều 43 khoản 1.",qc3626.d43.k1,,,1.0,1.0,end_turn,False,2225,50,1.089,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:43+07:00,,dung,"Câu trả lời nêu đúng kết luận C+ = 2,5 và có căn cứ chính xác là Điều 43 khoản 1 theo quy chế.",z-ai/glm-5.3-flash,
+dev-s01,generated,single,False,qc3626.d43.k1,qc3626.d43.k1 qc3626.d41.k3 qc3626.d41.k2 qc3626.d41.k1 qc3626.d47.k5 qc3626.d21.k5 qc3626.d39.k2 qc3626.d37.k1 qc3626.d42.k4 qc3626.d43.k2,1.0,1.0,1.0,"Điểm chữ C+ tương ứng với **2,5** trên thang điểm 4.
+
+Căn cứ: Điều 43 khoản 1.",qc3626.d43.k1,,,1.0,1.0,end_turn,False,2225,53,1.033,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:45+07:00,,dung,"Câu trả lời nêu đúng kết luận C+ tương ứng 2,5 điểm thang 4 và căn cứ đúng Điều 43 khoản 1 của quy chế.",z-ai/glm-5.3-flash,
+dev-s02,generated,conditional,False,qc3626.d17.k2,qc3626.d17.k2 qc3626.d47.k10 qc3626.d4.k2 qc3626.d26.k7 qc3626.d46.k1 qc3626.d47.k5 qc3626.d21.k1 qc3626.d3.k5 qc3626.d14.k2 qc3626.d22.k4,1.0,1.0,1.0,"Sinh viên chương trình chất lượng cao đã tích lũy 50 tín chỉ là **sinh viên năm thứ hai**, vì mức từ 40 đến 80 tín chỉ tương ứng với năm thứ hai (Điều 17 khoản 2).
+
+Số tín chỉ dùng để xếp năm không tính các học phần tự chọn tự do, giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ (Điều 17 khoản 2).",qc3626.d17.k2,,,1.0,1.0,end_turn,False,2356,320,1.874,False,0,medium,claude-haiku-5-5,2026-10-27T15:08:46+07:00,,dung,"Kết luận đúng (năm thứ hai) và nêu đủ căn cứ lẫn ngưỡng tín chỉ 40–80 đối với chương trình chất lượng cao, kèm lưu ý loại trừ các học phần tự chọn tự do, GDTC, GDQP-AN và kỹ năng bổ trợ như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s02,generated,conditional,False,qc3626.d17.k2,qc3626.d17.k2 qc3626.d47.k10 qc3626.d4.k2 qc3626.d26.k7 qc3626.d46.k1 qc3626.d47.k5 qc3626.d21.k1 qc3626.d3.k5 qc3626.d14.k2 qc3626.d22.k4,1.0,1.0,1.0,"Sinh viên chương trình đào tạo chất lượng cao đã tích lũy 50 tín chỉ là **sinh viên năm thứ hai**, vì mốc năm thứ hai của chương trình này là từ 40 đến 80 tín chỉ (Điều 17 khoản 2).
+
+Số tín chỉ dùng để xếp năm không tính các học phần tự chọn tự do, giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ (Điều 17 khoản 2).",qc3626.d17.k2,,,1.0,1.0,end_turn,False,2356,344,2.089,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:48+07:00,,dung,"Câu trả lời kết luận đúng là năm thứ hai và nêu đủ căn cứ (ngưỡng 40–80 tín chỉ cho CTĐT chất lượng cao) cùng lưu ý loại trừ các học phần tự chọn tự do, GDTC, GDQP-AN và kỹ năng bổ trợ, phù hợp với đáp án mẫu và quy chế.",z-ai/glm-5.3-flash,
+dev-s02,generated,conditional,False,qc3626.d17.k2,qc3626.d17.k2 qc3626.d47.k10 qc3626.d4.k2 qc3626.d26.k7 qc3626.d46.k1 qc3626.d47.k5 qc3626.d21.k1 qc3626.d3.k5 qc3626.d14.k2 qc3626.d22.k4,1.0,1.0,1.0,"Sinh viên chương trình đào tạo chất lượng cao có 50 tín chỉ tích lũy là **sinh viên năm thứ hai**, vì mức từ 40 đến 80 tín chỉ tương ứng với năm thứ hai (Điều 17 khoản 2).",qc3626.d17.k2,,,1.0,1.0,end_turn,False,2356,211,1.571,False,2,medium,claude-haiku-5-5,2026-10-27T15:08:50+07:00,,dung,"Kết luận đúng và nêu đủ căn cứ (chương trình chất lượng cao, 40–80 tín chỉ là năm thứ hai) cùng trích dẫn Điều 17 khoản 2 phù hợp với quy chế.",z-ai/glm-5.3-flash,
+dev-s03,generated,multi,False,qc3626.d43.k2 qc3626.d42.k5,qc3626.d42.k5 qc3626.d47.k5 qc3626.d43.k1 qc3626.d42.k2 qc3626.d43.k2 qc3626.d41.k1 qc3626.d39.k3 qc3626.d32.k1 qc3626.d41.k2 qc3626.d42.k4,1.0,1.0,1.0,"Điểm trung bình chung tích lũy (TBCTL) là điểm trung bình theo trọng số tín chỉ của các học phần đã đạt mà bạn tích lũy được, tính từ đầu khóa học đến thời điểm xem xét (Điều 42 khoản 5).
+
+**Cách tính:**
+
+1. **Quy đổi điểm chữ sang điểm số** theo thang 4 (Điều 43 khoản 1): A+ = 4,0; A = 3,7; B+ = 3,5; B = 3,0; C+ = 2,5; C = 2,0; D+ = 1,5; D = 1,0; F = 0.
+2. **Áp dụng công thức** (Điều 43 khoản 2):
+
+   A = [Σ(aᵢ × nᵢ)] / [Σ(nᵢ)]
+
+   Trong đó aᵢ là điểm số của học phần thứ i, nᵢ là số tín chỉ của học phần đó, và n là tổng số học phần đã tích lũy.
+3. **Làm tròn** kết quả đến 2 chữ số thập phân.
+
+**Lưu ý:** Kết quả đánh giá học phần giáo dục quốc phòng - an ninh và giáo dục thể chất không được tính vào TBCTL (Điều 43 khoản 2).
+
+TBCTL được dùng để xét cảnh báo học vụ, buộc thôi học và xếp hạng tốt nghiệp (Điều 43 khoản 2). Theo Điều 47 khoản 5, hạng tốt nghiệp được xác định từ TBCTL của toàn khóa: Xuất sắc (3,60–4,00), Giỏi (3,20–3,59), Khá (2,50–3,19), Trung bình (2,00–2,49).",qc3626.d42.k5 qc3626.d43.k1 qc3626.d43.k2 qc3626.d47.k5,,,1.0,0.5,end_turn,False,2047,944,4.42,False,0,medium,claude-haiku-5-5,2026-10-27T15:08:52+07:00,,dung,"Câu trả lời nêu đúng định nghĩa theo Điều 42 khoản 5, đúng công thức A = Σ(aᵢ × nᵢ)/Σ(nᵢ) và làm tròn 2 chữ số thập phân như đáp án mẫu; các chi tiết bổ sung không mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-s03,generated,multi,False,qc3626.d43.k2 qc3626.d42.k5,qc3626.d42.k5 qc3626.d47.k5 qc3626.d43.k1 qc3626.d42.k2 qc3626.d43.k2 qc3626.d41.k1 qc3626.d39.k3 qc3626.d32.k1 qc3626.d41.k2 qc3626.d42.k4,1.0,1.0,1.0,"Điểm trung bình chung tích lũy (TBCTL) được tính theo **trọng số tín chỉ** của các học phần đã đạt, từ đầu khóa học đến thời điểm xem xét:
+
+1. **Quy đổi điểm chữ sang điểm số:** A+ = 4,0; A = 3,7; B+ = 3,5; B = 3,0; C+ = 2,5; C = 2,0; D+ = 1,5; D = 1,0; F = 0 (Điều 43 khoản 1).
+
+2. **Áp dụng công thức:**
+   A = [Σ (aᵢ × nᵢ)] / [Σ nᵢ]
+   Trong đó: aᵢ là điểm của học phần thứ i, nᵢ là số tín chỉ của học phần đó, và tổng được lấy trên toàn bộ học phần đã tích lũy. Kết quả làm tròn đến 2 chữ số thập phân (Điều 43 khoản 2).
+
+3. **Phạm vi tính:** Chỉ tính các học phần đã được đánh giá loại đạt, tính từ đầu khóa học đến thời điểm xem xét (Điều 42 khoản 5). Kết quả các học phần Giáo dục quốc phòng – an ninh và Giáo dục thể chất không được tính vào điểm TBCTL (Điều 43 khoản 2).
+
+TBCTL được dùng để cảnh báo học vụ, xét buộc thôi học và xếp hạng tốt nghiệp (Điều 43 khoản 2).",qc3626.d43.k1 qc3626.d43.k2 qc3626.d42.k5,,,1.0,0.6667,end_turn,False,2047,770,3.68,False,1,medium,claude-haiku-5-5,2026-10-27T15:08:56+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: TBCTL là điểm trung bình theo trọng số tín chỉ của các học phần đã được đánh giá loại đạt tính từ đầu khóa học đến thời điểm xem xét, áp dụng công thức A = Σ(aᵢ × nᵢ)/Σnᵢ và làm tròn đến 2 chữ số thập phân.",z-ai/glm-5.3-flash,
+dev-s03,generated,multi,False,qc3626.d43.k2 qc3626.d42.k5,qc3626.d42.k5 qc3626.d47.k5 qc3626.d43.k1 qc3626.d42.k2 qc3626.d43.k2 qc3626.d41.k1 qc3626.d39.k3 qc3626.d32.k1 qc3626.d41.k2 qc3626.d42.k4,1.0,1.0,1.0,"Điểm trung bình chung tích lũy (TBCTL) được tính theo **trung bình có trọng số theo số tín chỉ** như sau:
+
+1. **Phạm vi học phần:** Chỉ tính các học phần sinh viên đã được đánh giá đạt và đã tích lũy, tính từ đầu khóa học đến thời điểm xem xét (Điều 42 khoản 5).
+
+2. **Quy đổi điểm chữ sang điểm số:** A+ = 4,0; A = 3,7; B+ = 3,5; B = 3,0; C+ = 2,5; C = 2,0; D+ = 1,5; D = 1,0; F = 0 (Điều 43 khoản 1).
+
+3. **Công thức:**
+   A = [Σ(aᵢ × nᵢ)] / [Σ nᵢ]
+   Trong đó aᵢ là điểm số của học phần thứ i, nᵢ là số tín chỉ của học phần đó. Kết quả làm tròn đến 2 chữ số thập phân (Điều 43 khoản 2).
+
+4. **Loại trừ:** Kết quả đánh giá học phần giáo dục quốc phòng - an ninh và giáo dục thể chất không được tính vào TBCTL (Điều 43 khoản 2).
+
+TBCTL được dùng để xét cảnh báo học vụ, buộc thôi học và xếp hạng tốt nghiệp (Điều 43 khoản 2). Hạng tốt nghiệp dựa trên TBCTL của toàn khóa học (Điều 47 khoản 5).",qc3626.d42.k5 qc3626.d43.k1 qc3626.d43.k2 qc3626.d47.k5,,,1.0,0.5,end_turn,False,2047,860,4.094,False,2,medium,claude-haiku-5-5,2026-10-27T15:09:00+07:00,,dung,"Câu trả lời nêu đúng và đủ các ý chính của đáp án mẫu: định nghĩa TBCTL theo trọng số tín chỉ của các học phần loại đạt tích lũy từ đầu khóa đến thời điểm xem xét, công thức A = Σ(aᵢ×nᵢ)/Σnᵢ và làm tròn đến 2 chữ số thập phân, không có nội dung mâu thuẫn với quy chế.",z-ai/glm-5.3-flash,
+dev-s04,generated,multi,False,qc3626.d5.k2 qc3626.d21.k2 qc3626.d41.k2 qc3626.d42.k5,qc3626.d5.k2 qc3626.d32.k1 qc3626.d43.k2 qc3626.d37.k1 qc3626.d41.k2 qc3626.d28.k2 qc3626.d23.k2 qc3626.d46.k3 qc3626.d21.k1 qc3626.d41.k1,0.5,0.5,1.0,"Những học phần không được tính vào điểm trung bình chung tích lũy gồm:
+
+- **Học phần điều kiện**: giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ. Kết quả của các học phần này không tính vào điểm trung bình chung học kỳ, điểm trung bình chung các học phần và điểm trung bình chung tích lũy, nhưng vẫn là điều kiện để xét tốt nghiệp (Điều 5 khoản 2 điểm g; Điều 43 khoản 2).
+- **Học phần đánh giá theo loại đạt không phân mức (P)**: các học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập (Điều 41 khoản 2 điểm b).",qc3626.d5.k2 qc3626.d43.k2 qc3626.d41.k2,,,0.5,0.6667,end_turn,False,2903,569,7.069,False,0,medium,claude-haiku-5-5,2026-10-27T15:09:04+07:00,,mot_phan,Câu trả lời nêu đúng học phần điều kiện và học phần loại P nhưng thiếu hai ý chính của đáp án mẫu: học phần tự chọn tự do (Điều 21 khoản 2 điểm d) và học phần chưa đạt (Điều 42 khoản 5).,z-ai/glm-5.3-flash,
+dev-s04,generated,multi,False,qc3626.d5.k2 qc3626.d21.k2 qc3626.d41.k2 qc3626.d42.k5,qc3626.d5.k2 qc3626.d32.k1 qc3626.d43.k2 qc3626.d37.k1 qc3626.d41.k2 qc3626.d28.k2 qc3626.d23.k2 qc3626.d46.k3 qc3626.d21.k1 qc3626.d41.k1,0.5,0.5,1.0,"Những học phần sau **không được tính vào điểm trung bình chung tích lũy**:
+
+1. **Học phần điều kiện**, gồm giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ. Kết quả các học phần này không tính vào điểm trung bình chung học kỳ, điểm trung bình chung các học phần và điểm trung bình chung tích lũy, nhưng vẫn là điều kiện để xét tốt nghiệp (Điều 5 khoản 2 điểm g). Điều 43 khoản 2 nêu rõ việc loại trừ này đối với giáo dục quốc phòng - an ninh và giáo dục thể chất.
+
+2. **Học phần đạt không phân mức (P)**, tức các học phần chỉ yêu cầu đạt, điểm từ 5,0 trở lên. Các học phần này không tính vào điểm trung bình học tập (Điều 41 khoản 2 điểm b).",qc3626.d5.k2 qc3626.d43.k2 qc3626.d41.k2,,,0.5,0.6667,end_turn,False,2903,767,3.929,False,1,medium,claude-haiku-5-5,2026-10-27T15:09:11+07:00,,mot_phan,Câu trả lời nêu đúng học phần điều kiện (Điều 5.k2.g) và học phần chỉ yêu cầu đạt loại P (Điều 41.k2.b) nhưng thiếu hai ý chính: học phần tự chọn tự do (Điều 21.k2.d) và học phần chưa đạt không được tính vì điểm TBC tích lũy chỉ tính học phần đạt (Điều 42.k5).,z-ai/glm-5.3-flash,
+dev-s04,generated,multi,False,qc3626.d5.k2 qc3626.d21.k2 qc3626.d41.k2 qc3626.d42.k5,qc3626.d5.k2 qc3626.d32.k1 qc3626.d43.k2 qc3626.d37.k1 qc3626.d41.k2 qc3626.d28.k2 qc3626.d23.k2 qc3626.d46.k3 qc3626.d21.k1 qc3626.d41.k1,0.5,0.5,1.0,"Những học phần sau không được tính vào điểm trung bình chung tích lũy:
+
+1. **Học phần điều kiện**, gồm giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ. Kết quả của các học phần này không tính vào điểm trung bình chung tích lũy, nhưng là điều kiện để xét tốt nghiệp (Điều 5 khoản 2 điểm g; Điều 43 khoản 2).
+2. **Học phần đạt không phân mức** (xếp loại P, từ 5,0 trở lên), vì các học phần này ""không tính vào điểm trung bình học tập"" (Điều 41 khoản 2 điểm b).",qc3626.d5.k2 qc3626.d43.k2 qc3626.d41.k2,,,0.5,0.6667,end_turn,False,2903,500,2.602,False,2,medium,claude-haiku-5-5,2026-10-27T15:09:15+07:00,,mot_phan,Câu trả lời nêu đúng học phần điều kiện và học phần loại P nhưng thiếu hai ý chính của đáp án mẫu: học phần tự chọn tự do (Điều 21 khoản 2 điểm d) và học phần chưa đạt (Điều 42 khoản 5).,z-ai/glm-5.3-flash,
+dev-s05,generated,multi,False,qc3626.d46.k1 qc3626.d13.k3,qc3626.d46.k1 qc3626.d46.k2 qc3626.d27.k4 qc3626.d26.k7 qc3626.d27.k1 qc3626.d47.k1 qc3626.d33.k3 qc3626.d13.k1 qc3626.d3.k5 qc3626.d10.k2,0.5,0.5,1.0,"Sinh viên chương trình đào tạo chất lượng cao cần đáp ứng các điều kiện sau để được xét công nhận tốt nghiệp (Điều 46 khoản 1):
+
+a) Hoàn thành chương trình đào tạo trong thời gian học tập tối đa của khóa học (Điều 46 khoản 1 điểm a).
+b) Không đang trong thời gian bị truy cứu trách nhiệm hình sự tính đến thời điểm xét tốt nghiệp (Điều 46 khoản 1 điểm b).
+c) Tích lũy đủ số tín chỉ quy định trong chương trình đào tạo (Điều 46 khoản 1 điểm c).
+d) Điểm trung bình chung tích lũy đạt từ **2,50 trở lên**. Đây là ngưỡng riêng của chương trình tài năng, chất lượng cao; chương trình chuẩn là 2,00 (Điều 46 khoản 1 điểm d).
+đ) Đạt trình độ ngoại ngữ theo quy định tại Điều 13 khoản 3 (Điều 46 khoản 1 điểm đ).
+e) Đáp ứng yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù theo quy định bằng văn bản của Đại học Quốc gia Hà Nội và đơn vị đào tạo (Điều 46 khoản 1 điểm e). Nội dung cụ thể thuộc thẩm quyền quy định của đơn vị đào tạo, quy chế này không quy định chi tiết.
+g) Được đánh giá đạt các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ (Điều 46 khoản 1 điểm g).
+h) Nếu đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học, phải gửi đơn đề nghị xét tốt nghiệp đến Phòng Đào tạo (Điều 46 khoản 1 điểm h).
+
+Trường hợp không đủ điều kiện tốt nghiệp chương trình tài năng, chất lượng cao, sinh viên được quy đổi điểm theo Điều 22 để xem xét công nhận tốt nghiệp và cấp bằng đại học chính quy hệ chuẩn của ngành tương ứng (Điều 46 khoản 2).",qc3626.d46.k1 qc3626.d13.k3 qc3626.d22 qc3626.d46.k2,,,1.0,0.5,end_turn,False,2960,1508,6.196,False,0,medium,claude-haiku-5-5,2026-10-27T15:09:18+07:00,,mot_phan,"Câu trả lời nêu đủ 8 điều kiện a–h, ngưỡng điểm TBC 2,50 và điều kiện điểm e theo quy định của ĐHQGHN và đơn vị đào tạo, nhưng thiếu ngưỡng cụ thể 'trình độ ngoại ngữ bậc 4' (chỉ dẫn chiếu Điều 13 khoản 3 mà không nêu rõ bậc 4).",z-ai/glm-5.3-flash,
+dev-s05,generated,multi,False,qc3626.d46.k1 qc3626.d13.k3,qc3626.d46.k1 qc3626.d46.k2 qc3626.d27.k4 qc3626.d26.k7 qc3626.d27.k1 qc3626.d47.k1 qc3626.d33.k3 qc3626.d13.k1 qc3626.d3.k5 qc3626.d10.k2,0.5,0.5,1.0,"Sinh viên chương trình đào tạo chất lượng cao được xét tốt nghiệp khi đáp ứng đủ các điều kiện sau (Điều 46 khoản 1):
+
+- **Thời gian học:** hoàn thành chương trình trong thời gian học tập tối đa của khóa học (Điều 46 khoản 1 điểm a).
+- **Trách nhiệm hình sự:** tại thời điểm xét, không đang trong thời gian bị truy cứu trách nhiệm hình sự (Điều 46 khoản 1 điểm b).
+- **Tín chỉ:** tích lũy đủ số tín chỉ quy định trong chương trình đào tạo (Điều 46 khoản 1 điểm c).
+- **Điểm trung bình chung tích lũy:** đạt từ **2,50** trở lên. Đây là ngưỡng riêng của chương trình tài năng, chất lượng cao; chương trình chuẩn là 2,00 (Điều 46 khoản 1 điểm d).
+- **Ngoại ngữ:** đạt trình độ theo quy định tại khoản 3 Điều 13 (Điều 46 khoản 1 điểm đ).
+- **Học phần chuyên môn đặc thù:** đáp ứng yêu cầu kết quả học tập đối với một số học phần chuyên môn đặc thù theo quy định bằng văn bản của Đại học Quốc gia Hà Nội và đơn vị đào tạo (Điều 46 khoản 1 điểm e). Nội dung cụ thể do đơn vị đào tạo quy định, nên bạn cần tra văn bản của đơn vị mình.
+- **Học phần bổ trợ:** đạt các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ (Điều 46 khoản 1 điểm g).
+- **Đơn đề nghị (nếu cần):** nếu đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học, phải gửi đơn đến Phòng Đào tạo đề nghị xét tốt nghiệp (Điều 46 khoản 1 điểm h).
+
+Nếu không đủ điều kiện tốt nghiệp chương trình chất lượng cao, sinh viên có thể được quy đổi điểm theo Điều 22 để xem xét công nhận tốt nghiệp và cấp bằng đại học chính quy hệ chuẩn của ngành tương ứng (Điều 46 khoản 2).",qc3626.d46.k1 qc3626.d13.k3 qc3626.d22 qc3626.d46.k2,,,1.0,0.5,end_turn,False,2960,1545,6.469,False,1,medium,claude-haiku-5-5,2026-10-27T15:09:24+07:00,,mot_phan,"Câu trả lời nêu đủ 8 điều kiện a–h, ngưỡng GPA 2,50 và điểm e do ĐHQGHN và đơn vị đào tạo quy định, nhưng không nêu rõ ngưỡng ngoại ngữ bậc 4 theo khoản 3 Điều 13 như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s05,generated,multi,False,qc3626.d46.k1 qc3626.d13.k3,qc3626.d46.k1 qc3626.d46.k2 qc3626.d27.k4 qc3626.d26.k7 qc3626.d27.k1 qc3626.d47.k1 qc3626.d33.k3 qc3626.d13.k1 qc3626.d3.k5 qc3626.d10.k2,0.5,0.5,1.0,"Sinh viên chương trình đào tạo chất lượng cao được xét tốt nghiệp khi đáp ứng đủ các điều kiện sau (Điều 46 khoản 1):
+
+- **Thời gian học:** Hoàn thành chương trình trong thời gian học tập tối đa của khóa học (điểm a).
+- **Không bị truy cứu trách nhiệm hình sự:** Tại thời điểm xét tốt nghiệp, không trong thời gian bị truy cứu trách nhiệm hình sự (điểm b).
+- **Tín chỉ:** Tích lũy đủ số tín chỉ quy định trong chương trình đào tạo (điểm c).
+- **Điểm trung bình chung tích lũy:** Đạt từ **2,50** trở lên. Đây là ngưỡng cao hơn so với chương trình chuẩn (2,00) (điểm d).
+- **Ngoại ngữ:** Đạt trình độ ngoại ngữ theo Điều 13 khoản 3 (điểm đ).
+- **Học phần chuyên môn đặc thù:** Đáp ứng yêu cầu kết quả học tập đối với một số học phần chuyên môn đặc thù theo quy định bằng văn bản của Đại học Quốc gia Hà Nội và đơn vị đào tạo (điểm e).
+- **Học phần đánh giá đạt:** Đạt các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ (điểm g).
+- **Đơn đề nghị:** Nếu đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học, phải gửi đơn đến Phòng Đào tạo đề nghị xét tốt nghiệp (điểm h).
+
+**Trường hợp không đủ điều kiện:** Nếu không đáp ứng điều kiện tốt nghiệp chương trình chất lượng cao, sinh viên vẫn có thể được xem xét công nhận tốt nghiệp và cấp bằng đại học chính quy hệ chuẩn của ngành tương ứng, sau khi điểm được quy đổi theo Điều 22 (Điều 46 khoản 2).",qc3626.d46.k1 qc3626.d13.k3 qc3626.d22 qc3626.d46.k2,,,1.0,0.5,end_turn,False,2960,1426,6.359,False,2,medium,claude-haiku-5-5,2026-10-27T15:09:31+07:00,,mot_phan,"Câu trả lời nêu đủ 8 điều kiện điểm a–h và ngưỡng điểm TBC 2,50 cho chương trình chất lượng cao, nhưng chỉ dẫn chiếu Điều 13 khoản 3 mà không nêu ngưỡng ngoại ngữ bậc 4 như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s06,generated,multi,False,qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,qc3626.d44.k2 qc3626.d36.k2 qc3626.d36.k3 qc3626.d47.k10 qc3626.d41.k5 qc3626.d23.k2 qc3626.d51 qc3626.d47.k7 qc3626.d35.k4 qc3626.d24.k1,0.5,0.75,1.0,"Theo Điều 44 khoản 2, sau mỗi học kỳ, sinh viên bị buộc thôi học nếu thuộc một trong các trường hợp sau:
+
+a) Số lần cảnh báo kết quả học tập vượt quá giới hạn do thủ trưởng đơn vị đào tạo quy định (Điều 44 khoản 2 điểm a).
+
+b) Vượt quá thời gian tối đa được phép học theo Điều 17 khoản 1 (Điều 44 khoản 2 điểm b).
+
+c) Bị kỷ luật lần thứ hai vì thi hộ hoặc nhờ người thi hộ theo Điều 35 khoản 4 điểm d, hoặc bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên của đơn vị đào tạo (Điều 44 khoản 2 điểm c).
+
+d) Không đăng ký học 2 học kỳ liên tiếp (Điều 44 khoản 2 điểm d).
+
+đ) Hết thời hạn nghỉ học tạm thời mà không có đơn xin học trở lại theo Điều 36 khoản 3 (Điều 44 khoản 2 điểm đ).
+
+Sau khi có quyết định buộc thôi học, đơn vị đào tạo phải thông báo trả về địa phương nơi sinh viên có hộ khẩu thường trú trong thời hạn tối đa 1 tháng (Điều 44 khoản 2, đoạn cuối).",qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,,,1.0,1.0,end_turn,False,2565,895,3.915,False,0,medium,claude-haiku-5-5,2026-10-27T15:09:37+07:00,,dung,"Câu trả lời nêu đủ cả 5 trường hợp buộc thôi học theo Điều 44 khoản 2 với căn cứ đúng (Điều 17 khoản 1, Điều 35 khoản 4 điểm d, Điều 36 khoản 3), khớp với đáp án mẫu và nguyên văn quy chế.",z-ai/glm-5.3-flash,
+dev-s06,generated,multi,False,qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,qc3626.d44.k2 qc3626.d36.k2 qc3626.d36.k3 qc3626.d47.k10 qc3626.d41.k5 qc3626.d23.k2 qc3626.d51 qc3626.d47.k7 qc3626.d35.k4 qc3626.d24.k1,0.5,0.75,1.0,"Sinh viên bị buộc thôi học khi thuộc một trong các trường hợp sau, được xét sau mỗi học kỳ (Điều 44 khoản 2):
+
+- **Điểm a:** Số lần cảnh báo kết quả học tập vượt quá giới hạn do thủ trưởng đơn vị đào tạo quy định.
+- **Điểm b:** Vượt quá thời gian tối đa được phép học theo Điều 17 khoản 1.
+- **Điểm c:** Bị kỷ luật lần thứ hai vì thi hộ hoặc nhờ người thi hộ (Điều 35 khoản 4 điểm d), hoặc bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên.
+- **Điểm d:** Không đăng ký học 2 học kỳ liên tiếp.
+- **Điểm đ:** Hết thời hạn nghỉ học tạm thời mà không có đơn xin học trở lại (Điều 36 khoản 3).
+
+Sau khi có quyết định buộc thôi học, đơn vị đào tạo phải thông báo trả về địa phương nơi sinh viên có hộ khẩu thường trú trong thời hạn chậm nhất 1 tháng (Điều 44 khoản 2).",qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,,,1.0,1.0,end_turn,False,2565,702,3.272,False,1,medium,claude-haiku-5-5,2026-10-27T15:09:41+07:00,,dung,"Câu trả lời nêu đúng và đủ cả 5 trường hợp buộc thôi học theo Điều 44 khoản 2 với căn cứ và ngưỡng trùng khớp đáp án mẫu, kèm thêm thông tin chính xác về nghĩa vụ thông báo trả về địa phương trong 1 tháng.",z-ai/glm-5.3-flash,
+dev-s06,generated,multi,False,qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,qc3626.d44.k2 qc3626.d36.k2 qc3626.d36.k3 qc3626.d47.k10 qc3626.d41.k5 qc3626.d23.k2 qc3626.d51 qc3626.d47.k7 qc3626.d35.k4 qc3626.d24.k1,0.5,0.75,1.0,"Theo **Điều 44 khoản 2**, sau mỗi học kỳ, sinh viên bị buộc thôi học nếu thuộc một trong các trường hợp sau:
+
+a) Số lần cảnh báo kết quả học tập vượt quá giới hạn do thủ trưởng đơn vị đào tạo quy định. Giới hạn cụ thể do đơn vị đào tạo quy định, quy chế không nêu con số.
+
+b) Vượt quá thời gian tối đa được phép học theo **Điều 17 khoản 1**.
+
+c) Bị kỷ luật lần thứ hai vì thi hộ hoặc nhờ người thi hộ (**Điều 35 khoản 4 điểm d**), hoặc bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên của đơn vị đào tạo.
+
+d) Không đăng ký học 2 học kỳ liên tiếp.
+
+đ) Hết hạn nghỉ học tạm thời mà không có đơn xin học trở lại theo **Điều 36 khoản 3**.
+
+Chậm nhất 1 tháng sau khi có quyết định buộc thôi học, đơn vị đào tạo phải thông báo trả về địa phương nơi sinh viên có hộ khẩu thường trú (**Điều 44 khoản 2**).",qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,,,1.0,1.0,end_turn,False,2565,752,3.536,False,2,medium,claude-haiku-5-5,2026-10-27T15:09:45+07:00,,dung,"Câu trả lời nêu đúng và đủ cả 5 trường hợp buộc thôi học theo Điều 44 khoản 2 với các căn cứ Điều 17 khoản 1, Điều 35 khoản 4 điểm d và Điều 36 khoản 3 giống đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s07,generated,single,True,qc3626.d8.k1,qc3626.d8.k1 qc3626.d17.k2 qc3626.d14.k2 qc3626.d17.k1 qc3626.d26.k1 qc3626.d5.k1 qc3626.d21.k1 qc3626.d11.k5 qc3626.d5.k2 qc3626.d51,1.0,1.0,1.0,"Quy chế không quy định mức học phí cụ thể cho ngành Khoa học máy tính (KHMT) năm 2026, nên tôi không thể cho bạn con số cụ thể.
+
+Căn cứ quy chế:
+- Học phí được tính theo công thức M = a × Σ(h_j × n_i), trong đó a là định mức học phí cho một tín chỉ, h_j là hệ số học phí theo từng loại học phần (học lần đầu, học lại, học cải thiện điểm, học tự chọn tự do) và n_i là số tín chỉ của học phần (Điều 8 khoản 1 điểm b).
+- Thủ trưởng đơn vị đào tạo quản lý ngành học xây dựng định mức học phí một tín chỉ và hệ số học phí của từng học phần, báo cáo Giám đốc Đại học Quốc gia Hà Nội (Điều 8 khoản 1 điểm b).
+- Thủ trưởng đơn vị đào tạo cũng quy định cách thu, nộp và xét miễn giảm học phí, và công bố cho sinh viên (Điều 8 khoản 1 điểm b).
+
+Vì vậy, để biết mức học phí năm 2026 của ngành KHMT, bạn cần xem thông báo học phí do đơn vị đào tạo quản lý ngành công bố.",qc3626.d8.k1,,,1.0,1.0,end_turn,False,4858,733,3.851,False,0,medium,claude-haiku-5-5,2026-10-27T15:09:48+07:00,,dung,"Câu trả lời kết luận đúng rằng quy chế không quy định mức học phí cụ thể, và nêu đủ căn cứ (công thức tính học phí và việc thủ trưởng đơn vị đào tạo xây dựng định mức học phí một tín chỉ theo Điều 8 khoản 1 điểm b) khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s07,generated,single,True,qc3626.d8.k1,qc3626.d8.k1 qc3626.d17.k2 qc3626.d14.k2 qc3626.d17.k1 qc3626.d26.k1 qc3626.d5.k1 qc3626.d21.k1 qc3626.d11.k5 qc3626.d5.k2 qc3626.d51,1.0,1.0,1.0,"Quy chế không quy định số học phí cụ thể cho ngành Khoa học máy tính năm 2026.
+
+Căn cứ Điều 8 khoản 1 điểm b:
+
+- **Ai xây dựng định mức:** Thủ trưởng đơn vị đào tạo quản lý ngành học xây dựng định mức học phí cho một tín chỉ và hệ số học phí của từng học phần, phù hợp với quy định của nhà nước và của Đại học Quốc gia Hà Nội, rồi báo cáo Giám đốc Đại học Quốc gia Hà Nội.
+- **Cách tính:** M = a × Σ(h_j × n_i), trong đó a là định mức học phí một tín chỉ, h_j là hệ số theo loại học phần (học lần đầu h1, học lại h2, học cải thiện điểm h3, học tự chọn tự do h4), n_i là số tín chỉ của học phần.
+- **Cách thu và miễn giảm:** Thủ trưởng đơn vị đào tạo quy định cụ thể và công bố cho sinh viên biết.
+
+Để biết mức học phí năm 2026 của ngành Khoa học máy tính, bạn cần tra thông báo của đơn vị đào tạo quản lý ngành này.",qc3626.d8.k1,,,1.0,1.0,end_turn,False,4858,797,3.973,False,1,medium,claude-haiku-5-5,2026-10-27T15:09:52+07:00,,dung,"Câu trả lời kết luận đúng rằng quy chế không quy định mức học phí cụ thể, nêu đủ căn cứ Điều 8 khoản 1 điểm b với công thức tính học phí và việc giao thủ trưởng đơn vị đào tạo xây dựng định mức học phí cho một tín chỉ.",z-ai/glm-5.3-flash,
+dev-s07,generated,single,True,qc3626.d8.k1,qc3626.d8.k1 qc3626.d17.k2 qc3626.d14.k2 qc3626.d17.k1 qc3626.d26.k1 qc3626.d5.k1 qc3626.d21.k1 qc3626.d11.k5 qc3626.d5.k2 qc3626.d51,1.0,1.0,1.0,"Quy chế không quy định mức học phí cụ thể cho ngành Khoa học máy tính hay bất kỳ ngành nào trong năm 2026.
+
+Theo Điều 8 khoản 1 điểm b, học phí được tính theo công thức M = a × Σ(h_j × n_i), trong đó:
+- **a** là định mức học phí cho một tín chỉ, theo hình thức và chương trình đào tạo.
+- **h_j** là hệ số học phí: học lần đầu (h1), học lại (h2), học cải thiện điểm (h3), học tự chọn tự do (h4).
+- **n_i** là số tín chỉ của học phần thứ i.
+
+Thủ trưởng đơn vị đào tạo xây dựng định mức học phí một tín chỉ và hệ số học phí của từng học phần, phù hợp với quy định của nhà nước và Đại học Quốc gia Hà Nội, rồi báo cáo Giám đốc Đại học Quốc gia Hà Nội (Điều 8 khoản 1 điểm b). Vì vậy, bạn cần tra mức học phí do đơn vị đào tạo quản lý ngành này công bố cho năm 2026.",qc3626.d8.k1,,,1.0,1.0,end_turn,False,4858,723,3.644,False,2,medium,claude-haiku-5-5,2026-10-27T15:09:56+07:00,,dung,"Câu trả lời khớp với đáp án mẫu: kết luận đúng rằng quy chế không quy định mức học phí cụ thể, nêu đủ căn cứ (Điều 8 khoản 1 điểm b), công thức tính học phí và việc giao thủ trưởng đơn vị đào tạo xây dựng định mức học phí một tín chỉ.",z-ai/glm-5.3-flash,
+dev-s08,generated,conditional,True,qc3626.d17.k2 qc3626.d44.k1,qc3626.d44.k1 qc3626.d47.k7 qc3626.d40.k2 qc3626.d21.k1 qc3626.d17.k2 qc3626.d47.k5 qc3626.d41.k5 qc3626.d43.k2 qc3626.d22.k3 qc3626.d26.k6,1.0,1.0,1.0,"**Có thể bị cảnh báo học vụ**, nếu đơn vị đào tạo áp dụng điều kiện này.
+
+- **Xếp năm đào tạo:** Với chương trình chất lượng cao, sinh viên có 40–80 tín chỉ tích lũy được xếp năm thứ hai (Điều 17 khoản 2). Sinh viên có 50 tín chỉ là sinh viên năm thứ hai.
+- **Điều kiện xét:** Sinh viên năm thứ hai bị cảnh báo nếu điểm trung bình chung tích lũy dưới 1,40 (Điều 44 khoản 1 điểm a). Với TBC tích lũy 1,35, sinh viên này thuộc diện bị xét cảnh báo theo điều kiện này.
+- **Điều kiện áp dụng:** Thủ trưởng đơn vị đào tạo quy định áp dụng một hoặc hai trong ba điều kiện của Điều 44 khoản 1 (điểm a, b, c) để cảnh báo, và quy định số lần cảnh báo nhưng không quá 2 lần liên tiếp (Điều 44 khoản 1). Vì vậy cần kiểm tra quy định của đơn vị quản lý chương trình của bạn về việc có áp dụng điều kiện điểm a hay không.
+
+Nếu đơn vị có áp dụng điều kiện điểm b (TBC học kỳ) hoặc điểm c (tín chỉ F tồn đọng, tín chỉ không đạt trong học kỳ), cần thêm thông tin về kết quả học kỳ đó để xác định.",qc3626.d17.k2 qc3626.d44.k1,,,1.0,1.0,end_turn,False,2664,964,4.705,False,0,medium,claude-haiku-5-5,2026-10-27T15:10:00+07:00,,dung,"Câu trả lời nêu đúng căn cứ (Điều 17 khoản 2: 50 tín chỉ CLC là năm thứ hai; Điều 44 khoản 1 điểm a) và ngưỡng 1,40 với TBC tích lũy 1,35, đồng thời chỉ ra việc thủ trưởng đơn vị chọn 1–2 trong 3 điều kiện cảnh báo nên cần đối chiếu quy định đơn vị, khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s08,generated,conditional,True,qc3626.d17.k2 qc3626.d44.k1,qc3626.d44.k1 qc3626.d47.k7 qc3626.d40.k2 qc3626.d21.k1 qc3626.d17.k2 qc3626.d47.k5 qc3626.d41.k5 qc3626.d43.k2 qc3626.d22.k3 qc3626.d26.k6,1.0,1.0,1.0,"**Có thể bị cảnh báo học vụ**, nhưng cần lưu ý thêm một điều kiện.
+
+- **Xếp năm đào tạo:** Với chương trình chất lượng cao, 50 tín chỉ tích lũy thuộc khoảng 40–80 tín chỉ, nên bạn là sinh viên **năm thứ hai** (Điều 17 khoản 2).
+- **Điều kiện điểm a:** Sinh viên năm thứ hai bị xét khi điểm trung bình chung tích lũy dưới 1,40. Điểm 1,35 thấp hơn ngưỡng này, nên bạn **đáp ứng điều kiện a** (Điều 44 khoản 1 điểm a).
+- **Điều kiện cần thêm:** Quy chế cho phép thủ trưởng đơn vị đào tạo chọn áp dụng **một hoặc hai** trong ba điều kiện (điểm a, b, c) để cảnh báo, và quy định số lần cảnh báo nhưng không quá 2 lần liên tiếp (Điều 44 khoản 1). Vì vậy, việc bạn có bị cảnh báo hay không còn phụ thuộc vào việc đơn vị đào tạo của bạn có áp dụng điều kiện a hay không. Bạn nên hỏi trực tiếp đơn vị đào tạo để biết quy định cụ thể.
+
+Ngoài ra, cảnh báo được xét theo từng học kỳ, và câu hỏi chưa cho biết điểm trung bình học kỳ hay số tín chỉ học phần F tồn đọng, nên tôi chưa thể đánh giá điều kiện b và c.",qc3626.d17.k2 qc3626.d44.k1,,,1.0,1.0,end_turn,False,2664,1130,5.696,False,1,medium,claude-haiku-5-5,2026-10-27T15:10:05+07:00,,dung,"Câu trả lời kết luận đúng, nêu đủ căn cứ (Điều 17 khoản 2 xếp năm thứ hai cho CLC với 50 tín chỉ, Điều 44 khoản 1 điểm a với ngưỡng 1,40) và lưu ý đúng việc thủ trưởng đơn vị đào tạo có thể chọn một hoặc hai trong ba điều kiện cảnh báo.",z-ai/glm-5.3-flash,
+dev-s08,generated,conditional,True,qc3626.d17.k2 qc3626.d44.k1,qc3626.d44.k1 qc3626.d47.k7 qc3626.d40.k2 qc3626.d21.k1 qc3626.d17.k2 qc3626.d47.k5 qc3626.d41.k5 qc3626.d43.k2 qc3626.d22.k3 qc3626.d26.k6,1.0,1.0,1.0,"**Có khả năng bị cảnh báo học vụ, nhưng còn phụ thuộc quy định của đơn vị đào tạo.**
+
+- **Xếp năm đào tạo:** Với chương trình chất lượng cao, sinh viên tích lũy từ 40 đến 80 tín chỉ là sinh viên năm thứ hai (Điều 17 khoản 2). Sinh viên 50 tín chỉ thuộc năm thứ hai.
+- **Ngưỡng cảnh báo:** Sinh viên năm thứ hai bị xét cảnh báo nếu điểm trung bình chung tích lũy dưới 1,40 (Điều 44 khoản 1 điểm a). TBC tích lũy 1,35 thấp hơn ngưỡng này nên đáp ứng điều kiện tại điểm a.
+- **Phạm vi áp dụng:** Thủ trưởng đơn vị đào tạo quy định áp dụng một hoặc hai trong ba điều kiện (điểm a, b, c) để cảnh báo, và quy định số lần cảnh báo nhưng không quá 2 lần liên tiếp (Điều 44 khoản 1, đoạn cuối). Vì vậy, nếu đơn vị của bạn chọn điều kiện a, bạn sẽ bị cảnh báo. Nếu đơn vị chỉ chọn điều kiện b hoặc c, bạn có thể không bị cảnh báo.
+
+Bạn nên kiểm tra quy định cụ thể của đơn vị đào tạo để biết đơn vị đã chọn những điều kiện nào.",qc3626.d17.k2 qc3626.d44.k1,,,1.0,1.0,end_turn,False,2664,1065,5.666,False,2,medium,claude-haiku-5-5,2026-10-27T15:10:11+07:00,,dung,"Câu trả lời nêu đúng kết luận, căn cứ (Điều 17 khoản 2 xếp năm thứ hai với 50 tín chỉ CLC, Điều 44 khoản 1 điểm a với ngưỡng TBC tích lũy dưới 1,40) và lưu ý thủ trưởng đơn vị chọn áp dụng điều kiện cảnh báo như đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s09,generated,single,True,qc3626.d44.k2 qc3626.d44.k1,qc3626.d44.k2 qc3626.d44.k1 qc3626.d47.k7 qc3626.d35.k4 qc3626.d40.k2 qc3626.d36.k2 qc3626.d47.k10 qc3626.d26.k6 qc3626.d47.k4 qc3626.d3.k5,1.0,1.0,1.0,"Quy chế **không quy định số lần cảnh báo cụ thể** dẫn đến buộc thôi học. Theo Điều 44 khoản 2 điểm a, sinh viên bị buộc thôi học khi ""có số lần cảnh báo kết quả học tập vượt quá giới hạn theo quy định của thủ trưởng đơn vị đào tạo"". Vì vậy, giới hạn này do thủ trưởng đơn vị đào tạo quy định.
+
+Ngoài ra, theo Điều 44 khoản 1 (đoạn cuối), thủ trưởng đơn vị đào tạo quy định số lần cảnh báo học vụ nhưng **không quá 2 lần liên tiếp**.
+
+Bạn nên tham khảo quy định chi tiết do Trường Đại học Công nghệ ban hành để biết con số cụ thể.",qc3626.d44.k2 qc3626.d44.k1,,,1.0,1.0,end_turn,False,3171,740,3.904,False,0,medium,claude-haiku-5-5,2026-10-27T15:10:16+07:00,,dung,"Câu trả lời nêu đúng kết luận rằng quy chế không quy định số lần cụ thể, giới hạn do thủ trưởng đơn vị đào tạo quy định nhưng không quá 2 lần liên tiếp, và vượt giới hạn thì bị buộc thôi học theo Điều 44 khoản 2 điểm a, trùng khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s09,generated,single,True,qc3626.d44.k2 qc3626.d44.k1,qc3626.d44.k2 qc3626.d44.k1 qc3626.d47.k7 qc3626.d35.k4 qc3626.d40.k2 qc3626.d36.k2 qc3626.d47.k10 qc3626.d26.k6 qc3626.d47.k4 qc3626.d3.k5,1.0,1.0,1.0,"Quy chế **không quy định cố định số lần cảnh báo học vụ dẫn đến buộc thôi học**. Việc này do thủ trưởng đơn vị đào tạo quyết định, và Trường Đại học Công nghệ (UET) sẽ có quy định riêng.
+
+- **Căn cứ buộc thôi học:** Sau mỗi học kỳ, sinh viên bị buộc thôi học nếu có số lần cảnh báo kết quả học tập vượt quá giới hạn do thủ trưởng đơn vị đào tạo quy định (Điều 44 khoản 2 điểm a).
+- **Căn cứ số lần cảnh báo:** Thủ trưởng đơn vị đào tạo quy định áp dụng một hoặc hai trong ba điều kiện cảnh báo học vụ và quy định số lần cảnh báo, nhưng không quá 2 lần liên tiếp (Điều 44 khoản 1).
+
+Để biết con số cụ thể tại UET, bạn cần tra quy định của nhà trường về số lần cảnh báo học vụ tối đa.",qc3626.d44.k2 qc3626.d44.k1,,,1.0,1.0,end_turn,False,3171,887,4.274,False,1,medium,claude-haiku-5-5,2026-10-27T15:10:20+07:00,,dung,"Câu trả lời đúng khi nêu quy chế không cố định số lần, thủ trưởng đơn vị quy định nhưng không quá 2 lần liên tiếp (Điều 44 khoản 1) và vượt giới hạn thì buộc thôi học (Điều 44 khoản 2 điểm a), khớp với đáp án mẫu.",z-ai/glm-5.3-flash,
+dev-s09,generated,single,True,qc3626.d44.k2 qc3626.d44.k1,qc3626.d44.k2 qc3626.d44.k1 qc3626.d47.k7 qc3626.d35.k4 qc3626.d40.k2 qc3626.d36.k2 qc3626.d47.k10 qc3626.d26.k6 qc3626.d47.k4 qc3626.d3.k5,1.0,1.0,1.0,"Quy chế không quy định một con số cố định cho Trường Đại học Công nghệ (UET).
+
+- **Căn cứ giao quyền:** Điều 44 khoản 2 điểm a buộc thôi học khi sinh viên có số lần cảnh báo kết quả học tập vượt quá giới hạn do **thủ trưởng đơn vị đào tạo** quy định. Số lần cụ thể của UET do thủ trưởng đơn vị quy định.
+- **Giới hạn chung:** Theo Điều 44 khoản 1, thủ trưởng đơn vị quy định số lần cảnh báo học vụ nhưng **không quá 2 lần liên tiếp**.
+
+Để biết số lần cụ thể áp dụng tại UET, bạn cần tra cứu quy định của Trường Đại học Công nghệ.",qc3626.d44.k2 qc3626.d44.k1,,,1.0,1.0,end_turn,False,3171,577,3.366,False,2,medium,claude-haiku-5-5,2026-10-27T15:10:25+07:00,,dung,"Câu trả lời khớp đáp án mẫu: quy chế không nêu số cố định, thủ trưởng đơn vị quy định số lần cảnh báo nhưng không quá 2 lần liên tiếp (Điều 44 khoản 1), vượt giới hạn thì buộc thôi học (Điều 44 khoản 2 điểm a).",z-ai/glm-5.3-flash,
+dev-s10,generated,multi,False,qc3626.d5.k2 qc3626.d43.k2 qc3626.d46.k1,qc3626.d5.k2 qc3626.d47.k5 qc3626.d39.k3 qc3626.d43.k2 qc3626.d26.k4 qc3626.d46.k1 qc3626.d46.k3 qc3626.d46.k2 qc3626.d37.k1 qc3626.d47.k10,0.6667,1.0,1.0,"**Không tính vào điểm trung bình chung tích lũy, nhưng là điều kiện bắt buộc để xét tốt nghiệp.**
+
+- **Không tính vào GPA:** Kết quả đánh giá học phần giáo dục thể chất không tính vào điểm trung bình chung học kỳ, điểm trung bình chung các học phần và điểm trung bình chung tích lũy (Điều 43 khoản 2; Điều 5 khoản 2 điểm g).
+- **Là điều kiện tốt nghiệp:** Học phần giáo dục thể chất thuộc nhóm học phần điều kiện, nên sinh viên phải hoàn thành để đủ điều kiện xét tốt nghiệp (Điều 5 khoản 2 điểm g).",qc3626.d43.k2 qc3626.d5.k2,,,0.6667,1.0,end_turn,False,2457,563,2.911,False,0,medium,claude-haiku-5-5,2026-10-27T15:10:28+07:00,,dung,"Câu trả lời kết luận đúng cả hai ý (không tính vào TBC tích lũy và là điều kiện xét tốt nghiệp) với căn cứ đúng là Điều 43 khoản 2 và Điều 5 khoản 2 điểm g, trong đó điểm g nêu rõ học phần GDTC là điều kiện để xét tốt nghiệp.",z-ai/glm-5.3-flash,
+dev-s10,generated,multi,False,qc3626.d5.k2 qc3626.d43.k2 qc3626.d46.k1,qc3626.d5.k2 qc3626.d47.k5 qc3626.d39.k3 qc3626.d43.k2 qc3626.d26.k4 qc3626.d46.k1 qc3626.d46.k3 qc3626.d46.k2 qc3626.d37.k1 qc3626.d47.k10,0.6667,1.0,1.0,"**Không tính vào điểm trung bình chung tích lũy, nhưng là điều kiện để xét tốt nghiệp.**
+
+- **Không tính vào điểm TBC tích lũy:** Kết quả đánh giá học phần giáo dục thể chất không tính vào điểm trung bình chung học kỳ, điểm trung bình chung các học phần và điểm trung bình chung tích lũy (Điều 43 khoản 2).
+- **Là điều kiện tốt nghiệp:** Học phần giáo dục thể chất thuộc nhóm học phần điều kiện. Kết quả đánh giá các học phần này không tính vào điểm trung bình, nhưng là điều kiện để xét tốt nghiệp (Điều 5 khoản 2 điểm g).",qc3626.d43.k2 qc3626.d5.k2,,,0.6667,1.0,end_turn,False,2457,417,2.594,False,1,medium,claude-haiku-5-5,2026-10-27T15:10:31+07:00,,dung,"Câu trả lời đúng cả hai ý chính (không tính vào TBC tích lũy và là điều kiện xét tốt nghiệp) với căn cứ pháp lý chính xác (Điều 5 khoản 2 điểm g và Điều 43 khoản 2), trong đó Điều 5 khoản 2 điểm g đã trực tiếp khẳng định học phần điều kiện là điều kiện để xét tốt nghiệp.",z-ai/glm-5.3-flash,
+dev-s10,generated,multi,False,qc3626.d5.k2 qc3626.d43.k2 qc3626.d46.k1,qc3626.d5.k2 qc3626.d47.k5 qc3626.d39.k3 qc3626.d43.k2 qc3626.d26.k4 qc3626.d46.k1 qc3626.d46.k3 qc3626.d46.k2 qc3626.d37.k1 qc3626.d47.k10,0.6667,1.0,1.0,"**Không tính vào điểm trung bình chung tích lũy, nhưng bắt buộc phải đạt để xét tốt nghiệp.**
+
+- **Không tính vào GPA:** Kết quả đánh giá học phần giáo dục thể chất không tính vào điểm trung bình chung học kỳ, điểm trung bình chung các học phần và điểm trung bình chung tích lũy (Điều 43 khoản 2; Điều 5 khoản 2 điểm g).
+- **Là điều kiện tốt nghiệp:** Học phần giáo dục thể chất thuộc nhóm học phần điều kiện, là điều kiện để xét tốt nghiệp (Điều 5 khoản 2 điểm g).",qc3626.d43.k2 qc3626.d5.k2,,,0.6667,1.0,end_turn,False,2457,515,4.019,False,2,medium,claude-haiku-5-5,2026-10-27T15:10:34+07:00,,dung,Kết luận đúng (GDTC không tính vào TBC tích lũy nhưng là điều kiện xét tốt nghiệp) và đã nêu đủ căn cứ chính (Điều 5 khoản 2 điểm g và Điều 43 khoản 2) dù không trích thêm Điều 46 khoản 1 điểm g.,z-ai/glm-5.3-flash,
+dev-s11,generated,conditional,False,qc3626.d28.k1 qc3626.d28.k2,qc3626.d44.k1 qc3626.d28.k2 qc3626.d28.k1 qc3626.d47.k7 qc3626.d41.k5 qc3626.d27.k3 qc3626.d22.k3 qc3626.d44.k2 qc3626.d28.k3 qc3626.d40.k2,1.0,1.0,0.5,"**Không.** Sinh viên đang bị cảnh báo học vụ không đủ điều kiện xem xét chuyển ngành.
+
+- **Điều 28 khoản 1 điểm d**: sinh viên được xem xét chuyển ngành phải ""không bị cảnh báo học tập hoặc bị xét thi hành kỷ luật"". Quy chế dùng cụm ""cảnh báo học tập"" ở đây và ""cảnh báo học vụ"" ở Điều 44 khoản 1; tôi hiểu hai cụm này cùng chỉ một chế độ cảnh báo.
+- **Điều 28 khoản 1** cũng yêu cầu sinh viên đã hoàn thành năm học thứ nhất, đáp ứng điều kiện trúng tuyển của ngành muốn chuyển, có đủ tín chỉ tích lũy theo kế hoạch chuẩn, điểm trung bình chung các học phần từ 2,50 trở lên, và còn chỉ tiêu của ngành đích.
+- **Điều 28 khoản 2**: không xem xét chuyển ngành đối với sinh viên đã học từ năm thứ hai.",qc3626.d28.k1 qc3626.d44.k1 qc3626.d28.k2,,,1.0,0.6667,end_turn,False,2410,865,4.453,False,0,medium,claude-haiku-5-5,2026-10-27T15:10:38+07:00,,dung,Kết luận đúng (không được chuyển ngành) và nêu đủ căn cứ Điều 28 khoản 1 điểm d cùng điều kiện từ năm thứ hai tại khoản 2 như đáp án mẫu.,z-ai/glm-5.3-flash,
+dev-s11,generated,conditional,False,qc3626.d28.k1 qc3626.d28.k2,qc3626.d44.k1 qc3626.d28.k2 qc3626.d28.k1 qc3626.d47.k7 qc3626.d41.k5 qc3626.d27.k3 qc3626.d22.k3 qc3626.d44.k2 qc3626.d28.k3 qc3626.d40.k2,1.0,1.0,0.5,"**Không.** Sinh viên đang bị cảnh báo học vụ không đủ điều kiện xét chuyển ngành:
+
+- **Điều 28 khoản 1 điểm d**: để được xét chuyển ngành, sinh viên phải không bị cảnh báo học tập hoặc bị xét thi hành kỷ luật.
+- **Điều 28 khoản 2**: không xem xét chuyển ngành đối với sinh viên đã học từ năm thứ hai.
+
+Ngoài ra, việc chuyển ngành chỉ được xem xét khi sinh viên đã hoàn thành năm học thứ nhất (Điều 28 khoản 1), đồng thời đáp ứng các điều kiện còn lại tại Điều 28 khoản 1.",qc3626.d28.k1 qc3626.d28.k2,,,1.0,1.0,end_turn,False,2410,501,3.52,False,1,medium,claude-haiku-5-5,2026-10-27T15:10:43+07:00,,dung,Câu trả lời kết luận đúng không được chuyển ngành và nêu đầy đủ căn cứ (Điều 28 khoản 1 điểm d) cùng ngưỡng (Điều 28 khoản 2) như đáp án mẫu.,z-ai/glm-5.3-flash,
+dev-s11,generated,conditional,False,qc3626.d28.k1 qc3626.d28.k2,qc3626.d44.k1 qc3626.d28.k2 qc3626.d28.k1 qc3626.d47.k7 qc3626.d41.k5 qc3626.d27.k3 qc3626.d22.k3 qc3626.d44.k2 qc3626.d28.k3 qc3626.d40.k2,1.0,1.0,0.5,"**Không.** Sinh viên đang bị cảnh báo học vụ không đủ điều kiện xét chuyển ngành.
+
+Căn cứ:
+- **Điều 28 khoản 1 điểm d**: sinh viên chỉ được xem xét chuyển ngành khi ""không bị cảnh báo học tập hoặc bị xét thi hành kỷ luật"". Quy chế dùng cụm ""cảnh báo học tập"" ở Điều 28, còn Điều 44 dùng ""cảnh báo học vụ""; đây là cùng một tình trạng học tập bị cảnh báo.
+- **Điều 28 khoản 1** (mở đầu): chỉ sinh viên đã hoàn thành năm học thứ nhất mới được xem xét chuyển ngành. Ngoài ra, các điều kiện khác (điểm trung bình chung các học phần từ 2,50 trở lên, đủ tín chỉ tích lũy, còn chỉ tiêu, được đồng ý của các cấp có thẩm quyền) cũng phải đồng thời được đáp ứng.
+- **Điều 28 khoản 2**: không xem xét chuyển ngành học đối với sinh viên đã học từ năm thứ hai.",qc3626.d28.k1 qc3626.d44 qc3626.d28.k2,qc3626.d28,,1.0,0.6667,end_turn,False,2410,641,3.903,False,2,medium,claude-haiku-5-5,2026-10-27T15:10:46+07:00,,dung,Kết luận đúng (không được chuyển ngành) và nêu đủ các căn cứ chính của đáp án mẫu: điều kiện không bị cảnh báo học tập/kỷ luật tại Điều 28 khoản 1 điểm d và giới hạn không xét chuyển từ năm thứ hai tại Điều 28 khoản 2.,z-ai/glm-5.3-flash,

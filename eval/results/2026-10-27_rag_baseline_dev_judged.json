@@ -1,17 +1,19 @@
 {
-  "judged_at": "2026-10-27T14:33:46+07:00",
+  "judged_at": "2026-10-27T16:53:41+07:00",
   "input_csv": "2026-10-27_rag_baseline_dev.csv",
   "judge_role": "judge",
   "judge_calibrated": false,
   "note": "Giám khảo CHƯA được hiệu chỉnh (hiệu chỉnh 30 câu theo PLAN #2 chưa làm); nhãn chỉ để tham khảo.",
   "judge_system_prompt": "Bạn là giám khảo chấm câu trả lời về quy chế đào tạo đại học.\nChỉ dựa vào ĐÁP ÁN MẪU và NGUYÊN VĂN QUY CHẾ được cung cấp, không dùng hiểu biết bên ngoài.\nGán đúng một nhãn cho CÂU TRẢ LỜI CẦN CHẤM:\n- \"dung\": kết luận đúng và nêu đủ các ý chính của đáp án mẫu (căn cứ và ngưỡng).\n- \"mot_phan\": kết luận đúng nhưng thiếu căn cứ hoặc ngưỡng, hoặc thiếu ý chính.\n- \"sai\": kết luận sai, hoặc nêu căn cứ/ngưỡng mâu thuẫn với quy chế.\nChỉ trả về một đối tượng JSON: {\"label\": \"dung\" | \"sai\" | \"mot_phan\", \"reason\": \"<một câu ngắn bằng tiếng Việt>\"}.",
-  "fresh_judge_calls_this_invocation": 0,
-  "judge_calls_total": 5,
+  "fresh_judge_calls_this_invocation": 115,
+  "judge_calls_total": 123,
+  "max_judge_calls_per_min": 37.5,
+  "not_judged_answer_errors": 0,
   "judge_first_called_at": "2026-10-27T14:31:32+07:00",
   "errors": [],
   "labels": {
-    "dung": 5,
+    "dung": 117,
     "sai": 0,
-    "mot_phan": 0
+    "mot_phan": 6
   }
 }

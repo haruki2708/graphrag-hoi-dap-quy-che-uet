@@ -1,7 +1,40 @@
-id,origin,type,delegated,source_ids,retrieved_ids,recall@5,recall@10,mrr,answer,cited_ids,coarse_citations,invalid_citations,citation_recall,citation_precision,finish_reason,truncated,input_tokens,output_tokens,latency_s,from_cache,run,effort,model_served,called_at
+id,origin,type,delegated,source_ids,retrieved_ids,recall@5,recall@10,mrr,answer,cited_ids,coarse_citations,invalid_citations,citation_recall,citation_precision,finish_reason,truncated,input_tokens,output_tokens,latency_s,from_cache,run,effort,model_served,called_at,error
 dev-m001,manual,single,False,qc3626.d16,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), năm học được chia thành **2 học kỳ chính** và có thể tổ chức thêm **học kỳ phụ** (thường là học kỳ hè). Học kỳ phụ là tùy chọn, không bắt buộc.
 
-Về số tuần dành cho học, thi và dự phòng trong từng kỳ, tôi không có căn cứ chắc chắn để nêu con số cụ thể. Quy chế giao việc xây dựng kế hoạch đào tạo hằng năm và lịch học cho thủ trưởng đơn vị đào tạo, nên cách phân bổ tuần sẽ theo thông báo lịch đào tạo của năm học mà đơn vị em đang theo học. Em nên xem lịch đó để biết chính xác số tuần học, tuần thi và tuần dự phòng của từng kỳ.",,,,0.0,,end_turn,False,704,1408,8.814,True,0,medium,claude-haiku-5-5,2026-10-27T14:27:55+07:00
+Về số tuần dành cho học, thi và dự phòng trong từng kỳ, tôi không có căn cứ chắc chắn để nêu con số cụ thể. Quy chế giao việc xây dựng kế hoạch đào tạo hằng năm và lịch học cho thủ trưởng đơn vị đào tạo, nên cách phân bổ tuần sẽ theo thông báo lịch đào tạo của năm học mà đơn vị em đang theo học. Em nên xem lịch đó để biết chính xác số tuần học, tuần thi và tuần dự phòng của từng kỳ.",,,,0.0,,end_turn,False,704,1408,8.814,True,0,medium,claude-haiku-5-5,2026-10-27T14:27:55+07:00,
+dev-m001,manual,single,False,qc3626.d16,,,,,"**Số học kỳ trong năm:** Năm học gồm **2 học kỳ chính** và **1 học kỳ phụ** (không bắt buộc). Căn cứ: Điều 3 khoản 1 về năm học và học kỳ.
+
+**Thời lượng mỗi kỳ:** Tôi không chắc chắn về số tuần cụ thể dành cho học, thi và dự phòng trong quy chế, nên không muốn nêu con số có thể sai. Theo quy định chung về học kỳ chính, thời gian thực học tối thiểu là khoảng 15 tuần, còn thời gian thi và dự phòng được bố trí thêm trong kế hoạch năm học. Học kỳ phụ có thời lượng ngắn hơn học kỳ chính.
+
+**Lịch cụ thể:** Thủ trưởng đơn vị đào tạo quyết định kế hoạch đào tạo và lịch học, thi chi tiết cho từng năm học. Em nên xem thông báo kế hoạch năm học của Trường Đại học Công nghệ để biết ngày bắt đầu, ngày kết thúc và tuần dự phòng của từng kỳ.",qc3626.d3.k1,,,0.0,0.0,end_turn,False,704,1448,9.048,False,1,medium,claude-haiku-5-5,2026-10-27T14:50:11+07:00,
+dev-m001,manual,single,False,qc3626.d16,,,,,"Theo Quy chế đào tạo ĐHQGHN 2022, năm học có **2 học kỳ chính** và có thể tổ chức thêm **1 học kỳ phụ** (tùy chọn). Căn cứ: quy định về năm học và học kỳ tại Điều 3 của quy chế.
+
+Về số tuần cho học, thi và dự phòng trong từng kỳ, tôi không chắc chắn con số cụ thể nên không muốn nêu sai. Bạn nên kiểm tra trực tiếp điều khoản này trong văn bản. Thông thường, kế hoạch tuần cụ thể của từng kỳ do đơn vị đào tạo và kế hoạch năm học của ĐHQGHN công bố hằng năm, nên bạn cũng nên đối chiếu với thông báo đó.",,qc3626.d3,,0.0,,end_turn,False,704,1441,7.094,False,2,medium,claude-haiku-5-5,2026-10-27T14:50:20+07:00,
+dev-m002,manual,single,True,qc3626.d19,,,,,"Quy chế không quy định cụ thể khung giờ học trong ngày, việc có học Chủ nhật hay không, cũng như lịch cho hoạt động đặc thù.
+
+Theo quy chế, việc tổ chức đào tạo và xếp thời khóa biểu thuộc thẩm quyền của thủ trưởng đơn vị đào tạo, nên em nên hỏi trực tiếp đơn vị đào tạo (khoa hoặc trường thành viên) quản lý ngành của mình để biết lịch cụ thể và cách quyết định lịch cho các hoạt động đặc thù.",,,,0.0,,end_turn,False,690,1000,5.503,False,0,medium,claude-haiku-5-5,2026-10-27T14:50:27+07:00,
+dev-m002,manual,single,True,qc3626.d19,,,,,"Quy chế này **không quy định cụ thể** khung giờ học trong ngày, việc có học vào Chủ nhật hay không, cũng như lịch cho các hoạt động đặc thù.
+
+Quy chế giao **thủ trưởng đơn vị đào tạo** quy định chi tiết việc tổ chức đào tạo, trong đó có việc bố trí lịch học và thời khóa biểu. Vì vậy, lịch học cụ thể của em và việc quyết định lịch cho hoạt động đặc thù thuộc thẩm quyền của đơn vị đào tạo quản lý ngành/chương trình của em. Em nên xem thời khóa biểu và thông báo chính thức của đơn vị đào tạo để biết chính xác.",,,,0.0,,end_turn,False,690,1096,5.915,False,1,medium,claude-haiku-5-5,2026-10-27T14:50:33+07:00,
+dev-m002,manual,single,True,qc3626.d19,,,,,"Quy chế không quy định cụ thể khung giờ học trong ngày, và cũng không quy định rõ việc có học vào Chủ nhật hay không. Theo quy định chung, thủ trưởng đơn vị đào tạo là người quy định chi tiết các nội dung này, bao gồm thời gian học, lịch học và việc bố trí lịch học ngoài giờ hành chính. Vì vậy, em nên hỏi trực tiếp đơn vị đào tạo quản lý ngành/chương trình của mình để biết thời khóa biểu cụ thể.
+
+Về lịch cho hoạt động đặc thù, quy chế cũng không nêu rõ ai quyết định. Thẩm quyền này thuộc về đơn vị đào tạo theo cách phân cấp chung của quy chế, nhưng em nên xác nhận lại với đơn vị đào tạo của mình.
+
+Lưu ý: tôi chưa thể xác định chính xác điều khoản để trích dẫn cho hai nội dung này, nên em nên đối chiếu với phần quy định về tổ chức đào tạo trong Quyết định 3626/QĐ-ĐHQGHN.",,,,0.0,,end_turn,False,690,1305,6.941,False,2,medium,claude-haiku-5-5,2026-10-27T14:50:39+07:00,
+dev-m003,manual,single,False,qc3626.d51,,,,,"**Quy chế đào tạo đại học ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN:**
+
+- **Ngày ban hành:** 21/10/2022.
+- **Khóa áp dụng:** các khóa tuyển sinh từ năm 2022 trở đi.
+
+Tôi không chắc chắn về số điều cụ thể quy định hiệu lực thi hành, nên bạn nên đối chiếu với điều khoản cuối cùng của văn bản quy chế để có căn cứ chính xác.",,,,0.0,,end_turn,False,685,794,5.028,False,0,medium,claude-haiku-5-5,2026-10-27T14:50:45+07:00,
+dev-m003,manual,single,False,qc3626.d51,,,,,"Quy chế đào tạo đại học ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN được **ban hành ngày 21/10/2022** và **áp dụng cho các khóa tuyển sinh từ năm 2022**. Căn cứ: phạm vi áp dụng của quy chế (Điều 1).
+
+Về thời điểm có hiệu lực cụ thể, em nên đối chiếu với điều khoản thi hành ở cuối quyết định hoặc quy chế.",,qc3626.d1,,0.0,,end_turn,False,685,729,4.487,False,1,medium,claude-haiku-5-5,2026-10-27T14:50:50+07:00,
+dev-m003,manual,single,False,qc3626.d51,,,,,"**Khóa tuyển sinh áp dụng:** Quy chế áp dụng cho các khóa tuyển sinh từ năm 2022.
+
+**Ngày ban hành:** Quyết định số 3626/QĐ-ĐHQGHN được ban hành ngày 21/10/2022.
+
+Tôi chưa xác định được chính xác điều khoản nào quy định ngày có hiệu lực của quy chế, nên em nên kiểm tra mục ""Hiệu lực thi hành"" trong văn bản gốc để biết chắc ngày bắt đầu có hiệu lực.",,,,0.0,,end_turn,False,685,620,3.618,False,2,medium,claude-haiku-5-5,2026-10-27T14:50:55+07:00,
 dev-m004,manual,single,True,qc3626.d20.k2,,,,,"Quy chế không quy định một con số cố định về số sinh viên tối thiểu để mở lớp học phần. Việc này được giao cho **thủ trưởng đơn vị đào tạo** quy định chi tiết (theo quy định về tổ chức lớp học phần trong Quy chế). Em nên xem thông báo đăng ký học phần của khoa/trường quản lý môn học để biết ngưỡng cụ thể.
 
 Về trường hợp lớp không mở, quy chế không có quy định riêng mà tôi có thể trích dẫn chắc chắn. Em nên:
@@ -9,7 +42,192 @@ Về trường hợp lớp không mở, quy chế không có quy định riêng 
 - Theo dõi thông báo của đơn vị đào tạo về điều chỉnh đăng ký và thời hạn đăng ký bổ sung.
 - Hỏi trực tiếp đơn vị quản lý môn học hoặc cố vấn học tập nếu cần xếp lại thời khóa biểu.
 
-Em nên đối chiếu với các điều về đăng ký học phần và tổ chức lớp học phần trong Quy chế đào tạo để có căn cứ chính xác.",,,,0.0,,end_turn,False,686,1167,6.149,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:03+07:00
+Em nên đối chiếu với các điều về đăng ký học phần và tổ chức lớp học phần trong Quy chế đào tạo để có căn cứ chính xác.",,,,0.0,,end_turn,False,686,1167,6.149,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:03+07:00,
+dev-m004,manual,single,True,qc3626.d20.k2,,,,,"**Số lượng tối thiểu:** Quy chế không ấn định con số cụ thể. Quy chế giao cho **thủ trưởng đơn vị đào tạo** quy định chi tiết số sinh viên tối thiểu để một lớp học phần được tổ chức. Bạn nên xem thông báo đăng ký học phần của khoa/trường quản lý môn học đó để biết ngưỡng áp dụng.
+
+**Nếu lớp không mở:** Quy chế không quy định riêng các bước xử lý trong trường hợp này. Thông thường, bạn sẽ cần đăng ký học phần khác hoặc lớp khác của cùng học phần trong thời gian đăng ký/điều chỉnh học phần. Hãy kiểm tra thông báo của đơn vị đào tạo để biết thời hạn và cách thực hiện.
+
+Tôi không chắc chắn về số điều cụ thể trong quy chế có nội dung này, nên bạn nên đối chiếu trực tiếp với văn bản Quy chế đào tạo ban hành kèm Quyết định 3626/QĐ-ĐHQGHN.",,,,0.0,,end_turn,False,686,1230,6.421,False,1,medium,claude-haiku-5-5,2026-10-27T14:50:59+07:00,
+dev-m004,manual,single,True,qc3626.d20.k2,,,,,"Quy chế không quy định cụ thể số sinh viên tối thiểu để mở một lớp học phần. Việc này được giao cho **thủ trưởng đơn vị đào tạo** quy định chi tiết, nên bạn cần hỏi đơn vị quản lý học phần để biết ngưỡng áp dụng.
+
+Về trường hợp lớp không mở, quy chế cũng không nêu cụ thể cách xử lý. Bạn nên liên hệ đơn vị đào tạo để hỏi phương án thay thế, chẳng hạn đăng ký lớp khác của cùng học phần, đăng ký học phần thay thế hoặc chuyển sang kỳ sau.",,,,0.0,,end_turn,False,686,860,4.961,False,2,medium,claude-haiku-5-5,2026-10-27T14:51:05+07:00,
+dev-m005,manual,single,True,qc3626.d32.k2,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định 3626/QĐ-ĐHQGHN **không quy định** việc cộng điểm thành tích nghiên cứu khoa học cho bài báo đã công bố, nên tôi không thể cho bạn con số cụ thể.
+
+Bạn nên hỏi đơn vị đào tạo (khoa hoặc trường thành viên) hoặc xem văn bản quy định về nghiên cứu khoa học, học bổng hoặc rèn luyện của sinh viên, vì đây thường là nơi quy định mức điểm.",,,,0.0,,end_turn,False,680,838,5.187,False,0,medium,claude-haiku-5-5,2026-10-27T14:51:10+07:00,
+dev-m005,manual,single,True,qc3626.d32.k2,,,,,"Quy chế đào tạo đại học của ĐHQGHN (Quyết định số 3626/QĐ-ĐHQGHN) **không quy định** mức điểm cộng cho bài báo khoa học hay thành tích nghiên cứu khoa học, nên mình không thể xác nhận số điểm chính xác.
+
+Bạn nên hỏi trực tiếp đơn vị quản lý đào tạo hoặc khoa/trường nơi bạn đang học, vì các quy định về điểm thành tích NCKH thường nằm trong văn bản riêng (ví dụ quy định về đánh giá kết quả rèn luyện, khen thưởng hoặc xét học bổng).",,,,0.0,,end_turn,False,680,809,5.925,False,1,medium,claude-haiku-5-5,2026-10-27T14:51:15+07:00,
+dev-m005,manual,single,True,qc3626.d32.k2,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN **không quy định** số điểm cộng cụ thể cho bài báo khoa học hay thành tích nghiên cứu khoa học của sinh viên, nên tôi không thể xác nhận mức điểm ""chính xác"" bạn cần.
+
+Để biết chính xác, bạn nên tra cứu quy định về nghiên cứu khoa học hoặc quy định xét điểm thành tích của sinh viên do Đại học Quốc gia Hà Nội hoặc Trường Đại học Công nghệ ban hành. Nếu quy định đó giao cho đơn vị đào tạo quy định chi tiết, bạn nên hỏi trực tiếp đơn vị quản lý đào tạo hoặc nghiên cứu khoa học của Trường.",,,,0.0,,end_turn,False,680,1011,6.099,False,2,medium,claude-haiku-5-5,2026-10-27T14:51:21+07:00,
+dev-m006,manual,single,False,qc3626.d41.k2,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), các ký hiệu thường gặp trên bảng điểm có nghĩa như sau:
+
+- **I**: Học phần chưa đủ dữ liệu để đánh giá. Điểm này được ghi tạm thời và sẽ được thay bằng điểm chính thức khi sinh viên hoàn thành các yêu cầu còn thiếu.
+- **X**: Học phần chưa có điểm chính thức. Ký hiệu này cho biết học phần chưa được tính điểm trong kỳ đó.
+- **R**: Học phần được miễn học hoặc được công nhận kết quả từ nơi khác, nên không được tính điểm vào điểm trung bình tích lũy.
+
+Tôi không chắc chắn về số điều, khoản cụ thể quy định các ký hiệu này, và cũng không chắc về chi tiết cách xử lý từng ký hiệu. Bạn nên tra điều khoản về đánh giá và thang điểm học phần trong quy chế, hoặc hỏi phòng đào tạo của trường để được xác nhận chính xác.",,,,0.0,,end_turn,False,678,1661,8.73,False,0,medium,claude-haiku-5-5,2026-10-27T14:51:27+07:00,
+dev-m006,manual,single,False,qc3626.d41.k2,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (QĐ 3626/QĐ-ĐHQGHN), các ký hiệu trên bảng điểm có ý nghĩa như sau:
+
+- **I (Incomplete):** Học phần chưa hoàn thành đánh giá, thường vì sinh viên chưa đủ điều kiện hoàn tất một phần đánh giá. Sinh viên cần hoàn thành phần còn thiếu trong thời hạn quy định. Chi tiết về thời hạn và thủ tục do thủ trưởng đơn vị đào tạo quy định.
+- **X:** Học phần chưa có điểm chính thức, ví dụ khi kết quả chưa được nhập hoặc chưa đủ dữ liệu để tính điểm. Khi có điểm, ký hiệu này sẽ được thay bằng điểm số.
+- **R:** Học phần được miễn học hoặc được công nhận kết quả từ trước, ví dụ do đã tích lũy ở chương trình khác hoặc được chuyển đổi tín chỉ. Học phần này không có điểm số.
+
+Căn cứ: quy định về đánh giá kết quả học tập học phần tại Điều 24 của Quy chế. Tôi không chắc chắn về số khoản và điểm cụ thể, nên bạn nên đối chiếu trực tiếp với văn bản để có trích dẫn chính xác.",,qc3626.d24,,0.0,,end_turn,False,678,1682,8.327,False,1,medium,claude-haiku-5-5,2026-10-27T14:51:36+07:00,
+dev-m006,manual,single,False,qc3626.d41.k2,,,,,"Trên bảng điểm, các ký hiệu này thường có nghĩa như sau:
+
+- **I (Incomplete):** Học phần chưa đủ dữ liệu để đánh giá. Khi đủ dữ liệu, ký hiệu I sẽ được thay bằng điểm chính thức.
+- **X:** Chưa nhận được điểm của học phần. Khi có điểm, ký hiệu X sẽ được thay bằng điểm chính thức.
+- **R:** Học phần được miễn học hoặc được công nhận kết quả từ nơi khác (chuyển đổi, công nhận tín chỉ), nên không tính vào điểm trung bình tích lũy.
+
+Căn cứ: quy định về thang điểm và ký hiệu điểm học phần trong Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN). Tôi không có đoạn trích cụ thể, nên bạn nên đối chiếu số điều, khoản chính xác trong văn bản. Nếu bạn cần cách xử lý cụ thể với ký hiệu I hoặc X ở trường, hãy hỏi phòng đào tạo hoặc đơn vị quản lý đào tạo của bạn, vì chi tiết này có thể do đơn vị đào tạo quy định.",,,,0.0,,end_turn,False,678,1183,6.53,False,2,medium,claude-haiku-5-5,2026-10-27T14:51:44+07:00,
+dev-m007,manual,single,False,qc3626.d24.k1,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), sinh viên có thể được miễn học môn Giáo dục quốc phòng - an ninh (GDQP-AN) trong một số trường hợp, thường gồm:
+
+- Sinh viên đã có chứng chỉ GDQP-AN theo quy định.
+- Sinh viên là quân nhân, công an nhân dân hoặc đã hoàn thành nghĩa vụ quân sự, công an theo quy định.
+- Sinh viên thuộc diện được miễn theo quy định của pháp luật về giáo dục quốc phòng và an ninh.
+
+Tôi chưa xác định chắc chắn số điều, khoản cụ thể và danh sách đầy đủ trong bản quy chế hiện hành, nên bạn nên đối chiếu trực tiếp với điều khoản về miễn học, miễn thi trong quy chế, đồng thời hỏi phòng đào tạo hoặc đơn vị quản lý sinh viên của trường để biết hồ sơ và thủ tục xin miễn.",,,,0.0,,end_turn,False,663,1487,7.917,False,0,medium,claude-haiku-5-5,2026-10-27T14:51:51+07:00,
+dev-m007,manual,single,False,qc3626.d24.k1,,,,,"Theo quy định chung về miễn học giáo dục quốc phòng và an ninh (GDQP-AN), sinh viên thường được miễn học toàn bộ môn này nếu thuộc một trong các trường hợp sau:
+
+- Đã có chứng chỉ GDQP-AN tương ứng hoặc đã hoàn thành chương trình GDQP-AN ở trình độ trước đó.
+- Là quân nhân hoặc công an nhân dân đã hoàn thành nghĩa vụ phục vụ tại ngũ hoặc đã được đào tạo tương đương.
+- Thuộc diện miễn học theo quy định của pháp luật về giáo dục quốc phòng và an ninh.
+
+Tôi chưa xác định được chính xác điều khoản của Quy chế 3626/QĐ-ĐHQGHN quy định từng trường hợp trên, nên không thể ghi căn cứ ""Điều X khoản Y"" một cách chắc chắn. Bạn nên đối chiếu mục quy định về miễn học GDQP-AN trong quy chế hoặc hỏi phòng đào tạo của trường để biết danh mục đầy đủ và thủ tục xét miễn.",,,,0.0,,end_turn,False,663,1742,8.654,False,1,medium,claude-haiku-5-5,2026-10-27T14:51:59+07:00,
+dev-m007,manual,single,False,qc3626.d24.k1,,,,,"Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN) có quy định về miễn học môn Giáo dục quốc phòng và an ninh (GDQP-AN), nhưng tôi không xác định chắc chắn số điều, khoản cụ thể. Bạn nên tra mục về **miễn học, miễn thi môn GDQP-AN** trong văn bản để lấy đúng căn cứ.
+
+Theo quy định chung của Bộ Giáo dục và Đào tạo về GDQP-AN, các trường hợp thường được miễn học toàn bộ môn này gồm:
+
+- Sinh viên đã có chứng chỉ GDQP-AN (hoặc văn bằng, chứng nhận tương đương) theo quy định.
+- Sinh viên là quân nhân, công an nhân dân đã hoàn thành nghĩa vụ hoặc đã được đào tạo tương đương.
+
+Bạn cần kiểm tra lại trong quy chế các điều kiện, hồ sơ và thủ tục xin miễn. Nếu quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết, thủ tục cụ thể sẽ do Trường Đại học Công nghệ ban hành, và bạn nên hỏi trực tiếp đơn vị quản lý đào tạo của trường.",,,,0.0,,end_turn,False,663,1819,8.815,False,2,medium,claude-haiku-5-5,2026-10-27T14:52:07+07:00,
+dev-m008,manual,single,True,qc3626.d39.k1,,,,,"**Quy trình bảo vệ khóa luận tốt nghiệp:** Quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết quy trình này. Trường Đại học Công nghệ không được tôi xác định cụ thể là đơn vị được giao; nếu cần căn cứ chính xác, bạn nên đối chiếu điều khoản về khóa luận tốt nghiệp trong Quyết định 3626/QĐ-ĐHQGHN.
+
+**Bảo vệ trực tuyến:** Quy chế không quy định cụ thể điều kiện hay yêu cầu để bảo vệ khóa luận tốt nghiệp trực tuyến. Vì vậy, nếu muốn bảo vệ online, bạn cần hỏi trực tiếp đơn vị đào tạo (khoa/viện quản lý ngành) về việc có cho phép hình thức này không và các thủ tục kèm theo.",,,,0.0,,end_turn,False,683,916,5.88,False,0,medium,claude-haiku-5-5,2026-10-27T14:52:16+07:00,
+dev-m008,manual,single,True,qc3626.d39.k1,,,,,"**Quy trình bảo vệ KLTN do ai quy định:** Quy chế giao cho **thủ trưởng đơn vị đào tạo** quy định chi tiết việc thực hiện, đánh giá và bảo vệ khóa luận tốt nghiệp. Căn cứ là điều của Quy chế về khóa luận tốt nghiệp. Với sinh viên Trường Đại học Công nghệ, quy trình cụ thể do Trường quy định, và tôi không thể xác nhận nội dung đó.
+
+**Yêu cầu để bảo vệ online:** Quy chế không quy định riêng về hình thức bảo vệ trực tuyến, nên tôi không nêu được điều kiện cụ thể. Nếu đơn vị đào tạo cho phép bảo vệ online, các điều kiện sẽ do đơn vị quy định theo thẩm quyền nêu trên. Bạn nên hỏi trực tiếp đơn vị đào tạo hoặc xem thông báo chính thức của Trường.",,,,0.0,,end_turn,False,683,1245,7.482,False,1,medium,claude-haiku-5-5,2026-10-27T14:52:22+07:00,
+dev-m008,manual,single,True,qc3626.d39.k1,,,,,"**Ai quy định quy trình bảo vệ KLTN:** Quy chế giao **thủ trưởng đơn vị đào tạo** quy định chi tiết việc tổ chức và quy trình bảo vệ khóa luận tốt nghiệp. Với Trường Đại học Công nghệ, tôi không có căn cứ để nêu cụ thể quy trình đó. Bạn nên xem quy định của Trường hoặc hỏi đơn vị quản lý đào tạo. Tôi không rõ số điều cụ thể của nội dung này trong Quyết định 3626/QĐ-ĐHQGHN, nên bạn nên đối chiếu lại với văn bản gốc.
+
+**Yêu cầu để bảo vệ online:** Tôi không xác định được từ quy chế những điều kiện riêng cho hình thức bảo vệ trực tuyến. Nếu quy chế có quy định về việc này, khả năng cao là nó cũng thuộc thẩm quyền quy định chi tiết của thủ trưởng đơn vị đào tạo, nên bạn cần kiểm tra thông báo hoặc quy định của Trường.",,,,0.0,,end_turn,False,683,1190,5.95,False,2,medium,claude-haiku-5-5,2026-10-27T14:52:30+07:00,
+dev-m009,manual,multi,False,qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,,,,,"**Quy định về số giờ tín chỉ:** Theo Quy chế, một tín chỉ tương ứng với khối lượng học tập định mức là **45 giờ** (Điều 3, về định nghĩa tín chỉ). Khối lượng này được tính theo loại hoạt động:
+
+- **15 giờ** học lý thuyết trên lớp
+- **30 giờ** thực hành, thí nghiệm hoặc thảo luận
+- **45 giờ** thực tập tại cơ sở
+- **45 giờ** làm tiểu luận, bài tập lớn, đồ án hoặc khóa luận tốt nghiệp
+
+Với học lý thuyết, 15 giờ trên lớp đi kèm khoảng 30 giờ tự học, chuẩn bị và ôn tập ngoài lớp, tổng cộng 45 giờ cho mỗi tín chỉ.
+
+**Phần chưa rõ:** Tôi không chắc Quy chế có quy định cụ thể một giờ tín chỉ lý thuyết bằng bao nhiêu tiết, mỗi tiết bao nhiêu phút hay không. Nếu Quy chế có quy định, đó sẽ thuộc phần định nghĩa về tín chỉ và giờ tín chỉ tại Điều 3. Để biết chính xác thời lượng từng tiết và cách bố trí giờ tự học của một học phần, em nên xem đề cương chi tiết học phần hoặc thời khóa biểu. Các chi tiết do đơn vị đào tạo quy định sẽ do thủ trưởng đơn vị đào tạo ban hành, em có thể hỏi trực tiếp đơn vị quản lý đào tạo của ngành.",,qc3626.d3,,0.0,,end_turn,False,736,1913,9.326,False,0,medium,claude-haiku-5-5,2026-10-27T14:52:36+07:00,
+dev-m009,manual,multi,False,qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,,,,,"**Quy định về thời lượng học:**
+
+- **1 tín chỉ** gồm **15 giờ tín chỉ lý thuyết** trên lớp. Với thực hành, thí nghiệm, thảo luận, một tín chỉ tương ứng khoảng 30 giờ; với thực tập, tiểu luận, bài tập lớn, đồ án, khóa luận, khoảng 45 giờ.
+- **1 giờ tín chỉ** tính bằng **50 phút**, tức là tương đương một tiết học lý thuyết.
+- **Thời gian tự học:** sinh viên phải dành ít nhất **2 giờ** chuẩn bị cá nhân (đọc tài liệu, ôn bài, làm bài tập) cho mỗi giờ tín chỉ lý thuyết.
+
+**Quy đổi cho một tín chỉ lý thuyết:**
+- Lên lớp: 15 tiết × 50 phút ≈ 12,5 giờ.
+- Tự học: khoảng 30 giờ (15 × 2).
+
+Căn cứ: Điều 3 (quy định về tín chỉ và giờ tín chỉ). Mình trích theo nội dung quy chế đã biết; nếu cần chính xác từng khoản, bạn nên đối chiếu trực tiếp với văn bản 3626/QĐ-ĐHQGHN.",,qc3626.d3,,0.0,,end_turn,False,736,1826,8.535,False,1,medium,claude-haiku-5-5,2026-10-27T14:52:45+07:00,
+dev-m009,manual,multi,False,qc3626.d4.k2 qc3626.d4.k3 qc3626.d19,,,,,"Theo Quy chế đào tạo của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), thời lượng học được quy định như sau:
+
+- **1 tín chỉ** là khối lượng học tập định mức **50 giờ**, gồm thời gian học trên lớp, tự học, nghiên cứu và chuẩn bị cá nhân.
+- **Giờ tín chỉ lý thuyết**: 1 tín chỉ lý thuyết tương ứng **15 giờ tín chỉ** trên lớp. Mỗi giờ tín chỉ lý thuyết là **1 tiết học, 50 phút**. Vậy 1 tín chỉ lý thuyết ≈ 15 tiết ≈ 12,5 giờ đồng hồ trên lớp.
+- **Thời gian chuẩn bị thêm**: phần còn lại của 50 giờ định mức, tức khoảng **35 giờ** cho tự học, đọc tài liệu, làm bài tập và chuẩn bị. Với học phần 3 tín chỉ lý thuyết, đó là khoảng 45 tiết trên lớp và khoảng 105 giờ tự học trong cả học kỳ.
+
+Căn cứ: Điều 3 (Giải thích từ ngữ) và các quy định về khối lượng học tập tại Chương II. Các con số này là cách hiểu của tôi về quy chế, nên em nên đối chiếu lại đúng điều khoản trong văn bản. Quy định cụ thể về tổ chức giờ học của từng học phần do Thủ trưởng đơn vị đào tạo quy định chi tiết.",,qc3626.d3,,0.0,,end_turn,False,736,2153,9.902,False,2,medium,claude-haiku-5-5,2026-10-27T14:52:53+07:00,
+dev-m010,manual,multi,False,qc3626.d14.k2 qc3626.d13.k3,,,,,"Tôi chưa xác nhận được số tín chỉ tối thiểu phải học thêm so với chương trình chuẩn, cũng như yêu cầu ngoại ngữ đầu ra của hai chương trình này. Tôi không muốn đưa ra con số hay điều khoản có thể sai.
+
+Để có thông tin chính xác, em nên:
+
+- Tra cứu trong Quy chế đào tạo đại học ban hành kèm Quyết định 3626/QĐ-ĐHQGHN, phần quy định về chương trình chất lượng cao và chương trình tài năng.
+- Kiểm tra chương trình đào tạo (CTĐT) cụ thể của ngành em quan tâm, vì số tín chỉ và chuẩn ngoại ngữ thường được thể hiện rõ trong đó.
+- Nếu quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết, em hỏi trực tiếp đơn vị đào tạo quản lý chương trình đó.
+
+Nếu em gửi đoạn quy chế liên quan, tôi sẽ giúp em đối chiếu và tóm tắt sự khác nhau giữa hai chương trình.",,,,0.0,,end_turn,False,715,1358,7.314,False,0,medium,claude-haiku-5-5,2026-10-27T14:53:03+07:00,
+dev-m010,manual,multi,False,qc3626.d14.k2 qc3626.d13.k3,,,,,"Tôi không nắm chắc số tín chỉ tối thiểu tăng thêm của từng chương trình trong Quy chế đào tạo đại học ban hành kèm Quyết định 3626/QĐ-ĐHQGHN, và cũng không chắc quy chế có đặt yêu cầu ngoại ngữ đầu ra khác nhau giữa hai chương trình hay không. Em nên đọc trực tiếp điều khoản về chương trình chất lượng cao và chương trình tài năng trong quy chế để có con số chính xác.
+
+Nếu quy chế giao đơn vị đào tạo quy định chi tiết phần nào, phần đó sẽ do thủ trưởng đơn vị đào tạo quyết định. Em nên hỏi lại đơn vị đang quản lý chương trình em quan tâm để biết quy định áp dụng cụ thể.",,,,0.0,,end_turn,False,715,1174,5.964,False,1,medium,claude-haiku-5-5,2026-10-27T14:53:11+07:00,
+dev-m010,manual,multi,False,qc3626.d14.k2 qc3626.d13.k3,,,,,"Quy chế này không nêu con số cụ thể về số tín chỉ tối thiểu phải học thêm so với chương trình chuẩn, cũng không quy định mức ngoại ngữ đầu ra riêng cho từng chương trình. Tôi không thể xác nhận các con số đó nên không nêu cụ thể.
+
+Theo khung chung của quy chế, chương trình chất lượng cao và chương trình tài năng là các chương trình đào tạo riêng, khác với chương trình chuẩn. Việc xây dựng chi tiết cấu trúc, khối lượng tín chỉ và chuẩn đầu ra ngoại ngữ của từng chương trình thuộc thẩm quyền của ĐHQGHN và đơn vị đào tạo. Vì vậy, để biết chính xác mức tăng tín chỉ và yêu cầu ngoại ngữ, em nên:
+
+- Đọc điều khoản về chương trình chất lượng cao và chương trình tài năng trong chính quy chế.
+- Xem văn bản quyết định ban hành chương trình của ngành/đơn vị em quan tâm (ví dụ của Trường Đại học Công nghệ), vì đây là nơi quy định cụ thể.
+- Hỏi trực tiếp đơn vị đào tạo quản lý chương trình đó.",,,,0.0,,end_turn,False,715,1369,7.581,False,2,medium,claude-haiku-5-5,2026-10-27T14:53:17+07:00,
+dev-m011,manual,multi,False,qc3626.d18.k5 qc3626.d38.k3,,,,,"Tôi không chắc chắn về số tuần cụ thể mà Quy chế quy định cho hai nội dung này, nên chưa thể nêu con số để bạn lên kế hoạch.
+
+- **Thời khóa biểu trước kỳ học:** Theo tôi nhớ, Quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết về việc sắp xếp và công bố thời khóa biểu. Bạn nên xem thông báo của đơn vị quản lý đào tạo trực tiếp của mình để biết thời điểm công bố.
+- **Lịch thi chính và thi phụ:** Quy chế có quy định về tổ chức thi kết thúc học phần, trong đó có thời hạn công bố lịch thi cho sinh viên. Tôi không nhớ chính xác thời hạn đó, nên bạn cần đối chiếu trực tiếp với văn bản để có số ngày chính xác.
+
+Để chắc chắn, bạn nên tra cứu trực tiếp Quyết định 3626/QĐ-ĐHQGHN và các thông báo của đơn vị đào tạo của mình.",,,,0.0,,end_turn,False,696,1179,7.572,False,0,medium,claude-haiku-5-5,2026-10-27T14:53:24+07:00,
+dev-m011,manual,multi,False,qc3626.d18.k5 qc3626.d38.k3,,,,,"Tôi chưa xác định được trong Quy chế đào tạo đại học (Quyết định 3626/QĐ-ĐHQGHN) quy định cụ thể thời hạn công bố thời khóa biểu trước kỳ học, cũng như thời hạn báo trước lịch thi chính và thi phụ. Tôi không muốn đưa ra con số có thể sai.
+
+Em nên kiểm tra trực tiếp văn bản quy chế, đặc biệt các điều về tổ chức đào tạo theo học chế tín chỉ và về tổ chức thi kết thúc học phần. Nếu quy chế giao đơn vị đào tạo quy định chi tiết, thời hạn sẽ nằm trong thông báo của đơn vị. Em nên theo dõi thông báo chính thức của Khoa/Trường quản lý ngành để biết lịch cụ thể.",,,,0.0,,end_turn,False,696,953,5.674,False,1,medium,claude-haiku-5-5,2026-10-27T14:53:32+07:00,
+dev-m011,manual,multi,False,qc3626.d18.k5 qc3626.d38.k3,,,,,"Quy chế không quy định một khoảng thời gian cố định (số tuần hay số ngày) để công bố thời khóa biểu trước kỳ học hay lịch thi chính, thi phụ.
+
+Theo quy chế, việc tổ chức đào tạo và lập lịch thi thuộc thẩm quyền của thủ trưởng đơn vị đào tạo, nên thời điểm công bố cụ thể do đơn vị quy định. Em nên theo dõi thông báo chính thức của khoa/viện quản lý ngành học hoặc của phòng đào tạo để biết mốc công bố thời khóa biểu và lịch thi của học kỳ.",,,,0.0,,end_turn,False,696,964,6.577,False,2,medium,claude-haiku-5-5,2026-10-27T14:53:37+07:00,
+dev-m012,manual,multi,False,qc3626.d21.k3 qc3626.d23.k2,,,,,"Quy chế này không quy định cụ thể mốc thời gian thêm môn, đổi lớp đầu kỳ hay mốc hoàn học phí khi bỏ học phần, nên tôi không thể khẳng định hai mốc có giống nhau hay không.
+
+Theo quy chế, thời hạn đăng ký, điều chỉnh học phần trong học kỳ được tổ chức theo kế hoạch học tập và lịch học của từng học kỳ do thủ trưởng đơn vị đào tạo quy định và công bố trước khi học kỳ bắt đầu. Với Trường Đại học Công nghệ, bạn cần xem thông báo đăng ký học phần và lịch học của học kỳ đó.
+
+Về việc hoàn học phí khi bỏ học phần, quy chế không nêu quy định này. Bạn nên hỏi trực tiếp đơn vị đào tạo hoặc bộ phận phụ trách học phí của trường để biết chính xác.",,,,0.0,,end_turn,False,693,1075,6.691,False,0,medium,claude-haiku-5-5,2026-10-27T14:53:44+07:00,
+dev-m012,manual,multi,False,qc3626.d21.k3 qc3626.d23.k2,,,,,"**Thêm môn, đổi lớp:** Quy chế cho phép sinh viên đăng ký bổ sung hoặc điều chỉnh học phần trong khoảng thời gian đầu học kỳ. Thời hạn cụ thể (số tuần, ngày) do thủ trưởng đơn vị đào tạo quy định và công bố trong kế hoạch năm học. Tôi không nắm chắc số điều, khoản cụ thể, nên bạn nên xem mục đăng ký học phần trong quy chế và thông báo của đơn vị đào tạo để biết mốc chính xác.
+
+**Hoàn học phí khi bỏ môn:** Quy chế đào tạo không quy định việc hoàn học phí. Hạn bỏ môn để được hoàn học phí không tự động trùng với hạn thêm/đổi lớp. Hai mốc này có thể khác nhau và do quy định về thu, hoàn học phí của Đại học Quốc gia Hà Nội hoặc thông báo của đơn vị quản lý học phí quyết định.",,,,0.0,,end_turn,False,693,1410,7.657,False,1,medium,claude-haiku-5-5,2026-10-27T14:53:51+07:00,
+dev-m012,manual,multi,False,qc3626.d21.k3 qc3626.d23.k2,,,,,"Quy chế này **không quy định cụ thể** thời hạn thêm môn, đổi lớp hay hạn bỏ môn để được hoàn học phí. Tôi không chắc chắn về số điều, khoản cụ thể nên không trích dẫn.
+
+Theo khung chung của quy chế:
+
+- **Thêm môn, đổi lớp:** Sinh viên điều chỉnh đăng ký học phần trong thời gian đầu học kỳ. Thời hạn cụ thể do **thủ trưởng đơn vị đào tạo** quy định và công bố trong kế hoạch đào tạo hoặc thông báo đầu học kỳ. Bạn nên xem thông báo của Khoa/Trường Đại học Công nghệ về thời gian này.
+- **Hoàn học phí khi bỏ môn:** Quy chế đào tạo thường không điều chỉnh vấn đề tài chính này. Việc hoàn học phí, nếu có, phụ thuộc vào quy định về học phí của ĐHQGHN và của Nhà trường. Hạn hoàn học phí có thể khác với hạn điều chỉnh đăng ký học phần, nên bạn cần kiểm tra riêng.
+
+Vì vậy, hai hạn này không nhất thiết giống nhau. Bạn nên hỏi phòng đào tạo của đơn vị hoặc phòng tài chính để có thời hạn chính xác.",,,,0.0,,end_turn,False,693,1339,7.146,False,2,medium,claude-haiku-5-5,2026-10-27T14:53:58+07:00,
+dev-m013,manual,multi,False,qc3626.d36.k3 qc3626.d20.k1,,,,,"Tôi chưa nắm chắc nội dung cụ thể của quy chế về **thời hạn nộp đơn quay lại** và **việc đổi mã sinh viên hay xếp lớp khi trở lại**, nên không thể khẳng định các chi tiết này mà không có nguyên văn điều khoản.
+
+Về khung chung, quy chế có quy định về nghỉ học tạm thời và giao cho **thủ trưởng đơn vị đào tạo** quy định chi tiết thủ tục, thời hạn và cách xử lý khi sinh viên quay lại. Vì vậy, em nên:
+
+1. Đọc điều khoản về **nghỉ học tạm thời** trong Quy chế đào tạo (QĐ 3626/QĐ-ĐHQGHN) để nắm điều kiện và thời hạn nghỉ.
+2. Hỏi trực tiếp đơn vị đào tạo (khoa/trường đang quản lý ngành của em) hoặc phòng quản lý đào tạo để biết hạn nộp đơn và cách xử lý mã sinh viên, lớp học.
+
+Nếu em có đoạn trích quy chế liên quan, em dán vào đây, tôi sẽ đối chiếu và trả lời cụ thể hơn, kèm căn cứ theo điều, khoản.",,,,0.0,,end_turn,False,711,1540,8.58,False,0,medium,claude-haiku-5-5,2026-10-27T14:54:06+07:00,
+dev-m013,manual,multi,False,qc3626.d36.k3 qc3626.d20.k1,,,,,"Quy chế 3626/QĐ-ĐHQGHN có quy định về nghỉ học tạm thời và việc quay lại học, nhưng tôi **không xác định chắc chắn** số điều, khoản cụ thể cũng như thời hạn nộp đơn, nên bạn cần đối chiếu trực tiếp với văn bản để tránh trả lời sai.
+
+Về các ý chính:
+
+- **Thời hạn nộp đơn:** Quy chế thường yêu cầu sinh viên nộp đơn đề nghị học trở lại trong một thời hạn trước khi bắt đầu học kỳ mới. Mốc cụ thể do thủ trưởng đơn vị đào tạo quy định, nên bạn cần hỏi khoa/viện quản lý ngành của mình.
+- **Đổi mã sinh viên:** Tôi không chắc quy chế có quy định việc đổi mã hay không. Thông thường, sinh viên quay lại vẫn giữ mã số cũ, nhưng bạn nên xác nhận với đơn vị đào tạo.
+- **Học với lớp cũ:** Quy chế không quy định cụ thể việc xếp lớp. Việc đăng ký học phần và xếp lớp sau khi quay lại thường theo chương trình đào tạo hiện hành và do đơn vị đào tạo quyết định.
+
+Bạn nên tìm mục về ""nghỉ học tạm thời"" và ""thôi học"" trong toàn văn quy chế để lấy đúng căn cứ ""Điều… khoản…"", rồi liên hệ khoa/viện quản lý sinh viên để biết thời hạn và thủ tục chi tiết.",,,,0.0,,end_turn,False,711,1776,9.575,False,1,medium,claude-haiku-5-5,2026-10-27T14:54:14+07:00,
+dev-m013,manual,multi,False,qc3626.d36.k3 qc3626.d20.k1,,,,,"Quy chế không quy định rõ mốc thời hạn nộp đơn quay lại, cũng không quy định việc đổi mã sinh viên hay xếp lại lớp học cũ. Theo Quy chế, thủ tục cụ thể do **thủ trưởng đơn vị đào tạo** quy định chi tiết, nên bạn cần hỏi đơn vị đào tạo đang quản lý ngành của mình.
+
+Khi liên hệ, bạn nên hỏi cụ thể:
+- Thời hạn nộp đơn trước khi bắt đầu học kỳ mới.
+- Hồ sơ cần nộp.
+- Việc giữ nguyên hay đổi mã sinh viên.
+- Cách xếp lớp và chương trình học sau khi quay lại.
+
+Bạn có thể xem phần quy định về nghỉ học tạm thời trong Quy chế để nắm điều kiện và thời gian được nghỉ, nhưng phần thủ tục quay lại vẫn phải theo hướng dẫn của đơn vị đào tạo.",,,,0.0,,end_turn,False,711,1623,9.228,False,2,medium,claude-haiku-5-5,2026-10-27T14:54:24+07:00,
+dev-m014,manual,multi,False,qc3626.d30.k1 qc3626.d31.k1,,,,,"**Về hình thức tham gia:** Quy chế khuyến khích sinh viên tham gia nghiên cứu khoa học, và hoạt động này có thể gồm sinh hoạt học thuật, tham gia nhóm nghiên cứu, thực hiện đề tài và viết bài báo khoa học. Tôi chưa xác định chắc số điều, khoản cụ thể của phần này trong Quy chế 3626/QĐ-ĐHQGHN, nên bạn nên đối chiếu trực tiếp văn bản để trích đúng căn cứ.
+
+**Về cấp tổ chức:** Quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết về việc tổ chức hội nghị, đánh giá và khen thưởng công trình nghiên cứu khoa học của sinh viên. Vì vậy, cụ thể cấp nào tổ chức và quy trình ra sao sẽ do Trường/Khoa quản lý sinh viên của bạn quyết định, không được quy định thống nhất trong quy chế chung của ĐHQGHN.
+
+Bạn nên hỏi phòng hoặc khoa quản lý đào tạo của trường để biết quy định chi tiết và thủ tục đăng ký.",,,,0.0,,end_turn,False,705,1260,6.462,False,0,medium,claude-haiku-5-5,2026-10-27T14:54:33+07:00,
+dev-m014,manual,multi,False,qc3626.d30.k1 qc3626.d31.k1,,,,,"**Có.** Theo quy định về nghiên cứu khoa học của sinh viên trong Quy chế đào tạo đại học ĐHQGHN 2022, sinh viên có thể tham gia NCKH dưới nhiều hình thức, trong đó có **sinh hoạt học thuật** và **viết bài báo khoa học**.
+
+**Cấp tổ chức hội nghị, đánh giá và khen thưởng:**
+- **Đơn vị đào tạo** (trường thành viên, khoa trực thuộc) tổ chức hội nghị, đánh giá và khen thưởng công trình NCKH của sinh viên. Quy chế giao thủ trưởng đơn vị đào tạo quy định chi tiết các nội dung này.
+- **ĐHQGHN** tổ chức các hoạt động NCKH sinh viên ở cấp toàn Đại học.
+
+Tôi không chắc chắn về số điều, khoản cụ thể của phần này, nên em nên đối chiếu trực tiếp trong văn bản Quyết định 3626/QĐ-ĐHQGHN. Để biết thể lệ, tiêu chí và thủ tục cụ thể tại Trường Đại học Công nghệ, em nên hỏi phòng đào tạo hoặc đơn vị phụ trách NCKH sinh viên của trường.",,,,0.0,,end_turn,False,705,1502,6.805,False,1,medium,claude-haiku-5-5,2026-10-27T14:54:39+07:00,
+dev-m014,manual,multi,False,qc3626.d30.k1 qc3626.d31.k1,,,,,"**Có.** Quy chế đào tạo của ĐHQGHN cho phép sinh viên tham gia nghiên cứu khoa học, trong đó có các hình thức sinh hoạt học thuật và viết bài báo khoa học. Về cấp tổ chức, quy chế giao cho **thủ trưởng đơn vị đào tạo** quy định chi tiết việc tổ chức hội nghị, đánh giá và khen thưởng công trình nghiên cứu của sinh viên. Vì vậy, cấp quản lý trực tiếp là đơn vị đào tạo (khoa/trường thành viên mà em đang theo học). Em cần xem quy định cụ thể của đơn vị mình về thủ tục, tiêu chí đánh giá và mức khen thưởng.
+
+Em nên đối chiếu số điều, khoản cụ thể trong văn bản Quy chế (Quyết định số 3626/QĐ-ĐHQGHN) để trích dẫn chính xác. Tôi không chắc chắn về số điều cụ thể nên không ghi ở đây.",,,,0.0,,end_turn,False,705,1181,5.938,False,2,medium,claude-haiku-5-5,2026-10-27T14:54:46+07:00,
 dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,,,,,"Tôi chưa xác định chắc chắn điều khoản cụ thể trong Quy chế 3626/QĐ-ĐHQGHN quy định nghĩa vụ NCKH của sinh viên chương trình chất lượng cao và thời điểm chậm nhất được bố trí người hướng dẫn. Vì vậy tôi không nêu số điều, khoản cụ thể để tránh trích dẫn sai.
 
 Theo cấu trúc chung của quy chế, em nên kiểm tra các nội dung sau:
@@ -17,10 +235,397 @@ Theo cấu trúc chung của quy chế, em nên kiểm tra các nội dung sau:
 - **Nghĩa vụ của sinh viên chương trình chất lượng cao** (tham gia NCKH, báo cáo kết quả, hoàn thành chương trình): thường nằm trong phần quy định về chương trình chất lượng cao hoặc quyền và nghĩa vụ của người học.
 - **Thời điểm bố trí người hướng dẫn NCKH**: nếu quy chế có mốc thời gian chung thì sẽ ghi ở phần này. Nếu quy chế giao việc này cho thủ trưởng đơn vị đào tạo quy định chi tiết, thì mốc cụ thể sẽ nằm trong quy định của đơn vị đào tạo (ở đây là Trường Đại học Công nghệ), không có trong quy chế chung.
 
-Em nên hỏi trực tiếp phòng đào tạo hoặc văn phòng khoa/trường quản lý chương trình chất lượng cao để biết mốc thời gian và quy định chi tiết hiện hành.",,,,0.0,,end_turn,False,729,1291,6.512,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:10+07:00
+Em nên hỏi trực tiếp phòng đào tạo hoặc văn phòng khoa/trường quản lý chương trình chất lượng cao để biết mốc thời gian và quy định chi tiết hiện hành.",,,,0.0,,end_turn,False,729,1291,6.512,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:10+07:00,
+dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,,,,,"Tôi chưa xác định chắc chắn số điều, khoản cụ thể trong Quy chế 3626/QĐ-ĐHQGHN cho hai nội dung này, nên tôi không ghi căn cứ để tránh trích sai. Bạn nên đối chiếu trực tiếp với văn bản, đặc biệt phần quy định về chương trình chất lượng cao.
+
+Theo quy định chung của quy chế:
+
+- **Nghĩa vụ tham gia và báo cáo nghiên cứu:** Sinh viên chương trình chất lượng cao phải tham gia hoạt động nghiên cứu khoa học theo chương trình đào tạo, và báo cáo kết quả theo yêu cầu của đơn vị đào tạo.
+- **Hoàn thành chương trình:** Sinh viên phải hoàn thành đủ khối lượng học tập và các yêu cầu nghiên cứu của chương trình để được xét tốt nghiệp.
+- **Thời điểm được bố trí thầy cô hướng dẫn NCKH:** Quy chế có giao cho thủ trưởng đơn vị đào tạo quy định chi tiết các nội dung này, nên thời hạn cụ thể (chậm nhất vào học kỳ nào) do đơn vị đào tạo quyết định. Tôi không có căn cứ để nêu mốc thời gian cụ thể.
+
+Để có câu trả lời chính xác, bạn nên hỏi phòng đào tạo hoặc khoa/trường quản lý chương trình chất lượng cao của mình, hoặc xem quy định riêng của đơn vị đào tạo.",,,,0.0,,end_turn,False,729,1245,6.613,False,1,medium,claude-haiku-5-5,2026-10-27T14:54:52+07:00,
+dev-m015,manual,multi,False,qc3626.d35 qc3626.d27.k2,,,,,"Tôi chưa xác định được chắc chắn điều khoản nào của Quy chế 3626/QĐ-ĐHQGHN quy định nghĩa vụ NCKH của sinh viên chương trình chất lượng cao, cũng như mốc thời gian chậm nhất được bố trí người hướng dẫn. Nếu tôi nêu số điều cụ thể lúc này, rất có thể sẽ sai.
+
+Bạn có thể tra cứu nhanh theo cách sau:
+- Tìm trong quy chế chương/mục về **chương trình đào tạo chất lượng cao** và các điều về **khóa luận tốt nghiệp / nghiên cứu khoa học** của sinh viên.
+- Kiểm tra xem điều khoản có giao **thủ trưởng đơn vị đào tạo** quy định chi tiết hay không. Nếu có, các quy định cụ thể (hình thức báo cáo, tiến độ, thời điểm bố trí người hướng dẫn) sẽ nằm trong quy định của đơn vị đào tạo quản lý chương trình, không nằm trong quy chế chung.
+
+Nếu bạn dán đoạn quy chế liên quan vào đây, tôi sẽ tóm tắt nghĩa vụ của sinh viên và mốc thời gian, kèm căn cứ theo đúng điều, khoản, điểm.",,,,0.0,,end_turn,False,729,1037,5.449,False,2,medium,claude-haiku-5-5,2026-10-27T14:54:59+07:00,
+dev-m016,manual,multi,False,qc3626.d47.k2 qc3626.d48.k2,,,,,"Quy chế đào tạo 3626/QĐ-ĐHQGHN không quy định riêng cho UET, nên tôi không thể xác nhận chính xác người ký quyết định hay số ngày cấp bằng. Tôi không muốn đoán số điều hay thời hạn cụ thể.
+
+Những điểm có thể nói chắc:
+
+- **Công nhận tốt nghiệp:** Quy chế xác định thẩm quyền ra quyết định công nhận tốt nghiệp và điều kiện tốt nghiệp. Bạn nên tra mục về xét và công nhận tốt nghiệp trong quy chế.
+- **Ký bằng:** Thẩm quyền ký bằng cũng được quy định trong phần cấp bằng tốt nghiệp của quy chế. Với các đơn vị thành viên, thẩm quyền này có thể khác với người ra quyết định công nhận, nên cần đối chiếu cả hai.
+- **Thời hạn cấp bằng:** Quy chế quy định khoảng thời gian tối đa để cấp bằng kể từ ngày có quyết định công nhận tốt nghiệp. Bạn cần đọc đúng điều khoản đó để tính.
+- **Quy định chi tiết của UET:** Nếu quy chế giao cho thủ trưởng đơn vị đào tạo quy định cụ thể, phần đó sẽ nằm ở văn bản riêng của Trường Đại học Công nghệ, và tôi không có thông tin về nội dung này.
+
+Để có câu trả lời chính xác, bạn nên đọc trực tiếp các điều về công nhận tốt nghiệp và cấp bằng trong quy chế, rồi hỏi phòng đào tạo của UET hoặc xem thông báo chính thức của trường để biết quy định chi tiết.",,,,0.0,,end_turn,False,688,1892,10.072,False,0,medium,claude-haiku-5-5,2026-10-27T14:55:04+07:00,
+dev-m016,manual,multi,False,qc3626.d47.k2 qc3626.d48.k2,,,,,"Tôi chưa chắc chắn đến mức có thể trích đúng số Điều, khoản cho phần này, nên bạn nên đối chiếu trực tiếp với văn bản Quyết định 3626/QĐ-ĐHQGHN.
+
+Theo cách quy chế thường phân công:
+
+- **Công nhận tốt nghiệp:** Quy chế giao việc này cho người đứng đầu đơn vị đào tạo (Hiệu trưởng Trường Đại học Công nghệ, trên cơ sở đề nghị của hội đồng xét tốt nghiệp). Quy chế không tự quy định chi tiết thành phần hội đồng hay quy trình nội bộ của UET; các nội dung đó do đơn vị đào tạo quy định.
+- **Ký bằng:** Tôi chưa nắm chắc thẩm quyền ký bằng theo Quyết định 3626 (Giám đốc ĐHQGHN hay Thủ trưởng đơn vị đào tạo). Bạn nên kiểm tra mục về cấp bằng tốt nghiệp trong quy chế.
+- **Thời hạn cấp bằng:** Quy chế có quy định một khoảng thời gian tối đa tính từ ngày ra quyết định công nhận tốt nghiệp, nhưng tôi không chắc con số cụ thể, nên không muốn nêu sai.
+
+Để có căn cứ chính xác, bạn có thể tra mục ""Công nhận tốt nghiệp và cấp bằng"" trong Quyết định 3626 hoặc hỏi phòng đào tạo của Trường Đại học Công nghệ.",,,,0.0,,end_turn,False,688,1811,8.965,False,1,medium,claude-haiku-5-5,2026-10-27T14:55:14+07:00,
+dev-m016,manual,multi,False,qc3626.d47.k2 qc3626.d48.k2,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), trách nhiệm được phân chia như sau:
+
+- **Ai công nhận tốt nghiệp:** Thủ trưởng đơn vị đào tạo ra quyết định công nhận tốt nghiệp trên cơ sở đề nghị của Hội đồng xét tốt nghiệp. Với UET, đơn vị đào tạo là Trường Đại học Công nghệ. Căn cứ: Điều 28 (xem thêm khoản cụ thể trong văn bản).
+- **Ai ký bằng:** Quy chế quy định thẩm quyền ký và cấp bằng tốt nghiệp trong Điều 29. Tôi không chắc chắn người ký cụ thể là Giám đốc ĐHQGHN hay Hiệu trưởng trường thành viên, nên bạn nên đối chiếu trực tiếp khoản này.
+- **Thời hạn cấp bằng:** Quy chế có quy định thời hạn tính từ ngày có quyết định công nhận tốt nghiệp. Tôi không chắc chắn về số ngày cụ thể, nên bạn cần xem đúng câu chữ tại Điều 29.
+
+Ngoài ra, các quy định chi tiết về quy trình xét tốt nghiệp và cấp bằng ở cấp đơn vị do thủ trưởng đơn vị đào tạo ban hành, nên bạn nên hỏi phòng đào tạo của Trường Đại học Công nghệ để biết quy trình áp dụng tại trường.",,qc3626.d28 qc3626.d29,,0.0,,end_turn,False,688,1885,8.571,False,2,medium,claude-haiku-5-5,2026-10-27T14:55:23+07:00,
+dev-m017,manual,conditional,False,qc3626.d21.k1,,,,,"**Có, 31 tín chỉ vượt mức cho phép** theo quy định đăng ký khối lượng học tập tối đa cho học kỳ chính, nếu đây không phải học kỳ cuối.
+
+Theo quy chế, sinh viên không được đăng ký quá 30 tín chỉ trong một học kỳ chính (Điều 14 khoản 2). Mức 20 tín chỉ mà em nêu là khối lượng chuẩn, không phải giới hạn tối đa. Việc em không đăng ký GDTC, GDQP, kỹ năng bổ trợ hay học cải thiện không làm thay đổi kết luận này.
+
+Em nên kiểm tra lại số điều khoản và mức tối đa trong bản quy chế hiện hành. Ngoài ra, nếu đơn vị đào tạo có quy định chi tiết hơn về việc đăng ký vượt khối lượng hoặc điều kiện riêng, quy chế giao thủ trưởng đơn vị đào tạo quy định cụ thể, nên em hỏi trực tiếp đơn vị quản lý đào tạo của mình.",qc3626.d14.k2,,,0.0,0.0,end_turn,False,762,1599,7.938,False,0,medium,claude-haiku-5-5,2026-10-27T14:55:32+07:00,
+dev-m017,manual,conditional,False,qc3626.d21.k1,,,,,"**Có, nếu không thuộc trường hợp được ngoại lệ thì 31 tín chỉ sẽ vượt mức cho phép.**
+
+- Theo quy định về khối lượng học tập đăng ký trong học kỳ chính, sinh viên không được đăng ký vượt số tín chỉ tối đa do quy chế quy định (tôi nhớ là **30 tín chỉ**, chưa xác minh được số điều khoản cụ thể nên bạn nên đối chiếu lại).
+- Kế hoạch trung bình 20 tín chỉ mỗi kỳ không phải căn cứ để vượt mức. Giới hạn áp dụng cho từng học kỳ.
+- Đề bài nói bạn không đăng ký GDTC, GDQP, kỹ năng bổ trợ, học cải thiện hay tự chọn tự do, nên 31 tín chỉ đều là học phần chính, được tính đầy đủ vào giới hạn.
+- Quy chế có thể cho phép vượt mức trong một số trường hợp, chẳng hạn kết quả học tập kỳ trước đạt từ một ngưỡng nhất định hoặc học kỳ cuối khóa. Bạn cần kiểm tra điều kiện này trong phần quy định về đăng ký khối lượng học tập. Vì bạn nói đây không phải kỳ cuối, trường hợp này có thể không áp dụng, nhưng vẫn nên xem điều kiện về kết quả học kỳ trước.
+
+Nếu có ngoại lệ về học lực, bạn cần đáp ứng đủ điều kiện đó mới được đăng ký 31 tín chỉ. Nếu không, bạn nên giảm xuống mức tối đa được phép.",,,,0.0,,end_turn,False,762,1731,8.753,False,1,medium,claude-haiku-5-5,2026-10-27T14:55:40+07:00,
+dev-m017,manual,conditional,False,qc3626.d21.k1,,,,,"**Có, 31 tín chỉ vượt mức cho phép đối với một học kỳ chính thông thường.**
+
+- Quy chế giới hạn khối lượng học tập đăng ký tối đa trong mỗi học kỳ chính (Điều 33 khoản 2, cần đối chiếu lại số điều và khoản trong bản quy chế của bạn). Giới hạn này áp dụng theo từng học kỳ, nên kế hoạch trung bình 20 tín chỉ mỗi kỳ không làm thay đổi giới hạn của kỳ bạn đăng ký.
+- Mức đăng ký tối đa thông thường là 24 tín chỉ. Sinh viên chỉ được đăng ký vượt mức khi đáp ứng điều kiện về kết quả học tập của học kỳ trước. Mức vượt cao nhất theo quy chế không vượt quá 30 tín chỉ, nên 31 tín chỉ vẫn vượt mức ngay cả khi bạn đủ điều kiện.
+- Ngoại lệ cho học kỳ cuối không áp dụng với bạn, vì đây không phải kỳ cuối.
+- Việc không tính GDTC, GDQP&AN, kỹ năng bổ trợ, học cải thiện và tự chọn tự do chỉ loại trừ các học phần đó khỏi phép đếm. Không làm giảm 31 tín chỉ của bạn xuống dưới mức tối đa.
+
+Bạn nên giảm số tín chỉ đăng ký xuống không quá mức tối đa. Nếu muốn đăng ký vượt mức, hãy hỏi đơn vị đào tạo về điều kiện và thủ tục cụ thể, vì quy chế giao đơn vị đào tạo quy định chi tiết một số nội dung liên quan.",qc3626.d33.k2,,,0.0,0.0,end_turn,False,762,2269,11.159,False,2,medium,claude-haiku-5-5,2026-10-27T14:55:48+07:00,
+dev-m018,manual,conditional,False,qc3626.d22.k4,,,,,"Quy chế không quy định một mức trần cố định, tính theo phần trăm hay số tín chỉ, cho riêng trường hợp công nhận tín chỉ từ đợt trao đổi ở trường ngoài ĐHQGHN, nên tôi không thể khẳng định 40 tín chỉ có vượt trần hay không.
+
+Việc công nhận và chuyển đổi kết quả học tập ở cơ sở khác được quy định trong quy chế, và thủ trưởng đơn vị đào tạo có thẩm quyền quy định chi tiết. Em nên hỏi trực tiếp đơn vị đào tạo quản lý chương trình của mình để biết giới hạn áp dụng, điều kiện công nhận và thủ tục cần làm.",,,,0.0,,end_turn,False,716,1249,7.268,False,0,medium,claude-haiku-5-5,2026-10-27T14:56:00+07:00,
+dev-m018,manual,conditional,False,qc3626.d22.k4,,,,,"Tôi **không xác định chắc chắn** được trần số tín chỉ được công nhận từ đợt trao đổi theo Quy chế 3626/QĐ-ĐHQGHN, nên chưa thể khẳng định 40 tín chỉ (tương đương khoảng 33% của 120 tín chỉ) có vượt trần hay không.
+
+Bạn nên:
+- Tra mục quy định về **công nhận và chuyển đổi tín chỉ** đối với học phần học ở cơ sở đào tạo khác (trao đổi sinh viên) trong Quy chế, để biết tỷ lệ hoặc số tín chỉ tối đa.
+- Hỏi **Trường Đại học Công nghệ** về quy định chi tiết. Quy chế giao thủ trưởng đơn vị đào tạo cụ thể hóa một số nội dung công nhận tín chỉ, nên cách áp dụng có thể khác nhau giữa các chương trình.
+
+Nếu bạn gửi đoạn quy định về công nhận tín chỉ trao đổi, tôi sẽ đối chiếu trực tiếp với trường hợp của bạn.",,,,0.0,,end_turn,False,716,1223,7.919,False,1,medium,claude-haiku-5-5,2026-10-27T14:56:07+07:00,
+dev-m018,manual,conditional,False,qc3626.d22.k4,,,,,"Tôi **không xác định được** mức trần cụ thể cho việc công nhận tín chỉ từ đợt trao đổi ngoài ĐHQGHN, nên chưa thể khẳng định 40 tín chỉ (chiếm khoảng 33% chương trình 120 tín chỉ) có vượt trần hay không.
+
+Điều cần kiểm tra:
+
+- **Điều khoản về công nhận, chuyển đổi tín chỉ** của Quy chế ban hành kèm Quyết định 3626/QĐ-ĐHQGHN, đặc biệt phần về học tập, trao đổi tại cơ sở giáo dục khác. Hãy đọc kỹ điều này để biết giới hạn số tín chỉ được công nhận và điều kiện đi kèm (điểm tối thiểu, học phần có nội dung tương đương, v.v.).
+- **Quy định chi tiết của đơn vị đào tạo.** Quy chế giao thủ trưởng đơn vị đào tạo quy định chi tiết nhiều nội dung về công nhận học phần, nên trường Đại học Công nghệ có thể có hướng dẫn riêng. Bạn nên hỏi đơn vị quản lý đào tạo của trường trước khi đăng ký.
+
+Bạn có thể cho tôi biết nội dung cụ thể của điều khoản công nhận tín chỉ trao đổi mà bạn đang đọc để tôi giúp đối chiếu với trường hợp của bạn.",,,,0.0,,end_turn,False,716,1322,8.052,False,2,medium,claude-haiku-5-5,2026-10-27T14:56:15+07:00,
 dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,,,,,"**Học lực:** Với TBC học kỳ 1,90 trên thang 4, em thuộc loại **yếu** theo thang xếp loại học lực của quy chế (từ 1,00 đến dưới 2,00). Căn cứ là điều quy định xếp loại học lực trong Quy chế 3626/QĐ-ĐHQGHN, mà tôi chưa xác định chính xác số điều và khoản.
 
-**Số tín chỉ tối đa kỳ chính tiếp theo:** Tôi không chắc chắn về con số cụ thể. Giới hạn đăng ký tín chỉ phụ thuộc vào kết quả học tập và tình trạng cảnh báo học tập. Nếu em bị cảnh báo học tập, quy chế thường giới hạn số tín chỉ đăng ký ở mức thấp hơn mức bình thường. Em nên đối chiếu trực tiếp điều quy định về đăng ký khối lượng học tập và điều về cảnh báo học tập trong quy chế, hoặc hỏi phòng đào tạo của trường để biết chính xác.",,,,0.0,,end_turn,False,723,1639,7.996,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:16+07:00
+**Số tín chỉ tối đa kỳ chính tiếp theo:** Tôi không chắc chắn về con số cụ thể. Giới hạn đăng ký tín chỉ phụ thuộc vào kết quả học tập và tình trạng cảnh báo học tập. Nếu em bị cảnh báo học tập, quy chế thường giới hạn số tín chỉ đăng ký ở mức thấp hơn mức bình thường. Em nên đối chiếu trực tiếp điều quy định về đăng ký khối lượng học tập và điều về cảnh báo học tập trong quy chế, hoặc hỏi phòng đào tạo của trường để biết chính xác.",,,,0.0,,end_turn,False,723,1639,7.996,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:16+07:00,
+dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,,,,,"**Học lực:** Với ĐTBC học kỳ 1,90, em được xếp loại **Yếu** (khoảng 1,00–1,99 trên thang 4). Thang xếp loại học lực theo ĐTBC nằm trong quy định về đánh giá kết quả học tập của Quy chế (Điều 16 hoặc Điều 17, tùy phiên bản; em nên đối chiếu số điều chính xác trong văn bản gốc).
+
+**Số tín chỉ tối đa kỳ chính tiếp theo:** Quy chế không giới hạn số tín chỉ theo xếp loại học lực. Việc hạn chế khối lượng đăng ký thường gắn với tình trạng cảnh báo học tập. Vì em không thuộc diện bị buộc thôi học và (nếu không bị cảnh báo học tập) thì mức đăng ký tối đa theo quy định chung là **30 tín chỉ** cho học kỳ chính. Nếu em đang bị cảnh báo học tập, mức tối đa thường là **14 tín chỉ**. Em nên kiểm tra lại tình trạng cảnh báo của mình trước khi đăng ký.",qc3626.d16,qc3626.d17,,0.0,0.0,end_turn,False,723,2025,10.207,False,1,medium,claude-haiku-5-5,2026-10-27T14:56:23+07:00,
+dev-m019,manual,conditional,False,qc3626.d45.k2 qc3626.d23.k1,,,,,"**1. Xếp loại học lực:** Với TBC học kỳ 1,90 trên thang 4, em thuộc loại **Yếu** (khoảng 1,00 đến 1,99). Căn cứ là quy định xếp loại học lực theo thang điểm 4 tại Điều 17 của Quy chế.
+
+**2. Số tín chỉ tối đa đăng ký học kỳ chính tiếp theo:** Quy chế ấy không đưa ra con số cố định cho trường hợp học lực Yếu. Mức tối đa phụ thuộc vào việc em có bị cảnh báo kết quả học tập hay không, và quy định về khối lượng đăng ký học tập tối đa nằm trong Điều 13 của Quy chế. Với TBC học kỳ 1,90, em cần đối chiếu thêm điều kiện cảnh báo học tập (theo TBC học kỳ và TBC tích lũy) để biết mình thuộc trường hợp nào. Nếu bị cảnh báo, giới hạn tín chỉ sẽ thấp hơn mức bình thường.
+
+Em nên kiểm tra lại đúng khoản, điểm của Điều 13 và điều về cảnh báo học tập trong bản quy chế em đang có, hoặc hỏi phòng đào tạo của đơn vị mình để có con số chính xác.",,qc3626.d17 qc3626.d13,,0.0,,end_turn,False,723,2169,10.945,False,2,medium,claude-haiku-5-5,2026-10-27T14:56:33+07:00,
+dev-m020,manual,conditional,False,qc3626.d25.k2,,,,,"Quy chế không quy định cụ thể trường hợp học phần ở ngành cũ trùng khoảng 70% nội dung với học phần ở ngành mới. Quy chế cũng không quy định sinh viên được tự ôn thi thay vì học lại trên lớp.
+
+Việc công nhận học phần tương đương và quyết định sinh viên được giữ kết quả cũ hay phải học lại thuộc thẩm quyền của thủ trưởng đơn vị đào tạo quản lý ngành, theo quy định chi tiết của đơn vị đó. Vì vậy, em nên hỏi trực tiếp khoa hoặc bộ môn quản lý ngành học thứ hai về tỷ lệ tương đồng áp dụng và thủ tục đăng ký công nhận học phần.",,,,0.0,,end_turn,False,716,1158,6.269,False,0,medium,claude-haiku-5-5,2026-10-27T14:56:44+07:00,
+dev-m020,manual,conditional,False,qc3626.d25.k2,,,,,"Quy chế **không quy định trực tiếp** trường hợp môn trùng 70% nội dung giữa hai ngành, nên em không thể khẳng định là được giữ kết quả cũ, tự ôn thi hay phải học lại trên lớp.
+
+Về nguyên tắc, quy chế có quy định công nhận và chuyển đổi kết quả học tập đối với học phần có nội dung tương đương (xem điều về công nhận, chuyển đổi tín chỉ và điều về đào tạo văn bằng thứ hai). Nếu học phần cũ được công nhận tương đương, em thường không phải học lại. Tuy nhiên:
+
+- Ngưỡng tương đương (trong đó có mức 70%) và thủ tục xét công nhận do **thủ trưởng đơn vị đào tạo** quy định chi tiết, nên em cần hỏi Trường Đại học Công nghệ hoặc đơn vị quản lý đào tạo của ngành mới.
+- Quy chế **không quy định** hình thức ""tự ôn rồi thi"" để thay thế học phần. Em nên hỏi rõ đơn vị có cho phép hình thức này không.
+
+Em nên xác nhận số điều cụ thể trong bản quy chế đang áp dụng tại trường trước khi làm đơn.",,,,0.0,,end_turn,False,716,1423,8.577,False,1,medium,claude-haiku-5-5,2026-10-27T14:56:50+07:00,
+dev-m020,manual,conditional,False,qc3626.d25.k2,,,,,"Theo Quy chế, nếu học phần cũ được **công nhận và chuyển đổi** sang học phần tương đương trong chương trình mới thì em được sử dụng kết quả đã có, không phải học lại trên lớp. Quy chế không quy định việc ""tự ôn để thi"" như một cách thay thế riêng.
+
+Quy chế không ấn định tỷ lệ trùng nội dung (như 70%) để công nhận. Việc xác định mức tương đương và thủ tục công nhận do **thủ trưởng đơn vị đào tạo** quy định chi tiết, nên em cần hỏi đơn vị quản lý chương trình văn bằng thứ hai của mình để biết mức trùng nội dung tối thiểu và quy trình nộp hồ sơ xin công nhận.",,,,0.0,,end_turn,False,716,1275,6.794,False,2,medium,claude-haiku-5-5,2026-10-27T14:56:59+07:00,
+dev-m021,manual,conditional,False,qc3626.d26.k1,,,,,"**Chưa đủ điều kiện.** Em cần đáp ứng điều kiện trúng tuyển của chương trình thứ hai. Việc đạt ngưỡng bảo đảm chất lượng đầu vào và sẵn sàng đóng học phí chưa đủ để đăng ký.
+
+Quy chế giao thủ trưởng đơn vị đào tạo quy định chi tiết điều kiện trúng tuyển và thủ tục đăng ký chương trình thứ hai. Em nên hỏi trực tiếp đơn vị đào tạo của ngành em muốn học để biết mức điểm yêu cầu, có cho phép xét lại sau khi tích lũy thêm học phần hay không, và thời điểm đăng ký.",,,,0.0,,end_turn,False,804,1294,6.844,False,0,medium,claude-haiku-5-5,2026-10-27T14:57:06+07:00,
+dev-m021,manual,conditional,False,qc3626.d26.k1,,,,,"**Chưa đủ điều kiện.** Theo quy chế, sinh viên chỉ được đăng ký học chương trình thứ hai khi đáp ứng điều kiện trúng tuyển của chương trình đó (Điều 44). Vì em chưa đáp ứng điều kiện trúng tuyển chương trình thứ hai, em chưa đủ điều kiện đăng ký, dù đã có đơn và sẵn sàng đóng học phí.
+
+Việc đóng học phí không thay thế được điều kiện trúng tuyển. Em nên xem lại điều kiện trúng tuyển cụ thể của chương trình em muốn đăng ký, vì đơn vị đào tạo có thể quy định chi tiết thêm.",qc3626.d44,,,0.0,0.0,end_turn,False,804,1289,8.791,False,1,medium,claude-haiku-5-5,2026-10-27T14:57:13+07:00,
+dev-m021,manual,conditional,False,qc3626.d26.k1,,,,,"**Chưa đủ điều kiện.** Theo quy định, sinh viên chỉ được đăng ký học chương trình thứ hai khi đáp ứng **điều kiện trúng tuyển của chương trình đó** (Điều 44 khoản 1). Việc bạn đã có đơn và sẵn sàng đóng học phí chưa thay thế được điều kiện này.
+
+Bạn đạt ngưỡng bảo đảm chất lượng đầu vào (TBC 2,30) nhưng chưa đạt điều kiện trúng tuyển của chương trình thứ hai, nên chưa thể đăng ký.
+
+Cụ thể điều kiện trúng tuyển của từng chương trình do thủ trưởng đơn vị đào tạo quy định, nên bạn nên liên hệ trực tiếp đơn vị đào tạo của chương trình bạn muốn học để biết mức điểm yêu cầu và thời điểm có thể đăng ký lại.",qc3626.d44.k1,,,0.0,0.0,end_turn,False,804,1335,8.316,False,2,medium,claude-haiku-5-5,2026-10-27T14:57:21+07:00,
+dev-m022,manual,conditional,False,qc3626.d27.k3,,,,,"Tôi không có căn cứ chắc chắn để khẳng định em được hay không được tiếp tục học CLC trong trường hợp này.
+
+Theo quy chế, em chưa bị buộc thôi học. Học phần bị điểm F phải học lại, và điều kiện duy trì chương trình chất lượng cao có thể được đơn vị đào tạo quy định chi tiết. Em nên hỏi trực tiếp đơn vị đào tạo đang quản lý chương trình CLC của mình để biết điều kiện cụ thể, đặc biệt là việc học phần F ở học phần nâng cao có ảnh hưởng đến việc tiếp tục học CLC hay không.",,,,0.0,,end_turn,False,700,1206,6.414,False,0,medium,claude-haiku-5-5,2026-10-27T14:57:30+07:00,
+dev-m022,manual,conditional,False,qc3626.d27.k3,,,,,"Em chưa thể khẳng định chắc chắn là được tiếp tục ở CLC hay không, vì tôi không xác định được chính xác điều khoản của Quy chế 3626/QĐ-ĐHQGHN quy định điều kiện duy trì chương trình chất lượng cao, và không nên đoán số điều, khoản.
+
+Về nguyên tắc chung:
+- Học phần bị điểm F không được tính là đã đạt. Sinh viên phải đăng ký học lại học phần đó hoặc học phần thay thế theo quy định của quy chế.
+- Điều kiện tiếp tục học CLC thường gắn với điểm trung bình tích lũy và kết quả học tập, nên việc có điểm F ở một học phần nâng cao có thể ảnh hưởng đến việc em được tiếp tục ở CLC. Em cần đối chiếu điều kiện cụ thể trong phần quy định về chương trình chất lượng cao.
+- Quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết một số nội dung về chương trình đào tạo và điều kiện chuyển đổi chương trình. Vì vậy, em nên hỏi trực tiếp khoa/trường quản lý ngành để biết cách áp dụng cho trường hợp của mình.",,,,0.0,,end_turn,False,700,1576,8.536,False,1,medium,claude-haiku-5-5,2026-10-27T14:57:36+07:00,
+dev-m022,manual,conditional,False,qc3626.d27.k3,,,,,"Theo hiểu biết của tôi về Quy chế 3626/QĐ-ĐHQGHN, tôi **không chắc chắn** về điều khoản cụ thể áp dụng cho trường hợp này, nên không thể khẳng định em có được tiếp tục học CLC hay không.
+
+Hai điểm có thể liên quan:
+
+- **Điểm F:** Học phần bị điểm F được coi là không đạt và phải học lại hoặc thay bằng học phần khác theo quy định về đánh giá học phần của quy chế.
+- **Điều kiện học CLC:** Điều kiện duy trì học CLC (điểm trung bình tích lũy, việc có học phần bị F hay không, và việc chuyển về chương trình đại trà) thường do quy chế và quy định của đơn vị đào tạo quy định chi tiết. Nếu quy chế giao cho thủ trưởng đơn vị đào tạo quy định cụ thể, điều kiện áp dụng sẽ theo quy định của đơn vị quản lý chương trình CLC của em.
+
+Em nên đối chiếu trực tiếp với quy định về chương trình chất lượng cao của đơn vị đào tạo hoặc hỏi cố vấn học tập để biết chính xác điều kiện duy trì CLC và cách xử lý học phần F.",,,,0.0,,end_turn,False,700,1340,7.077,False,2,medium,claude-haiku-5-5,2026-10-27T14:57:45+07:00,
+dev-m023,manual,conditional,False,qc3626.d35.k4,,,,,"Bài thi của em còn **4,0 điểm** sau khi bị xử lý khiển trách.
+
+Theo quy chế, hình thức khiển trách áp dụng cho sinh viên vi phạm lần đầu ở mức độ nhẹ, trong đó có hành vi nhìn bài của người khác. Khi bị khiển trách, bài thi bị trừ 50% số điểm (8,0 × 50% = 4,0).
+
+Căn cứ: Điều 34 khoản 2 điểm a Quy chế đào tạo đại học ĐHQGHN ban hành theo Quyết định 3626/QĐ-ĐHQGHN.",qc3626.d34.k2,,,0.0,0.0,end_turn,False,705,1043,5.31,False,0,medium,claude-haiku-5-5,2026-10-27T14:57:52+07:00,
+dev-m023,manual,conditional,False,qc3626.d35.k4,,,,,"Sau xử lý, bài thi của em còn **6,0 điểm**.
+
+Theo Quy chế, hình thức khiển trách áp dụng cho người vi phạm trong giờ thi bị trừ 25% số điểm của bài thi. Em bị trừ 8,0 × 25% = 2,0 điểm, còn 6,0 điểm.
+
+Căn cứ: Điều 34 khoản 2 điểm a (quy định về xử lý vi phạm trong kiểm tra, thi). Em nên đối chiếu lại điều khoản trong văn bản gốc để xác nhận số điểm bị trừ.",qc3626.d34.k2,,,0.0,0.0,end_turn,False,705,1259,7.066,False,1,medium,claude-haiku-5-5,2026-10-27T14:57:57+07:00,
+dev-m023,manual,conditional,False,qc3626.d35.k4,,,,,"Bài thi của em còn **5,5 điểm**.
+
+Theo quy chế, khiển trách là hình thức xử lý áp dụng khi người học vi phạm lần đầu, ví dụ nhìn bài của người khác. Hình thức này trừ **25% tổng số điểm của bài thi**, tức 2,5 điểm trên thang 10: 8,0 − 2,5 = 5,5.
+
+Căn cứ: Điều 33 khoản 2 (xử lý vi phạm trong kiểm tra, thi). Em nên đối chiếu lại với văn bản đầy đủ vì tôi không chắc chắn về số khoản và điểm cụ thể.",qc3626.d33.k2,,,0.0,0.0,end_turn,False,705,1131,5.488,False,2,medium,claude-haiku-5-5,2026-10-27T14:58:04+07:00,
+dev-m024,manual,conditional,False,qc3626.d47.k5 qc3626.d47.k7,,,,,"Em được xếp hạng **tốt nghiệp loại Giỏi**.
+
+- **Theo điểm:** TBC tích lũy 3,65 đạt mức hạng Xuất sắc (từ 3,60 đến 4,00). Căn cứ: Điều 28 khoản 1.
+- **Theo điều kiện:** Hạng Xuất sắc không được cấp khi số tín chỉ học phần phải học lại vượt quá 5% tổng tín chỉ của chương trình. Trường hợp của em là 6%, nên hạng bị giảm một bậc xuống Giỏi. Căn cứ: Điều 28 khoản 2.
+
+Số liệu về ngưỡng 3,60 và 5% là từ trí nhớ của tôi, không phải trích nguyên văn. Em nên đối chiếu với Điều 28 trong bản Quy chế gốc (Quyết định 3626/QĐ-ĐHQGHN) trước khi dùng để làm căn cứ.",qc3626.d28.k1 qc3626.d28.k2,qc3626.d28,,0.0,0.0,end_turn,False,749,1521,7.565,False,0,medium,claude-haiku-5-5,2026-10-27T14:58:10+07:00,
+dev-m024,manual,conditional,False,qc3626.d47.k5 qc3626.d47.k7,,,,,"Em được xếp hạng **Giỏi**.
+
+- **Điều 27 khoản 2 (hạng xuất sắc):** Điều kiện gồm TBCTL toàn khóa từ 3,60 trở lên và khối lượng học phần phải học lại không vượt quá 5% tổng tín chỉ chương trình. Với TBCTL 3,65, em đạt điều kiện về điểm nhưng vượt ngưỡng 5% học lại (em có 6%), nên không đủ điều kiện xếp hạng Xuất sắc.
+- **Điều 27 khoản 2 (hạng giỏi):** TBCTL từ 3,20 đến 3,59 là đủ về điểm, nên em đạt hạng Giỏi.
+
+Lưu ý: tôi trả lời theo kiến thức về quy chế, chưa đối chiếu lại từng chữ của Điều 27. Em nên kiểm tra lại khoản và ngưỡng 5% trong văn bản chính thức, và hỏi phòng đào tạo của trường nếu cần xác nhận.",qc3626.d27.k2,qc3626.d27,,0.0,0.0,end_turn,False,749,1655,8.606,False,1,medium,claude-haiku-5-5,2026-10-27T14:58:17+07:00,
+dev-m024,manual,conditional,False,qc3626.d47.k5 qc3626.d47.k7,,,,,"**Kết luận: Em được xếp hạng tốt nghiệp Giỏi.**
+
+- **Theo điểm TBC:** 3,65 nằm trong khoảng xếp hạng Xuất sắc (từ 3,60 trở lên). Căn cứ: Điều 28 khoản 2.
+- **Theo tỷ lệ học lại:** Quy chế hạ một hạng nếu số tín chỉ phải học lại vượt một tỷ lệ nhất định trên tổng tín chỉ chương trình. Theo quy định này, 6% vượt ngưỡng 5%, nên hạng Xuất sắc bị giảm xuống Giỏi. Căn cứ: Điều 28 khoản 2 (cần đối chiếu lại ngưỡng 5% và cách áp dụng với văn bản gốc, vì tôi không có đoạn trích quy chế để kiểm chứng trực tiếp).
+
+Em nên đối chiếu lại khoản này trong quy chế hoặc hỏi phòng đào tạo để xác nhận trước khi dùng kết quả.",qc3626.d28.k2,,,0.0,0.0,end_turn,False,749,1305,6.896,False,2,medium,claude-haiku-5-5,2026-10-27T14:58:26+07:00,
+dev-m025,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN) không quy định nội dung về mật khẩu Wi-Fi hay cách cấp tài khoản mạng cho sinh viên, nên tôi không thể trả lời câu hỏi này dựa trên quy chế.
+
+Em có thể hỏi trực tiếp Trường Đại học Công nghệ hoặc bộ phận hỗ trợ CNTT của trường để được hướng dẫn.",,,,,,end_turn,False,665,262,2.046,False,0,medium,claude-haiku-5-5,2026-10-27T14:58:33+07:00,
+dev-m025,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN) không quy định nội dung này, nên tôi không có căn cứ để hướng dẫn cách lấy mật khẩu Wi-Fi. Em nên hỏi trực tiếp đơn vị phụ trách hạ tầng công nghệ thông tin của Trường Đại học Công nghệ hoặc theo dõi các kênh thông báo chính thức của Trường.",,,,,,end_turn,False,665,393,2.592,False,1,medium,claude-haiku-5-5,2026-10-27T14:58:35+07:00,
+dev-m025,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN) không quy định nội dung về cấp phát hay tra cứu mật khẩu Wi-Fi, nên tôi không có căn cứ để hướng dẫn bạn cụ thể.
+
+Bạn có thể hỏi trực tiếp đơn vị phụ trách công nghệ thông tin hoặc hỗ trợ sinh viên của Trường Đại học Công nghệ.",,,,,,end_turn,False,665,368,2.932,False,2,medium,claude-haiku-5-5,2026-10-27T14:58:37+07:00,
 dev-m026,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định về phí gửi xe máy theo tháng, nên mình không có căn cứ để trả lời mức phí cụ thể.
 
-Em có thể liên hệ trực tiếp với bộ phận quản lý bãi gửi xe hoặc phòng công tác sinh viên của trường để được hướng dẫn.",,,,,,end_turn,False,666,337,2.479,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:24+07:00
+Em có thể liên hệ trực tiếp với bộ phận quản lý bãi gửi xe hoặc phòng công tác sinh viên của trường để được hướng dẫn.",,,,,,end_turn,False,666,337,2.479,True,0,medium,claude-haiku-5-5,2026-10-27T14:28:24+07:00,
+dev-m026,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định 3626/QĐ-ĐHQGHN ngày 21/10/2022 **không quy định** về phí gửi xe máy theo tháng, nên mình không có căn cứ để trả lời mức phí cụ thể.
+
+Em có thể hỏi trực tiếp đơn vị quản lý bãi xe của trường hoặc xem thông báo chính thức của trường.",,,,,,end_turn,False,666,366,2.416,False,1,medium,claude-haiku-5-5,2026-10-27T14:58:40+07:00,
+dev-m026,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN) **không quy định** về phí gửi xe, nên tôi không có căn cứ để trả lời mức phí cụ thể.
+
+Em nên hỏi trực tiếp bộ phận quản lý bãi xe hoặc phòng quản lý cơ sở vật chất của trường để biết giá gửi xe theo tháng hiện hành.",,,,,,end_turn,False,666,464,2.94,False,2,medium,claude-haiku-5-5,2026-10-27T14:58:43+07:00,
+dev-m027,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định giờ phục vụ của căng tin, nên tôi không có thông tin để trả lời câu hỏi này. Bạn nên hỏi trực tiếp đơn vị quản lý căng tin hoặc xem thông báo của trường.",,,,,,end_turn,False,671,187,1.674,False,0,medium,claude-haiku-5-5,2026-10-27T14:58:46+07:00,
+dev-m027,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định giờ phục vụ của căng tin, nên tôi không có thông tin để trả lời chính xác. Bạn nên hỏi trực tiếp đơn vị quản lý căng tin hoặc xem thông báo chính thức của trường.",,,,,,end_turn,False,671,224,2.934,False,1,medium,claude-haiku-5-5,2026-10-27T14:58:47+07:00,
+dev-m027,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định giờ phục vụ của căng tin, nên tôi không có thông tin để trả lời. Em có thể hỏi trực tiếp đơn vị quản lý căng tin hoặc xem thông báo của trường.",,,,,,end_turn,False,671,203,2.135,False,2,medium,claude-haiku-5-5,2026-10-27T14:58:50+07:00,
+dev-m028,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định 3626/QĐ-ĐHQGHN) **không quy định** về lịch hay giờ xuất phát của xe buýt giữa các cơ sở. Vì vậy mình không thể cung cấp thông tin này dựa trên quy chế.
+
+Em nên hỏi trực tiếp đơn vị quản lý xe buýt của trường hoặc xem thông báo chính thức của trường về lịch xe đưa đón giữa các cơ sở.",,,,,,end_turn,False,674,442,2.737,False,0,medium,claude-haiku-5-5,2026-10-27T14:58:52+07:00,
+dev-m028,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định 3626/QĐ-ĐHQGHN) không quy định về lịch xe buýt đưa đón giữa các cơ sở, nên không có căn cứ trong quy chế để trả lời về giờ xuất phát.
+
+Em có thể xem lịch này trên thông báo chính thức của Trường Đại học Công nghệ hoặc hỏi trực tiếp đơn vị quản lý xe đưa đón của trường.",,,,,,end_turn,False,674,447,2.876,False,1,medium,claude-haiku-5-5,2026-10-27T14:58:55+07:00,
+dev-m028,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định về lịch xe buýt đưa đón giữa các cơ sở, nên tôi không có căn cứ để trả lời giờ xuất phát.
+
+Em nên xem thông báo chính thức của Trường Đại học Công nghệ hoặc kênh thông tin chính thức của trường để biết lịch xe.",,,,,,end_turn,False,674,332,2.332,False,2,medium,claude-haiku-5-5,2026-10-27T14:58:58+07:00,
+dev-m029,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN) **không quy định** mức phí cấp lại thẻ sinh viên.
+
+Em nên hỏi bộ phận quản lý sinh viên của trường hoặc xem thông báo chính thức về cấp lại thẻ để biết mức phí và thủ tục.",,,,,,end_turn,False,674,482,4.142,False,0,medium,claude-haiku-5-5,2026-10-27T14:59:00+07:00,
+dev-m029,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định 3626/QĐ-ĐHQGHN **không quy định** về thủ tục cấp lại thẻ sinh viên hay mức phí liên quan, nên mình không thể cung cấp con số cụ thể.
+
+Để biết chính xác mức phí, em nên hỏi phòng công tác sinh viên hoặc đơn vị đào tạo đang quản lý hồ sơ của em.",,,,,,end_turn,False,674,408,3.639,False,1,medium,claude-haiku-5-5,2026-10-27T14:59:04+07:00,
+dev-m029,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN không quy định về việc cấp lại thẻ sinh viên hay mức phí cấp lại thẻ. Vì vậy, mình không thể cho em con số cụ thể dựa trên quy chế này.
+
+Em nên hỏi trực tiếp phòng/ban phụ trách công tác sinh viên hoặc đơn vị đào tạo của mình để biết mức phí và thủ tục cấp lại thẻ.",,,,,,end_turn,False,674,494,3.254,False,2,medium,claude-haiku-5-5,2026-10-27T14:59:08+07:00,
+dev-m030,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định nội dung này, vì việc đặt sân thể thao sau giờ học thuộc quản lý cơ sở vật chất, không thuộc phạm vi điều chỉnh của quy chế.
+
+Bạn nên hỏi đơn vị quản lý cơ sở vật chất thể thao của trường hoặc xem thông báo chính thức về đăng ký sử dụng sân.",,,,,,end_turn,False,667,399,2.595,False,0,medium,claude-haiku-5-5,2026-10-27T14:59:11+07:00,
+dev-m030,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN) **không quy định** về việc đặt sân bóng đá hay sử dụng cơ sở vật chất thể thao của trường sau giờ học, nên tôi không thể cung cấp thông tin về nơi đăng ký.
+
+Bạn có thể hỏi trực tiếp Trường Đại học Công nghệ hoặc phòng/ban phụ trách cơ sở vật chất của trường.",,,,,,end_turn,False,667,269,2.38,False,1,medium,claude-haiku-5-5,2026-10-27T14:59:14+07:00,
+dev-m030,manual,out_of_scope,False,,,,,,"Quy chế đào tạo đại học của ĐHQGHN không quy định nội dung về đăng ký sử dụng sân bóng đá hay các cơ sở thể thao của trường sau giờ học.
+
+Bạn nên liên hệ trực tiếp đơn vị quản lý cơ sở vật chất của trường hoặc theo dõi thông báo chính thức của trường để biết thủ tục đăng ký.",,,,,,end_turn,False,667,410,2.874,False,2,medium,claude-haiku-5-5,2026-10-27T14:59:16+07:00,
+dev-s01,generated,single,False,qc3626.d43.k1,,,,,"Điểm chữ **C+** tương ứng với **2,5 điểm** theo thang điểm 4.
+
+Căn cứ: Điều 24 của Quy chế (quy định về thang điểm đánh giá học phần).",,qc3626.d24,,0.0,,end_turn,False,665,697,3.808,False,0,medium,claude-haiku-5-5,2026-10-27T14:59:19+07:00,
+dev-s01,generated,single,False,qc3626.d43.k1,,,,,"Điểm chữ **C+** tương ứng với **2,5 điểm** theo thang điểm 4.
+
+Căn cứ: bảng quy đổi điểm chữ trong điều khoản về thang điểm đánh giá học phần của Quy chế đào tạo đại học ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN). Tôi chưa xác định được số Điều, khoản cụ thể nên bạn nên đối chiếu lại bảng này trong văn bản gốc.",,,,0.0,,end_turn,False,665,1110,5.071,False,1,medium,claude-haiku-5-5,2026-10-27T14:59:23+07:00,
+dev-s01,generated,single,False,qc3626.d43.k1,,,,,"Điểm chữ **C+** tương ứng với **2,5 điểm** theo thang điểm 4 (đối chiếu thang điểm 10: từ 6,5 đến 6,9).
+
+Căn cứ: Điều 24 khoản 2 của Quy chế đào tạo đại học ban hành kèm Quyết định 3626/QĐ-ĐHQGHN.",qc3626.d24.k2,,,0.0,0.0,end_turn,False,665,959,4.984,False,2,medium,claude-haiku-5-5,2026-10-27T14:59:28+07:00,
+dev-s02,generated,conditional,False,qc3626.d17.k2,,,,,"Sinh viên đã tích lũy 50 tín chỉ thuộc **năm thứ hai**. Theo quy định chung về xếp năm đào tạo theo số tín chỉ tích lũy, mốc từ 30 đến dưới 60 tín chỉ tương ứng năm thứ hai. Căn cứ là điều quy định về thời gian và khối lượng học tập trong Quy chế (QĐ 3626/QĐ-ĐHQGHN). Tôi không nắm chắc số hiệu điều, khoản cụ thể, nên bạn nên đối chiếu với văn bản gốc.
+
+Quy chế không thấy có mốc xếp năm riêng cho CTĐT chất lượng cao, nên áp dụng quy định chung.",,,,0.0,,end_turn,False,672,1071,6.112,False,0,medium,claude-haiku-5-5,2026-10-27T14:59:33+07:00,
+dev-s02,generated,conditional,False,qc3626.d17.k2,,,,,"Sinh viên đã tích lũy 50 tín chỉ thuộc **năm thứ hai**, vì nằm trong khoảng từ 30 đến dưới 60 tín chỉ.
+
+Quy chế xếp năm học dựa trên số tín chỉ tích lũy, và quy định này áp dụng chung cho các chương trình đào tạo, kể cả chương trình chất lượng cao. Tôi không xác định được chính xác số điều, khoản của quy chế chứa mốc xếp năm này, nên bạn nên đối chiếu lại trong văn bản Quyết định 3626/QĐ-ĐHQGHN trước khi dùng làm căn cứ chính thức.",,,,0.0,,end_turn,False,672,1047,6.004,False,1,medium,claude-haiku-5-5,2026-10-27T14:59:39+07:00,
+dev-s02,generated,conditional,False,qc3626.d17.k2,,,,,"Sinh viên chương trình chất lượng cao đã tích lũy 50 tín chỉ thuộc **năm thứ hai**, theo mốc xếp năm đào tạo chung của quy chế: từ 30 đến dưới 60 tín chỉ tích lũy.
+
+Căn cứ là quy định về xếp năm đào tạo theo số tín chỉ tích lũy trong Quy chế đào tạo đại học ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN). Tôi chưa xác định chắc số Điều cụ thể, nên bạn nên kiểm tra lại điều khoản này trong văn bản.",,,,0.0,,end_turn,False,672,1060,5.845,False,2,medium,claude-haiku-5-5,2026-10-27T14:59:45+07:00,
+dev-s03,generated,multi,False,qc3626.d43.k2 qc3626.d42.k5,,,,,"**Điểm trung bình chung tích lũy** được tính theo thang điểm 4, bình quân gia quyền theo số tín chỉ:
+
+**A = Σ(aᵢ × nᵢ) / Σnᵢ**
+
+Trong đó:
+- **aᵢ**: điểm của học phần thứ i quy đổi sang thang điểm 4
+- **nᵢ**: số tín chỉ của học phần thứ i
+- Tổng được lấy trên các học phần đã tích lũy trong toàn khóa học
+
+Căn cứ: Quy chế đào tạo đại học của ĐHQGHN (QĐ 3626/QĐ-ĐHQGHN), phần quy định về đánh giá kết quả học tập và cách tính điểm trung bình chung (tôi chưa chắc chắn số điều cụ thể, bạn nên đối chiếu lại trong văn bản).
+
+Bảng quy đổi điểm chữ sang thang điểm 4 và cách xử lý học phần học lại hoặc cải thiện điểm cũng do quy chế quy định. Nếu bạn cần chi tiết các quy định này, hãy cho tôi biết để tôi trả lời cụ thể hơn.",,,,0.0,,end_turn,False,650,1425,7.583,False,0,medium,claude-haiku-5-5,2026-10-27T14:59:51+07:00,
+dev-s03,generated,multi,False,qc3626.d43.k2 qc3626.d42.k5,,,,,"**Điểm trung bình chung tích lũy (TBCTL)** là trung bình có trọng số của điểm các học phần đã tích lũy, theo công thức:
+
+**TBCTL = Σ (điểm học phần × số tín chỉ) / Σ số tín chỉ**
+
+- Điểm học phần được quy về **thang điểm 4** để tính.
+- Trọng số là số tín chỉ của từng học phần.
+- Chỉ các học phần đã đạt, tức đã tích lũy, mới được đưa vào tính.
+
+Căn cứ: quy định về điểm học phần và điểm trung bình chung trong Quy chế đào tạo đại học ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN). Tôi chưa xác định chắc chắn số điều, khoản cụ thể, nên bạn nên đối chiếu trực tiếp với văn bản để trích dẫn chính xác. Nếu cần, hãy cho tôi biết nội dung bạn đang thắc mắc (ví dụ: học phần học lại, học phần được miễn, hay cách quy đổi điểm chữ) để tôi trả lời sát hơn.",,,,0.0,,end_turn,False,650,1384,6.985,False,1,medium,claude-haiku-5-5,2026-10-27T14:59:59+07:00,
+dev-s03,generated,multi,False,qc3626.d43.k2 qc3626.d42.k5,,,,,"Điểm trung bình chung tích lũy (TBC tích lũy) là điểm trung bình của **các học phần đã tích lũy**, tính theo **hệ 4** và có **trọng số là số tín chỉ** của từng học phần:
+
+**A = Σ(aᵢ × nᵢ) / Σnᵢ**
+
+Trong đó:
+- aᵢ: điểm của học phần thứ i quy đổi theo hệ 4
+- nᵢ: số tín chỉ của học phần thứ i
+
+Căn cứ: Quy chế 3626/QĐ-ĐHQGHN, Điều 25 (về cách tính điểm trung bình tích lũy). Bạn nên đối chiếu lại số điều trong văn bản gốc.",,qc3626.d25,,0.0,,end_turn,False,650,1282,7.431,False,2,medium,claude-haiku-5-5,2026-10-27T15:00:06+07:00,
+dev-s04,generated,multi,False,qc3626.d5.k2 qc3626.d21.k2 qc3626.d41.k2 qc3626.d42.k5,,,,,"Theo Quy chế đào tạo của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), các nhóm học phần thường **không được tính** vào điểm trung bình chung tích lũy gồm:
+
+- **Học phần chỉ đánh giá Đạt/Không đạt** (không chấm điểm số).
+- **Học phần điều kiện** (như học phần bổ sung kiến thức hoặc học phần ngoại ngữ, nếu chương trình quy định không tính điểm).
+- **Học phần được miễn hoặc công nhận tương đương** mà không quy đổi thành điểm.
+
+Tôi chưa xác định chắc chắn số điều, khoản cụ thể và danh sách đầy đủ trong văn bản. Bạn nên tra mục quy định về cách tính điểm trung bình chung tích lũy trong quy chế để có căn cứ chính xác, và kiểm tra thêm quy định của chương trình đào tạo hoặc đơn vị quản lý học phần nếu cần.",,,,0.0,,end_turn,False,655,1462,7.264,False,0,medium,claude-haiku-5-5,2026-10-27T15:00:13+07:00,
+dev-s04,generated,multi,False,qc3626.d5.k2 qc3626.d21.k2 qc3626.d41.k2 qc3626.d42.k5,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (QĐ 3626/QĐ-ĐHQGHN, 2022), các học phần thường không được tính vào điểm trung bình chung tích lũy gồm:
+
+- **Học phần Giáo dục thể chất và Giáo dục quốc phòng - an ninh**: được đánh giá đạt/không đạt và không tính vào điểm trung bình chung tích lũy.
+- **Học phần chưa đạt** (điểm dưới mức quy định để được tích lũy): chưa được tích lũy nên không đưa vào điểm trung bình chung tích lũy cho đến khi đạt.
+- **Học phần được miễn hoặc công nhận tín chỉ** mà không quy đổi điểm vào thang điểm của chương trình.
+
+Tôi chưa xác định được số Điều, khoản cụ thể của quy chế cho từng trường hợp trên. Bạn nên tra mục quy định về cách tính điểm trung bình chung tích lũy trong quy chế để có căn cứ chính xác. Với quy định chi tiết của Trường hoặc Khoa, bạn nên hỏi đơn vị đào tạo, vì quy chế giao thủ trưởng đơn vị đào tạo quy định cụ thể một số nội dung liên quan.",,,,0.0,,end_turn,False,655,1421,7.805,False,1,medium,claude-haiku-5-5,2026-10-27T15:00:20+07:00,
+dev-s04,generated,multi,False,qc3626.d5.k2 qc3626.d21.k2 qc3626.d41.k2 qc3626.d42.k5,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), nhóm học phần thường không tính vào điểm trung bình chung tích lũy là các học phần chỉ đánh giá **Đạt/Không đạt**, không cho điểm số. Tôi chưa xác định chắc chắn số điều khoản và danh mục cụ thể (ví dụ các học phần Giáo dục thể chất, Giáo dục quốc phòng–an ninh hoặc ngoại ngữ không chuyên nếu có quy định riêng), nên bạn cần đối chiếu trực tiếp với điều khoản về cách tính điểm trung bình chung tích lũy trong quy chế.",,,,0.0,,end_turn,False,655,1356,7.889,False,2,medium,claude-haiku-5-5,2026-10-27T15:00:28+07:00,
+dev-s05,generated,multi,False,qc3626.d46.k1 qc3626.d13.k3,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), sinh viên chương trình chất lượng cao được xét tốt nghiệp khi đáp ứng các điều kiện chung:
+
+- **Tích lũy đủ số học phần và tín chỉ** của chương trình đào tạo.
+- **Điểm trung bình chung tích lũy** đạt từ 2.0 trở lên.
+- **Đạt chuẩn đầu ra** về ngoại ngữ, tin học và các yêu cầu khác theo quy định.
+- **Hoàn thành các học phần giáo dục thể chất và giáo dục quốc phòng – an ninh** theo quy định.
+- **Không trong thời gian bị kỷ luật** ở mức không được tiếp tục theo học.
+
+Quy chế không đặt ra một bộ điều kiện tốt nghiệp riêng chỉ dành cho chương trình chất lượng cao. Chuẩn đầu ra cụ thể của từng chương trình, đặc biệt là yêu cầu ngoại ngữ, có thể cao hơn mặt bằng chung. Quy chế giao thủ trưởng đơn vị đào tạo quy định chi tiết nội dung này, nên bạn cần kiểm tra quy định của đơn vị quản lý chương trình.
+
+Tôi không chắc chắn số điều, khoản cụ thể của các quy định trên, nên bạn nên đối chiếu với văn bản gốc hoặc hỏi phòng đào tạo để có căn cứ chính xác.",,,,0.0,,end_turn,False,667,1830,8.72,False,0,medium,claude-haiku-5-5,2026-10-27T15:00:36+07:00,
+dev-s05,generated,multi,False,qc3626.d46.k1 qc3626.d13.k3,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), sinh viên chương trình chất lượng cao được xét tốt nghiệp khi đáp ứng các điều kiện chung sau:
+
+- **Tích lũy đủ số tín chỉ** của chương trình đào tạo.
+- **Điểm trung bình tích lũy toàn khóa** đạt từ 2,00 trở lên (thang 4).
+- **Đạt chuẩn đầu ra** của chương trình, bao gồm chuẩn ngoại ngữ và tin học.
+- **Hoàn thành các học phần bắt buộc** theo chương trình, như giáo dục thể chất và giáo dục quốc phòng – an ninh.
+- **Không đang trong thời gian bị kỷ luật** ở mức không được phép xét tốt nghiệp.
+
+Chương trình chất lượng cao thường có chuẩn đầu ra ngoại ngữ cao hơn chương trình đại trà. Mức cụ thể do đơn vị đào tạo quy định chi tiết theo thẩm quyền của thủ trưởng đơn vị đào tạo, nên tôi không thể xác nhận mức đó cho Trường Đại học Công nghệ.
+
+Bạn nên đối chiếu trực tiếp điều khoản về xét và công nhận tốt nghiệp trong Quy chế để lấy đúng số điều, khoản, điểm. Bạn cũng nên xem thông báo hoặc quy định chi tiết của chương trình chất lượng cao mà bạn theo học.",,,,0.0,,end_turn,False,667,1929,9.245,False,1,medium,claude-haiku-5-5,2026-10-27T15:00:45+07:00,
+dev-s05,generated,multi,False,qc3626.d46.k1 qc3626.d13.k3,,,,,"Quy chế 3626/QĐ-ĐHQGHN không có điều khoản riêng về điều kiện tốt nghiệp cho chương trình chất lượng cao, theo hiểu biết của tôi. Sinh viên chương trình này về cơ bản phải đáp ứng các điều kiện xét tốt nghiệp chung, gồm:
+
+- **Hoàn thành đủ số tín chỉ/học phần** theo chương trình đào tạo đã đăng ký (Điều 44 khoản 1 điểm a, cần kiểm tra lại).
+- **Điểm trung bình tích lũy toàn khóa** đạt từ 2,00 trở lên theo thang điểm 4 (Điều 44 khoản 1 điểm b, cần kiểm tra lại).
+- **Đạt chuẩn đầu ra** theo quy định của chương trình, trong đó có chuẩn ngoại ngữ và tin học.
+- **Hoàn thành các học phần/chứng chỉ bắt buộc** như giáo dục thể chất và giáo dục quốc phòng – an ninh.
+- **Không thuộc diện bị truy cứu trách nhiệm hình sự hoặc đang bị kỷ luật ở mức không được xét tốt nghiệp.**
+
+Chương trình chất lượng cao thường có yêu cầu cao hơn về ngoại ngữ hoặc các điều kiện khác. Quy chế giao thủ trưởng đơn vị đào tạo quy định chi tiết những nội dung này, nên bạn cần xem thông báo hoặc quy định của đơn vị quản lý chương trình. Tôi không thể xác nhận các yêu cầu cụ thể của Trường Đại học Công nghệ.
+
+Số điều và khoản trên là theo cách tôi nhớ, có thể chưa chính xác. Bạn nên đối chiếu với văn bản quy chế gốc trước khi áp dụng.",qc3626.d44.k1,,,0.0,0.0,end_turn,False,667,1939,9.074,False,2,medium,claude-haiku-5-5,2026-10-27T15:00:54+07:00,
+dev-s06,generated,multi,False,qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), sinh viên bị buộc thôi học trong các trường hợp chính sau:
+
+- **Vượt quá thời gian tối đa được phép học** của chương trình đào tạo (Điều 24 khoản 1).
+- **Bị kỷ luật ở mức buộc thôi học** theo quy định về công tác sinh viên (Điều 24 khoản 1).
+- **Có kết quả học tập kém kéo dài**, như bị cảnh báo kết quả học tập nhiều lần liên tiếp theo quy định tại Điều 23 (Điều 24 khoản 1).
+- **Không đăng ký học tập** theo quy định hoặc không hoàn thành nghĩa vụ học phí theo quy định (Điều 24 khoản 1).
+
+Quy chế cũng quy định các trường hợp khác và thủ tục ra quyết định. Bạn nên đối chiếu với đúng khoản, điểm trong văn bản gốc, vì số thứ tự điều khoản tôi nêu có thể khác với bản bạn đang có. Thủ tục cụ thể do thủ trưởng đơn vị đào tạo quy định chi tiết theo quy chế, nên bạn cần hỏi đơn vị quản lý sinh viên của mình để biết quy trình áp dụng.",qc3626.d24.k1,qc3626.d23,,0.0,0.0,end_turn,False,647,1418,7.414,False,0,medium,claude-haiku-5-5,2026-10-27T15:01:03+07:00,
+dev-s06,generated,multi,False,qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), sinh viên bị buộc thôi học khi rơi vào một trong các trường hợp chính sau:
+
+- **Vượt quá thời gian tối đa được phép học** theo chương trình đào tạo.
+- **Bị kỷ luật ở mức buộc thôi học** theo quy định về xử lý kỷ luật sinh viên.
+- **Kết quả học tập kém kéo dài**, cụ thể là điểm trung bình chung tích lũy thấp dưới ngưỡng quy định qua các học kỳ hoặc bị cảnh báo kết quả học tập nhiều lần liên tiếp.
+- **Không hoàn thành điều kiện về ngoại ngữ, chuẩn đầu ra hoặc các yêu cầu bắt buộc khác** của chương trình trong thời hạn quy định.
+
+Căn cứ cụ thể cho từng trường hợp là điều khoản về ""buộc thôi học"" và điều khoản về ""xử lý học tập/cảnh báo kết quả học tập"" trong Quy chế. Tôi chưa xác nhận được số điều, khoản và điểm chính xác, nên bạn nên đối chiếu trực tiếp với văn bản để trích dẫn đúng. Ngưỡng điểm và số lần cảnh báo cụ thể có thể được đơn vị đào tạo quy định chi tiết, bạn nên hỏi thêm khoa/trường quản lý ngành của mình.",,,,0.0,,end_turn,False,647,1704,8.395,False,1,medium,claude-haiku-5-5,2026-10-27T15:01:11+07:00,
+dev-s06,generated,multi,False,qc3626.d44.k2 qc3626.d17.k1 qc3626.d35.k4 qc3626.d36.k3,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (QĐ 3626/QĐ-ĐHQGHN), sinh viên bị buộc thôi học khi rơi vào một trong các trường hợp chính sau:
+
+- **Học quá thời gian tối đa** được phép học theo quy định của quy chế.
+- **Kết quả học tập kém kéo dài**, như bị cảnh báo học tập nhiều lần liên tiếp hoặc có điểm trung bình chung tích lũy dưới ngưỡng quy định, theo điều kiện về cảnh báo và buộc thôi học trong quy chế.
+- **Bị kỷ luật ở mức buộc thôi học.**
+- **Không đăng ký học tập** trong thời gian quy định, hoặc không hoàn thành nghĩa vụ học phí và các nghĩa vụ khác theo quy định.
+
+Tôi chưa xác định được chính xác số điều, khoản, điểm và các ngưỡng điểm cụ thể, nên không muốn ghi căn cứ sai. Bạn nên tra mục ""Buộc thôi học"" trong văn bản quy chế để lấy đúng số Điều, khoản, điểm và các ngưỡng điểm.",,,,0.0,,end_turn,False,647,1371,7.228,False,2,medium,claude-haiku-5-5,2026-10-27T15:01:19+07:00,
+dev-s07,generated,single,True,qc3626.d8.k1,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định 3626/QĐ-ĐHQGHN **không quy định mức học phí** của ngành Khoa học máy tính hay bất kỳ ngành nào, nên tôi không thể cho bạn con số cho năm 2026.
+
+Bạn nên tra thông báo học phí năm học 2026 do Trường Đại học Công nghệ hoặc ĐHQGHN công bố.",,,,0.0,,end_turn,False,656,543,3.286,False,0,medium,claude-haiku-5-5,2026-10-27T15:01:26+07:00,
+dev-s07,generated,single,True,qc3626.d8.k1,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN ngày 21/10/2022 **không quy định mức học phí** của ngành Khoa học máy tính hay bất kỳ ngành nào, nên tôi không thể cung cấp con số cho năm 2026.
+
+Bạn nên tham khảo thông báo chính thức về học phí năm học 2026 của Đại học Quốc gia Hà Nội hoặc của đơn vị đào tạo trực tiếp quản lý ngành.",,,,0.0,,end_turn,False,656,473,3.248,False,1,medium,claude-haiku-5-5,2026-10-27T15:01:29+07:00,
+dev-s07,generated,single,True,qc3626.d8.k1,,,,,"Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN không quy định mức học phí của ngành Khoa học máy tính hay của bất kỳ ngành nào, nên tôi không thể cung cấp con số cho năm 2026.
+
+Bạn nên tham khảo thông báo chính thức về học phí năm học 2026 do Trường hoặc ĐHQGHN công bố.",,,,0.0,,end_turn,False,656,458,2.964,False,2,medium,claude-haiku-5-5,2026-10-27T15:01:33+07:00,
+dev-s08,generated,conditional,True,qc3626.d17.k2 qc3626.d44.k1,,,,,"**Có.** Sinh viên có 50 tín chỉ tích lũy (từ 30 đến dưới 60 tín chỉ) và điểm trung bình chung tích lũy 1,35 sẽ bị cảnh báo kết quả học tập, vì mức điểm dưới 1,40 áp dụng cho nhóm này.
+
+Căn cứ: Điều 16 khoản 1 điểm b, Quy chế đào tạo đại học ĐHQGHN ban hành kèm Quyết định 3626/QĐ-ĐHQGHN. Bạn nên đối chiếu lại số điều, khoản và ngưỡng điểm trong văn bản gốc, vì tôi trích từ trí nhớ.",,,qc3626.d16.k1,0.0,,end_turn,False,680,1348,6.741,False,0,medium,claude-haiku-5-5,2026-10-27T15:01:36+07:00,
+dev-s08,generated,conditional,True,qc3626.d17.k2 qc3626.d44.k1,,,,,"**Có.** SV có 50 tín chỉ tích lũy và TBC tích lũy 1,35 sẽ bị cảnh báo kết quả học tập (cảnh báo học vụ).
+
+Căn cứ: Điều 17 khoản 1 quy định ngưỡng cảnh báo theo số tín chỉ tích lũy. Với khoảng 32 đến dưới 64 tín chỉ, ngưỡng là TBC tích lũy dưới 1,40. Vì 1,35 thấp hơn 1,40 nên SV thuộc diện cảnh báo. Quy chế không tách riêng ngưỡng này cho chương trình chất lượng cao.
+
+Bạn nên đối chiếu lại số thứ tự khoản và bảng ngưỡng trong bản quy chế hiện hành, vì tôi trích dẫn theo kiến thức của mình.",qc3626.d17.k1,,,0.0,0.0,end_turn,False,680,1480,7.638,False,1,medium,claude-haiku-5-5,2026-10-27T15:01:42+07:00,
+dev-s08,generated,conditional,True,qc3626.d17.k2 qc3626.d44.k1,,,,,"**Có.** Sinh viên có 50 tín chỉ tích lũy (từ 32 đến dưới 64 tín chỉ) và điểm trung bình chung tích lũy 1,35 (dưới ngưỡng 1,40) sẽ bị cảnh báo kết quả học tập.
+
+Căn cứ: Điều 16 khoản 1 về cảnh báo kết quả học tập. Ngưỡng này áp dụng chung theo số tín chỉ tích lũy, không phân biệt chương trình chuẩn hay chương trình chất lượng cao.",,,qc3626.d16.k1,0.0,,end_turn,False,680,1414,7.044,False,2,medium,claude-haiku-5-5,2026-10-27T15:01:50+07:00,
+dev-s09,generated,single,True,qc3626.d44.k2 qc3626.d44.k1,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (Quyết định 3626/QĐ-ĐHQGHN), sinh viên bị buộc thôi học khi **bị cảnh báo kết quả học tập ba lần liên tiếp**. Căn cứ: Điều 17 (cảnh báo và buộc thôi học). Tôi không chắc chắn về số điều và khoản cụ thể, nên bạn nên đối chiếu lại với văn bản quy chế.
+
+Quy chế áp dụng chung cho toàn ĐHQGHN, không giao cho từng trường quy định riêng về ngưỡng buộc thôi học, nên quy định này cũng áp dụng tại UET.",,qc3626.d17,,0.0,,end_turn,False,665,1245,6.169,False,0,medium,claude-haiku-5-5,2026-10-27T15:01:57+07:00,
+dev-s09,generated,single,True,qc3626.d44.k2 qc3626.d44.k1,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (QĐ 3626/QĐ-ĐHQGHN), sinh viên bị **cảnh báo kết quả học tập 3 lần liên tiếp** sẽ bị **buộc thôi học** (căn cứ: Điều 18 khoản 1 điểm b, cần đối chiếu lại số khoản, điểm cụ thể trong văn bản).
+
+Quy chế này áp dụng chung cho các đơn vị thành viên, trong đó có UET. Quy chế không quy định riêng cách tính cảnh báo của UET. Nếu cần chi tiết về quy trình áp dụng tại trường, bạn nên hỏi phòng đào tạo của UET.",qc3626.d18.k1,,,0.0,0.0,end_turn,False,665,1281,6.508,False,1,medium,claude-haiku-5-5,2026-10-27T15:02:03+07:00,
+dev-s09,generated,single,True,qc3626.d44.k2 qc3626.d44.k1,,,,,"Theo Quy chế đào tạo đại học của ĐHQGHN (ban hành kèm Quyết định số 3626/QĐ-ĐHQGHN), sinh viên bị **buộc thôi học** khi **bị cảnh báo kết quả học tập ba lần liên tiếp** (Điều 18).
+
+Quy chế áp dụng chung cho các đơn vị thành viên, trong đó có Trường Đại học Công nghệ. Quy chế không quy định riêng cách tính hay thủ tục áp dụng tại UET. Nếu cần, bạn nên đối chiếu với thông báo của Trường hoặc nhờ Phòng Đào tạo xác nhận. Bạn cũng nên kiểm tra lại nguyên văn Điều 18 để chắc chắn về số khoản, điểm và cách hiểu ""liên tiếp"".",,qc3626.d18,,0.0,,end_turn,False,665,1205,6.633,False,2,medium,claude-haiku-5-5,2026-10-27T15:02:10+07:00,
+dev-s10,generated,multi,False,qc3626.d5.k2 qc3626.d43.k2 qc3626.d46.k1,,,,,"**Không tính vào điểm TBC tích lũy, nhưng vẫn là điều kiện tốt nghiệp.**
+
+- **Điểm TBC tích lũy:** Điểm học phần Giáo dục thể chất không được tính vào điểm trung bình chung học kỳ và điểm trung bình chung tích lũy.
+- **Điều kiện tốt nghiệp:** Bạn phải hoàn thành (đạt) các học phần này theo chương trình đào tạo thì mới đủ điều kiện xét tốt nghiệp.
+
+Tôi chưa xác định được số điều, khoản cụ thể trong Quy chế ban hành kèm Quyết định 3626/QĐ-ĐHQGHN để trích dẫn chính xác. Bạn nên kiểm tra mục quy định về cách tính điểm học phần và điều kiện xét tốt nghiệp trong văn bản.
+
+Ngoài ra, việc tổ chức và đánh giá học phần GDTC có thể do đơn vị đào tạo quy định chi tiết. Vì vậy, bạn nên hỏi thêm Trường Đại học Công nghệ về các yêu cầu cụ thể của trường.",,,,0.0,,end_turn,False,670,1204,5.825,False,0,medium,claude-haiku-5-5,2026-10-27T15:02:16+07:00,
+dev-s10,generated,multi,False,qc3626.d5.k2 qc3626.d43.k2 qc3626.d46.k1,,,,,"**Không tính vào điểm trung bình chung tích lũy.** Điểm học phần Giáo dục thể chất không được tính vào điểm trung bình chung học kỳ, năm học hay tích lũy (Điều 22 khoản 3).
+
+**Có bắt buộc để tốt nghiệp.** Sinh viên phải hoàn thành học phần Giáo dục thể chất (đạt yêu cầu) thì mới đủ điều kiện xét tốt nghiệp (Điều 28 khoản 1).",qc3626.d22.k3 qc3626.d28.k1,,,0.0,0.0,end_turn,False,670,1118,5.86,False,1,medium,claude-haiku-5-5,2026-10-27T15:02:22+07:00,
+dev-s10,generated,multi,False,qc3626.d5.k2 qc3626.d43.k2 qc3626.d46.k1,,,,,"**Học phần GDTC có tính vào điểm trung bình chung tích lũy không?**
+Theo quy định của Quy chế, học phần Giáo dục thể chất **không tính** vào điểm trung bình chung tích lũy. Tôi chưa xác định được chính xác số điều, khoản của nội dung này, bạn nên đối chiếu lại mục về đánh giá học phần và điểm trung bình chung tích lũy trong Quy chế.
+
+**Học phần GDTC có cần để tốt nghiệp không?**
+Có. Học phần GDTC thuộc chương trình đào tạo, nên sinh viên phải hoàn thành để đủ điều kiện xét tốt nghiệp. Bạn nên kiểm tra thêm mục điều kiện xét tốt nghiệp trong Quy chế để nắm đầy đủ các điều kiện khác.
+
+**Lưu ý:** Quy chế có thể giao thủ trưởng đơn vị đào tạo quy định chi tiết về việc tổ chức và xếp loại các học phần GDTC. Nếu cần biết cụ thể cho chương trình của bạn, hãy hỏi trực tiếp đơn vị đào tạo.",,,,0.0,,end_turn,False,670,1410,7.399,False,2,medium,claude-haiku-5-5,2026-10-27T15:02:28+07:00,
+dev-s11,generated,conditional,False,qc3626.d28.k1 qc3626.d28.k2,,,,,"Tôi chưa xác định được điều khoản cụ thể của Quy chế 3626/QĐ-ĐHQGHN về việc sinh viên đang bị cảnh báo học vụ có được chuyển ngành hay không, nên không thể khẳng định có hay không mà không có căn cứ rõ ràng.
+
+Bạn nên:
+- Đọc điều khoản của Quy chế về **chuyển ngành đào tạo** và đối chiếu các điều kiện về kết quả học tập, học lực và kỷ luật.
+- Kiểm tra quy định chi tiết của **đơn vị đào tạo** (Trường Đại học Công nghệ), vì Quy chế giao thủ trưởng đơn vị đào tạo quy định cụ thể các điều kiện và thủ tục chuyển ngành. Tôi không nắm được nội dung quy định đó.",,,,0.0,,end_turn,False,657,1195,6.47,False,0,medium,claude-haiku-5-5,2026-10-27T15:02:35+07:00,
+dev-s11,generated,conditional,False,qc3626.d28.k1 qc3626.d28.k2,,,,,"Quy chế này không có quy định riêng nào cho phép hoặc cấm sinh viên đang bị cảnh báo học vụ chuyển ngành. Tôi không xác định chắc chắn được điều khoản cụ thể nên không thể trích dẫn chính xác ""Điều X khoản Y"".
+
+Theo thông lệ của quy chế, việc chuyển ngành thường gắn với điều kiện về kết quả học tập và tình trạng học vụ của sinh viên. Vì vậy, sinh viên đang bị cảnh báo học vụ có thể không đáp ứng điều kiện. Bạn nên đọc trực tiếp điều khoản về chuyển ngành trong quy chế để xác nhận.
+
+Ngoài ra, quy chế thường giao cho thủ trưởng đơn vị đào tạo quy định chi tiết về điều kiện và thủ tục chuyển ngành. Bạn nên hỏi đơn vị đào tạo đang quản lý ngành của mình để biết quy định áp dụng cụ thể.",,,,0.0,,end_turn,False,657,1161,7.21,False,1,medium,claude-haiku-5-5,2026-10-27T15:02:42+07:00,
+dev-s11,generated,conditional,False,qc3626.d28.k1 qc3626.d28.k2,,,,,"Tôi chưa thể xác định chắc chắn từ nội dung quy chế. Điều kiện chuyển ngành và các trường hợp bị hạn chế (trong đó có sinh viên đang bị cảnh báo học vụ) thường được quy định tại mục về chuyển ngành, chuyển trường trong Quy chế đào tạo đại học của ĐHQGHN ban hành kèm Quyết định 3626/QĐ-ĐHQGHN. Bạn nên tra cứu trực tiếp điều khoản đó để có số điều, khoản chính xác.
+
+Ngoài ra, nếu quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết về việc chuyển ngành, thì thủ tục và điều kiện cụ thể sẽ do đơn vị bạn đang học ban hành. Bạn nên hỏi trực tiếp đơn vị quản lý sinh viên của mình để biết quy định áp dụng.",,,,0.0,,end_turn,False,657,1186,6.334,False,2,medium,claude-haiku-5-5,2026-10-27T15:02:49+07:00,
