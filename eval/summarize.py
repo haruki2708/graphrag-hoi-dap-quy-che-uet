@@ -180,7 +180,8 @@ def judge_v2_metadata(results_dir: Path, date: str, agreement_path: Path) -> dic
     for system in SYSTEMS:
         meta_path = results_dir / f"{date}_{system}_dev{judged_suffix('v2')}.json"
         if not meta_path.exists():
-            raise MissingInput(f"thiếu file {meta_path.name} (metadata của lượt chấm v2)")
+            raise MissingInput(f"thiếu file {meta_path.name} (metadata của lượt chấm v2). Tạo bằng: python eval/judge_answers.py "
+                               f"eval/results/{date}_{system}_dev.csv --judge-prompt v2")
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
         if meta.get("judge_prompt_version") != "v2" or not meta.get("judge_prompt_sha256"):
             raise MissingInput(f"{meta_path.name}: không phải kết quả chấm prompt v2 (thiếu judge_prompt_version/sha256)")
