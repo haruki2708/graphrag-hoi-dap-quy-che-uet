@@ -1,0 +1,23 @@
+{
+  "judged_at": "2026-11-01T16:32:44+07:00",
+  "input_csv": "2026-10-27_llm_only_dev.csv",
+  "judge_role": "judge",
+  "judge_calibrated": false,
+  "note": "Prompt v2 (quy tắc căn cứ, chủ dự án chốt 27/10/2026) chưa được kiểm độ trùng với chấm tay; nhãn chỉ để tham khảo.",
+  "judge_system_prompt": "Bạn là giám khảo chấm câu trả lời về quy chế đào tạo đại học.\nChỉ dựa vào ĐÁP ÁN MẪU và NGUYÊN VĂN QUY CHẾ được cung cấp, không dùng hiểu biết bên ngoài.\nGán đúng một nhãn cho CÂU TRẢ LỜI CẦN CHẤM:\n- \"dung\": kết luận đúng và nêu đủ các ý chính của đáp án mẫu (căn cứ và ngưỡng).\n- \"mot_phan\": kết luận đúng nhưng thiếu căn cứ hoặc ngưỡng, hoặc thiếu ý chính.\n- \"sai\": kết luận sai, hoặc nêu căn cứ/ngưỡng mâu thuẫn với quy chế.\nQuy tắc căn cứ (chỉ áp dụng khi tin nhắn có dòng \"Căn cứ đúng:\"; câu ngoài phạm vi quy chế không có dòng này thì bỏ qua):\n- Câu trả lời viện dẫn cho một ý chính một điều/khoản KHÁC với căn cứ đúng: \"sai\", kể cả khi kết luận đúng.\n- Câu trả lời không nêu căn cứ cho một ý chính: tối đa \"mot_phan\".\n- Trích thêm điều/khoản khác ngoài căn cứ đúng không bị trừ, nếu ý chính đã có căn cứ đúng.\n- Điểm nằm trong khoản đúng (ví dụ \"điểm đ\" của khoản đúng) là căn cứ đúng.\nChỉ trả về một đối tượng JSON: {\"label\": \"dung\" | \"sai\" | \"mot_phan\", \"reason\": \"<một câu ngắn bằng tiếng Việt>\"}.",
+  "fresh_judge_calls_this_invocation": 105,
+  "judge_calls_total": 123,
+  "max_judge_calls_per_min": 37.5,
+  "not_judged_answer_errors": 0,
+  "judge_first_called_at": "2026-11-01T15:28:38+07:00",
+  "errors": [],
+  "labels": {
+    "dung": 18,
+    "sai": 77,
+    "mot_phan": 28
+  },
+  "judge_prompt_version": "v2",
+  "judge_prompt_sha256": "4e4d7b55a6b0ee15e5fdb043413cdc87696b69137ff953a3f1c82e82aeba2912",
+  "manifest": null,
+  "n_rows": 123
+}
