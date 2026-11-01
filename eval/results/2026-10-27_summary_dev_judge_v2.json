@@ -1,0 +1,1004 @@
+{
+  "date": "2026-10-27",
+  "split": "dev",
+  "judge_calibrated": true,
+  "judge_prompt_version": "v2",
+  "judge_prompt_sha256": "4e4d7b55a6b0ee15e5fdb043413cdc87696b69137ff953a3f1c82e82aeba2912",
+  "judge_models": [
+    "z-ai/glm-5.3-flash"
+  ],
+  "calibration": {
+    "agreement_file": "eval/results/2026-11-01_judge_agreement_v2.json",
+    "computed_at": "2026-11-01T15:41:28+07:00",
+    "n": 30,
+    "agree": 28,
+    "agreement": 0.9333,
+    "kappa": 0.8983,
+    "kappa_linear_weighted": 0.9275,
+    "note": "Chỉnh prompt trên chính 30 mẫu hiệu chỉnh nên số này có phần lạc quan; kiểm thêm khoảng 10 mẫu mới ở T5."
+  },
+  "judge_score_mapping": {
+    "dung": 1.0,
+    "mot_phan": 0.5,
+    "sai": 0.0
+  },
+  "note": "Giám khảo chính thức: GLM-5.3-Flash + prompt v2 (xác nhận 01/11/2026); hiệu chỉnh 28/30, kappa 0.8983. Chỉnh prompt trên chính 30 mẫu hiệu chỉnh nên số này có phần lạc quan; kiểm thêm khoảng 10 mẫu mới ở T5.",
+  "systems": {
+    "llm_only": {
+      "rows": 123,
+      "failed_rows": 0,
+      "runs": [
+        0,
+        1,
+        2
+      ],
+      "groups": {
+        "total": {
+          "n_questions": 41,
+          "judge_score": {
+            "mean": 0.2602,
+            "min": 0.2317,
+            "max": 0.2805
+          },
+          "labels": {
+            "dung": {
+              "mean": 6.0,
+              "min": 6,
+              "max": 6
+            },
+            "mot_phan": {
+              "mean": 9.3333,
+              "min": 7,
+              "max": 11
+            },
+            "sai": {
+              "mean": 25.6667,
+              "min": 24,
+              "max": 28
+            }
+          },
+          "citation_recall": {
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "citation_precision": {
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "origin": {
+          "generated": {
+            "n_questions": 11,
+            "judge_score": {
+              "mean": 0.1818,
+              "min": 0.1818,
+              "max": 0.1818
+            },
+            "labels": {
+              "dung": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "mot_phan": {
+                "mean": 4.0,
+                "min": 4,
+                "max": 4
+              },
+              "sai": {
+                "mean": 7.0,
+                "min": 7,
+                "max": 7
+              }
+            },
+            "citation_recall": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "citation_precision": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "manual": {
+            "n_questions": 30,
+            "judge_score": {
+              "mean": 0.2889,
+              "min": 0.25,
+              "max": 0.3167
+            },
+            "labels": {
+              "dung": {
+                "mean": 6.0,
+                "min": 6,
+                "max": 6
+              },
+              "mot_phan": {
+                "mean": 5.3333,
+                "min": 3,
+                "max": 7
+              },
+              "sai": {
+                "mean": 18.6667,
+                "min": 17,
+                "max": 21
+              }
+            },
+            "citation_recall": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "citation_precision": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        },
+        "type": {
+          "conditional": {
+            "n_questions": 11,
+            "judge_score": {
+              "mean": 0.0455,
+              "min": 0.0,
+              "max": 0.0909
+            },
+            "labels": {
+              "dung": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "mot_phan": {
+                "mean": 1.0,
+                "min": 0,
+                "max": 2
+              },
+              "sai": {
+                "mean": 10.0,
+                "min": 9,
+                "max": 11
+              }
+            },
+            "citation_recall": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "citation_precision": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "multi": {
+            "n_questions": 13,
+            "judge_score": {
+              "mean": 0.1282,
+              "min": 0.1154,
+              "max": 0.1538
+            },
+            "labels": {
+              "dung": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "mot_phan": {
+                "mean": 3.3333,
+                "min": 3,
+                "max": 4
+              },
+              "sai": {
+                "mean": 9.6667,
+                "min": 9,
+                "max": 10
+              }
+            },
+            "citation_recall": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "citation_precision": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "out_of_scope": {
+            "n_questions": 6,
+            "judge_score": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "labels": {
+              "dung": {
+                "mean": 6.0,
+                "min": 6,
+                "max": 6
+              },
+              "mot_phan": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "citation_precision": {
+              "mean": null,
+              "min": null,
+              "max": null
+            }
+          },
+          "single": {
+            "n_questions": 11,
+            "judge_score": {
+              "mean": 0.2273,
+              "min": 0.1364,
+              "max": 0.2727
+            },
+            "labels": {
+              "dung": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "mot_phan": {
+                "mean": 5.0,
+                "min": 3,
+                "max": 6
+              },
+              "sai": {
+                "mean": 6.0,
+                "min": 5,
+                "max": 8
+              }
+            },
+            "citation_recall": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "citation_precision": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        },
+        "delegated": {
+          "false": {
+            "n_questions": 34,
+            "judge_score": {
+              "mean": 0.2794,
+              "min": 0.25,
+              "max": 0.3088
+            },
+            "labels": {
+              "dung": {
+                "mean": 6.0,
+                "min": 6,
+                "max": 6
+              },
+              "mot_phan": {
+                "mean": 7.0,
+                "min": 5,
+                "max": 9
+              },
+              "sai": {
+                "mean": 21.0,
+                "min": 19,
+                "max": 23
+              }
+            },
+            "citation_recall": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "citation_precision": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "true": {
+            "n_questions": 7,
+            "judge_score": {
+              "mean": 0.1667,
+              "min": 0.1429,
+              "max": 0.2143
+            },
+            "labels": {
+              "dung": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "mot_phan": {
+                "mean": 2.3333,
+                "min": 2,
+                "max": 3
+              },
+              "sai": {
+                "mean": 4.6667,
+                "min": 4,
+                "max": 5
+              }
+            },
+            "citation_recall": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            },
+            "citation_precision": {
+              "mean": 0.0,
+              "min": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      "out_of_scope_dung_rate": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "n_coarse_citations": 18,
+      "n_invalid_citations": 2,
+      "unstable_questions": [
+        "dev-m001",
+        "dev-m003",
+        "dev-m004",
+        "dev-m005",
+        "dev-m006",
+        "dev-m007",
+        "dev-m008",
+        "dev-m014",
+        "dev-m017",
+        "dev-m019",
+        "dev-m021",
+        "dev-s01",
+        "dev-s03",
+        "dev-s06",
+        "dev-s10"
+      ],
+      "tokens": {
+        "input": 84954,
+        "output": 146146
+      },
+      "cost_usd": 0.081568,
+      "latency_median_s": 6.741
+    },
+    "rag_baseline": {
+      "rows": 123,
+      "failed_rows": 0,
+      "runs": [
+        0,
+        1,
+        2
+      ],
+      "groups": {
+        "total": {
+          "n_questions": 41,
+          "judge_score": {
+            "mean": 0.9756,
+            "min": 0.9756,
+            "max": 0.9756
+          },
+          "labels": {
+            "dung": {
+              "mean": 39.0,
+              "min": 39,
+              "max": 39
+            },
+            "mot_phan": {
+              "mean": 2.0,
+              "min": 2,
+              "max": 2
+            },
+            "sai": {
+              "mean": 0.0,
+              "min": 0,
+              "max": 0
+            }
+          },
+          "citation_recall": {
+            "mean": 0.9714,
+            "min": 0.9619,
+            "max": 0.9762
+          },
+          "citation_precision": {
+            "mean": 0.8444,
+            "min": 0.8381,
+            "max": 0.8571
+          },
+          "retrieval": {
+            "recall@5": 0.9476,
+            "recall@10": 0.9643,
+            "mrr": 0.8762,
+            "n": 35
+          }
+        },
+        "origin": {
+          "generated": {
+            "n_questions": 11,
+            "judge_score": {
+              "mean": 0.9091,
+              "min": 0.9091,
+              "max": 0.9091
+            },
+            "labels": {
+              "dung": {
+                "mean": 9.0,
+                "min": 9,
+                "max": 9
+              },
+              "mot_phan": {
+                "mean": 2.0,
+                "min": 2,
+                "max": 2
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": 0.9242,
+              "min": 0.9242,
+              "max": 0.9242
+            },
+            "citation_precision": {
+              "mean": 0.8636,
+              "min": 0.8485,
+              "max": 0.8939
+            },
+            "retrieval": {
+              "recall@5": 0.8333,
+              "recall@10": 0.8864,
+              "mrr": 0.9545,
+              "n": 11
+            }
+          },
+          "manual": {
+            "n_questions": 30,
+            "judge_score": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "labels": {
+              "dung": {
+                "mean": 30.0,
+                "min": 30,
+                "max": 30
+              },
+              "mot_phan": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": 0.9931,
+              "min": 0.9792,
+              "max": 1.0
+            },
+            "citation_precision": {
+              "mean": 0.8356,
+              "min": 0.8125,
+              "max": 0.8611
+            },
+            "retrieval": {
+              "recall@5": 1.0,
+              "recall@10": 1.0,
+              "mrr": 0.8403,
+              "n": 24
+            }
+          }
+        },
+        "type": {
+          "conditional": {
+            "n_questions": 11,
+            "judge_score": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "labels": {
+              "dung": {
+                "mean": 11.0,
+                "min": 11,
+                "max": 11
+              },
+              "mot_phan": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "citation_precision": {
+              "mean": 0.899,
+              "min": 0.8788,
+              "max": 0.9242
+            },
+            "retrieval": {
+              "recall@5": 1.0,
+              "recall@10": 1.0,
+              "mrr": 0.803,
+              "n": 11
+            }
+          },
+          "multi": {
+            "n_questions": 13,
+            "judge_score": {
+              "mean": 0.9231,
+              "min": 0.9231,
+              "max": 0.9231
+            },
+            "labels": {
+              "dung": {
+                "mean": 11.0,
+                "min": 11,
+                "max": 11
+              },
+              "mot_phan": {
+                "mean": 2.0,
+                "min": 2,
+                "max": 2
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": 0.9231,
+              "min": 0.8974,
+              "max": 0.9359
+            },
+            "citation_precision": {
+              "mean": 0.7906,
+              "min": 0.7564,
+              "max": 0.8077
+            },
+            "retrieval": {
+              "recall@5": 0.859,
+              "recall@10": 0.9038,
+              "mrr": 0.8718,
+              "n": 13
+            }
+          },
+          "out_of_scope": {
+            "n_questions": 6,
+            "judge_score": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "labels": {
+              "dung": {
+                "mean": 6.0,
+                "min": 6,
+                "max": 6
+              },
+              "mot_phan": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "citation_precision": {
+              "mean": null,
+              "min": null,
+              "max": null
+            },
+            "retrieval": {
+              "recall@5": null,
+              "recall@10": null,
+              "mrr": null,
+              "n": 0
+            }
+          },
+          "single": {
+            "n_questions": 11,
+            "judge_score": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "labels": {
+              "dung": {
+                "mean": 11.0,
+                "min": 11,
+                "max": 11
+              },
+              "mot_phan": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "citation_precision": {
+              "mean": 0.8535,
+              "min": 0.8333,
+              "max": 0.8788
+            },
+            "retrieval": {
+              "recall@5": 1.0,
+              "recall@10": 1.0,
+              "mrr": 0.9545,
+              "n": 11
+            }
+          }
+        },
+        "delegated": {
+          "false": {
+            "n_questions": 34,
+            "judge_score": {
+              "mean": 0.9706,
+              "min": 0.9706,
+              "max": 0.9706
+            },
+            "labels": {
+              "dung": {
+                "mean": 32.0,
+                "min": 32,
+                "max": 32
+              },
+              "mot_phan": {
+                "mean": 2.0,
+                "min": 2,
+                "max": 2
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": 0.9643,
+              "min": 0.9524,
+              "max": 0.9702
+            },
+            "citation_precision": {
+              "mean": 0.8393,
+              "min": 0.8333,
+              "max": 0.8452
+            },
+            "retrieval": {
+              "recall@5": 0.9345,
+              "recall@10": 0.9554,
+              "mrr": 0.8631,
+              "n": 28
+            }
+          },
+          "true": {
+            "n_questions": 7,
+            "judge_score": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "labels": {
+              "dung": {
+                "mean": 7.0,
+                "min": 7,
+                "max": 7
+              },
+              "mot_phan": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              },
+              "sai": {
+                "mean": 0.0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "citation_recall": {
+              "mean": 1.0,
+              "min": 1.0,
+              "max": 1.0
+            },
+            "citation_precision": {
+              "mean": 0.8651,
+              "min": 0.8333,
+              "max": 0.9048
+            },
+            "retrieval": {
+              "recall@5": 1.0,
+              "recall@10": 1.0,
+              "mrr": 0.9286,
+              "n": 7
+            }
+          }
+        }
+      },
+      "out_of_scope_dung_rate": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "n_coarse_citations": 6,
+      "n_invalid_citations": 0,
+      "unstable_questions": [],
+      "tokens": {
+        "input": 320985,
+        "output": 76045
+      },
+      "cost_usd": 0.070121,
+      "latency_median_s": 3.488
+    }
+  },
+  "lowest": {
+    "llm_only": [
+      {
+        "id": "dev-m002",
+        "type": "single",
+        "judge_score": 0.0,
+        "labels": [
+          "sai",
+          "sai",
+          "sai"
+        ],
+        "source_ids": [
+          "qc3626.d19"
+        ],
+        "retrieved_ids": [],
+        "answer_run0": "Quy chế không quy định cụ thể khung giờ học trong ngày, việc có học Chủ nhật hay không, cũng như lịch cho hoạt động đặc thù.\n\nTheo quy chế, việc tổ chức đào tạo và xếp thời khóa biểu thuộc thẩm quyền của thủ trưởng đơn vị đào tạo, nên em nên hỏi trực tiếp đơn vị đào tạo (khoa hoặc trường thành viên) quản lý ngành của mình để biết lịch cụ thể và cách quyết định lịch cho các hoạt động đặc thù."
+      },
+      {
+        "id": "dev-m009",
+        "type": "multi",
+        "judge_score": 0.0,
+        "labels": [
+          "sai",
+          "sai",
+          "sai"
+        ],
+        "source_ids": [
+          "qc3626.d4.k2",
+          "qc3626.d4.k3",
+          "qc3626.d19"
+        ],
+        "retrieved_ids": [],
+        "answer_run0": "**Quy định về số giờ tín chỉ:** Theo Quy chế, một tín chỉ tương ứng với khối lượng học tập định mức là **45 giờ** (Điều 3, về định nghĩa tín chỉ). Khối lượng này được tính theo loại hoạt động:\n\n- **15 giờ** học lý thuyết trên lớp\n- **30 giờ** thực hành, thí nghiệm hoặc thảo luận\n- **45 giờ** thực tập tại cơ sở\n- **45 giờ** làm tiểu luận, bài tập lớn, đồ án hoặc khóa luận tốt nghiệp\n\nVới học lý thuyết, 15 giờ trên lớp đi kèm khoảng 30 giờ tự học, chuẩn bị và ôn tập ngoài lớp, tổng cộng 45 giờ cho mỗi tín chỉ.\n\n**Phần chưa rõ:** Tôi không chắc Quy chế có quy định cụ thể một giờ tín chỉ lý thuyết bằng bao nhiêu tiết, mỗi tiết bao nhiêu phút hay không. Nếu Quy chế có quy định, đó sẽ thuộc phần định nghĩa về tín chỉ và giờ tín chỉ tại Điều 3. Để biết chính xác thời lượng từng tiết và cách bố trí giờ tự học của một học phần, em nên xem đề cương chi tiết học phần hoặc thời khóa biểu. Các chi tiết do đơn vị đào tạo quy định sẽ do thủ trưởng đơn vị đào tạo ban hành, em có thể hỏi trực tiếp đơn vị quản lý đào tạo của ngành."
+      },
+      {
+        "id": "dev-m010",
+        "type": "multi",
+        "judge_score": 0.0,
+        "labels": [
+          "sai",
+          "sai",
+          "sai"
+        ],
+        "source_ids": [
+          "qc3626.d14.k2",
+          "qc3626.d13.k3"
+        ],
+        "retrieved_ids": [],
+        "answer_run0": "Tôi chưa xác nhận được số tín chỉ tối thiểu phải học thêm so với chương trình chuẩn, cũng như yêu cầu ngoại ngữ đầu ra của hai chương trình này. Tôi không muốn đưa ra con số hay điều khoản có thể sai.\n\nĐể có thông tin chính xác, em nên:\n\n- Tra cứu trong Quy chế đào tạo đại học ban hành kèm Quyết định 3626/QĐ-ĐHQGHN, phần quy định về chương trình chất lượng cao và chương trình tài năng.\n- Kiểm tra chương trình đào tạo (CTĐT) cụ thể của ngành em quan tâm, vì số tín chỉ và chuẩn ngoại ngữ thường được thể hiện rõ trong đó.\n- Nếu quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết, em hỏi trực tiếp đơn vị đào tạo quản lý chương trình đó.\n\nNếu em gửi đoạn quy chế liên quan, tôi sẽ giúp em đối chiếu và tóm tắt sự khác nhau giữa hai chương trình."
+      },
+      {
+        "id": "dev-m011",
+        "type": "multi",
+        "judge_score": 0.0,
+        "labels": [
+          "sai",
+          "sai",
+          "sai"
+        ],
+        "source_ids": [
+          "qc3626.d18.k5",
+          "qc3626.d38.k3"
+        ],
+        "retrieved_ids": [],
+        "answer_run0": "Tôi không chắc chắn về số tuần cụ thể mà Quy chế quy định cho hai nội dung này, nên chưa thể nêu con số để bạn lên kế hoạch.\n\n- **Thời khóa biểu trước kỳ học:** Theo tôi nhớ, Quy chế giao cho thủ trưởng đơn vị đào tạo quy định chi tiết về việc sắp xếp và công bố thời khóa biểu. Bạn nên xem thông báo của đơn vị quản lý đào tạo trực tiếp của mình để biết thời điểm công bố.\n- **Lịch thi chính và thi phụ:** Quy chế có quy định về tổ chức thi kết thúc học phần, trong đó có thời hạn công bố lịch thi cho sinh viên. Tôi không nhớ chính xác thời hạn đó, nên bạn cần đối chiếu trực tiếp với văn bản để có số ngày chính xác.\n\nĐể chắc chắn, bạn nên tra cứu trực tiếp Quyết định 3626/QĐ-ĐHQGHN và các thông báo của đơn vị đào tạo của mình."
+      },
+      {
+        "id": "dev-m012",
+        "type": "multi",
+        "judge_score": 0.0,
+        "labels": [
+          "sai",
+          "sai",
+          "sai"
+        ],
+        "source_ids": [
+          "qc3626.d21.k3",
+          "qc3626.d23.k2"
+        ],
+        "retrieved_ids": [],
+        "answer_run0": "Quy chế này không quy định cụ thể mốc thời gian thêm môn, đổi lớp đầu kỳ hay mốc hoàn học phí khi bỏ học phần, nên tôi không thể khẳng định hai mốc có giống nhau hay không.\n\nTheo quy chế, thời hạn đăng ký, điều chỉnh học phần trong học kỳ được tổ chức theo kế hoạch học tập và lịch học của từng học kỳ do thủ trưởng đơn vị đào tạo quy định và công bố trước khi học kỳ bắt đầu. Với Trường Đại học Công nghệ, bạn cần xem thông báo đăng ký học phần và lịch học của học kỳ đó.\n\nVề việc hoàn học phí khi bỏ học phần, quy chế không nêu quy định này. Bạn nên hỏi trực tiếp đơn vị đào tạo hoặc bộ phận phụ trách học phí của trường để biết chính xác."
+      }
+    ],
+    "rag_baseline": [
+      {
+        "id": "dev-s04",
+        "type": "multi",
+        "judge_score": 0.5,
+        "labels": [
+          "mot_phan",
+          "mot_phan",
+          "mot_phan"
+        ],
+        "source_ids": [
+          "qc3626.d5.k2",
+          "qc3626.d21.k2",
+          "qc3626.d41.k2",
+          "qc3626.d42.k5"
+        ],
+        "retrieved_ids": [
+          "qc3626.d5.k2",
+          "qc3626.d32.k1",
+          "qc3626.d43.k2",
+          "qc3626.d37.k1",
+          "qc3626.d41.k2",
+          "qc3626.d28.k2",
+          "qc3626.d23.k2",
+          "qc3626.d46.k3",
+          "qc3626.d21.k1",
+          "qc3626.d41.k1"
+        ],
+        "answer_run0": "Những học phần không được tính vào điểm trung bình chung tích lũy gồm:\n\n- **Học phần điều kiện**: giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ. Kết quả của các học phần này không tính vào điểm trung bình chung học kỳ, điểm trung bình chung các học phần và điểm trung bình chung tích lũy, nhưng vẫn là điều kiện để xét tốt nghiệp (Điều 5 khoản 2 điểm g; Điều 43 khoản 2).\n- **Học phần đánh giá theo loại đạt không phân mức (P)**: các học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập (Điều 41 khoản 2 điểm b)."
+      },
+      {
+        "id": "dev-s05",
+        "type": "multi",
+        "judge_score": 0.5,
+        "labels": [
+          "mot_phan",
+          "mot_phan",
+          "mot_phan"
+        ],
+        "source_ids": [
+          "qc3626.d46.k1",
+          "qc3626.d13.k3"
+        ],
+        "retrieved_ids": [
+          "qc3626.d46.k1",
+          "qc3626.d46.k2",
+          "qc3626.d27.k4",
+          "qc3626.d26.k7",
+          "qc3626.d27.k1",
+          "qc3626.d47.k1",
+          "qc3626.d33.k3",
+          "qc3626.d13.k1",
+          "qc3626.d3.k5",
+          "qc3626.d10.k2"
+        ],
+        "answer_run0": "Sinh viên chương trình đào tạo chất lượng cao cần đáp ứng các điều kiện sau để được xét công nhận tốt nghiệp (Điều 46 khoản 1):\n\na) Hoàn thành chương trình đào tạo trong thời gian học tập tối đa của khóa học (Điều 46 khoản 1 điểm a).\nb) Không đang trong thời gian bị truy cứu trách nhiệm hình sự tính đến thời điểm xét tốt nghiệp (Điều 46 khoản 1 điểm b).\nc) Tích lũy đủ số tín chỉ quy định trong chương trình đào tạo (Điều 46 khoản 1 điểm c).\nd) Điểm trung bình chung tích lũy đạt từ **2,50 trở lên**. Đây là ngưỡng riêng của chương trình tài năng, chất lượng cao; chương trình chuẩn là 2,00 (Điều 46 khoản 1 điểm d).\nđ) Đạt trình độ ngoại ngữ theo quy định tại Điều 13 khoản 3 (Điều 46 khoản 1 điểm đ).\ne) Đáp ứng yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù theo quy định bằng văn bản của Đại học Quốc gia Hà Nội và đơn vị đào tạo (Điều 46 khoản 1 điểm e). Nội dung cụ thể thuộc thẩm quyền quy định của đơn vị đào tạo, quy chế này không quy định chi tiết.\ng) Được đánh giá đạt các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ (Điều 46 khoản 1 điểm g).\nh) Nếu đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học, phải gửi đơn đề nghị xét tốt nghiệp đến Phòng Đào tạo (Điều 46 khoản 1 điểm h).\n\nTrường hợp không đủ điều kiện tốt nghiệp chương trình tài năng, chất lượng cao, sinh viên được quy đổi điểm theo Điều 22 để xem xét công nhận tốt nghiệp và cấp bằng đại học chính quy hệ chuẩn của ngành tương ứng (Điều 46 khoản 2)."
+      },
+      {
+        "id": "dev-m025",
+        "type": "out_of_scope",
+        "judge_score": 1.0,
+        "labels": [
+          "dung",
+          "dung",
+          "dung"
+        ],
+        "source_ids": [],
+        "retrieved_ids": [
+          "qc3626.d47.k4",
+          "qc3626.d36.k4",
+          "qc3626.d35.k2",
+          "qc3626.d29.k3",
+          "qc3626.d22.k4",
+          "qc3626.d4.k2",
+          "qc3626.d18.k4",
+          "qc3626.d47.k10",
+          "qc3626.d32.k3",
+          "qc3626.d35.k4"
+        ],
+        "answer_run0": "Quy chế đào tạo đại học của Đại học Quốc gia Hà Nội không quy định về mật khẩu Wi-Fi dành cho sinh viên. Em nên liên hệ trực tiếp Trường Đại học Công nghệ để được hướng dẫn."
+      },
+      {
+        "id": "dev-m026",
+        "type": "out_of_scope",
+        "judge_score": 1.0,
+        "labels": [
+          "dung",
+          "dung",
+          "dung"
+        ],
+        "source_ids": [],
+        "retrieved_ids": [
+          "qc3626.d23.k2",
+          "qc3626.d8.k1",
+          "qc3626.d17.k2",
+          "qc3626.d45.k2",
+          "qc3626.d44.k1",
+          "qc3626.d18.k7",
+          "qc3626.d41.k2",
+          "qc3626.d36.k2",
+          "qc3626.d5.k1",
+          "qc3626.d16"
+        ],
+        "answer_run0": "Quy chế đào tạo đại học của ĐHQGHN không quy định về phí gửi xe máy theo tháng, nên mình không có căn cứ để trả lời mức phí cụ thể.\n\nQuy chế chỉ quy định về kinh phí đào tạo, gồm ngân sách nhà nước, học phí và các nguồn hợp pháp khác (Điều 8 khoản 1). Học phí được tính theo công thức tín chỉ, không bao gồm phí gửi xe."
+      },
+      {
+        "id": "dev-m027",
+        "type": "out_of_scope",
+        "judge_score": 1.0,
+        "labels": [
+          "dung",
+          "dung",
+          "dung"
+        ],
+        "source_ids": [],
+        "retrieved_ids": [
+          "qc3626.d19",
+          "qc3626.d4.k3",
+          "qc3626.d38.k4",
+          "qc3626.d38.k6",
+          "qc3626.d38.k1",
+          "qc3626.d18.k5",
+          "qc3626.d20.k2",
+          "qc3626.d47.k10",
+          "qc3626.d4.k2",
+          "qc3626.d16"
+        ],
+        "answer_run0": "Quy chế đào tạo đại học của ĐHQGHN không quy định giờ hoạt động của căng tin, nên tôi không thể trả lời chính xác thời gian phục vụ bữa trưa.\n\nQuy chế chỉ quy định thời gian hoạt động giảng dạy và học tập theo hình thức chính quy: từ 06 giờ đến 20 giờ hàng ngày (trừ Chủ nhật) (Điều 19). Quy định này không liên quan đến căng tin.\n\nEm có thể hỏi trực tiếp đơn vị quản lý căng tin hoặc xem thông báo của trường."
+      }
+    ]
+  }
+}
