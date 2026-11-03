@@ -31,6 +31,16 @@ timeout_s = 180
 [roles.extract.params]
 effort = "medium"
 
+# Early-T4 comparison on the 5 trial articles (PLAN #2): Sonnet 5.5, same max_tokens/timeout/effort as extract.
+[roles.extract_sonnet]
+provider = "anthropic"
+model = "claude-sonnet-5-5"
+max_tokens = 8192
+timeout_s = 180
+
+[roles.extract_sonnet.params]
+effort = "medium"
+
 # Judge: GLM-5.3-Flash on NVIDIA NIM (free), OpenAI-compatible endpoint, structured output.
 [roles.judge]
 provider = "nvidia"
@@ -64,3 +74,9 @@ output_per_mtok = 0.50
 source = "platform.claude.com/docs/en/about-claude/pricing"
 checked = "2026-10-27"
 note = "prompt <= 100K tokens; $0.50 / $2.50 above that"
+
+[pricing."claude-sonnet-5-5"]
+input_per_mtok = 2.00
+output_per_mtok = 10.00
+source = "platform.claude.com/docs/en/about-claude/pricing"
+checked = "2026-11-03"

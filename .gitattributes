@@ -7,3 +7,5 @@ data/eval/*.jsonl -text
 data/processed/qc3626.json -text
 data/processed/qc3626_graph.json text eol=lf
 data/processed/*.jsonl text eol=lf
+# Semantic-layer extraction records and triplet CSVs (src/kg/extract.py, export_triplets.py) are written with LF.
+data/processed/semantic/** eol=lf

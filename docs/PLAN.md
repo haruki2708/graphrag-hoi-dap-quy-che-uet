@@ -1,7 +1,7 @@
 # PLAN — GraphRAG hỏi đáp quy chế đào tạo UET
 
 > Bản kế hoạch dành cho Claude Code. Tiến độ và quyết định được theo dõi chính trên Notion của chủ dự án.
-> Cập nhật lần cuối: 27/10/2026 (chốt #10 bộ câu hỏi; schema S1, S2, Q11 = B: vector index trên `:DonViNoiDung`, trường câu hỏi mới; #2: quy tắc căn cứ cho giám khảo, 2 phiên bản prompt; 1/11: giám khảo chính thức = GLM + prompt v2). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
+> Cập nhật lần cuối: 03/11/2026 (T4: tiêu chí "Xong khi" và định nghĩa bộ ba đúng ở mục 5). Trước đó: 27/10/2026 (chốt #10 bộ câu hỏi; schema S1, S2, Q11 = B: vector index trên `:DonViNoiDung`, trường câu hỏi mới; #2: quy tắc căn cứ cho giám khảo, 2 phiên bản prompt; 1/11: giám khảo chính thức = GLM + prompt v2). Khi chủ dự án chốt một quyết định ở mục 4, sửa file này trước rồi mới code theo.
 
 ## 1. Mục tiêu
 
@@ -68,13 +68,15 @@ Ba hệ để so sánh (cùng LLM, cùng prompt sinh câu trả lời):
 | T1 · 17–23/10 | Dữ liệu sạch, môi trường | Repo, `CLAUDE.md`, `docker-compose.yml` cho Neo4j; script đọc văn bản và tách chương/điều/khoản; schema v1 bản nháp (chủ dự án làm) | Script đếm đúng 51 điều, khớp mục lục; Neo4j Browser mở được; repo có commit; có bản nháp schema v1 |
 | T2 · 24–30/10 | Baseline | `rag_baseline` (chunk theo `:DonViNoiDung`, top-k, trích dẫn); `llm_only`; so 2 embedding; bộ câu hỏi v1 (~70 câu, 4 loại: ~50 dev, ~20 test); script đánh giá | Script đánh giá chạy hết phần dev của bộ câu hỏi v1 cho 2 baseline, xuất CSV; có Recall@5 |
 | T3 · 31/10–6/11 | Lớp cấu trúc | Schema (LLM gợi ý, chủ dự án duyệt); nạp VanBan–Chuong–Dieu–Khoan; cạnh DAN_CHIEU; vector index | Cypher đếm ra 51 điều; truy vấn "khoản nào dẫn chiếu Điều X" đúng trên 5 ví dụ kiểm tay |
-| T4 · 7–13/11 | Lớp ngữ nghĩa | Trích thực thể–quan hệ theo schema, chạy thử 5 điều trước; gộp thực thể trùng; xuất mẫu 30 bộ ba để kiểm tay | Tỷ lệ bộ ba đúng ghi trong `docs/weekly/w4.md` |
+| T4 · 7–13/11 | Lớp ngữ nghĩa | Trích thực thể–quan hệ theo schema, chạy thử 5 điều trước; gộp thực thể trùng; xuất mẫu 30 bộ ba để kiểm tay | Kiểm tay 30 bộ ba ngẫu nhiên, ghi lại tỷ lệ đúng (`docs/weekly/w4.md`); có ảnh đồ thị con cho một chủ đề |
 | T5 · 14–20/11 | Pipeline GraphRAG | Điểm vào bằng vector; mở rộng 1–2 bước; Text2Cypher; hybrid | Trả lời hết tập dev không lỗi; mọi trích dẫn trỏ tới mã khoản có thật |
 | T6 · 21–27/11 | Số liệu so sánh | Bộ câu hỏi v2 (~100 câu), tách dev/test; chạy các hệ trên dev; phân tích lỗi theo loại câu | Bảng kết quả theo 4 loại câu; 10 lỗi tiêu biểu có nguyên nhân |
 | T7 · 28/11–4/12 | Phân tích lỗi, cải tiến | Sửa theo 10 lỗi tiêu biểu (prompt, schema, truy xuất); chạy lại trên dev; nếu còn thời gian: thêm văn bản hoặc chạy LightRAG | Bảng trước/sau trên dev; mỗi thay đổi có lý do và kết quả |
 | T8 · 5–11/12 | Demo | UI Streamlit (chat, trích dẫn, đoạn gốc); README cài và chạy; đóng băng code cuối tuần | Người khác clone repo, làm theo README và chạy được demo |
 | T9 · 12–18/12 | Kết quả cuối | Chạy tập test **đúng một lần**; hỗ trợ viết báo cáo | Kết quả test lưu kèm mã commit |
 | T10 · 19–25/12 | Nộp | Báo cáo, slide, video demo; **không thêm tính năng** | Tag `v1.0` |
+
+**Định nghĩa bộ ba đúng** (tiêu chí T4; schema `docs/schema_v1.md` mục 2). Mỗi cạnh ngữ nghĩa (nút – cạnh – nút) là một bộ ba. Bộ ba **đúng** khi: cả hai nút đúng loại và đúng tên; cạnh đúng loại; các thuộc tính quan trọng đúng (`min`/`max`/`min_incl`/`max_incl`, `co`, `boi_canh`, `phu_dinh`, và `ket_hop` của nhóm cha); và `nguon` đúng. Sai một thuộc tính số thì cả bộ ba tính là sai.
 
 ## 6. Đánh giá
 
