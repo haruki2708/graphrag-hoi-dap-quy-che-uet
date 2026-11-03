@@ -70,7 +70,7 @@ Mỗi cạnh: `type`, `from` (id nút đầu), `to` (id nút cuối), `nguon` (*
 | `LA_MOT` | `KhaiNiem` → `KhaiNiem`, `DoiTuong` → `DoiTuong` | loại con → loại cha; mức → đại lượng của thang | — |
 | `TINH_VAO` | `KhaiNiem` (loại học phần) → `KhaiNiem` (đại lượng) | có hoặc không tính vào đại lượng | `co` (bắt buộc, true/false); `boi_canh`: `id` của một `HoatDong` trong câu trả lời nếu quy tắc chỉ áp dụng cho thủ tục đó, `null` nếu áp dụng chung |
 | `DUNG_DE` | `KhaiNiem` (đại lượng) → `HoatDong` | đại lượng được hay không được dùng cho thủ tục | `co` (bắt buộc) |
-| `GIAO_QUY_DINH` | `HoatDong` \| `NhomDieuKien` \| `KhaiNiem` → `DoiTuong` | văn bản giao cho chủ thể quy định chi tiết | `noi_dung` (bắt buộc: giao quy định cái gì) |
+| `GIAO_QUY_DINH` | `HoatDong` \| `NhomDieuKien` \| `KhaiNiem` \| `DieuKien` → `DoiTuong` | văn bản giao cho chủ thể quy định chi tiết (nội dung được giao là một điều kiện cụ thể thì cạnh đi từ chính `DieuKien` đó) | `noi_dung` (bắt buộc: giao quy định cái gì) |
 
 Chỉ cạnh nào có cột "Thuộc tính riêng" mới được có thuộc tính đó. Không tạo cạnh `NGUON` (code tự tạo từ `nguon` của nút).
 
@@ -80,7 +80,7 @@ Chỉ cạnh nào có cột "Thuộc tính riêng" mới được có thuộc t�
 2. **Nguồn bắt buộc.** Mọi nút có `nguon` (ít nhất một mã), mọi cạnh có `nguon` (một mã). Chỉ dùng mã trong danh sách mã được phép, đúng như trong ngoặc vuông.
 3. **AND/OR theo dấu hiệu.** "có đủ các điều kiện sau", "đáp ứng đầy đủ các điều kiện" → `AND`. "một trong các trường hợp/lỗi/diện" → `OR`. Điều kiện lồng nhau thì dùng nhóm con (nhóm `GOM` nhóm). Nếu văn bản không có dấu hiệu nhưng nội dung thực chất là "chỉ cần một" (hoặc "phải đủ"), chọn theo nghĩa và **ghi lý do suy luận vào `mo_ta` của nhóm**. Mỗi `NhomDieuKien` phải `GOM` ít nhất một thành phần.
 4. **Phủ định dùng `phu_dinh: true`** ("không bị cảnh báo học tập", "chưa thuộc diện bị buộc thôi học"). Điều kiện phủ định một trạng thái thì `XET` tới `HeQua` của trạng thái đó (ví dụ `HeQua` "bị buộc thôi học"), không tạo trạng thái ngược nghĩa.
-5. **Giao quyền.** Mọi chỗ văn bản nói "(thủ trưởng) đơn vị đào tạo … quy định" (hoặc "do … quy định") đều sinh cạnh `GIAO_QUY_DINH` từ thủ tục / nhóm điều kiện / khái niệm bị giao, tới `DoiTuong` chủ thể được giao, kèm `noi_dung`.
+5. **Giao quyền.** Mọi chỗ văn bản nói "(thủ trưởng) đơn vị đào tạo … quy định" (hoặc "do … quy định") đều sinh cạnh `GIAO_QUY_DINH` từ thủ tục / nhóm điều kiện / khái niệm / điều kiện bị giao, tới `DoiTuong` chủ thể được giao, kèm `noi_dung`. Khi nội dung được giao là một điều kiện cụ thể (ví dụ "đáp ứng yêu cầu … mà đơn vị đào tạo có quy định"), cạnh đi từ chính `DieuKien` đó.
 6. **Số trong JSON dùng dấu chấm**: "1,40" → `1.4`, "2/3" → `0.667`.
 7. **`ten` dạng chuẩn, `bi_danh` giữ biến thể gốc** (xem mục Đầu ra).
 8. **Không bịa nút để "cho đủ".** Câu chỉ nêu trách nhiệm hành chính, nguyên tắc chung chung, không có điều kiện hay hệ quả cho sinh viên thì có thể không sinh nút nào. Thà thiếu còn hơn sai. Quyền lợi hoặc nghĩa vụ của sinh viên không kèm điều kiện thì tạo `HeQua` (`quyen_loi`/`nghia_vu`) và cạnh `AP_DUNG_CHO` tới `DoiTuong` chịu áp dụng; chỉ bỏ câu thuần trách nhiệm hành chính của đơn vị.

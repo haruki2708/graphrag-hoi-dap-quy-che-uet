@@ -8,7 +8,6 @@ carrying the metadata that must go into every result file (PLAN section 4, decis
 import dataclasses
 import hashlib
 import json
-import os
 import random
 import re
 import time
@@ -19,7 +18,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from .config import REPO_ROOT, RetryConfig, RoleConfig, load_config
-from .providers import ADAPTERS, API_KEY_VARS, PermanentError, ProviderError, RawResponse, TransientError
+from .providers import (ADAPTERS, API_KEY_VARS, PermanentError, ProviderError, RawResponse,  # noqa: F401
+                        TransientError, mask_secrets)
 
 CACHE_DIR = REPO_ROOT / "data" / "cache" / "llm"
 # Vietnam has no daylight saving time, so a fixed offset is exact (zoneinfo needs tzdata on Windows)
@@ -48,6 +48,9 @@ class LLMResult:
     structured_output: bool
     truncated: bool = False  # hit the output cap; returned but never cached
     params: dict | None = None  # provider params actually used (config merged with params_override)
+    # Provider's error message when the JSON Schema request was rejected and the call fell back to prompt JSON.
+    # Defaults to None so cache records written before this field existed still load.
+    structured_fallback_reason: str | None = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -62,15 +65,6 @@ class LLMError(Exception):
         self.provider = provider
         self.http_code = http_code
         self.attempts = attempts
-
-
-def mask_secrets(text: str) -> str:
-    """Replace any API key value found in text with ***."""
-    for var in API_KEY_VARS.values():
-        value = os.getenv(var)
-        if value:
-            text = text.replace(value, "***")
-    return text
 
 
 def _sleep(seconds: float) -> None:
@@ -200,6 +194,7 @@ def complete(role: str, system: str, messages: list[dict], json_schema: dict | N
         structured_output=raw.structured_output,
         truncated=raw.finish_reason in TRUNCATED_REASONS,
         params=dict(cfg.params),
+        structured_fallback_reason=raw.structured_fallback_reason,
     )
 
     # Errors raise above and are never cached; refusals and truncated replies are not cached either

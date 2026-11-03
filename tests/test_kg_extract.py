@@ -68,7 +68,8 @@ def fake_result(text: str, parsed=None, **kw):
     base = dict(text=text, parsed=parsed, role="extract", provider="anthropic", model_requested="claude-haiku-5-5",
                 model_served="claude-haiku-5-5", run=0, finish_reason="end_turn", input_tokens=9000,
                 output_tokens=800, latency_s=1.0, attempts=1, called_at="2026-11-03T10:00:00+07:00",
-                from_cache=False, structured_output=True, truncated=False, params={"effort": "medium"})
+                from_cache=False, structured_output=True, truncated=False, params={"effort": "medium"},
+                structured_fallback_reason=None)
     base.update(kw)
     return SimpleNamespace(**base)
 
@@ -272,6 +273,18 @@ class ValidatorTests(unittest.TestCase):
     def test_wrong_label_pair(self):
         self.reply["edges"].append({"type": "YEU_CAU", "from": "g1", "to": "q1", "nguon": UNIT})
         self.assertRejected("NhomDieuKien -> HeQua is not allowed for YEU_CAU")
+
+    def test_giao_quy_dinh_from_a_condition(self):
+        # d46.k1.e (first trial run, 2026-11-03): the delegated content is one specific condition
+        self.reply["edges"].append({"type": "GIAO_QUY_DINH", "from": "c1", "to": "o1", "nguon": P + "d44.k2.a",
+                                    "noi_dung": "giới hạn số lần cảnh báo kết quả học tập"})
+        report = self.check()
+        self.assertEqual(report.errors, [])
+
+    def test_giao_quy_dinh_from_a_consequence_is_rejected(self):
+        self.reply["edges"].append({"type": "GIAO_QUY_DINH", "from": "q1", "to": "o1", "nguon": UNIT,
+                                    "noi_dung": "x"})
+        self.assertRejected("HeQua -> DoiTuong is not allowed for GIAO_QUY_DINH")
 
     def test_gom_only_from_a_group(self):
         self.reply["edges"].append({"type": "GOM", "from": "c1", "to": "c2", "nguon": UNIT})
@@ -484,6 +497,19 @@ class ExtractUnitTests(unittest.TestCase):
         self.assertEqual(record["status"], "invalid")
         self.assertTrue(any("max_tokens" in e for e in record["errors"]))
 
+    def test_structured_fallback_reason_goes_into_metadata(self):
+        reason = "anthropic HTTP 400: output_config.format: schema too complex"
+        record = self.run_unit(FakeComplete(FIXTURE, structured_output=False, structured_fallback_reason=reason))
+        self.assertEqual(record["status"], "ok", record["errors"])
+        saved = json.loads((self.out / "extract" / f"{UNIT}.json").read_text(encoding="utf-8"))
+        self.assertFalse(saved["metadata"]["structured_output"])
+        self.assertEqual(saved["metadata"]["structured_fallback_reason"], reason)
+
+    def test_structured_fallback_reason_is_null_without_fallback(self):
+        record = self.run_unit(FakeComplete(FIXTURE))
+        self.assertIn("structured_fallback_reason", record["metadata"])
+        self.assertIsNone(record["metadata"]["structured_fallback_reason"])
+
     def test_llm_error_is_recorded_not_skipped(self):
         record = self.run_unit(FakeComplete(RuntimeError("HTTP 529 overloaded")))
         self.assertEqual(record["status"], "error")
@@ -584,6 +610,15 @@ class CliTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertIn("claude-sonnet-5-5", out)
         self.assertIn("giá 2.0/10.0", out)
+
+    def test_estimate_uses_measured_ratios(self):
+        ctx = context()
+        units = [u["id"] for u in ex.select_units([44])]
+        est = ex.estimate(units, ctx, ex.DEFAULT_EST_OUTPUT_TOKENS, None)
+        self.assertEqual((ex.CHARS_PER_TOKEN, ex.DEFAULT_EST_OUTPUT_TOKENS), (1.5, 4000))
+        self.assertEqual(est["tokens_in"], round(est["input_chars"] / 1.5))
+        self.assertIsInstance(est["tokens_in"], int)
+        self.assertEqual(est["tokens_out"], 4000 * len(units))
 
     def test_run_asks_before_calling(self):
         fake = FakeComplete(FIXTURE)
