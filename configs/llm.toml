@@ -25,7 +25,8 @@ effort = "medium"
 [roles.extract]
 provider = "anthropic"
 model = "claude-haiku-5-5"
-max_tokens = 8192
+# 16384 (was 8192): first trial run 2026-11-03 had 3/18 Haiku replies cut off inside thinking.
+max_tokens = 16384
 timeout_s = 180
 
 [roles.extract.params]
@@ -35,7 +36,7 @@ effort = "medium"
 [roles.extract_sonnet]
 provider = "anthropic"
 model = "claude-sonnet-5-5"
-max_tokens = 8192
+max_tokens = 16384
 timeout_s = 180
 
 [roles.extract_sonnet.params]

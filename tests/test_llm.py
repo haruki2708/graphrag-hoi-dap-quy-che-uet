@@ -124,6 +124,27 @@ class RetryTests(LLMTestCase):
         self.assertNotIn("response_format", second_body)
         self.assertIn("JSON Schema", second_body["messages"][0]["content"])
         self.sleep.assert_not_called()  # the fallback is not a retry
+        self.assertIn("nvidia HTTP 400", result.structured_fallback_reason)
+        self.assertIn("response_format unsupported", result.structured_fallback_reason)
+
+    def test_fallback_reason_is_masked_and_cut(self):
+        body = f"schema rejected for key {FAKE_KEY} " + "x" * 2000
+        responses = [http_response(422, text=body), http_response(200, ok_body())]
+        with mock.patch.object(providers.httpx, "post", side_effect=responses):
+            result = self.call()
+        reason = result.structured_fallback_reason
+        self.assertNotIn(FAKE_KEY, reason)
+        self.assertIn("***", reason)
+        self.assertEqual(len(reason), providers.FALLBACK_REASON_CHARS)
+        cached = next(Path(self.tmp.name).rglob("*.json")).read_text(encoding="utf-8")
+        self.assertNotIn(FAKE_KEY, cached)
+        self.assertEqual(self.call().structured_fallback_reason, reason)  # survives the cache round trip
+
+    def test_no_fallback_reason_when_schema_accepted(self):
+        with mock.patch.object(providers.httpx, "post", return_value=http_response(200, ok_body())):
+            result = self.call()
+        self.assertTrue(result.structured_output)
+        self.assertIsNone(result.structured_fallback_reason)
 
     def test_invalid_json_gives_parsed_none(self):
         with mock.patch.object(providers.httpx, "post", return_value=http_response(200, ok_body('{"label": "maybe"}'))):
@@ -132,6 +153,19 @@ class RetryTests(LLMTestCase):
 
 
 class CacheTests(LLMTestCase):
+    def test_old_cache_record_without_fallback_reason_loads(self):
+        with mock.patch.object(providers.httpx, "post", return_value=http_response(200, ok_body())):
+            self.call()
+        path = next(Path(self.tmp.name).rglob("*.json"))
+        record = json.loads(path.read_text(encoding="utf-8"))
+        del record["result"]["structured_fallback_reason"]  # layout written before the field existed
+        path.write_text(json.dumps(record), encoding="utf-8")
+        with mock.patch.object(providers.httpx, "post") as post:
+            result = self.call()
+        post.assert_not_called()
+        self.assertTrue(result.from_cache)
+        self.assertIsNone(result.structured_fallback_reason)
+
     def test_cache_hit_skips_the_call(self):
         with mock.patch.object(providers.httpx, "post", return_value=http_response(200, ok_body())) as post:
             first = self.call()
@@ -241,6 +275,7 @@ class AnthropicStructuredFallbackTests(unittest.TestCase):
         self.assertNotIn("format", second.kwargs["output_config"])
         self.assertEqual(second.kwargs["output_config"]["effort"], "low")
         self.assertIn("JSON Schema", second.kwargs["system"])
+        self.assertIn("anthropic HTTP 400", raw.structured_fallback_reason)
 
 
 class SecretTests(LLMTestCase):

@@ -17,6 +17,21 @@ from .config import RoleConfig
 RETRYABLE_STATUS = frozenset({408, 429, 500, 502, 503, 504, 529})
 
 API_KEY_VARS = {"anthropic": "ANTHROPIC_API_KEY", "nvidia": "NVIDIA_API_KEY", "gemini": "GEMINI_API_KEY"}
+FALLBACK_REASON_CHARS = 500
+
+
+def mask_secrets(text: str) -> str:
+    """Replace any API key value found in text with ***."""
+    for var in API_KEY_VARS.values():
+        value = os.getenv(var)
+        if value:
+            text = text.replace(value, "***")
+    return text
+
+
+def fallback_reason(message: str) -> str:
+    """Error message of a rejected structured request: secrets masked first, then cut."""
+    return mask_secrets(message)[:FALLBACK_REASON_CHARS]
 
 
 @dataclass
@@ -27,6 +42,9 @@ class RawResponse:
     input_tokens: int | None
     output_tokens: int | None
     structured_output: bool  # True when the provider enforced the JSON schema
+    # Why the structured request was rejected (400/422) before falling back to prompt JSON; secrets masked,
+    # at most FALLBACK_REASON_CHARS characters. None when no fallback happened.
+    structured_fallback_reason: str | None = None
 
 
 class ProviderError(Exception):
@@ -91,6 +109,7 @@ def call_anthropic(cfg: RoleConfig, system: str, messages: list[dict], json_sche
     # {"type": "json_schema", "schema": ...}. If the API rejects the schema (400/422), ask for JSON in the
     # system prompt instead and let core.parse_json check the reply.
     attempts = [True, False] if json_schema is not None else [False]
+    rejected_reason = None
     for structured in attempts:
         output_config = {"effort": effort} if effort else {}
         sys_text = system
@@ -107,6 +126,7 @@ def call_anthropic(cfg: RoleConfig, system: str, messages: list[dict], json_sche
             response = client.messages.create(model=cfg.model, max_tokens=cfg.max_tokens, messages=messages, **call)
         except anthropic.APIStatusError as e:
             if structured and e.status_code in (400, 422):
+                rejected_reason = fallback_reason(f"anthropic HTTP {e.status_code}: {e.message}")
                 continue
             raise status_error(f"anthropic HTTP {e.status_code}: {e.message}", e.status_code,
                                e.response.headers.get("retry-after")) from e
@@ -122,6 +142,7 @@ def call_anthropic(cfg: RoleConfig, system: str, messages: list[dict], json_sche
             input_tokens=response.usage.input_tokens,
             output_tokens=response.usage.output_tokens,
             structured_output=structured,
+            structured_fallback_reason=rejected_reason,
         )
     raise PermanentError("anthropic: no request was sent")  # unreachable: attempts is never empty
 
@@ -134,6 +155,7 @@ def call_nvidia(cfg: RoleConfig, system: str, messages: list[dict], json_schema:
     headers = {"Authorization": f"Bearer {api_key('nvidia')}", "Accept": "application/json"}
 
     attempts = [True, False] if json_schema is not None else [False]
+    rejected_reason = None
     for structured in attempts:
         sys_text = system
         body = {"model": cfg.model, "max_tokens": cfg.max_tokens, **cfg.params}
@@ -154,6 +176,7 @@ def call_nvidia(cfg: RoleConfig, system: str, messages: list[dict], json_schema:
         except httpx.HTTPStatusError as e:
             code = e.response.status_code
             if structured and code in (400, 422):
+                rejected_reason = fallback_reason(f"nvidia HTTP {code}: {e.response.text}")
                 continue
             raise status_error(f"nvidia HTTP {code}: {e.response.text[:300]}", code,
                                e.response.headers.get("retry-after")) from e
@@ -170,6 +193,7 @@ def call_nvidia(cfg: RoleConfig, system: str, messages: list[dict], json_schema:
             input_tokens=usage.get("prompt_tokens"),
             output_tokens=usage.get("completion_tokens"),
             structured_output=structured,
+            structured_fallback_reason=rejected_reason,
         )
     raise PermanentError("nvidia: no request was sent")  # unreachable: attempts is never empty
 

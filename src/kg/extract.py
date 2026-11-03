@@ -51,8 +51,8 @@ SCOPE_ARTICLES = (4, 5, 6, 7, 8, 13, 14, *range(16, 30), 32, 35, 36, 37, 38, 39,
 TRIAL_ARTICLES = (26, 28, 43, 44, 46)
 # The six classification tables (F1, Q10 = B): rows are loaded by script; the LLM only extracts rules outside the table
 TABLE_UNITS = tuple(f"{DOC_ID}.{u}" for u in ("d17.k2", "d32.k2", "d41.k2", "d43.k1", "d45.k2", "d47.k5"))
-CHARS_PER_TOKEN = 3  # rough input estimate for Vietnamese text
-DEFAULT_EST_OUTPUT_TOKENS = 2000  # per unit, thinking included; an assumption, not a measurement
+CHARS_PER_TOKEN = 1.5  # measured 2026-11-03 on 18 real calls: 1.47 characters per input token
+DEFAULT_EST_OUTPUT_TOKENS = 4000  # per unit, thinking included; measured: Haiku ~4,000, Sonnet ~1,500 per unit
 STATUSES = ("ok", "invalid", "error")
 
 
@@ -340,7 +340,8 @@ def extract_unit(unit_id: str, role: str, run: int, ctx: Context, model_requeste
     verdict = evaluate_reply(result.text, result.parsed, result.finish_reason, result.truncated, unit_id, ctx)
     meta.update(provider=result.provider, model_served=result.model_served, input_tokens=result.input_tokens,
                 output_tokens=result.output_tokens, finish_reason=result.finish_reason, truncated=result.truncated,
-                structured_output=result.structured_output, from_cache=result.from_cache,
+                structured_output=result.structured_output,
+                structured_fallback_reason=result.structured_fallback_reason, from_cache=result.from_cache,
                 called_at=result.called_at, latency_s=result.latency_s, attempts=result.attempts,
                 params=result.params, reused_record=False)
     if meta["model_requested"] != result.model_requested:
@@ -369,7 +370,7 @@ def estimate(unit_ids: list[str], ctx: Context, est_output_tokens: int, pricing:
                      "message_chars": len(msg), "reused": unit_id in reusable})
     to_call = [r for r in rows if not r["reused"]]
     input_chars = sum(len(ctx.system_prompt) + r["message_chars"] for r in to_call)
-    tokens_in = input_chars // CHARS_PER_TOKEN
+    tokens_in = round(input_chars / CHARS_PER_TOKEN)
     tokens_out = est_output_tokens * len(to_call)
     cost = None
     if pricing:

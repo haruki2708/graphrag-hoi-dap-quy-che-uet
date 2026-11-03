@@ -102,7 +102,7 @@ EDGE_SPECS = {s.type: s for s in (
     EdgeSpec("TINH_VAO", ("KhaiNiem",), ("KhaiNiem",),
              {"co": Prop("boolean", required=True), "boi_canh": Prop("string", nullable=True)}),
     EdgeSpec("DUNG_DE", ("KhaiNiem",), ("HoatDong",), {"co": Prop("boolean", required=True)}),
-    EdgeSpec("GIAO_QUY_DINH", ("HoatDong", "NhomDieuKien", "KhaiNiem"), ("DoiTuong",),
+    EdgeSpec("GIAO_QUY_DINH", ("HoatDong", "NhomDieuKien", "KhaiNiem", "DieuKien"), ("DoiTuong",),
              {"noi_dung": Prop("string", required=True)}),
 )}
 EDGE_TYPES = tuple(EDGE_SPECS)
