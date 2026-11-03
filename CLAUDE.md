@@ -6,7 +6,7 @@ Dự án: chatbot GraphRAG hỏi đáp quy chế đào tạo Trường ĐH Công
 
 ## Tuần hiện tại
 
-T3 (31/10–6/11/2026) — xem dòng T3 trong `docs/PLAN.md` mục 5 và phần "Việc tiếp theo" ở cuối `docs/weekly/w2.md`. Chủ dự án sẽ tự cập nhật dòng này mỗi tuần.
+T4 (7–13/11/2026) — xem dòng T4 trong `docs/PLAN.md` mục 5 và phần "Chốt T3 → chuyển sang T4" (việc mang sang) ở cuối `docs/weekly/w3.md`. Chủ dự án sẽ tự cập nhật dòng này mỗi tuần.
 
 ## Đầu mỗi phiên làm việc
 

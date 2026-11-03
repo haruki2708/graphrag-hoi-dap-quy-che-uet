@@ -1,0 +1,143 @@
+{
+  "version": "extract_v1_examples",
+  "review_status": "can_nguoi_kiem",
+  "note": "Gold viết tay bởi agent soạn PR T4/1a, CHƯA được chủ dự án kiểm. Chỉ lấy từ 29 điều không thuộc 5 điều chạy thử (d26, d28, d43, d44, d46) và không phải 6 khoản bảng. Đầu vào của mỗi ví dụ được dựng lại từ qc3626.json bằng đúng hàm build_unit_text của src/kg/extract.py.",
+  "examples": [
+    {
+      "unit": "qc3626.d23.k1",
+      "why": "OR có dấu hiệu ('các trường hợp'), nhóm AND lồng ở điểm c, phủ định trạng thái, HeQua giới hạn có số",
+      "output": {
+        "KhaiNiem": [
+          {"id": "k1", "ten": "điểm trung bình chung học kỳ", "bi_danh": [], "nguon": ["qc3626.d23.k1.c"], "loai": "dai_luong"},
+          {"id": "k2", "ten": "học lực", "bi_danh": ["hạng học lực"], "nguon": ["qc3626.d23.k1.b"], "loai": "dai_luong"}
+        ],
+        "DoiTuong": [],
+        "HoatDong": [
+          {"id": "h1", "ten": "rút bớt học phần", "bi_danh": [], "nguon": ["qc3626.d23.k1"], "mo_ta": "rút bớt học phần đã đăng ký trong học kỳ"}
+        ],
+        "NhomDieuKien": [
+          {"id": "g1", "ten": "các trường hợp được rút bớt học phần", "bi_danh": [], "nguon": ["qc3626.d23.k1"], "ket_hop": "OR", "mo_ta": "Rút bớt học phần áp dụng khi thuộc một trong các trường hợp a, b, c"},
+          {"id": "g2", "ten": "điểm trung bình chung học kỳ dưới 2,00 và chưa bị buộc thôi học", "bi_danh": [], "nguon": ["qc3626.d23.k1.c"], "ket_hop": "AND", "mo_ta": "Điểm trung bình chung học kỳ dưới 2,00 nhưng chưa thuộc diện bị buộc thôi học"}
+        ],
+        "DieuKien": [
+          {"id": "c1", "ten": "theo nhu cầu và khả năng lựa chọn của sinh viên", "bi_danh": [], "nguon": ["qc3626.d23.k1.a"], "mo_ta": "Theo nhu cầu và khả năng lựa chọn của sinh viên", "toan_tu": "co"},
+          {"id": "c2", "ten": "học lực xác định phải rút bớt học phần", "bi_danh": [], "nguon": ["qc3626.d23.k1.b"], "mo_ta": "Sau khi đã đăng ký học phần, hạng học lực của sinh viên được xác định là phải rút bớt học phần trong giới hạn khối lượng quy định", "toan_tu": "la"},
+          {"id": "c3", "ten": "điểm trung bình chung học kỳ dưới 2,00", "bi_danh": [], "nguon": ["qc3626.d23.k1.c"], "mo_ta": "Điểm trung bình chung học kỳ dưới 2,00", "max": 2.0, "max_incl": false, "thang": "thang_4"},
+          {"id": "c4", "ten": "chưa thuộc diện bị buộc thôi học", "bi_danh": [], "nguon": ["qc3626.d23.k1.c"], "mo_ta": "chưa thuộc diện bị buộc thôi học", "toan_tu": "thuoc", "phu_dinh": true}
+        ],
+        "HeQua": [
+          {"id": "q1", "ten": "bị buộc thôi học", "bi_danh": [], "nguon": ["qc3626.d23.k1.c"], "loai": "trang_thai"},
+          {"id": "q2", "ten": "chỉ được đăng ký không quá 18 tín chỉ", "bi_danh": [], "nguon": ["qc3626.d23.k1.c"], "loai": "gioi_han", "mo_ta": "được đăng ký học không quá 18 tín chỉ trong mỗi học kỳ chính", "gia_tri": 18, "don_vi": "tín chỉ"}
+        ],
+        "edges": [
+          {"type": "YEU_CAU", "from": "h1", "to": "g1", "nguon": "qc3626.d23.k1"},
+          {"type": "GOM", "from": "g1", "to": "c1", "nguon": "qc3626.d23.k1.a"},
+          {"type": "GOM", "from": "g1", "to": "c2", "nguon": "qc3626.d23.k1.b"},
+          {"type": "GOM", "from": "g1", "to": "g2", "nguon": "qc3626.d23.k1.c"},
+          {"type": "XET", "from": "c2", "to": "k2", "nguon": "qc3626.d23.k1.b"},
+          {"type": "GOM", "from": "g2", "to": "c3", "nguon": "qc3626.d23.k1.c"},
+          {"type": "GOM", "from": "g2", "to": "c4", "nguon": "qc3626.d23.k1.c"},
+          {"type": "XET", "from": "c3", "to": "k1", "nguon": "qc3626.d23.k1.c"},
+          {"type": "XET", "from": "c4", "to": "q1", "nguon": "qc3626.d23.k1.c"},
+          {"type": "DAN_DEN", "from": "g2", "to": "q2", "nguon": "qc3626.d23.k1.c"}
+        ]
+      }
+    },
+    {
+      "unit": "qc3626.d21.k2",
+      "why": "Trích có chọn lọc (điểm b, c chỉ là trách nhiệm hành chính: không sinh nút; quyền của sinh viên ở điểm a không kèm điều kiện: HeQua quyen_loi + AP_DUNG_CHO sinh viên), GIAO_QUY_DINH, TINH_VAO co=false áp dụng chung, LA_MOT, ngưỡng điểm chữ",
+      "output": {
+        "KhaiNiem": [
+          {"id": "k1", "ten": "học phần tự chọn tự do", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "loai": "loai_hoc_phan"},
+          {"id": "k2", "ten": "học phần tự chọn có điều kiện", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "loai": "loai_hoc_phan"},
+          {"id": "k3", "ten": "học phần tự chọn", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "loai": "loai_hoc_phan"},
+          {"id": "k4", "ten": "điểm trung bình chung học kỳ", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "loai": "dai_luong"},
+          {"id": "k5", "ten": "điểm trung bình chung tích lũy", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "loai": "dai_luong"},
+          {"id": "k6", "ten": "điểm học phần", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "loai": "dai_luong"}
+        ],
+        "DoiTuong": [
+          {"id": "o1", "ten": "thủ trưởng đơn vị đào tạo", "bi_danh": [], "nguon": ["qc3626.d21.k2.a"], "loai": "chuc_danh"},
+          {"id": "o2", "ten": "sinh viên", "bi_danh": [], "nguon": ["qc3626.d21.k2.a"], "loai": "nguoi"}
+        ],
+        "HoatDong": [
+          {"id": "h1", "ten": "đăng ký học phần", "bi_danh": ["đăng ký học"], "nguon": ["qc3626.d21.k2", "qc3626.d21.k2.a", "qc3626.d21.k2.d"], "mo_ta": "sinh viên đăng ký học các học phần trong chương trình đào tạo"}
+        ],
+        "NhomDieuKien": [
+          {"id": "g1", "ten": "học phần tự chọn tự do đạt điểm D trở lên", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "ket_hop": "AND", "mo_ta": "Học phần tự chọn tự do đạt điểm D trở lên thì được ghi trong phụ lục văn bằng"}
+        ],
+        "DieuKien": [
+          {"id": "c1", "ten": "học phần tự chọn tự do đạt điểm D trở lên", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "mo_ta": "Những học phần tự chọn tự do đạt điểm D trở lên", "min": 2, "min_incl": true, "thang": "diem_chu"}
+        ],
+        "HeQua": [
+          {"id": "q1", "ten": "được ghi trong phụ lục văn bằng", "bi_danh": [], "nguon": ["qc3626.d21.k2.d"], "loai": "quyen_loi", "mo_ta": "học phần được ghi trong phụ lục văn bằng cấp kèm theo bằng tốt nghiệp"},
+          {"id": "q2", "ten": "được đăng ký học và thi học phần do đơn vị đào tạo khác thuộc ĐHQGHN tổ chức giảng dạy", "bi_danh": [], "nguon": ["qc3626.d21.k2.a"], "loai": "quyen_loi"},
+          {"id": "q3", "ten": "kết quả học phần học ở đơn vị đào tạo khác được chuyển đổi và công nhận", "bi_danh": [], "nguon": ["qc3626.d21.k2.a"], "loai": "quyen_loi"}
+        ],
+        "edges": [
+          {"type": "GIAO_QUY_DINH", "from": "h1", "to": "o1", "nguon": "qc3626.d21.k2.a", "noi_dung": "việc tổ chức đăng ký học các học phần trong chương trình đào tạo"},
+          {"type": "LA_MOT", "from": "k1", "to": "k3", "nguon": "qc3626.d21.k2.d"},
+          {"type": "LA_MOT", "from": "k2", "to": "k3", "nguon": "qc3626.d21.k2.d"},
+          {"type": "TINH_VAO", "from": "k1", "to": "k4", "nguon": "qc3626.d21.k2.d", "co": false, "boi_canh": null},
+          {"type": "TINH_VAO", "from": "k1", "to": "k5", "nguon": "qc3626.d21.k2.d", "co": false, "boi_canh": null},
+          {"type": "GOM", "from": "g1", "to": "c1", "nguon": "qc3626.d21.k2.d"},
+          {"type": "XET", "from": "c1", "to": "k6", "nguon": "qc3626.d21.k2.d"},
+          {"type": "DAN_DEN", "from": "g1", "to": "q1", "nguon": "qc3626.d21.k2.d"},
+          {"type": "AP_DUNG_CHO", "from": "q2", "to": "o2", "nguon": "qc3626.d21.k2.a"},
+          {"type": "AP_DUNG_CHO", "from": "q3", "to": "o2", "nguon": "qc3626.d21.k2.a"}
+        ]
+      }
+    },
+    {
+      "unit": "qc3626.d27.k4",
+      "why": "AND có dấu hiệu ('có đủ các điều kiện sau'), ngưỡng thang 4 và điểm chữ, phủ định, AP_DUNG_CHO chương trình/hình thức, GIAO_QUY_DINH 'do đơn vị đào tạo quy định'",
+      "output": {
+        "KhaiNiem": [
+          {"id": "k1", "ten": "năm đào tạo", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "loai": "dai_luong"},
+          {"id": "k2", "ten": "điểm trung bình chung các học phần", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "loai": "dai_luong"},
+          {"id": "k3", "ten": "trình độ tiếng Anh", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "loai": "dai_luong"},
+          {"id": "k4", "ten": "điểm học phần", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "loai": "dai_luong"}
+        ],
+        "DoiTuong": [
+          {"id": "o1", "ten": "chương trình đào tạo chuẩn", "bi_danh": [], "nguon": ["qc3626.d27.k4"], "loai": "chuong_trinh"},
+          {"id": "o2", "ten": "chính quy", "bi_danh": [], "nguon": ["qc3626.d27.k4"], "loai": "hinh_thuc"},
+          {"id": "o3", "ten": "đơn vị đào tạo", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "loai": "don_vi"}
+        ],
+        "HoatDong": [
+          {"id": "h1", "ten": "xét tuyển bổ sung vào chương trình đào tạo tài năng, chất lượng cao", "bi_danh": [], "nguon": ["qc3626.d27.k4", "qc3626.d27.k4.a"], "mo_ta": "bổ sung sinh viên chương trình đào tạo chuẩn chính quy vào học chương trình đào tạo tài năng, chất lượng cao"}
+        ],
+        "NhomDieuKien": [
+          {"id": "g1", "ten": "điều kiện xét tuyển bổ sung vào chương trình đào tạo tài năng, chất lượng cao", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "ket_hop": "AND", "mo_ta": "Sinh viên phải có đủ các điều kiện liệt kê ở điểm a"}
+        ],
+        "DieuKien": [
+          {"id": "c1", "ten": "không là sinh viên năm thứ nhất hoặc năm cuối", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Không là sinh viên năm thứ nhất hoặc năm cuối", "toan_tu": "la", "phu_dinh": true},
+          {"id": "c2", "ten": "có tố chất, đam mê và năng lực nghiên cứu khoa học", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Có tố chất, đam mê và năng lực nghiên cứu khoa học", "toan_tu": "co"},
+          {"id": "c3", "ten": "ngành học phù hợp với ngành có chương trình đào tạo tài năng, chất lượng cao", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Ngành học phù hợp với ngành có chương trình đào tạo tài năng, chất lượng cao", "toan_tu": "co"},
+          {"id": "c4", "ten": "điểm trung bình chung các học phần tối thiểu 3,0", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Điểm trung bình chung các học phần tính đến thời điểm xét đạt tối thiểu 3,0", "min": 3.0, "min_incl": true, "thang": "thang_4", "moc": "tính đến thời điểm xét"},
+          {"id": "c5", "ten": "trình độ tiếng Anh tương đương bậc 3 trở lên", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Trình độ tiếng Anh tương đương bậc 3 trở lên", "min": 3, "min_incl": true, "thang": "bac_ngoai_ngu"},
+          {"id": "c6", "ten": "điểm các học phần tương ứng đạt từ B trở lên", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Điểm các học phần tương ứng với học phần trong chương trình đào tạo tài năng, chất lượng cao phải đạt từ B trở lên", "min": 6, "min_incl": true, "thang": "diem_chu"},
+          {"id": "c7", "ten": "hoàn thành bài kiểm tra đánh giá xét chuyển đổi chương trình đào tạo", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Hoàn thành bài kiểm tra đánh giá xét chuyển đổi chương trình đào tạo do đơn vị đào tạo quy định", "toan_tu": "co"},
+          {"id": "c8", "ten": "tư cách đạo đức, ý thức tổ chức kỷ luật tốt", "bi_danh": [], "nguon": ["qc3626.d27.k4.a"], "mo_ta": "Tư cách đạo đức, ý thức tổ chức kỷ luật tốt", "toan_tu": "co"}
+        ],
+        "HeQua": [],
+        "edges": [
+          {"type": "AP_DUNG_CHO", "from": "h1", "to": "o1", "nguon": "qc3626.d27.k4"},
+          {"type": "AP_DUNG_CHO", "from": "h1", "to": "o2", "nguon": "qc3626.d27.k4"},
+          {"type": "YEU_CAU", "from": "h1", "to": "g1", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c1", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c2", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c3", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c4", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c5", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c6", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c7", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GOM", "from": "g1", "to": "c8", "nguon": "qc3626.d27.k4.a"},
+          {"type": "XET", "from": "c1", "to": "k1", "nguon": "qc3626.d27.k4.a"},
+          {"type": "XET", "from": "c4", "to": "k2", "nguon": "qc3626.d27.k4.a"},
+          {"type": "XET", "from": "c5", "to": "k3", "nguon": "qc3626.d27.k4.a"},
+          {"type": "XET", "from": "c6", "to": "k4", "nguon": "qc3626.d27.k4.a"},
+          {"type": "GIAO_QUY_DINH", "from": "g1", "to": "o3", "nguon": "qc3626.d27.k4.a", "noi_dung": "bài kiểm tra đánh giá xét chuyển đổi chương trình đào tạo"}
+        ]
+      }
+    }
+  ]
+}
