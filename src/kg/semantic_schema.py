@@ -20,7 +20,9 @@ from src.kg.semantic_ids import LOCAL_ID, MERGEABLE_LABELS, slug
 
 KET_HOP = ("AND", "OR")
 THANG_MUC = ("nam_dao_tao", "diem_chu", "hoc_luc", "hang_tot_nghiep")
-THANG_DIEU_KIEN = ("thang_10", "thang_4", "tin_chi", "ty_le") + THANG_MUC
+# bac_ngoai_ngu: level 1-6 of the 6-level foreign language framework, compared directly (no thu_tu table);
+# DieuKien only, never a KhaiNiem level (owner decision 03/11/2026)
+THANG_DIEU_KIEN = ("thang_10", "thang_4", "tin_chi", "ty_le") + THANG_MUC + ("bac_ngoai_ngu",)
 
 
 @dataclass(frozen=True)

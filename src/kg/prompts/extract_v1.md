@@ -34,7 +34,7 @@ Mọi nút đều có:
 | `DoiTuong` | Ai hoặc phạm vi mà quy định nhắm tới | `loai` (bắt buộc): `nguoi` \| `chuc_danh` \| `don_vi` \| `chuong_trinh` \| `hinh_thuc` \| `van_bang` |
 | `HoatDong` | Thủ tục có người thực hiện hoặc xin, gắn với điều kiện | `mo_ta` |
 | `NhomDieuKien` | Một mệnh đề "nếu … thì …": gom các điều kiện, lồng được | `ket_hop` (bắt buộc): `AND` \| `OR`; `mo_ta` (bắt buộc, một câu diễn giải) |
-| `DieuKien` | Mệnh đề nguyên tử, đúng hoặc sai với một sinh viên cụ thể | `mo_ta` (bắt buộc, nguyên văn rút gọn). Nếu là ngưỡng số hoặc mức có thứ bậc: `min`, `max`, `min_incl`, `max_incl`, `don_vi`, `thang`: `thang_10` \| `thang_4` \| `tin_chi` \| `ty_le` \| `nam_dao_tao` \| `diem_chu` \| `hoc_luc` \| `hang_tot_nghiep`. Nếu không phải số: `toan_tu`: `la` \| `thuoc` \| `co`. `phu_dinh` (true/false); `so_voi` (đại lượng tham chiếu của ngưỡng tương đối); `moc` (mốc thời gian) |
+| `DieuKien` | Mệnh đề nguyên tử, đúng hoặc sai với một sinh viên cụ thể | `mo_ta` (bắt buộc, nguyên văn rút gọn). Nếu là ngưỡng số hoặc mức có thứ bậc: `min`, `max`, `min_incl`, `max_incl`, `don_vi`, `thang`: `thang_10` \| `thang_4` \| `tin_chi` \| `ty_le` \| `nam_dao_tao` \| `diem_chu` \| `hoc_luc` \| `hang_tot_nghiep` \| `bac_ngoai_ngu`. Nếu không phải số: `toan_tu`: `la` \| `thuoc` \| `co`. `phu_dinh` (true/false); `so_voi` (đại lượng tham chiếu của ngưỡng tương đối); `moc` (mốc thời gian) |
 | `HeQua` | Điều xảy ra với hoặc cho sinh viên khi nhóm điều kiện thỏa | `loai` (bắt buộc): `trang_thai` \| `quyen_loi` \| `nghia_vu` \| `che_tai` \| `gioi_han`; `mo_ta`; `gia_tri`, `don_vi` (nếu có số) |
 
 Mốc phân biệt dễ nhầm:
@@ -54,6 +54,7 @@ Với 4 thang có thứ bậc, `min`/`max` so trên **số thứ bậc** sau (ch
 | `hang_tot_nghiep` | Trung bình 1, Khá 2, Giỏi 3, Xuất sắc 4 |
 
 Ví dụ: "phải đạt từ B trở lên" → `min: 6, min_incl: true, thang: "diem_chu"`; "sinh viên các năm tiếp theo" (sau năm thứ ba) → `min: 4, min_incl: true, thang: "nam_dao_tao"`.
+Thang `bac_ngoai_ngu` (bậc theo Khung năng lực ngoại ngữ 6 bậc, chỉ dùng cho `DieuKien`): `min`/`max` là số bậc 1–6, so trực tiếp; ví dụ "bậc 3 trở lên" → `min: 3, min_incl: true, thang: "bac_ngoai_ngu"`.
 
 ## Chín loại cạnh
 
@@ -82,7 +83,7 @@ Chỉ cạnh nào có cột "Thuộc tính riêng" mới được có thuộc t�
 5. **Giao quyền.** Mọi chỗ văn bản nói "(thủ trưởng) đơn vị đào tạo … quy định" (hoặc "do … quy định") đều sinh cạnh `GIAO_QUY_DINH` từ thủ tục / nhóm điều kiện / khái niệm bị giao, tới `DoiTuong` chủ thể được giao, kèm `noi_dung`.
 6. **Số trong JSON dùng dấu chấm**: "1,40" → `1.4`, "2/3" → `0.667`.
 7. **`ten` dạng chuẩn, `bi_danh` giữ biến thể gốc** (xem mục Đầu ra).
-8. **Không bịa nút để "cho đủ".** Câu chỉ nêu trách nhiệm hành chính, nguyên tắc chung chung, không có điều kiện hay hệ quả cho sinh viên thì có thể không sinh nút nào. Thà thiếu còn hơn sai.
+8. **Không bịa nút để "cho đủ".** Câu chỉ nêu trách nhiệm hành chính, nguyên tắc chung chung, không có điều kiện hay hệ quả cho sinh viên thì có thể không sinh nút nào. Thà thiếu còn hơn sai. Quyền lợi hoặc nghĩa vụ của sinh viên không kèm điều kiện thì tạo `HeQua` (`quyen_loi`/`nghia_vu`) và cạnh `AP_DUNG_CHO` tới `DoiTuong` chịu áp dụng; chỉ bỏ câu thuần trách nhiệm hành chính của đơn vị.
 9. **Không tạo thuộc tính ngoài khuôn** (đặc biệt không có `thu_tu`). Không tạo nhãn hay loại cạnh khác.
 10. **Bảng phân loại.** Nếu tin nhắn ghi đơn vị có bảng phân loại: **bỏ qua các dòng/mức của bảng** (bảng do script nhập riêng), chỉ trích các quy tắc nằm ngoài bảng (ví dụ phần loại trừ khi tính số tín chỉ).
 

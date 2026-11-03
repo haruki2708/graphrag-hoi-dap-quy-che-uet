@@ -49,7 +49,7 @@ FIXTURE = {
          "mo_ta": "Không đăng ký học 2 học kỳ liên tiếp", "min": 2, "min_incl": True, "don_vi": "học kỳ"},
     ],
     "HeQua": [
-        {"id": "q1", "ten": "bị buộc thôi học", "bi_danh": [], "nguon": [P + "d44.k2"], "loai": "che_tai"},
+        {"id": "q1", "ten": "bị buộc thôi học", "bi_danh": [], "nguon": [P + "d44.k2"], "loai": "trang_thai"},
     ],
     "edges": [
         {"type": "GOM", "from": "g1", "to": "c1", "nguon": P + "d44.k2.a"},
@@ -360,10 +360,27 @@ class ValidatorTests(unittest.TestCase):
         self.assertTrue(any("'phu_dinh' must be boolean" in e for e in report.errors), report.errors)
 
     def test_soft_checks_are_warnings(self):
-        self.reply["edges"].append({"type": "XET", "from": "c1", "to": "q1", "nguon": UNIT})  # q1 is che_tai
+        self.reply["edges"].append({"type": "DAN_DEN", "from": "g1", "to": "k1", "nguon": UNIT})  # k1 is dai_luong
         report = self.check()
         self.assertTrue(report.ok, report.errors)
-        self.assertTrue(any("expects ['trang_thai']" in w for w in report.warnings), report.warnings)
+        self.assertTrue(any("expects ['muc_phan_loai']" in w for w in report.warnings), report.warnings)
+
+    def test_bac_ngoai_ngu_scale_on_dieukien_only(self):
+        self.reply["DieuKien"].append({"id": "c4", "ten": "trình độ ngoại ngữ bậc 3 trở lên", "bi_danh": [],
+                                       "nguon": [UNIT], "mo_ta": "bậc 3 trở lên", "min": 3, "min_incl": True,
+                                       "thang": "bac_ngoai_ngu"})
+        self.reply["edges"].append({"type": "GOM", "from": "g1", "to": "c4", "nguon": UNIT})
+        report = self.check()
+        self.assertEqual((report.errors, report.warnings), ([], []))
+        self.reply["KhaiNiem"].append({"id": "k2", "ten": "bậc 3", "bi_danh": [], "nguon": [UNIT],
+                                       "loai": "muc_phan_loai", "thang": "bac_ngoai_ngu"})
+        self.assertRejected("'thang' = 'bac_ngoai_ngu' not in")
+        self.assertIn("bac_ngoai_ngu", ss.THANG_DIEU_KIEN)
+        self.assertNotIn("bac_ngoai_ngu", ss.THANG_MUC)
+        dk = ss.json_schema()["properties"]["DieuKien"]["items"]["properties"]["thang"]["enum"]
+        kn = ss.json_schema()["properties"]["KhaiNiem"]["items"]["properties"]["thang"]["enum"]
+        self.assertIn("bac_ngoai_ngu", dk)
+        self.assertNotIn("bac_ngoai_ngu", kn)
 
 
 class ExtractUnitTests(unittest.TestCase):
