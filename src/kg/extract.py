@@ -205,12 +205,13 @@ def _merge_unique(items: list, more: list) -> list:
     return items + [x for x in more if x not in items]
 
 
-def build_fragment(output: dict, unit_id: str) -> dict:
+def build_fragment(output: dict, unit_id: str, nguon_loai: str = "trich_xuat") -> dict:
     """Graph fragment of a validated reply: same layout as qc3626_graph.json ({"meta", "nodes", "edges"}).
 
     Global ids follow semantic_ids.global_id. Two nodes of one reply that get the same global id are merged
     (nguon and bi_danh joined; a different ten is kept as bi_danh; other differing values are listed in
     meta.merge_conflicts and the first value is kept). Exact duplicate edges are dropped.
+    nguon_loai is stored on every node and in meta: "trich_xuat" for LLM replies, "bang" for the tables (src/kg/tables.py).
     """
     id_map, nodes, conflicts = {}, {}, []
     for label in ss.NODE_LABELS:
@@ -221,7 +222,7 @@ def build_fragment(output: dict, unit_id: str) -> dict:
             if gid not in nodes:
                 nodes[gid] = {"id": gid, "labels": [label], "props": {
                     "id": gid, "ten": node["ten"], "bi_danh": list(dict.fromkeys(node["bi_danh"])),
-                    "nguon_loai": "trich_xuat", "nguon": list(dict.fromkeys(node["nguon"])), **props}}
+                    "nguon_loai": nguon_loai, "nguon": list(dict.fromkeys(node["nguon"])), **props}}
                 continue
             kept = nodes[gid]["props"]
             kept["nguon"] = _merge_unique(kept["nguon"], node["nguon"])
@@ -243,7 +244,7 @@ def build_fragment(output: dict, unit_id: str) -> dict:
         if key not in seen:
             seen.add(key)
             edges.append(out)
-    return {"meta": {"unit": unit_id, "nguon_loai": "trich_xuat", "id_map": id_map, "merge_conflicts": conflicts},
+    return {"meta": {"unit": unit_id, "nguon_loai": nguon_loai, "id_map": id_map, "merge_conflicts": conflicts},
             "nodes": list(nodes.values()), "edges": edges}
 
 

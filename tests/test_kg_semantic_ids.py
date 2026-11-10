@@ -54,6 +54,21 @@ class SlugAndIdTests(unittest.TestCase):
         self.assertEqual(sid.slug("Luật Giáo dục đại học"), refs.slugify("Luật Giáo dục đại học"))
         self.assertEqual(sid.slug("Điểm trung bình chung tích luỹ"), "diem_trung_binh_chung_tich_luy")
 
+    def test_plus_is_kept_in_the_slug(self):
+        # letter grades: "điểm C+" must not merge with "điểm C" (found building the T4 tables)
+        for grade in ("A", "B", "C", "D"):
+            with self.subTest(grade=grade):
+                self.assertNotEqual(sid.slug(f"điểm {grade}+"), sid.slug(f"điểm {grade}"))
+        self.assertEqual(sid.slug("điểm C+"), "diem_c_cong")
+        self.assertEqual(sid.slug("C+"), "c_cong")
+        self.assertEqual(sid.slug("điểm C"), "diem_c")
+        self.assertEqual(sid.global_id("KhaiNiem", "điểm D+", "u", "k1"), "sem.KhaiNiem.diem_d_cong")
+        # names without "+" keep the same slug as before
+        self.assertEqual(sid.slug("năm thứ hai"), "nam_thu_hai")
+        self.assertEqual(sid.slug("điểm trung bình chung tích lũy"), "diem_trung_binh_chung_tich_luy")
+        self.assertEqual(sid.slug("điểm F"), "diem_f")
+        self.assertEqual(refs.slugify("điểm C+"), "diem_c")  # the T3 helper is untouched
+
     def test_mergeable_labels_ignore_the_unit(self):
         a = sid.global_id("KhaiNiem", "điểm trung bình chung tích luỹ", "qc3626.d44.k1", "k1")
         b = sid.global_id("KhaiNiem", "điểm trung bình chung tích lũy", "qc3626.d43.k2", "n7")

@@ -1,0 +1,176 @@
+{
+  "version": "v1",
+  "doc_id": "qc3626",
+  "mo_ta": "Sáu bảng phân loại của QĐ 3626 nhập tay (schema Q10 = B) và bảng thu_tu (schema bảng 2.1a). Mỗi dòng ghi đúng chuỗi như trong văn bản: `nguyen_van` và `dieu_kien` là chuỗi con nguyên văn của đơn vị `nguon`; `so` là các chuỗi số đúng như văn bản (dấu phẩy thập phân), theo thứ tự xuất hiện trong `nguyen_van`. src/kg/tables.py chỉ đọc file này, không đoán số nào. Chủ dự án kiểm 100% (xem data/processed/semantic/bang_kiem_tay.csv, sinh bằng `python src/kg/tables.py`).",
+  "dang": {
+    "duoi": "dưới n: max = n, không gồm n (max_incl false)",
+    "tu_den": "từ a đến b: min = a, max = b, gồm cả hai đầu",
+    "tu": "từ a trở lên: min = a, gồm a",
+    "bang": "bằng đúng n (mức điểm chữ có điểm số, d43.k1)",
+    "gia_tri": "điểm thưởng n (d32.k2)"
+  },
+  "thang": {
+    "nam_dao_tao": {
+      "dai_luong": "năm đào tạo",
+      "nguon": ["qc3626.d17.k2"],
+      "muc": [
+        {"ten": "năm thứ nhất", "thu_tu": 1},
+        {"ten": "năm thứ hai", "thu_tu": 2},
+        {"ten": "năm thứ ba", "thu_tu": 3},
+        {"ten": "năm thứ tư", "thu_tu": 4},
+        {"ten": "năm thứ năm", "thu_tu": 5},
+        {"ten": "năm thứ sáu", "thu_tu": 6}
+      ]
+    },
+    "diem_chu": {
+      "dai_luong": "điểm chữ",
+      "nguon": ["qc3626.d41.k2", "qc3626.d43.k1"],
+      "muc": [
+        {"ten": "điểm F", "thu_tu": 1, "bi_danh": ["F"]},
+        {"ten": "điểm D", "thu_tu": 2, "bi_danh": ["D"]},
+        {"ten": "điểm D+", "thu_tu": 3, "bi_danh": ["D+"]},
+        {"ten": "điểm C", "thu_tu": 4, "bi_danh": ["C"]},
+        {"ten": "điểm C+", "thu_tu": 5, "bi_danh": ["C+"]},
+        {"ten": "điểm B", "thu_tu": 6, "bi_danh": ["B"]},
+        {"ten": "điểm B+", "thu_tu": 7, "bi_danh": ["B+"]},
+        {"ten": "điểm A", "thu_tu": 8, "bi_danh": ["A"]},
+        {"ten": "điểm A+", "thu_tu": 9, "bi_danh": ["A+"]}
+      ]
+    },
+    "hoc_luc": {
+      "dai_luong": "học lực",
+      "nguon": ["qc3626.d45.k2"],
+      "muc": [
+        {"ten": "học lực yếu", "thu_tu": 1},
+        {"ten": "học lực trung bình", "thu_tu": 2},
+        {"ten": "học lực khá", "thu_tu": 3},
+        {"ten": "học lực giỏi", "thu_tu": 4},
+        {"ten": "học lực xuất sắc", "thu_tu": 5}
+      ]
+    },
+    "hang_tot_nghiep": {
+      "dai_luong": "hạng tốt nghiệp",
+      "nguon": ["qc3626.d47.k5"],
+      "muc": [
+        {"ten": "hạng tốt nghiệp trung bình", "thu_tu": 1},
+        {"ten": "hạng tốt nghiệp khá", "thu_tu": 2},
+        {"ten": "hạng tốt nghiệp giỏi", "thu_tu": 3},
+        {"ten": "hạng tốt nghiệp xuất sắc", "thu_tu": 4}
+      ]
+    }
+  },
+  "muc_khac": [
+    {"ten": "điểm P", "bi_danh": ["P"], "ghi_chu": "d41.k2.b: loại đạt không phân mức, không có thang và không có thu_tu (bảng 2.1a)"}
+  ],
+  "bang": [
+    {
+      "unit": "qc3626.d17.k2",
+      "kieu": "khoang_theo_muc",
+      "luong": "số tín chỉ tích lũy",
+      "thang_dieu_kien": "tin_chi",
+      "don_vi": "tín chỉ",
+      "buoc": 1,
+      "thang_muc": "nam_dao_tao",
+      "dong": [
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chuẩn", "muc": "năm thứ nhất", "chuoi": "chuẩn", "dang": "duoi", "so": ["35"], "dieu_kien": "Dưới 35 tín chỉ", "nguyen_van": "Dưới 35 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chuẩn", "muc": "năm thứ hai", "chuoi": "chuẩn", "dang": "tu_den", "so": ["35", "70"], "dieu_kien": "Từ 35 - 70 tín chỉ", "nguyen_van": "Từ 35 - 70 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chuẩn", "muc": "năm thứ ba", "chuoi": "chuẩn", "dang": "tu_den", "so": ["71", "105"], "dieu_kien": "Từ 71 – 105 tín chỉ", "nguyen_van": "Từ 71 – 105 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chuẩn", "muc": "năm thứ tư", "chuoi": "chuẩn", "dang": "tu_den", "so": ["106", "140"], "dieu_kien": "Từ 106 – 140 tín chỉ", "nguyen_van": "Từ 106 – 140 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chuẩn", "muc": "năm thứ năm", "chuoi": "chuẩn", "dang": "tu_den", "so": ["141", "175"], "dieu_kien": "Từ 141 – 175 tín chỉ", "nguyen_van": "Từ 141 – 175 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chuẩn", "muc": "năm thứ sáu", "chuoi": "chuẩn", "dang": "tu_den", "so": ["176", "225"], "dieu_kien": "Từ 176 – 225 tín chỉ", "nguyen_van": "Từ 176 – 225 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chất lượng cao", "muc": "năm thứ nhất", "chuoi": "chất lượng cao", "dang": "duoi", "so": ["40"], "dieu_kien": "Dưới 40 tín chỉ", "nguyen_van": "Dưới 40 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chất lượng cao", "muc": "năm thứ hai", "chuoi": "chất lượng cao", "dang": "tu_den", "so": ["40", "80"], "dieu_kien": "Từ 40 – 80 tín chỉ", "nguyen_van": "Từ 40 – 80 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chất lượng cao", "muc": "năm thứ ba", "chuoi": "chất lượng cao", "dang": "tu_den", "so": ["81", "115"], "dieu_kien": "Từ 81 – 115 tín chỉ", "nguyen_van": "Từ 81 – 115 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo chất lượng cao", "muc": "năm thứ tư", "chuoi": "chất lượng cao", "dang": "tu_den", "so": ["116", "155"], "dieu_kien": "Từ 116 – 155 tín chỉ", "nguyen_van": "Từ 116 – 155 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo tài năng", "muc": "năm thứ nhất", "chuoi": "tài năng", "dang": "duoi", "so": ["45"], "dieu_kien": "Dưới 45 tín chỉ", "nguyen_van": "Dưới 45 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo tài năng", "muc": "năm thứ hai", "chuoi": "tài năng", "dang": "tu_den", "so": ["45", "90"], "dieu_kien": "Từ 45 – 90 tín chỉ", "nguyen_van": "Từ 45 – 90 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo tài năng", "muc": "năm thứ ba", "chuoi": "tài năng", "dang": "tu_den", "so": ["91", "130"], "dieu_kien": "Từ 91 – 130 tín chỉ", "nguyen_van": "Từ 91 – 130 tín chỉ"},
+        {"nguon": "qc3626.d17.k2", "chuong_trinh": "chương trình đào tạo tài năng", "muc": "năm thứ tư", "chuoi": "tài năng", "dang": "tu_den", "so": ["131", "170"], "dieu_kien": "Từ 131 –170 tín chỉ", "nguyen_van": "Từ 131 –170 tín chỉ"}
+      ]
+    },
+    {
+      "unit": "qc3626.d32.k2",
+      "kieu": "diem_thuong",
+      "luong": "giải thưởng nghiên cứu khoa học của sinh viên",
+      "don_vi": "điểm",
+      "dong": [
+        {"nguon": "qc3626.d32.k2.a", "dang": "gia_tri", "hang": "Giải nhất", "so": ["0,20"], "dieu_kien": "Đạt giải thưởng cấp Đại học Quốc gia Hà Nội, cấp Bộ Giáo dục và Đào tạo", "nguyen_van": "Giải nhất: 0,20 điểm"},
+        {"nguon": "qc3626.d32.k2.a", "dang": "gia_tri", "hang": "Giải nhì", "so": ["0,15"], "dieu_kien": "Đạt giải thưởng cấp Đại học Quốc gia Hà Nội, cấp Bộ Giáo dục và Đào tạo", "nguyen_van": "Giải nhì: 0,15 điểm"},
+        {"nguon": "qc3626.d32.k2.a", "dang": "gia_tri", "hang": "Giải ba", "so": ["0,10"], "dieu_kien": "Đạt giải thưởng cấp Đại học Quốc gia Hà Nội, cấp Bộ Giáo dục và Đào tạo", "nguyen_van": "Giải ba: 0,10 điểm"},
+        {"nguon": "qc3626.d32.k2.a", "dang": "gia_tri", "hang": "Giải khuyến khích", "so": ["0,07"], "dieu_kien": "Đạt giải thưởng cấp Đại học Quốc gia Hà Nội, cấp Bộ Giáo dục và Đào tạo", "nguyen_van": "Giải khuyến khích: 0,07 điểm"},
+        {"nguon": "qc3626.d32.k2.b", "dang": "gia_tri", "hang": "Giải nhất", "so": ["0,10"], "dieu_kien": "Đạt giải thưởng cấp đơn vị đào tạo", "nguyen_van": "Giải nhất: 0,10 điểm"},
+        {"nguon": "qc3626.d32.k2.b", "dang": "gia_tri", "hang": "Giải nhì", "so": ["0,07"], "dieu_kien": "Đạt giải thưởng cấp đơn vị đào tạo", "nguyen_van": "Giải nhì: 0,07 điểm"},
+        {"nguon": "qc3626.d32.k2.b", "dang": "gia_tri", "hang": "Giải ba", "so": ["0,05"], "dieu_kien": "Đạt giải thưởng cấp đơn vị đào tạo", "nguyen_van": "Giải ba: 0,05 điểm"}
+      ]
+    },
+    {
+      "unit": "qc3626.d41.k2",
+      "kieu": "khoang_theo_muc",
+      "luong": "điểm học phần",
+      "thang_dieu_kien": "thang_10",
+      "don_vi": "điểm",
+      "buoc": 0.1,
+      "thang_muc": "diem_chu",
+      "dong": [
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm A+", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["9,0", "10"], "dieu_kien": "9,0 – 10", "nguyen_van": "9,0 – 10 tương ứng với A+"},
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm A", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["8,5", "8,9"], "dieu_kien": "8,5 – 8,9", "nguyen_van": "8,5 – 8,9 tương ứng với A"},
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm B+", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["8,0", "8,4"], "dieu_kien": "8,0 – 8,4", "nguyen_van": "8,0 – 8,4 tương ứng với B+"},
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm B", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["7,0", "7,9"], "dieu_kien": "7,0 – 7,9", "nguyen_van": "7,0 – 7,9 tương ứng với B"},
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm C+", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["6,5", "6,9"], "dieu_kien": "6,5 – 6,9", "nguyen_van": "6,5 – 6,9 tương ứng với C+"},
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm C", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["5,5", "6,4"], "dieu_kien": "5,5 – 6,4", "nguyen_van": "5,5 – 6,4 tương ứng với C"},
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm D+", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["5,0", "5,4"], "dieu_kien": "5,0 – 5,4", "nguyen_van": "5,0 – 5,4 tương ứng với D+"},
+        {"nguon": "qc3626.d41.k2.a", "muc": "điểm D", "chuoi": "điểm chữ", "dang": "tu_den", "so": ["4,0", "4,9"], "dieu_kien": "4,0 – 4,9", "nguyen_van": "4,0 – 4,9 tương ứng với D"},
+        {"nguon": "qc3626.d41.k2.b", "muc": "điểm P", "chuoi": "đạt không phân mức", "dang": "tu", "so": ["5,0"], "dieu_kien": "từ 5,0 trở lên", "nguyen_van": "P: từ 5,0 trở lên", "pham_vi": "học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập"},
+        {"nguon": "qc3626.d41.k2.c", "muc": "điểm F", "chuoi": "điểm chữ", "dang": "duoi", "so": ["4,0"], "dieu_kien": "Dưới 4,0", "nguyen_van": "Dưới 4,0 tương ứng với F"}
+      ]
+    },
+    {
+      "unit": "qc3626.d43.k1",
+      "kieu": "gia_tri_muc",
+      "thang_muc": "diem_chu",
+      "dong": [
+        {"nguon": "qc3626.d43.k1", "muc": "điểm A+", "dang": "bang", "so": ["4,0"], "nguyen_van": "A+ tương ứng với 4,0"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm A", "dang": "bang", "so": ["3,7"], "nguyen_van": "A tương ứng với 3,7"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm B+", "dang": "bang", "so": ["3,5"], "nguyen_van": "B+ tương ứng với 3,5"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm B", "dang": "bang", "so": ["3,0"], "nguyen_van": "B tương ứng với 3,0"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm C+", "dang": "bang", "so": ["2,5"], "nguyen_van": "C+ tương ứng với 2,5"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm C", "dang": "bang", "so": ["2,0"], "nguyen_van": "C tương ứng với 2,0"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm D+", "dang": "bang", "so": ["1,5"], "nguyen_van": "D+ tương ứng với 1,5"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm D", "dang": "bang", "so": ["1,0"], "nguyen_van": "D tương ứng với 1,0"},
+        {"nguon": "qc3626.d43.k1", "muc": "điểm F", "dang": "bang", "so": ["0"], "nguyen_van": "F tương ứng với 0"}
+      ]
+    },
+    {
+      "unit": "qc3626.d45.k2",
+      "kieu": "khoang_theo_muc",
+      "luong": "điểm trung bình chung học kỳ",
+      "thang_dieu_kien": "thang_4",
+      "don_vi": "điểm",
+      "buoc": 0.01,
+      "thang_muc": "hoc_luc",
+      "dong": [
+        {"nguon": "qc3626.d45.k2.a", "muc": "học lực xuất sắc", "chuoi": "học lực", "dang": "tu_den", "so": ["3,60", "4,00"], "dieu_kien": "Điểm trung bình chung học kỳ từ 3,60 đến 4,00", "nguyen_van": "Xuất sắc: Điểm trung bình chung học kỳ từ 3,60 đến 4,00"},
+        {"nguon": "qc3626.d45.k2.b", "muc": "học lực giỏi", "chuoi": "học lực", "dang": "tu_den", "so": ["3,20", "3,59"], "dieu_kien": "Điểm trung bình chung học kỳ từ 3,20 đến 3,59", "nguyen_van": "Giỏi: Điểm trung bình chung học kỳ từ 3,20 đến 3,59"},
+        {"nguon": "qc3626.d45.k2.c", "muc": "học lực khá", "chuoi": "học lực", "dang": "tu_den", "so": ["2,50", "3,19"], "dieu_kien": "Điểm trung bình chung học kỳ từ 2,50 đến 3,19", "nguyen_van": "Khá: Điểm trung bình chung học kỳ từ 2,50 đến 3,19"},
+        {"nguon": "qc3626.d45.k2.d", "muc": "học lực trung bình", "chuoi": "học lực", "dang": "tu_den", "so": ["2,00", "2,49"], "dieu_kien": "Điểm trung bình chung học kỳ từ 2,00 đến 2,49", "nguyen_van": "Trung bình: Điểm trung bình chung học kỳ từ 2,00 đến 2,49"},
+        {"nguon": "qc3626.d45.k2.đ", "muc": "học lực yếu", "chuoi": "học lực", "dang": "duoi", "so": ["2,0"], "dieu_kien": "Điểm trung bình chung học kỳ đạt dưới 2,0", "nguyen_van": "Yếu: Điểm trung bình chung học kỳ đạt dưới 2,0 nhưng chưa thuộc trường hợp bị buộc thôi học",
+         "loai_tru": {"he_qua": "bị buộc thôi học", "dieu_kien": "chưa thuộc trường hợp bị buộc thôi học"}}
+      ]
+    },
+    {
+      "unit": "qc3626.d47.k5",
+      "kieu": "khoang_theo_muc",
+      "luong": "điểm trung bình chung tích lũy",
+      "thang_dieu_kien": "thang_4",
+      "don_vi": "điểm",
+      "buoc": 0.01,
+      "thang_muc": "hang_tot_nghiep",
+      "dong": [
+        {"nguon": "qc3626.d47.k5.a", "muc": "hạng tốt nghiệp xuất sắc", "chuoi": "hạng tốt nghiệp", "dang": "tu_den", "so": ["3,60", "4,00"], "dieu_kien": "Điểm trung bình chung tích lũy từ 3,60 đến 4,00", "nguyen_van": "Xuất sắc: Điểm trung bình chung tích lũy từ 3,60 đến 4,00"},
+        {"nguon": "qc3626.d47.k5.b", "muc": "hạng tốt nghiệp giỏi", "chuoi": "hạng tốt nghiệp", "dang": "tu_den", "so": ["3,20", "3,59"], "dieu_kien": "Điểm trung bình chung tích lũy từ 3,20 đến 3,59", "nguyen_van": "Giỏi: Điểm trung bình chung tích lũy từ 3,20 đến 3,59"},
+        {"nguon": "qc3626.d47.k5.c", "muc": "hạng tốt nghiệp khá", "chuoi": "hạng tốt nghiệp", "dang": "tu_den", "so": ["2,50", "3,19"], "dieu_kien": "Điểm trung bình chung tích lũy từ 2,50 đến 3,19", "nguyen_van": "Khá: Điểm trung bình chung tích lũy từ 2,50 đến 3,19"},
+        {"nguon": "qc3626.d47.k5.d", "muc": "hạng tốt nghiệp trung bình", "chuoi": "hạng tốt nghiệp", "dang": "tu_den", "so": ["2,00", "2,49"], "dieu_kien": "Điểm trung bình chung tích lũy từ 2,00 đến 2,49", "nguyen_van": "Trung bình: Điểm trung bình chung tích lũy từ 2,00 đến 2,49"}
+      ]
+    }
+  ]
+}
