@@ -1,0 +1,849 @@
+{
+ "format": 1,
+ "unit": "qc3626.d29.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[13] XET 'c4'->'k3': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"năm đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"k2\", \"ten\": \"điểm trung bình chung các học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"điều kiện trúng tuyển\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.c\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"chuyển trường về Đại học Quốc gia Hà Nội\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2\"], \"mo_ta\": \"sinh viên người Việt Nam hoặc người nước ngoài đang học tại cơ sở giáo dục đại học ngoài Đại học Quốc gia Hà Nội được chuyển về học tại Đại học Quốc gia Hà Nội\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện chuyển trường về Đại học Quốc gia Hà Nội\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên được chuyển về khi có đủ các điều kiện từ a đến g\"}, {\"id\": \"g2\", \"ten\": \"năm học và điểm trung bình chung các học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Không là sinh viên năm thứ nhất hoặc năm cuối và điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên\"}, {\"id\": \"g3\", \"ten\": \"không thuộc diện bị buộc thôi học và không bị truy cứu trách nhiệm hình sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.g\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Không thuộc diện bị buộc thôi học và không trong thời gian bị truy cứu trách nhiệm hình sự\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"có nguyện vọng chuyển về học tại Đại học Quốc gia Hà Nội\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.a\"], \"mo_ta\": \"Có nguyện vọng chuyển về học tại Đại học Quốc gia Hà Nội\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"không là sinh viên năm thứ nhất hoặc năm cuối\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.b\"], \"mo_ta\": \"Không là sinh viên năm thứ nhất hoặc năm cuối\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c3\", \"ten\": \"điểm trung bình chung các học phần đạt từ 2,50 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.b\"], \"mo_ta\": \"Điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên\", \"min\": 2.5, \"min_incl\": true, \"thang\": \"thang_4\", \"moc\": \"tính đến thời điểm xét\"}, {\"id\": \"c4\", \"ten\": \"đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.c\"], \"mo_ta\": \"Sinh viên đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh tại đơn vị chuyển đến\", \"toan_tu\": \"co\"}, {\"id\": \"c5\", \"ten\": \"nơi chuyển đến đảm bảo chất lượng và chưa vượt quá năng lực đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.d\"], \"mo_ta\": \"Nơi chuyển đến có đủ các điều kiện bảo đảm chất lượng và chưa vượt quá năng lực đào tạo đối với chương trình, ngành đào tạo theo quy định hiện hành của Bộ Giáo dục và Đào tạo\", \"toan_tu\": \"co\"}, {\"id\": \"c6\", \"ten\": \"được đồng ý của hiệu trưởng và giám đốc Đại học Quốc gia Hà Nội\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.đ\"], \"mo_ta\": \"Được sự đồng ý của hiệu trưởng đơn vị đào tạo xin chuyển đi và đơn vị đào tạo xin chuyển đến; đơn vị đào tạo trực thuộc phải được sự đồng ý của Giám đốc Đại học Quốc gia Hà Nội\", \"toan_tu\": \"co\"}, {\"id\": \"c7\", \"ten\": \"có đủ sức khỏe để học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.e\"], \"mo_ta\": \"Có đủ sức khỏe để học tập\", \"toan_tu\": \"co\"}, {\"id\": \"c8\", \"ten\": \"không thuộc diện bị buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.g\"], \"mo_ta\": \"Không thuộc diện bị buộc thôi học\", \"toan_tu\": \"co\", \"phu_dinh\": true}, {\"id\": \"c9\", \"ten\": \"không trong thời gian bị truy cứu trách nhiệm hình sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.g\"], \"mo_ta\": \"Không trong thời gian bị truy cứu trách nhiệm hình sự\", \"toan_tu\": \"co\", \"phu_dinh\": true}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"bị buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.g\"], \"loai\": \"trang_thai\"}, {\"id\": \"q2\", \"ten\": \"bị truy cứu trách nhiệm hình sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k2.g\"], \"loai\": \"trang_thai\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d29.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o1\", \"nguon\": \"qc3626.d29.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d29.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d29.k2.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c4\", \"nguon\": \"qc3626.d29.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c5\", \"nguon\": \"qc3626.d29.k2.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c6\", \"nguon\": \"qc3626.d29.k2.đ\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c7\", \"nguon\": \"qc3626.d29.k2.e\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g3\", \"nguon\": \"qc3626.d29.k2.g\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d29.k2.b\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d29.k2.b\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d29.k2.b\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k2\", \"nguon\": \"qc3626.d29.k2.b\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k3\", \"nguon\": \"qc3626.d29.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c8\", \"nguon\": \"qc3626.d29.k2.g\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c9\", \"nguon\": \"qc3626.d29.k2.g\"}, {\"type\": \"XET\", \"from\": \"c8\", \"to\": \"q1\", \"nguon\": \"qc3626.d29.k2.g\"}, {\"type\": \"XET\", \"from\": \"c9\", \"to\": \"q2\", \"nguon\": \"qc3626.d29.k2.g\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "năm đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k2",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.c"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "chuyển trường về Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2"
+     ],
+     "mo_ta": "sinh viên người Việt Nam hoặc người nước ngoài đang học tại cơ sở giáo dục đại học ngoài Đại học Quốc gia Hà Nội được chuyển về học tại Đại học Quốc gia Hà Nội"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện chuyển trường về Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên được chuyển về khi có đủ các điều kiện từ a đến g"
+    },
+    {
+     "id": "g2",
+     "ten": "năm học và điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Không là sinh viên năm thứ nhất hoặc năm cuối và điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên"
+    },
+    {
+     "id": "g3",
+     "ten": "không thuộc diện bị buộc thôi học và không bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Không thuộc diện bị buộc thôi học và không trong thời gian bị truy cứu trách nhiệm hình sự"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "có nguyện vọng chuyển về học tại Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.a"
+     ],
+     "mo_ta": "Có nguyện vọng chuyển về học tại Đại học Quốc gia Hà Nội",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "không là sinh viên năm thứ nhất hoặc năm cuối",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "mo_ta": "Không là sinh viên năm thứ nhất hoặc năm cuối",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c3",
+     "ten": "điểm trung bình chung các học phần đạt từ 2,50 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "mo_ta": "Điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "tính đến thời điểm xét"
+    },
+    {
+     "id": "c4",
+     "ten": "đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.c"
+     ],
+     "mo_ta": "Sinh viên đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh tại đơn vị chuyển đến",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c5",
+     "ten": "nơi chuyển đến đảm bảo chất lượng và chưa vượt quá năng lực đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.d"
+     ],
+     "mo_ta": "Nơi chuyển đến có đủ các điều kiện bảo đảm chất lượng và chưa vượt quá năng lực đào tạo đối với chương trình, ngành đào tạo theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c6",
+     "ten": "được đồng ý của hiệu trưởng và giám đốc Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.đ"
+     ],
+     "mo_ta": "Được sự đồng ý của hiệu trưởng đơn vị đào tạo xin chuyển đi và đơn vị đào tạo xin chuyển đến; đơn vị đào tạo trực thuộc phải được sự đồng ý của Giám đốc Đại học Quốc gia Hà Nội",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c7",
+     "ten": "có đủ sức khỏe để học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.e"
+     ],
+     "mo_ta": "Có đủ sức khỏe để học tập",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c8",
+     "ten": "không thuộc diện bị buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "mo_ta": "Không thuộc diện bị buộc thôi học",
+     "toan_tu": "co",
+     "phu_dinh": true
+    },
+    {
+     "id": "c9",
+     "ten": "không trong thời gian bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "mo_ta": "Không trong thời gian bị truy cứu trách nhiệm hình sự",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "bị buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q2",
+     "ten": "bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "loai": "trang_thai"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d29.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o1",
+     "nguon": "qc3626.d29.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d29.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d29.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c4",
+     "nguon": "qc3626.d29.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c5",
+     "nguon": "qc3626.d29.k2.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c6",
+     "nguon": "qc3626.d29.k2.đ"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c7",
+     "nguon": "qc3626.d29.k2.e"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g3",
+     "nguon": "qc3626.d29.k2.g"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d29.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d29.k2.b"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d29.k2.b"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k2",
+     "nguon": "qc3626.d29.k2.b"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k3",
+     "nguon": "qc3626.d29.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c8",
+     "nguon": "qc3626.d29.k2.g"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c9",
+     "nguon": "qc3626.d29.k2.g"
+    },
+    {
+     "type": "XET",
+     "from": "c8",
+     "to": "q1",
+     "nguon": "qc3626.d29.k2.g"
+    },
+    {
+     "type": "XET",
+     "from": "c9",
+     "to": "q2",
+     "nguon": "qc3626.d29.k2.g"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d29.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.nam_dao_tao",
+    "k2": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "k3": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.chuyen_truong_ve_dai_hoc_quoc_gia_ha_noi",
+    "g1": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d29.k2.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d29.k2.g3",
+    "c1": "sem.DieuKien.qc3626.d29.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d29.k2.c2",
+    "c3": "sem.DieuKien.qc3626.d29.k2.c3",
+    "c4": "sem.DieuKien.qc3626.d29.k2.c4",
+    "c5": "sem.DieuKien.qc3626.d29.k2.c5",
+    "c6": "sem.DieuKien.qc3626.d29.k2.c6",
+    "c7": "sem.DieuKien.qc3626.d29.k2.c7",
+    "c8": "sem.DieuKien.qc3626.d29.k2.c8",
+    "c9": "sem.DieuKien.qc3626.d29.k2.c9",
+    "q1": "sem.HeQua.bi_buoc_thoi_hoc",
+    "q2": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.nam_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.nam_dao_tao",
+     "ten": "năm đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+     "ten": "điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.c"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.chuyen_truong_ve_dai_hoc_quoc_gia_ha_noi",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.chuyen_truong_ve_dai_hoc_quoc_gia_ha_noi",
+     "ten": "chuyển trường về Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2"
+     ],
+     "mo_ta": "sinh viên người Việt Nam hoặc người nước ngoài đang học tại cơ sở giáo dục đại học ngoài Đại học Quốc gia Hà Nội được chuyển về học tại Đại học Quốc gia Hà Nội"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+     "ten": "điều kiện chuyển trường về Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên được chuyển về khi có đủ các điều kiện từ a đến g"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d29.k2.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d29.k2.g2",
+     "ten": "năm học và điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Không là sinh viên năm thứ nhất hoặc năm cuối và điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d29.k2.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d29.k2.g3",
+     "ten": "không thuộc diện bị buộc thôi học và không bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Không thuộc diện bị buộc thôi học và không trong thời gian bị truy cứu trách nhiệm hình sự"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c1",
+     "ten": "có nguyện vọng chuyển về học tại Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.a"
+     ],
+     "mo_ta": "Có nguyện vọng chuyển về học tại Đại học Quốc gia Hà Nội",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c2",
+     "ten": "không là sinh viên năm thứ nhất hoặc năm cuối",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "mo_ta": "Không là sinh viên năm thứ nhất hoặc năm cuối",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c3",
+     "ten": "điểm trung bình chung các học phần đạt từ 2,50 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.b"
+     ],
+     "mo_ta": "Điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "tính đến thời điểm xét"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c4",
+     "ten": "đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.c"
+     ],
+     "mo_ta": "Sinh viên đạt điều kiện trúng tuyển của chương trình, ngành đào tạo cùng khóa tuyển sinh tại đơn vị chuyển đến",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c5",
+     "ten": "nơi chuyển đến đảm bảo chất lượng và chưa vượt quá năng lực đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.d"
+     ],
+     "mo_ta": "Nơi chuyển đến có đủ các điều kiện bảo đảm chất lượng và chưa vượt quá năng lực đào tạo đối với chương trình, ngành đào tạo theo quy định hiện hành của Bộ Giáo dục và Đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c6",
+     "ten": "được đồng ý của hiệu trưởng và giám đốc Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.đ"
+     ],
+     "mo_ta": "Được sự đồng ý của hiệu trưởng đơn vị đào tạo xin chuyển đi và đơn vị đào tạo xin chuyển đến; đơn vị đào tạo trực thuộc phải được sự đồng ý của Giám đốc Đại học Quốc gia Hà Nội",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c7",
+     "ten": "có đủ sức khỏe để học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.e"
+     ],
+     "mo_ta": "Có đủ sức khỏe để học tập",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c8",
+     "ten": "không thuộc diện bị buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "mo_ta": "Không thuộc diện bị buộc thôi học",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k2.c9",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k2.c9",
+     "ten": "không trong thời gian bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "mo_ta": "Không trong thời gian bị truy cứu trách nhiệm hình sự",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_buoc_thoi_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_buoc_thoi_hoc",
+     "ten": "bị buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su",
+     "ten": "bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k2.g"
+     ],
+     "loai": "trang_thai"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.chuyen_truong_ve_dai_hoc_quoc_gia_ha_noi",
+    "to": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "props": {
+     "nguon": "qc3626.d29.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.chuyen_truong_ve_dai_hoc_quoc_gia_ha_noi",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d29.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "to": "sem.DieuKien.qc3626.d29.k2.c1",
+    "props": {
+     "nguon": "qc3626.d29.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d29.k2.g2",
+    "props": {
+     "nguon": "qc3626.d29.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "to": "sem.DieuKien.qc3626.d29.k2.c4",
+    "props": {
+     "nguon": "qc3626.d29.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "to": "sem.DieuKien.qc3626.d29.k2.c5",
+    "props": {
+     "nguon": "qc3626.d29.k2.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "to": "sem.DieuKien.qc3626.d29.k2.c6",
+    "props": {
+     "nguon": "qc3626.d29.k2.đ"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "to": "sem.DieuKien.qc3626.d29.k2.c7",
+    "props": {
+     "nguon": "qc3626.d29.k2.e"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d29.k2.g3",
+    "props": {
+     "nguon": "qc3626.d29.k2.g"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g2",
+    "to": "sem.DieuKien.qc3626.d29.k2.c2",
+    "props": {
+     "nguon": "qc3626.d29.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g2",
+    "to": "sem.DieuKien.qc3626.d29.k2.c3",
+    "props": {
+     "nguon": "qc3626.d29.k2.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d29.k2.c2",
+    "to": "sem.KhaiNiem.nam_dao_tao",
+    "props": {
+     "nguon": "qc3626.d29.k2.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d29.k2.c3",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d29.k2.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d29.k2.c4",
+    "to": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+    "props": {
+     "nguon": "qc3626.d29.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g3",
+    "to": "sem.DieuKien.qc3626.d29.k2.c8",
+    "props": {
+     "nguon": "qc3626.d29.k2.g"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k2.g3",
+    "to": "sem.DieuKien.qc3626.d29.k2.c9",
+    "props": {
+     "nguon": "qc3626.d29.k2.g"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d29.k2.c8",
+    "to": "sem.HeQua.bi_buoc_thoi_hoc",
+    "props": {
+     "nguon": "qc3626.d29.k2.g"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d29.k2.c9",
+    "to": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su",
+    "props": {
+     "nguon": "qc3626.d29.k2.g"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d29.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "8a3a77f1009fbf6090ab6d0fec04c207d5cd6da1c09eb0c4518fbce471a54df5",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16431,
+  "output_tokens": 7018,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtskcG7BS4a91tCoJakR'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:44:59+07:00",
+  "latency_s": 26.012,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

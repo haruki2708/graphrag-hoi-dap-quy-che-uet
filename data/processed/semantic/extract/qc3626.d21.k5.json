@@ -1,0 +1,603 @@
+{
+ "format": 1,
+ "unit": "qc3626.d21.k5",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[7] XET 'c2'->'k3': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k2\", \"ten\": \"điểm học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"học phần tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"loai\": \"loai_hoc_phan\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký học lại để cải thiện điểm\", \"bi_danh\": [\"đăng ký học cải thiện điểm\"], \"nguon\": [\"qc3626.d21.k5\"], \"mo_ta\": \"sinh viên đăng ký học lại học phần đã đạt điểm D, D+ hoặc đổi sang học phần khác để cải thiện điểm trung bình chung tích lũy\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"học phần đạt điểm D, D+ và được đăng ký học cải thiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học phần đạt điểm D hoặc D+ và sinh viên thực hiện đăng ký học lại hoặc đổi học phần theo g2\"}, {\"id\": \"g2\", \"ten\": \"đăng ký học lại hoặc đổi sang học phần khác\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên đăng ký học lại học phần đó hoặc đổi sang học phần khác; đổi sang học phần khác chỉ khi là học phần tự chọn có điều kiện (suy luận OR theo nghĩa 'hoặc')\"}, {\"id\": \"g3\", \"ten\": \"đăng ký học lại được chấp nhận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Việc đăng ký học lại để cải thiện điểm được chấp nhận thì điểm học phần cũ bị hủy bỏ\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"điểm học phần đạt D hoặc D+\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"mo_ta\": \"Các học phần đạt điểm D, D+\", \"min\": 2, \"min_incl\": true, \"max\": 3, \"max_incl\": true, \"thang\": \"diem_chu\"}, {\"id\": \"c2\", \"ten\": \"đổi sang học phần khác là học phần tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"mo_ta\": \"Đổi sang học phần khác (nếu là học phần tự chọn có điều kiện)\", \"toan_tu\": \"la\"}, {\"id\": \"c3\", \"ten\": \"đăng ký học lại chính học phần đó\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"mo_ta\": \"Đăng ký học lại học phần đó\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"việc đăng ký học lại để cải thiện điểm được chấp nhận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"mo_ta\": \"Việc đăng ký học lại để cải thiện điểm được chấp nhận\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"điểm học phần cũ bị hủy bỏ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"loai\": \"trang_thai\", \"mo_ta\": \"Điểm học phần cũ bị hủy bỏ và được thay bằng điểm học phần để cải thiện điểm\"}, {\"id\": \"q2\", \"ten\": \"được đăng ký học lại hoặc đổi học phần để cải thiện điểm\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k5\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Được đăng ký học lại học phần đã đạt D, D+ hoặc đổi sang học phần khác để cải thiện điểm trung bình chung tích lũy\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c4\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k2\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k3\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q1\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k5\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k5\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k2",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký học lại để cải thiện điểm",
+     "bi_danh": [
+      "đăng ký học cải thiện điểm"
+     ],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "sinh viên đăng ký học lại học phần đã đạt điểm D, D+ hoặc đổi sang học phần khác để cải thiện điểm trung bình chung tích lũy"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "học phần đạt điểm D, D+ và được đăng ký học cải thiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần đạt điểm D hoặc D+ và sinh viên thực hiện đăng ký học lại hoặc đổi học phần theo g2"
+    },
+    {
+     "id": "g2",
+     "ten": "đăng ký học lại hoặc đổi sang học phần khác",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên đăng ký học lại học phần đó hoặc đổi sang học phần khác; đổi sang học phần khác chỉ khi là học phần tự chọn có điều kiện (suy luận OR theo nghĩa 'hoặc')"
+    },
+    {
+     "id": "g3",
+     "ten": "đăng ký học lại được chấp nhận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Việc đăng ký học lại để cải thiện điểm được chấp nhận thì điểm học phần cũ bị hủy bỏ"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "điểm học phần đạt D hoặc D+",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Các học phần đạt điểm D, D+",
+     "min": 2,
+     "min_incl": true,
+     "max": 3,
+     "max_incl": true,
+     "thang": "diem_chu"
+    },
+    {
+     "id": "c2",
+     "ten": "đổi sang học phần khác là học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Đổi sang học phần khác (nếu là học phần tự chọn có điều kiện)",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c3",
+     "ten": "đăng ký học lại chính học phần đó",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Đăng ký học lại học phần đó",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "việc đăng ký học lại để cải thiện điểm được chấp nhận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Việc đăng ký học lại để cải thiện điểm được chấp nhận",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "điểm học phần cũ bị hủy bỏ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "Điểm học phần cũ bị hủy bỏ và được thay bằng điểm học phần để cải thiện điểm"
+    },
+    {
+     "id": "q2",
+     "ten": "được đăng ký học lại hoặc đổi học phần để cải thiện điểm",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được đăng ký học lại học phần đã đạt D, D+ hoặc đổi sang học phần khác để cải thiện điểm trung bình chung tích lũy"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c4",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k2",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k3",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q1",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d21.k5"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d21.k5"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d21.k5",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k2": "sem.KhaiNiem.diem_hoc_phan",
+    "k3": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.dang_ky_hoc_lai_de_cai_thien_diem",
+    "g1": "sem.NhomDieuKien.qc3626.d21.k5.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d21.k5.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d21.k5.g3",
+    "c1": "sem.DieuKien.qc3626.d21.k5.c1",
+    "c2": "sem.DieuKien.qc3626.d21.k5.c2",
+    "c3": "sem.DieuKien.qc3626.d21.k5.c3",
+    "c4": "sem.DieuKien.qc3626.d21.k5.c4",
+    "q1": "sem.HeQua.diem_hoc_phan_cu_bi_huy_bo",
+    "q2": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_doi_hoc_phan_de_cai_thien_diem"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_lai_de_cai_thien_diem",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_lai_de_cai_thien_diem",
+     "ten": "đăng ký học lại để cải thiện điểm",
+     "bi_danh": [
+      "đăng ký học cải thiện điểm"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "sinh viên đăng ký học lại học phần đã đạt điểm D, D+ hoặc đổi sang học phần khác để cải thiện điểm trung bình chung tích lũy"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k5.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k5.g1",
+     "ten": "học phần đạt điểm D, D+ và được đăng ký học cải thiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần đạt điểm D hoặc D+ và sinh viên thực hiện đăng ký học lại hoặc đổi học phần theo g2"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k5.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k5.g2",
+     "ten": "đăng ký học lại hoặc đổi sang học phần khác",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên đăng ký học lại học phần đó hoặc đổi sang học phần khác; đổi sang học phần khác chỉ khi là học phần tự chọn có điều kiện (suy luận OR theo nghĩa 'hoặc')"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k5.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k5.g3",
+     "ten": "đăng ký học lại được chấp nhận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Việc đăng ký học lại để cải thiện điểm được chấp nhận thì điểm học phần cũ bị hủy bỏ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k5.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k5.c1",
+     "ten": "điểm học phần đạt D hoặc D+",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Các học phần đạt điểm D, D+",
+     "min": 2,
+     "min_incl": true,
+     "max": 3,
+     "max_incl": true,
+     "thang": "diem_chu"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k5.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k5.c2",
+     "ten": "đổi sang học phần khác là học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Đổi sang học phần khác (nếu là học phần tự chọn có điều kiện)",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k5.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k5.c3",
+     "ten": "đăng ký học lại chính học phần đó",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Đăng ký học lại học phần đó",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k5.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k5.c4",
+     "ten": "việc đăng ký học lại để cải thiện điểm được chấp nhận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "mo_ta": "Việc đăng ký học lại để cải thiện điểm được chấp nhận",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.diem_hoc_phan_cu_bi_huy_bo",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.diem_hoc_phan_cu_bi_huy_bo",
+     "ten": "điểm học phần cũ bị hủy bỏ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "Điểm học phần cũ bị hủy bỏ và được thay bằng điểm học phần để cải thiện điểm"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_doi_hoc_phan_de_cai_thien_diem",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_doi_hoc_phan_de_cai_thien_diem",
+     "ten": "được đăng ký học lại hoặc đổi học phần để cải thiện điểm",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k5"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được đăng ký học lại học phần đã đạt D, D+ hoặc đổi sang học phần khác để cải thiện điểm trung bình chung tích lũy"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_lai_de_cai_thien_diem",
+    "to": "sem.NhomDieuKien.qc3626.d21.k5.g1",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k5.g1",
+    "to": "sem.DieuKien.qc3626.d21.k5.c1",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k5.g1",
+    "to": "sem.NhomDieuKien.qc3626.d21.k5.g2",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k5.g2",
+    "to": "sem.DieuKien.qc3626.d21.k5.c2",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k5.g2",
+    "to": "sem.DieuKien.qc3626.d21.k5.c3",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k5.g3",
+    "to": "sem.DieuKien.qc3626.d21.k5.c4",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k5.c1",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k5.c2",
+    "to": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d21.k5.g1",
+    "to": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_doi_hoc_phan_de_cai_thien_diem",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d21.k5.g3",
+    "to": "sem.HeQua.diem_hoc_phan_cu_bi_huy_bo",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_doi_hoc_phan_de_cai_thien_diem",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.diem_hoc_phan_cu_bi_huy_bo",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k5"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d21.k5",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "8afb4a50afb8e6a14c5c6d18be98ad127a0fb79e9f2896207c911d953d0604e1",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15870,
+  "output_tokens": 5557,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsFUE7CDLSu2H9aM6PN'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:38:24+07:00",
+  "latency_s": 23.663,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

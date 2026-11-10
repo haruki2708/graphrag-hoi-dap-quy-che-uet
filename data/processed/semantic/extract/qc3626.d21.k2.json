@@ -1,0 +1,713 @@
+{
+ "format": 1,
+ "unit": "qc3626.d21.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[7] XET 'c1'->'k1': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học phần tự chọn tự do\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k2\", \"ten\": \"học phần tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k3\", \"ten\": \"học phần tự chọn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k4\", \"ten\": \"điểm trung bình chung học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"dai_luong\"}, {\"id\": \"k5\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"dai_luong\"}, {\"id\": \"k6\", \"ten\": \"điểm học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.a\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.a\", \"qc3626.d21.k2.d\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký học phần\", \"bi_danh\": [\"đăng ký học\"], \"nguon\": [\"qc3626.d21.k2\", \"qc3626.d21.k2.a\", \"qc3626.d21.k2.d\"], \"mo_ta\": \"sinh viên đăng ký học các học phần trong chương trình đào tạo\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"học phần tự chọn tự do đạt điểm D trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học phần tự chọn tự do và đạt điểm D trở lên thì được ghi trong phụ lục văn bằng\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"học phần là học phần tự chọn tự do\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"mo_ta\": \"Học phần là học phần tự chọn tự do\", \"toan_tu\": \"la\"}, {\"id\": \"c2\", \"ten\": \"điểm học phần đạt điểm D trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"mo_ta\": \"Điểm học phần đạt điểm D trở lên\", \"min\": 2, \"min_incl\": true, \"thang\": \"diem_chu\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được ghi trong phụ lục văn bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"học phần được ghi trong phụ lục văn bằng cấp kèm theo bằng tốt nghiệp\"}, {\"id\": \"q2\", \"ten\": \"được đăng ký học và thi học phần do đơn vị đào tạo khác thuộc ĐHQGHN tổ chức giảng dạy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.a\"], \"loai\": \"quyen_loi\"}, {\"id\": \"q3\", \"ten\": \"kết quả học phần được chuyển đổi và công nhận ở các đơn vị đào tạo trong ĐHQGHN\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.a\"], \"loai\": \"quyen_loi\"}, {\"id\": \"q4\", \"ten\": \"xác định rõ học phần tự chọn có điều kiện hay tự do khi đăng ký\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k2.d\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"khi đăng ký học phần tự chọn, sinh viên phải xác định rõ học phần tự chọn có điều kiện hay học phần tự chọn tự do\"}], \"edges\": [{\"type\": \"GIAO_QUY_DINH\", \"from\": \"h1\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k2.a\", \"noi_dung\": \"việc tổ chức đăng ký học các học phần trong chương trình đào tạo\"}, {\"type\": \"LA_MOT\", \"from\": \"k1\", \"to\": \"k3\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"LA_MOT\", \"from\": \"k2\", \"to\": \"k3\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"TINH_VAO\", \"from\": \"k1\", \"to\": \"k4\", \"nguon\": \"qc3626.d21.k2.d\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k1\", \"to\": \"k5\", \"nguon\": \"qc3626.d21.k2.d\", \"co\": false, \"boi_canh\": null}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k6\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o2\", \"nguon\": \"qc3626.d21.k2.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o2\", \"nguon\": \"qc3626.d21.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o2\", \"nguon\": \"qc3626.d21.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o2\", \"nguon\": \"qc3626.d21.k2.d\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k2",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k3",
+     "ten": "học phần tự chọn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k4",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k5",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k6",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.a"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.a",
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký học phần",
+     "bi_danh": [
+      "đăng ký học"
+     ],
+     "nguon": [
+      "qc3626.d21.k2",
+      "qc3626.d21.k2.a",
+      "qc3626.d21.k2.d"
+     ],
+     "mo_ta": "sinh viên đăng ký học các học phần trong chương trình đào tạo"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "học phần tự chọn tự do đạt điểm D trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần tự chọn tự do và đạt điểm D trở lên thì được ghi trong phụ lục văn bằng"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "học phần là học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "mo_ta": "Học phần là học phần tự chọn tự do",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c2",
+     "ten": "điểm học phần đạt điểm D trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "mo_ta": "Điểm học phần đạt điểm D trở lên",
+     "min": 2,
+     "min_incl": true,
+     "thang": "diem_chu"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được ghi trong phụ lục văn bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "học phần được ghi trong phụ lục văn bằng cấp kèm theo bằng tốt nghiệp"
+    },
+    {
+     "id": "q2",
+     "ten": "được đăng ký học và thi học phần do đơn vị đào tạo khác thuộc ĐHQGHN tổ chức giảng dạy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.a"
+     ],
+     "loai": "quyen_loi"
+    },
+    {
+     "id": "q3",
+     "ten": "kết quả học phần được chuyển đổi và công nhận ở các đơn vị đào tạo trong ĐHQGHN",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.a"
+     ],
+     "loai": "quyen_loi"
+    },
+    {
+     "id": "q4",
+     "ten": "xác định rõ học phần tự chọn có điều kiện hay tự do khi đăng ký",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "khi đăng ký học phần tự chọn, sinh viên phải xác định rõ học phần tự chọn có điều kiện hay học phần tự chọn tự do"
+    }
+   ],
+   "edges": [
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h1",
+     "to": "o1",
+     "nguon": "qc3626.d21.k2.a",
+     "noi_dung": "việc tổ chức đăng ký học các học phần trong chương trình đào tạo"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "k1",
+     "to": "k3",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "k2",
+     "to": "k3",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k1",
+     "to": "k4",
+     "nguon": "qc3626.d21.k2.d",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k1",
+     "to": "k5",
+     "nguon": "qc3626.d21.k2.d",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k6",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o2",
+     "nguon": "qc3626.d21.k2.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o2",
+     "nguon": "qc3626.d21.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o2",
+     "nguon": "qc3626.d21.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o2",
+     "nguon": "qc3626.d21.k2.d"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d21.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "k2": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "k3": "sem.KhaiNiem.hoc_phan_tu_chon",
+    "k4": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "k5": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "k6": "sem.KhaiNiem.diem_hoc_phan",
+    "o1": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o2": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.dang_ky_hoc_phan",
+    "g1": "sem.NhomDieuKien.qc3626.d21.k2.g1",
+    "c1": "sem.DieuKien.qc3626.d21.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d21.k2.c2",
+    "q1": "sem.HeQua.duoc_ghi_trong_phu_luc_van_bang",
+    "q2": "sem.HeQua.duoc_dang_ky_hoc_va_thi_hoc_phan_do_don_vi_dao_tao_khac_thuoc_dhqghn_to_chuc_giang_day",
+    "q3": "sem.HeQua.ket_qua_hoc_phan_duoc_chuyen_doi_va_cong_nhan_o_cac_don_vi_dao_tao_trong_dhqghn",
+    "q4": "sem.HeQua.xac_dinh_ro_hoc_phan_tu_chon_co_dieu_kien_hay_tu_do_khi_dang_ky"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+     "ten": "học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon",
+     "ten": "học phần tự chọn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.a"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.a",
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_phan",
+     "ten": "đăng ký học phần",
+     "bi_danh": [
+      "đăng ký học"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2",
+      "qc3626.d21.k2.a",
+      "qc3626.d21.k2.d"
+     ],
+     "mo_ta": "sinh viên đăng ký học các học phần trong chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k2.g1",
+     "ten": "học phần tự chọn tự do đạt điểm D trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần tự chọn tự do và đạt điểm D trở lên thì được ghi trong phụ lục văn bằng"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k2.c1",
+     "ten": "học phần là học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "mo_ta": "Học phần là học phần tự chọn tự do",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k2.c2",
+     "ten": "điểm học phần đạt điểm D trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "mo_ta": "Điểm học phần đạt điểm D trở lên",
+     "min": 2,
+     "min_incl": true,
+     "thang": "diem_chu"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_ghi_trong_phu_luc_van_bang",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_ghi_trong_phu_luc_van_bang",
+     "ten": "được ghi trong phụ lục văn bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "học phần được ghi trong phụ lục văn bằng cấp kèm theo bằng tốt nghiệp"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_dang_ky_hoc_va_thi_hoc_phan_do_don_vi_dao_tao_khac_thuoc_dhqghn_to_chuc_giang_day",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_dang_ky_hoc_va_thi_hoc_phan_do_don_vi_dao_tao_khac_thuoc_dhqghn_to_chuc_giang_day",
+     "ten": "được đăng ký học và thi học phần do đơn vị đào tạo khác thuộc ĐHQGHN tổ chức giảng dạy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.a"
+     ],
+     "loai": "quyen_loi"
+    }
+   },
+   {
+    "id": "sem.HeQua.ket_qua_hoc_phan_duoc_chuyen_doi_va_cong_nhan_o_cac_don_vi_dao_tao_trong_dhqghn",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.ket_qua_hoc_phan_duoc_chuyen_doi_va_cong_nhan_o_cac_don_vi_dao_tao_trong_dhqghn",
+     "ten": "kết quả học phần được chuyển đổi và công nhận ở các đơn vị đào tạo trong ĐHQGHN",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.a"
+     ],
+     "loai": "quyen_loi"
+    }
+   },
+   {
+    "id": "sem.HeQua.xac_dinh_ro_hoc_phan_tu_chon_co_dieu_kien_hay_tu_do_khi_dang_ky",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.xac_dinh_ro_hoc_phan_tu_chon_co_dieu_kien_hay_tu_do_khi_dang_ky",
+     "ten": "xác định rõ học phần tự chọn có điều kiện hay tự do khi đăng ký",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k2.d"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "khi đăng ký học phần tự chọn, sinh viên phải xác định rõ học phần tự chọn có điều kiện hay học phần tự chọn tự do"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.dang_ky_hoc_phan",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d21.k2.a",
+     "noi_dung": "việc tổ chức đăng ký học các học phần trong chương trình đào tạo"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "to": "sem.KhaiNiem.hoc_phan_tu_chon",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "to": "sem.KhaiNiem.hoc_phan_tu_chon",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d21.k2.d",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d21.k2.d",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k2.g1",
+    "to": "sem.DieuKien.qc3626.d21.k2.c1",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k2.g1",
+    "to": "sem.DieuKien.qc3626.d21.k2.c2",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k2.c1",
+    "to": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k2.c2",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d21.k2.g1",
+    "to": "sem.HeQua.duoc_ghi_trong_phu_luc_van_bang",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_ghi_trong_phu_luc_van_bang",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_dang_ky_hoc_va_thi_hoc_phan_do_don_vi_dao_tao_khac_thuoc_dhqghn_to_chuc_giang_day",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.ket_qua_hoc_phan_duoc_chuyen_doi_va_cong_nhan_o_cac_don_vi_dao_tao_trong_dhqghn",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.xac_dinh_ro_hoc_phan_tu_chon_co_dieu_kien_hay_tu_do_khi_dang_ky",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k2.d"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d21.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "5e3c9779fa4363ca792abf11f098b8a5d4e1b6347dc13a07649addd146c61d74",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16510,
+  "output_tokens": 5627,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsAMC3VdKJAsubmJq4u'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:37:14+07:00",
+  "latency_s": 21.798,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

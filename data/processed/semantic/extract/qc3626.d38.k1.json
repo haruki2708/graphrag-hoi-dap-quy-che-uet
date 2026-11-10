@@ -1,0 +1,783 @@
+{
+ "format": 1,
+ "unit": "qc3626.d38.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm đánh giá bộ phận\", \"bi_danh\": [\"điểm đánh giá bộ phận\"], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"giảng viên lớp học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"thủ trưởng đơn vị phụ trách học phần\", \"bi_danh\": [\"thủ trưởng đơn vị phụ trách học phần\"], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o3\", \"ten\": \"chủ nhiệm khoa/bộ môn\", \"bi_danh\": [\"Chủ nhiệm Khoa/Bộ môn\"], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o4\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"kiểm tra đánh giá và chấm điểm bộ phận học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"kiểm tra đánh giá và chấm điểm bộ phận của mỗi học phần, thông báo kết quả cho sinh viên\"}, {\"id\": \"h2\", \"ten\": \"dự thi kết thúc học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"sinh viên dự thi kết thúc học phần\"}, {\"id\": \"h3\", \"ten\": \"tổ chức kiểm tra đánh giá bổ sung\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"tổ chức kiểm tra đánh giá bổ sung cho sinh viên chưa có điểm đánh giá bộ phận vì lý do chính đáng\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện dự thi kết thúc học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên chỉ được dự thi kết thúc học phần khi đồng thời có điểm đánh giá bộ phận lớn hơn 0, trả học phí đầy đủ và đáp ứng các điều kiện kết thúc học phần\"}, {\"id\": \"g2\", \"ten\": \"điều kiện được tổ chức kiểm tra đánh giá bổ sung\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên chưa có điểm đánh giá bộ phận vì lý do chính đáng và được chủ nhiệm khoa/bộ môn và giảng viên đồng ý thì được tổ chức kiểm tra bổ sung\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"điểm đánh giá bộ phận lớn hơn 0\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"Có điểm đánh giá bộ phận lớn hơn 0\", \"min\": 0, \"min_incl\": false}, {\"id\": \"c2\", \"ten\": \"trả học phí đầy đủ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"Trả học phí đầy đủ\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"đáp ứng điều kiện kết thúc học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"Đáp ứng các điều kiện kết thúc học phần do thủ trưởng đơn vị phụ trách học phần quy định\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"chưa có điểm đánh giá bộ phận vì lý do chính đáng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"Chưa có điểm đánh giá bộ phận vì có lý do chính đáng\", \"toan_tu\": \"co\"}, {\"id\": \"c5\", \"ten\": \"được chủ nhiệm khoa/bộ môn và giảng viên đồng ý\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"mo_ta\": \"Được chủ nhiệm khoa/bộ môn và giảng viên đồng ý tổ chức kiểm tra đánh giá bổ sung\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được dự thi kết thúc học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"sinh viên được dự thi kết thúc học phần\"}, {\"id\": \"q2\", \"ten\": \"được tổ chức kiểm tra đánh giá bổ sung\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"sinh viên được tổ chức kiểm tra đánh giá bổ sung\"}, {\"id\": \"q3\", \"ten\": \"thông báo kết quả đánh giá bộ phận chậm nhất 7 ngày làm việc\", \"bi_danh\": [], \"nguon\": [\"qc3626.d38.k1\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Thông báo kết quả kiểm tra đánh giá bộ phận cho sinh viên chậm nhất 7 ngày làm việc kể từ sau ngày kiểm tra hoặc ngày nộp tiểu luận, bài tập lớn\", \"gia_tri\": 7, \"don_vi\": \"ngày làm việc\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h2\", \"to\": \"g1\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"c3\", \"to\": \"o2\", \"nguon\": \"qc3626.d38.k1\", \"noi_dung\": \"các điều kiện kết thúc học phần\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o4\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"YEU_CAU\", \"from\": \"h3\", \"to\": \"g2\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c5\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q2\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o4\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o1\", \"nguon\": \"qc3626.d38.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o1\", \"nguon\": \"qc3626.d38.k1\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm đánh giá bộ phận",
+     "bi_danh": [
+      "điểm đánh giá bộ phận"
+     ],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "giảng viên lớp học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "thủ trưởng đơn vị phụ trách học phần",
+     "bi_danh": [
+      "thủ trưởng đơn vị phụ trách học phần"
+     ],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o3",
+     "ten": "chủ nhiệm khoa/bộ môn",
+     "bi_danh": [
+      "Chủ nhiệm Khoa/Bộ môn"
+     ],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o4",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "kiểm tra đánh giá và chấm điểm bộ phận học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "kiểm tra đánh giá và chấm điểm bộ phận của mỗi học phần, thông báo kết quả cho sinh viên"
+    },
+    {
+     "id": "h2",
+     "ten": "dự thi kết thúc học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "sinh viên dự thi kết thúc học phần"
+    },
+    {
+     "id": "h3",
+     "ten": "tổ chức kiểm tra đánh giá bổ sung",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "tổ chức kiểm tra đánh giá bổ sung cho sinh viên chưa có điểm đánh giá bộ phận vì lý do chính đáng"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện dự thi kết thúc học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chỉ được dự thi kết thúc học phần khi đồng thời có điểm đánh giá bộ phận lớn hơn 0, trả học phí đầy đủ và đáp ứng các điều kiện kết thúc học phần"
+    },
+    {
+     "id": "g2",
+     "ten": "điều kiện được tổ chức kiểm tra đánh giá bổ sung",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chưa có điểm đánh giá bộ phận vì lý do chính đáng và được chủ nhiệm khoa/bộ môn và giảng viên đồng ý thì được tổ chức kiểm tra bổ sung"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "điểm đánh giá bộ phận lớn hơn 0",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Có điểm đánh giá bộ phận lớn hơn 0",
+     "min": 0,
+     "min_incl": false
+    },
+    {
+     "id": "c2",
+     "ten": "trả học phí đầy đủ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Trả học phí đầy đủ",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "đáp ứng điều kiện kết thúc học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Đáp ứng các điều kiện kết thúc học phần do thủ trưởng đơn vị phụ trách học phần quy định",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "chưa có điểm đánh giá bộ phận vì lý do chính đáng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Chưa có điểm đánh giá bộ phận vì có lý do chính đáng",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c5",
+     "ten": "được chủ nhiệm khoa/bộ môn và giảng viên đồng ý",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Được chủ nhiệm khoa/bộ môn và giảng viên đồng ý tổ chức kiểm tra đánh giá bổ sung",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được dự thi kết thúc học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được dự thi kết thúc học phần"
+    },
+    {
+     "id": "q2",
+     "ten": "được tổ chức kiểm tra đánh giá bổ sung",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được tổ chức kiểm tra đánh giá bổ sung"
+    },
+    {
+     "id": "q3",
+     "ten": "thông báo kết quả đánh giá bộ phận chậm nhất 7 ngày làm việc",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Thông báo kết quả kiểm tra đánh giá bộ phận cho sinh viên chậm nhất 7 ngày làm việc kể từ sau ngày kiểm tra hoặc ngày nộp tiểu luận, bài tập lớn",
+     "gia_tri": 7,
+     "don_vi": "ngày làm việc"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h2",
+     "to": "g1",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "c3",
+     "to": "o2",
+     "nguon": "qc3626.d38.k1",
+     "noi_dung": "các điều kiện kết thúc học phần"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o4",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h3",
+     "to": "g2",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c5",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q2",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o4",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o1",
+     "nguon": "qc3626.d38.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o1",
+     "nguon": "qc3626.d38.k1"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d38.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_danh_gia_bo_phan",
+    "o1": "sem.DoiTuong.giang_vien_lop_hoc_phan",
+    "o2": "sem.DoiTuong.thu_truong_don_vi_phu_trach_hoc_phan",
+    "o3": "sem.DoiTuong.chu_nhiem_khoa_bo_mon",
+    "o4": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.kiem_tra_danh_gia_va_cham_diem_bo_phan_hoc_phan",
+    "h2": "sem.HoatDong.du_thi_ket_thuc_hoc_phan",
+    "h3": "sem.HoatDong.to_chuc_kiem_tra_danh_gia_bo_sung",
+    "g1": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d38.k1.g2",
+    "c1": "sem.DieuKien.qc3626.d38.k1.c1",
+    "c2": "sem.DieuKien.qc3626.d38.k1.c2",
+    "c3": "sem.DieuKien.qc3626.d38.k1.c3",
+    "c4": "sem.DieuKien.qc3626.d38.k1.c4",
+    "c5": "sem.DieuKien.qc3626.d38.k1.c5",
+    "q1": "sem.HeQua.duoc_du_thi_ket_thuc_hoc_phan",
+    "q2": "sem.HeQua.duoc_to_chuc_kiem_tra_danh_gia_bo_sung",
+    "q3": "sem.HeQua.thong_bao_ket_qua_danh_gia_bo_phan_cham_nhat_7_ngay_lam_viec"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_danh_gia_bo_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_danh_gia_bo_phan",
+     "ten": "điểm đánh giá bộ phận",
+     "bi_danh": [
+      "điểm đánh giá bộ phận"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.giang_vien_lop_hoc_phan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.giang_vien_lop_hoc_phan",
+     "ten": "giảng viên lớp học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_phu_trach_hoc_phan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_phu_trach_hoc_phan",
+     "ten": "thủ trưởng đơn vị phụ trách học phần",
+     "bi_danh": [
+      "thủ trưởng đơn vị phụ trách học phần"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chu_nhiem_khoa_bo_mon",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chu_nhiem_khoa_bo_mon",
+     "ten": "chủ nhiệm khoa/bộ môn",
+     "bi_danh": [
+      "Chủ nhiệm Khoa/Bộ môn"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.kiem_tra_danh_gia_va_cham_diem_bo_phan_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.kiem_tra_danh_gia_va_cham_diem_bo_phan_hoc_phan",
+     "ten": "kiểm tra đánh giá và chấm điểm bộ phận học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "kiểm tra đánh giá và chấm điểm bộ phận của mỗi học phần, thông báo kết quả cho sinh viên"
+    }
+   },
+   {
+    "id": "sem.HoatDong.du_thi_ket_thuc_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.du_thi_ket_thuc_hoc_phan",
+     "ten": "dự thi kết thúc học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "sinh viên dự thi kết thúc học phần"
+    }
+   },
+   {
+    "id": "sem.HoatDong.to_chuc_kiem_tra_danh_gia_bo_sung",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.to_chuc_kiem_tra_danh_gia_bo_sung",
+     "ten": "tổ chức kiểm tra đánh giá bổ sung",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "tổ chức kiểm tra đánh giá bổ sung cho sinh viên chưa có điểm đánh giá bộ phận vì lý do chính đáng"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+     "ten": "điều kiện dự thi kết thúc học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chỉ được dự thi kết thúc học phần khi đồng thời có điểm đánh giá bộ phận lớn hơn 0, trả học phí đầy đủ và đáp ứng các điều kiện kết thúc học phần"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d38.k1.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d38.k1.g2",
+     "ten": "điều kiện được tổ chức kiểm tra đánh giá bổ sung",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chưa có điểm đánh giá bộ phận vì lý do chính đáng và được chủ nhiệm khoa/bộ môn và giảng viên đồng ý thì được tổ chức kiểm tra bổ sung"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d38.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d38.k1.c1",
+     "ten": "điểm đánh giá bộ phận lớn hơn 0",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Có điểm đánh giá bộ phận lớn hơn 0",
+     "min": 0,
+     "min_incl": false
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d38.k1.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d38.k1.c2",
+     "ten": "trả học phí đầy đủ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Trả học phí đầy đủ",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d38.k1.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d38.k1.c3",
+     "ten": "đáp ứng điều kiện kết thúc học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Đáp ứng các điều kiện kết thúc học phần do thủ trưởng đơn vị phụ trách học phần quy định",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d38.k1.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d38.k1.c4",
+     "ten": "chưa có điểm đánh giá bộ phận vì lý do chính đáng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Chưa có điểm đánh giá bộ phận vì có lý do chính đáng",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d38.k1.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d38.k1.c5",
+     "ten": "được chủ nhiệm khoa/bộ môn và giảng viên đồng ý",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "mo_ta": "Được chủ nhiệm khoa/bộ môn và giảng viên đồng ý tổ chức kiểm tra đánh giá bổ sung",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_du_thi_ket_thuc_hoc_phan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_du_thi_ket_thuc_hoc_phan",
+     "ten": "được dự thi kết thúc học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được dự thi kết thúc học phần"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_to_chuc_kiem_tra_danh_gia_bo_sung",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_to_chuc_kiem_tra_danh_gia_bo_sung",
+     "ten": "được tổ chức kiểm tra đánh giá bổ sung",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được tổ chức kiểm tra đánh giá bổ sung"
+    }
+   },
+   {
+    "id": "sem.HeQua.thong_bao_ket_qua_danh_gia_bo_phan_cham_nhat_7_ngay_lam_viec",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thong_bao_ket_qua_danh_gia_bo_phan_cham_nhat_7_ngay_lam_viec",
+     "ten": "thông báo kết quả đánh giá bộ phận chậm nhất 7 ngày làm việc",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d38.k1"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Thông báo kết quả kiểm tra đánh giá bộ phận cho sinh viên chậm nhất 7 ngày làm việc kể từ sau ngày kiểm tra hoặc ngày nộp tiểu luận, bài tập lớn",
+     "gia_tri": 7,
+     "don_vi": "ngày làm việc"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.du_thi_ket_thuc_hoc_phan",
+    "to": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+    "to": "sem.DieuKien.qc3626.d38.k1.c1",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+    "to": "sem.DieuKien.qc3626.d38.k1.c2",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+    "to": "sem.DieuKien.qc3626.d38.k1.c3",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d38.k1.c1",
+    "to": "sem.KhaiNiem.diem_danh_gia_bo_phan",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.DieuKien.qc3626.d38.k1.c3",
+    "to": "sem.DoiTuong.thu_truong_don_vi_phu_trach_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d38.k1",
+     "noi_dung": "các điều kiện kết thúc học phần"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d38.k1.g1",
+    "to": "sem.HeQua.duoc_du_thi_ket_thuc_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_du_thi_ket_thuc_hoc_phan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.to_chuc_kiem_tra_danh_gia_bo_sung",
+    "to": "sem.NhomDieuKien.qc3626.d38.k1.g2",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d38.k1.g2",
+    "to": "sem.DieuKien.qc3626.d38.k1.c4",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d38.k1.g2",
+    "to": "sem.DieuKien.qc3626.d38.k1.c5",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d38.k1.g2",
+    "to": "sem.HeQua.duoc_to_chuc_kiem_tra_danh_gia_bo_sung",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_to_chuc_kiem_tra_danh_gia_bo_sung",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.kiem_tra_danh_gia_va_cham_diem_bo_phan_hoc_phan",
+    "to": "sem.DoiTuong.giang_vien_lop_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thong_bao_ket_qua_danh_gia_bo_phan_cham_nhat_7_ngay_lam_viec",
+    "to": "sem.DoiTuong.giang_vien_lop_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d38.k1"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d38.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "c9149bac6a142f8b34e743fd3497e7c210387e30f4cdbe9ec71251bb16ed14b0",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16033,
+  "output_tokens": 5731,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtt9gsoq7PgHb3ZZ2S2P'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:50:13+07:00",
+  "latency_s": 20.073,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

@@ -1,0 +1,1101 @@
+{
+ "format": 1,
+ "unit": "qc3626.d36.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"số học kỳ đã học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"loai\": \"dai_luong\"}, {\"id\": \"k2\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [\"điểm trung bình chung tích luỹ\"], \"nguon\": [\"qc3626.d36.k3.d\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"loai\": \"chuc_danh\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"xin nghỉ học tạm thời và bảo lưu kết quả đã học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"mo_ta\": \"sinh viên xin nghỉ học tạm thời và bảo lưu kết quả đã học trong các trường hợp quy định\"}, {\"id\": \"h2\", \"ten\": \"đề nghị học tiếp sau thời gian nghỉ học tạm thời\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"mo_ta\": \"sinh viên đang nghỉ học tạm thời có nguyện vọng học tiếp thì nộp đơn đề nghị để thủ trưởng đơn vị đào tạo giải quyết\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"các trường hợp được xin nghỉ học tạm thời và bảo lưu kết quả\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên được xin nghỉ học tạm thời khi thuộc một trong các trường hợp a, b, c, d (suy luận: chỉ cần một trong các trường hợp)\"}, {\"id\": \"g2\", \"ten\": \"điều kiện nghỉ học tạm thời vì lý do cá nhân khác\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Vì lý do cá nhân khác phải đáp ứng đồng thời các điều kiện: học tối thiểu 01 học kỳ, không thuộc trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật, điểm trung bình chung tích lũy tối thiểu 2,0\"}, {\"id\": \"g3\", \"ten\": \"đối tượng không tính thời gian nghỉ học tạm thời vào thời gian tối đa\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Thuộc một trong các đối tượng ở điểm a, b, c khoản 3 (suy luận: chỉ cần thuộc một đối tượng)\"}, {\"id\": \"g4\", \"ten\": \"điều kiện đề nghị học tiếp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Đề nghị học tiếp phải có đơn đề nghị và nộp chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"được động viên vào lực lượng vũ trang\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.a\"], \"mo_ta\": \"Được động viên vào lực lượng vũ trang\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.b\"], \"mo_ta\": \"Được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"bị ốm, thai sản hoặc tai nạn phải điều trị thời gian dài\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.c\"], \"mo_ta\": \"Bị ốm, thai sản hoặc tai nạn phải điều trị thời gian dài có chứng nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền theo quy định của Bộ Y tế\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"đã học tối thiểu 01 học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"mo_ta\": \"Phải học tối thiểu 01 học kỳ\", \"min\": 1, \"min_incl\": true, \"don_vi\": \"học kỳ\"}, {\"id\": \"c5\", \"ten\": \"không thuộc trường hợp bị xem xét buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"mo_ta\": \"Không thuộc các trường hợp bị xem xét buộc thôi học\", \"toan_tu\": \"thuoc\", \"phu_dinh\": true}, {\"id\": \"c6\", \"ten\": \"không thuộc trường hợp bị xem xét kỷ luật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"mo_ta\": \"Không thuộc các trường hợp bị xem xét kỷ luật\", \"toan_tu\": \"thuoc\", \"phu_dinh\": true}, {\"id\": \"c7\", \"ten\": \"điểm trung bình chung tích lũy tối thiểu 2,0\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"mo_ta\": \"Phải đạt điểm trung bình chung tích lũy tối thiểu 2,0\", \"min\": 2.0, \"min_incl\": true, \"thang\": \"thang_4\"}, {\"id\": \"c8\", \"ten\": \"có đơn đề nghị gửi thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"mo_ta\": \"Có đơn đề nghị thủ trưởng đơn vị đào tạo giải quyết\", \"toan_tu\": \"co\"}, {\"id\": \"c9\", \"ten\": \"nộp đơn chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"mo_ta\": \"Nộp đơn chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời\", \"moc\": \"chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"bị xem xét buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"loai\": \"trang_thai\"}, {\"id\": \"q2\", \"ten\": \"bị xem xét kỷ luật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"loai\": \"trang_thai\"}, {\"id\": \"q3\", \"ten\": \"được xin nghỉ học tạm thời và bảo lưu kết quả đã học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Sinh viên được xin nghỉ học tạm thời và bảo lưu kết quả đã học\"}, {\"id\": \"q4\", \"ten\": \"thời gian nghỉ học tạm thời không tính vào thời gian tối đa được phép học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Thời gian nghỉ học tạm thời không tính vào thời gian tối đa được phép học\"}, {\"id\": \"q5\", \"ten\": \"thời gian nghỉ học tạm thời vì nhu cầu cá nhân được tính vào thời gian tối đa được phép học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k3.d\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian nghỉ học tạm thời vì nhu cầu cá nhân được tính vào thời gian tối đa được phép học\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d36.k3.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d36.k3.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d36.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c5\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c6\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c7\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k1\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"XET\", \"from\": \"c7\", \"to\": \"k2\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"q1\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"XET\", \"from\": \"c6\", \"to\": \"q2\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q3\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q5\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q5\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k3.d\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c1\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c2\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c3\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q4\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"YEU_CAU\", \"from\": \"h2\", \"to\": \"g4\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c8\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c9\", \"nguon\": \"qc3626.d36.k3\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h2\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k3\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "số học kỳ đã học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k2",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "chuc_danh"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "xin nghỉ học tạm thời và bảo lưu kết quả đã học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "sinh viên xin nghỉ học tạm thời và bảo lưu kết quả đã học trong các trường hợp quy định"
+    },
+    {
+     "id": "h2",
+     "ten": "đề nghị học tiếp sau thời gian nghỉ học tạm thời",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "sinh viên đang nghỉ học tạm thời có nguyện vọng học tiếp thì nộp đơn đề nghị để thủ trưởng đơn vị đào tạo giải quyết"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "các trường hợp được xin nghỉ học tạm thời và bảo lưu kết quả",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên được xin nghỉ học tạm thời khi thuộc một trong các trường hợp a, b, c, d (suy luận: chỉ cần một trong các trường hợp)"
+    },
+    {
+     "id": "g2",
+     "ten": "điều kiện nghỉ học tạm thời vì lý do cá nhân khác",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Vì lý do cá nhân khác phải đáp ứng đồng thời các điều kiện: học tối thiểu 01 học kỳ, không thuộc trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật, điểm trung bình chung tích lũy tối thiểu 2,0"
+    },
+    {
+     "id": "g3",
+     "ten": "đối tượng không tính thời gian nghỉ học tạm thời vào thời gian tối đa",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong các đối tượng ở điểm a, b, c khoản 3 (suy luận: chỉ cần thuộc một đối tượng)"
+    },
+    {
+     "id": "g4",
+     "ten": "điều kiện đề nghị học tiếp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Đề nghị học tiếp phải có đơn đề nghị và nộp chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "được động viên vào lực lượng vũ trang",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.a"
+     ],
+     "mo_ta": "Được động viên vào lực lượng vũ trang",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.b"
+     ],
+     "mo_ta": "Được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "bị ốm, thai sản hoặc tai nạn phải điều trị thời gian dài",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.c"
+     ],
+     "mo_ta": "Bị ốm, thai sản hoặc tai nạn phải điều trị thời gian dài có chứng nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền theo quy định của Bộ Y tế",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "đã học tối thiểu 01 học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Phải học tối thiểu 01 học kỳ",
+     "min": 1,
+     "min_incl": true,
+     "don_vi": "học kỳ"
+    },
+    {
+     "id": "c5",
+     "ten": "không thuộc trường hợp bị xem xét buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Không thuộc các trường hợp bị xem xét buộc thôi học",
+     "toan_tu": "thuoc",
+     "phu_dinh": true
+    },
+    {
+     "id": "c6",
+     "ten": "không thuộc trường hợp bị xem xét kỷ luật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Không thuộc các trường hợp bị xem xét kỷ luật",
+     "toan_tu": "thuoc",
+     "phu_dinh": true
+    },
+    {
+     "id": "c7",
+     "ten": "điểm trung bình chung tích lũy tối thiểu 2,0",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Phải đạt điểm trung bình chung tích lũy tối thiểu 2,0",
+     "min": 2.0,
+     "min_incl": true,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c8",
+     "ten": "có đơn đề nghị gửi thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "Có đơn đề nghị thủ trưởng đơn vị đào tạo giải quyết",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c9",
+     "ten": "nộp đơn chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "Nộp đơn chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời",
+     "moc": "chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "bị xem xét buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q2",
+     "ten": "bị xem xét kỷ luật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q3",
+     "ten": "được xin nghỉ học tạm thời và bảo lưu kết quả đã học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên được xin nghỉ học tạm thời và bảo lưu kết quả đã học"
+    },
+    {
+     "id": "q4",
+     "ten": "thời gian nghỉ học tạm thời không tính vào thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Thời gian nghỉ học tạm thời không tính vào thời gian tối đa được phép học"
+    },
+    {
+     "id": "q5",
+     "ten": "thời gian nghỉ học tạm thời vì nhu cầu cá nhân được tính vào thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian nghỉ học tạm thời vì nhu cầu cá nhân được tính vào thời gian tối đa được phép học"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d36.k3.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d36.k3.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d36.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c5",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c6",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c7",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k1",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "XET",
+     "from": "c7",
+     "to": "k2",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "q1",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "XET",
+     "from": "c6",
+     "to": "q2",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q3",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o1",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q5",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q5",
+     "to": "o1",
+     "nguon": "qc3626.d36.k3.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c1",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c2",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c3",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q4",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o1",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h2",
+     "to": "g4",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c8",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c9",
+     "nguon": "qc3626.d36.k3"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h2",
+     "to": "o1",
+     "nguon": "qc3626.d36.k3"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d36.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+    "k2": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "o2": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "h1": "sem.HoatDong.xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+    "h2": "sem.HoatDong.de_nghi_hoc_tiep_sau_thoi_gian_nghi_hoc_tam_thoi",
+    "g1": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d36.k3.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d36.k3.g4",
+    "c1": "sem.DieuKien.qc3626.d36.k3.c1",
+    "c2": "sem.DieuKien.qc3626.d36.k3.c2",
+    "c3": "sem.DieuKien.qc3626.d36.k3.c3",
+    "c4": "sem.DieuKien.qc3626.d36.k3.c4",
+    "c5": "sem.DieuKien.qc3626.d36.k3.c5",
+    "c6": "sem.DieuKien.qc3626.d36.k3.c6",
+    "c7": "sem.DieuKien.qc3626.d36.k3.c7",
+    "c8": "sem.DieuKien.qc3626.d36.k3.c8",
+    "c9": "sem.DieuKien.qc3626.d36.k3.c9",
+    "q1": "sem.HeQua.bi_xem_xet_buoc_thoi_hoc",
+    "q2": "sem.HeQua.bi_xem_xet_ky_luat",
+    "q3": "sem.HeQua.duoc_xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+    "q4": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_khong_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+    "q5": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_vi_nhu_cau_ca_nhan_duoc_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+     "ten": "số học kỳ đã học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+     "ten": "xin nghỉ học tạm thời và bảo lưu kết quả đã học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "sinh viên xin nghỉ học tạm thời và bảo lưu kết quả đã học trong các trường hợp quy định"
+    }
+   },
+   {
+    "id": "sem.HoatDong.de_nghi_hoc_tiep_sau_thoi_gian_nghi_hoc_tam_thoi",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.de_nghi_hoc_tiep_sau_thoi_gian_nghi_hoc_tam_thoi",
+     "ten": "đề nghị học tiếp sau thời gian nghỉ học tạm thời",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "sinh viên đang nghỉ học tạm thời có nguyện vọng học tiếp thì nộp đơn đề nghị để thủ trưởng đơn vị đào tạo giải quyết"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+     "ten": "các trường hợp được xin nghỉ học tạm thời và bảo lưu kết quả",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên được xin nghỉ học tạm thời khi thuộc một trong các trường hợp a, b, c, d (suy luận: chỉ cần một trong các trường hợp)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+     "ten": "điều kiện nghỉ học tạm thời vì lý do cá nhân khác",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Vì lý do cá nhân khác phải đáp ứng đồng thời các điều kiện: học tối thiểu 01 học kỳ, không thuộc trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật, điểm trung bình chung tích lũy tối thiểu 2,0"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d36.k3.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d36.k3.g3",
+     "ten": "đối tượng không tính thời gian nghỉ học tạm thời vào thời gian tối đa",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong các đối tượng ở điểm a, b, c khoản 3 (suy luận: chỉ cần thuộc một đối tượng)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d36.k3.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d36.k3.g4",
+     "ten": "điều kiện đề nghị học tiếp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Đề nghị học tiếp phải có đơn đề nghị và nộp chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c1",
+     "ten": "được động viên vào lực lượng vũ trang",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.a"
+     ],
+     "mo_ta": "Được động viên vào lực lượng vũ trang",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c2",
+     "ten": "được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.b"
+     ],
+     "mo_ta": "Được cơ quan có thẩm quyền điều động, đại diện quốc gia tham dự các kỳ thi, giải đấu quốc tế",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c3",
+     "ten": "bị ốm, thai sản hoặc tai nạn phải điều trị thời gian dài",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.c"
+     ],
+     "mo_ta": "Bị ốm, thai sản hoặc tai nạn phải điều trị thời gian dài có chứng nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền theo quy định của Bộ Y tế",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c4",
+     "ten": "đã học tối thiểu 01 học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Phải học tối thiểu 01 học kỳ",
+     "min": 1,
+     "min_incl": true,
+     "don_vi": "học kỳ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c5",
+     "ten": "không thuộc trường hợp bị xem xét buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Không thuộc các trường hợp bị xem xét buộc thôi học",
+     "toan_tu": "thuoc",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c6",
+     "ten": "không thuộc trường hợp bị xem xét kỷ luật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Không thuộc các trường hợp bị xem xét kỷ luật",
+     "toan_tu": "thuoc",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c7",
+     "ten": "điểm trung bình chung tích lũy tối thiểu 2,0",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "mo_ta": "Phải đạt điểm trung bình chung tích lũy tối thiểu 2,0",
+     "min": 2.0,
+     "min_incl": true,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c8",
+     "ten": "có đơn đề nghị gửi thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "Có đơn đề nghị thủ trưởng đơn vị đào tạo giải quyết",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k3.c9",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k3.c9",
+     "ten": "nộp đơn chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "mo_ta": "Nộp đơn chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời",
+     "moc": "chậm nhất 2 tuần trước khi hết thời hạn nghỉ học tạm thời"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_xem_xet_buoc_thoi_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_xem_xet_buoc_thoi_hoc",
+     "ten": "bị xem xét buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_xem_xet_ky_luat",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_xem_xet_ky_luat",
+     "ten": "bị xem xét kỷ luật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+     "ten": "được xin nghỉ học tạm thời và bảo lưu kết quả đã học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên được xin nghỉ học tạm thời và bảo lưu kết quả đã học"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_khong_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_khong_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+     "ten": "thời gian nghỉ học tạm thời không tính vào thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Thời gian nghỉ học tạm thời không tính vào thời gian tối đa được phép học"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_vi_nhu_cau_ca_nhan_duoc_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_vi_nhu_cau_ca_nhan_duoc_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+     "ten": "thời gian nghỉ học tạm thời vì nhu cầu cá nhân được tính vào thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k3.d"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian nghỉ học tạm thời vì nhu cầu cá nhân được tính vào thời gian tối đa được phép học"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+    "to": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "to": "sem.DieuKien.qc3626.d36.k3.c1",
+    "props": {
+     "nguon": "qc3626.d36.k3.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "to": "sem.DieuKien.qc3626.d36.k3.c2",
+    "props": {
+     "nguon": "qc3626.d36.k3.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "to": "sem.DieuKien.qc3626.d36.k3.c3",
+    "props": {
+     "nguon": "qc3626.d36.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "to": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "to": "sem.DieuKien.qc3626.d36.k3.c4",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "to": "sem.DieuKien.qc3626.d36.k3.c5",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "to": "sem.DieuKien.qc3626.d36.k3.c6",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "to": "sem.DieuKien.qc3626.d36.k3.c7",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d36.k3.c4",
+    "to": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d36.k3.c7",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d36.k3.c5",
+    "to": "sem.HeQua.bi_xem_xet_buoc_thoi_hoc",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d36.k3.c6",
+    "to": "sem.HeQua.bi_xem_xet_ky_luat",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g1",
+    "to": "sem.HeQua.duoc_xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_xin_nghi_hoc_tam_thoi_va_bao_luu_ket_qua_da_hoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g2",
+    "to": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_vi_nhu_cau_ca_nhan_duoc_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_vi_nhu_cau_ca_nhan_duoc_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d36.k3.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g3",
+    "to": "sem.DieuKien.qc3626.d36.k3.c1",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g3",
+    "to": "sem.DieuKien.qc3626.d36.k3.c2",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g3",
+    "to": "sem.DieuKien.qc3626.d36.k3.c3",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g3",
+    "to": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_khong_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_nghi_hoc_tam_thoi_khong_tinh_vao_thoi_gian_toi_da_duoc_phep_hoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.de_nghi_hoc_tiep_sau_thoi_gian_nghi_hoc_tam_thoi",
+    "to": "sem.NhomDieuKien.qc3626.d36.k3.g4",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g4",
+    "to": "sem.DieuKien.qc3626.d36.k3.c8",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k3.g4",
+    "to": "sem.DieuKien.qc3626.d36.k3.c9",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.de_nghi_hoc_tiep_sau_thoi_gian_nghi_hoc_tam_thoi",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d36.k3"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d36.k3",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "be824c5122a2144ae98105a749a04917e81fe12db0320a3beb3861a5b408c403",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16339,
+  "output_tokens": 9097,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtt2kG1fabfecYSh5HZB'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:48:38+07:00",
+  "latency_s": 33.723,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

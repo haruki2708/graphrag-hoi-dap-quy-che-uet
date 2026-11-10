@@ -1,0 +1,338 @@
+{
+ "format": 1,
+ "unit": "qc3626.d39.k4",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k4\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký làm lại khóa luận, đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k4\"], \"mo_ta\": \"sinh viên đăng ký làm lại khóa luận hoặc đồ án tốt nghiệp bị điểm F\"}, {\"id\": \"h2\", \"ten\": \"đăng ký học học phần thay thế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k4\"], \"mo_ta\": \"sinh viên đăng ký học các học phần thay thế theo quy định, thay cho khóa luận hoặc đồ án tốt nghiệp bị điểm F\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"sinh viên có khóa luận hoặc đồ án tốt nghiệp bị điểm F\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k4\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên có khóa luận hoặc đồ án tốt nghiệp bị điểm F thì phải đăng ký làm lại hoặc đăng ký học học phần thay thế\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"có khóa luận hoặc đồ án tốt nghiệp bị điểm F\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k4\"], \"mo_ta\": \"Có khóa luận hoặc đồ án tốt nghiệp bị điểm F\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"bị điểm F khóa luận, đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k4\"], \"loai\": \"trang_thai\", \"mo_ta\": \"khóa luận hoặc đồ án tốt nghiệp bị điểm F\"}, {\"id\": \"q2\", \"ten\": \"phải đăng ký làm lại khóa luận, đồ án tốt nghiệp hoặc học học phần thay thế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k4\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"phải đăng ký làm lại khóa luận, đồ án tốt nghiệp hoặc đăng ký học các học phần thay thế theo quy định\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d39.k4\"}, {\"type\": \"YEU_CAU\", \"from\": \"h2\", \"to\": \"g1\", \"nguon\": \"qc3626.d39.k4\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d39.k4\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"q1\", \"nguon\": \"qc3626.d39.k4\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d39.k4\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d39.k4\"}]}",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký làm lại khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "mo_ta": "sinh viên đăng ký làm lại khóa luận hoặc đồ án tốt nghiệp bị điểm F"
+    },
+    {
+     "id": "h2",
+     "ten": "đăng ký học học phần thay thế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "mo_ta": "sinh viên đăng ký học các học phần thay thế theo quy định, thay cho khóa luận hoặc đồ án tốt nghiệp bị điểm F"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "sinh viên có khóa luận hoặc đồ án tốt nghiệp bị điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên có khóa luận hoặc đồ án tốt nghiệp bị điểm F thì phải đăng ký làm lại hoặc đăng ký học học phần thay thế"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "có khóa luận hoặc đồ án tốt nghiệp bị điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "mo_ta": "Có khóa luận hoặc đồ án tốt nghiệp bị điểm F",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "bị điểm F khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "khóa luận hoặc đồ án tốt nghiệp bị điểm F"
+    },
+    {
+     "id": "q2",
+     "ten": "phải đăng ký làm lại khóa luận, đồ án tốt nghiệp hoặc học học phần thay thế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "phải đăng ký làm lại khóa luận, đồ án tốt nghiệp hoặc đăng ký học các học phần thay thế theo quy định"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d39.k4"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h2",
+     "to": "g1",
+     "nguon": "qc3626.d39.k4"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d39.k4"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "q1",
+     "nguon": "qc3626.d39.k4"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d39.k4"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d39.k4"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d39.k4",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep",
+    "h2": "sem.HoatDong.dang_ky_hoc_hoc_phan_thay_the",
+    "g1": "sem.NhomDieuKien.qc3626.d39.k4.g1",
+    "c1": "sem.DieuKien.qc3626.d39.k4.c1",
+    "q1": "sem.HeQua.bi_diem_f_khoa_luan_do_an_tot_nghiep",
+    "q2": "sem.HeQua.phai_dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep_hoac_hoc_hoc_phan_thay_the"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep",
+     "ten": "đăng ký làm lại khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "mo_ta": "sinh viên đăng ký làm lại khóa luận hoặc đồ án tốt nghiệp bị điểm F"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_hoc_phan_thay_the",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_hoc_phan_thay_the",
+     "ten": "đăng ký học học phần thay thế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "mo_ta": "sinh viên đăng ký học các học phần thay thế theo quy định, thay cho khóa luận hoặc đồ án tốt nghiệp bị điểm F"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d39.k4.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d39.k4.g1",
+     "ten": "sinh viên có khóa luận hoặc đồ án tốt nghiệp bị điểm F",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên có khóa luận hoặc đồ án tốt nghiệp bị điểm F thì phải đăng ký làm lại hoặc đăng ký học học phần thay thế"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k4.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k4.c1",
+     "ten": "có khóa luận hoặc đồ án tốt nghiệp bị điểm F",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "mo_ta": "Có khóa luận hoặc đồ án tốt nghiệp bị điểm F",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_diem_f_khoa_luan_do_an_tot_nghiep",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_diem_f_khoa_luan_do_an_tot_nghiep",
+     "ten": "bị điểm F khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "khóa luận hoặc đồ án tốt nghiệp bị điểm F"
+    }
+   },
+   {
+    "id": "sem.HeQua.phai_dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep_hoac_hoc_hoc_phan_thay_the",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.phai_dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep_hoac_hoc_hoc_phan_thay_the",
+     "ten": "phải đăng ký làm lại khóa luận, đồ án tốt nghiệp hoặc học học phần thay thế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k4"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "phải đăng ký làm lại khóa luận, đồ án tốt nghiệp hoặc đăng ký học các học phần thay thế theo quy định"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d39.k4.g1",
+    "props": {
+     "nguon": "qc3626.d39.k4"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_hoc_phan_thay_the",
+    "to": "sem.NhomDieuKien.qc3626.d39.k4.g1",
+    "props": {
+     "nguon": "qc3626.d39.k4"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k4.g1",
+    "to": "sem.DieuKien.qc3626.d39.k4.c1",
+    "props": {
+     "nguon": "qc3626.d39.k4"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d39.k4.c1",
+    "to": "sem.HeQua.bi_diem_f_khoa_luan_do_an_tot_nghiep",
+    "props": {
+     "nguon": "qc3626.d39.k4"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d39.k4.g1",
+    "to": "sem.HeQua.phai_dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep_hoac_hoc_hoc_phan_thay_the",
+    "props": {
+     "nguon": "qc3626.d39.k4"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.phai_dang_ky_lam_lai_khoa_luan_do_an_tot_nghiep_hoac_hoc_hoc_phan_thay_the",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d39.k4"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d39.k4",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "6c8f12437a0a72e94200c75c09d7422a76382a3ad6a3fee5b355547efd77ed0c",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15795,
+  "output_tokens": 2445,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgttMtdqJzgR1cep6cere'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:52:58+07:00",
+  "latency_s": 9.842,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

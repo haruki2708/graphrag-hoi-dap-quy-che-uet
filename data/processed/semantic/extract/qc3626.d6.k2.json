@@ -1,0 +1,406 @@
+{
+ "format": 1,
+ "unit": "qc3626.d6.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o0\", \"ten\": \"chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o1\", \"ten\": \"chương trình đào tạo chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o2\", \"ten\": \"chương trình đào tạo chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.b\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o3\", \"ten\": \"chương trình đào tạo tài năng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.c\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o4\", \"ten\": \"chương trình đào tạo ngành chính - ngành phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.d\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o5\", \"ten\": \"chương trình đào tạo song ngành\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.đ\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o6\", \"ten\": \"chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.e\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o7\", \"ten\": \"chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội và đối tác nước ngoài cùng cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.g\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o8\", \"ten\": \"chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do đối tác nước ngoài cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k2.h\"], \"loai\": \"chuong_trinh\"}], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": [{\"type\": \"LA_MOT\", \"from\": \"o1\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.a\"}, {\"type\": \"LA_MOT\", \"from\": \"o2\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.b\"}, {\"type\": \"LA_MOT\", \"from\": \"o3\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.c\"}, {\"type\": \"LA_MOT\", \"from\": \"o4\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.d\"}, {\"type\": \"LA_MOT\", \"from\": \"o5\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.đ\"}, {\"type\": \"LA_MOT\", \"from\": \"o6\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.e\"}, {\"type\": \"LA_MOT\", \"from\": \"o7\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.g\"}, {\"type\": \"LA_MOT\", \"from\": \"o8\", \"to\": \"o0\", \"nguon\": \"qc3626.d6.k2.h\"}]}",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o0",
+     "ten": "chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o1",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o2",
+     "ten": "chương trình đào tạo chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.b"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o3",
+     "ten": "chương trình đào tạo tài năng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.c"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o4",
+     "ten": "chương trình đào tạo ngành chính - ngành phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.d"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o5",
+     "ten": "chương trình đào tạo song ngành",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.đ"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o6",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.e"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o7",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội và đối tác nước ngoài cùng cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.g"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o8",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do đối tác nước ngoài cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k2.h"
+     ],
+     "loai": "chuong_trinh"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "LA_MOT",
+     "from": "o1",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "o2",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.b"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "o3",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.c"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "o4",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.d"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "o5",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.đ"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "o6",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.e"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "o7",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.g"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "o8",
+     "to": "o0",
+     "nguon": "qc3626.d6.k2.h"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d6.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o0": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "o1": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "o2": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+    "o3": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+    "o4": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "o5": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "o6": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "o7": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_va_doi_tac_nuoc_ngoai_cung_cap_bang",
+    "o8": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_cap_bang"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao",
+     "ten": "chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+     "ten": "chương trình đào tạo chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.b"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+     "ten": "chương trình đào tạo tài năng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.c"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+     "ten": "chương trình đào tạo ngành chính - ngành phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.d"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+     "ten": "chương trình đào tạo song ngành",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.đ"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.e"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_va_doi_tac_nuoc_ngoai_cung_cap_bang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_va_doi_tac_nuoc_ngoai_cung_cap_bang",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội và đối tác nước ngoài cùng cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.g"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_cap_bang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_cap_bang",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do đối tác nước ngoài cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k2.h"
+     ],
+     "loai": "chuong_trinh"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.b"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.c"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.d"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.đ"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.e"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_va_doi_tac_nuoc_ngoai_cung_cap_bang",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.g"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_cap_bang",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d6.k2.h"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d6.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "615af06060af8dda6b6d388dd6aa630b692a782dad06c877cf95240ca4a3025e",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16218,
+  "output_tokens": 2123,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtrhz26RjpNhJvUtwMW3'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:31:17+07:00",
+  "latency_s": 9.655,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

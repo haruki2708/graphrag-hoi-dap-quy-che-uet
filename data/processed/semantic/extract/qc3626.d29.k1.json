@@ -1,0 +1,326 @@
+{
+ "format": 1,
+ "unit": "qc3626.d29.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k1\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k1\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o3\", \"ten\": \"cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k1\"], \"loai\": \"don_vi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"chuyển đi học tại cơ sở giáo dục đại học khác\", \"bi_danh\": [\"chuyển trường\"], \"nguon\": [\"qc3626.d29.k1\"], \"mo_ta\": \"sinh viên chuyển đi học tại cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"có sự đồng ý của thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k1\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên được chuyển đi khi có sự đồng ý của thủ trưởng đơn vị đào tạo\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"được thủ trưởng đơn vị đào tạo đồng ý\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k1\"], \"mo_ta\": \"Được sự đồng ý của thủ trưởng đơn vị đào tạo\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được chuyển đi học tại cơ sở giáo dục đại học khác\", \"bi_danh\": [], \"nguon\": [\"qc3626.d29.k1\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"sinh viên được chuyển đi học tại cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d29.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d29.k1\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d29.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d29.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o3\", \"nguon\": \"qc3626.d29.k1\"}]}",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o3",
+     "ten": "cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "don_vi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "chuyển đi học tại cơ sở giáo dục đại học khác",
+     "bi_danh": [
+      "chuyển trường"
+     ],
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "mo_ta": "sinh viên chuyển đi học tại cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "có sự đồng ý của thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên được chuyển đi khi có sự đồng ý của thủ trưởng đơn vị đào tạo"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "được thủ trưởng đơn vị đào tạo đồng ý",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "mo_ta": "Được sự đồng ý của thủ trưởng đơn vị đào tạo",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được chuyển đi học tại cơ sở giáo dục đại học khác",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được chuyển đi học tại cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d29.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d29.k1"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d29.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d29.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o3",
+     "nguon": "qc3626.d29.k1"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d29.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien",
+    "o2": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o3": "sem.DoiTuong.co_so_giao_duc_dai_hoc_khac_ngoai_dai_hoc_quoc_gia_ha_noi",
+    "h1": "sem.HoatDong.chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+    "g1": "sem.NhomDieuKien.qc3626.d29.k1.g1",
+    "c1": "sem.DieuKien.qc3626.d29.k1.c1",
+    "q1": "sem.HeQua.duoc_chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.co_so_giao_duc_dai_hoc_khac_ngoai_dai_hoc_quoc_gia_ha_noi",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.co_so_giao_duc_dai_hoc_khac_ngoai_dai_hoc_quoc_gia_ha_noi",
+     "ten": "cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+     "ten": "chuyển đi học tại cơ sở giáo dục đại học khác",
+     "bi_danh": [
+      "chuyển trường"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "mo_ta": "sinh viên chuyển đi học tại cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d29.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d29.k1.g1",
+     "ten": "có sự đồng ý của thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên được chuyển đi khi có sự đồng ý của thủ trưởng đơn vị đào tạo"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d29.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d29.k1.c1",
+     "ten": "được thủ trưởng đơn vị đào tạo đồng ý",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "mo_ta": "Được sự đồng ý của thủ trưởng đơn vị đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+     "ten": "được chuyển đi học tại cơ sở giáo dục đại học khác",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d29.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được chuyển đi học tại cơ sở giáo dục đại học khác ngoài Đại học Quốc gia Hà Nội"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+    "to": "sem.NhomDieuKien.qc3626.d29.k1.g1",
+    "props": {
+     "nguon": "qc3626.d29.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d29.k1.g1",
+    "to": "sem.DieuKien.qc3626.d29.k1.c1",
+    "props": {
+     "nguon": "qc3626.d29.k1"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d29.k1.g1",
+    "to": "sem.HeQua.duoc_chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+    "props": {
+     "nguon": "qc3626.d29.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d29.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.chuyen_di_hoc_tai_co_so_giao_duc_dai_hoc_khac",
+    "to": "sem.DoiTuong.co_so_giao_duc_dai_hoc_khac_ngoai_dai_hoc_quoc_gia_ha_noi",
+    "props": {
+     "nguon": "qc3626.d29.k1"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d29.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "200735d024d92da6bb03e643768223920ad843a6344b0d7154ec71edbbb97f21",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15761,
+  "output_tokens": 1838,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtsk32qcw6PeJi5ByRdS'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:44:52+07:00",
+  "latency_s": 7.785,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

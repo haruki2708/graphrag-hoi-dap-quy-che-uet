@@ -1,0 +1,668 @@
+{
+ "format": 1,
+ "unit": "qc3626.d21.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[9] XET 'c2'->'k1': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[10] XET 'c4'->'k2': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"loai\": \"khac\"}, {\"id\": \"k2\", \"ten\": \"học kỳ phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký học phần\", \"bi_danh\": [\"đăng ký học\"], \"nguon\": [\"qc3626.d21.k3\", \"qc3626.d21.k3.a\", \"qc3626.d21.k3.b\", \"qc3626.d21.k3.c\"], \"mo_ta\": \"sinh viên đăng ký các học phần dự định học trong học kỳ (sau khi tham khảo ý kiến cố vấn học tập), đăng ký học thêm hoặc đổi sang lớp học phần khác\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"hoàn thành đăng ký học phần trước khi học kỳ bắt đầu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên phải hoàn thành đăng ký các học phần chậm nhất 1 tháng trước khi bắt đầu học kỳ\"}, {\"id\": \"g2\", \"ten\": \"đăng ký học thêm hoặc đổi lớp trong thời gian đầu học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Được đăng ký học thêm hoặc đổi lớp khi thuộc một trong hai trường hợp: học kỳ chính trong 2 tuần đầu, hoặc học kỳ phụ trong 1 tuần đầu (lựa chọn một trong hai theo văn bản)\"}, {\"id\": \"g3\", \"ten\": \"học kỳ chính trong 2 tuần đầu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Thuộc học kỳ chính và trong 2 tuần đầu của học kỳ\"}, {\"id\": \"g4\", \"ten\": \"học kỳ phụ trong 1 tuần đầu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Thuộc học kỳ phụ và trong 1 tuần đầu của học kỳ\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"hoàn thành đăng ký học phần ít nhất 1 tháng trước khi bắt đầu học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.b\"], \"mo_ta\": \"Hoàn thành đăng ký các học phần chậm nhất 1 tháng trước khi bắt đầu mỗi học kỳ\", \"min\": 1, \"min_incl\": true, \"don_vi\": \"tháng\", \"so_voi\": \"thời điểm bắt đầu học kỳ\", \"moc\": \"trước khi bắt đầu học kỳ\"}, {\"id\": \"c2\", \"ten\": \"thuộc học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"mo_ta\": \"Học kỳ chính\", \"toan_tu\": \"thuoc\"}, {\"id\": \"c3\", \"ten\": \"trong 2 tuần đầu của học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"mo_ta\": \"Trong 2 tuần đầu của học kỳ chính\", \"max\": 2, \"max_incl\": true, \"don_vi\": \"tuần\", \"so_voi\": \"thời điểm bắt đầu học kỳ\", \"moc\": \"đầu học kỳ chính\"}, {\"id\": \"c4\", \"ten\": \"thuộc học kỳ phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"mo_ta\": \"Học kỳ phụ\", \"toan_tu\": \"thuoc\"}, {\"id\": \"c5\", \"ten\": \"trong 1 tuần đầu của học kỳ phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"mo_ta\": \"Trong 1 tuần đầu của học kỳ phụ\", \"max\": 1, \"max_incl\": true, \"don_vi\": \"tuần\", \"so_voi\": \"thời điểm bắt đầu học kỳ\", \"moc\": \"đầu học kỳ phụ\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được đăng ký học thêm hoặc đổi sang lớp học phần khác\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k3.c\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được phép đăng ký những học phần muốn học thêm hoặc đăng ký đổi sang lớp học phần khác\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d21.k3.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d21.k3.b\"}, {\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g2\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g3\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g4\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c2\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c3\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c4\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c5\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k2\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q1\", \"nguon\": \"qc3626.d21.k3.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k3.c\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "k2",
+     "ten": "học kỳ phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký học phần",
+     "bi_danh": [
+      "đăng ký học"
+     ],
+     "nguon": [
+      "qc3626.d21.k3",
+      "qc3626.d21.k3.a",
+      "qc3626.d21.k3.b",
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "sinh viên đăng ký các học phần dự định học trong học kỳ (sau khi tham khảo ý kiến cố vấn học tập), đăng ký học thêm hoặc đổi sang lớp học phần khác"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "hoàn thành đăng ký học phần trước khi học kỳ bắt đầu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải hoàn thành đăng ký các học phần chậm nhất 1 tháng trước khi bắt đầu học kỳ"
+    },
+    {
+     "id": "g2",
+     "ten": "đăng ký học thêm hoặc đổi lớp trong thời gian đầu học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Được đăng ký học thêm hoặc đổi lớp khi thuộc một trong hai trường hợp: học kỳ chính trong 2 tuần đầu, hoặc học kỳ phụ trong 1 tuần đầu (lựa chọn một trong hai theo văn bản)"
+    },
+    {
+     "id": "g3",
+     "ten": "học kỳ chính trong 2 tuần đầu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Thuộc học kỳ chính và trong 2 tuần đầu của học kỳ"
+    },
+    {
+     "id": "g4",
+     "ten": "học kỳ phụ trong 1 tuần đầu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Thuộc học kỳ phụ và trong 1 tuần đầu của học kỳ"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "hoàn thành đăng ký học phần ít nhất 1 tháng trước khi bắt đầu học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.b"
+     ],
+     "mo_ta": "Hoàn thành đăng ký các học phần chậm nhất 1 tháng trước khi bắt đầu mỗi học kỳ",
+     "min": 1,
+     "min_incl": true,
+     "don_vi": "tháng",
+     "so_voi": "thời điểm bắt đầu học kỳ",
+     "moc": "trước khi bắt đầu học kỳ"
+    },
+    {
+     "id": "c2",
+     "ten": "thuộc học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Học kỳ chính",
+     "toan_tu": "thuoc"
+    },
+    {
+     "id": "c3",
+     "ten": "trong 2 tuần đầu của học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Trong 2 tuần đầu của học kỳ chính",
+     "max": 2,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "so_voi": "thời điểm bắt đầu học kỳ",
+     "moc": "đầu học kỳ chính"
+    },
+    {
+     "id": "c4",
+     "ten": "thuộc học kỳ phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Học kỳ phụ",
+     "toan_tu": "thuoc"
+    },
+    {
+     "id": "c5",
+     "ten": "trong 1 tuần đầu của học kỳ phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Trong 1 tuần đầu của học kỳ phụ",
+     "max": 1,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "so_voi": "thời điểm bắt đầu học kỳ",
+     "moc": "đầu học kỳ phụ"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được đăng ký học thêm hoặc đổi sang lớp học phần khác",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được phép đăng ký những học phần muốn học thêm hoặc đăng ký đổi sang lớp học phần khác"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d21.k3.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d21.k3.b"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g2",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g3",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g4",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c2",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c3",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c4",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c5",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k2",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q1",
+     "nguon": "qc3626.d21.k3.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d21.k3.c"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d21.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_ky_chinh",
+    "k2": "sem.KhaiNiem.hoc_ky_phu",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.dang_ky_hoc_phan",
+    "g1": "sem.NhomDieuKien.qc3626.d21.k3.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d21.k3.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d21.k3.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d21.k3.g4",
+    "c1": "sem.DieuKien.qc3626.d21.k3.c1",
+    "c2": "sem.DieuKien.qc3626.d21.k3.c2",
+    "c3": "sem.DieuKien.qc3626.d21.k3.c3",
+    "c4": "sem.DieuKien.qc3626.d21.k3.c4",
+    "c5": "sem.DieuKien.qc3626.d21.k3.c5",
+    "q1": "sem.HeQua.duoc_dang_ky_hoc_them_hoac_doi_sang_lop_hoc_phan_khac"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_ky_chinh",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_ky_chinh",
+     "ten": "học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_ky_phu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_ky_phu",
+     "ten": "học kỳ phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_phan",
+     "ten": "đăng ký học phần",
+     "bi_danh": [
+      "đăng ký học"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3",
+      "qc3626.d21.k3.a",
+      "qc3626.d21.k3.b",
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "sinh viên đăng ký các học phần dự định học trong học kỳ (sau khi tham khảo ý kiến cố vấn học tập), đăng ký học thêm hoặc đổi sang lớp học phần khác"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k3.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k3.g1",
+     "ten": "hoàn thành đăng ký học phần trước khi học kỳ bắt đầu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải hoàn thành đăng ký các học phần chậm nhất 1 tháng trước khi bắt đầu học kỳ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k3.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k3.g2",
+     "ten": "đăng ký học thêm hoặc đổi lớp trong thời gian đầu học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Được đăng ký học thêm hoặc đổi lớp khi thuộc một trong hai trường hợp: học kỳ chính trong 2 tuần đầu, hoặc học kỳ phụ trong 1 tuần đầu (lựa chọn một trong hai theo văn bản)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k3.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k3.g3",
+     "ten": "học kỳ chính trong 2 tuần đầu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Thuộc học kỳ chính và trong 2 tuần đầu của học kỳ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k3.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k3.g4",
+     "ten": "học kỳ phụ trong 1 tuần đầu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Thuộc học kỳ phụ và trong 1 tuần đầu của học kỳ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k3.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k3.c1",
+     "ten": "hoàn thành đăng ký học phần ít nhất 1 tháng trước khi bắt đầu học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.b"
+     ],
+     "mo_ta": "Hoàn thành đăng ký các học phần chậm nhất 1 tháng trước khi bắt đầu mỗi học kỳ",
+     "min": 1,
+     "min_incl": true,
+     "don_vi": "tháng",
+     "so_voi": "thời điểm bắt đầu học kỳ",
+     "moc": "trước khi bắt đầu học kỳ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k3.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k3.c2",
+     "ten": "thuộc học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Học kỳ chính",
+     "toan_tu": "thuoc"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k3.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k3.c3",
+     "ten": "trong 2 tuần đầu của học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Trong 2 tuần đầu của học kỳ chính",
+     "max": 2,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "so_voi": "thời điểm bắt đầu học kỳ",
+     "moc": "đầu học kỳ chính"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k3.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k3.c4",
+     "ten": "thuộc học kỳ phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Học kỳ phụ",
+     "toan_tu": "thuoc"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k3.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k3.c5",
+     "ten": "trong 1 tuần đầu của học kỳ phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "mo_ta": "Trong 1 tuần đầu của học kỳ phụ",
+     "max": 1,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "so_voi": "thời điểm bắt đầu học kỳ",
+     "moc": "đầu học kỳ phụ"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_dang_ky_hoc_them_hoac_doi_sang_lop_hoc_phan_khac",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_dang_ky_hoc_them_hoac_doi_sang_lop_hoc_phan_khac",
+     "ten": "được đăng ký học thêm hoặc đổi sang lớp học phần khác",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k3.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được phép đăng ký những học phần muốn học thêm hoặc đăng ký đổi sang lớp học phần khác"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_phan",
+    "to": "sem.NhomDieuKien.qc3626.d21.k3.g1",
+    "props": {
+     "nguon": "qc3626.d21.k3.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g1",
+    "to": "sem.DieuKien.qc3626.d21.k3.c1",
+    "props": {
+     "nguon": "qc3626.d21.k3.b"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_phan",
+    "to": "sem.NhomDieuKien.qc3626.d21.k3.g2",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g2",
+    "to": "sem.NhomDieuKien.qc3626.d21.k3.g3",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g2",
+    "to": "sem.NhomDieuKien.qc3626.d21.k3.g4",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g3",
+    "to": "sem.DieuKien.qc3626.d21.k3.c2",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g3",
+    "to": "sem.DieuKien.qc3626.d21.k3.c3",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g4",
+    "to": "sem.DieuKien.qc3626.d21.k3.c4",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g4",
+    "to": "sem.DieuKien.qc3626.d21.k3.c5",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k3.c2",
+    "to": "sem.KhaiNiem.hoc_ky_chinh",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k3.c4",
+    "to": "sem.KhaiNiem.hoc_ky_phu",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d21.k3.g2",
+    "to": "sem.HeQua.duoc_dang_ky_hoc_them_hoac_doi_sang_lop_hoc_phan_khac",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_dang_ky_hoc_them_hoac_doi_sang_lop_hoc_phan_khac",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k3.c"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d21.k3",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "dd17fedc9ef836157e6554c991ed27d4b215d2d2e5947898c683f685e40a594a",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16037,
+  "output_tokens": 6687,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsBx6Y4f6p1i8SadC2i'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:37:36+07:00",
+  "latency_s": 26.187,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

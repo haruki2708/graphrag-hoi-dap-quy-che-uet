@@ -1,0 +1,831 @@
+{
+ "format": 1,
+ "unit": "qc3626.d25.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"tỷ lệ nội dung tương đương\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"dai_luong\"}, {\"id\": \"k2\", \"ten\": \"điểm học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"người học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"văn bằng thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"van_bang\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"xác định chương trình đào tạo văn bằng thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"mo_ta\": \"xác định chương trình đào tạo văn bằng thứ hai cho người học, xử lý kết quả học tập của ngành học thứ nhất theo mức độ tương đương của học phần\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"xử lý học phần của ngành học thứ nhất khi học văn bằng thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Mỗi học phần của ngành học thứ nhất thuộc một trong ba trường hợp theo tỷ lệ nội dung tương đương hoặc chưa học; suy luận là chỉ cần một trường hợp thỏa\"}, {\"id\": \"g2\", \"ten\": \"học phần tương đương từ 80% trở lên và đạt điểm D trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học phần có nội dung tương đương từ 80% trở lên và điểm học phần đạt từ D trở lên thì được bảo lưu kết quả học tập\"}, {\"id\": \"g3\", \"ten\": \"học phần tương đương từ 50% đến dưới 80%\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học phần có nội dung tương đương từ 50% đến dưới 80%\"}, {\"id\": \"g4\", \"ten\": \"học phần chưa học hoặc tương đương dưới 50%\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Học phần chưa học hoặc có nội dung tương đương dưới 50% thì thuộc một trong hai trường hợp, chỉ cần một thỏa\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"tỷ lệ nội dung tương đương từ 80% trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"mo_ta\": \"Học phần có nội dung tương đương từ 80% trở lên\", \"min\": 0.8, \"min_incl\": true, \"thang\": \"ty_le\"}, {\"id\": \"c2\", \"ten\": \"điểm học phần đạt từ D trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"mo_ta\": \"Điểm học phần đạt từ điểm D trở lên\", \"min\": 2, \"min_incl\": true, \"thang\": \"diem_chu\"}, {\"id\": \"c3\", \"ten\": \"tỷ lệ nội dung tương đương từ 50% đến dưới 80%\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"mo_ta\": \"Học phần có nội dung tương đương từ 50% đến dưới 80%\", \"min\": 0.5, \"min_incl\": true, \"max\": 0.8, \"max_incl\": false, \"thang\": \"ty_le\"}, {\"id\": \"c4\", \"ten\": \"tỷ lệ nội dung tương đương dưới 50%\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"mo_ta\": \"Học phần có nội dung tương đương dưới 50%\", \"max\": 0.5, \"max_incl\": false, \"thang\": \"ty_le\"}, {\"id\": \"c5\", \"ten\": \"học phần chưa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"mo_ta\": \"Học phần chưa học\", \"toan_tu\": \"la\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được bảo lưu kết quả học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"người học được bảo lưu kết quả học tập đối với học phần đó trong chương trình đào tạo văn bằng thứ hai\"}, {\"id\": \"q2\", \"ten\": \"không được bảo lưu kết quả học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"che_tai\", \"mo_ta\": \"người học không được bảo lưu kết quả học tập đối với học phần đó\"}, {\"id\": \"q3\", \"ten\": \"được tự học và dự thi để lấy điểm\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"người học có thể tự học và dự thi để lấy điểm học phần đó\"}, {\"id\": \"q4\", \"ten\": \"phải dự học mới được dự thi\", \"bi_danh\": [], \"nguon\": [\"qc3626.d25.k2\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"người học phải dự học học phần đó mới được dự thi theo quy định chung\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o2\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g3\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g4\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c1\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q1\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c3\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q2\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q3\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c4\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c5\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g4\", \"to\": \"q4\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k2\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k1\", \"nguon\": \"qc3626.d25.k2\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k1\", \"nguon\": \"qc3626.d25.k2\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "tỷ lệ nội dung tương đương",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k2",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "người học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "van_bang"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "xác định chương trình đào tạo văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "xác định chương trình đào tạo văn bằng thứ hai cho người học, xử lý kết quả học tập của ngành học thứ nhất theo mức độ tương đương của học phần"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "xử lý học phần của ngành học thứ nhất khi học văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Mỗi học phần của ngành học thứ nhất thuộc một trong ba trường hợp theo tỷ lệ nội dung tương đương hoặc chưa học; suy luận là chỉ cần một trường hợp thỏa"
+    },
+    {
+     "id": "g2",
+     "ten": "học phần tương đương từ 80% trở lên và đạt điểm D trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần có nội dung tương đương từ 80% trở lên và điểm học phần đạt từ D trở lên thì được bảo lưu kết quả học tập"
+    },
+    {
+     "id": "g3",
+     "ten": "học phần tương đương từ 50% đến dưới 80%",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần có nội dung tương đương từ 50% đến dưới 80%"
+    },
+    {
+     "id": "g4",
+     "ten": "học phần chưa học hoặc tương đương dưới 50%",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Học phần chưa học hoặc có nội dung tương đương dưới 50% thì thuộc một trong hai trường hợp, chỉ cần một thỏa"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "tỷ lệ nội dung tương đương từ 80% trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần có nội dung tương đương từ 80% trở lên",
+     "min": 0.8,
+     "min_incl": true,
+     "thang": "ty_le"
+    },
+    {
+     "id": "c2",
+     "ten": "điểm học phần đạt từ D trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Điểm học phần đạt từ điểm D trở lên",
+     "min": 2,
+     "min_incl": true,
+     "thang": "diem_chu"
+    },
+    {
+     "id": "c3",
+     "ten": "tỷ lệ nội dung tương đương từ 50% đến dưới 80%",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần có nội dung tương đương từ 50% đến dưới 80%",
+     "min": 0.5,
+     "min_incl": true,
+     "max": 0.8,
+     "max_incl": false,
+     "thang": "ty_le"
+    },
+    {
+     "id": "c4",
+     "ten": "tỷ lệ nội dung tương đương dưới 50%",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần có nội dung tương đương dưới 50%",
+     "max": 0.5,
+     "max_incl": false,
+     "thang": "ty_le"
+    },
+    {
+     "id": "c5",
+     "ten": "học phần chưa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần chưa học",
+     "toan_tu": "la"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được bảo lưu kết quả học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "người học được bảo lưu kết quả học tập đối với học phần đó trong chương trình đào tạo văn bằng thứ hai"
+    },
+    {
+     "id": "q2",
+     "ten": "không được bảo lưu kết quả học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "che_tai",
+     "mo_ta": "người học không được bảo lưu kết quả học tập đối với học phần đó"
+    },
+    {
+     "id": "q3",
+     "ten": "được tự học và dự thi để lấy điểm",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "người học có thể tự học và dự thi để lấy điểm học phần đó"
+    },
+    {
+     "id": "q4",
+     "ten": "phải dự học mới được dự thi",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "người học phải dự học học phần đó mới được dự thi theo quy định chung"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o2",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g3",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g4",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c1",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q1",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c3",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q2",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q3",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c4",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c5",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g4",
+     "to": "q4",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k2",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k1",
+     "nguon": "qc3626.d25.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k1",
+     "nguon": "qc3626.d25.k2"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d25.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.ty_le_noi_dung_tuong_duong",
+    "k2": "sem.KhaiNiem.diem_hoc_phan",
+    "o1": "sem.DoiTuong.nguoi_hoc",
+    "o2": "sem.DoiTuong.van_bang_thu_hai",
+    "h1": "sem.HoatDong.xac_dinh_chuong_trinh_dao_tao_van_bang_thu_hai",
+    "g1": "sem.NhomDieuKien.qc3626.d25.k2.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d25.k2.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d25.k2.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d25.k2.g4",
+    "c1": "sem.DieuKien.qc3626.d25.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d25.k2.c2",
+    "c3": "sem.DieuKien.qc3626.d25.k2.c3",
+    "c4": "sem.DieuKien.qc3626.d25.k2.c4",
+    "c5": "sem.DieuKien.qc3626.d25.k2.c5",
+    "q1": "sem.HeQua.duoc_bao_luu_ket_qua_hoc_tap",
+    "q2": "sem.HeQua.khong_duoc_bao_luu_ket_qua_hoc_tap",
+    "q3": "sem.HeQua.duoc_tu_hoc_va_du_thi_de_lay_diem",
+    "q4": "sem.HeQua.phai_du_hoc_moi_duoc_du_thi"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.ty_le_noi_dung_tuong_duong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ty_le_noi_dung_tuong_duong",
+     "ten": "tỷ lệ nội dung tương đương",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.nguoi_hoc",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.nguoi_hoc",
+     "ten": "người học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.van_bang_thu_hai",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.van_bang_thu_hai",
+     "ten": "văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "van_bang"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xac_dinh_chuong_trinh_dao_tao_van_bang_thu_hai",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xac_dinh_chuong_trinh_dao_tao_van_bang_thu_hai",
+     "ten": "xác định chương trình đào tạo văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "xác định chương trình đào tạo văn bằng thứ hai cho người học, xử lý kết quả học tập của ngành học thứ nhất theo mức độ tương đương của học phần"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d25.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d25.k2.g1",
+     "ten": "xử lý học phần của ngành học thứ nhất khi học văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Mỗi học phần của ngành học thứ nhất thuộc một trong ba trường hợp theo tỷ lệ nội dung tương đương hoặc chưa học; suy luận là chỉ cần một trường hợp thỏa"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d25.k2.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d25.k2.g2",
+     "ten": "học phần tương đương từ 80% trở lên và đạt điểm D trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần có nội dung tương đương từ 80% trở lên và điểm học phần đạt từ D trở lên thì được bảo lưu kết quả học tập"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d25.k2.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d25.k2.g3",
+     "ten": "học phần tương đương từ 50% đến dưới 80%",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần có nội dung tương đương từ 50% đến dưới 80%"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d25.k2.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d25.k2.g4",
+     "ten": "học phần chưa học hoặc tương đương dưới 50%",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Học phần chưa học hoặc có nội dung tương đương dưới 50% thì thuộc một trong hai trường hợp, chỉ cần một thỏa"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d25.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d25.k2.c1",
+     "ten": "tỷ lệ nội dung tương đương từ 80% trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần có nội dung tương đương từ 80% trở lên",
+     "min": 0.8,
+     "min_incl": true,
+     "thang": "ty_le"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d25.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d25.k2.c2",
+     "ten": "điểm học phần đạt từ D trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Điểm học phần đạt từ điểm D trở lên",
+     "min": 2,
+     "min_incl": true,
+     "thang": "diem_chu"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d25.k2.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d25.k2.c3",
+     "ten": "tỷ lệ nội dung tương đương từ 50% đến dưới 80%",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần có nội dung tương đương từ 50% đến dưới 80%",
+     "min": 0.5,
+     "min_incl": true,
+     "max": 0.8,
+     "max_incl": false,
+     "thang": "ty_le"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d25.k2.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d25.k2.c4",
+     "ten": "tỷ lệ nội dung tương đương dưới 50%",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần có nội dung tương đương dưới 50%",
+     "max": 0.5,
+     "max_incl": false,
+     "thang": "ty_le"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d25.k2.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d25.k2.c5",
+     "ten": "học phần chưa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "mo_ta": "Học phần chưa học",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_bao_luu_ket_qua_hoc_tap",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_bao_luu_ket_qua_hoc_tap",
+     "ten": "được bảo lưu kết quả học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "người học được bảo lưu kết quả học tập đối với học phần đó trong chương trình đào tạo văn bằng thứ hai"
+    }
+   },
+   {
+    "id": "sem.HeQua.khong_duoc_bao_luu_ket_qua_hoc_tap",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.khong_duoc_bao_luu_ket_qua_hoc_tap",
+     "ten": "không được bảo lưu kết quả học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "che_tai",
+     "mo_ta": "người học không được bảo lưu kết quả học tập đối với học phần đó"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tu_hoc_va_du_thi_de_lay_diem",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tu_hoc_va_du_thi_de_lay_diem",
+     "ten": "được tự học và dự thi để lấy điểm",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "người học có thể tự học và dự thi để lấy điểm học phần đó"
+    }
+   },
+   {
+    "id": "sem.HeQua.phai_du_hoc_moi_duoc_du_thi",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.phai_du_hoc_moi_duoc_du_thi",
+     "ten": "phải dự học mới được dự thi",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d25.k2"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "người học phải dự học học phần đó mới được dự thi theo quy định chung"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.xac_dinh_chuong_trinh_dao_tao_van_bang_thu_hai",
+    "to": "sem.NhomDieuKien.qc3626.d25.k2.g1",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.xac_dinh_chuong_trinh_dao_tao_van_bang_thu_hai",
+    "to": "sem.DoiTuong.van_bang_thu_hai",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d25.k2.g2",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d25.k2.g3",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d25.k2.g4",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g2",
+    "to": "sem.DieuKien.qc3626.d25.k2.c1",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g2",
+    "to": "sem.DieuKien.qc3626.d25.k2.c2",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g2",
+    "to": "sem.HeQua.duoc_bao_luu_ket_qua_hoc_tap",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g3",
+    "to": "sem.DieuKien.qc3626.d25.k2.c3",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g3",
+    "to": "sem.HeQua.khong_duoc_bao_luu_ket_qua_hoc_tap",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g3",
+    "to": "sem.HeQua.duoc_tu_hoc_va_du_thi_de_lay_diem",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g4",
+    "to": "sem.DieuKien.qc3626.d25.k2.c4",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g4",
+    "to": "sem.DieuKien.qc3626.d25.k2.c5",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d25.k2.g4",
+    "to": "sem.HeQua.phai_du_hoc_moi_duoc_du_thi",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d25.k2.c1",
+    "to": "sem.KhaiNiem.ty_le_noi_dung_tuong_duong",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d25.k2.c2",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d25.k2.c3",
+    "to": "sem.KhaiNiem.ty_le_noi_dung_tuong_duong",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d25.k2.c4",
+    "to": "sem.KhaiNiem.ty_le_noi_dung_tuong_duong",
+    "props": {
+     "nguon": "qc3626.d25.k2"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d25.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "c401c50f31875841d902305b11f904dc85043e7951cc0bae4d58af184acc24d7",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15956,
+  "output_tokens": 5076,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsapeTs2JcvaVv4jwPP'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:42:47+07:00",
+  "latency_s": 18.955,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

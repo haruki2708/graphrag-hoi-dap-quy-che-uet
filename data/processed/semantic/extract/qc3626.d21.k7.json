@@ -1,0 +1,764 @@
+{
+ "format": 1,
+ "unit": "qc3626.d21.k7",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.a\", \"qc3626.d21.k7.c\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o2\", \"ten\": \"hiệu trưởng trường/chủ nhiệm khoa trực thuộc Đại học Quốc gia Hà Nội\", \"bi_danh\": [\"Hiệu trưởng Trường/Chủ nhiệm khoa trực thuộc Đại học Quốc gia Hà Nội\"], \"nguon\": [\"qc3626.d21.k7.b\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o3\", \"ten\": \"chủ nhiệm khoa thuộc trường đại học thành viên\", \"bi_danh\": [\"Chủ nhiệm khoa thuộc trường đại học thành viên\"], \"nguon\": [\"qc3626.d21.k7.b\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o4\", \"ten\": \"chủ nhiệm bộ môn\", \"bi_danh\": [\"Chủ nhiệm bộ môn\"], \"nguon\": [\"qc3626.d21.k7.b\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o6\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.c\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký đề tài khóa luận hoặc đồ án tốt nghiệp\", \"bi_danh\": [\"Đăng ký đề tài khoá luận hoặc đồ án tốt nghiệp\"], \"nguon\": [\"qc3626.d21.k7\", \"qc3626.d21.k7.a\", \"qc3626.d21.k7.b\"], \"mo_ta\": \"sinh viên đăng ký đề tài, quy trình nhận đề tài, hình thức và thời gian làm khóa luận hoặc đồ án tốt nghiệp\"}, {\"id\": \"h2\", \"ten\": \"đăng ký học phần thay thế khóa luận, đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.c\"], \"mo_ta\": \"sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp đăng ký học các học phần thay thế\"}, {\"id\": \"h3\", \"ten\": \"phân công cán bộ hướng dẫn khóa luận, đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.b\"], \"mo_ta\": \"phân công cán bộ hướng dẫn khóa luận hoặc đồ án tốt nghiệp theo đề nghị của chủ nhiệm bộ môn\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên phải đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định\"}, {\"id\": \"g2\", \"ten\": \"sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp thì đăng ký học các học phần thay thế\"}, {\"id\": \"g3\", \"ten\": \"có đề nghị của chủ nhiệm bộ môn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Việc phân công cán bộ hướng dẫn được thực hiện theo đề nghị của chủ nhiệm bộ môn\"}, {\"id\": \"g4\", \"ten\": \"đề tài được thông qua ở cấp bộ môn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Đề tài do giảng viên hướng dẫn đề nghị và phải được thông qua ở cấp bộ môn\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.a\"], \"mo_ta\": \"Đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.c\"], \"mo_ta\": \"Đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp\", \"toan_tu\": \"co\", \"phu_dinh\": true}, {\"id\": \"c3\", \"ten\": \"có đề nghị của chủ nhiệm bộ môn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.b\"], \"mo_ta\": \"Có đề nghị của chủ nhiệm bộ môn đối với việc phân công cán bộ hướng dẫn\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"đề tài được thông qua ở cấp bộ môn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.b\"], \"mo_ta\": \"Đề tài do giảng viên hướng dẫn đề nghị và được thông qua ở cấp bộ môn\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"phải đăng ký học phần thay thế khóa luận, đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k7.c\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Sinh viên đăng ký học các học phần thay thế cho khóa luận, đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d21.k7.a\"}, {\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g4\", \"nguon\": \"qc3626.d21.k7.b\"}, {\"type\": \"YEU_CAU\", \"from\": \"h2\", \"to\": \"g2\", \"nguon\": \"qc3626.d21.k7.c\"}, {\"type\": \"YEU_CAU\", \"from\": \"h3\", \"to\": \"g3\", \"nguon\": \"qc3626.d21.k7.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d21.k7.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d21.k7.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c3\", \"nguon\": \"qc3626.d21.k7.b\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c4\", \"nguon\": \"qc3626.d21.k7.b\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q1\", \"nguon\": \"qc3626.d21.k7.c\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"h1\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k7.a\", \"noi_dung\": \"quy trình đăng ký nhận đề tài, hình thức và thời gian làm khóa luận hoặc đồ án tốt nghiệp; số lượng khóa luận, đồ án tối đa do một giảng viên hướng dẫn trong cùng thời gian; nhiệm vụ của giảng viên hướng dẫn và trách nhiệm của bộ môn; quy định trích dẫn và chống đạo văn; hình thức, quy trình bảo vệ và đánh giá khóa luận, đồ án tốt nghiệp\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"c1\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k7.a\", \"noi_dung\": \"điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"h2\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k7.c\", \"noi_dung\": \"các học phần thay thế cho khóa luận, đồ án tốt nghiệp\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h3\", \"to\": \"o2\", \"nguon\": \"qc3626.d21.k7.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h3\", \"to\": \"o3\", \"nguon\": \"qc3626.d21.k7.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o6\", \"nguon\": \"qc3626.d21.k7.c\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.a",
+      "qc3626.d21.k7.c"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o2",
+     "ten": "hiệu trưởng trường/chủ nhiệm khoa trực thuộc Đại học Quốc gia Hà Nội",
+     "bi_danh": [
+      "Hiệu trưởng Trường/Chủ nhiệm khoa trực thuộc Đại học Quốc gia Hà Nội"
+     ],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o3",
+     "ten": "chủ nhiệm khoa thuộc trường đại học thành viên",
+     "bi_danh": [
+      "Chủ nhiệm khoa thuộc trường đại học thành viên"
+     ],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o4",
+     "ten": "chủ nhiệm bộ môn",
+     "bi_danh": [
+      "Chủ nhiệm bộ môn"
+     ],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o6",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký đề tài khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [
+      "Đăng ký đề tài khoá luận hoặc đồ án tốt nghiệp"
+     ],
+     "nguon": [
+      "qc3626.d21.k7",
+      "qc3626.d21.k7.a",
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "sinh viên đăng ký đề tài, quy trình nhận đề tài, hình thức và thời gian làm khóa luận hoặc đồ án tốt nghiệp"
+    },
+    {
+     "id": "h2",
+     "ten": "đăng ký học phần thay thế khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "mo_ta": "sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp đăng ký học các học phần thay thế"
+    },
+    {
+     "id": "h3",
+     "ten": "phân công cán bộ hướng dẫn khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "phân công cán bộ hướng dẫn khóa luận hoặc đồ án tốt nghiệp theo đề nghị của chủ nhiệm bộ môn"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định"
+    },
+    {
+     "id": "g2",
+     "ten": "sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp thì đăng ký học các học phần thay thế"
+    },
+    {
+     "id": "g3",
+     "ten": "có đề nghị của chủ nhiệm bộ môn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Việc phân công cán bộ hướng dẫn được thực hiện theo đề nghị của chủ nhiệm bộ môn"
+    },
+    {
+     "id": "g4",
+     "ten": "đề tài được thông qua ở cấp bộ môn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Đề tài do giảng viên hướng dẫn đề nghị và phải được thông qua ở cấp bộ môn"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.a"
+     ],
+     "mo_ta": "Đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "mo_ta": "Đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp",
+     "toan_tu": "co",
+     "phu_dinh": true
+    },
+    {
+     "id": "c3",
+     "ten": "có đề nghị của chủ nhiệm bộ môn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "Có đề nghị của chủ nhiệm bộ môn đối với việc phân công cán bộ hướng dẫn",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "đề tài được thông qua ở cấp bộ môn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "Đề tài do giảng viên hướng dẫn đề nghị và được thông qua ở cấp bộ môn",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "phải đăng ký học phần thay thế khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên đăng ký học các học phần thay thế cho khóa luận, đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d21.k7.a"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g4",
+     "nguon": "qc3626.d21.k7.b"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h2",
+     "to": "g2",
+     "nguon": "qc3626.d21.k7.c"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h3",
+     "to": "g3",
+     "nguon": "qc3626.d21.k7.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d21.k7.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d21.k7.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c3",
+     "nguon": "qc3626.d21.k7.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c4",
+     "nguon": "qc3626.d21.k7.b"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q1",
+     "nguon": "qc3626.d21.k7.c"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h1",
+     "to": "o1",
+     "nguon": "qc3626.d21.k7.a",
+     "noi_dung": "quy trình đăng ký nhận đề tài, hình thức và thời gian làm khóa luận hoặc đồ án tốt nghiệp; số lượng khóa luận, đồ án tối đa do một giảng viên hướng dẫn trong cùng thời gian; nhiệm vụ của giảng viên hướng dẫn và trách nhiệm của bộ môn; quy định trích dẫn và chống đạo văn; hình thức, quy trình bảo vệ và đánh giá khóa luận, đồ án tốt nghiệp"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "c1",
+     "to": "o1",
+     "nguon": "qc3626.d21.k7.a",
+     "noi_dung": "điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h2",
+     "to": "o1",
+     "nguon": "qc3626.d21.k7.c",
+     "noi_dung": "các học phần thay thế cho khóa luận, đồ án tốt nghiệp"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h3",
+     "to": "o2",
+     "nguon": "qc3626.d21.k7.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h3",
+     "to": "o3",
+     "nguon": "qc3626.d21.k7.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o6",
+     "nguon": "qc3626.d21.k7.c"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d21.k7",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o2": "sem.DoiTuong.hieu_truong_truong_chu_nhiem_khoa_truc_thuoc_dai_hoc_quoc_gia_ha_noi",
+    "o3": "sem.DoiTuong.chu_nhiem_khoa_thuoc_truong_dai_hoc_thanh_vien",
+    "o4": "sem.DoiTuong.chu_nhiem_bo_mon",
+    "o6": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.dang_ky_de_tai_khoa_luan_hoac_do_an_tot_nghiep",
+    "h2": "sem.HoatDong.dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+    "h3": "sem.HoatDong.phan_cong_can_bo_huong_dan_khoa_luan_do_an_tot_nghiep",
+    "g1": "sem.NhomDieuKien.qc3626.d21.k7.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d21.k7.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d21.k7.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d21.k7.g4",
+    "c1": "sem.DieuKien.qc3626.d21.k7.c1",
+    "c2": "sem.DieuKien.qc3626.d21.k7.c2",
+    "c3": "sem.DieuKien.qc3626.d21.k7.c3",
+    "c4": "sem.DieuKien.qc3626.d21.k7.c4",
+    "q1": "sem.HeQua.phai_dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.a",
+      "qc3626.d21.k7.c"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.hieu_truong_truong_chu_nhiem_khoa_truc_thuoc_dai_hoc_quoc_gia_ha_noi",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.hieu_truong_truong_chu_nhiem_khoa_truc_thuoc_dai_hoc_quoc_gia_ha_noi",
+     "ten": "hiệu trưởng trường/chủ nhiệm khoa trực thuộc Đại học Quốc gia Hà Nội",
+     "bi_danh": [
+      "Hiệu trưởng Trường/Chủ nhiệm khoa trực thuộc Đại học Quốc gia Hà Nội"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chu_nhiem_khoa_thuoc_truong_dai_hoc_thanh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chu_nhiem_khoa_thuoc_truong_dai_hoc_thanh_vien",
+     "ten": "chủ nhiệm khoa thuộc trường đại học thành viên",
+     "bi_danh": [
+      "Chủ nhiệm khoa thuộc trường đại học thành viên"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chu_nhiem_bo_mon",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chu_nhiem_bo_mon",
+     "ten": "chủ nhiệm bộ môn",
+     "bi_danh": [
+      "Chủ nhiệm bộ môn"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_de_tai_khoa_luan_hoac_do_an_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_de_tai_khoa_luan_hoac_do_an_tot_nghiep",
+     "ten": "đăng ký đề tài khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [
+      "Đăng ký đề tài khoá luận hoặc đồ án tốt nghiệp"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7",
+      "qc3626.d21.k7.a",
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "sinh viên đăng ký đề tài, quy trình nhận đề tài, hình thức và thời gian làm khóa luận hoặc đồ án tốt nghiệp"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+     "ten": "đăng ký học phần thay thế khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "mo_ta": "sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp đăng ký học các học phần thay thế"
+    }
+   },
+   {
+    "id": "sem.HoatDong.phan_cong_can_bo_huong_dan_khoa_luan_do_an_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.phan_cong_can_bo_huong_dan_khoa_luan_do_an_tot_nghiep",
+     "ten": "phân công cán bộ hướng dẫn khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "phân công cán bộ hướng dẫn khóa luận hoặc đồ án tốt nghiệp theo đề nghị của chủ nhiệm bộ môn"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k7.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k7.g1",
+     "ten": "điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k7.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k7.g2",
+     "ten": "sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên không đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp thì đăng ký học các học phần thay thế"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k7.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k7.g3",
+     "ten": "có đề nghị của chủ nhiệm bộ môn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Việc phân công cán bộ hướng dẫn được thực hiện theo đề nghị của chủ nhiệm bộ môn"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k7.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k7.g4",
+     "ten": "đề tài được thông qua ở cấp bộ môn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Đề tài do giảng viên hướng dẫn đề nghị và phải được thông qua ở cấp bộ môn"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k7.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k7.c1",
+     "ten": "đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.a"
+     ],
+     "mo_ta": "Đáp ứng điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k7.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k7.c2",
+     "ten": "đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "mo_ta": "Đủ điều kiện làm khóa luận hoặc đồ án tốt nghiệp",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k7.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k7.c3",
+     "ten": "có đề nghị của chủ nhiệm bộ môn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "Có đề nghị của chủ nhiệm bộ môn đối với việc phân công cán bộ hướng dẫn",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k7.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k7.c4",
+     "ten": "đề tài được thông qua ở cấp bộ môn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.b"
+     ],
+     "mo_ta": "Đề tài do giảng viên hướng dẫn đề nghị và được thông qua ở cấp bộ môn",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.phai_dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.phai_dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+     "ten": "phải đăng ký học phần thay thế khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k7.c"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên đăng ký học các học phần thay thế cho khóa luận, đồ án tốt nghiệp do thủ trưởng đơn vị đào tạo quy định"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_de_tai_khoa_luan_hoac_do_an_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d21.k7.g1",
+    "props": {
+     "nguon": "qc3626.d21.k7.a"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_de_tai_khoa_luan_hoac_do_an_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d21.k7.g4",
+    "props": {
+     "nguon": "qc3626.d21.k7.b"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d21.k7.g2",
+    "props": {
+     "nguon": "qc3626.d21.k7.c"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.phan_cong_can_bo_huong_dan_khoa_luan_do_an_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d21.k7.g3",
+    "props": {
+     "nguon": "qc3626.d21.k7.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k7.g1",
+    "to": "sem.DieuKien.qc3626.d21.k7.c1",
+    "props": {
+     "nguon": "qc3626.d21.k7.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k7.g2",
+    "to": "sem.DieuKien.qc3626.d21.k7.c2",
+    "props": {
+     "nguon": "qc3626.d21.k7.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k7.g3",
+    "to": "sem.DieuKien.qc3626.d21.k7.c3",
+    "props": {
+     "nguon": "qc3626.d21.k7.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k7.g4",
+    "to": "sem.DieuKien.qc3626.d21.k7.c4",
+    "props": {
+     "nguon": "qc3626.d21.k7.b"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d21.k7.g2",
+    "to": "sem.HeQua.phai_dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+    "props": {
+     "nguon": "qc3626.d21.k7.c"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.dang_ky_de_tai_khoa_luan_hoac_do_an_tot_nghiep",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d21.k7.a",
+     "noi_dung": "quy trình đăng ký nhận đề tài, hình thức và thời gian làm khóa luận hoặc đồ án tốt nghiệp; số lượng khóa luận, đồ án tối đa do một giảng viên hướng dẫn trong cùng thời gian; nhiệm vụ của giảng viên hướng dẫn và trách nhiệm của bộ môn; quy định trích dẫn và chống đạo văn; hình thức, quy trình bảo vệ và đánh giá khóa luận, đồ án tốt nghiệp"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.DieuKien.qc3626.d21.k7.c1",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d21.k7.a",
+     "noi_dung": "điều kiện được đăng ký làm khóa luận hoặc đồ án tốt nghiệp"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d21.k7.c",
+     "noi_dung": "các học phần thay thế cho khóa luận, đồ án tốt nghiệp"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.phan_cong_can_bo_huong_dan_khoa_luan_do_an_tot_nghiep",
+    "to": "sem.DoiTuong.hieu_truong_truong_chu_nhiem_khoa_truc_thuoc_dai_hoc_quoc_gia_ha_noi",
+    "props": {
+     "nguon": "qc3626.d21.k7.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.phan_cong_can_bo_huong_dan_khoa_luan_do_an_tot_nghiep",
+    "to": "sem.DoiTuong.chu_nhiem_khoa_thuoc_truong_dai_hoc_thanh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k7.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.phai_dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k7.c"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d21.k7",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "c1d367f677724e0c2f77491cfdce4c647b294338f35d20e918efd4e11f2d3d44",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16441,
+  "output_tokens": 10435,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsHuSy5uNNosQU1mPwP'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:38:57+07:00",
+  "latency_s": 38.407,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

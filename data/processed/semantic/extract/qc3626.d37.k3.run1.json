@@ -1,0 +1,86 @@
+{
+ "format": 1,
+ "unit": "qc3626.d37.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"kiểm tra đánh giá giữa kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d37.k3\"], \"loai\": \"khac\", \"dinh_nghia\": \"Hoạt động của giảng viên vào những thời điểm đã được quy định trong đề cương học phần, nhằm đánh giá mức độ đạt mục tiêu học phần ở giai đoạn tương ứng của sinh viên\"}], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": []}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "kiểm tra đánh giá giữa kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d37.k3"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Hoạt động của giảng viên vào những thời điểm đã được quy định trong đề cương học phần, nhằm đánh giá mức độ đạt mục tiêu học phần ở giai đoạn tương ứng của sinh viên"
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": []
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d37.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.kiem_tra_danh_gia_giua_ky"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.kiem_tra_danh_gia_giua_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.kiem_tra_danh_gia_giua_ky",
+     "ten": "kiểm tra đánh giá giữa kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d37.k3"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Hoạt động của giảng viên vào những thời điểm đã được quy định trong đề cương học phần, nhằm đánh giá mức độ đạt mục tiêu học phần ở giai đoạn tương ứng của sinh viên"
+    }
+   }
+  ],
+  "edges": []
+ },
+ "metadata": {
+  "unit": "qc3626.d37.k3",
+  "role": "extract",
+  "run": 1,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "b213626f53ddea0fc956d7df5943c66b26e4af5c0f6f546599a6372d0c4f581a",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15787,
+  "output_tokens": 832,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtuotN43bzzmcLGAZ2aY'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T15:11:58+07:00",
+  "latency_s": 4.835,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

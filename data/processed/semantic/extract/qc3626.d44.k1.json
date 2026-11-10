@@ -1,0 +1,1643 @@
+{
+ "format": 1,
+ "unit": "qc3626.d44.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [\"điểm trung bình chung tích luỹ\"], \"nguon\": [\"qc3626.d44.k1.a\"], \"loai\": \"dai_luong\"}, {\"id\": \"k2\", \"ten\": \"điểm trung bình chung học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"năm đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"loai\": \"dai_luong\"}, {\"id\": \"k5\", \"ten\": \"tín chỉ học phần bị điểm F còn tồn đọng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.c\"], \"loai\": \"dai_luong\"}, {\"id\": \"k6\", \"ten\": \"tổng số tín chỉ không đạt trong học kỳ\", \"bi_danh\": [\"tổng số tín chỉ không đạt trong học kì\"], \"nguon\": [\"qc3626.d44.k1.c\"], \"loai\": \"dai_luong\"}, {\"id\": \"k7\", \"ten\": \"khối lượng đăng ký học trong học kỳ\", \"bi_danh\": [\"khối lượng đăng kí học trong học kì\"], \"nguon\": [\"qc3626.d44.k1.c\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"cảnh báo học vụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1\"], \"mo_ta\": \"đơn vị đào tạo cảnh báo học vụ theo từng học kỳ cho sinh viên có kết quả học tập thuộc diện cảnh báo\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"các điều kiện cảnh báo học vụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên bị cảnh báo học vụ khi thuộc một trong các điều kiện a, b, c; đơn vị chọn áp dụng một hoặc hai trong ba điều kiện nên suy luận là OR\"}, {\"id\": \"g2\", \"ten\": \"điểm trung bình chung tích lũy thấp theo năm đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Thuộc một trong bốn trường hợp theo năm đào tạo, mỗi trường hợp gồm năm đào tạo tương ứng và điểm trung bình chung tích lũy dưới ngưỡng\"}, {\"id\": \"g3\", \"ten\": \"điểm trung bình chung học kỳ thấp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Thuộc một trong hai trường hợp: học kỳ đầu của khóa học hoặc các học kỳ tiếp theo, mỗi trường hợp kèm ngưỡng điểm tương ứng\"}, {\"id\": \"g4\", \"ten\": \"tín chỉ F tồn đọng hoặc tín chỉ không đạt vượt ngưỡng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.c\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Tổng số tín chỉ F còn tồn đọng vượt 24 hoặc tổng số tín chỉ không đạt trong học kỳ vượt 50% khối lượng đăng ký\"}, {\"id\": \"g5\", \"ten\": \"sinh viên năm thứ nhất có điểm trung bình chung tích lũy dưới 1,20\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên năm thứ nhất và điểm trung bình chung tích lũy dưới 1,20\"}, {\"id\": \"g6\", \"ten\": \"sinh viên năm thứ hai có điểm trung bình chung tích lũy dưới 1,40\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên năm thứ hai và điểm trung bình chung tích lũy dưới 1,40\"}, {\"id\": \"g7\", \"ten\": \"sinh viên năm thứ ba có điểm trung bình chung tích lũy dưới 1,60\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên năm thứ ba và điểm trung bình chung tích lũy dưới 1,60\"}, {\"id\": \"g8\", \"ten\": \"sinh viên các năm tiếp theo và cuối khóa có điểm trung bình chung tích lũy dưới 1,80\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên các năm tiếp theo và cuối khóa và điểm trung bình chung tích lũy dưới 1,80\"}, {\"id\": \"g9\", \"ten\": \"học kỳ đầu của khóa học có điểm trung bình chung học kỳ dưới 0,80\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học kỳ đầu của khóa học và điểm trung bình chung học kỳ dưới 0,80\"}, {\"id\": \"g10\", \"ten\": \"các học kỳ tiếp theo có điểm trung bình chung học kỳ dưới 1,00\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Các học kỳ tiếp theo của khóa học và điểm trung bình chung học kỳ dưới 1,00\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"sinh viên năm thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Sinh viên năm thứ nhất\", \"min\": 1, \"max\": 1, \"min_incl\": true, \"max_incl\": true, \"thang\": \"nam_dao_tao\"}, {\"id\": \"c2\", \"ten\": \"điểm trung bình chung tích lũy dưới 1,20\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Điểm trung bình chung tích lũy dưới 1,20\", \"max\": 1.2, \"max_incl\": false, \"thang\": \"thang_4\"}, {\"id\": \"c3\", \"ten\": \"sinh viên năm thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Sinh viên năm thứ hai\", \"min\": 2, \"max\": 2, \"min_incl\": true, \"max_incl\": true, \"thang\": \"nam_dao_tao\"}, {\"id\": \"c4\", \"ten\": \"điểm trung bình chung tích lũy dưới 1,40\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Điểm trung bình chung tích lũy dưới 1,40\", \"max\": 1.4, \"max_incl\": false, \"thang\": \"thang_4\"}, {\"id\": \"c5\", \"ten\": \"sinh viên năm thứ ba\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Sinh viên năm thứ ba\", \"min\": 3, \"max\": 3, \"min_incl\": true, \"max_incl\": true, \"thang\": \"nam_dao_tao\"}, {\"id\": \"c6\", \"ten\": \"điểm trung bình chung tích lũy dưới 1,60\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Điểm trung bình chung tích lũy dưới 1,60\", \"max\": 1.6, \"max_incl\": false, \"thang\": \"thang_4\"}, {\"id\": \"c7\", \"ten\": \"sinh viên các năm tiếp theo và cuối khóa\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Sinh viên các năm tiếp theo và cuối khóa\", \"min\": 4, \"min_incl\": true, \"thang\": \"nam_dao_tao\"}, {\"id\": \"c8\", \"ten\": \"điểm trung bình chung tích lũy dưới 1,80\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.a\"], \"mo_ta\": \"Điểm trung bình chung tích lũy dưới 1,80\", \"max\": 1.8, \"max_incl\": false, \"thang\": \"thang_4\"}, {\"id\": \"c9\", \"ten\": \"học kỳ đầu của khóa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"mo_ta\": \"Học kỳ đầu của khóa học\", \"toan_tu\": \"la\", \"moc\": \"học kỳ đầu của khóa học\"}, {\"id\": \"c10\", \"ten\": \"điểm trung bình chung học kỳ dưới 0,80\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"mo_ta\": \"Điểm trung bình chung học kỳ dưới 0,80\", \"max\": 0.8, \"max_incl\": false, \"thang\": \"thang_4\"}, {\"id\": \"c11\", \"ten\": \"các học kỳ tiếp theo của khóa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"mo_ta\": \"Các học kỳ tiếp theo của khóa học\", \"toan_tu\": \"la\", \"moc\": \"các học kỳ tiếp theo của khóa học\"}, {\"id\": \"c12\", \"ten\": \"điểm trung bình chung học kỳ dưới 1,00\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.b\"], \"mo_ta\": \"Điểm trung bình chung học kỳ dưới 1,00\", \"max\": 1.0, \"max_incl\": false, \"thang\": \"thang_4\"}, {\"id\": \"c13\", \"ten\": \"tổng số tín chỉ F còn tồn đọng vượt 24 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.c\"], \"mo_ta\": \"Tổng số tín chỉ của các học phần bị điểm F còn tồn đọng đã quá 24 tín chỉ\", \"min\": 24, \"min_incl\": false, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\", \"moc\": \"tính từ đầu khóa học đến thời điểm xét\"}, {\"id\": \"c14\", \"ten\": \"tổng số tín chỉ không đạt trong học kỳ vượt 50% khối lượng đăng ký\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1.c\"], \"mo_ta\": \"Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đăng ký học trong học kỳ\", \"min\": 0.5, \"min_incl\": false, \"thang\": \"ty_le\", \"so_voi\": \"khối lượng đăng ký học trong học kỳ\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"bị cảnh báo học vụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k1\"], \"loai\": \"trang_thai\", \"mo_ta\": \"Sinh viên bị cảnh báo học vụ theo từng học kỳ; số lần cảnh báo do thủ trưởng đơn vị đào tạo quy định, không quá 2 lần liên tiếp\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d44.k1\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d44.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o2\", \"nguon\": \"qc3626.d44.k1\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d44.k1\", \"noi_dung\": \"áp dụng một hoặc hai trong ba điều kiện cảnh báo kết quả học tập và quy định số lần cảnh báo học vụ, nhưng không quá 2 lần liên tiếp\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g3\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g4\", \"nguon\": \"qc3626.d44.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g5\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g6\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g7\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g8\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g5\", \"to\": \"c1\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g5\", \"to\": \"c2\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g6\", \"to\": \"c3\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g6\", \"to\": \"c4\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g7\", \"to\": \"c5\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g7\", \"to\": \"c6\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g8\", \"to\": \"c7\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g8\", \"to\": \"c8\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"g9\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"g10\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g9\", \"to\": \"c9\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g9\", \"to\": \"c10\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g10\", \"to\": \"c11\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g10\", \"to\": \"c12\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c13\", \"nguon\": \"qc3626.d44.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c14\", \"nguon\": \"qc3626.d44.k1.c\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k3\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k3\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k1\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"k3\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c6\", \"to\": \"k1\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c7\", \"to\": \"k3\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c8\", \"to\": \"k1\", \"nguon\": \"qc3626.d44.k1.a\"}, {\"type\": \"XET\", \"from\": \"c10\", \"to\": \"k2\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"XET\", \"from\": \"c12\", \"to\": \"k2\", \"nguon\": \"qc3626.d44.k1.b\"}, {\"type\": \"XET\", \"from\": \"c13\", \"to\": \"k5\", \"nguon\": \"qc3626.d44.k1.c\"}, {\"type\": \"XET\", \"from\": \"c14\", \"to\": \"k6\", \"nguon\": \"qc3626.d44.k1.c\"}, {\"type\": \"XET\", \"from\": \"c14\", \"to\": \"k7\", \"nguon\": \"qc3626.d44.k1.c\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k2",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "năm đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k5",
+     "ten": "tín chỉ học phần bị điểm F còn tồn đọng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k6",
+     "ten": "tổng số tín chỉ không đạt trong học kỳ",
+     "bi_danh": [
+      "tổng số tín chỉ không đạt trong học kì"
+     ],
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k7",
+     "ten": "khối lượng đăng ký học trong học kỳ",
+     "bi_danh": [
+      "khối lượng đăng kí học trong học kì"
+     ],
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "cảnh báo học vụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "mo_ta": "đơn vị đào tạo cảnh báo học vụ theo từng học kỳ cho sinh viên có kết quả học tập thuộc diện cảnh báo"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "các điều kiện cảnh báo học vụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên bị cảnh báo học vụ khi thuộc một trong các điều kiện a, b, c; đơn vị chọn áp dụng một hoặc hai trong ba điều kiện nên suy luận là OR"
+    },
+    {
+     "id": "g2",
+     "ten": "điểm trung bình chung tích lũy thấp theo năm đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong bốn trường hợp theo năm đào tạo, mỗi trường hợp gồm năm đào tạo tương ứng và điểm trung bình chung tích lũy dưới ngưỡng"
+    },
+    {
+     "id": "g3",
+     "ten": "điểm trung bình chung học kỳ thấp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong hai trường hợp: học kỳ đầu của khóa học hoặc các học kỳ tiếp theo, mỗi trường hợp kèm ngưỡng điểm tương ứng"
+    },
+    {
+     "id": "g4",
+     "ten": "tín chỉ F tồn đọng hoặc tín chỉ không đạt vượt ngưỡng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Tổng số tín chỉ F còn tồn đọng vượt 24 hoặc tổng số tín chỉ không đạt trong học kỳ vượt 50% khối lượng đăng ký"
+    },
+    {
+     "id": "g5",
+     "ten": "sinh viên năm thứ nhất có điểm trung bình chung tích lũy dưới 1,20",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên năm thứ nhất và điểm trung bình chung tích lũy dưới 1,20"
+    },
+    {
+     "id": "g6",
+     "ten": "sinh viên năm thứ hai có điểm trung bình chung tích lũy dưới 1,40",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên năm thứ hai và điểm trung bình chung tích lũy dưới 1,40"
+    },
+    {
+     "id": "g7",
+     "ten": "sinh viên năm thứ ba có điểm trung bình chung tích lũy dưới 1,60",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên năm thứ ba và điểm trung bình chung tích lũy dưới 1,60"
+    },
+    {
+     "id": "g8",
+     "ten": "sinh viên các năm tiếp theo và cuối khóa có điểm trung bình chung tích lũy dưới 1,80",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên các năm tiếp theo và cuối khóa và điểm trung bình chung tích lũy dưới 1,80"
+    },
+    {
+     "id": "g9",
+     "ten": "học kỳ đầu của khóa học có điểm trung bình chung học kỳ dưới 0,80",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học kỳ đầu của khóa học và điểm trung bình chung học kỳ dưới 0,80"
+    },
+    {
+     "id": "g10",
+     "ten": "các học kỳ tiếp theo có điểm trung bình chung học kỳ dưới 1,00",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Các học kỳ tiếp theo của khóa học và điểm trung bình chung học kỳ dưới 1,00"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "sinh viên năm thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên năm thứ nhất",
+     "min": 1,
+     "max": 1,
+     "min_incl": true,
+     "max_incl": true,
+     "thang": "nam_dao_tao"
+    },
+    {
+     "id": "c2",
+     "ten": "điểm trung bình chung tích lũy dưới 1,20",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,20",
+     "max": 1.2,
+     "max_incl": false,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c3",
+     "ten": "sinh viên năm thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên năm thứ hai",
+     "min": 2,
+     "max": 2,
+     "min_incl": true,
+     "max_incl": true,
+     "thang": "nam_dao_tao"
+    },
+    {
+     "id": "c4",
+     "ten": "điểm trung bình chung tích lũy dưới 1,40",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,40",
+     "max": 1.4,
+     "max_incl": false,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c5",
+     "ten": "sinh viên năm thứ ba",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên năm thứ ba",
+     "min": 3,
+     "max": 3,
+     "min_incl": true,
+     "max_incl": true,
+     "thang": "nam_dao_tao"
+    },
+    {
+     "id": "c6",
+     "ten": "điểm trung bình chung tích lũy dưới 1,60",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,60",
+     "max": 1.6,
+     "max_incl": false,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c7",
+     "ten": "sinh viên các năm tiếp theo và cuối khóa",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên các năm tiếp theo và cuối khóa",
+     "min": 4,
+     "min_incl": true,
+     "thang": "nam_dao_tao"
+    },
+    {
+     "id": "c8",
+     "ten": "điểm trung bình chung tích lũy dưới 1,80",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,80",
+     "max": 1.8,
+     "max_incl": false,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c9",
+     "ten": "học kỳ đầu của khóa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Học kỳ đầu của khóa học",
+     "toan_tu": "la",
+     "moc": "học kỳ đầu của khóa học"
+    },
+    {
+     "id": "c10",
+     "ten": "điểm trung bình chung học kỳ dưới 0,80",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Điểm trung bình chung học kỳ dưới 0,80",
+     "max": 0.8,
+     "max_incl": false,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c11",
+     "ten": "các học kỳ tiếp theo của khóa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Các học kỳ tiếp theo của khóa học",
+     "toan_tu": "la",
+     "moc": "các học kỳ tiếp theo của khóa học"
+    },
+    {
+     "id": "c12",
+     "ten": "điểm trung bình chung học kỳ dưới 1,00",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Điểm trung bình chung học kỳ dưới 1,00",
+     "max": 1.0,
+     "max_incl": false,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c13",
+     "ten": "tổng số tín chỉ F còn tồn đọng vượt 24 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "mo_ta": "Tổng số tín chỉ của các học phần bị điểm F còn tồn đọng đã quá 24 tín chỉ",
+     "min": 24,
+     "min_incl": false,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi",
+     "moc": "tính từ đầu khóa học đến thời điểm xét"
+    },
+    {
+     "id": "c14",
+     "ten": "tổng số tín chỉ không đạt trong học kỳ vượt 50% khối lượng đăng ký",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "mo_ta": "Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đăng ký học trong học kỳ",
+     "min": 0.5,
+     "min_incl": false,
+     "thang": "ty_le",
+     "so_voi": "khối lượng đăng ký học trong học kỳ"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "bị cảnh báo học vụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "Sinh viên bị cảnh báo học vụ theo từng học kỳ; số lần cảnh báo do thủ trưởng đơn vị đào tạo quy định, không quá 2 lần liên tiếp"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d44.k1"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d44.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o2",
+     "nguon": "qc3626.d44.k1"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d44.k1",
+     "noi_dung": "áp dụng một hoặc hai trong ba điều kiện cảnh báo kết quả học tập và quy định số lần cảnh báo học vụ, nhưng không quá 2 lần liên tiếp"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g3",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g4",
+     "nguon": "qc3626.d44.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g5",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g6",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g7",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g8",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g5",
+     "to": "c1",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g5",
+     "to": "c2",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g6",
+     "to": "c3",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g6",
+     "to": "c4",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g7",
+     "to": "c5",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g7",
+     "to": "c6",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g8",
+     "to": "c7",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g8",
+     "to": "c8",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "g9",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "g10",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g9",
+     "to": "c9",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g9",
+     "to": "c10",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g10",
+     "to": "c11",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g10",
+     "to": "c12",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c13",
+     "nguon": "qc3626.d44.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c14",
+     "nguon": "qc3626.d44.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k3",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k3",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k1",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "k3",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c6",
+     "to": "k1",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c7",
+     "to": "k3",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c8",
+     "to": "k1",
+     "nguon": "qc3626.d44.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c10",
+     "to": "k2",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "XET",
+     "from": "c12",
+     "to": "k2",
+     "nguon": "qc3626.d44.k1.b"
+    },
+    {
+     "type": "XET",
+     "from": "c13",
+     "to": "k5",
+     "nguon": "qc3626.d44.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c14",
+     "to": "k6",
+     "nguon": "qc3626.d44.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c14",
+     "to": "k7",
+     "nguon": "qc3626.d44.k1.c"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d44.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "k2": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "k3": "sem.KhaiNiem.nam_dao_tao",
+    "k5": "sem.KhaiNiem.tin_chi_hoc_phan_bi_diem_f_con_ton_dong",
+    "k6": "sem.KhaiNiem.tong_so_tin_chi_khong_dat_trong_hoc_ky",
+    "k7": "sem.KhaiNiem.khoi_luong_dang_ky_hoc_trong_hoc_ky",
+    "o1": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o2": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.canh_bao_hoc_vu",
+    "g1": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d44.k1.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d44.k1.g4",
+    "g5": "sem.NhomDieuKien.qc3626.d44.k1.g5",
+    "g6": "sem.NhomDieuKien.qc3626.d44.k1.g6",
+    "g7": "sem.NhomDieuKien.qc3626.d44.k1.g7",
+    "g8": "sem.NhomDieuKien.qc3626.d44.k1.g8",
+    "g9": "sem.NhomDieuKien.qc3626.d44.k1.g9",
+    "g10": "sem.NhomDieuKien.qc3626.d44.k1.g10",
+    "c1": "sem.DieuKien.qc3626.d44.k1.c1",
+    "c2": "sem.DieuKien.qc3626.d44.k1.c2",
+    "c3": "sem.DieuKien.qc3626.d44.k1.c3",
+    "c4": "sem.DieuKien.qc3626.d44.k1.c4",
+    "c5": "sem.DieuKien.qc3626.d44.k1.c5",
+    "c6": "sem.DieuKien.qc3626.d44.k1.c6",
+    "c7": "sem.DieuKien.qc3626.d44.k1.c7",
+    "c8": "sem.DieuKien.qc3626.d44.k1.c8",
+    "c9": "sem.DieuKien.qc3626.d44.k1.c9",
+    "c10": "sem.DieuKien.qc3626.d44.k1.c10",
+    "c11": "sem.DieuKien.qc3626.d44.k1.c11",
+    "c12": "sem.DieuKien.qc3626.d44.k1.c12",
+    "c13": "sem.DieuKien.qc3626.d44.k1.c13",
+    "c14": "sem.DieuKien.qc3626.d44.k1.c14",
+    "q1": "sem.HeQua.bi_canh_bao_hoc_vu"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.nam_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.nam_dao_tao",
+     "ten": "năm đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.tin_chi_hoc_phan_bi_diem_f_con_ton_dong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.tin_chi_hoc_phan_bi_diem_f_con_ton_dong",
+     "ten": "tín chỉ học phần bị điểm F còn tồn đọng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.tong_so_tin_chi_khong_dat_trong_hoc_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.tong_so_tin_chi_khong_dat_trong_hoc_ky",
+     "ten": "tổng số tín chỉ không đạt trong học kỳ",
+     "bi_danh": [
+      "tổng số tín chỉ không đạt trong học kì"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.khoi_luong_dang_ky_hoc_trong_hoc_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoi_luong_dang_ky_hoc_trong_hoc_ky",
+     "ten": "khối lượng đăng ký học trong học kỳ",
+     "bi_danh": [
+      "khối lượng đăng kí học trong học kì"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.canh_bao_hoc_vu",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.canh_bao_hoc_vu",
+     "ten": "cảnh báo học vụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "mo_ta": "đơn vị đào tạo cảnh báo học vụ theo từng học kỳ cho sinh viên có kết quả học tập thuộc diện cảnh báo"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+     "ten": "các điều kiện cảnh báo học vụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên bị cảnh báo học vụ khi thuộc một trong các điều kiện a, b, c; đơn vị chọn áp dụng một hoặc hai trong ba điều kiện nên suy luận là OR"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+     "ten": "điểm trung bình chung tích lũy thấp theo năm đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong bốn trường hợp theo năm đào tạo, mỗi trường hợp gồm năm đào tạo tương ứng và điểm trung bình chung tích lũy dưới ngưỡng"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g3",
+     "ten": "điểm trung bình chung học kỳ thấp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong hai trường hợp: học kỳ đầu của khóa học hoặc các học kỳ tiếp theo, mỗi trường hợp kèm ngưỡng điểm tương ứng"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g4",
+     "ten": "tín chỉ F tồn đọng hoặc tín chỉ không đạt vượt ngưỡng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Tổng số tín chỉ F còn tồn đọng vượt 24 hoặc tổng số tín chỉ không đạt trong học kỳ vượt 50% khối lượng đăng ký"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g5",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g5",
+     "ten": "sinh viên năm thứ nhất có điểm trung bình chung tích lũy dưới 1,20",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên năm thứ nhất và điểm trung bình chung tích lũy dưới 1,20"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g6",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g6",
+     "ten": "sinh viên năm thứ hai có điểm trung bình chung tích lũy dưới 1,40",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên năm thứ hai và điểm trung bình chung tích lũy dưới 1,40"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g7",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g7",
+     "ten": "sinh viên năm thứ ba có điểm trung bình chung tích lũy dưới 1,60",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên năm thứ ba và điểm trung bình chung tích lũy dưới 1,60"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g8",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g8",
+     "ten": "sinh viên các năm tiếp theo và cuối khóa có điểm trung bình chung tích lũy dưới 1,80",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên các năm tiếp theo và cuối khóa và điểm trung bình chung tích lũy dưới 1,80"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g9",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g9",
+     "ten": "học kỳ đầu của khóa học có điểm trung bình chung học kỳ dưới 0,80",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học kỳ đầu của khóa học và điểm trung bình chung học kỳ dưới 0,80"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k1.g10",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k1.g10",
+     "ten": "các học kỳ tiếp theo có điểm trung bình chung học kỳ dưới 1,00",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Các học kỳ tiếp theo của khóa học và điểm trung bình chung học kỳ dưới 1,00"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c1",
+     "ten": "sinh viên năm thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên năm thứ nhất",
+     "min": 1,
+     "max": 1,
+     "min_incl": true,
+     "max_incl": true,
+     "thang": "nam_dao_tao"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c2",
+     "ten": "điểm trung bình chung tích lũy dưới 1,20",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,20",
+     "max": 1.2,
+     "max_incl": false,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c3",
+     "ten": "sinh viên năm thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên năm thứ hai",
+     "min": 2,
+     "max": 2,
+     "min_incl": true,
+     "max_incl": true,
+     "thang": "nam_dao_tao"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c4",
+     "ten": "điểm trung bình chung tích lũy dưới 1,40",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,40",
+     "max": 1.4,
+     "max_incl": false,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c5",
+     "ten": "sinh viên năm thứ ba",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên năm thứ ba",
+     "min": 3,
+     "max": 3,
+     "min_incl": true,
+     "max_incl": true,
+     "thang": "nam_dao_tao"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c6",
+     "ten": "điểm trung bình chung tích lũy dưới 1,60",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,60",
+     "max": 1.6,
+     "max_incl": false,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c7",
+     "ten": "sinh viên các năm tiếp theo và cuối khóa",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Sinh viên các năm tiếp theo và cuối khóa",
+     "min": 4,
+     "min_incl": true,
+     "thang": "nam_dao_tao"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c8",
+     "ten": "điểm trung bình chung tích lũy dưới 1,80",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.a"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy dưới 1,80",
+     "max": 1.8,
+     "max_incl": false,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c9",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c9",
+     "ten": "học kỳ đầu của khóa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Học kỳ đầu của khóa học",
+     "toan_tu": "la",
+     "moc": "học kỳ đầu của khóa học"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c10",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c10",
+     "ten": "điểm trung bình chung học kỳ dưới 0,80",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Điểm trung bình chung học kỳ dưới 0,80",
+     "max": 0.8,
+     "max_incl": false,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c11",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c11",
+     "ten": "các học kỳ tiếp theo của khóa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Các học kỳ tiếp theo của khóa học",
+     "toan_tu": "la",
+     "moc": "các học kỳ tiếp theo của khóa học"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c12",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c12",
+     "ten": "điểm trung bình chung học kỳ dưới 1,00",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.b"
+     ],
+     "mo_ta": "Điểm trung bình chung học kỳ dưới 1,00",
+     "max": 1.0,
+     "max_incl": false,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c13",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c13",
+     "ten": "tổng số tín chỉ F còn tồn đọng vượt 24 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "mo_ta": "Tổng số tín chỉ của các học phần bị điểm F còn tồn đọng đã quá 24 tín chỉ",
+     "min": 24,
+     "min_incl": false,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi",
+     "moc": "tính từ đầu khóa học đến thời điểm xét"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k1.c14",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k1.c14",
+     "ten": "tổng số tín chỉ không đạt trong học kỳ vượt 50% khối lượng đăng ký",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1.c"
+     ],
+     "mo_ta": "Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đăng ký học trong học kỳ",
+     "min": 0.5,
+     "min_incl": false,
+     "thang": "ty_le",
+     "so_voi": "khối lượng đăng ký học trong học kỳ"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_canh_bao_hoc_vu",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_canh_bao_hoc_vu",
+     "ten": "bị cảnh báo học vụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k1"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "Sinh viên bị cảnh báo học vụ theo từng học kỳ; số lần cảnh báo do thủ trưởng đơn vị đào tạo quy định, không quá 2 lần liên tiếp"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.canh_bao_hoc_vu",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "props": {
+     "nguon": "qc3626.d44.k1"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "to": "sem.HeQua.bi_canh_bao_hoc_vu",
+    "props": {
+     "nguon": "qc3626.d44.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.bi_canh_bao_hoc_vu",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d44.k1"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d44.k1",
+     "noi_dung": "áp dụng một hoặc hai trong ba điều kiện cảnh báo kết quả học tập và quy định số lần cảnh báo học vụ, nhưng không quá 2 lần liên tiếp"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g3",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g1",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g4",
+    "props": {
+     "nguon": "qc3626.d44.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g5",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g6",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g7",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g8",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g5",
+    "to": "sem.DieuKien.qc3626.d44.k1.c1",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g5",
+    "to": "sem.DieuKien.qc3626.d44.k1.c2",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g6",
+    "to": "sem.DieuKien.qc3626.d44.k1.c3",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g6",
+    "to": "sem.DieuKien.qc3626.d44.k1.c4",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g7",
+    "to": "sem.DieuKien.qc3626.d44.k1.c5",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g7",
+    "to": "sem.DieuKien.qc3626.d44.k1.c6",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g8",
+    "to": "sem.DieuKien.qc3626.d44.k1.c7",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g8",
+    "to": "sem.DieuKien.qc3626.d44.k1.c8",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g3",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g9",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g3",
+    "to": "sem.NhomDieuKien.qc3626.d44.k1.g10",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g9",
+    "to": "sem.DieuKien.qc3626.d44.k1.c9",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g9",
+    "to": "sem.DieuKien.qc3626.d44.k1.c10",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g10",
+    "to": "sem.DieuKien.qc3626.d44.k1.c11",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g10",
+    "to": "sem.DieuKien.qc3626.d44.k1.c12",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g4",
+    "to": "sem.DieuKien.qc3626.d44.k1.c13",
+    "props": {
+     "nguon": "qc3626.d44.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k1.g4",
+    "to": "sem.DieuKien.qc3626.d44.k1.c14",
+    "props": {
+     "nguon": "qc3626.d44.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c1",
+    "to": "sem.KhaiNiem.nam_dao_tao",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c2",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c3",
+    "to": "sem.KhaiNiem.nam_dao_tao",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c4",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c5",
+    "to": "sem.KhaiNiem.nam_dao_tao",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c6",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c7",
+    "to": "sem.KhaiNiem.nam_dao_tao",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c8",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d44.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c10",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c12",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d44.k1.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c13",
+    "to": "sem.KhaiNiem.tin_chi_hoc_phan_bi_diem_f_con_ton_dong",
+    "props": {
+     "nguon": "qc3626.d44.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c14",
+    "to": "sem.KhaiNiem.tong_so_tin_chi_khong_dat_trong_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d44.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k1.c14",
+    "to": "sem.KhaiNiem.khoi_luong_dang_ky_hoc_trong_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d44.k1.c"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d44.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "58359222abdeab12447160606b75cbc021b7719a72d08680299196fa7546db1d",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16281,
+  "output_tokens": 11853,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgfdqRcMrrE2y9gWucfGJ'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:54:48+07:00",
+  "latency_s": 42.468,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

@@ -1,0 +1,386 @@
+{
+ "format": 1,
+ "unit": "qc3626.d47.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"xét công nhận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"mo_ta\": \"Hội đồng xét tốt nghiệp do thủ trưởng đơn vị đào tạo thành lập, xét công nhận tốt nghiệp định kỳ mỗi năm 4 lần (tháng 3, tháng 6 và tháng 7, tháng 9, tháng 12) cho sinh viên đã hoàn thành chương trình đào tạo\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện được công nhận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên được công nhận tốt nghiệp khi đồng thời hoàn thành chương trình đào tạo, đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo (văn bản dùng 'đáp ứng đầy đủ', nên chọn AND)\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"hoàn thành chương trình đào tạo của đơn vị\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"mo_ta\": \"Sinh viên đã hoàn thành chương trình đào tạo của đơn vị\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"đủ điều kiện tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"mo_ta\": \"Sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"hoàn thành nghĩa vụ với cơ sở đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"mo_ta\": \"Sinh viên hoàn thành nghĩa vụ với cơ sở đào tạo\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được công nhận tốt nghiệp và cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Sinh viên đủ điều kiện được công nhận tốt nghiệp và cấp bằng đại học\"}, {\"id\": \"q2\", \"ten\": \"thời hạn công nhận tốt nghiệp và cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k1\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Công nhận tốt nghiệp và cấp bằng trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo\", \"gia_tri\": 3, \"don_vi\": \"tháng\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d47.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d47.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d47.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d47.k1\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d47.k1\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d47.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d47.k1\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Hội đồng xét tốt nghiệp do thủ trưởng đơn vị đào tạo thành lập, xét công nhận tốt nghiệp định kỳ mỗi năm 4 lần (tháng 3, tháng 6 và tháng 7, tháng 9, tháng 12) cho sinh viên đã hoàn thành chương trình đào tạo"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện được công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên được công nhận tốt nghiệp khi đồng thời hoàn thành chương trình đào tạo, đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo (văn bản dùng 'đáp ứng đầy đủ', nên chọn AND)"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "hoàn thành chương trình đào tạo của đơn vị",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Sinh viên đã hoàn thành chương trình đào tạo của đơn vị",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "đủ điều kiện tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "hoàn thành nghĩa vụ với cơ sở đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Sinh viên hoàn thành nghĩa vụ với cơ sở đào tạo",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được công nhận tốt nghiệp và cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên đủ điều kiện được công nhận tốt nghiệp và cấp bằng đại học"
+    },
+    {
+     "id": "q2",
+     "ten": "thời hạn công nhận tốt nghiệp và cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Công nhận tốt nghiệp và cấp bằng trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo",
+     "gia_tri": 3,
+     "don_vi": "tháng"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d47.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d47.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d47.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d47.k1"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d47.k1"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d47.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d47.k1"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d47.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+    "g1": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "c1": "sem.DieuKien.qc3626.d47.k1.c1",
+    "c2": "sem.DieuKien.qc3626.d47.k1.c2",
+    "c3": "sem.DieuKien.qc3626.d47.k1.c3",
+    "q1": "sem.HeQua.duoc_cong_nhan_tot_nghiep_va_cap_bang",
+    "q2": "sem.HeQua.thoi_han_cong_nhan_tot_nghiep_va_cap_bang"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+     "ten": "xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Hội đồng xét tốt nghiệp do thủ trưởng đơn vị đào tạo thành lập, xét công nhận tốt nghiệp định kỳ mỗi năm 4 lần (tháng 3, tháng 6 và tháng 7, tháng 9, tháng 12) cho sinh viên đã hoàn thành chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+     "ten": "điều kiện được công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên được công nhận tốt nghiệp khi đồng thời hoàn thành chương trình đào tạo, đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo (văn bản dùng 'đáp ứng đầy đủ', nên chọn AND)"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k1.c1",
+     "ten": "hoàn thành chương trình đào tạo của đơn vị",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Sinh viên đã hoàn thành chương trình đào tạo của đơn vị",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k1.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k1.c2",
+     "ten": "đủ điều kiện tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k1.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k1.c3",
+     "ten": "hoàn thành nghĩa vụ với cơ sở đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "mo_ta": "Sinh viên hoàn thành nghĩa vụ với cơ sở đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_cong_nhan_tot_nghiep_va_cap_bang",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_cong_nhan_tot_nghiep_va_cap_bang",
+     "ten": "được công nhận tốt nghiệp và cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên đủ điều kiện được công nhận tốt nghiệp và cấp bằng đại học"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_han_cong_nhan_tot_nghiep_va_cap_bang",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_han_cong_nhan_tot_nghiep_va_cap_bang",
+     "ten": "thời hạn công nhận tốt nghiệp và cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k1"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Công nhận tốt nghiệp và cấp bằng trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với cơ sở đào tạo",
+     "gia_tri": 3,
+     "don_vi": "tháng"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "props": {
+     "nguon": "qc3626.d47.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "to": "sem.DieuKien.qc3626.d47.k1.c1",
+    "props": {
+     "nguon": "qc3626.d47.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "to": "sem.DieuKien.qc3626.d47.k1.c2",
+    "props": {
+     "nguon": "qc3626.d47.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "to": "sem.DieuKien.qc3626.d47.k1.c3",
+    "props": {
+     "nguon": "qc3626.d47.k1"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "to": "sem.HeQua.duoc_cong_nhan_tot_nghiep_va_cap_bang",
+    "props": {
+     "nguon": "qc3626.d47.k1"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "to": "sem.HeQua.thoi_han_cong_nhan_tot_nghiep_va_cap_bang",
+    "props": {
+     "nguon": "qc3626.d47.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d47.k1.g1",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d47.k1"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d47.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "77a74ad7975864cf0a28f56ce808614380254df2606fb2ab169419eed85ce15f",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16046,
+  "output_tokens": 4170,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgttaJxt5mLCGZyJAosu5'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:55:46+07:00",
+  "latency_s": 17.188,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

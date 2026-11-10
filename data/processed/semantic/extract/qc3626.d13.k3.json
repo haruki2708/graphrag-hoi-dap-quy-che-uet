@@ -1,0 +1,509 @@
+{
+ "format": 1,
+ "unit": "qc3626.d13.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"trình độ ngoại ngữ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.a\", \"qc3626.d13.k3.b\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Trình độ ngoại ngữ theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"chương trình đào tạo chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o2\", \"ten\": \"chương trình đào tạo ngành chính - ngành phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o3\", \"ten\": \"chương trình đào tạo song ngành\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o4\", \"ten\": \"chương trình đào tạo tài năng, chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.b\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o5\", \"ten\": \"chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.b\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o6\", \"ten\": \"chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do đối tác nước ngoài và Đại học Quốc gia Hà Nội cùng cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.b\"], \"loai\": \"chuong_trinh\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"chuẩn đầu ra ngoại ngữ bậc 3 của chương trình đào tạo chuẩn, ngành chính - ngành phụ, song ngành\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình đào tạo chuẩn, ngành chính - ngành phụ, song ngành phải đạt trình độ ngoại ngữ tương đương bậc 3\"}, {\"id\": \"g2\", \"ten\": \"chuẩn đầu ra ngoại ngữ bậc 4 của chương trình đào tạo tài năng, chất lượng cao và chương trình liên kết\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình tài năng, chất lượng cao và các chương trình liên kết với cơ sở giáo dục nước ngoài phải đạt trình độ ngoại ngữ tương đương bậc 4\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"trình độ ngoại ngữ tương đương bậc 3 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.a\"], \"mo_ta\": \"Trình độ ngoại ngữ tương đương bậc 3 trở lên\", \"min\": 3, \"min_incl\": true, \"thang\": \"bac_ngoai_ngu\"}, {\"id\": \"c2\", \"ten\": \"trình độ ngoại ngữ tương đương bậc 4 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k3.b\"], \"mo_ta\": \"Trình độ ngoại ngữ tương đương bậc 4 trở lên\", \"min\": 4, \"min_incl\": true, \"thang\": \"bac_ngoai_ngu\"}], \"HeQua\": [], \"edges\": [{\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d13.k3.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d13.k3.b\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d13.k3.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d13.k3.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d13.k3.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o2\", \"nguon\": \"qc3626.d13.k3.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o3\", \"nguon\": \"qc3626.d13.k3.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g2\", \"to\": \"o4\", \"nguon\": \"qc3626.d13.k3.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g2\", \"to\": \"o5\", \"nguon\": \"qc3626.d13.k3.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g2\", \"to\": \"o6\", \"nguon\": \"qc3626.d13.k3.b\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "trình độ ngoại ngữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.a",
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Trình độ ngoại ngữ theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o2",
+     "ten": "chương trình đào tạo ngành chính - ngành phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o3",
+     "ten": "chương trình đào tạo song ngành",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o4",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o5",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o6",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do đối tác nước ngoài và Đại học Quốc gia Hà Nội cùng cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "chuong_trinh"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "chuẩn đầu ra ngoại ngữ bậc 3 của chương trình đào tạo chuẩn, ngành chính - ngành phụ, song ngành",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình đào tạo chuẩn, ngành chính - ngành phụ, song ngành phải đạt trình độ ngoại ngữ tương đương bậc 3"
+    },
+    {
+     "id": "g2",
+     "ten": "chuẩn đầu ra ngoại ngữ bậc 4 của chương trình đào tạo tài năng, chất lượng cao và chương trình liên kết",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình tài năng, chất lượng cao và các chương trình liên kết với cơ sở giáo dục nước ngoài phải đạt trình độ ngoại ngữ tương đương bậc 4"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "trình độ ngoại ngữ tương đương bậc 3 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "mo_ta": "Trình độ ngoại ngữ tương đương bậc 3 trở lên",
+     "min": 3,
+     "min_incl": true,
+     "thang": "bac_ngoai_ngu"
+    },
+    {
+     "id": "c2",
+     "ten": "trình độ ngoại ngữ tương đương bậc 4 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "mo_ta": "Trình độ ngoại ngữ tương đương bậc 4 trở lên",
+     "min": 4,
+     "min_incl": true,
+     "thang": "bac_ngoai_ngu"
+    }
+   ],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d13.k3.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d13.k3.b"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d13.k3.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d13.k3.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d13.k3.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o2",
+     "nguon": "qc3626.d13.k3.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o3",
+     "nguon": "qc3626.d13.k3.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g2",
+     "to": "o4",
+     "nguon": "qc3626.d13.k3.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g2",
+     "to": "o5",
+     "nguon": "qc3626.d13.k3.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g2",
+     "to": "o6",
+     "nguon": "qc3626.d13.k3.b"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d13.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.trinh_do_ngoai_ngu",
+    "o1": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "o2": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "o3": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "o4": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "o5": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "o6": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_va_dai_hoc_quoc_gia_ha_noi_cung_cap_bang",
+    "g1": "sem.NhomDieuKien.qc3626.d13.k3.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d13.k3.g2",
+    "c1": "sem.DieuKien.qc3626.d13.k3.c1",
+    "c2": "sem.DieuKien.qc3626.d13.k3.c2"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.trinh_do_ngoai_ngu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.trinh_do_ngoai_ngu",
+     "ten": "trình độ ngoại ngữ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.a",
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Trình độ ngoại ngữ theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+     "ten": "chương trình đào tạo ngành chính - ngành phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+     "ten": "chương trình đào tạo song ngành",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_va_dai_hoc_quoc_gia_ha_noi_cung_cap_bang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_va_dai_hoc_quoc_gia_ha_noi_cung_cap_bang",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do đối tác nước ngoài và Đại học Quốc gia Hà Nội cùng cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d13.k3.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d13.k3.g1",
+     "ten": "chuẩn đầu ra ngoại ngữ bậc 3 của chương trình đào tạo chuẩn, ngành chính - ngành phụ, song ngành",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình đào tạo chuẩn, ngành chính - ngành phụ, song ngành phải đạt trình độ ngoại ngữ tương đương bậc 3"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d13.k3.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d13.k3.g2",
+     "ten": "chuẩn đầu ra ngoại ngữ bậc 4 của chương trình đào tạo tài năng, chất lượng cao và chương trình liên kết",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình tài năng, chất lượng cao và các chương trình liên kết với cơ sở giáo dục nước ngoài phải đạt trình độ ngoại ngữ tương đương bậc 4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d13.k3.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d13.k3.c1",
+     "ten": "trình độ ngoại ngữ tương đương bậc 3 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.a"
+     ],
+     "mo_ta": "Trình độ ngoại ngữ tương đương bậc 3 trở lên",
+     "min": 3,
+     "min_incl": true,
+     "thang": "bac_ngoai_ngu"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d13.k3.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d13.k3.c2",
+     "ten": "trình độ ngoại ngữ tương đương bậc 4 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k3.b"
+     ],
+     "mo_ta": "Trình độ ngoại ngữ tương đương bậc 4 trở lên",
+     "min": 4,
+     "min_incl": true,
+     "thang": "bac_ngoai_ngu"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g1",
+    "to": "sem.DieuKien.qc3626.d13.k3.c1",
+    "props": {
+     "nguon": "qc3626.d13.k3.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g2",
+    "to": "sem.DieuKien.qc3626.d13.k3.c2",
+    "props": {
+     "nguon": "qc3626.d13.k3.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d13.k3.c1",
+    "to": "sem.KhaiNiem.trinh_do_ngoai_ngu",
+    "props": {
+     "nguon": "qc3626.d13.k3.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d13.k3.c2",
+    "to": "sem.KhaiNiem.trinh_do_ngoai_ngu",
+    "props": {
+     "nguon": "qc3626.d13.k3.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g1",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "props": {
+     "nguon": "qc3626.d13.k3.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g1",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "props": {
+     "nguon": "qc3626.d13.k3.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g1",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "props": {
+     "nguon": "qc3626.d13.k3.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g2",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d13.k3.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g2",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "props": {
+     "nguon": "qc3626.d13.k3.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d13.k3.g2",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_va_dai_hoc_quoc_gia_ha_noi_cung_cap_bang",
+    "props": {
+     "nguon": "qc3626.d13.k3.b"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d13.k3",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "658f9df645f5edaa8c54b3724b1e4c998db3be786bb07139f027610162a6675a",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16155,
+  "output_tokens": 3976,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtrpMmE3THVzSStMVLBT'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:32:43+07:00",
+  "latency_s": 14.685,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

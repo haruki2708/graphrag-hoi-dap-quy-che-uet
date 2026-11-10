@@ -1,0 +1,607 @@
+{
+ "format": 1,
+ "unit": "qc3626.d32.k4",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"công trình nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"loai\": \"khac\", \"dinh_nghia\": \"Công trình nghiên cứu khoa học của sinh viên được đánh giá cho điểm và có thể thay thế một học phần tự chọn có điều kiện\"}, {\"id\": \"k2\", \"ten\": \"học phần tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"loai\": \"loai_hoc_phan\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đánh giá và quyết định công trình nghiên cứu khoa học thay học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\", \"qc3626.d32.k4.a\"], \"mo_ta\": \"Hội đồng cấp khoa đánh giá cho điểm công trình nghiên cứu khoa học (quy về thang điểm 10) và quyết định thay cho học phần nào trong chương trình đào tạo của ngành học\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện để công trình nghiên cứu khoa học được tính thay học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Công trình nghiên cứu khoa học được tính khi đủ cả hai điều kiện: được Hội đồng cấp khoa đánh giá cho điểm và quyết định thay học phần, và sinh viên có nguyện vọng\"}, {\"id\": \"g2\", \"ten\": \"công trình do nhiều sinh viên cùng thực hiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Trường hợp công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"được Hội đồng cấp khoa đánh giá cho điểm và quyết định thay học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4.a\"], \"mo_ta\": \"Được Hội đồng cấp khoa đánh giá cho điểm (quy về thang điểm 10) và quyết định thay cho học phần nào trong chương trình đào tạo của ngành học\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"công trình do nhiều sinh viên cùng thực hiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4.a\"], \"mo_ta\": \"Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"sinh viên có nguyện vọng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4.b\"], \"mo_ta\": \"Sinh viên có nguyện vọng\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được tính như niên luận hoặc tiểu luận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Công trình nghiên cứu khoa học được tính như một niên luận hoặc tiểu luận\"}, {\"id\": \"q2\", \"ten\": \"được thay cho học phần tự chọn có điều kiện thuộc khối kiến thức ngành\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Công trình nghiên cứu khoa học được thay cho một học phần tự chọn có điều kiện thuộc khối kiến thức ngành\"}, {\"id\": \"q3\", \"ten\": \"được tích lũy vào kết quả học tập chung của học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Kết quả công trình nghiên cứu khoa học được tích lũy vào kết quả học tập chung của học kỳ\"}, {\"id\": \"q4\", \"ten\": \"được tính khi xét học bổng, xét học tiếp sau đại học và các quyền lợi khác\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Công trình nghiên cứu khoa học được tính đến khi xét học bổng, xét học tiếp sau đại học và các quyền lợi khác, nếu có\"}, {\"id\": \"q5\", \"ten\": \"các sinh viên cùng thực hiện được hưởng quyền lợi như nhau\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k4.a\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Sinh viên cùng thực hiện công trình nghiên cứu khoa học được hưởng quyền lợi như nhau\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d32.k4\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d32.k4.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d32.k4.b\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d32.k4\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d32.k4\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q3\", \"nguon\": \"qc3626.d32.k4\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q4\", \"nguon\": \"qc3626.d32.k4\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d32.k4\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d32.k4.a\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q5\", \"nguon\": \"qc3626.d32.k4.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g2\", \"to\": \"o1\", \"nguon\": \"qc3626.d32.k4.a\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "công trình nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Công trình nghiên cứu khoa học của sinh viên được đánh giá cho điểm và có thể thay thế một học phần tự chọn có điều kiện"
+    },
+    {
+     "id": "k2",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đánh giá và quyết định công trình nghiên cứu khoa học thay học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4",
+      "qc3626.d32.k4.a"
+     ],
+     "mo_ta": "Hội đồng cấp khoa đánh giá cho điểm công trình nghiên cứu khoa học (quy về thang điểm 10) và quyết định thay cho học phần nào trong chương trình đào tạo của ngành học"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện để công trình nghiên cứu khoa học được tính thay học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Công trình nghiên cứu khoa học được tính khi đủ cả hai điều kiện: được Hội đồng cấp khoa đánh giá cho điểm và quyết định thay học phần, và sinh viên có nguyện vọng"
+    },
+    {
+     "id": "g2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Trường hợp công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "được Hội đồng cấp khoa đánh giá cho điểm và quyết định thay học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "mo_ta": "Được Hội đồng cấp khoa đánh giá cho điểm (quy về thang điểm 10) và quyết định thay cho học phần nào trong chương trình đào tạo của ngành học",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "mo_ta": "Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "sinh viên có nguyện vọng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4.b"
+     ],
+     "mo_ta": "Sinh viên có nguyện vọng",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được tính như niên luận hoặc tiểu luận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Công trình nghiên cứu khoa học được tính như một niên luận hoặc tiểu luận"
+    },
+    {
+     "id": "q2",
+     "ten": "được thay cho học phần tự chọn có điều kiện thuộc khối kiến thức ngành",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Công trình nghiên cứu khoa học được thay cho một học phần tự chọn có điều kiện thuộc khối kiến thức ngành"
+    },
+    {
+     "id": "q3",
+     "ten": "được tích lũy vào kết quả học tập chung của học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Kết quả công trình nghiên cứu khoa học được tích lũy vào kết quả học tập chung của học kỳ"
+    },
+    {
+     "id": "q4",
+     "ten": "được tính khi xét học bổng, xét học tiếp sau đại học và các quyền lợi khác",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Công trình nghiên cứu khoa học được tính đến khi xét học bổng, xét học tiếp sau đại học và các quyền lợi khác, nếu có"
+    },
+    {
+     "id": "q5",
+     "ten": "các sinh viên cùng thực hiện được hưởng quyền lợi như nhau",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên cùng thực hiện công trình nghiên cứu khoa học được hưởng quyền lợi như nhau"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d32.k4"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d32.k4.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d32.k4.b"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d32.k4"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d32.k4"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q3",
+     "nguon": "qc3626.d32.k4"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q4",
+     "nguon": "qc3626.d32.k4"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d32.k4"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d32.k4.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q5",
+     "nguon": "qc3626.d32.k4.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g2",
+     "to": "o1",
+     "nguon": "qc3626.d32.k4.a"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d32.k4",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.cong_trinh_nghien_cuu_khoa_hoc",
+    "k2": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.danh_gia_va_quyet_dinh_cong_trinh_nghien_cuu_khoa_hoc_thay_hoc_phan",
+    "g1": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d32.k4.g2",
+    "c1": "sem.DieuKien.qc3626.d32.k4.c1",
+    "c2": "sem.DieuKien.qc3626.d32.k4.c2",
+    "c3": "sem.DieuKien.qc3626.d32.k4.c3",
+    "q1": "sem.HeQua.duoc_tinh_nhu_nien_luan_hoac_tieu_luan",
+    "q2": "sem.HeQua.duoc_thay_cho_hoc_phan_tu_chon_co_dieu_kien_thuoc_khoi_kien_thuc_nganh",
+    "q3": "sem.HeQua.duoc_tich_luy_vao_ket_qua_hoc_tap_chung_cua_hoc_ky",
+    "q4": "sem.HeQua.duoc_tinh_khi_xet_hoc_bong_xet_hoc_tiep_sau_dai_hoc_va_cac_quyen_loi_khac",
+    "q5": "sem.HeQua.cac_sinh_vien_cung_thuc_hien_duoc_huong_quyen_loi_nhu_nhau"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.cong_trinh_nghien_cuu_khoa_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.cong_trinh_nghien_cuu_khoa_hoc",
+     "ten": "công trình nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Công trình nghiên cứu khoa học của sinh viên được đánh giá cho điểm và có thể thay thế một học phần tự chọn có điều kiện"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.danh_gia_va_quyet_dinh_cong_trinh_nghien_cuu_khoa_hoc_thay_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.danh_gia_va_quyet_dinh_cong_trinh_nghien_cuu_khoa_hoc_thay_hoc_phan",
+     "ten": "đánh giá và quyết định công trình nghiên cứu khoa học thay học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4",
+      "qc3626.d32.k4.a"
+     ],
+     "mo_ta": "Hội đồng cấp khoa đánh giá cho điểm công trình nghiên cứu khoa học (quy về thang điểm 10) và quyết định thay cho học phần nào trong chương trình đào tạo của ngành học"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+     "ten": "điều kiện để công trình nghiên cứu khoa học được tính thay học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Công trình nghiên cứu khoa học được tính khi đủ cả hai điều kiện: được Hội đồng cấp khoa đánh giá cho điểm và quyết định thay học phần, và sinh viên có nguyện vọng"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d32.k4.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d32.k4.g2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Trường hợp công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k4.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k4.c1",
+     "ten": "được Hội đồng cấp khoa đánh giá cho điểm và quyết định thay học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "mo_ta": "Được Hội đồng cấp khoa đánh giá cho điểm (quy về thang điểm 10) và quyết định thay cho học phần nào trong chương trình đào tạo của ngành học",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k4.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k4.c2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "mo_ta": "Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k4.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k4.c3",
+     "ten": "sinh viên có nguyện vọng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4.b"
+     ],
+     "mo_ta": "Sinh viên có nguyện vọng",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tinh_nhu_nien_luan_hoac_tieu_luan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tinh_nhu_nien_luan_hoac_tieu_luan",
+     "ten": "được tính như niên luận hoặc tiểu luận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Công trình nghiên cứu khoa học được tính như một niên luận hoặc tiểu luận"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_thay_cho_hoc_phan_tu_chon_co_dieu_kien_thuoc_khoi_kien_thuc_nganh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_thay_cho_hoc_phan_tu_chon_co_dieu_kien_thuoc_khoi_kien_thuc_nganh",
+     "ten": "được thay cho học phần tự chọn có điều kiện thuộc khối kiến thức ngành",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Công trình nghiên cứu khoa học được thay cho một học phần tự chọn có điều kiện thuộc khối kiến thức ngành"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tich_luy_vao_ket_qua_hoc_tap_chung_cua_hoc_ky",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tich_luy_vao_ket_qua_hoc_tap_chung_cua_hoc_ky",
+     "ten": "được tích lũy vào kết quả học tập chung của học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Kết quả công trình nghiên cứu khoa học được tích lũy vào kết quả học tập chung của học kỳ"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tinh_khi_xet_hoc_bong_xet_hoc_tiep_sau_dai_hoc_va_cac_quyen_loi_khac",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tinh_khi_xet_hoc_bong_xet_hoc_tiep_sau_dai_hoc_va_cac_quyen_loi_khac",
+     "ten": "được tính khi xét học bổng, xét học tiếp sau đại học và các quyền lợi khác",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Công trình nghiên cứu khoa học được tính đến khi xét học bổng, xét học tiếp sau đại học và các quyền lợi khác, nếu có"
+    }
+   },
+   {
+    "id": "sem.HeQua.cac_sinh_vien_cung_thuc_hien_duoc_huong_quyen_loi_nhu_nhau",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.cac_sinh_vien_cung_thuc_hien_duoc_huong_quyen_loi_nhu_nhau",
+     "ten": "các sinh viên cùng thực hiện được hưởng quyền lợi như nhau",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k4.a"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên cùng thực hiện công trình nghiên cứu khoa học được hưởng quyền lợi như nhau"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.danh_gia_va_quyet_dinh_cong_trinh_nghien_cuu_khoa_hoc_thay_hoc_phan",
+    "to": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "props": {
+     "nguon": "qc3626.d32.k4"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "to": "sem.DieuKien.qc3626.d32.k4.c1",
+    "props": {
+     "nguon": "qc3626.d32.k4.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "to": "sem.DieuKien.qc3626.d32.k4.c3",
+    "props": {
+     "nguon": "qc3626.d32.k4.b"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "to": "sem.HeQua.duoc_tinh_nhu_nien_luan_hoac_tieu_luan",
+    "props": {
+     "nguon": "qc3626.d32.k4"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "to": "sem.HeQua.duoc_thay_cho_hoc_phan_tu_chon_co_dieu_kien_thuoc_khoi_kien_thuc_nganh",
+    "props": {
+     "nguon": "qc3626.d32.k4"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "to": "sem.HeQua.duoc_tich_luy_vao_ket_qua_hoc_tap_chung_cua_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d32.k4"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "to": "sem.HeQua.duoc_tinh_khi_xet_hoc_bong_xet_hoc_tiep_sau_dai_hoc_va_cac_quyen_loi_khac",
+    "props": {
+     "nguon": "qc3626.d32.k4"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g1",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d32.k4"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g2",
+    "to": "sem.DieuKien.qc3626.d32.k4.c2",
+    "props": {
+     "nguon": "qc3626.d32.k4.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g2",
+    "to": "sem.HeQua.cac_sinh_vien_cung_thuc_hien_duoc_huong_quyen_loi_nhu_nhau",
+    "props": {
+     "nguon": "qc3626.d32.k4.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d32.k4.g2",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d32.k4.a"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d32.k4",
+  "role": "extract",
+  "run": 1,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "d6ebdb43bbb1c6414ec39e8e501f013be16f4edb323a653a7e6bbb6d07faf5a2",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16054,
+  "output_tokens": 5976,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtumAZHd793hiNJ9bp2H'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T15:11:21+07:00",
+  "latency_s": 24.986,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

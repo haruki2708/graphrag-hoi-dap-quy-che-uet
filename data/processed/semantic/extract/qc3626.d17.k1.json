@@ -1,0 +1,939 @@
+{
+ "format": 1,
+ "unit": "qc3626.d17.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"khối lượng tín chỉ được miễn trừ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.d\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"hình thức đào tạo chính quy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\", \"qc3626.d17.k1.b\", \"qc3626.d17.k1.d\"], \"loai\": \"hinh_thuc\"}, {\"id\": \"o2\", \"ten\": \"hình thức đào tạo vừa làm vừa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.b\", \"qc3626.d17.k1.d\"], \"loai\": \"hinh_thuc\"}, {\"id\": \"o3\", \"ten\": \"chương trình đào tạo cử nhân\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o4\", \"ten\": \"chương trình đào tạo kỹ sư\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o5\", \"ten\": \"chương trình đào tạo dược sĩ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o6\", \"ten\": \"chương trình đào tạo bác sĩ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o7\", \"ten\": \"văn bằng thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.c\"], \"loai\": \"van_bang\"}, {\"id\": \"o8\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.c\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o9\", \"ten\": \"khóa học đồng thời hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.đ\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o10\", \"ten\": \"sinh viên học liên thông\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.d\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"xác định thời gian thiết kế khóa học văn bằng thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.c\"], \"mo_ta\": \"thủ trưởng đơn vị đào tạo quy định thời gian thiết kế của khóa học cho từng sinh viên trên cơ sở khối lượng kiến thức đã tích lũy và kết quả học tập được bảo lưu\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy thì thời gian tối đa hoàn thành khóa học giảm tương ứng với khối lượng được miễn trừ\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"đã được miễn trừ khối lượng tín chỉ tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.d\"], \"mo_ta\": \"Đã được miễn trừ khối lượng tín chỉ tích lũy\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"thời gian thiết kế khóa học cử nhân là 8 học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian thiết kế của khóa học đào tạo cử nhân là 8 học kỳ chính\", \"gia_tri\": 8, \"don_vi\": \"học kỳ chính\"}, {\"id\": \"q2\", \"ten\": \"thời gian thiết kế khóa học kỹ sư từ 9 đến 10 học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian thiết kế của khóa học đào tạo kỹ sư từ 9 đến 10 học kỳ chính\", \"don_vi\": \"học kỳ chính\"}, {\"id\": \"q3\", \"ten\": \"thời gian thiết kế khóa học dược sĩ là 10 học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian thiết kế của khóa học đào tạo dược sĩ là 10 học kỳ chính\", \"gia_tri\": 10, \"don_vi\": \"học kỳ chính\"}, {\"id\": \"q4\", \"ten\": \"thời gian thiết kế khóa học bác sĩ là 12 học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.a\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian thiết kế của khóa học đào tạo bác sĩ là 12 học kỳ chính\", \"gia_tri\": 12, \"don_vi\": \"học kỳ chính\"}, {\"id\": \"q5\", \"ten\": \"thời gian theo kế hoạch học tập chuẩn vừa làm vừa học dài hơn tối thiểu 20%\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.b\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian theo kế hoạch học tập chuẩn toàn khóa của hình thức vừa làm vừa học dài hơn tối thiểu 20% so với hình thức chính quy của cùng chương trình đào tạo\", \"gia_tri\": 20, \"don_vi\": \"phần trăm\"}, {\"id\": \"q6\", \"ten\": \"thời gian thiết kế khóa học văn bằng thứ hai không vượt quá chính quy tương ứng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.c\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian thiết kế của khóa học văn bằng thứ hai không vượt quá thời gian thiết kế của chương trình đào tạo chính quy tương ứng\"}, {\"id\": \"q7\", \"ten\": \"thời gian tối đa hoàn thành khóa học không vượt quá 2 lần thời gian chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.d\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 2 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo\", \"gia_tri\": 2, \"don_vi\": \"lần thời gian theo kế hoạch học tập chuẩn toàn khóa\"}, {\"id\": \"q8\", \"ten\": \"thời gian tối đa hoàn thành khóa học giảm tương ứng khối lượng được miễn trừ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.d\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian tối đa hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ\"}, {\"id\": \"q9\", \"ten\": \"thời gian khóa học đồng thời hai chương trình không vượt quá thời gian tối đa của chương trình thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d17.k1.đ\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian khóa học đồng thời hai chương trình đào tạo không vượt quá thời gian đào tạo tối đa của chương trình đào tạo thứ nhất\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d17.k1.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o7\", \"nguon\": \"qc3626.d17.k1.c\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"h1\", \"to\": \"o8\", \"nguon\": \"qc3626.d17.k1.c\", \"noi_dung\": \"thời gian thiết kế của khóa học văn bằng thứ hai cho từng sinh viên\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d17.k1.d\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d17.k1.d\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q8\", \"nguon\": \"qc3626.d17.k1.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o3\", \"nguon\": \"qc3626.d17.k1.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o4\", \"nguon\": \"qc3626.d17.k1.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o5\", \"nguon\": \"qc3626.d17.k1.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o6\", \"nguon\": \"qc3626.d17.k1.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q5\", \"to\": \"o2\", \"nguon\": \"qc3626.d17.k1.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q6\", \"to\": \"o7\", \"nguon\": \"qc3626.d17.k1.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q7\", \"to\": \"o1\", \"nguon\": \"qc3626.d17.k1.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q7\", \"to\": \"o2\", \"nguon\": \"qc3626.d17.k1.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q8\", \"to\": \"o10\", \"nguon\": \"qc3626.d17.k1.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q9\", \"to\": \"o9\", \"nguon\": \"qc3626.d17.k1.đ\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "khối lượng tín chỉ được miễn trừ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "hình thức đào tạo chính quy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a",
+      "qc3626.d17.k1.b",
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "hinh_thuc"
+    },
+    {
+     "id": "o2",
+     "ten": "hình thức đào tạo vừa làm vừa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.b",
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "hinh_thuc"
+    },
+    {
+     "id": "o3",
+     "ten": "chương trình đào tạo cử nhân",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o4",
+     "ten": "chương trình đào tạo kỹ sư",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o5",
+     "ten": "chương trình đào tạo dược sĩ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o6",
+     "ten": "chương trình đào tạo bác sĩ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o7",
+     "ten": "văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "loai": "van_bang"
+    },
+    {
+     "id": "o8",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o9",
+     "ten": "khóa học đồng thời hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.đ"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o10",
+     "ten": "sinh viên học liên thông",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "xác định thời gian thiết kế khóa học văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "mo_ta": "thủ trưởng đơn vị đào tạo quy định thời gian thiết kế của khóa học cho từng sinh viên trên cơ sở khối lượng kiến thức đã tích lũy và kết quả học tập được bảo lưu"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy thì thời gian tối đa hoàn thành khóa học giảm tương ứng với khối lượng được miễn trừ"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "đã được miễn trừ khối lượng tín chỉ tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "mo_ta": "Đã được miễn trừ khối lượng tín chỉ tích lũy",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "thời gian thiết kế khóa học cử nhân là 8 học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo cử nhân là 8 học kỳ chính",
+     "gia_tri": 8,
+     "don_vi": "học kỳ chính"
+    },
+    {
+     "id": "q2",
+     "ten": "thời gian thiết kế khóa học kỹ sư từ 9 đến 10 học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo kỹ sư từ 9 đến 10 học kỳ chính",
+     "don_vi": "học kỳ chính"
+    },
+    {
+     "id": "q3",
+     "ten": "thời gian thiết kế khóa học dược sĩ là 10 học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo dược sĩ là 10 học kỳ chính",
+     "gia_tri": 10,
+     "don_vi": "học kỳ chính"
+    },
+    {
+     "id": "q4",
+     "ten": "thời gian thiết kế khóa học bác sĩ là 12 học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo bác sĩ là 12 học kỳ chính",
+     "gia_tri": 12,
+     "don_vi": "học kỳ chính"
+    },
+    {
+     "id": "q5",
+     "ten": "thời gian theo kế hoạch học tập chuẩn vừa làm vừa học dài hơn tối thiểu 20%",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.b"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian theo kế hoạch học tập chuẩn toàn khóa của hình thức vừa làm vừa học dài hơn tối thiểu 20% so với hình thức chính quy của cùng chương trình đào tạo",
+     "gia_tri": 20,
+     "don_vi": "phần trăm"
+    },
+    {
+     "id": "q6",
+     "ten": "thời gian thiết kế khóa học văn bằng thứ hai không vượt quá chính quy tương ứng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học văn bằng thứ hai không vượt quá thời gian thiết kế của chương trình đào tạo chính quy tương ứng"
+    },
+    {
+     "id": "q7",
+     "ten": "thời gian tối đa hoàn thành khóa học không vượt quá 2 lần thời gian chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 2 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo",
+     "gia_tri": 2,
+     "don_vi": "lần thời gian theo kế hoạch học tập chuẩn toàn khóa"
+    },
+    {
+     "id": "q8",
+     "ten": "thời gian tối đa hoàn thành khóa học giảm tương ứng khối lượng được miễn trừ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian tối đa hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ"
+    },
+    {
+     "id": "q9",
+     "ten": "thời gian khóa học đồng thời hai chương trình không vượt quá thời gian tối đa của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d17.k1.đ"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian khóa học đồng thời hai chương trình đào tạo không vượt quá thời gian đào tạo tối đa của chương trình đào tạo thứ nhất"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d17.k1.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o7",
+     "nguon": "qc3626.d17.k1.c"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h1",
+     "to": "o8",
+     "nguon": "qc3626.d17.k1.c",
+     "noi_dung": "thời gian thiết kế của khóa học văn bằng thứ hai cho từng sinh viên"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d17.k1.d"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d17.k1.d"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q8",
+     "nguon": "qc3626.d17.k1.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o3",
+     "nguon": "qc3626.d17.k1.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o4",
+     "nguon": "qc3626.d17.k1.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o5",
+     "nguon": "qc3626.d17.k1.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o6",
+     "nguon": "qc3626.d17.k1.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q5",
+     "to": "o2",
+     "nguon": "qc3626.d17.k1.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q6",
+     "to": "o7",
+     "nguon": "qc3626.d17.k1.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q7",
+     "to": "o1",
+     "nguon": "qc3626.d17.k1.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q7",
+     "to": "o2",
+     "nguon": "qc3626.d17.k1.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q8",
+     "to": "o10",
+     "nguon": "qc3626.d17.k1.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q9",
+     "to": "o9",
+     "nguon": "qc3626.d17.k1.đ"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d17.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.khoi_luong_tin_chi_duoc_mien_tru",
+    "o1": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+    "o2": "sem.DoiTuong.hinh_thuc_dao_tao_vua_lam_vua_hoc",
+    "o3": "sem.DoiTuong.chuong_trinh_dao_tao_cu_nhan",
+    "o4": "sem.DoiTuong.chuong_trinh_dao_tao_ky_su",
+    "o5": "sem.DoiTuong.chuong_trinh_dao_tao_duoc_si",
+    "o6": "sem.DoiTuong.chuong_trinh_dao_tao_bac_si",
+    "o7": "sem.DoiTuong.van_bang_thu_hai",
+    "o8": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o9": "sem.DoiTuong.khoa_hoc_dong_thoi_hai_chuong_trinh_dao_tao",
+    "o10": "sem.DoiTuong.sinh_vien_hoc_lien_thong",
+    "h1": "sem.HoatDong.xac_dinh_thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai",
+    "g1": "sem.NhomDieuKien.qc3626.d17.k1.g1",
+    "c1": "sem.DieuKien.qc3626.d17.k1.c1",
+    "q1": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_cu_nhan_la_8_hoc_ky_chinh",
+    "q2": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_ky_su_tu_9_den_10_hoc_ky_chinh",
+    "q3": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_duoc_si_la_10_hoc_ky_chinh",
+    "q4": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_bac_si_la_12_hoc_ky_chinh",
+    "q5": "sem.HeQua.thoi_gian_theo_ke_hoach_hoc_tap_chuan_vua_lam_vua_hoc_dai_hon_toi_thieu_20",
+    "q6": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai_khong_vuot_qua_chinh_quy_tuong_ung",
+    "q7": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_khong_vuot_qua_2_lan_thoi_gian_chuan",
+    "q8": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_giam_tuong_ung_khoi_luong_duoc_mien_tru",
+    "q9": "sem.HeQua.thoi_gian_khoa_hoc_dong_thoi_hai_chuong_trinh_khong_vuot_qua_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.khoi_luong_tin_chi_duoc_mien_tru",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoi_luong_tin_chi_duoc_mien_tru",
+     "ten": "khối lượng tín chỉ được miễn trừ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+     "ten": "hình thức đào tạo chính quy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a",
+      "qc3626.d17.k1.b",
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "hinh_thuc"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.hinh_thuc_dao_tao_vua_lam_vua_hoc",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.hinh_thuc_dao_tao_vua_lam_vua_hoc",
+     "ten": "hình thức đào tạo vừa làm vừa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.b",
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "hinh_thuc"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_cu_nhan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_cu_nhan",
+     "ten": "chương trình đào tạo cử nhân",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_ky_su",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_ky_su",
+     "ten": "chương trình đào tạo kỹ sư",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_duoc_si",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_duoc_si",
+     "ten": "chương trình đào tạo dược sĩ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_bac_si",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_bac_si",
+     "ten": "chương trình đào tạo bác sĩ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.van_bang_thu_hai",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.van_bang_thu_hai",
+     "ten": "văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "loai": "van_bang"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.khoa_hoc_dong_thoi_hai_chuong_trinh_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.khoa_hoc_dong_thoi_hai_chuong_trinh_dao_tao",
+     "ten": "khóa học đồng thời hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.đ"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien_hoc_lien_thong",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien_hoc_lien_thong",
+     "ten": "sinh viên học liên thông",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xac_dinh_thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xac_dinh_thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai",
+     "ten": "xác định thời gian thiết kế khóa học văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "mo_ta": "thủ trưởng đơn vị đào tạo quy định thời gian thiết kế của khóa học cho từng sinh viên trên cơ sở khối lượng kiến thức đã tích lũy và kết quả học tập được bảo lưu"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d17.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d17.k1.g1",
+     "ten": "sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy thì thời gian tối đa hoàn thành khóa học giảm tương ứng với khối lượng được miễn trừ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d17.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d17.k1.c1",
+     "ten": "đã được miễn trừ khối lượng tín chỉ tích lũy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "mo_ta": "Đã được miễn trừ khối lượng tín chỉ tích lũy",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_cu_nhan_la_8_hoc_ky_chinh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_cu_nhan_la_8_hoc_ky_chinh",
+     "ten": "thời gian thiết kế khóa học cử nhân là 8 học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo cử nhân là 8 học kỳ chính",
+     "gia_tri": 8,
+     "don_vi": "học kỳ chính"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_ky_su_tu_9_den_10_hoc_ky_chinh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_ky_su_tu_9_den_10_hoc_ky_chinh",
+     "ten": "thời gian thiết kế khóa học kỹ sư từ 9 đến 10 học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo kỹ sư từ 9 đến 10 học kỳ chính",
+     "don_vi": "học kỳ chính"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_duoc_si_la_10_hoc_ky_chinh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_duoc_si_la_10_hoc_ky_chinh",
+     "ten": "thời gian thiết kế khóa học dược sĩ là 10 học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo dược sĩ là 10 học kỳ chính",
+     "gia_tri": 10,
+     "don_vi": "học kỳ chính"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_bac_si_la_12_hoc_ky_chinh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_bac_si_la_12_hoc_ky_chinh",
+     "ten": "thời gian thiết kế khóa học bác sĩ là 12 học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.a"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học đào tạo bác sĩ là 12 học kỳ chính",
+     "gia_tri": 12,
+     "don_vi": "học kỳ chính"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_theo_ke_hoach_hoc_tap_chuan_vua_lam_vua_hoc_dai_hon_toi_thieu_20",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_theo_ke_hoach_hoc_tap_chuan_vua_lam_vua_hoc_dai_hon_toi_thieu_20",
+     "ten": "thời gian theo kế hoạch học tập chuẩn vừa làm vừa học dài hơn tối thiểu 20%",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.b"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian theo kế hoạch học tập chuẩn toàn khóa của hình thức vừa làm vừa học dài hơn tối thiểu 20% so với hình thức chính quy của cùng chương trình đào tạo",
+     "gia_tri": 20,
+     "don_vi": "phần trăm"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai_khong_vuot_qua_chinh_quy_tuong_ung",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai_khong_vuot_qua_chinh_quy_tuong_ung",
+     "ten": "thời gian thiết kế khóa học văn bằng thứ hai không vượt quá chính quy tương ứng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.c"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian thiết kế của khóa học văn bằng thứ hai không vượt quá thời gian thiết kế của chương trình đào tạo chính quy tương ứng"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_khong_vuot_qua_2_lan_thoi_gian_chuan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_khong_vuot_qua_2_lan_thoi_gian_chuan",
+     "ten": "thời gian tối đa hoàn thành khóa học không vượt quá 2 lần thời gian chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 2 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo",
+     "gia_tri": 2,
+     "don_vi": "lần thời gian theo kế hoạch học tập chuẩn toàn khóa"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_giam_tuong_ung_khoi_luong_duoc_mien_tru",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_giam_tuong_ung_khoi_luong_duoc_mien_tru",
+     "ten": "thời gian tối đa hoàn thành khóa học giảm tương ứng khối lượng được miễn trừ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.d"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian tối đa hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_khoa_hoc_dong_thoi_hai_chuong_trinh_khong_vuot_qua_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_khoa_hoc_dong_thoi_hai_chuong_trinh_khong_vuot_qua_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat",
+     "ten": "thời gian khóa học đồng thời hai chương trình không vượt quá thời gian tối đa của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d17.k1.đ"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian khóa học đồng thời hai chương trình đào tạo không vượt quá thời gian đào tạo tối đa của chương trình đào tạo thứ nhất"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.xac_dinh_thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai",
+    "to": "sem.NhomDieuKien.qc3626.d17.k1.g1",
+    "props": {
+     "nguon": "qc3626.d17.k1.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.xac_dinh_thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai",
+    "to": "sem.DoiTuong.van_bang_thu_hai",
+    "props": {
+     "nguon": "qc3626.d17.k1.c"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.xac_dinh_thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d17.k1.c",
+     "noi_dung": "thời gian thiết kế của khóa học văn bằng thứ hai cho từng sinh viên"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d17.k1.g1",
+    "to": "sem.DieuKien.qc3626.d17.k1.c1",
+    "props": {
+     "nguon": "qc3626.d17.k1.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d17.k1.c1",
+    "to": "sem.KhaiNiem.khoi_luong_tin_chi_duoc_mien_tru",
+    "props": {
+     "nguon": "qc3626.d17.k1.d"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d17.k1.g1",
+    "to": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_giam_tuong_ung_khoi_luong_duoc_mien_tru",
+    "props": {
+     "nguon": "qc3626.d17.k1.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_cu_nhan_la_8_hoc_ky_chinh",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_cu_nhan",
+    "props": {
+     "nguon": "qc3626.d17.k1.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_ky_su_tu_9_den_10_hoc_ky_chinh",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_ky_su",
+    "props": {
+     "nguon": "qc3626.d17.k1.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_duoc_si_la_10_hoc_ky_chinh",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_duoc_si",
+    "props": {
+     "nguon": "qc3626.d17.k1.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_bac_si_la_12_hoc_ky_chinh",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_bac_si",
+    "props": {
+     "nguon": "qc3626.d17.k1.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_theo_ke_hoach_hoc_tap_chuan_vua_lam_vua_hoc_dai_hon_toi_thieu_20",
+    "to": "sem.DoiTuong.hinh_thuc_dao_tao_vua_lam_vua_hoc",
+    "props": {
+     "nguon": "qc3626.d17.k1.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_thiet_ke_khoa_hoc_van_bang_thu_hai_khong_vuot_qua_chinh_quy_tuong_ung",
+    "to": "sem.DoiTuong.van_bang_thu_hai",
+    "props": {
+     "nguon": "qc3626.d17.k1.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_khong_vuot_qua_2_lan_thoi_gian_chuan",
+    "to": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+    "props": {
+     "nguon": "qc3626.d17.k1.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_khong_vuot_qua_2_lan_thoi_gian_chuan",
+    "to": "sem.DoiTuong.hinh_thuc_dao_tao_vua_lam_vua_hoc",
+    "props": {
+     "nguon": "qc3626.d17.k1.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_toi_da_hoan_thanh_khoa_hoc_giam_tuong_ung_khoi_luong_duoc_mien_tru",
+    "to": "sem.DoiTuong.sinh_vien_hoc_lien_thong",
+    "props": {
+     "nguon": "qc3626.d17.k1.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_khoa_hoc_dong_thoi_hai_chuong_trinh_khong_vuot_qua_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat",
+    "to": "sem.DoiTuong.khoa_hoc_dong_thoi_hai_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d17.k1.đ"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d17.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "92c8ecf6cddaa4981497b15df3d91c01e3b442c075af04afa6f40d6043fb4e4f",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16467,
+  "output_tokens": 10118,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtrux8KuWDYDw6SNZADD'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:33:59+07:00",
+  "latency_s": 36.776,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

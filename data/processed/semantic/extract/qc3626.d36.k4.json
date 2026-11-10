@@ -1,0 +1,383 @@
+{
+ "format": 1,
+ "unit": "qc3626.d36.k4",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên chương trình đào tạo tài năng, chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4\"], \"loai\": \"chuong_trinh\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"sinh viên ở xa được ưu tiên bố trí chỗ ở\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên ở xa thì được ưu tiên bố trí chỗ ở trong ký túc xá\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"sinh viên ở xa\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4.c\"], \"mo_ta\": \"Những sinh viên ở xa\", \"toan_tu\": \"la\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được nhà khoa học đầu ngành, giáo sư, giảng viên có uy tín trực tiếp giảng dạy, hướng dẫn nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4.a\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được các nhà khoa học đầu ngành, các giáo sư, giảng viên có trình độ, kinh nghiệm và uy tín trong nước, quốc tế trực tiếp giảng dạy, hướng dẫn nghiên cứu khoa học\"}, {\"id\": \"q2\", \"ten\": \"được ưu tiên cung cấp hoặc sử dụng tài liệu, phương tiện và trang thiết bị phục vụ học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4.b\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được ưu tiên cung cấp hoặc sử dụng các tài liệu học tập, phương tiện, trang thiết bị kỹ thuật, thư viện và hệ thống internet phục vụ học tập và nghiên cứu khoa học\"}, {\"id\": \"q3\", \"ten\": \"được ưu tiên xét cấp học bổng khuyến khích phát triển và học bổng của tổ chức, cá nhân\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4.c\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được ưu tiên xét cấp học bổng khuyến khích phát triển và học bổng của các tổ chức, cá nhân trong, ngoài nước\"}, {\"id\": \"q4\", \"ten\": \"được ưu tiên bố trí chỗ ở trong ký túc xá\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4.c\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"sinh viên ở xa được ưu tiên bố trí chỗ ở trong ký túc xá\"}, {\"id\": \"q5\", \"ten\": \"được ưu tiên xét chọn đi học ở nước ngoài hoặc theo chương trình hợp tác quốc tế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k4.d\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được ưu tiên xét chọn đi học ở nước ngoài hoặc theo các chương trình hợp tác quốc tế của Đại học Quốc gia Hà Nội, của đơn vị đào tạo\"}], \"edges\": [{\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k4.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k4.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k4.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k4.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q5\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k4.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d36.k4.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q4\", \"nguon\": \"qc3626.d36.k4.c\"}]}",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4"
+     ],
+     "loai": "chuong_trinh"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "sinh viên ở xa được ưu tiên bố trí chỗ ở",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên ở xa thì được ưu tiên bố trí chỗ ở trong ký túc xá"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "sinh viên ở xa",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "mo_ta": "Những sinh viên ở xa",
+     "toan_tu": "la"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được nhà khoa học đầu ngành, giáo sư, giảng viên có uy tín trực tiếp giảng dạy, hướng dẫn nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4.a"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được các nhà khoa học đầu ngành, các giáo sư, giảng viên có trình độ, kinh nghiệm và uy tín trong nước, quốc tế trực tiếp giảng dạy, hướng dẫn nghiên cứu khoa học"
+    },
+    {
+     "id": "q2",
+     "ten": "được ưu tiên cung cấp hoặc sử dụng tài liệu, phương tiện và trang thiết bị phục vụ học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được ưu tiên cung cấp hoặc sử dụng các tài liệu học tập, phương tiện, trang thiết bị kỹ thuật, thư viện và hệ thống internet phục vụ học tập và nghiên cứu khoa học"
+    },
+    {
+     "id": "q3",
+     "ten": "được ưu tiên xét cấp học bổng khuyến khích phát triển và học bổng của tổ chức, cá nhân",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được ưu tiên xét cấp học bổng khuyến khích phát triển và học bổng của các tổ chức, cá nhân trong, ngoài nước"
+    },
+    {
+     "id": "q4",
+     "ten": "được ưu tiên bố trí chỗ ở trong ký túc xá",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên ở xa được ưu tiên bố trí chỗ ở trong ký túc xá"
+    },
+    {
+     "id": "q5",
+     "ten": "được ưu tiên xét chọn đi học ở nước ngoài hoặc theo chương trình hợp tác quốc tế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k4.d"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được ưu tiên xét chọn đi học ở nước ngoài hoặc theo các chương trình hợp tác quốc tế của Đại học Quốc gia Hà Nội, của đơn vị đào tạo"
+    }
+   ],
+   "edges": [
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d36.k4.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d36.k4.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o1",
+     "nguon": "qc3626.d36.k4.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o1",
+     "nguon": "qc3626.d36.k4.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q5",
+     "to": "o1",
+     "nguon": "qc3626.d36.k4.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d36.k4.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q4",
+     "nguon": "qc3626.d36.k4.c"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d36.k4",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "g1": "sem.NhomDieuKien.qc3626.d36.k4.g1",
+    "c1": "sem.DieuKien.qc3626.d36.k4.c1",
+    "q1": "sem.HeQua.duoc_nha_khoa_hoc_dau_nganh_giao_su_giang_vien_co_uy_tin_truc_tiep_giang_day_huong_dan_nghien_cuu_khoa_hoc",
+    "q2": "sem.HeQua.duoc_uu_tien_cung_cap_hoac_su_dung_tai_lieu_phuong_tien_va_trang_thiet_bi_phuc_vu_hoc_tap",
+    "q3": "sem.HeQua.duoc_uu_tien_xet_cap_hoc_bong_khuyen_khich_phat_trien_va_hoc_bong_cua_to_chuc_ca_nhan",
+    "q4": "sem.HeQua.duoc_uu_tien_bo_tri_cho_o_trong_ky_tuc_xa",
+    "q5": "sem.HeQua.duoc_uu_tien_xet_chon_di_hoc_o_nuoc_ngoai_hoac_theo_chuong_trinh_hop_tac_quoc_te"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+     "ten": "sinh viên chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d36.k4.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d36.k4.g1",
+     "ten": "sinh viên ở xa được ưu tiên bố trí chỗ ở",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên ở xa thì được ưu tiên bố trí chỗ ở trong ký túc xá"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k4.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k4.c1",
+     "ten": "sinh viên ở xa",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "mo_ta": "Những sinh viên ở xa",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_nha_khoa_hoc_dau_nganh_giao_su_giang_vien_co_uy_tin_truc_tiep_giang_day_huong_dan_nghien_cuu_khoa_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_nha_khoa_hoc_dau_nganh_giao_su_giang_vien_co_uy_tin_truc_tiep_giang_day_huong_dan_nghien_cuu_khoa_hoc",
+     "ten": "được nhà khoa học đầu ngành, giáo sư, giảng viên có uy tín trực tiếp giảng dạy, hướng dẫn nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4.a"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được các nhà khoa học đầu ngành, các giáo sư, giảng viên có trình độ, kinh nghiệm và uy tín trong nước, quốc tế trực tiếp giảng dạy, hướng dẫn nghiên cứu khoa học"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_uu_tien_cung_cap_hoac_su_dung_tai_lieu_phuong_tien_va_trang_thiet_bi_phuc_vu_hoc_tap",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_uu_tien_cung_cap_hoac_su_dung_tai_lieu_phuong_tien_va_trang_thiet_bi_phuc_vu_hoc_tap",
+     "ten": "được ưu tiên cung cấp hoặc sử dụng tài liệu, phương tiện và trang thiết bị phục vụ học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được ưu tiên cung cấp hoặc sử dụng các tài liệu học tập, phương tiện, trang thiết bị kỹ thuật, thư viện và hệ thống internet phục vụ học tập và nghiên cứu khoa học"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_uu_tien_xet_cap_hoc_bong_khuyen_khich_phat_trien_va_hoc_bong_cua_to_chuc_ca_nhan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_uu_tien_xet_cap_hoc_bong_khuyen_khich_phat_trien_va_hoc_bong_cua_to_chuc_ca_nhan",
+     "ten": "được ưu tiên xét cấp học bổng khuyến khích phát triển và học bổng của tổ chức, cá nhân",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được ưu tiên xét cấp học bổng khuyến khích phát triển và học bổng của các tổ chức, cá nhân trong, ngoài nước"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_uu_tien_bo_tri_cho_o_trong_ky_tuc_xa",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_uu_tien_bo_tri_cho_o_trong_ky_tuc_xa",
+     "ten": "được ưu tiên bố trí chỗ ở trong ký túc xá",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên ở xa được ưu tiên bố trí chỗ ở trong ký túc xá"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_uu_tien_xet_chon_di_hoc_o_nuoc_ngoai_hoac_theo_chuong_trinh_hop_tac_quoc_te",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_uu_tien_xet_chon_di_hoc_o_nuoc_ngoai_hoac_theo_chuong_trinh_hop_tac_quoc_te",
+     "ten": "được ưu tiên xét chọn đi học ở nước ngoài hoặc theo chương trình hợp tác quốc tế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k4.d"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được ưu tiên xét chọn đi học ở nước ngoài hoặc theo các chương trình hợp tác quốc tế của Đại học Quốc gia Hà Nội, của đơn vị đào tạo"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_nha_khoa_hoc_dau_nganh_giao_su_giang_vien_co_uy_tin_truc_tiep_giang_day_huong_dan_nghien_cuu_khoa_hoc",
+    "to": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d36.k4.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_uu_tien_cung_cap_hoac_su_dung_tai_lieu_phuong_tien_va_trang_thiet_bi_phuc_vu_hoc_tap",
+    "to": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d36.k4.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_uu_tien_xet_cap_hoc_bong_khuyen_khich_phat_trien_va_hoc_bong_cua_to_chuc_ca_nhan",
+    "to": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d36.k4.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_uu_tien_bo_tri_cho_o_trong_ky_tuc_xa",
+    "to": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d36.k4.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_uu_tien_xet_chon_di_hoc_o_nuoc_ngoai_hoac_theo_chuong_trinh_hop_tac_quoc_te",
+    "to": "sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d36.k4.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k4.g1",
+    "to": "sem.DieuKien.qc3626.d36.k4.c1",
+    "props": {
+     "nguon": "qc3626.d36.k4.c"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d36.k4.g1",
+    "to": "sem.HeQua.duoc_uu_tien_bo_tri_cho_o_trong_ky_tuc_xa",
+    "props": {
+     "nguon": "qc3626.d36.k4.c"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d36.k4",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "1ad74c25ef73636f2b81b190a50576a81afbc7d1499edaaf0805eac5aac817a0",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16250,
+  "output_tokens": 2965,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtt5Dzvi13KTHig7tSJ9'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:49:12+07:00",
+  "latency_s": 11.472,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

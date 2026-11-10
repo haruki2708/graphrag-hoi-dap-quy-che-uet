@@ -1,0 +1,908 @@
+{
+ "format": 1,
+ "unit": "qc3626.d28.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[12] XET 'c1'->'kn2': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[18] XET 'c7'->'kn6': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"kn1\", \"ten\": \"năm đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1\"], \"loai\": \"dai_luong\"}, {\"id\": \"kn2\", \"ten\": \"điều kiện trúng tuyển của ngành\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.a\"], \"loai\": \"khac\"}, {\"id\": \"kn3\", \"ten\": \"tín chỉ tích lũy\", \"bi_danh\": [\"số tín chỉ tích lũy\"], \"nguon\": [\"qc3626.d28.k1.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"kn4\", \"ten\": \"khối lượng học tập chuẩn của chương trình đào tạo\", \"bi_danh\": [\"khối lượng thiết kế theo kế hoạch học tập chuẩn\"], \"nguon\": [\"qc3626.d28.k1.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"kn5\", \"ten\": \"điểm trung bình chung các học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.c\"], \"loai\": \"dai_luong\"}, {\"id\": \"kn6\", \"ten\": \"chỉ tiêu đào tạo\", \"bi_danh\": [\"chỉ tiêu\"], \"nguon\": [\"qc3626.d28.k1.đ\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"dt1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"hd1\", \"ten\": \"chuyển sang học ngành khác\", \"bi_danh\": [\"chuyển ngành học\"], \"nguon\": [\"qc3626.d28.k1\"], \"mo_ta\": \"sinh viên hoàn thành năm học thứ nhất được xem xét chuyển sang học một ngành học khác\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện chuyển sang ngành học khác\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên phải đáp ứng đầy đủ các điều kiện a–đ, e của khoản 1 mới được xem xét chuyển ngành\"}, {\"id\": \"g2\", \"ten\": \"không bị cảnh báo học tập và không bị xét thi hành kỷ luật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Điểm d nêu 'không bị cảnh báo học tập hoặc bị xét thi hành kỷ luật'; hiểu là sinh viên không rơi vào cả hai trạng thái này, nên lấy AND của hai phủ định\"}], \"DieuKien\": [{\"id\": \"c0\", \"ten\": \"sinh viên đã hoàn thành năm học thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1\"], \"mo_ta\": \"Sinh viên hoàn thành năm học thứ nhất\", \"toan_tu\": \"co\", \"moc\": \"sau khi hoàn thành năm học thứ nhất\"}, {\"id\": \"c1\", \"ten\": \"đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.a\"], \"mo_ta\": \"Đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang học\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"số tín chỉ tích lũy tối thiểu bằng khối lượng học tập chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.b\"], \"mo_ta\": \"Có số tín chỉ tích lũy tối thiểu bằng khối lượng thiết kế theo kế hoạch học tập chuẩn của chương trình đào tạo\", \"don_vi\": \"tín chỉ\", \"so_voi\": \"khối lượng học tập chuẩn của chương trình đào tạo\"}, {\"id\": \"c3\", \"ten\": \"điểm trung bình chung các học phần đạt từ 2,50 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.c\"], \"mo_ta\": \"Điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên\", \"min\": 2.5, \"min_incl\": true, \"thang\": \"thang_4\", \"moc\": \"tính đến thời điểm xét\"}, {\"id\": \"c4\", \"ten\": \"không bị cảnh báo học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.d\"], \"mo_ta\": \"Không bị cảnh báo học tập\", \"toan_tu\": \"co\", \"phu_dinh\": true}, {\"id\": \"c5\", \"ten\": \"không bị xét thi hành kỷ luật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.d\"], \"mo_ta\": \"Không bị xét thi hành kỷ luật\", \"toan_tu\": \"co\", \"phu_dinh\": true}, {\"id\": \"c6\", \"ten\": \"được sự đồng ý của chủ nhiệm khoa/bộ môn và thủ trưởng đơn vị đào tạo hoặc Giám đốc ĐHQGHN\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.e\"], \"mo_ta\": \"Được sự đồng ý của Chủ nhiệm Khoa/Bộ môn (đơn vị chuyên môn phụ trách ngành đào tạo) và thủ trưởng đơn vị đào tạo (đối với trường thành viên), Giám đốc ĐHQGHN (đối với đơn vị đào tạo trực thuộc)\", \"toan_tu\": \"co\"}, {\"id\": \"c7\", \"ten\": \"đơn vị đào tạo còn chỉ tiêu đối với ngành muốn chuyển đến\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.đ\"], \"mo_ta\": \"Đơn vị đào tạo còn chỉ tiêu đối với ngành đào tạo sinh viên muốn chuyển đến\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"bị cảnh báo học tập\", \"bi_danh\": [\"cảnh báo học tập\"], \"nguon\": [\"qc3626.d28.k1.d\"], \"loai\": \"trang_thai\"}, {\"id\": \"q2\", \"ten\": \"bị xét thi hành kỷ luật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d28.k1.d\"], \"loai\": \"trang_thai\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"hd1\", \"to\": \"g1\", \"nguon\": \"qc3626.d28.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"dt1\", \"nguon\": \"qc3626.d28.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c0\", \"nguon\": \"qc3626.d28.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d28.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d28.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d28.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d28.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c6\", \"nguon\": \"qc3626.d28.k1.e\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c7\", \"nguon\": \"qc3626.d28.k1.đ\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d28.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c5\", \"nguon\": \"qc3626.d28.k1.d\"}, {\"type\": \"XET\", \"from\": \"c0\", \"to\": \"kn1\", \"nguon\": \"qc3626.d28.k1\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"kn2\", \"nguon\": \"qc3626.d28.k1.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"kn3\", \"nguon\": \"qc3626.d28.k1.b\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"kn4\", \"nguon\": \"qc3626.d28.k1.b\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"kn5\", \"nguon\": \"qc3626.d28.k1.c\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"q1\", \"nguon\": \"qc3626.d28.k1.d\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"q2\", \"nguon\": \"qc3626.d28.k1.d\"}, {\"type\": \"XET\", \"from\": \"c7\", \"to\": \"kn6\", \"nguon\": \"qc3626.d28.k1.đ\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "kn1",
+     "ten": "năm đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "kn2",
+     "ten": "điều kiện trúng tuyển của ngành",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.a"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "kn3",
+     "ten": "tín chỉ tích lũy",
+     "bi_danh": [
+      "số tín chỉ tích lũy"
+     ],
+     "nguon": [
+      "qc3626.d28.k1.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "kn4",
+     "ten": "khối lượng học tập chuẩn của chương trình đào tạo",
+     "bi_danh": [
+      "khối lượng thiết kế theo kế hoạch học tập chuẩn"
+     ],
+     "nguon": [
+      "qc3626.d28.k1.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "kn5",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "kn6",
+     "ten": "chỉ tiêu đào tạo",
+     "bi_danh": [
+      "chỉ tiêu"
+     ],
+     "nguon": [
+      "qc3626.d28.k1.đ"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "dt1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "hd1",
+     "ten": "chuyển sang học ngành khác",
+     "bi_danh": [
+      "chuyển ngành học"
+     ],
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "mo_ta": "sinh viên hoàn thành năm học thứ nhất được xem xét chuyển sang học một ngành học khác"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện chuyển sang ngành học khác",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải đáp ứng đầy đủ các điều kiện a–đ, e của khoản 1 mới được xem xét chuyển ngành"
+    },
+    {
+     "id": "g2",
+     "ten": "không bị cảnh báo học tập và không bị xét thi hành kỷ luật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Điểm d nêu 'không bị cảnh báo học tập hoặc bị xét thi hành kỷ luật'; hiểu là sinh viên không rơi vào cả hai trạng thái này, nên lấy AND của hai phủ định"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c0",
+     "ten": "sinh viên đã hoàn thành năm học thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "mo_ta": "Sinh viên hoàn thành năm học thứ nhất",
+     "toan_tu": "co",
+     "moc": "sau khi hoàn thành năm học thứ nhất"
+    },
+    {
+     "id": "c1",
+     "ten": "đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.a"
+     ],
+     "mo_ta": "Đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang học",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "số tín chỉ tích lũy tối thiểu bằng khối lượng học tập chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.b"
+     ],
+     "mo_ta": "Có số tín chỉ tích lũy tối thiểu bằng khối lượng thiết kế theo kế hoạch học tập chuẩn của chương trình đào tạo",
+     "don_vi": "tín chỉ",
+     "so_voi": "khối lượng học tập chuẩn của chương trình đào tạo"
+    },
+    {
+     "id": "c3",
+     "ten": "điểm trung bình chung các học phần đạt từ 2,50 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.c"
+     ],
+     "mo_ta": "Điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "tính đến thời điểm xét"
+    },
+    {
+     "id": "c4",
+     "ten": "không bị cảnh báo học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "mo_ta": "Không bị cảnh báo học tập",
+     "toan_tu": "co",
+     "phu_dinh": true
+    },
+    {
+     "id": "c5",
+     "ten": "không bị xét thi hành kỷ luật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "mo_ta": "Không bị xét thi hành kỷ luật",
+     "toan_tu": "co",
+     "phu_dinh": true
+    },
+    {
+     "id": "c6",
+     "ten": "được sự đồng ý của chủ nhiệm khoa/bộ môn và thủ trưởng đơn vị đào tạo hoặc Giám đốc ĐHQGHN",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.e"
+     ],
+     "mo_ta": "Được sự đồng ý của Chủ nhiệm Khoa/Bộ môn (đơn vị chuyên môn phụ trách ngành đào tạo) và thủ trưởng đơn vị đào tạo (đối với trường thành viên), Giám đốc ĐHQGHN (đối với đơn vị đào tạo trực thuộc)",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c7",
+     "ten": "đơn vị đào tạo còn chỉ tiêu đối với ngành muốn chuyển đến",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.đ"
+     ],
+     "mo_ta": "Đơn vị đào tạo còn chỉ tiêu đối với ngành đào tạo sinh viên muốn chuyển đến",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "bị cảnh báo học tập",
+     "bi_danh": [
+      "cảnh báo học tập"
+     ],
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q2",
+     "ten": "bị xét thi hành kỷ luật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "loai": "trang_thai"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "hd1",
+     "to": "g1",
+     "nguon": "qc3626.d28.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "dt1",
+     "nguon": "qc3626.d28.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c0",
+     "nguon": "qc3626.d28.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d28.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d28.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d28.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d28.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c6",
+     "nguon": "qc3626.d28.k1.e"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c7",
+     "nguon": "qc3626.d28.k1.đ"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d28.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c5",
+     "nguon": "qc3626.d28.k1.d"
+    },
+    {
+     "type": "XET",
+     "from": "c0",
+     "to": "kn1",
+     "nguon": "qc3626.d28.k1"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "kn2",
+     "nguon": "qc3626.d28.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "kn3",
+     "nguon": "qc3626.d28.k1.b"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "kn4",
+     "nguon": "qc3626.d28.k1.b"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "kn5",
+     "nguon": "qc3626.d28.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "q1",
+     "nguon": "qc3626.d28.k1.d"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "q2",
+     "nguon": "qc3626.d28.k1.d"
+    },
+    {
+     "type": "XET",
+     "from": "c7",
+     "to": "kn6",
+     "nguon": "qc3626.d28.k1.đ"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d28.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "kn1": "sem.KhaiNiem.nam_dao_tao",
+    "kn2": "sem.KhaiNiem.dieu_kien_trung_tuyen_cua_nganh",
+    "kn3": "sem.KhaiNiem.tin_chi_tich_luy",
+    "kn4": "sem.KhaiNiem.khoi_luong_hoc_tap_chuan_cua_chuong_trinh_dao_tao",
+    "kn5": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "kn6": "sem.KhaiNiem.chi_tieu_dao_tao",
+    "dt1": "sem.DoiTuong.sinh_vien",
+    "hd1": "sem.HoatDong.chuyen_sang_hoc_nganh_khac",
+    "g1": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d28.k1.g2",
+    "c0": "sem.DieuKien.qc3626.d28.k1.c0",
+    "c1": "sem.DieuKien.qc3626.d28.k1.c1",
+    "c2": "sem.DieuKien.qc3626.d28.k1.c2",
+    "c3": "sem.DieuKien.qc3626.d28.k1.c3",
+    "c4": "sem.DieuKien.qc3626.d28.k1.c4",
+    "c5": "sem.DieuKien.qc3626.d28.k1.c5",
+    "c6": "sem.DieuKien.qc3626.d28.k1.c6",
+    "c7": "sem.DieuKien.qc3626.d28.k1.c7",
+    "q1": "sem.HeQua.bi_canh_bao_hoc_tap",
+    "q2": "sem.HeQua.bi_xet_thi_hanh_ky_luat"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.nam_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.nam_dao_tao",
+     "ten": "năm đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.dieu_kien_trung_tuyen_cua_nganh",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.dieu_kien_trung_tuyen_cua_nganh",
+     "ten": "điều kiện trúng tuyển của ngành",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.a"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.tin_chi_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.tin_chi_tich_luy",
+     "ten": "tín chỉ tích lũy",
+     "bi_danh": [
+      "số tín chỉ tích lũy"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.khoi_luong_hoc_tap_chuan_cua_chuong_trinh_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoi_luong_hoc_tap_chuan_cua_chuong_trinh_dao_tao",
+     "ten": "khối lượng học tập chuẩn của chương trình đào tạo",
+     "bi_danh": [
+      "khối lượng thiết kế theo kế hoạch học tập chuẩn"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.chi_tieu_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.chi_tieu_dao_tao",
+     "ten": "chỉ tiêu đào tạo",
+     "bi_danh": [
+      "chỉ tiêu"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.đ"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.chuyen_sang_hoc_nganh_khac",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.chuyen_sang_hoc_nganh_khac",
+     "ten": "chuyển sang học ngành khác",
+     "bi_danh": [
+      "chuyển ngành học"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "mo_ta": "sinh viên hoàn thành năm học thứ nhất được xem xét chuyển sang học một ngành học khác"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+     "ten": "điều kiện chuyển sang ngành học khác",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải đáp ứng đầy đủ các điều kiện a–đ, e của khoản 1 mới được xem xét chuyển ngành"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d28.k1.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d28.k1.g2",
+     "ten": "không bị cảnh báo học tập và không bị xét thi hành kỷ luật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Điểm d nêu 'không bị cảnh báo học tập hoặc bị xét thi hành kỷ luật'; hiểu là sinh viên không rơi vào cả hai trạng thái này, nên lấy AND của hai phủ định"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c0",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c0",
+     "ten": "sinh viên đã hoàn thành năm học thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1"
+     ],
+     "mo_ta": "Sinh viên hoàn thành năm học thứ nhất",
+     "toan_tu": "co",
+     "moc": "sau khi hoàn thành năm học thứ nhất"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c1",
+     "ten": "đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.a"
+     ],
+     "mo_ta": "Đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang học",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c2",
+     "ten": "số tín chỉ tích lũy tối thiểu bằng khối lượng học tập chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.b"
+     ],
+     "mo_ta": "Có số tín chỉ tích lũy tối thiểu bằng khối lượng thiết kế theo kế hoạch học tập chuẩn của chương trình đào tạo",
+     "don_vi": "tín chỉ",
+     "so_voi": "khối lượng học tập chuẩn của chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c3",
+     "ten": "điểm trung bình chung các học phần đạt từ 2,50 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.c"
+     ],
+     "mo_ta": "Điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "tính đến thời điểm xét"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c4",
+     "ten": "không bị cảnh báo học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "mo_ta": "Không bị cảnh báo học tập",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c5",
+     "ten": "không bị xét thi hành kỷ luật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "mo_ta": "Không bị xét thi hành kỷ luật",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c6",
+     "ten": "được sự đồng ý của chủ nhiệm khoa/bộ môn và thủ trưởng đơn vị đào tạo hoặc Giám đốc ĐHQGHN",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.e"
+     ],
+     "mo_ta": "Được sự đồng ý của Chủ nhiệm Khoa/Bộ môn (đơn vị chuyên môn phụ trách ngành đào tạo) và thủ trưởng đơn vị đào tạo (đối với trường thành viên), Giám đốc ĐHQGHN (đối với đơn vị đào tạo trực thuộc)",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d28.k1.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d28.k1.c7",
+     "ten": "đơn vị đào tạo còn chỉ tiêu đối với ngành muốn chuyển đến",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.đ"
+     ],
+     "mo_ta": "Đơn vị đào tạo còn chỉ tiêu đối với ngành đào tạo sinh viên muốn chuyển đến",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_canh_bao_hoc_tap",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_canh_bao_hoc_tap",
+     "ten": "bị cảnh báo học tập",
+     "bi_danh": [
+      "cảnh báo học tập"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_xet_thi_hanh_ky_luat",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_xet_thi_hanh_ky_luat",
+     "ten": "bị xét thi hành kỷ luật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d28.k1.d"
+     ],
+     "loai": "trang_thai"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.chuyen_sang_hoc_nganh_khac",
+    "to": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "props": {
+     "nguon": "qc3626.d28.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d28.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.DieuKien.qc3626.d28.k1.c0",
+    "props": {
+     "nguon": "qc3626.d28.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.DieuKien.qc3626.d28.k1.c1",
+    "props": {
+     "nguon": "qc3626.d28.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.DieuKien.qc3626.d28.k1.c2",
+    "props": {
+     "nguon": "qc3626.d28.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.DieuKien.qc3626.d28.k1.c3",
+    "props": {
+     "nguon": "qc3626.d28.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.NhomDieuKien.qc3626.d28.k1.g2",
+    "props": {
+     "nguon": "qc3626.d28.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.DieuKien.qc3626.d28.k1.c6",
+    "props": {
+     "nguon": "qc3626.d28.k1.e"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g1",
+    "to": "sem.DieuKien.qc3626.d28.k1.c7",
+    "props": {
+     "nguon": "qc3626.d28.k1.đ"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g2",
+    "to": "sem.DieuKien.qc3626.d28.k1.c4",
+    "props": {
+     "nguon": "qc3626.d28.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d28.k1.g2",
+    "to": "sem.DieuKien.qc3626.d28.k1.c5",
+    "props": {
+     "nguon": "qc3626.d28.k1.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c0",
+    "to": "sem.KhaiNiem.nam_dao_tao",
+    "props": {
+     "nguon": "qc3626.d28.k1"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c1",
+    "to": "sem.KhaiNiem.dieu_kien_trung_tuyen_cua_nganh",
+    "props": {
+     "nguon": "qc3626.d28.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c2",
+    "to": "sem.KhaiNiem.tin_chi_tich_luy",
+    "props": {
+     "nguon": "qc3626.d28.k1.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c2",
+    "to": "sem.KhaiNiem.khoi_luong_hoc_tap_chuan_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d28.k1.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c3",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d28.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c4",
+    "to": "sem.HeQua.bi_canh_bao_hoc_tap",
+    "props": {
+     "nguon": "qc3626.d28.k1.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c5",
+    "to": "sem.HeQua.bi_xet_thi_hanh_ky_luat",
+    "props": {
+     "nguon": "qc3626.d28.k1.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d28.k1.c7",
+    "to": "sem.KhaiNiem.chi_tieu_dao_tao",
+    "props": {
+     "nguon": "qc3626.d28.k1.đ"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d28.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "2de320f8eb3d0170399adbf509a86a612fc23f62737d17b988e667b85877deed",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16273,
+  "output_tokens": 8113,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgfdjRDPAZWjFVfK2rBEF'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:53:26+07:00",
+  "latency_s": 31.011,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

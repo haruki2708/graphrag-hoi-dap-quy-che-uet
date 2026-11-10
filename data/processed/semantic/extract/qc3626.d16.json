@@ -1,0 +1,114 @@
+{
+ "format": 1,
+ "unit": "qc3626.d16",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d16\"], \"loai\": \"khac\", \"dinh_nghia\": \"Mỗi năm học có hai học kỳ chính; mỗi học kỳ chính có 15 tuần học, từ 3 đến 4 tuần thi và 1 tuần dự phòng.\"}, {\"id\": \"k2\", \"ten\": \"học kỳ phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d16\"], \"loai\": \"khac\", \"dinh_nghia\": \"Mỗi năm học có một học kỳ phụ, có ít nhất 5 tuần học và 1 tuần thi, được tổ chức trong thời gian giữa hai học kỳ chính.\"}], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": []}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d16"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Mỗi năm học có hai học kỳ chính; mỗi học kỳ chính có 15 tuần học, từ 3 đến 4 tuần thi và 1 tuần dự phòng."
+    },
+    {
+     "id": "k2",
+     "ten": "học kỳ phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d16"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Mỗi năm học có một học kỳ phụ, có ít nhất 5 tuần học và 1 tuần thi, được tổ chức trong thời gian giữa hai học kỳ chính."
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": []
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d16",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_ky_chinh",
+    "k2": "sem.KhaiNiem.hoc_ky_phu"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_ky_chinh",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_ky_chinh",
+     "ten": "học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d16"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Mỗi năm học có hai học kỳ chính; mỗi học kỳ chính có 15 tuần học, từ 3 đến 4 tuần thi và 1 tuần dự phòng."
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_ky_phu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_ky_phu",
+     "ten": "học kỳ phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d16"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Mỗi năm học có một học kỳ phụ, có ít nhất 5 tuần học và 1 tuần thi, được tổ chức trong thời gian giữa hai học kỳ chính."
+    }
+   }
+  ],
+  "edges": []
+ },
+ "metadata": {
+  "unit": "qc3626.d16",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "a85ab48dabf9e5c30d0d6064009f3682a62dedafd00479f8651d029e87f7714b",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15835,
+  "output_tokens": 935,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtrub4p4z9MFNd6csBvj'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:33:54+07:00",
+  "latency_s": 4.936,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

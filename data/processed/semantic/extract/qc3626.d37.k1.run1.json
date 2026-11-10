@@ -1,0 +1,146 @@
+{
+ "format": 1,
+ "unit": "qc3626.d37.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm học phần\", \"bi_danh\": [\"điểm đánh giá học phần\"], \"nguon\": [\"qc3626.d37.k1\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm đánh giá học phần, gồm điểm đánh giá bộ phận và điểm đánh giá kết thúc học phần\"}, {\"id\": \"k2\", \"ten\": \"điểm đánh giá bộ phận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d37.k1\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Trung bình của các điểm kiểm tra đánh giá thường xuyên, giữa kỳ\"}, {\"id\": \"k3\", \"ten\": \"điểm đánh giá kết thúc học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d37.k1\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm đánh giá kết thúc học phần, bắt buộc và có trọng số không dưới 60% điểm học phần\"}], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": []}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm học phần",
+     "bi_danh": [
+      "điểm đánh giá học phần"
+     ],
+     "nguon": [
+      "qc3626.d37.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm đánh giá học phần, gồm điểm đánh giá bộ phận và điểm đánh giá kết thúc học phần"
+    },
+    {
+     "id": "k2",
+     "ten": "điểm đánh giá bộ phận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d37.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Trung bình của các điểm kiểm tra đánh giá thường xuyên, giữa kỳ"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm đánh giá kết thúc học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d37.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm đánh giá kết thúc học phần, bắt buộc và có trọng số không dưới 60% điểm học phần"
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": []
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d37.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_hoc_phan",
+    "k2": "sem.KhaiNiem.diem_danh_gia_bo_phan",
+    "k3": "sem.KhaiNiem.diem_danh_gia_ket_thuc_hoc_phan"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [
+      "điểm đánh giá học phần"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d37.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm đánh giá học phần, gồm điểm đánh giá bộ phận và điểm đánh giá kết thúc học phần"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_danh_gia_bo_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_danh_gia_bo_phan",
+     "ten": "điểm đánh giá bộ phận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d37.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Trung bình của các điểm kiểm tra đánh giá thường xuyên, giữa kỳ"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_danh_gia_ket_thuc_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_danh_gia_ket_thuc_hoc_phan",
+     "ten": "điểm đánh giá kết thúc học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d37.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm đánh giá kết thúc học phần, bắt buộc và có trọng số không dưới 60% điểm học phần"
+    }
+   }
+  ],
+  "edges": []
+ },
+ "metadata": {
+  "unit": "qc3626.d37.k1",
+  "role": "extract",
+  "run": 1,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "a18a2992848ff849c72ffcbfa224702e632b68e7715cde6c7963ac15d73a3207",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15828,
+  "output_tokens": 1644,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtuo1FFqvE9tSTwBoZg9'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T15:11:46+07:00",
+  "latency_s": 8.52,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

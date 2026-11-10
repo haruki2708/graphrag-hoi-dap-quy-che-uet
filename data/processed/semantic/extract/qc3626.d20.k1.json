@@ -1,0 +1,231 @@
+{
+ "format": 1,
+ "unit": "qc3626.d20.k1",
+ "status": "invalid",
+ "errors": [
+  "edges[4] XET 'q1'->'k2': HeQua -> KhaiNiem is not allowed for XET (DieuKien -> KhaiNiem|HeQua)"
+ ],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"lớp khóa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.a\"], \"loai\": \"khac\", \"dinh_nghia\": \"Lớp được tổ chức cho các sinh viên cùng một ngành học trong cùng một khóa học, ổn định từ đầu đến cuối mỗi khóa\"}, {\"id\": \"k2\", \"ten\": \"khối lượng kiến thức đã tích lũy\", \"bi_danh\": [\"khối lượng kiến thức đã tích luỹ\"], \"nguon\": [\"qc3626.d20.k1.c\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"mã sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"trở lại học tiếp sau khi nghỉ học tạm thời\", \"bi_danh\": [\"nghỉ học tạm thời\"], \"nguon\": [\"qc3626.d20.k1.c\"], \"mo_ta\": \"Sinh viên trở lại học tiếp sau thời gian được phép nghỉ học tạm thời và được bố trí vào lớp khóa học phù hợp\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"sinh viên được phép nghỉ học tạm thời và trở lại học tiếp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên đã được phép nghỉ học tạm thời thì khi trở lại học tiếp được bố trí vào lớp khóa học phù hợp\"}, {\"id\": \"g2\", \"ten\": \"lớp khóa học có học phần khác biệt chương trình đã theo học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Lớp khóa học có những học phần trong chương trình đào tạo khác biệt so với chương trình sinh viên đã theo học trước khi nghỉ học tạm thời\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"được phép nghỉ học tạm thời\", \"bi_danh\": [\"nghỉ học tạm thời\"], \"nguon\": [\"qc3626.d20.k1.c\"], \"mo_ta\": \"Sinh viên được phép nghỉ học tạm thời\", \"toan_tu\": \"la\"}, {\"id\": \"c2\", \"ten\": \"chương trình đào tạo khác biệt so với chương trình đã theo học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"mo_ta\": \"Lớp khóa học có những học phần trong chương trình đào tạo khác biệt so với chương trình đã theo học trước khi nghỉ học tạm thời\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được bố trí vào lớp khóa học phù hợp với khối lượng kiến thức đã tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"loai\": \"trang_thai\", \"mo_ta\": \"Sinh viên được bố trí vào lớp khóa học phù hợp với khối lượng kiến thức đã tích lũy\"}, {\"id\": \"q2\", \"ten\": \"giữ nguyên mã sinh viên đã được cấp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d20.k1.c\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Sinh viên giữ nguyên mã sinh viên đã được cấp khi trở lại học tiếp\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"XET\", \"from\": \"q1\", \"to\": \"k2\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o2\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o2\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d20.k1.c\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"g2\", \"to\": \"o1\", \"nguon\": \"qc3626.d20.k1.c\", \"noi_dung\": \"quyết định cho sinh viên được bảo lưu hoặc phải học bổ sung những học phần tương đương\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "lớp khóa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.a"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Lớp được tổ chức cho các sinh viên cùng một ngành học trong cùng một khóa học, ổn định từ đầu đến cuối mỗi khóa"
+    },
+    {
+     "id": "k2",
+     "ten": "khối lượng kiến thức đã tích lũy",
+     "bi_danh": [
+      "khối lượng kiến thức đã tích luỹ"
+     ],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "mã sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "trở lại học tiếp sau khi nghỉ học tạm thời",
+     "bi_danh": [
+      "nghỉ học tạm thời"
+     ],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "mo_ta": "Sinh viên trở lại học tiếp sau thời gian được phép nghỉ học tạm thời và được bố trí vào lớp khóa học phù hợp"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "sinh viên được phép nghỉ học tạm thời và trở lại học tiếp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đã được phép nghỉ học tạm thời thì khi trở lại học tiếp được bố trí vào lớp khóa học phù hợp"
+    },
+    {
+     "id": "g2",
+     "ten": "lớp khóa học có học phần khác biệt chương trình đã theo học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Lớp khóa học có những học phần trong chương trình đào tạo khác biệt so với chương trình sinh viên đã theo học trước khi nghỉ học tạm thời"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "được phép nghỉ học tạm thời",
+     "bi_danh": [
+      "nghỉ học tạm thời"
+     ],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "mo_ta": "Sinh viên được phép nghỉ học tạm thời",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c2",
+     "ten": "chương trình đào tạo khác biệt so với chương trình đã theo học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "mo_ta": "Lớp khóa học có những học phần trong chương trình đào tạo khác biệt so với chương trình đã theo học trước khi nghỉ học tạm thời",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được bố trí vào lớp khóa học phù hợp với khối lượng kiến thức đã tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "Sinh viên được bố trí vào lớp khóa học phù hợp với khối lượng kiến thức đã tích lũy"
+    },
+    {
+     "id": "q2",
+     "ten": "giữ nguyên mã sinh viên đã được cấp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d20.k1.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên giữ nguyên mã sinh viên đã được cấp khi trở lại học tiếp"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "q1",
+     "to": "k2",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o2",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o2",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d20.k1.c"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "g2",
+     "to": "o1",
+     "nguon": "qc3626.d20.k1.c",
+     "noi_dung": "quyết định cho sinh viên được bảo lưu hoặc phải học bổ sung những học phần tương đương"
+    }
+   ]
+  }
+ },
+ "fragment": null,
+ "metadata": {
+  "unit": "qc3626.d20.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "19c4bed1005e42439e11940d4d72ffbb793da233f9392f9538c79de680fb2ab7",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16203,
+  "output_tokens": 5164,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgts2jayUaohJ6X4fFt7B'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:35:31+07:00",
+  "latency_s": 20.607,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

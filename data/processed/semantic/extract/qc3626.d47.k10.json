@@ -1,0 +1,828 @@
+{
+ "format": 1,
+ "unit": "qc3626.d47.k10",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[10] XET 'c1'->'k1': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[11] XET 'c2'->'k2': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[12] XET 'c3'->'k3': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[13] XET 'c4'->'k4': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[14] XET 'c5'->'k5': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[15] XET 'c6'->'k6': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học phần giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k2\", \"ten\": \"học phần giáo dục thể chất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k3\", \"ten\": \"học phần kỹ năng bổ trợ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k4\", \"ten\": \"chuẩn đầu ra ngoại ngữ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"khac\"}, {\"id\": \"k5\", \"ten\": \"chuẩn đầu ra công nghệ thông tin\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"khac\"}, {\"id\": \"k6\", \"ten\": \"thời gian tối đa được phép học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"hoàn thành điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"sinh viên trở về đơn vị đào tạo hoàn thành các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện trở về hoàn thành và đề nghị xét tốt nghiệp sau khi hết thời gian tối đa\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên đã hết thời gian tối đa được phép học, còn thiếu một hoặc nhiều điều kiện hoàn thành, và trong thời hạn 3 năm tính từ ngày phải ngừng học\"}, {\"id\": \"g2\", \"ten\": \"chưa hoàn thành học phần hoặc chuẩn đầu ra còn thiếu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Chưa hoàn thành một trong các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất, kỹ năng bổ trợ hoặc chưa đạt chuẩn đầu ra ngoại ngữ, công nghệ thông tin (nếu có); suy luận OR theo nghĩa chỉ cần thiếu một mục\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"chưa hoàn thành học phần giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"Chưa hoàn thành học phần giáo dục quốc phòng - an ninh\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c2\", \"ten\": \"chưa hoàn thành học phần giáo dục thể chất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"Chưa hoàn thành học phần giáo dục thể chất\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c3\", \"ten\": \"chưa hoàn thành học phần kỹ năng bổ trợ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"Chưa hoàn thành học phần kỹ năng bổ trợ\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c4\", \"ten\": \"chưa đạt chuẩn đầu ra ngoại ngữ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"Chưa đạt chuẩn đầu ra về ngoại ngữ (nếu có)\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c5\", \"ten\": \"chưa đạt chuẩn đầu ra công nghệ thông tin\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"Chưa đạt chuẩn đầu ra về công nghệ thông tin (nếu có)\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c6\", \"ten\": \"đã hết thời gian tối đa được phép học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"Đã hết thời gian tối đa được phép học\", \"toan_tu\": \"la\"}, {\"id\": \"c7\", \"ten\": \"trong thời hạn 3 năm tính từ ngày phải ngừng học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"mo_ta\": \"Trong thời hạn 3 năm tính từ ngày phải ngừng học\", \"max\": 3, \"max_incl\": true, \"don_vi\": \"năm\", \"moc\": \"ngày phải ngừng học\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được trở về đơn vị đào tạo hoàn thành điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k10\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Được trở về đơn vị đào tạo hoàn thành các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o2\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c6\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c7\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c1\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c5\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k2\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k3\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k4\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"k5\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"XET\", \"from\": \"c6\", \"to\": \"k6\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d47.k10\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o2\", \"nguon\": \"qc3626.d47.k10\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k2",
+     "ten": "học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k3",
+     "ten": "học phần kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k4",
+     "ten": "chuẩn đầu ra ngoại ngữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "k5",
+     "ten": "chuẩn đầu ra công nghệ thông tin",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "k6",
+     "ten": "thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "hoàn thành điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "sinh viên trở về đơn vị đào tạo hoàn thành các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện trở về hoàn thành và đề nghị xét tốt nghiệp sau khi hết thời gian tối đa",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đã hết thời gian tối đa được phép học, còn thiếu một hoặc nhiều điều kiện hoàn thành, và trong thời hạn 3 năm tính từ ngày phải ngừng học"
+    },
+    {
+     "id": "g2",
+     "ten": "chưa hoàn thành học phần hoặc chuẩn đầu ra còn thiếu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Chưa hoàn thành một trong các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất, kỹ năng bổ trợ hoặc chưa đạt chuẩn đầu ra ngoại ngữ, công nghệ thông tin (nếu có); suy luận OR theo nghĩa chỉ cần thiếu một mục"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "chưa hoàn thành học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa hoàn thành học phần giáo dục quốc phòng - an ninh",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c2",
+     "ten": "chưa hoàn thành học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa hoàn thành học phần giáo dục thể chất",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c3",
+     "ten": "chưa hoàn thành học phần kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa hoàn thành học phần kỹ năng bổ trợ",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c4",
+     "ten": "chưa đạt chuẩn đầu ra ngoại ngữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa đạt chuẩn đầu ra về ngoại ngữ (nếu có)",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c5",
+     "ten": "chưa đạt chuẩn đầu ra công nghệ thông tin",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa đạt chuẩn đầu ra về công nghệ thông tin (nếu có)",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c6",
+     "ten": "đã hết thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Đã hết thời gian tối đa được phép học",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c7",
+     "ten": "trong thời hạn 3 năm tính từ ngày phải ngừng học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Trong thời hạn 3 năm tính từ ngày phải ngừng học",
+     "max": 3,
+     "max_incl": true,
+     "don_vi": "năm",
+     "moc": "ngày phải ngừng học"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được trở về đơn vị đào tạo hoàn thành điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được trở về đơn vị đào tạo hoàn thành các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o2",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c6",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c7",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c1",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c5",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k2",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k3",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k4",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "k5",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "XET",
+     "from": "c6",
+     "to": "k6",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d47.k10"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o2",
+     "nguon": "qc3626.d47.k10"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d47.k10",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "k2": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "k3": "sem.KhaiNiem.hoc_phan_ky_nang_bo_tro",
+    "k4": "sem.KhaiNiem.chuan_dau_ra_ngoai_ngu",
+    "k5": "sem.KhaiNiem.chuan_dau_ra_cong_nghe_thong_tin",
+    "k6": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "o2": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+    "g1": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "c1": "sem.DieuKien.qc3626.d47.k10.c1",
+    "c2": "sem.DieuKien.qc3626.d47.k10.c2",
+    "c3": "sem.DieuKien.qc3626.d47.k10.c3",
+    "c4": "sem.DieuKien.qc3626.d47.k10.c4",
+    "c5": "sem.DieuKien.qc3626.d47.k10.c5",
+    "c6": "sem.DieuKien.qc3626.d47.k10.c6",
+    "c7": "sem.DieuKien.qc3626.d47.k10.c7",
+    "q1": "sem.HeQua.duoc_tro_ve_don_vi_dao_tao_hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+     "ten": "học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+     "ten": "học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_ky_nang_bo_tro",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_ky_nang_bo_tro",
+     "ten": "học phần kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.chuan_dau_ra_ngoai_ngu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.chuan_dau_ra_ngoai_ngu",
+     "ten": "chuẩn đầu ra ngoại ngữ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.chuan_dau_ra_cong_nghe_thong_tin",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.chuan_dau_ra_cong_nghe_thong_tin",
+     "ten": "chuẩn đầu ra công nghệ thông tin",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+     "ten": "thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+     "ten": "hoàn thành điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "sinh viên trở về đơn vị đào tạo hoàn thành các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+     "ten": "điều kiện trở về hoàn thành và đề nghị xét tốt nghiệp sau khi hết thời gian tối đa",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đã hết thời gian tối đa được phép học, còn thiếu một hoặc nhiều điều kiện hoàn thành, và trong thời hạn 3 năm tính từ ngày phải ngừng học"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+     "ten": "chưa hoàn thành học phần hoặc chuẩn đầu ra còn thiếu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Chưa hoàn thành một trong các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất, kỹ năng bổ trợ hoặc chưa đạt chuẩn đầu ra ngoại ngữ, công nghệ thông tin (nếu có); suy luận OR theo nghĩa chỉ cần thiếu một mục"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k10.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k10.c1",
+     "ten": "chưa hoàn thành học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa hoàn thành học phần giáo dục quốc phòng - an ninh",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k10.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k10.c2",
+     "ten": "chưa hoàn thành học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa hoàn thành học phần giáo dục thể chất",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k10.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k10.c3",
+     "ten": "chưa hoàn thành học phần kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa hoàn thành học phần kỹ năng bổ trợ",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k10.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k10.c4",
+     "ten": "chưa đạt chuẩn đầu ra ngoại ngữ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa đạt chuẩn đầu ra về ngoại ngữ (nếu có)",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k10.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k10.c5",
+     "ten": "chưa đạt chuẩn đầu ra công nghệ thông tin",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Chưa đạt chuẩn đầu ra về công nghệ thông tin (nếu có)",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k10.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k10.c6",
+     "ten": "đã hết thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Đã hết thời gian tối đa được phép học",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k10.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k10.c7",
+     "ten": "trong thời hạn 3 năm tính từ ngày phải ngừng học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "mo_ta": "Trong thời hạn 3 năm tính từ ngày phải ngừng học",
+     "max": 3,
+     "max_incl": true,
+     "don_vi": "năm",
+     "moc": "ngày phải ngừng học"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tro_ve_don_vi_dao_tao_hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tro_ve_don_vi_dao_tao_hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+     "ten": "được trở về đơn vị đào tạo hoàn thành điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k10"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được trở về đơn vị đào tạo hoàn thành các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+    "to": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+    "to": "sem.DieuKien.qc3626.d47.k10.c6",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+    "to": "sem.DieuKien.qc3626.d47.k10.c7",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "to": "sem.DieuKien.qc3626.d47.k10.c1",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "to": "sem.DieuKien.qc3626.d47.k10.c2",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "to": "sem.DieuKien.qc3626.d47.k10.c3",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "to": "sem.DieuKien.qc3626.d47.k10.c4",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g2",
+    "to": "sem.DieuKien.qc3626.d47.k10.c5",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k10.c1",
+    "to": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k10.c2",
+    "to": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k10.c3",
+    "to": "sem.KhaiNiem.hoc_phan_ky_nang_bo_tro",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k10.c4",
+    "to": "sem.KhaiNiem.chuan_dau_ra_ngoai_ngu",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k10.c5",
+    "to": "sem.KhaiNiem.chuan_dau_ra_cong_nghe_thong_tin",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k10.c6",
+    "to": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d47.k10.g1",
+    "to": "sem.HeQua.duoc_tro_ve_don_vi_dao_tao_hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_tro_ve_don_vi_dao_tao_hoan_thanh_dieu_kien_con_thieu_va_de_nghi_xet_cong_nhan_tot_nghiep",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d47.k10"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d47.k10",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "a1debe7f5636136169125e1cbf4bab91d6e595a7f5908d8f02988e4d459406f0",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15903,
+  "output_tokens": 4656,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtthQKHzLh1MF3Pce88C'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:57:22+07:00",
+  "latency_s": 17.581,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

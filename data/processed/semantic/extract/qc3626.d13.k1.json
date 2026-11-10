@@ -1,0 +1,134 @@
+{
+ "format": 1,
+ "unit": "qc3626.d13.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"chuẩn đầu ra của chương trình đào tạo\", \"bi_danh\": [\"chuẩn đầu ra\"], \"nguon\": [\"qc3626.d13.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"Yêu cầu bắt buộc khi xây dựng chương trình đào tạo\"}, {\"id\": \"k2\", \"ten\": \"chuẩn đầu ra của chương trình đào tạo tài năng, chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d13.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"Chuẩn đầu ra phải đáp ứng yêu cầu có kiến thức cơ bản vững vàng, có khả năng áp dụng kiến thức chuyên sâu và kiến thức thực tế trong lĩnh vực đào tạo để phân tích, đánh giá, sáng tạo trong nghiên cứu và giải quyết các công việc phức tạp, có khả năng hội nhập quốc tế; có năng lực và trình độ chuyên môn cao (thể hiện qua kết quả học tập và nghiên cứu khoa học)\"}], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": [{\"type\": \"LA_MOT\", \"from\": \"k2\", \"to\": \"k1\", \"nguon\": \"qc3626.d13.k1\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "chuẩn đầu ra của chương trình đào tạo",
+     "bi_danh": [
+      "chuẩn đầu ra"
+     ],
+     "nguon": [
+      "qc3626.d13.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Yêu cầu bắt buộc khi xây dựng chương trình đào tạo"
+    },
+    {
+     "id": "k2",
+     "ten": "chuẩn đầu ra của chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d13.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Chuẩn đầu ra phải đáp ứng yêu cầu có kiến thức cơ bản vững vàng, có khả năng áp dụng kiến thức chuyên sâu và kiến thức thực tế trong lĩnh vực đào tạo để phân tích, đánh giá, sáng tạo trong nghiên cứu và giải quyết các công việc phức tạp, có khả năng hội nhập quốc tế; có năng lực và trình độ chuyên môn cao (thể hiện qua kết quả học tập và nghiên cứu khoa học)"
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "LA_MOT",
+     "from": "k2",
+     "to": "k1",
+     "nguon": "qc3626.d13.k1"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d13.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao",
+    "k2": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao_tai_nang_chat_luong_cao"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao",
+     "ten": "chuẩn đầu ra của chương trình đào tạo",
+     "bi_danh": [
+      "chuẩn đầu ra"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Yêu cầu bắt buộc khi xây dựng chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+     "ten": "chuẩn đầu ra của chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d13.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Chuẩn đầu ra phải đáp ứng yêu cầu có kiến thức cơ bản vững vàng, có khả năng áp dụng kiến thức chuyên sâu và kiến thức thực tế trong lĩnh vực đào tạo để phân tích, đánh giá, sáng tạo trong nghiên cứu và giải quyết các công việc phức tạp, có khả năng hội nhập quốc tế; có năng lực và trình độ chuyên môn cao (thể hiện qua kết quả học tập và nghiên cứu khoa học)"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "to": "sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d13.k1"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d13.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "35dfaddf1ce306e53f2d407eb53aa713641365c28b4d76c08614dc6f63cf89e4",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15964,
+  "output_tokens": 1766,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtroJWVKUkBueSE5rD1X'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:32:29+07:00",
+  "latency_s": 8.178,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

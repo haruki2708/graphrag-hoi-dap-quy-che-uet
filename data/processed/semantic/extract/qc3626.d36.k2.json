@@ -1,0 +1,312 @@
+{
+ "format": 1,
+ "unit": "qc3626.d36.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k2\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k2\"], \"mo_ta\": \"sinh viên xin thôi học vì lý do chủ quan của cá nhân\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"thôi học vì lý do chủ quan của cá nhân\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên thôi học vì lý do chủ quan của cá nhân thì được phép thôi học và phải hoàn trả kinh phí đào tạo từ ngân sách nhà nước\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"thôi học vì lý do chủ quan của cá nhân\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k2\"], \"mo_ta\": \"Thôi học vì lý do chủ quan của cá nhân\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được phép thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k2\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Sinh viên được phép thôi học\"}, {\"id\": \"q2\", \"ten\": \"hoàn trả kinh phí đào tạo từ ngân sách nhà nước\", \"bi_danh\": [], \"nguon\": [\"qc3626.d36.k2\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Sinh viên phải hoàn trả cho đơn vị đào tạo toàn bộ kinh phí đào tạo từ ngân sách nhà nước trong thời gian theo học\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d36.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d36.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d36.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d36.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d36.k2\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "mo_ta": "sinh viên xin thôi học vì lý do chủ quan của cá nhân"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "thôi học vì lý do chủ quan của cá nhân",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên thôi học vì lý do chủ quan của cá nhân thì được phép thôi học và phải hoàn trả kinh phí đào tạo từ ngân sách nhà nước"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "thôi học vì lý do chủ quan của cá nhân",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "mo_ta": "Thôi học vì lý do chủ quan của cá nhân",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được phép thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên được phép thôi học"
+    },
+    {
+     "id": "q2",
+     "ten": "hoàn trả kinh phí đào tạo từ ngân sách nhà nước",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên phải hoàn trả cho đơn vị đào tạo toàn bộ kinh phí đào tạo từ ngân sách nhà nước trong thời gian theo học"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d36.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d36.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d36.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d36.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d36.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d36.k2"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d36.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.thoi_hoc",
+    "g1": "sem.NhomDieuKien.qc3626.d36.k2.g1",
+    "c1": "sem.DieuKien.qc3626.d36.k2.c1",
+    "q1": "sem.HeQua.duoc_phep_thoi_hoc",
+    "q2": "sem.HeQua.hoan_tra_kinh_phi_dao_tao_tu_ngan_sach_nha_nuoc"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.thoi_hoc",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.thoi_hoc",
+     "ten": "thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "mo_ta": "sinh viên xin thôi học vì lý do chủ quan của cá nhân"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d36.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d36.k2.g1",
+     "ten": "thôi học vì lý do chủ quan của cá nhân",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên thôi học vì lý do chủ quan của cá nhân thì được phép thôi học và phải hoàn trả kinh phí đào tạo từ ngân sách nhà nước"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d36.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d36.k2.c1",
+     "ten": "thôi học vì lý do chủ quan của cá nhân",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "mo_ta": "Thôi học vì lý do chủ quan của cá nhân",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_phep_thoi_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_phep_thoi_hoc",
+     "ten": "được phép thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên được phép thôi học"
+    }
+   },
+   {
+    "id": "sem.HeQua.hoan_tra_kinh_phi_dao_tao_tu_ngan_sach_nha_nuoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.hoan_tra_kinh_phi_dao_tao_tu_ngan_sach_nha_nuoc",
+     "ten": "hoàn trả kinh phí đào tạo từ ngân sách nhà nước",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d36.k2"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên phải hoàn trả cho đơn vị đào tạo toàn bộ kinh phí đào tạo từ ngân sách nhà nước trong thời gian theo học"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.thoi_hoc",
+    "to": "sem.NhomDieuKien.qc3626.d36.k2.g1",
+    "props": {
+     "nguon": "qc3626.d36.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d36.k2.g1",
+    "to": "sem.DieuKien.qc3626.d36.k2.c1",
+    "props": {
+     "nguon": "qc3626.d36.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d36.k2.g1",
+    "to": "sem.HeQua.duoc_phep_thoi_hoc",
+    "props": {
+     "nguon": "qc3626.d36.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d36.k2.g1",
+    "to": "sem.HeQua.hoan_tra_kinh_phi_dao_tao_tu_ngan_sach_nha_nuoc",
+    "props": {
+     "nguon": "qc3626.d36.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_phep_thoi_hoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d36.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.hoan_tra_kinh_phi_dao_tao_tu_ngan_sach_nha_nuoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d36.k2"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d36.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "a81d269d4c1a70f5c9478f3b8eb1fd54a7d0c47946ca2a9fde9299d90cef6eff",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15784,
+  "output_tokens": 2254,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtt22RaKNfzJ3oYk5oz7'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:48:29+07:00",
+  "latency_s": 9.689,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

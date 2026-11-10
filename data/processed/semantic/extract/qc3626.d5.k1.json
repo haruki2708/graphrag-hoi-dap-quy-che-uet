@@ -1,0 +1,235 @@
+{
+ "format": 1,
+ "unit": "qc3626.d5.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"một phần kiến thức của chương trình đào tạo, có khối lượng từ 2 đến 5 tín chỉ, được tổ chức giảng dạy trọn vẹn trong một học kỳ (trừ học phần thực tập thực tế)\"}, {\"id\": \"k2\", \"ten\": \"khối lượng kiến thức học phần\", \"bi_danh\": [\"khối lượng kiến thức\"], \"nguon\": [\"qc3626.d5.k1\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"từ 2 đến 5 tín chỉ đối với mỗi học phần\"}, {\"id\": \"k3\", \"ten\": \"mã số học phần\", \"bi_danh\": [\"mã số riêng\"], \"nguon\": [\"qc3626.d5.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"mã số riêng của mỗi học phần, được đánh theo nguyên tắc đánh mã của Đại học Quốc gia Hà Nội\"}, {\"id\": \"k4\", \"ten\": \"học phần thực tập thực tế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k1\"], \"loai\": \"loai_hoc_phan\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k1\"], \"loai\": \"chuc_danh\"}], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": [{\"type\": \"LA_MOT\", \"from\": \"k4\", \"to\": \"k1\", \"nguon\": \"qc3626.d5.k1\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"k3\", \"to\": \"o1\", \"nguon\": \"qc3626.d5.k1\", \"noi_dung\": \"ban hành mã số riêng cho từng học phần theo nguyên tắc đánh mã của Đại học Quốc gia Hà Nội\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "một phần kiến thức của chương trình đào tạo, có khối lượng từ 2 đến 5 tín chỉ, được tổ chức giảng dạy trọn vẹn trong một học kỳ (trừ học phần thực tập thực tế)"
+    },
+    {
+     "id": "k2",
+     "ten": "khối lượng kiến thức học phần",
+     "bi_danh": [
+      "khối lượng kiến thức"
+     ],
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "từ 2 đến 5 tín chỉ đối với mỗi học phần"
+    },
+    {
+     "id": "k3",
+     "ten": "mã số học phần",
+     "bi_danh": [
+      "mã số riêng"
+     ],
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "mã số riêng của mỗi học phần, được đánh theo nguyên tắc đánh mã của Đại học Quốc gia Hà Nội"
+    },
+    {
+     "id": "k4",
+     "ten": "học phần thực tập thực tế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "chuc_danh"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "LA_MOT",
+     "from": "k4",
+     "to": "k1",
+     "nguon": "qc3626.d5.k1"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "k3",
+     "to": "o1",
+     "nguon": "qc3626.d5.k1",
+     "noi_dung": "ban hành mã số riêng cho từng học phần theo nguyên tắc đánh mã của Đại học Quốc gia Hà Nội"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d5.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_phan",
+    "k2": "sem.KhaiNiem.khoi_luong_kien_thuc_hoc_phan",
+    "k3": "sem.KhaiNiem.ma_so_hoc_phan",
+    "k4": "sem.KhaiNiem.hoc_phan_thuc_tap_thuc_te",
+    "o1": "sem.DoiTuong.thu_truong_don_vi_dao_tao"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan",
+     "ten": "học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "một phần kiến thức của chương trình đào tạo, có khối lượng từ 2 đến 5 tín chỉ, được tổ chức giảng dạy trọn vẹn trong một học kỳ (trừ học phần thực tập thực tế)"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.khoi_luong_kien_thuc_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoi_luong_kien_thuc_hoc_phan",
+     "ten": "khối lượng kiến thức học phần",
+     "bi_danh": [
+      "khối lượng kiến thức"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "từ 2 đến 5 tín chỉ đối với mỗi học phần"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.ma_so_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ma_so_hoc_phan",
+     "ten": "mã số học phần",
+     "bi_danh": [
+      "mã số riêng"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "mã số riêng của mỗi học phần, được đánh theo nguyên tắc đánh mã của Đại học Quốc gia Hà Nội"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_thuc_tap_thuc_te",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_thuc_tap_thuc_te",
+     "ten": "học phần thực tập thực tế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k1"
+     ],
+     "loai": "chuc_danh"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.hoc_phan_thuc_tap_thuc_te",
+    "to": "sem.KhaiNiem.hoc_phan",
+    "props": {
+     "nguon": "qc3626.d5.k1"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.KhaiNiem.ma_so_hoc_phan",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d5.k1",
+     "noi_dung": "ban hành mã số riêng cho từng học phần theo nguyên tắc đánh mã của Đại học Quốc gia Hà Nội"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d5.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "2cd5958cebcac7e6ac18fa1c566892962450dfc68caa665d331f2041630170bb",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15851,
+  "output_tokens": 2730,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtrd2CgRbhCWJk5Q3u4H'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:30:09+07:00",
+  "latency_s": 13.497,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

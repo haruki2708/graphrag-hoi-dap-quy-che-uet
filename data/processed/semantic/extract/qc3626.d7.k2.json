@@ -1,0 +1,247 @@
+{
+ "format": 1,
+ "unit": "qc3626.d7.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"d1\", \"ten\": \"đào tạo vừa làm vừa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d7.k2\"], \"loai\": \"hinh_thuc\"}, {\"id\": \"d2\", \"ten\": \"chương trình đào tạo quy định tại điểm a khoản 2 Điều 6\", \"bi_danh\": [], \"nguon\": [\"qc3626.d7.k2\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"d3\", \"ten\": \"đơn vị phối hợp đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d7.k2\"], \"loai\": \"don_vi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"tổ chức hoạt động giảng dạy đào tạo vừa làm vừa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d7.k2\"], \"mo_ta\": \"tổ chức hoạt động giảng dạy linh hoạt trong ngày, trong tuần, trong toàn khóa học, thực hiện tại đơn vị đào tạo hoặc đơn vị phối hợp đào tạo\"}, {\"id\": \"h2\", \"ten\": \"thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến\", \"bi_danh\": [], \"nguon\": [\"qc3626.d7.k2\"], \"mo_ta\": \"hoạt động thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến có thể thực hiện ngoài đơn vị đào tạo, đơn vị phối hợp đào tạo\"}], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": [{\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"d2\", \"nguon\": \"qc3626.d7.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"d1\", \"nguon\": \"qc3626.d7.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"d3\", \"nguon\": \"qc3626.d7.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h2\", \"to\": \"d1\", \"nguon\": \"qc3626.d7.k2\"}]}",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "d1",
+     "ten": "đào tạo vừa làm vừa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "loai": "hinh_thuc"
+    },
+    {
+     "id": "d2",
+     "ten": "chương trình đào tạo quy định tại điểm a khoản 2 Điều 6",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "d3",
+     "ten": "đơn vị phối hợp đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "loai": "don_vi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "tổ chức hoạt động giảng dạy đào tạo vừa làm vừa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "mo_ta": "tổ chức hoạt động giảng dạy linh hoạt trong ngày, trong tuần, trong toàn khóa học, thực hiện tại đơn vị đào tạo hoặc đơn vị phối hợp đào tạo"
+    },
+    {
+     "id": "h2",
+     "ten": "thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "mo_ta": "hoạt động thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến có thể thực hiện ngoài đơn vị đào tạo, đơn vị phối hợp đào tạo"
+    }
+   ],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "d2",
+     "nguon": "qc3626.d7.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "d1",
+     "nguon": "qc3626.d7.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "d3",
+     "nguon": "qc3626.d7.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h2",
+     "to": "d1",
+     "nguon": "qc3626.d7.k2"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d7.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "d1": "sem.DoiTuong.dao_tao_vua_lam_vua_hoc",
+    "d2": "sem.DoiTuong.chuong_trinh_dao_tao_quy_dinh_tai_diem_a_khoan_2_dieu_6",
+    "d3": "sem.DoiTuong.don_vi_phoi_hop_dao_tao",
+    "h1": "sem.HoatDong.to_chuc_hoat_dong_giang_day_dao_tao_vua_lam_vua_hoc",
+    "h2": "sem.HoatDong.thuc_hanh_thuc_tap_trai_nghiem_thuc_te_va_giang_day_truc_tuyen"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.dao_tao_vua_lam_vua_hoc",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.dao_tao_vua_lam_vua_hoc",
+     "ten": "đào tạo vừa làm vừa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "loai": "hinh_thuc"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_quy_dinh_tai_diem_a_khoan_2_dieu_6",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_quy_dinh_tai_diem_a_khoan_2_dieu_6",
+     "ten": "chương trình đào tạo quy định tại điểm a khoản 2 Điều 6",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.don_vi_phoi_hop_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.don_vi_phoi_hop_dao_tao",
+     "ten": "đơn vị phối hợp đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.to_chuc_hoat_dong_giang_day_dao_tao_vua_lam_vua_hoc",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.to_chuc_hoat_dong_giang_day_dao_tao_vua_lam_vua_hoc",
+     "ten": "tổ chức hoạt động giảng dạy đào tạo vừa làm vừa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "mo_ta": "tổ chức hoạt động giảng dạy linh hoạt trong ngày, trong tuần, trong toàn khóa học, thực hiện tại đơn vị đào tạo hoặc đơn vị phối hợp đào tạo"
+    }
+   },
+   {
+    "id": "sem.HoatDong.thuc_hanh_thuc_tap_trai_nghiem_thuc_te_va_giang_day_truc_tuyen",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.thuc_hanh_thuc_tap_trai_nghiem_thuc_te_va_giang_day_truc_tuyen",
+     "ten": "thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d7.k2"
+     ],
+     "mo_ta": "hoạt động thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến có thể thực hiện ngoài đơn vị đào tạo, đơn vị phối hợp đào tạo"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.to_chuc_hoat_dong_giang_day_dao_tao_vua_lam_vua_hoc",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_quy_dinh_tai_diem_a_khoan_2_dieu_6",
+    "props": {
+     "nguon": "qc3626.d7.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.to_chuc_hoat_dong_giang_day_dao_tao_vua_lam_vua_hoc",
+    "to": "sem.DoiTuong.dao_tao_vua_lam_vua_hoc",
+    "props": {
+     "nguon": "qc3626.d7.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.to_chuc_hoat_dong_giang_day_dao_tao_vua_lam_vua_hoc",
+    "to": "sem.DoiTuong.don_vi_phoi_hop_dao_tao",
+    "props": {
+     "nguon": "qc3626.d7.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.thuc_hanh_thuc_tap_trai_nghiem_thuc_te_va_giang_day_truc_tuyen",
+    "to": "sem.DoiTuong.dao_tao_vua_lam_vua_hoc",
+    "props": {
+     "nguon": "qc3626.d7.k2"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d7.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "7665cbe54e72f0f4d1e95182a04caded76be577a3c4dce0c5402ada5d62ac279",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15958,
+  "output_tokens": 2485,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtrjRpuFhEGAMpxsjM9J'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:31:37+07:00",
+  "latency_s": 10.439,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

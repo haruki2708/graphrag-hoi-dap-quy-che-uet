@@ -1,0 +1,1658 @@
+{
+ "format": 1,
+ "unit": "qc3626.d14.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"khối lượng kiến thức của chương trình đào tạo\", \"bi_danh\": [\"khối lượng kiến thức\"], \"nguon\": [\"qc3626.d14.k2.a\", \"qc3626.d14.k2.d\", \"qc3626.d14.k2.đ\"], \"loai\": \"dai_luong\"}, {\"id\": \"k2\", \"ten\": \"khối lượng kiến thức ngành thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.d\", \"qc3626.d14.k2.đ\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"khối lượng kiến thức vượt chương trình đào tạo chuẩn\", \"bi_danh\": [\"nhiều hơn chương trình đào tạo chuẩn tương ứng\"], \"nguon\": [\"qc3626.d14.k2.b\", \"qc3626.d14.k2.c\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"chương trình đào tạo chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o2\", \"ten\": \"chương trình đào tạo chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.b\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o3\", \"ten\": \"chương trình đào tạo tài năng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.c\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o4\", \"ten\": \"chương trình đào tạo ngành chính - ngành phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.d\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o5\", \"ten\": \"chương trình đào tạo song ngành\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.đ\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o6\", \"ten\": \"chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.e\", \"qc3626.d14.k2.g\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o7\", \"ten\": \"cử nhân\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"loai\": \"van_bang\"}, {\"id\": \"o8\", \"ten\": \"kỹ sư\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"loai\": \"van_bang\"}, {\"id\": \"o9\", \"ten\": \"dược sĩ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"loai\": \"van_bang\"}, {\"id\": \"o10\", \"ten\": \"bác sĩ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"loai\": \"van_bang\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"thiết kế chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2\", \"qc3626.d14.k2.a\", \"qc3626.d14.k2.b\", \"qc3626.d14.k2.c\", \"qc3626.d14.k2.d\", \"qc3626.d14.k2.đ\", \"qc3626.d14.k2.e\", \"qc3626.d14.k2.g\"], \"mo_ta\": \"thiết kế chương trình đào tạo theo một trong các loại chương trình được quy định\"}], \"NhomDieuKien\": [{\"id\": \"g0\", \"ten\": \"loại chương trình đào tạo được thiết kế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Chương trình đào tạo thuộc một trong các loại chuẩn, chất lượng cao, tài năng, ngành chính - ngành phụ, song ngành; OR suy luận vì mỗi loại là một lựa chọn thiết kế độc lập\"}, {\"id\": \"g1\", \"ten\": \"chương trình đào tạo chuẩn đạt khối lượng tối thiểu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Chương trình chuẩn đạt khối lượng tối thiểu tương ứng với cử nhân, kỹ sư, dược sĩ hoặc bác sĩ; OR suy luận vì mỗi bậc đào tạo có một mức tối thiểu riêng\"}, {\"id\": \"g2\", \"ten\": \"chương trình chuẩn đào tạo cử nhân\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình chuẩn đào tạo cử nhân tối thiểu 120 tín chỉ\"}, {\"id\": \"g3\", \"ten\": \"chương trình chuẩn đào tạo kỹ sư\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình chuẩn đào tạo kỹ sư tối thiểu 150 tín chỉ\"}, {\"id\": \"g4\", \"ten\": \"chương trình chuẩn đào tạo dược sĩ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình chuẩn đào tạo dược sĩ tối thiểu 155 tín chỉ\"}, {\"id\": \"g5\", \"ten\": \"chương trình chuẩn đào tạo bác sĩ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình chuẩn đào tạo bác sĩ tối thiểu 205 tín chỉ\"}, {\"id\": \"g6\", \"ten\": \"chương trình chất lượng cao vượt chương trình chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình chất lượng cao được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 15 tín chỉ, trên cơ sở nâng cao, bổ sung học phần, có tham khảo chương trình nước ngoài hoặc chương trình đại học tiên tiến đã điều chỉnh\"}, {\"id\": \"g7\", \"ten\": \"chương trình tài năng vượt chương trình chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình tài năng được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 30 tín chỉ, có yêu cầu trình độ cao hơn, nội dung rộng hơn, sâu hơn\"}, {\"id\": \"g8\", \"ten\": \"chương trình ngành chính - ngành phụ đạt khối lượng tối thiểu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình ngành thứ nhất tối thiểu 120 tín chỉ và có bổ sung ít nhất 15 tín chỉ của ngành thứ hai hoặc học phần bổ trợ\"}, {\"id\": \"g9\", \"ten\": \"chương trình song ngành đạt khối lượng tối thiểu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.đ\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Chương trình ngành thứ nhất tối thiểu 120 tín chỉ và ngành thứ hai từ 30 tín chỉ trở lên\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"khối lượng kiến thức cử nhân tối thiểu 120 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"mo_ta\": \"Khối lượng kiến thức chương trình chuẩn đào tạo cử nhân tối thiểu 120 tín chỉ\", \"min\": 120, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}, {\"id\": \"c2\", \"ten\": \"khối lượng kiến thức kỹ sư tối thiểu 150 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"mo_ta\": \"Khối lượng kiến thức chương trình chuẩn đào tạo kỹ sư tối thiểu 150 tín chỉ\", \"min\": 150, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}, {\"id\": \"c3\", \"ten\": \"khối lượng kiến thức dược sĩ tối thiểu 155 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"mo_ta\": \"Khối lượng kiến thức chương trình chuẩn đào tạo dược sĩ tối thiểu 155 tín chỉ\", \"min\": 155, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}, {\"id\": \"c4\", \"ten\": \"khối lượng kiến thức bác sĩ tối thiểu 205 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.a\"], \"mo_ta\": \"Khối lượng kiến thức chương trình chuẩn đào tạo bác sĩ tối thiểu 205 tín chỉ\", \"min\": 205, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}, {\"id\": \"c5\", \"ten\": \"vượt chương trình chuẩn tương ứng ít nhất 15 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.b\"], \"mo_ta\": \"Chương trình chất lượng cao được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 15 tín chỉ\", \"min\": 15, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\", \"so_voi\": \"chương trình đào tạo chuẩn tương ứng\"}, {\"id\": \"c6\", \"ten\": \"vượt chương trình chuẩn tương ứng ít nhất 30 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.c\"], \"mo_ta\": \"Chương trình tài năng được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 30 tín chỉ\", \"min\": 30, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\", \"so_voi\": \"chương trình đào tạo chuẩn tương ứng\"}, {\"id\": \"c7\", \"ten\": \"khối lượng kiến thức ngành thứ nhất tối thiểu 120 tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.d\"], \"mo_ta\": \"Nội dung chương trình đào tạo được thiết kế cho ngành thứ nhất với khối lượng kiến thức tối thiểu 120 tín chỉ\", \"min\": 120, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}, {\"id\": \"c8\", \"ten\": \"bổ sung ít nhất 15 tín chỉ kiến thức ngành thứ hai hoặc bổ trợ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.d\"], \"mo_ta\": \"Bổ sung học phần của ngành thứ hai hoặc học phần bổ trợ kiến thức khác với khối lượng ít nhất 15 tín chỉ, chủ yếu thuộc khối kiến thức ngành\", \"min\": 15, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}, {\"id\": \"c9\", \"ten\": \"khối lượng kiến thức ngành thứ nhất tối thiểu 120 tín chỉ đối với song ngành\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.đ\"], \"mo_ta\": \"Chương trình đào tạo ngành thứ nhất có khối lượng kiến thức tối thiểu 120 tín chỉ\", \"min\": 120, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}, {\"id\": \"c10\", \"ten\": \"khối lượng kiến thức ngành thứ hai từ 30 tín chỉ trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d14.k2.đ\"], \"mo_ta\": \"Chương trình đào tạo ngành thứ hai có khối lượng kiến thức từ 30 tín chỉ trở lên; những học phần giống nhau, tương đương giữa hai chương trình chỉ được tính một lần\", \"min\": 30, \"min_incl\": true, \"don_vi\": \"tín chỉ\", \"thang\": \"tin_chi\"}], \"HeQua\": [], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g0\", \"nguon\": \"qc3626.d14.k2\"}, {\"type\": \"GOM\", \"from\": \"g0\", \"to\": \"g1\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g0\", \"to\": \"g6\", \"nguon\": \"qc3626.d14.k2.b\"}, {\"type\": \"GOM\", \"from\": \"g0\", \"to\": \"g7\", \"nguon\": \"qc3626.d14.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g0\", \"to\": \"g8\", \"nguon\": \"qc3626.d14.k2.d\"}, {\"type\": \"GOM\", \"from\": \"g0\", \"to\": \"g9\", \"nguon\": \"qc3626.d14.k2.đ\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g3\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g4\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g5\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c1\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c2\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c3\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g5\", \"to\": \"c4\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g2\", \"to\": \"o7\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g3\", \"to\": \"o8\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g4\", \"to\": \"o9\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g5\", \"to\": \"o10\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k1\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k1\", \"nguon\": \"qc3626.d14.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g6\", \"to\": \"c5\", \"nguon\": \"qc3626.d14.k2.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g6\", \"to\": \"o2\", \"nguon\": \"qc3626.d14.k2.b\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"k3\", \"nguon\": \"qc3626.d14.k2.b\"}, {\"type\": \"GOM\", \"from\": \"g7\", \"to\": \"c6\", \"nguon\": \"qc3626.d14.k2.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g7\", \"to\": \"o3\", \"nguon\": \"qc3626.d14.k2.c\"}, {\"type\": \"XET\", \"from\": \"c6\", \"to\": \"k3\", \"nguon\": \"qc3626.d14.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g8\", \"to\": \"c7\", \"nguon\": \"qc3626.d14.k2.d\"}, {\"type\": \"GOM\", \"from\": \"g8\", \"to\": \"c8\", \"nguon\": \"qc3626.d14.k2.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g8\", \"to\": \"o4\", \"nguon\": \"qc3626.d14.k2.d\"}, {\"type\": \"XET\", \"from\": \"c7\", \"to\": \"k1\", \"nguon\": \"qc3626.d14.k2.d\"}, {\"type\": \"XET\", \"from\": \"c8\", \"to\": \"k2\", \"nguon\": \"qc3626.d14.k2.d\"}, {\"type\": \"GOM\", \"from\": \"g9\", \"to\": \"c9\", \"nguon\": \"qc3626.d14.k2.đ\"}, {\"type\": \"GOM\", \"from\": \"g9\", \"to\": \"c10\", \"nguon\": \"qc3626.d14.k2.đ\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g9\", \"to\": \"o5\", \"nguon\": \"qc3626.d14.k2.đ\"}, {\"type\": \"XET\", \"from\": \"c9\", \"to\": \"k1\", \"nguon\": \"qc3626.d14.k2.đ\"}, {\"type\": \"XET\", \"from\": \"c10\", \"to\": \"k2\", \"nguon\": \"qc3626.d14.k2.đ\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o6\", \"nguon\": \"qc3626.d14.k2.e\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o6\", \"nguon\": \"qc3626.d14.k2.g\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "khối lượng kiến thức của chương trình đào tạo",
+     "bi_danh": [
+      "khối lượng kiến thức"
+     ],
+     "nguon": [
+      "qc3626.d14.k2.a",
+      "qc3626.d14.k2.d",
+      "qc3626.d14.k2.đ"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k2",
+     "ten": "khối lượng kiến thức ngành thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.d",
+      "qc3626.d14.k2.đ"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "khối lượng kiến thức vượt chương trình đào tạo chuẩn",
+     "bi_danh": [
+      "nhiều hơn chương trình đào tạo chuẩn tương ứng"
+     ],
+     "nguon": [
+      "qc3626.d14.k2.b",
+      "qc3626.d14.k2.c"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o2",
+     "ten": "chương trình đào tạo chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.b"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o3",
+     "ten": "chương trình đào tạo tài năng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.c"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o4",
+     "ten": "chương trình đào tạo ngành chính - ngành phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o5",
+     "ten": "chương trình đào tạo song ngành",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o6",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.e",
+      "qc3626.d14.k2.g"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o7",
+     "ten": "cử nhân",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    },
+    {
+     "id": "o8",
+     "ten": "kỹ sư",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    },
+    {
+     "id": "o9",
+     "ten": "dược sĩ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    },
+    {
+     "id": "o10",
+     "ten": "bác sĩ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "thiết kế chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2",
+      "qc3626.d14.k2.a",
+      "qc3626.d14.k2.b",
+      "qc3626.d14.k2.c",
+      "qc3626.d14.k2.d",
+      "qc3626.d14.k2.đ",
+      "qc3626.d14.k2.e",
+      "qc3626.d14.k2.g"
+     ],
+     "mo_ta": "thiết kế chương trình đào tạo theo một trong các loại chương trình được quy định"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g0",
+     "ten": "loại chương trình đào tạo được thiết kế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Chương trình đào tạo thuộc một trong các loại chuẩn, chất lượng cao, tài năng, ngành chính - ngành phụ, song ngành; OR suy luận vì mỗi loại là một lựa chọn thiết kế độc lập"
+    },
+    {
+     "id": "g1",
+     "ten": "chương trình đào tạo chuẩn đạt khối lượng tối thiểu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Chương trình chuẩn đạt khối lượng tối thiểu tương ứng với cử nhân, kỹ sư, dược sĩ hoặc bác sĩ; OR suy luận vì mỗi bậc đào tạo có một mức tối thiểu riêng"
+    },
+    {
+     "id": "g2",
+     "ten": "chương trình chuẩn đào tạo cử nhân",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo cử nhân tối thiểu 120 tín chỉ"
+    },
+    {
+     "id": "g3",
+     "ten": "chương trình chuẩn đào tạo kỹ sư",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo kỹ sư tối thiểu 150 tín chỉ"
+    },
+    {
+     "id": "g4",
+     "ten": "chương trình chuẩn đào tạo dược sĩ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo dược sĩ tối thiểu 155 tín chỉ"
+    },
+    {
+     "id": "g5",
+     "ten": "chương trình chuẩn đào tạo bác sĩ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo bác sĩ tối thiểu 205 tín chỉ"
+    },
+    {
+     "id": "g6",
+     "ten": "chương trình chất lượng cao vượt chương trình chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chất lượng cao được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 15 tín chỉ, trên cơ sở nâng cao, bổ sung học phần, có tham khảo chương trình nước ngoài hoặc chương trình đại học tiên tiến đã điều chỉnh"
+    },
+    {
+     "id": "g7",
+     "ten": "chương trình tài năng vượt chương trình chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình tài năng được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 30 tín chỉ, có yêu cầu trình độ cao hơn, nội dung rộng hơn, sâu hơn"
+    },
+    {
+     "id": "g8",
+     "ten": "chương trình ngành chính - ngành phụ đạt khối lượng tối thiểu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình ngành thứ nhất tối thiểu 120 tín chỉ và có bổ sung ít nhất 15 tín chỉ của ngành thứ hai hoặc học phần bổ trợ"
+    },
+    {
+     "id": "g9",
+     "ten": "chương trình song ngành đạt khối lượng tối thiểu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình ngành thứ nhất tối thiểu 120 tín chỉ và ngành thứ hai từ 30 tín chỉ trở lên"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "khối lượng kiến thức cử nhân tối thiểu 120 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo cử nhân tối thiểu 120 tín chỉ",
+     "min": 120,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    },
+    {
+     "id": "c2",
+     "ten": "khối lượng kiến thức kỹ sư tối thiểu 150 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo kỹ sư tối thiểu 150 tín chỉ",
+     "min": 150,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    },
+    {
+     "id": "c3",
+     "ten": "khối lượng kiến thức dược sĩ tối thiểu 155 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo dược sĩ tối thiểu 155 tín chỉ",
+     "min": 155,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    },
+    {
+     "id": "c4",
+     "ten": "khối lượng kiến thức bác sĩ tối thiểu 205 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo bác sĩ tối thiểu 205 tín chỉ",
+     "min": 205,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    },
+    {
+     "id": "c5",
+     "ten": "vượt chương trình chuẩn tương ứng ít nhất 15 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.b"
+     ],
+     "mo_ta": "Chương trình chất lượng cao được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 15 tín chỉ",
+     "min": 15,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi",
+     "so_voi": "chương trình đào tạo chuẩn tương ứng"
+    },
+    {
+     "id": "c6",
+     "ten": "vượt chương trình chuẩn tương ứng ít nhất 30 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.c"
+     ],
+     "mo_ta": "Chương trình tài năng được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 30 tín chỉ",
+     "min": 30,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi",
+     "so_voi": "chương trình đào tạo chuẩn tương ứng"
+    },
+    {
+     "id": "c7",
+     "ten": "khối lượng kiến thức ngành thứ nhất tối thiểu 120 tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "mo_ta": "Nội dung chương trình đào tạo được thiết kế cho ngành thứ nhất với khối lượng kiến thức tối thiểu 120 tín chỉ",
+     "min": 120,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    },
+    {
+     "id": "c8",
+     "ten": "bổ sung ít nhất 15 tín chỉ kiến thức ngành thứ hai hoặc bổ trợ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "mo_ta": "Bổ sung học phần của ngành thứ hai hoặc học phần bổ trợ kiến thức khác với khối lượng ít nhất 15 tín chỉ, chủ yếu thuộc khối kiến thức ngành",
+     "min": 15,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    },
+    {
+     "id": "c9",
+     "ten": "khối lượng kiến thức ngành thứ nhất tối thiểu 120 tín chỉ đối với song ngành",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "mo_ta": "Chương trình đào tạo ngành thứ nhất có khối lượng kiến thức tối thiểu 120 tín chỉ",
+     "min": 120,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    },
+    {
+     "id": "c10",
+     "ten": "khối lượng kiến thức ngành thứ hai từ 30 tín chỉ trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "mo_ta": "Chương trình đào tạo ngành thứ hai có khối lượng kiến thức từ 30 tín chỉ trở lên; những học phần giống nhau, tương đương giữa hai chương trình chỉ được tính một lần",
+     "min": 30,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   ],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g0",
+     "nguon": "qc3626.d14.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g0",
+     "to": "g1",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g0",
+     "to": "g6",
+     "nguon": "qc3626.d14.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g0",
+     "to": "g7",
+     "nguon": "qc3626.d14.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g0",
+     "to": "g8",
+     "nguon": "qc3626.d14.k2.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g0",
+     "to": "g9",
+     "nguon": "qc3626.d14.k2.đ"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g3",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g4",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g5",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c1",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c2",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c3",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g5",
+     "to": "c4",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g2",
+     "to": "o7",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g3",
+     "to": "o8",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g4",
+     "to": "o9",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g5",
+     "to": "o10",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k1",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k1",
+     "nguon": "qc3626.d14.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g6",
+     "to": "c5",
+     "nguon": "qc3626.d14.k2.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g6",
+     "to": "o2",
+     "nguon": "qc3626.d14.k2.b"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "k3",
+     "nguon": "qc3626.d14.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g7",
+     "to": "c6",
+     "nguon": "qc3626.d14.k2.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g7",
+     "to": "o3",
+     "nguon": "qc3626.d14.k2.c"
+    },
+    {
+     "type": "XET",
+     "from": "c6",
+     "to": "k3",
+     "nguon": "qc3626.d14.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g8",
+     "to": "c7",
+     "nguon": "qc3626.d14.k2.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g8",
+     "to": "c8",
+     "nguon": "qc3626.d14.k2.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g8",
+     "to": "o4",
+     "nguon": "qc3626.d14.k2.d"
+    },
+    {
+     "type": "XET",
+     "from": "c7",
+     "to": "k1",
+     "nguon": "qc3626.d14.k2.d"
+    },
+    {
+     "type": "XET",
+     "from": "c8",
+     "to": "k2",
+     "nguon": "qc3626.d14.k2.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g9",
+     "to": "c9",
+     "nguon": "qc3626.d14.k2.đ"
+    },
+    {
+     "type": "GOM",
+     "from": "g9",
+     "to": "c10",
+     "nguon": "qc3626.d14.k2.đ"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g9",
+     "to": "o5",
+     "nguon": "qc3626.d14.k2.đ"
+    },
+    {
+     "type": "XET",
+     "from": "c9",
+     "to": "k1",
+     "nguon": "qc3626.d14.k2.đ"
+    },
+    {
+     "type": "XET",
+     "from": "c10",
+     "to": "k2",
+     "nguon": "qc3626.d14.k2.đ"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o6",
+     "nguon": "qc3626.d14.k2.e"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o6",
+     "nguon": "qc3626.d14.k2.g"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d14.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "k2": "sem.KhaiNiem.khoi_luong_kien_thuc_nganh_thu_hai",
+    "k3": "sem.KhaiNiem.khoi_luong_kien_thuc_vuot_chuong_trinh_dao_tao_chuan",
+    "o1": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "o2": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+    "o3": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+    "o4": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "o5": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "o6": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "o7": "sem.DoiTuong.cu_nhan",
+    "o8": "sem.DoiTuong.ky_su",
+    "o9": "sem.DoiTuong.duoc_si",
+    "o10": "sem.DoiTuong.bac_si",
+    "h1": "sem.HoatDong.thiet_ke_chuong_trinh_dao_tao",
+    "g0": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "g1": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d14.k2.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d14.k2.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d14.k2.g4",
+    "g5": "sem.NhomDieuKien.qc3626.d14.k2.g5",
+    "g6": "sem.NhomDieuKien.qc3626.d14.k2.g6",
+    "g7": "sem.NhomDieuKien.qc3626.d14.k2.g7",
+    "g8": "sem.NhomDieuKien.qc3626.d14.k2.g8",
+    "g9": "sem.NhomDieuKien.qc3626.d14.k2.g9",
+    "c1": "sem.DieuKien.qc3626.d14.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d14.k2.c2",
+    "c3": "sem.DieuKien.qc3626.d14.k2.c3",
+    "c4": "sem.DieuKien.qc3626.d14.k2.c4",
+    "c5": "sem.DieuKien.qc3626.d14.k2.c5",
+    "c6": "sem.DieuKien.qc3626.d14.k2.c6",
+    "c7": "sem.DieuKien.qc3626.d14.k2.c7",
+    "c8": "sem.DieuKien.qc3626.d14.k2.c8",
+    "c9": "sem.DieuKien.qc3626.d14.k2.c9",
+    "c10": "sem.DieuKien.qc3626.d14.k2.c10"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+     "ten": "khối lượng kiến thức của chương trình đào tạo",
+     "bi_danh": [
+      "khối lượng kiến thức"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a",
+      "qc3626.d14.k2.d",
+      "qc3626.d14.k2.đ"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.khoi_luong_kien_thuc_nganh_thu_hai",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoi_luong_kien_thuc_nganh_thu_hai",
+     "ten": "khối lượng kiến thức ngành thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.d",
+      "qc3626.d14.k2.đ"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.khoi_luong_kien_thuc_vuot_chuong_trinh_dao_tao_chuan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoi_luong_kien_thuc_vuot_chuong_trinh_dao_tao_chuan",
+     "ten": "khối lượng kiến thức vượt chương trình đào tạo chuẩn",
+     "bi_danh": [
+      "nhiều hơn chương trình đào tạo chuẩn tương ứng"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.b",
+      "qc3626.d14.k2.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+     "ten": "chương trình đào tạo chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.b"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+     "ten": "chương trình đào tạo tài năng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.c"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+     "ten": "chương trình đào tạo ngành chính - ngành phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+     "ten": "chương trình đào tạo song ngành",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+     "ten": "chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội cấp bằng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.e",
+      "qc3626.d14.k2.g"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.cu_nhan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.cu_nhan",
+     "ten": "cử nhân",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.ky_su",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.ky_su",
+     "ten": "kỹ sư",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.duoc_si",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.duoc_si",
+     "ten": "dược sĩ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.bac_si",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.bac_si",
+     "ten": "bác sĩ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "loai": "van_bang"
+    }
+   },
+   {
+    "id": "sem.HoatDong.thiet_ke_chuong_trinh_dao_tao",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.thiet_ke_chuong_trinh_dao_tao",
+     "ten": "thiết kế chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2",
+      "qc3626.d14.k2.a",
+      "qc3626.d14.k2.b",
+      "qc3626.d14.k2.c",
+      "qc3626.d14.k2.d",
+      "qc3626.d14.k2.đ",
+      "qc3626.d14.k2.e",
+      "qc3626.d14.k2.g"
+     ],
+     "mo_ta": "thiết kế chương trình đào tạo theo một trong các loại chương trình được quy định"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+     "ten": "loại chương trình đào tạo được thiết kế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Chương trình đào tạo thuộc một trong các loại chuẩn, chất lượng cao, tài năng, ngành chính - ngành phụ, song ngành; OR suy luận vì mỗi loại là một lựa chọn thiết kế độc lập"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+     "ten": "chương trình đào tạo chuẩn đạt khối lượng tối thiểu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Chương trình chuẩn đạt khối lượng tối thiểu tương ứng với cử nhân, kỹ sư, dược sĩ hoặc bác sĩ; OR suy luận vì mỗi bậc đào tạo có một mức tối thiểu riêng"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g2",
+     "ten": "chương trình chuẩn đào tạo cử nhân",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo cử nhân tối thiểu 120 tín chỉ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g3",
+     "ten": "chương trình chuẩn đào tạo kỹ sư",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo kỹ sư tối thiểu 150 tín chỉ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g4",
+     "ten": "chương trình chuẩn đào tạo dược sĩ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo dược sĩ tối thiểu 155 tín chỉ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g5",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g5",
+     "ten": "chương trình chuẩn đào tạo bác sĩ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chuẩn đào tạo bác sĩ tối thiểu 205 tín chỉ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g6",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g6",
+     "ten": "chương trình chất lượng cao vượt chương trình chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình chất lượng cao được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 15 tín chỉ, trên cơ sở nâng cao, bổ sung học phần, có tham khảo chương trình nước ngoài hoặc chương trình đại học tiên tiến đã điều chỉnh"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g7",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g7",
+     "ten": "chương trình tài năng vượt chương trình chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình tài năng được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 30 tín chỉ, có yêu cầu trình độ cao hơn, nội dung rộng hơn, sâu hơn"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g8",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g8",
+     "ten": "chương trình ngành chính - ngành phụ đạt khối lượng tối thiểu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình ngành thứ nhất tối thiểu 120 tín chỉ và có bổ sung ít nhất 15 tín chỉ của ngành thứ hai hoặc học phần bổ trợ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d14.k2.g9",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d14.k2.g9",
+     "ten": "chương trình song ngành đạt khối lượng tối thiểu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Chương trình ngành thứ nhất tối thiểu 120 tín chỉ và ngành thứ hai từ 30 tín chỉ trở lên"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c1",
+     "ten": "khối lượng kiến thức cử nhân tối thiểu 120 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo cử nhân tối thiểu 120 tín chỉ",
+     "min": 120,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c2",
+     "ten": "khối lượng kiến thức kỹ sư tối thiểu 150 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo kỹ sư tối thiểu 150 tín chỉ",
+     "min": 150,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c3",
+     "ten": "khối lượng kiến thức dược sĩ tối thiểu 155 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo dược sĩ tối thiểu 155 tín chỉ",
+     "min": 155,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c4",
+     "ten": "khối lượng kiến thức bác sĩ tối thiểu 205 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.a"
+     ],
+     "mo_ta": "Khối lượng kiến thức chương trình chuẩn đào tạo bác sĩ tối thiểu 205 tín chỉ",
+     "min": 205,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c5",
+     "ten": "vượt chương trình chuẩn tương ứng ít nhất 15 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.b"
+     ],
+     "mo_ta": "Chương trình chất lượng cao được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 15 tín chỉ",
+     "min": 15,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi",
+     "so_voi": "chương trình đào tạo chuẩn tương ứng"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c6",
+     "ten": "vượt chương trình chuẩn tương ứng ít nhất 30 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.c"
+     ],
+     "mo_ta": "Chương trình tài năng được thiết kế nhiều hơn chương trình chuẩn tương ứng ít nhất 30 tín chỉ",
+     "min": 30,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi",
+     "so_voi": "chương trình đào tạo chuẩn tương ứng"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c7",
+     "ten": "khối lượng kiến thức ngành thứ nhất tối thiểu 120 tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "mo_ta": "Nội dung chương trình đào tạo được thiết kế cho ngành thứ nhất với khối lượng kiến thức tối thiểu 120 tín chỉ",
+     "min": 120,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c8",
+     "ten": "bổ sung ít nhất 15 tín chỉ kiến thức ngành thứ hai hoặc bổ trợ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.d"
+     ],
+     "mo_ta": "Bổ sung học phần của ngành thứ hai hoặc học phần bổ trợ kiến thức khác với khối lượng ít nhất 15 tín chỉ, chủ yếu thuộc khối kiến thức ngành",
+     "min": 15,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c9",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c9",
+     "ten": "khối lượng kiến thức ngành thứ nhất tối thiểu 120 tín chỉ đối với song ngành",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "mo_ta": "Chương trình đào tạo ngành thứ nhất có khối lượng kiến thức tối thiểu 120 tín chỉ",
+     "min": 120,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d14.k2.c10",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d14.k2.c10",
+     "ten": "khối lượng kiến thức ngành thứ hai từ 30 tín chỉ trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d14.k2.đ"
+     ],
+     "mo_ta": "Chương trình đào tạo ngành thứ hai có khối lượng kiến thức từ 30 tín chỉ trở lên; những học phần giống nhau, tương đương giữa hai chương trình chỉ được tính một lần",
+     "min": 30,
+     "min_incl": true,
+     "don_vi": "tín chỉ",
+     "thang": "tin_chi"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.thiet_ke_chuong_trinh_dao_tao",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "props": {
+     "nguon": "qc3626.d14.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g6",
+    "props": {
+     "nguon": "qc3626.d14.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g7",
+    "props": {
+     "nguon": "qc3626.d14.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g8",
+    "props": {
+     "nguon": "qc3626.d14.k2.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g0",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g9",
+    "props": {
+     "nguon": "qc3626.d14.k2.đ"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g2",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g3",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g4",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d14.k2.g5",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g1",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g2",
+    "to": "sem.DieuKien.qc3626.d14.k2.c1",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g3",
+    "to": "sem.DieuKien.qc3626.d14.k2.c2",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g4",
+    "to": "sem.DieuKien.qc3626.d14.k2.c3",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g5",
+    "to": "sem.DieuKien.qc3626.d14.k2.c4",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g2",
+    "to": "sem.DoiTuong.cu_nhan",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g3",
+    "to": "sem.DoiTuong.ky_su",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g4",
+    "to": "sem.DoiTuong.duoc_si",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g5",
+    "to": "sem.DoiTuong.bac_si",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c1",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c2",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c3",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c4",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d14.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g6",
+    "to": "sem.DieuKien.qc3626.d14.k2.c5",
+    "props": {
+     "nguon": "qc3626.d14.k2.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g6",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d14.k2.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c5",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_vuot_chuong_trinh_dao_tao_chuan",
+    "props": {
+     "nguon": "qc3626.d14.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g7",
+    "to": "sem.DieuKien.qc3626.d14.k2.c6",
+    "props": {
+     "nguon": "qc3626.d14.k2.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g7",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang",
+    "props": {
+     "nguon": "qc3626.d14.k2.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c6",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_vuot_chuong_trinh_dao_tao_chuan",
+    "props": {
+     "nguon": "qc3626.d14.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g8",
+    "to": "sem.DieuKien.qc3626.d14.k2.c7",
+    "props": {
+     "nguon": "qc3626.d14.k2.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g8",
+    "to": "sem.DieuKien.qc3626.d14.k2.c8",
+    "props": {
+     "nguon": "qc3626.d14.k2.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g8",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_nganh_chinh_nganh_phu",
+    "props": {
+     "nguon": "qc3626.d14.k2.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c7",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d14.k2.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c8",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_nganh_thu_hai",
+    "props": {
+     "nguon": "qc3626.d14.k2.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g9",
+    "to": "sem.DieuKien.qc3626.d14.k2.c9",
+    "props": {
+     "nguon": "qc3626.d14.k2.đ"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g9",
+    "to": "sem.DieuKien.qc3626.d14.k2.c10",
+    "props": {
+     "nguon": "qc3626.d14.k2.đ"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d14.k2.g9",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_song_nganh",
+    "props": {
+     "nguon": "qc3626.d14.k2.đ"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c9",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d14.k2.đ"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d14.k2.c10",
+    "to": "sem.KhaiNiem.khoi_luong_kien_thuc_nganh_thu_hai",
+    "props": {
+     "nguon": "qc3626.d14.k2.đ"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.thiet_ke_chuong_trinh_dao_tao",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "props": {
+     "nguon": "qc3626.d14.k2.e"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.thiet_ke_chuong_trinh_dao_tao",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_cap_bang",
+    "props": {
+     "nguon": "qc3626.d14.k2.g"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d14.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "d83155f45819687ef52e2b9020d334d25014e891ec439e18776d0eaf981bcb27",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 17381,
+  "output_tokens": 14077,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtrqxhSm5EiACucdaisS'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:33:05+07:00",
+  "latency_s": 49.148,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

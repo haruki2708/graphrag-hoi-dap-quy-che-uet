@@ -1,0 +1,1634 @@
+{
+ "format": 1,
+ "unit": "qc3626.d41.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": null,
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "bang_k01",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a",
+      "qc3626.d41.k2.b",
+      "qc3626.d41.k2.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "bang_k02",
+     "ten": "điểm A+",
+     "bi_danh": [
+      "A+"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 9
+    },
+    {
+     "id": "bang_k03",
+     "ten": "điểm chữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a",
+      "qc3626.d41.k2.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "bang_k04",
+     "ten": "điểm A",
+     "bi_danh": [
+      "A"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 8
+    },
+    {
+     "id": "bang_k05",
+     "ten": "điểm B+",
+     "bi_danh": [
+      "B+"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 7
+    },
+    {
+     "id": "bang_k06",
+     "ten": "điểm B",
+     "bi_danh": [
+      "B"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 6
+    },
+    {
+     "id": "bang_k07",
+     "ten": "điểm C+",
+     "bi_danh": [
+      "C+"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 5
+    },
+    {
+     "id": "bang_k08",
+     "ten": "điểm C",
+     "bi_danh": [
+      "C"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 4
+    },
+    {
+     "id": "bang_k09",
+     "ten": "điểm D+",
+     "bi_danh": [
+      "D+"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 3
+    },
+    {
+     "id": "bang_k10",
+     "ten": "điểm D",
+     "bi_danh": [
+      "D"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 2
+    },
+    {
+     "id": "bang_k11",
+     "ten": "điểm P",
+     "bi_danh": [
+      "P"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.b"
+     ],
+     "loai": "muc_phan_loai"
+    },
+    {
+     "id": "bang_k12",
+     "ten": "điểm F",
+     "bi_danh": [
+      "F"
+     ],
+     "nguon": [
+      "qc3626.d41.k2.c"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 1
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "bang_g01",
+     "ten": "điểm A+",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm A+ khi 9,0 – 10"
+    },
+    {
+     "id": "bang_g02",
+     "ten": "điểm A",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm A khi 8,5 – 8,9"
+    },
+    {
+     "id": "bang_g03",
+     "ten": "điểm B+",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm B+ khi 8,0 – 8,4"
+    },
+    {
+     "id": "bang_g04",
+     "ten": "điểm B",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm B khi 7,0 – 7,9"
+    },
+    {
+     "id": "bang_g05",
+     "ten": "điểm C+",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm C+ khi 6,5 – 6,9"
+    },
+    {
+     "id": "bang_g06",
+     "ten": "điểm C",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm C khi 5,5 – 6,4"
+    },
+    {
+     "id": "bang_g07",
+     "ten": "điểm D+",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm D+ khi 5,0 – 5,4"
+    },
+    {
+     "id": "bang_g08",
+     "ten": "điểm D",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm D khi 4,0 – 4,9"
+    },
+    {
+     "id": "bang_g09",
+     "ten": "điểm P",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm P khi từ 5,0 trở lên; áp dụng cho học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập"
+    },
+    {
+     "id": "bang_g10",
+     "ten": "điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm F khi Dưới 4,0"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "bang_c01",
+     "ten": "9,0 – 10",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "9,0 – 10",
+     "min": 9.0,
+     "min_incl": true,
+     "max": 10,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c02",
+     "ten": "8,5 – 8,9",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "8,5 – 8,9",
+     "min": 8.5,
+     "min_incl": true,
+     "max": 8.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c03",
+     "ten": "8,0 – 8,4",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "8,0 – 8,4",
+     "min": 8.0,
+     "min_incl": true,
+     "max": 8.4,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c04",
+     "ten": "7,0 – 7,9",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "7,0 – 7,9",
+     "min": 7.0,
+     "min_incl": true,
+     "max": 7.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c05",
+     "ten": "6,5 – 6,9",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "6,5 – 6,9",
+     "min": 6.5,
+     "min_incl": true,
+     "max": 6.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c06",
+     "ten": "5,5 – 6,4",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "5,5 – 6,4",
+     "min": 5.5,
+     "min_incl": true,
+     "max": 6.4,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c07",
+     "ten": "5,0 – 5,4",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "5,0 – 5,4",
+     "min": 5.0,
+     "min_incl": true,
+     "max": 5.4,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c08",
+     "ten": "4,0 – 4,9",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "4,0 – 4,9",
+     "min": 4.0,
+     "min_incl": true,
+     "max": 4.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c09",
+     "ten": "từ 5,0 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.b"
+     ],
+     "mo_ta": "từ 5,0 trở lên",
+     "min": 5.0,
+     "min_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    },
+    {
+     "id": "bang_c10",
+     "ten": "Dưới 4,0",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d41.k2.c"
+     ],
+     "mo_ta": "Dưới 4,0",
+     "max": 4.0,
+     "max_incl": false,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   ],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "GOM",
+     "from": "bang_g01",
+     "to": "bang_c01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c01",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k02",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g01",
+     "to": "bang_k02",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g02",
+     "to": "bang_c02",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c02",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k04",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g02",
+     "to": "bang_k04",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g03",
+     "to": "bang_c03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c03",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k05",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g03",
+     "to": "bang_k05",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g04",
+     "to": "bang_c04",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c04",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k06",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g04",
+     "to": "bang_k06",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g05",
+     "to": "bang_c05",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c05",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k07",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g05",
+     "to": "bang_k07",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g06",
+     "to": "bang_c06",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c06",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k08",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g06",
+     "to": "bang_k08",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g07",
+     "to": "bang_c07",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c07",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k09",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g07",
+     "to": "bang_k09",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g08",
+     "to": "bang_c08",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c08",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k10",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g08",
+     "to": "bang_k10",
+     "nguon": "qc3626.d41.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g09",
+     "to": "bang_c09",
+     "nguon": "qc3626.d41.k2.b"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c09",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.b"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g09",
+     "to": "bang_k11",
+     "nguon": "qc3626.d41.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "bang_g10",
+     "to": "bang_c10",
+     "nguon": "qc3626.d41.k2.c"
+    },
+    {
+     "type": "XET",
+     "from": "bang_c10",
+     "to": "bang_k01",
+     "nguon": "qc3626.d41.k2.c"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k12",
+     "to": "bang_k03",
+     "nguon": "qc3626.d41.k2.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "bang_g10",
+     "to": "bang_k12",
+     "nguon": "qc3626.d41.k2.c"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d41.k2",
+   "nguon_loai": "bang",
+   "id_map": {
+    "bang_k01": "sem.KhaiNiem.diem_hoc_phan",
+    "bang_k02": "sem.KhaiNiem.diem_a_cong",
+    "bang_k03": "sem.KhaiNiem.diem_chu",
+    "bang_k04": "sem.KhaiNiem.diem_a",
+    "bang_k05": "sem.KhaiNiem.diem_b_cong",
+    "bang_k06": "sem.KhaiNiem.diem_b",
+    "bang_k07": "sem.KhaiNiem.diem_c_cong",
+    "bang_k08": "sem.KhaiNiem.diem_c",
+    "bang_k09": "sem.KhaiNiem.diem_d_cong",
+    "bang_k10": "sem.KhaiNiem.diem_d",
+    "bang_k11": "sem.KhaiNiem.diem_p",
+    "bang_k12": "sem.KhaiNiem.diem_f",
+    "bang_g01": "sem.NhomDieuKien.qc3626.d41.k2.bang_g01",
+    "bang_g02": "sem.NhomDieuKien.qc3626.d41.k2.bang_g02",
+    "bang_g03": "sem.NhomDieuKien.qc3626.d41.k2.bang_g03",
+    "bang_g04": "sem.NhomDieuKien.qc3626.d41.k2.bang_g04",
+    "bang_g05": "sem.NhomDieuKien.qc3626.d41.k2.bang_g05",
+    "bang_g06": "sem.NhomDieuKien.qc3626.d41.k2.bang_g06",
+    "bang_g07": "sem.NhomDieuKien.qc3626.d41.k2.bang_g07",
+    "bang_g08": "sem.NhomDieuKien.qc3626.d41.k2.bang_g08",
+    "bang_g09": "sem.NhomDieuKien.qc3626.d41.k2.bang_g09",
+    "bang_g10": "sem.NhomDieuKien.qc3626.d41.k2.bang_g10",
+    "bang_c01": "sem.DieuKien.qc3626.d41.k2.bang_c01",
+    "bang_c02": "sem.DieuKien.qc3626.d41.k2.bang_c02",
+    "bang_c03": "sem.DieuKien.qc3626.d41.k2.bang_c03",
+    "bang_c04": "sem.DieuKien.qc3626.d41.k2.bang_c04",
+    "bang_c05": "sem.DieuKien.qc3626.d41.k2.bang_c05",
+    "bang_c06": "sem.DieuKien.qc3626.d41.k2.bang_c06",
+    "bang_c07": "sem.DieuKien.qc3626.d41.k2.bang_c07",
+    "bang_c08": "sem.DieuKien.qc3626.d41.k2.bang_c08",
+    "bang_c09": "sem.DieuKien.qc3626.d41.k2.bang_c09",
+    "bang_c10": "sem.DieuKien.qc3626.d41.k2.bang_c10"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a",
+      "qc3626.d41.k2.b",
+      "qc3626.d41.k2.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_a_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_a_cong",
+     "ten": "điểm A+",
+     "bi_danh": [
+      "A+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 9
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_chu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_chu",
+     "ten": "điểm chữ",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a",
+      "qc3626.d41.k2.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_a",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_a",
+     "ten": "điểm A",
+     "bi_danh": [
+      "A"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 8
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_b_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_b_cong",
+     "ten": "điểm B+",
+     "bi_danh": [
+      "B+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 7
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_b",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_b",
+     "ten": "điểm B",
+     "bi_danh": [
+      "B"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 6
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_c_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_c_cong",
+     "ten": "điểm C+",
+     "bi_danh": [
+      "C+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 5
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_c",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_c",
+     "ten": "điểm C",
+     "bi_danh": [
+      "C"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 4
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_d_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_d_cong",
+     "ten": "điểm D+",
+     "bi_danh": [
+      "D+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 3
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_d",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_d",
+     "ten": "điểm D",
+     "bi_danh": [
+      "D"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 2
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_p",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_p",
+     "ten": "điểm P",
+     "bi_danh": [
+      "P"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.b"
+     ],
+     "loai": "muc_phan_loai"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_f",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_f",
+     "ten": "điểm F",
+     "bi_danh": [
+      "F"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.c"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 1
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g01",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g01",
+     "ten": "điểm A+",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm A+ khi 9,0 – 10"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g02",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g02",
+     "ten": "điểm A",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm A khi 8,5 – 8,9"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g03",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g03",
+     "ten": "điểm B+",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm B+ khi 8,0 – 8,4"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g04",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g04",
+     "ten": "điểm B",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm B khi 7,0 – 7,9"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g05",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g05",
+     "ten": "điểm C+",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm C+ khi 6,5 – 6,9"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g06",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g06",
+     "ten": "điểm C",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm C khi 5,5 – 6,4"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g07",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g07",
+     "ten": "điểm D+",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm D+ khi 5,0 – 5,4"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g08",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g08",
+     "ten": "điểm D",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm D khi 4,0 – 4,9"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g09",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g09",
+     "ten": "điểm P",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm P khi từ 5,0 trở lên; áp dụng cho học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g10",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d41.k2.bang_g10",
+     "ten": "điểm F",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "điểm F khi Dưới 4,0"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c01",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c01",
+     "ten": "9,0 – 10",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "9,0 – 10",
+     "min": 9.0,
+     "min_incl": true,
+     "max": 10,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c02",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c02",
+     "ten": "8,5 – 8,9",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "8,5 – 8,9",
+     "min": 8.5,
+     "min_incl": true,
+     "max": 8.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c03",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c03",
+     "ten": "8,0 – 8,4",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "8,0 – 8,4",
+     "min": 8.0,
+     "min_incl": true,
+     "max": 8.4,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c04",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c04",
+     "ten": "7,0 – 7,9",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "7,0 – 7,9",
+     "min": 7.0,
+     "min_incl": true,
+     "max": 7.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c05",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c05",
+     "ten": "6,5 – 6,9",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "6,5 – 6,9",
+     "min": 6.5,
+     "min_incl": true,
+     "max": 6.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c06",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c06",
+     "ten": "5,5 – 6,4",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "5,5 – 6,4",
+     "min": 5.5,
+     "min_incl": true,
+     "max": 6.4,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c07",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c07",
+     "ten": "5,0 – 5,4",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "5,0 – 5,4",
+     "min": 5.0,
+     "min_incl": true,
+     "max": 5.4,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c08",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c08",
+     "ten": "4,0 – 4,9",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.a"
+     ],
+     "mo_ta": "4,0 – 4,9",
+     "min": 4.0,
+     "min_incl": true,
+     "max": 4.9,
+     "max_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c09",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c09",
+     "ten": "từ 5,0 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.b"
+     ],
+     "mo_ta": "từ 5,0 trở lên",
+     "min": 5.0,
+     "min_incl": true,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d41.k2.bang_c10",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d41.k2.bang_c10",
+     "ten": "Dưới 4,0",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d41.k2.c"
+     ],
+     "mo_ta": "Dưới 4,0",
+     "max": 4.0,
+     "max_incl": false,
+     "don_vi": "điểm",
+     "thang": "thang_10"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g01",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c01",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c01",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_a_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g01",
+    "to": "sem.KhaiNiem.diem_a_cong",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g02",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c02",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c02",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_a",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g02",
+    "to": "sem.KhaiNiem.diem_a",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g03",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c03",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c03",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_b_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g03",
+    "to": "sem.KhaiNiem.diem_b_cong",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g04",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c04",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c04",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_b",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g04",
+    "to": "sem.KhaiNiem.diem_b",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g05",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c05",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c05",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_c_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g05",
+    "to": "sem.KhaiNiem.diem_c_cong",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g06",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c06",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c06",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_c",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g06",
+    "to": "sem.KhaiNiem.diem_c",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g07",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c07",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c07",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_d_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g07",
+    "to": "sem.KhaiNiem.diem_d_cong",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g08",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c08",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c08",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_d",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g08",
+    "to": "sem.KhaiNiem.diem_d",
+    "props": {
+     "nguon": "qc3626.d41.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g09",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c09",
+    "props": {
+     "nguon": "qc3626.d41.k2.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c09",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.b"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g09",
+    "to": "sem.KhaiNiem.diem_p",
+    "props": {
+     "nguon": "qc3626.d41.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g10",
+    "to": "sem.DieuKien.qc3626.d41.k2.bang_c10",
+    "props": {
+     "nguon": "qc3626.d41.k2.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d41.k2.bang_c10",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d41.k2.c"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_f",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d41.k2.c"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d41.k2.bang_g10",
+    "to": "sem.KhaiNiem.diem_f",
+    "props": {
+     "nguon": "qc3626.d41.k2.c"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "nguon_loai": "bang",
+  "table_file": "data/manual/bang_phan_loai_v1.json",
+  "table_sha256": "a492d3116cd77734c5e28d3b557c65459294572a416d82d8bbaebfb4535d7ce7",
+  "n_rows": 10
+ }
+}

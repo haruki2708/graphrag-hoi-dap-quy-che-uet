@@ -1,0 +1,336 @@
+{
+ "format": 1,
+ "unit": "qc3626.d5.k4",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[3] XET 'c1'->'k1': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[4] XET 'c2'->'k1': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[5] DUNG_DE 'k1'->'h1': from KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"ngân hàng câu hỏi của học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k4.a\", \"qc3626.d5.k4.b\"], \"loai\": \"khac\", \"dinh_nghia\": \"ngân hàng câu hỏi do đơn vị quản lý học phần tổ chức biên soạn cho mỗi học phần, dùng để lựa chọn làm đề kiểm tra đánh giá\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k4.b\"], \"loai\": \"chuc_danh\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"lựa chọn câu hỏi làm đề kiểm tra đánh giá\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k4.a\"], \"mo_ta\": \"lựa chọn câu hỏi từ ngân hàng câu hỏi của học phần để làm đề kiểm tra đánh giá\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"ngân hàng câu hỏi được thẩm định và cho phép sử dụng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k4.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Ngân hàng câu hỏi phải được Hội đồng khoa học và đào tạo cấp khoa thẩm định và được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng; suy luận AND theo nội dung 'phải đủ' hai bước thẩm định và cho phép\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"ngân hàng câu hỏi được Hội đồng khoa học và đào tạo cấp khoa thẩm định\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k4.a\"], \"mo_ta\": \"Ngân hàng câu hỏi được Hội đồng khoa học và đào tạo cấp khoa thẩm định\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"ngân hàng câu hỏi được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k4.a\"], \"mo_ta\": \"Ngân hàng câu hỏi được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng để lựa chọn làm đề kiểm tra đánh giá\", \"toan_tu\": \"co\"}], \"HeQua\": [], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d5.k4.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d5.k4.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d5.k4.a\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d5.k4.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d5.k4.a\"}, {\"type\": \"DUNG_DE\", \"from\": \"k1\", \"to\": \"h1\", \"nguon\": \"qc3626.d5.k4.a\", \"co\": true}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"k1\", \"to\": \"o1\", \"nguon\": \"qc3626.d5.k4.b\", \"noi_dung\": \"việc xây dựng ngân hàng câu hỏi của học phần\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "ngân hàng câu hỏi của học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k4.a",
+      "qc3626.d5.k4.b"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "ngân hàng câu hỏi do đơn vị quản lý học phần tổ chức biên soạn cho mỗi học phần, dùng để lựa chọn làm đề kiểm tra đánh giá"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k4.b"
+     ],
+     "loai": "chuc_danh"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "lựa chọn câu hỏi làm đề kiểm tra đánh giá",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "mo_ta": "lựa chọn câu hỏi từ ngân hàng câu hỏi của học phần để làm đề kiểm tra đánh giá"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "ngân hàng câu hỏi được thẩm định và cho phép sử dụng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Ngân hàng câu hỏi phải được Hội đồng khoa học và đào tạo cấp khoa thẩm định và được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng; suy luận AND theo nội dung 'phải đủ' hai bước thẩm định và cho phép"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "ngân hàng câu hỏi được Hội đồng khoa học và đào tạo cấp khoa thẩm định",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "mo_ta": "Ngân hàng câu hỏi được Hội đồng khoa học và đào tạo cấp khoa thẩm định",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "ngân hàng câu hỏi được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "mo_ta": "Ngân hàng câu hỏi được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng để lựa chọn làm đề kiểm tra đánh giá",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d5.k4.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d5.k4.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d5.k4.a"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d5.k4.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d5.k4.a"
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k1",
+     "to": "h1",
+     "nguon": "qc3626.d5.k4.a",
+     "co": true
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "k1",
+     "to": "o1",
+     "nguon": "qc3626.d5.k4.b",
+     "noi_dung": "việc xây dựng ngân hàng câu hỏi của học phần"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d5.k4",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.ngan_hang_cau_hoi_cua_hoc_phan",
+    "o1": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "h1": "sem.HoatDong.lua_chon_cau_hoi_lam_de_kiem_tra_danh_gia",
+    "g1": "sem.NhomDieuKien.qc3626.d5.k4.g1",
+    "c1": "sem.DieuKien.qc3626.d5.k4.c1",
+    "c2": "sem.DieuKien.qc3626.d5.k4.c2"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.ngan_hang_cau_hoi_cua_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ngan_hang_cau_hoi_cua_hoc_phan",
+     "ten": "ngân hàng câu hỏi của học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k4.a",
+      "qc3626.d5.k4.b"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "ngân hàng câu hỏi do đơn vị quản lý học phần tổ chức biên soạn cho mỗi học phần, dùng để lựa chọn làm đề kiểm tra đánh giá"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k4.b"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.HoatDong.lua_chon_cau_hoi_lam_de_kiem_tra_danh_gia",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.lua_chon_cau_hoi_lam_de_kiem_tra_danh_gia",
+     "ten": "lựa chọn câu hỏi làm đề kiểm tra đánh giá",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "mo_ta": "lựa chọn câu hỏi từ ngân hàng câu hỏi của học phần để làm đề kiểm tra đánh giá"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d5.k4.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d5.k4.g1",
+     "ten": "ngân hàng câu hỏi được thẩm định và cho phép sử dụng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Ngân hàng câu hỏi phải được Hội đồng khoa học và đào tạo cấp khoa thẩm định và được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng; suy luận AND theo nội dung 'phải đủ' hai bước thẩm định và cho phép"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d5.k4.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d5.k4.c1",
+     "ten": "ngân hàng câu hỏi được Hội đồng khoa học và đào tạo cấp khoa thẩm định",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "mo_ta": "Ngân hàng câu hỏi được Hội đồng khoa học và đào tạo cấp khoa thẩm định",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d5.k4.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d5.k4.c2",
+     "ten": "ngân hàng câu hỏi được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k4.a"
+     ],
+     "mo_ta": "Ngân hàng câu hỏi được Chủ nhiệm Khoa/Bộ môn cho phép sử dụng để lựa chọn làm đề kiểm tra đánh giá",
+     "toan_tu": "co"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.lua_chon_cau_hoi_lam_de_kiem_tra_danh_gia",
+    "to": "sem.NhomDieuKien.qc3626.d5.k4.g1",
+    "props": {
+     "nguon": "qc3626.d5.k4.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d5.k4.g1",
+    "to": "sem.DieuKien.qc3626.d5.k4.c1",
+    "props": {
+     "nguon": "qc3626.d5.k4.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d5.k4.g1",
+    "to": "sem.DieuKien.qc3626.d5.k4.c2",
+    "props": {
+     "nguon": "qc3626.d5.k4.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d5.k4.c1",
+    "to": "sem.KhaiNiem.ngan_hang_cau_hoi_cua_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d5.k4.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d5.k4.c2",
+    "to": "sem.KhaiNiem.ngan_hang_cau_hoi_cua_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d5.k4.a"
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.ngan_hang_cau_hoi_cua_hoc_phan",
+    "to": "sem.HoatDong.lua_chon_cau_hoi_lam_de_kiem_tra_danh_gia",
+    "props": {
+     "nguon": "qc3626.d5.k4.a",
+     "co": true
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.KhaiNiem.ngan_hang_cau_hoi_cua_hoc_phan",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d5.k4.b",
+     "noi_dung": "việc xây dựng ngân hàng câu hỏi của học phần"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d5.k4",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "dd37f10d9f06bd27992b240e734451b7ee5742fa69b64232a69d2b34c86abbd7",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15932,
+  "output_tokens": 2952,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtrgdXXs1gf8JduABTW5'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:30:59+07:00",
+  "latency_s": 12.207,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}
