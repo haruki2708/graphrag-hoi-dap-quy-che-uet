@@ -124,6 +124,9 @@ SOFT_LOAI = {
     ("DUNG_DE", "from", "KhaiNiem"): ("dai_luong",),
 }
 SCRIPT_ONLY_PROPS = ("thu_tu",)
+# validate(nguon_loai=...): "trich_xuat" = an LLM reply; "bang" = a classification table entered by script (Q10),
+# the only source allowed to set thu_tu (table 2.1a)
+NGUON_LOAI_VALUES = ("trich_xuat", "bang")
 
 
 # --- JSON Schema ------------------------------------------------------------------------------------------------
@@ -189,7 +192,7 @@ def _type_ok(value, p: Prop) -> bool:
 
 def _check_props(where: str, obj: dict, props: dict[str, Prop], report: Report) -> None:
     for key in obj:
-        if key in SCRIPT_ONLY_PROPS:
+        if key in SCRIPT_ONLY_PROPS and key not in props:
             report.errors.append(f"{where}: has {key!r}, which is set by script (Q10, table 2.1a), not by the LLM")
         elif key not in props:
             report.errors.append(f"{where}: unknown property {key!r}")
@@ -214,12 +217,17 @@ def _check_nguon(where: str, code, allowed: set[str], existing: set[str], report
         report.errors.append(f"{where}: nguon {code!r} is outside the unit being extracted (allowed: {sorted(allowed)})")
 
 
-def validate(output, allowed_nguon: set[str], existing_ids: set[str]) -> Report:
-    """Check one LLM reply against schema 2.1/2.2 and the source rules.
+def validate(output, allowed_nguon: set[str], existing_ids: set[str], nguon_loai: str = "trich_xuat") -> Report:
+    """Check one reply (LLM output, or a table built by script) against schema 2.1/2.2 and the source rules.
 
     allowed_nguon: the unit being extracted and its Diem children (a Dieu-lead unit: the Dieu id only).
     existing_ids: every unit id in qc3626.json.
+    nguon_loai: "trich_xuat" (default, the LLM: thu_tu is rejected) or "bang" (script tables, Q10: a KhaiNiem may
+    carry thu_tu, an integer >= 1, but only a level, i.e. loai muc_phan_loai with a thang).
     """
+    if nguon_loai not in NGUON_LOAI_VALUES:
+        raise ValueError(f"nguon_loai must be one of {NGUON_LOAI_VALUES}, got {nguon_loai!r}")
+    extra_props = {"KhaiNiem": {"thu_tu": Prop("number")}} if nguon_loai == "bang" else {}
     report = Report()
     if not isinstance(output, dict):
         report.errors.append("reply is not a JSON object")
@@ -244,7 +252,8 @@ def validate(output, allowed_nguon: set[str], existing_ids: set[str]) -> Report:
             node_id = node.get("id")
             if isinstance(node_id, str):
                 where = f"{label} {node_id!r}"
-            _check_props(where, node, {**COMMON_NODE_PROPS, **NODE_SPECS[label].props}, report)
+            _check_props(where, node, {**COMMON_NODE_PROPS, **NODE_SPECS[label].props, **extra_props.get(label, {})},
+                         report)
             if isinstance(node_id, str):
                 if not LOCAL_ID.match(node_id):
                     report.errors.append(f"{where}: id must match {LOCAL_ID.pattern}")
@@ -262,7 +271,7 @@ def validate(output, allowed_nguon: set[str], existing_ids: set[str]) -> Report:
                     report.errors.append(f"{where}: nguon is empty")
                 for code in nguon:
                     _check_nguon(where, code, allowed_nguon, existing_ids, report)
-            _check_node_values(where, label, node, report)
+            _check_node_values(where, label, node, report, table=nguon_loai == "bang")
 
     gom_children: dict[str, list[str]] = {}
     gom_parents: dict[str, list[str]] = {}
@@ -326,7 +335,7 @@ def validate(output, allowed_nguon: set[str], existing_ids: set[str]) -> Report:
     return report
 
 
-def _check_node_values(where: str, label: str, node: dict, report: Report) -> None:
+def _check_node_values(where: str, label: str, node: dict, report: Report, table: bool = False) -> None:
     num = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)  # noqa: E731
     if label == "DieuKien":
         lo, hi = node.get("min"), node.get("max")
@@ -340,6 +349,12 @@ def _check_node_values(where: str, label: str, node: dict, report: Report) -> No
                 report.warnings.append(f"{where}: {incl} without {bound}")
     if label == "KhaiNiem" and "thang" in node and node.get("loai") != "muc_phan_loai":
         report.warnings.append(f"{where}: thang is set but loai is {node.get('loai')!r} (schema 2.1: only levels have thang)")
+    if table and label == "KhaiNiem" and "thu_tu" in node:  # a type error is reported by _check_props
+        value = node["thu_tu"]
+        if num(value) and (value != int(value) or value < 1):
+            report.errors.append(f"{where}: thu_tu must be an integer >= 1, got {value!r}")
+        if node.get("loai") != "muc_phan_loai" or "thang" not in node:
+            report.errors.append(f"{where}: thu_tu belongs to a level (loai muc_phan_loai with a thang)")
 
 
 def _gom_cycles(children: dict[str, list[str]]) -> list[list[str]]:

@@ -64,8 +64,13 @@ def search_key(text: str) -> str:
 
 
 def slug(ten: str) -> str:
-    """ASCII slug of a canonical name, variants unified first: 'tích luỹ' and 'tích lũy' -> 'tich_luy'."""
-    return slugify(normalize_variants(ten))
+    """ASCII slug of a canonical name, variants unified first: 'tích luỹ' and 'tích lũy' -> 'tich_luy'.
+
+    "+" is spelled out ("cộng") before slugifying: the generic slugify drops it, which made the plus grades
+    collide with the plain ones ("điểm C+" and "điểm C" both gave "diem_c"; found while building the
+    classification tables, T4 PR 1b). references.slugify, which builds the T3 VanBan ids, is left as it is.
+    """
+    return slugify(normalize_variants(ten).replace("+", " cộng"))
 
 
 def global_id(label: str, ten: str, unit_id: str, local_id: str) -> str:
