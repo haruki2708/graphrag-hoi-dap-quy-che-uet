@@ -1,0 +1,178 @@
+{
+ "format": 1,
+ "unit": "qc3626.d39.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"khóa luận, đồ án tốt nghiệp\", \"bi_danh\": [\"khoá luận, đồ án tốt nghiệp\"], \"nguon\": [\"qc3626.d39.k3\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k2\", \"ten\": \"học phần thay thế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k3\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k3\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k3\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": [{\"type\": \"TINH_VAO\", \"from\": \"k1\", \"to\": \"k3\", \"nguon\": \"qc3626.d39.k3\", \"co\": true, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k2\", \"to\": \"k3\", \"nguon\": \"qc3626.d39.k3\", \"co\": true, \"boi_canh\": null}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [
+      "khoá luận, đồ án tốt nghiệp"
+     ],
+     "nguon": [
+      "qc3626.d39.k3"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k2",
+     "ten": "học phần thay thế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k3"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k3"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "TINH_VAO",
+     "from": "k1",
+     "to": "k3",
+     "nguon": "qc3626.d39.k3",
+     "co": true,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k2",
+     "to": "k3",
+     "nguon": "qc3626.d39.k3",
+     "co": true,
+     "boi_canh": null
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d39.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+    "k2": "sem.KhaiNiem.hoc_phan_thay_the",
+    "k3": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+     "ten": "khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [
+      "khoá luận, đồ án tốt nghiệp"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k3"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_thay_the",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_thay_the",
+     "ten": "học phần thay thế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k3"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k3"
+     ],
+     "loai": "dai_luong"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d39.k3",
+     "co": true,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_thay_the",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d39.k3",
+     "co": true,
+     "boi_canh": null
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d39.k3",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "325a4920b3096729aa9144446664189b7bd601bf4f7220b773362efef9dbaa97",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15770,
+  "output_tokens": 1022,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgttMXAVTwUZGtgTt8TqV'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:52:53+07:00",
+  "latency_s": 5.022,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

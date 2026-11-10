@@ -1,0 +1,540 @@
+{
+ "format": 1,
+ "unit": "qc3626.d32.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[0] XET 'c2'->'k2': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm thưởng thành tích nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"dai_luong\"}, {\"id\": \"k2\", \"ten\": \"công trình nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"chuc_danh\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"sinh viên có công bố hoặc bằng sở hữu trí tuệ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ thì được cộng điểm; các trường hợp liệt kê là phương án thay thế nên dùng OR (suy luận từ cách liệt kê)\"}, {\"id\": \"g2\", \"ten\": \"công trình do nhiều sinh viên cùng thực hiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Khi công trình do nhiều sinh viên cùng thực hiện thì điểm thưởng được chia đều\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"có công bố quốc tế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"mo_ta\": \"Sinh viên có công bố quốc tế\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"có công bố trong nước\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"mo_ta\": \"Sinh viên có công bố trong nước\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"có bằng sở hữu trí tuệ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"mo_ta\": \"Sinh viên có bằng sở hữu trí tuệ\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"công trình do nhiều sinh viên cùng thực hiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"mo_ta\": \"Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được cộng không quá 0,2 điểm\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Được cộng không quá 0,2 điểm vào điểm thưởng nghiên cứu khoa học\", \"gia_tri\": 0.2, \"don_vi\": \"điểm\"}, {\"id\": \"q2\", \"ten\": \"điểm thưởng được chia đều cho số sinh viên cùng tham gia\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Điểm thưởng được chia đều cho số sinh viên cùng tham gia công trình\"}], \"edges\": [{\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k2\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q2\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c4\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"k1\", \"to\": \"o2\", \"nguon\": \"qc3626.d32.k2\", \"noi_dung\": \"mức điểm cụ thể được cộng đối với công bố quốc tế, công bố trong nước, bằng sở hữu trí tuệ (không quá 0,2 điểm)\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm thưởng thành tích nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k2",
+     "ten": "công trình nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "chuc_danh"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "sinh viên có công bố hoặc bằng sở hữu trí tuệ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ thì được cộng điểm; các trường hợp liệt kê là phương án thay thế nên dùng OR (suy luận từ cách liệt kê)"
+    },
+    {
+     "id": "g2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Khi công trình do nhiều sinh viên cùng thực hiện thì điểm thưởng được chia đều"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "có công bố quốc tế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Sinh viên có công bố quốc tế",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "có công bố trong nước",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Sinh viên có công bố trong nước",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "có bằng sở hữu trí tuệ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Sinh viên có bằng sở hữu trí tuệ",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được cộng không quá 0,2 điểm",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Được cộng không quá 0,2 điểm vào điểm thưởng nghiên cứu khoa học",
+     "gia_tri": 0.2,
+     "don_vi": "điểm"
+    },
+    {
+     "id": "q2",
+     "ten": "điểm thưởng được chia đều cho số sinh viên cùng tham gia",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Điểm thưởng được chia đều cho số sinh viên cùng tham gia công trình"
+    }
+   ],
+   "edges": [
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k2",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q2",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c4",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "k1",
+     "to": "o2",
+     "nguon": "qc3626.d32.k2",
+     "noi_dung": "mức điểm cụ thể được cộng đối với công bố quốc tế, công bố trong nước, bằng sở hữu trí tuệ (không quá 0,2 điểm)"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d32.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_thuong_thanh_tich_nghien_cuu_khoa_hoc",
+    "k2": "sem.KhaiNiem.cong_trinh_nghien_cuu_khoa_hoc",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "o2": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "g1": "sem.NhomDieuKien.qc3626.d32.k2.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d32.k2.g2",
+    "c1": "sem.DieuKien.qc3626.d32.k2.c1",
+    "c3": "sem.DieuKien.qc3626.d32.k2.c3",
+    "c4": "sem.DieuKien.qc3626.d32.k2.c4",
+    "c2": "sem.DieuKien.qc3626.d32.k2.c2",
+    "q1": "sem.HeQua.duoc_cong_khong_qua_0_2_diem",
+    "q2": "sem.HeQua.diem_thuong_duoc_chia_deu_cho_so_sinh_vien_cung_tham_gia"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_thuong_thanh_tich_nghien_cuu_khoa_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_thuong_thanh_tich_nghien_cuu_khoa_hoc",
+     "ten": "điểm thưởng thành tích nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.cong_trinh_nghien_cuu_khoa_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.cong_trinh_nghien_cuu_khoa_hoc",
+     "ten": "công trình nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d32.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d32.k2.g1",
+     "ten": "sinh viên có công bố hoặc bằng sở hữu trí tuệ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ thì được cộng điểm; các trường hợp liệt kê là phương án thay thế nên dùng OR (suy luận từ cách liệt kê)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d32.k2.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d32.k2.g2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Khi công trình do nhiều sinh viên cùng thực hiện thì điểm thưởng được chia đều"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k2.c1",
+     "ten": "có công bố quốc tế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Sinh viên có công bố quốc tế",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k2.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k2.c3",
+     "ten": "có công bố trong nước",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Sinh viên có công bố trong nước",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k2.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k2.c4",
+     "ten": "có bằng sở hữu trí tuệ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Sinh viên có bằng sở hữu trí tuệ",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k2.c2",
+     "ten": "công trình do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_cong_khong_qua_0_2_diem",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_cong_khong_qua_0_2_diem",
+     "ten": "được cộng không quá 0,2 điểm",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Được cộng không quá 0,2 điểm vào điểm thưởng nghiên cứu khoa học",
+     "gia_tri": 0.2,
+     "don_vi": "điểm"
+    }
+   },
+   {
+    "id": "sem.HeQua.diem_thuong_duoc_chia_deu_cho_so_sinh_vien_cung_tham_gia",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.diem_thuong_duoc_chia_deu_cho_so_sinh_vien_cung_tham_gia",
+     "ten": "điểm thưởng được chia đều cho số sinh viên cùng tham gia",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Điểm thưởng được chia đều cho số sinh viên cùng tham gia công trình"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d32.k2.c2",
+    "to": "sem.KhaiNiem.cong_trinh_nghien_cuu_khoa_hoc",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k2.g2",
+    "to": "sem.DieuKien.qc3626.d32.k2.c2",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k2.g2",
+    "to": "sem.HeQua.diem_thuong_duoc_chia_deu_cho_so_sinh_vien_cung_tham_gia",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.diem_thuong_duoc_chia_deu_cho_so_sinh_vien_cung_tham_gia",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k2.g1",
+    "to": "sem.DieuKien.qc3626.d32.k2.c1",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k2.g1",
+    "to": "sem.DieuKien.qc3626.d32.k2.c3",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k2.g1",
+    "to": "sem.DieuKien.qc3626.d32.k2.c4",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k2.g1",
+    "to": "sem.HeQua.duoc_cong_khong_qua_0_2_diem",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_cong_khong_qua_0_2_diem",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d32.k2"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.KhaiNiem.diem_thuong_thanh_tich_nghien_cuu_khoa_hoc",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d32.k2",
+     "noi_dung": "mức điểm cụ thể được cộng đối với công bố quốc tế, công bố trong nước, bằng sở hữu trí tuệ (không quá 0,2 điểm)"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d32.k2",
+  "role": "extract",
+  "run": 1,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "02fcb23cf3151a175bb491dcc6c184289ba6711af7b3ed67d9d8d8ca75a27e34",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16221,
+  "output_tokens": 4356,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtujBey4HVAWD6HQENPr'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T15:10:54+07:00",
+  "latency_s": 18.004,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

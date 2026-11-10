@@ -1,0 +1,160 @@
+{
+ "format": 1,
+ "unit": "qc3626.d22.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"kết quả học tập đã tích lũy từ nơi khác\", \"bi_danh\": [\"kết quả học tập đã tích luỹ\"], \"nguon\": [\"qc3626.d22.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"Kết quả học tập của người học đã tích lũy từ một trình độ đào tạo khác, một hệ thống tính tín chỉ khác, một ngành đào tạo hoặc một chương trình đào tạo khác, một khóa học khác hoặc từ một cơ sở đào tạo khác ở trong và ngoài nước\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"người học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d22.k1\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"công nhận và chuyển đổi kết quả học tập sang tín chỉ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d22.k1\"], \"mo_ta\": \"Đơn vị đào tạo xem xét công nhận kết quả học tập đã tích lũy từ nơi khác và chuyển đổi sang tín chỉ của những học phần trong chương trình đào tạo người học theo học\"}], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": [{\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o1\", \"nguon\": \"qc3626.d22.k1\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "kết quả học tập đã tích lũy từ nơi khác",
+     "bi_danh": [
+      "kết quả học tập đã tích luỹ"
+     ],
+     "nguon": [
+      "qc3626.d22.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Kết quả học tập của người học đã tích lũy từ một trình độ đào tạo khác, một hệ thống tính tín chỉ khác, một ngành đào tạo hoặc một chương trình đào tạo khác, một khóa học khác hoặc từ một cơ sở đào tạo khác ở trong và ngoài nước"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "người học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d22.k1"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "công nhận và chuyển đổi kết quả học tập sang tín chỉ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d22.k1"
+     ],
+     "mo_ta": "Đơn vị đào tạo xem xét công nhận kết quả học tập đã tích lũy từ nơi khác và chuyển đổi sang tín chỉ của những học phần trong chương trình đào tạo người học theo học"
+    }
+   ],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o1",
+     "nguon": "qc3626.d22.k1"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d22.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.ket_qua_hoc_tap_da_tich_luy_tu_noi_khac",
+    "o1": "sem.DoiTuong.nguoi_hoc",
+    "h1": "sem.HoatDong.cong_nhan_va_chuyen_doi_ket_qua_hoc_tap_sang_tin_chi"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.ket_qua_hoc_tap_da_tich_luy_tu_noi_khac",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ket_qua_hoc_tap_da_tich_luy_tu_noi_khac",
+     "ten": "kết quả học tập đã tích lũy từ nơi khác",
+     "bi_danh": [
+      "kết quả học tập đã tích luỹ"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d22.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Kết quả học tập của người học đã tích lũy từ một trình độ đào tạo khác, một hệ thống tính tín chỉ khác, một ngành đào tạo hoặc một chương trình đào tạo khác, một khóa học khác hoặc từ một cơ sở đào tạo khác ở trong và ngoài nước"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.nguoi_hoc",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.nguoi_hoc",
+     "ten": "người học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d22.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.cong_nhan_va_chuyen_doi_ket_qua_hoc_tap_sang_tin_chi",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.cong_nhan_va_chuyen_doi_ket_qua_hoc_tap_sang_tin_chi",
+     "ten": "công nhận và chuyển đổi kết quả học tập sang tín chỉ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d22.k1"
+     ],
+     "mo_ta": "Đơn vị đào tạo xem xét công nhận kết quả học tập đã tích lũy từ nơi khác và chuyển đổi sang tín chỉ của những học phần trong chương trình đào tạo người học theo học"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.cong_nhan_va_chuyen_doi_ket_qua_hoc_tap_sang_tin_chi",
+    "to": "sem.DoiTuong.nguoi_hoc",
+    "props": {
+     "nguon": "qc3626.d22.k1"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d22.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "fb44e84e9d6501b5493c645f0f425372feb1fb2f541c10ad91f16b64a2ac10dd",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15868,
+  "output_tokens": 1799,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsNd3sakC3gGMrpzpap'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:40:01+07:00",
+  "latency_s": 9.672,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

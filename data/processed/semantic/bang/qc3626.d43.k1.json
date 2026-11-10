@@ -1,0 +1,516 @@
+{
+ "format": 1,
+ "unit": "qc3626.d43.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": null,
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "bang_k01",
+     "ten": "điểm A+",
+     "bi_danh": [
+      "A+"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 9,
+     "gia_tri": 4.0
+    },
+    {
+     "id": "bang_k02",
+     "ten": "điểm chữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "bang_k03",
+     "ten": "điểm A",
+     "bi_danh": [
+      "A"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 8,
+     "gia_tri": 3.7
+    },
+    {
+     "id": "bang_k04",
+     "ten": "điểm B+",
+     "bi_danh": [
+      "B+"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 7,
+     "gia_tri": 3.5
+    },
+    {
+     "id": "bang_k05",
+     "ten": "điểm B",
+     "bi_danh": [
+      "B"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 6,
+     "gia_tri": 3.0
+    },
+    {
+     "id": "bang_k06",
+     "ten": "điểm C+",
+     "bi_danh": [
+      "C+"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 5,
+     "gia_tri": 2.5
+    },
+    {
+     "id": "bang_k07",
+     "ten": "điểm C",
+     "bi_danh": [
+      "C"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 4,
+     "gia_tri": 2.0
+    },
+    {
+     "id": "bang_k08",
+     "ten": "điểm D+",
+     "bi_danh": [
+      "D+"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 3,
+     "gia_tri": 1.5
+    },
+    {
+     "id": "bang_k09",
+     "ten": "điểm D",
+     "bi_danh": [
+      "D"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 2,
+     "gia_tri": 1.0
+    },
+    {
+     "id": "bang_k10",
+     "ten": "điểm F",
+     "bi_danh": [
+      "F"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 1,
+     "gia_tri": 0
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "LA_MOT",
+     "from": "bang_k01",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k03",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k04",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k05",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k06",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k07",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k08",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k09",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "bang_k10",
+     "to": "bang_k02",
+     "nguon": "qc3626.d43.k1"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d43.k1",
+   "nguon_loai": "bang",
+   "id_map": {
+    "bang_k01": "sem.KhaiNiem.diem_a_cong",
+    "bang_k02": "sem.KhaiNiem.diem_chu",
+    "bang_k03": "sem.KhaiNiem.diem_a",
+    "bang_k04": "sem.KhaiNiem.diem_b_cong",
+    "bang_k05": "sem.KhaiNiem.diem_b",
+    "bang_k06": "sem.KhaiNiem.diem_c_cong",
+    "bang_k07": "sem.KhaiNiem.diem_c",
+    "bang_k08": "sem.KhaiNiem.diem_d_cong",
+    "bang_k09": "sem.KhaiNiem.diem_d",
+    "bang_k10": "sem.KhaiNiem.diem_f"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_a_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_a_cong",
+     "ten": "điểm A+",
+     "bi_danh": [
+      "A+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 9,
+     "gia_tri": 4.0
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_chu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_chu",
+     "ten": "điểm chữ",
+     "bi_danh": [],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_a",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_a",
+     "ten": "điểm A",
+     "bi_danh": [
+      "A"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 8,
+     "gia_tri": 3.7
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_b_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_b_cong",
+     "ten": "điểm B+",
+     "bi_danh": [
+      "B+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 7,
+     "gia_tri": 3.5
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_b",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_b",
+     "ten": "điểm B",
+     "bi_danh": [
+      "B"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 6,
+     "gia_tri": 3.0
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_c_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_c_cong",
+     "ten": "điểm C+",
+     "bi_danh": [
+      "C+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 5,
+     "gia_tri": 2.5
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_c",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_c",
+     "ten": "điểm C",
+     "bi_danh": [
+      "C"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 4,
+     "gia_tri": 2.0
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_d_cong",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_d_cong",
+     "ten": "điểm D+",
+     "bi_danh": [
+      "D+"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 3,
+     "gia_tri": 1.5
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_d",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_d",
+     "ten": "điểm D",
+     "bi_danh": [
+      "D"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 2,
+     "gia_tri": 1.0
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_f",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_f",
+     "ten": "điểm F",
+     "bi_danh": [
+      "F"
+     ],
+     "nguon_loai": "bang",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "thu_tu": 1,
+     "gia_tri": 0
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_a_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_a",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_b_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_b",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_c_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_c",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_d_cong",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_d",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_f",
+    "to": "sem.KhaiNiem.diem_chu",
+    "props": {
+     "nguon": "qc3626.d43.k1"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "nguon_loai": "bang",
+  "table_file": "data/manual/bang_phan_loai_v1.json",
+  "table_sha256": "a492d3116cd77734c5e28d3b557c65459294572a416d82d8bbaebfb4535d7ce7",
+  "n_rows": 9
+ }
+}

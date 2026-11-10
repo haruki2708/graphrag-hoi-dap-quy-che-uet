@@ -1,0 +1,1017 @@
+{
+ "format": 1,
+ "unit": "qc3626.d26.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[15] XET 'c1'->'k1': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[19] XET 'c5'->'k4': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[20] XET 'c6'->'k5': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"ngành học chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.a\"], \"loai\": \"khac\"}, {\"id\": \"k2\", \"ten\": \"số học kỳ đã học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [\"điểm trung bình chung tất cả các học phần tính từ đầu khóa học\"], \"nguon\": [\"qc3626.d26.k1.c\"], \"loai\": \"dai_luong\"}, {\"id\": \"k4\", \"ten\": \"ngưỡng bảo đảm chất lượng đầu vào\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"loai\": \"khac\"}, {\"id\": \"k5\", \"ten\": \"điều kiện trúng tuyển\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"hình thức đào tạo chính quy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1\"], \"loai\": \"hinh_thuc\"}, {\"id\": \"o3\", \"ten\": \"đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.d\"], \"loai\": \"don_vi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký học thêm chương trình đào tạo thứ hai\", \"bi_danh\": [\"đăng ký học thêm\"], \"nguon\": [\"qc3626.d26.k1\"], \"mo_ta\": \"sinh viên đăng ký học thêm một chương trình đào tạo thứ hai\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện đăng ký học thêm chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên phải có đủ các điều kiện a, b, c, d để đăng ký học thêm chương trình đào tạo thứ hai\"}, {\"id\": \"g2\", \"ten\": \"điểm trung bình chung tích lũy đạt ngưỡng học thêm\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Thỏa một trong hai trường hợp: TBC từ 2,5 kèm ngưỡng đầu vào, hoặc TBC từ 2,0 kèm điều kiện trúng tuyển (lý do OR: văn bản nối hai trường hợp bằng 'hoặc')\"}, {\"id\": \"g3\", \"ten\": \"TBC từ 2,5 và đáp ứng ngưỡng đầu vào\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"TBC tích lũy từ 2,5 trở lên và đáp ứng ngưỡng bảo đảm chất lượng đầu vào trong năm tuyển sinh\"}, {\"id\": \"g4\", \"ten\": \"TBC từ 2,0 và đáp ứng điều kiện trúng tuyển\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"TBC tích lũy từ 2,0 trở lên và đáp ứng điều kiện trúng tuyển trong năm tuyển sinh\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"ngành học chính khác ngành học chính của chương trình thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.a\"], \"mo_ta\": \"Ngành học chính của chương trình đào tạo thứ hai phải khác ngành học chính của chương trình đào tạo thứ nhất\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c2\", \"ten\": \"đã học ít nhất hai học kỳ của chương trình thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.b\"], \"mo_ta\": \"Đã học ít nhất hai học kỳ của chương trình đào tạo thứ nhất\", \"min\": 2, \"min_incl\": true, \"don_vi\": \"học kỳ\"}, {\"id\": \"c3\", \"ten\": \"điểm trung bình chung tích lũy từ 2,5 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"mo_ta\": \"Điểm trung bình chung tất cả các học phần tính từ đầu khóa học đến thời điểm đăng ký đạt từ 2,5 trở lên\", \"min\": 2.5, \"min_incl\": true, \"thang\": \"thang_4\", \"moc\": \"đến thời điểm đăng ký học chương trình đào tạo thứ hai\"}, {\"id\": \"c4\", \"ten\": \"điểm trung bình chung tích lũy từ 2,0 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"mo_ta\": \"Điểm trung bình chung tất cả các học phần tính từ đầu khóa học đến thời điểm đăng ký đạt từ 2,0 trở lên\", \"min\": 2.0, \"min_incl\": true, \"thang\": \"thang_4\", \"moc\": \"đến thời điểm đăng ký học chương trình đào tạo thứ hai\"}, {\"id\": \"c5\", \"ten\": \"đáp ứng ngưỡng bảo đảm chất lượng đầu vào\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"mo_ta\": \"Đáp ứng ngưỡng bảo đảm chất lượng đầu vào của chương trình thứ hai trong năm tuyển sinh\", \"toan_tu\": \"co\"}, {\"id\": \"c6\", \"ten\": \"đáp ứng điều kiện trúng tuyển\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.c\"], \"mo_ta\": \"Đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh\", \"toan_tu\": \"co\"}, {\"id\": \"c7\", \"ten\": \"có đơn xin học thêm chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.d\"], \"mo_ta\": \"Sinh viên có đơn xin học thêm chương trình đào tạo thứ hai\", \"toan_tu\": \"co\"}, {\"id\": \"c8\", \"ten\": \"trả học phí theo quy định của đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1.d\"], \"mo_ta\": \"Sinh viên trả học phí theo quy định của đơn vị đào tạo\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được đăng ký học thêm chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k1\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"sinh viên được đăng ký học thêm một chương trình đào tạo thứ hai\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d26.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o1\", \"nguon\": \"qc3626.d26.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o2\", \"nguon\": \"qc3626.d26.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o3\", \"nguon\": \"qc3626.d26.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d26.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d26.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c7\", \"nguon\": \"qc3626.d26.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c8\", \"nguon\": \"qc3626.d26.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g3\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g4\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c3\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c5\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c4\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c6\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d26.k1.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k2\", \"nguon\": \"qc3626.d26.k1.b\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k3\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k3\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"k4\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"XET\", \"from\": \"c6\", \"to\": \"k5\", \"nguon\": \"qc3626.d26.k1.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d26.k1\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"c8\", \"to\": \"o3\", \"nguon\": \"qc3626.d26.k1.d\", \"noi_dung\": \"học phí đối với việc học thêm chương trình đào tạo thứ hai\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "ngành học chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.a"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "k2",
+     "ten": "số học kỳ đã học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tất cả các học phần tính từ đầu khóa học"
+     ],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k4",
+     "ten": "ngưỡng bảo đảm chất lượng đầu vào",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "k5",
+     "ten": "điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "hình thức đào tạo chính quy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "loai": "hinh_thuc"
+    },
+    {
+     "id": "o3",
+     "ten": "đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.d"
+     ],
+     "loai": "don_vi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [
+      "đăng ký học thêm"
+     ],
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "mo_ta": "sinh viên đăng ký học thêm một chương trình đào tạo thứ hai"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện đăng ký học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải có đủ các điều kiện a, b, c, d để đăng ký học thêm chương trình đào tạo thứ hai"
+    },
+    {
+     "id": "g2",
+     "ten": "điểm trung bình chung tích lũy đạt ngưỡng học thêm",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thỏa một trong hai trường hợp: TBC từ 2,5 kèm ngưỡng đầu vào, hoặc TBC từ 2,0 kèm điều kiện trúng tuyển (lý do OR: văn bản nối hai trường hợp bằng 'hoặc')"
+    },
+    {
+     "id": "g3",
+     "ten": "TBC từ 2,5 và đáp ứng ngưỡng đầu vào",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "TBC tích lũy từ 2,5 trở lên và đáp ứng ngưỡng bảo đảm chất lượng đầu vào trong năm tuyển sinh"
+    },
+    {
+     "id": "g4",
+     "ten": "TBC từ 2,0 và đáp ứng điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "TBC tích lũy từ 2,0 trở lên và đáp ứng điều kiện trúng tuyển trong năm tuyển sinh"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "ngành học chính khác ngành học chính của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.a"
+     ],
+     "mo_ta": "Ngành học chính của chương trình đào tạo thứ hai phải khác ngành học chính của chương trình đào tạo thứ nhất",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c2",
+     "ten": "đã học ít nhất hai học kỳ của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.b"
+     ],
+     "mo_ta": "Đã học ít nhất hai học kỳ của chương trình đào tạo thứ nhất",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "học kỳ"
+    },
+    {
+     "id": "c3",
+     "ten": "điểm trung bình chung tích lũy từ 2,5 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Điểm trung bình chung tất cả các học phần tính từ đầu khóa học đến thời điểm đăng ký đạt từ 2,5 trở lên",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "đến thời điểm đăng ký học chương trình đào tạo thứ hai"
+    },
+    {
+     "id": "c4",
+     "ten": "điểm trung bình chung tích lũy từ 2,0 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Điểm trung bình chung tất cả các học phần tính từ đầu khóa học đến thời điểm đăng ký đạt từ 2,0 trở lên",
+     "min": 2.0,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "đến thời điểm đăng ký học chương trình đào tạo thứ hai"
+    },
+    {
+     "id": "c5",
+     "ten": "đáp ứng ngưỡng bảo đảm chất lượng đầu vào",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Đáp ứng ngưỡng bảo đảm chất lượng đầu vào của chương trình thứ hai trong năm tuyển sinh",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c6",
+     "ten": "đáp ứng điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c7",
+     "ten": "có đơn xin học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.d"
+     ],
+     "mo_ta": "Sinh viên có đơn xin học thêm chương trình đào tạo thứ hai",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c8",
+     "ten": "trả học phí theo quy định của đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1.d"
+     ],
+     "mo_ta": "Sinh viên trả học phí theo quy định của đơn vị đào tạo",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được đăng ký học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được đăng ký học thêm một chương trình đào tạo thứ hai"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d26.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o1",
+     "nguon": "qc3626.d26.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o2",
+     "nguon": "qc3626.d26.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o3",
+     "nguon": "qc3626.d26.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d26.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d26.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c7",
+     "nguon": "qc3626.d26.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c8",
+     "nguon": "qc3626.d26.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g3",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g4",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c3",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c5",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c4",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c6",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d26.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k2",
+     "nguon": "qc3626.d26.k1.b"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k3",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k3",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "k4",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "XET",
+     "from": "c6",
+     "to": "k5",
+     "nguon": "qc3626.d26.k1.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d26.k1"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "c8",
+     "to": "o3",
+     "nguon": "qc3626.d26.k1.d",
+     "noi_dung": "học phí đối với việc học thêm chương trình đào tạo thứ hai"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d26.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.nganh_hoc_chinh",
+    "k2": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+    "k3": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "k4": "sem.KhaiNiem.nguong_bao_dam_chat_luong_dau_vao",
+    "k5": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "o2": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+    "o3": "sem.DoiTuong.don_vi_dao_tao",
+    "h1": "sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "g1": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d26.k1.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d26.k1.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d26.k1.g4",
+    "c1": "sem.DieuKien.qc3626.d26.k1.c1",
+    "c2": "sem.DieuKien.qc3626.d26.k1.c2",
+    "c3": "sem.DieuKien.qc3626.d26.k1.c3",
+    "c4": "sem.DieuKien.qc3626.d26.k1.c4",
+    "c5": "sem.DieuKien.qc3626.d26.k1.c5",
+    "c6": "sem.DieuKien.qc3626.d26.k1.c6",
+    "c7": "sem.DieuKien.qc3626.d26.k1.c7",
+    "c8": "sem.DieuKien.qc3626.d26.k1.c8",
+    "q1": "sem.HeQua.duoc_dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.nganh_hoc_chinh",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.nganh_hoc_chinh",
+     "ten": "ngành học chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.a"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+     "ten": "số học kỳ đã học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tất cả các học phần tính từ đầu khóa học"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.nguong_bao_dam_chat_luong_dau_vao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.nguong_bao_dam_chat_luong_dau_vao",
+     "ten": "ngưỡng bảo đảm chất lượng đầu vào",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+     "ten": "điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+     "ten": "hình thức đào tạo chính quy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "loai": "hinh_thuc"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.don_vi_dao_tao",
+     "ten": "đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.d"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+     "ten": "đăng ký học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [
+      "đăng ký học thêm"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "mo_ta": "sinh viên đăng ký học thêm một chương trình đào tạo thứ hai"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+     "ten": "điều kiện đăng ký học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải có đủ các điều kiện a, b, c, d để đăng ký học thêm chương trình đào tạo thứ hai"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k1.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k1.g2",
+     "ten": "điểm trung bình chung tích lũy đạt ngưỡng học thêm",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thỏa một trong hai trường hợp: TBC từ 2,5 kèm ngưỡng đầu vào, hoặc TBC từ 2,0 kèm điều kiện trúng tuyển (lý do OR: văn bản nối hai trường hợp bằng 'hoặc')"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k1.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k1.g3",
+     "ten": "TBC từ 2,5 và đáp ứng ngưỡng đầu vào",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "TBC tích lũy từ 2,5 trở lên và đáp ứng ngưỡng bảo đảm chất lượng đầu vào trong năm tuyển sinh"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k1.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k1.g4",
+     "ten": "TBC từ 2,0 và đáp ứng điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "TBC tích lũy từ 2,0 trở lên và đáp ứng điều kiện trúng tuyển trong năm tuyển sinh"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c1",
+     "ten": "ngành học chính khác ngành học chính của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.a"
+     ],
+     "mo_ta": "Ngành học chính của chương trình đào tạo thứ hai phải khác ngành học chính của chương trình đào tạo thứ nhất",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c2",
+     "ten": "đã học ít nhất hai học kỳ của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.b"
+     ],
+     "mo_ta": "Đã học ít nhất hai học kỳ của chương trình đào tạo thứ nhất",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "học kỳ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c3",
+     "ten": "điểm trung bình chung tích lũy từ 2,5 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Điểm trung bình chung tất cả các học phần tính từ đầu khóa học đến thời điểm đăng ký đạt từ 2,5 trở lên",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "đến thời điểm đăng ký học chương trình đào tạo thứ hai"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c4",
+     "ten": "điểm trung bình chung tích lũy từ 2,0 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Điểm trung bình chung tất cả các học phần tính từ đầu khóa học đến thời điểm đăng ký đạt từ 2,0 trở lên",
+     "min": 2.0,
+     "min_incl": true,
+     "thang": "thang_4",
+     "moc": "đến thời điểm đăng ký học chương trình đào tạo thứ hai"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c5",
+     "ten": "đáp ứng ngưỡng bảo đảm chất lượng đầu vào",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Đáp ứng ngưỡng bảo đảm chất lượng đầu vào của chương trình thứ hai trong năm tuyển sinh",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c6",
+     "ten": "đáp ứng điều kiện trúng tuyển",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.c"
+     ],
+     "mo_ta": "Đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c7",
+     "ten": "có đơn xin học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.d"
+     ],
+     "mo_ta": "Sinh viên có đơn xin học thêm chương trình đào tạo thứ hai",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k1.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k1.c8",
+     "ten": "trả học phí theo quy định của đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1.d"
+     ],
+     "mo_ta": "Sinh viên trả học phí theo quy định của đơn vị đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+     "ten": "được đăng ký học thêm chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên được đăng ký học thêm một chương trình đào tạo thứ hai"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "to": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "props": {
+     "nguon": "qc3626.d26.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d26.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "to": "sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy",
+    "props": {
+     "nguon": "qc3626.d26.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "to": "sem.DoiTuong.don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d26.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "to": "sem.DieuKien.qc3626.d26.k1.c1",
+    "props": {
+     "nguon": "qc3626.d26.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "to": "sem.DieuKien.qc3626.d26.k1.c2",
+    "props": {
+     "nguon": "qc3626.d26.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "to": "sem.NhomDieuKien.qc3626.d26.k1.g2",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "to": "sem.DieuKien.qc3626.d26.k1.c7",
+    "props": {
+     "nguon": "qc3626.d26.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "to": "sem.DieuKien.qc3626.d26.k1.c8",
+    "props": {
+     "nguon": "qc3626.d26.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d26.k1.g3",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d26.k1.g4",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g3",
+    "to": "sem.DieuKien.qc3626.d26.k1.c3",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g3",
+    "to": "sem.DieuKien.qc3626.d26.k1.c5",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g4",
+    "to": "sem.DieuKien.qc3626.d26.k1.c4",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g4",
+    "to": "sem.DieuKien.qc3626.d26.k1.c6",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k1.c1",
+    "to": "sem.KhaiNiem.nganh_hoc_chinh",
+    "props": {
+     "nguon": "qc3626.d26.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k1.c2",
+    "to": "sem.KhaiNiem.so_hoc_ky_da_hoc",
+    "props": {
+     "nguon": "qc3626.d26.k1.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k1.c3",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k1.c4",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k1.c5",
+    "to": "sem.KhaiNiem.nguong_bao_dam_chat_luong_dau_vao",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k1.c6",
+    "to": "sem.KhaiNiem.dieu_kien_trung_tuyen",
+    "props": {
+     "nguon": "qc3626.d26.k1.c"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d26.k1.g1",
+    "to": "sem.HeQua.duoc_dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai",
+    "props": {
+     "nguon": "qc3626.d26.k1"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.DieuKien.qc3626.d26.k1.c8",
+    "to": "sem.DoiTuong.don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d26.k1.d",
+     "noi_dung": "học phí đối với việc học thêm chương trình đào tạo thứ hai"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d26.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "330de73c256618f62c5fd3a343c54217b92317cb120f0686fbec4d2be2db5f55",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16275,
+  "output_tokens": 8542,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgfdcPguV7whReH3RAGSH'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:51:49+07:00",
+  "latency_s": 33.689,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

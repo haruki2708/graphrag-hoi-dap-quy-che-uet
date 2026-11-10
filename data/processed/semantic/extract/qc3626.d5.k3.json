@@ -1,0 +1,277 @@
+{
+ "format": 1,
+ "unit": "qc3626.d5.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"đề cương học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k3\"], \"loai\": \"khac\", \"dinh_nghia\": \"Tài liệu do giảng viên biên soạn dựa trên chuẩn đầu ra của học phần, được thủ trưởng đơn vị quản lý học phần phê duyệt và cung cấp cho người học trước khi giảng dạy, gồm các nội dung chủ yếu theo quy định\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [\"người học\"], \"nguon\": [\"qc3626.d5.k3\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"đơn vị đào tạo quản lý học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k3.h\"], \"loai\": \"don_vi\"}, {\"id\": \"o3\", \"ten\": \"Đại học Quốc gia Hà Nội\", \"bi_danh\": [\"ĐHQGHN\"], \"nguon\": [\"qc3626.d5.k3.h\"], \"loai\": \"don_vi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"phê duyệt đề cương học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k3\"], \"mo_ta\": \"thủ trưởng đơn vị quản lý học phần phê duyệt đề cương học phần do giảng viên biên soạn trước khi giảng dạy\"}], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được cung cấp đề cương học phần trước khi giảng dạy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k3\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"người học được cung cấp đề cương học phần trước khi giảng dạy\"}], \"edges\": [{\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d5.k3\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"k1\", \"to\": \"o2\", \"nguon\": \"qc3626.d5.k3.h\", \"noi_dung\": \"các thông tin khác của đề cương học phần\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"k1\", \"to\": \"o3\", \"nguon\": \"qc3626.d5.k3.h\", \"noi_dung\": \"các thông tin khác của đề cương học phần\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "đề cương học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Tài liệu do giảng viên biên soạn dựa trên chuẩn đầu ra của học phần, được thủ trưởng đơn vị quản lý học phần phê duyệt và cung cấp cho người học trước khi giảng dạy, gồm các nội dung chủ yếu theo quy định"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [
+      "người học"
+     ],
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "đơn vị đào tạo quản lý học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k3.h"
+     ],
+     "loai": "don_vi"
+    },
+    {
+     "id": "o3",
+     "ten": "Đại học Quốc gia Hà Nội",
+     "bi_danh": [
+      "ĐHQGHN"
+     ],
+     "nguon": [
+      "qc3626.d5.k3.h"
+     ],
+     "loai": "don_vi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "phê duyệt đề cương học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "mo_ta": "thủ trưởng đơn vị quản lý học phần phê duyệt đề cương học phần do giảng viên biên soạn trước khi giảng dạy"
+    }
+   ],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được cung cấp đề cương học phần trước khi giảng dạy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "người học được cung cấp đề cương học phần trước khi giảng dạy"
+    }
+   ],
+   "edges": [
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d5.k3"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "k1",
+     "to": "o2",
+     "nguon": "qc3626.d5.k3.h",
+     "noi_dung": "các thông tin khác của đề cương học phần"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "k1",
+     "to": "o3",
+     "nguon": "qc3626.d5.k3.h",
+     "noi_dung": "các thông tin khác của đề cương học phần"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d5.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.de_cuong_hoc_phan",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "o2": "sem.DoiTuong.don_vi_dao_tao_quan_ly_hoc_phan",
+    "o3": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+    "h1": "sem.HoatDong.phe_duyet_de_cuong_hoc_phan",
+    "q1": "sem.HeQua.duoc_cung_cap_de_cuong_hoc_phan_truoc_khi_giang_day"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.de_cuong_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.de_cuong_hoc_phan",
+     "ten": "đề cương học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Tài liệu do giảng viên biên soạn dựa trên chuẩn đầu ra của học phần, được thủ trưởng đơn vị quản lý học phần phê duyệt và cung cấp cho người học trước khi giảng dạy, gồm các nội dung chủ yếu theo quy định"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [
+      "người học"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.don_vi_dao_tao_quan_ly_hoc_phan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.don_vi_dao_tao_quan_ly_hoc_phan",
+     "ten": "đơn vị đào tạo quản lý học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k3.h"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+     "ten": "Đại học Quốc gia Hà Nội",
+     "bi_danh": [
+      "ĐHQGHN"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k3.h"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.phe_duyet_de_cuong_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.phe_duyet_de_cuong_hoc_phan",
+     "ten": "phê duyệt đề cương học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "mo_ta": "thủ trưởng đơn vị quản lý học phần phê duyệt đề cương học phần do giảng viên biên soạn trước khi giảng dạy"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_cung_cap_de_cuong_hoc_phan_truoc_khi_giang_day",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_cung_cap_de_cuong_hoc_phan_truoc_khi_giang_day",
+     "ten": "được cung cấp đề cương học phần trước khi giảng dạy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "người học được cung cấp đề cương học phần trước khi giảng dạy"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_cung_cap_de_cuong_hoc_phan_truoc_khi_giang_day",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d5.k3"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.KhaiNiem.de_cuong_hoc_phan",
+    "to": "sem.DoiTuong.don_vi_dao_tao_quan_ly_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d5.k3.h",
+     "noi_dung": "các thông tin khác của đề cương học phần"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.KhaiNiem.de_cuong_hoc_phan",
+    "to": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+    "props": {
+     "nguon": "qc3626.d5.k3.h",
+     "noi_dung": "các thông tin khác của đề cương học phần"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d5.k3",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "23b686aa4094221b9c6a75e13a19f2fbd9e65fea1a5b1bb8769ddc6c9d3a417b",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16327,
+  "output_tokens": 3392,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtrfag76TH9nJfNAiuU1'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:30:44+07:00",
+  "latency_s": 14.263,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

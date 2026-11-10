@@ -1,0 +1,1111 @@
+{
+ "format": 1,
+ "unit": "qc3626.d46.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[22] XET 'c8'->'k4': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"thời gian học tập tối đa của khóa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.a\"], \"loai\": \"dai_luong\"}, {\"id\": \"k2\", \"ten\": \"số tín chỉ tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.c\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"loai\": \"dai_luong\"}, {\"id\": \"k4\", \"ten\": \"học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.g\"], \"loai\": \"loai_hoc_phan\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"Đại học Quốc gia Hà Nội\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.e\"], \"loai\": \"don_vi\"}, {\"id\": \"o3\", \"ten\": \"đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.e\"], \"loai\": \"don_vi\"}, {\"id\": \"o4\", \"ten\": \"chương trình đào tạo chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o5\", \"ten\": \"chương trình đào tạo tài năng, chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"loai\": \"chuong_trinh\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"xét công nhận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1\"], \"mo_ta\": \"xét công nhận tốt nghiệp cho sinh viên sau khi hoàn thành chương trình đào tạo\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện xét công nhận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên phải có đủ các điều kiện liệt kê từ điểm a đến điểm h\"}, {\"id\": \"g2\", \"ten\": \"điểm trung bình chung tích lũy đạt ngưỡng theo loại chương trình\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Điểm trung bình chung tích lũy đạt 2,00 trở lên (chương trình chuẩn) hoặc đạt 2,50 trở lên (chương trình tài năng, chất lượng cao); suy luận là chỉ cần một trong hai nhánh tương ứng với loại chương trình\"}, {\"id\": \"g3\", \"ten\": \"điểm trung bình chung tích lũy đạt 2,00 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Điểm trung bình chung tích lũy của khóa học đạt từ 2,00 trở lên đối với chương trình đào tạo chuẩn\"}, {\"id\": \"g4\", \"ten\": \"điểm trung bình chung tích lũy đạt 2,50 trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Điểm trung bình chung tích lũy của khóa học đạt từ 2,50 trở lên đối với chương trình đào tạo tài năng, chất lượng cao\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"trong thời gian học tập tối đa của khóa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.a\"], \"mo_ta\": \"Trong thời gian học tập tối đa của khóa học\", \"toan_tu\": \"thuoc\"}, {\"id\": \"c2\", \"ten\": \"không đang trong thời gian bị truy cứu trách nhiệm hình sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.b\"], \"mo_ta\": \"Cho đến thời điểm xét tốt nghiệp, sinh viên không đang trong thời gian bị truy cứu trách nhiệm hình sự\", \"toan_tu\": \"co\", \"phu_dinh\": true, \"moc\": \"đến thời điểm xét tốt nghiệp\"}, {\"id\": \"c3\", \"ten\": \"tích lũy đủ số tín chỉ quy định trong chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.c\"], \"mo_ta\": \"Tích lũy đủ số tín chỉ quy định trong chương trình đào tạo\", \"toan_tu\": \"la\"}, {\"id\": \"c4\", \"ten\": \"điểm trung bình chung tích lũy tối thiểu 2,00\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"mo_ta\": \"Điểm trung bình chung tích lũy của khóa học đạt từ 2,00 trở lên\", \"min\": 2.0, \"min_incl\": true, \"thang\": \"thang_4\"}, {\"id\": \"c5\", \"ten\": \"điểm trung bình chung tích lũy tối thiểu 2,50\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.d\"], \"mo_ta\": \"Điểm trung bình chung tích lũy của khóa học đạt từ 2,50 trở lên đối với chương trình đào tạo tài năng, chất lượng cao\", \"min\": 2.5, \"min_incl\": true, \"thang\": \"thang_4\"}, {\"id\": \"c6\", \"ten\": \"đạt trình độ ngoại ngữ quy định\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.đ\"], \"mo_ta\": \"Đạt trình độ ngoại ngữ quy định tại khoản 3, Điều 13 của Quy chế này\", \"toan_tu\": \"co\"}, {\"id\": \"c7\", \"ten\": \"đáp ứng yêu cầu kết quả học tập đối với học phần chuyên môn đặc thù\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.e\"], \"mo_ta\": \"Đáp ứng những yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù mà Đại học Quốc gia Hà Nội và đơn vị đào tạo có quy định bằng văn bản\", \"toan_tu\": \"co\"}, {\"id\": \"c8\", \"ten\": \"được đánh giá đạt học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.g\"], \"mo_ta\": \"Được đánh giá đạt các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ\", \"toan_tu\": \"co\"}, {\"id\": \"c9\", \"ten\": \"có đơn đề nghị xét tốt nghiệp sớm hoặc muộn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.h\"], \"mo_ta\": \"Có đơn gửi Phòng Đào tạo đề nghị được xét tốt nghiệp trong trường hợp đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"bị truy cứu trách nhiệm hình sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1.b\"], \"loai\": \"trang_thai\"}, {\"id\": \"q2\", \"ten\": \"được công nhận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d46.k1\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Sinh viên được xét công nhận tốt nghiệp\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d46.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d46.k1\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d46.k1\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d46.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d46.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d46.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c6\", \"nguon\": \"qc3626.d46.k1.đ\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c7\", \"nguon\": \"qc3626.d46.k1.e\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c8\", \"nguon\": \"qc3626.d46.k1.g\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c9\", \"nguon\": \"qc3626.d46.k1.h\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d46.k1.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"q1\", \"nguon\": \"qc3626.d46.k1.b\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k2\", \"nguon\": \"qc3626.d46.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g3\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g4\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c4\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c5\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k3\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"k3\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g3\", \"to\": \"o4\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g4\", \"to\": \"o5\", \"nguon\": \"qc3626.d46.k1.d\"}, {\"type\": \"XET\", \"from\": \"c8\", \"to\": \"k4\", \"nguon\": \"qc3626.d46.k1.g\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"c7\", \"to\": \"o2\", \"nguon\": \"qc3626.d46.k1.e\", \"noi_dung\": \"yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"c7\", \"to\": \"o3\", \"nguon\": \"qc3626.d46.k1.e\", \"noi_dung\": \"yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "thời gian học tập tối đa của khóa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.a"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k2",
+     "ten": "số tín chỉ tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.c"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k4",
+     "ten": "học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.g"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.e"
+     ],
+     "loai": "don_vi"
+    },
+    {
+     "id": "o3",
+     "ten": "đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.e"
+     ],
+     "loai": "don_vi"
+    },
+    {
+     "id": "o4",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o5",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "loai": "chuong_trinh"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "mo_ta": "xét công nhận tốt nghiệp cho sinh viên sau khi hoàn thành chương trình đào tạo"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải có đủ các điều kiện liệt kê từ điểm a đến điểm h"
+    },
+    {
+     "id": "g2",
+     "ten": "điểm trung bình chung tích lũy đạt ngưỡng theo loại chương trình",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Điểm trung bình chung tích lũy đạt 2,00 trở lên (chương trình chuẩn) hoặc đạt 2,50 trở lên (chương trình tài năng, chất lượng cao); suy luận là chỉ cần một trong hai nhánh tương ứng với loại chương trình"
+    },
+    {
+     "id": "g3",
+     "ten": "điểm trung bình chung tích lũy đạt 2,00 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,00 trở lên đối với chương trình đào tạo chuẩn"
+    },
+    {
+     "id": "g4",
+     "ten": "điểm trung bình chung tích lũy đạt 2,50 trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,50 trở lên đối với chương trình đào tạo tài năng, chất lượng cao"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "trong thời gian học tập tối đa của khóa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.a"
+     ],
+     "mo_ta": "Trong thời gian học tập tối đa của khóa học",
+     "toan_tu": "thuoc"
+    },
+    {
+     "id": "c2",
+     "ten": "không đang trong thời gian bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.b"
+     ],
+     "mo_ta": "Cho đến thời điểm xét tốt nghiệp, sinh viên không đang trong thời gian bị truy cứu trách nhiệm hình sự",
+     "toan_tu": "co",
+     "phu_dinh": true,
+     "moc": "đến thời điểm xét tốt nghiệp"
+    },
+    {
+     "id": "c3",
+     "ten": "tích lũy đủ số tín chỉ quy định trong chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.c"
+     ],
+     "mo_ta": "Tích lũy đủ số tín chỉ quy định trong chương trình đào tạo",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c4",
+     "ten": "điểm trung bình chung tích lũy tối thiểu 2,00",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,00 trở lên",
+     "min": 2.0,
+     "min_incl": true,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c5",
+     "ten": "điểm trung bình chung tích lũy tối thiểu 2,50",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,50 trở lên đối với chương trình đào tạo tài năng, chất lượng cao",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4"
+    },
+    {
+     "id": "c6",
+     "ten": "đạt trình độ ngoại ngữ quy định",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.đ"
+     ],
+     "mo_ta": "Đạt trình độ ngoại ngữ quy định tại khoản 3, Điều 13 của Quy chế này",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c7",
+     "ten": "đáp ứng yêu cầu kết quả học tập đối với học phần chuyên môn đặc thù",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.e"
+     ],
+     "mo_ta": "Đáp ứng những yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù mà Đại học Quốc gia Hà Nội và đơn vị đào tạo có quy định bằng văn bản",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c8",
+     "ten": "được đánh giá đạt học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.g"
+     ],
+     "mo_ta": "Được đánh giá đạt các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c9",
+     "ten": "có đơn đề nghị xét tốt nghiệp sớm hoặc muộn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.h"
+     ],
+     "mo_ta": "Có đơn gửi Phòng Đào tạo đề nghị được xét tốt nghiệp trong trường hợp đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1.b"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q2",
+     "ten": "được công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên được xét công nhận tốt nghiệp"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d46.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d46.k1"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d46.k1"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d46.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d46.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d46.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c6",
+     "nguon": "qc3626.d46.k1.đ"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c7",
+     "nguon": "qc3626.d46.k1.e"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c8",
+     "nguon": "qc3626.d46.k1.g"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c9",
+     "nguon": "qc3626.d46.k1.h"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d46.k1.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "q1",
+     "nguon": "qc3626.d46.k1.b"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k2",
+     "nguon": "qc3626.d46.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g3",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g4",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c4",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c5",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k3",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "k3",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g3",
+     "to": "o4",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g4",
+     "to": "o5",
+     "nguon": "qc3626.d46.k1.d"
+    },
+    {
+     "type": "XET",
+     "from": "c8",
+     "to": "k4",
+     "nguon": "qc3626.d46.k1.g"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "c7",
+     "to": "o2",
+     "nguon": "qc3626.d46.k1.e",
+     "noi_dung": "yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "c7",
+     "to": "o3",
+     "nguon": "qc3626.d46.k1.e",
+     "noi_dung": "yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d46.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.thoi_gian_hoc_tap_toi_da_cua_khoa_hoc",
+    "k2": "sem.KhaiNiem.so_tin_chi_tich_luy",
+    "k3": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "k4": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh_giao_duc_the_chat_va_ky_nang_bo_tro",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "o2": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+    "o3": "sem.DoiTuong.don_vi_dao_tao",
+    "o4": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "o5": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "h1": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+    "g1": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d46.k1.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d46.k1.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d46.k1.g4",
+    "c1": "sem.DieuKien.qc3626.d46.k1.c1",
+    "c2": "sem.DieuKien.qc3626.d46.k1.c2",
+    "c3": "sem.DieuKien.qc3626.d46.k1.c3",
+    "c4": "sem.DieuKien.qc3626.d46.k1.c4",
+    "c5": "sem.DieuKien.qc3626.d46.k1.c5",
+    "c6": "sem.DieuKien.qc3626.d46.k1.c6",
+    "c7": "sem.DieuKien.qc3626.d46.k1.c7",
+    "c8": "sem.DieuKien.qc3626.d46.k1.c8",
+    "c9": "sem.DieuKien.qc3626.d46.k1.c9",
+    "q1": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su",
+    "q2": "sem.HeQua.duoc_cong_nhan_tot_nghiep"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.thoi_gian_hoc_tap_toi_da_cua_khoa_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.thoi_gian_hoc_tap_toi_da_cua_khoa_hoc",
+     "ten": "thời gian học tập tối đa của khóa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.a"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.so_tin_chi_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.so_tin_chi_tich_luy",
+     "ten": "số tín chỉ tích lũy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.c"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh_giao_duc_the_chat_va_ky_nang_bo_tro",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh_giao_duc_the_chat_va_ky_nang_bo_tro",
+     "ten": "học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.g"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+     "ten": "Đại học Quốc gia Hà Nội",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.e"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.don_vi_dao_tao",
+     "ten": "đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.e"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+     "ten": "xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "mo_ta": "xét công nhận tốt nghiệp cho sinh viên sau khi hoàn thành chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+     "ten": "điều kiện xét công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải có đủ các điều kiện liệt kê từ điểm a đến điểm h"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d46.k1.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d46.k1.g2",
+     "ten": "điểm trung bình chung tích lũy đạt ngưỡng theo loại chương trình",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Điểm trung bình chung tích lũy đạt 2,00 trở lên (chương trình chuẩn) hoặc đạt 2,50 trở lên (chương trình tài năng, chất lượng cao); suy luận là chỉ cần một trong hai nhánh tương ứng với loại chương trình"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d46.k1.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d46.k1.g3",
+     "ten": "điểm trung bình chung tích lũy đạt 2,00 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,00 trở lên đối với chương trình đào tạo chuẩn"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d46.k1.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d46.k1.g4",
+     "ten": "điểm trung bình chung tích lũy đạt 2,50 trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,50 trở lên đối với chương trình đào tạo tài năng, chất lượng cao"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c1",
+     "ten": "trong thời gian học tập tối đa của khóa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.a"
+     ],
+     "mo_ta": "Trong thời gian học tập tối đa của khóa học",
+     "toan_tu": "thuoc"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c2",
+     "ten": "không đang trong thời gian bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.b"
+     ],
+     "mo_ta": "Cho đến thời điểm xét tốt nghiệp, sinh viên không đang trong thời gian bị truy cứu trách nhiệm hình sự",
+     "toan_tu": "co",
+     "phu_dinh": true,
+     "moc": "đến thời điểm xét tốt nghiệp"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c3",
+     "ten": "tích lũy đủ số tín chỉ quy định trong chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.c"
+     ],
+     "mo_ta": "Tích lũy đủ số tín chỉ quy định trong chương trình đào tạo",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c4",
+     "ten": "điểm trung bình chung tích lũy tối thiểu 2,00",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,00 trở lên",
+     "min": 2.0,
+     "min_incl": true,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c5",
+     "ten": "điểm trung bình chung tích lũy tối thiểu 2,50",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.d"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy của khóa học đạt từ 2,50 trở lên đối với chương trình đào tạo tài năng, chất lượng cao",
+     "min": 2.5,
+     "min_incl": true,
+     "thang": "thang_4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c6",
+     "ten": "đạt trình độ ngoại ngữ quy định",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.đ"
+     ],
+     "mo_ta": "Đạt trình độ ngoại ngữ quy định tại khoản 3, Điều 13 của Quy chế này",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c7",
+     "ten": "đáp ứng yêu cầu kết quả học tập đối với học phần chuyên môn đặc thù",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.e"
+     ],
+     "mo_ta": "Đáp ứng những yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù mà Đại học Quốc gia Hà Nội và đơn vị đào tạo có quy định bằng văn bản",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c8",
+     "ten": "được đánh giá đạt học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.g"
+     ],
+     "mo_ta": "Được đánh giá đạt các học phần giáo dục quốc phòng - an ninh, giáo dục thể chất và kỹ năng bổ trợ",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d46.k1.c9",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d46.k1.c9",
+     "ten": "có đơn đề nghị xét tốt nghiệp sớm hoặc muộn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.h"
+     ],
+     "mo_ta": "Có đơn gửi Phòng Đào tạo đề nghị được xét tốt nghiệp trong trường hợp đủ điều kiện tốt nghiệp sớm hoặc muộn so với thời gian thiết kế của khóa học",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su",
+     "ten": "bị truy cứu trách nhiệm hình sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1.b"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_cong_nhan_tot_nghiep",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_cong_nhan_tot_nghiep",
+     "ten": "được công nhận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d46.k1"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên được xét công nhận tốt nghiệp"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.xet_cong_nhan_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "props": {
+     "nguon": "qc3626.d46.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_cong_nhan_tot_nghiep",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d46.k1"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.HeQua.duoc_cong_nhan_tot_nghiep",
+    "props": {
+     "nguon": "qc3626.d46.k1"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.DieuKien.qc3626.d46.k1.c1",
+    "props": {
+     "nguon": "qc3626.d46.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.DieuKien.qc3626.d46.k1.c2",
+    "props": {
+     "nguon": "qc3626.d46.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.DieuKien.qc3626.d46.k1.c3",
+    "props": {
+     "nguon": "qc3626.d46.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.NhomDieuKien.qc3626.d46.k1.g2",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.DieuKien.qc3626.d46.k1.c6",
+    "props": {
+     "nguon": "qc3626.d46.k1.đ"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.DieuKien.qc3626.d46.k1.c7",
+    "props": {
+     "nguon": "qc3626.d46.k1.e"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.DieuKien.qc3626.d46.k1.c8",
+    "props": {
+     "nguon": "qc3626.d46.k1.g"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g1",
+    "to": "sem.DieuKien.qc3626.d46.k1.c9",
+    "props": {
+     "nguon": "qc3626.d46.k1.h"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d46.k1.c1",
+    "to": "sem.KhaiNiem.thoi_gian_hoc_tap_toi_da_cua_khoa_hoc",
+    "props": {
+     "nguon": "qc3626.d46.k1.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d46.k1.c2",
+    "to": "sem.HeQua.bi_truy_cuu_trach_nhiem_hinh_su",
+    "props": {
+     "nguon": "qc3626.d46.k1.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d46.k1.c3",
+    "to": "sem.KhaiNiem.so_tin_chi_tich_luy",
+    "props": {
+     "nguon": "qc3626.d46.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d46.k1.g3",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g2",
+    "to": "sem.NhomDieuKien.qc3626.d46.k1.g4",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g3",
+    "to": "sem.DieuKien.qc3626.d46.k1.c4",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g4",
+    "to": "sem.DieuKien.qc3626.d46.k1.c5",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d46.k1.c4",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d46.k1.c5",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g3",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d46.k1.g4",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d46.k1.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d46.k1.c8",
+    "to": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh_giao_duc_the_chat_va_ky_nang_bo_tro",
+    "props": {
+     "nguon": "qc3626.d46.k1.g"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.DieuKien.qc3626.d46.k1.c7",
+    "to": "sem.DoiTuong.dai_hoc_quoc_gia_ha_noi",
+    "props": {
+     "nguon": "qc3626.d46.k1.e",
+     "noi_dung": "yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.DieuKien.qc3626.d46.k1.c7",
+    "to": "sem.DoiTuong.don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d46.k1.e",
+     "noi_dung": "yêu cầu về kết quả học tập đối với một số học phần chuyên môn đặc thù"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d46.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "1a070830a51f4b453558e4cb953304057b373691938b1104d1bc06d53636aee0",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16428,
+  "output_tokens": 8288,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgfdvo2727BNqRMEPf4Fb'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:56:00+07:00",
+  "latency_s": 30.306,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

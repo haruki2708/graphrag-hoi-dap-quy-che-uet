@@ -1,0 +1,55 @@
+{
+ "format": 1,
+ "unit": "qc3626.d29.k4",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": []}\n```",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": []
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d29.k4",
+   "nguon_loai": "trich_xuat",
+   "id_map": {},
+   "merge_conflicts": []
+  },
+  "nodes": [],
+  "edges": []
+ },
+ "metadata": {
+  "unit": "qc3626.d29.k4",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "10fb3e42b792870d6cb9832d53756def529c1b8ed84b4724393706612424ccee",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15726,
+  "output_tokens": 307,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtspoHk4g8rvsmXgWUFB'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:45:56+07:00",
+  "latency_s": 2.568,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

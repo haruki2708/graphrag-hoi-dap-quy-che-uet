@@ -1,0 +1,197 @@
+{
+ "format": 1,
+ "unit": "qc3626.d35.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d35.k1\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"sinh viên là người nước ngoài\", \"bi_danh\": [], \"nguon\": [\"qc3626.d35.k1\"], \"loai\": \"nguoi\"}], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"thực hiện nghĩa vụ của công dân theo quy định của pháp luật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d35.k1\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Sinh viên có nghĩa vụ thực hiện nghĩa vụ của công dân theo quy định của pháp luật\"}, {\"id\": \"q2\", \"ten\": \"tuân thủ pháp luật Việt Nam và tôn trọng phong tục, tập quán Việt Nam\", \"bi_danh\": [], \"nguon\": [\"qc3626.d35.k1\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Sinh viên là người nước ngoài phải tuân thủ pháp luật Việt Nam, tôn trọng phong tục, tập quán của Việt Nam\"}], \"edges\": [{\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d35.k1\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o2\", \"nguon\": \"qc3626.d35.k1\"}]}",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "sinh viên là người nước ngoài",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "thực hiện nghĩa vụ của công dân theo quy định của pháp luật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên có nghĩa vụ thực hiện nghĩa vụ của công dân theo quy định của pháp luật"
+    },
+    {
+     "id": "q2",
+     "ten": "tuân thủ pháp luật Việt Nam và tôn trọng phong tục, tập quán Việt Nam",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên là người nước ngoài phải tuân thủ pháp luật Việt Nam, tôn trọng phong tục, tập quán của Việt Nam"
+    }
+   ],
+   "edges": [
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d35.k1"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o2",
+     "nguon": "qc3626.d35.k1"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d35.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien",
+    "o2": "sem.DoiTuong.sinh_vien_la_nguoi_nuoc_ngoai",
+    "q1": "sem.HeQua.thuc_hien_nghia_vu_cua_cong_dan_theo_quy_dinh_cua_phap_luat",
+    "q2": "sem.HeQua.tuan_thu_phap_luat_viet_nam_va_ton_trong_phong_tuc_tap_quan_viet_nam"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien_la_nguoi_nuoc_ngoai",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien_la_nguoi_nuoc_ngoai",
+     "ten": "sinh viên là người nước ngoài",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HeQua.thuc_hien_nghia_vu_cua_cong_dan_theo_quy_dinh_cua_phap_luat",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thuc_hien_nghia_vu_cua_cong_dan_theo_quy_dinh_cua_phap_luat",
+     "ten": "thực hiện nghĩa vụ của công dân theo quy định của pháp luật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên có nghĩa vụ thực hiện nghĩa vụ của công dân theo quy định của pháp luật"
+    }
+   },
+   {
+    "id": "sem.HeQua.tuan_thu_phap_luat_viet_nam_va_ton_trong_phong_tuc_tap_quan_viet_nam",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.tuan_thu_phap_luat_viet_nam_va_ton_trong_phong_tuc_tap_quan_viet_nam",
+     "ten": "tuân thủ pháp luật Việt Nam và tôn trọng phong tục, tập quán Việt Nam",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d35.k1"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên là người nước ngoài phải tuân thủ pháp luật Việt Nam, tôn trọng phong tục, tập quán của Việt Nam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thuc_hien_nghia_vu_cua_cong_dan_theo_quy_dinh_cua_phap_luat",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d35.k1"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.tuan_thu_phap_luat_viet_nam_va_ton_trong_phong_tuc_tap_quan_viet_nam",
+    "to": "sem.DoiTuong.sinh_vien_la_nguoi_nuoc_ngoai",
+    "props": {
+     "nguon": "qc3626.d35.k1"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d35.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "57f6c16b69a863073c3dfac29b2aa2e02f45e1767983dbbe9ef4acdf2e94aba5",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15776,
+  "output_tokens": 1305,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsvfjkHxvkjyBCNwUuP'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:47:16+07:00",
+  "latency_s": 5.823,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

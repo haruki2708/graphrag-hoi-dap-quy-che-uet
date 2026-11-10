@@ -1,0 +1,797 @@
+{
+ "format": 1,
+ "unit": "qc3626.d39.k5",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[9] XET 'c2'->'k1': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[10] XET 'c6'->'k2': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"đề tài nghiên cứu khoa học của giảng viên hướng dẫn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"loai\": \"khac\"}, {\"id\": \"k2\", \"ten\": \"bản tóm tắt nội dung bằng ngoại ngữ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"chương trình đào tạo tài năng, chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o2\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o3\", \"ten\": \"chủ nhiệm khoa/bộ môn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"loai\": \"chuc_danh\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"làm khóa luận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"sinh viên chương trình đào tạo tài năng, chất lượng cao thực hiện khóa luận tốt nghiệp\"}, {\"id\": \"h2\", \"ten\": \"thành lập hội đồng chấm khóa luận tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"yêu cầu đối với khóa luận tốt nghiệp của sinh viên chương trình tài năng, chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Khóa luận phải đáp ứng đồng thời các yêu cầu về đề tài, nội dung và công bố; yêu cầu về ngôn ngữ thực hiện theo nhóm con\"}, {\"id\": \"g2\", \"ten\": \"thành phần hội đồng chấm khóa luận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Hội đồng phải có tối thiểu 5 người, trong đó có 2 phản biện\"}, {\"id\": \"g3\", \"ten\": \"hình thức ngôn ngữ của khóa luận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Khuyến khích viết bằng ngoại ngữ; nếu viết bằng tiếng Việt thì phải có bản tóm tắt bằng ngoại ngữ, suy luận thành lựa chọn một trong hai\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"đề tài đặt mục đích giải quyết vấn đề có ý nghĩa lý luận hoặc thực tiễn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Đề tài khóa luận phải đặt mục đích giải quyết một vấn đề có ý nghĩa lý luận hoặc thực tiễn trong lĩnh vực khoa học liên quan\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"đề tài gắn với đề tài nghiên cứu khoa học của giảng viên hướng dẫn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Đề tài khóa luận phải gắn với đề tài nghiên cứu khoa học của giảng viên hướng dẫn\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"khóa luận có yếu tố mới, sáng tạo và độ tin cậy cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Khóa luận phải chứa đựng yếu tố mới và sáng tạo, đảm bảo độ chính xác và tin cậy cao, trình bày mạch lạc, rõ ràng\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"khóa luận có thể công bố hoặc báo cáo khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Khóa luận có thể công bố trên tạp chí khoa học hoặc báo cáo ở hội nghị khoa học\", \"toan_tu\": \"co\"}, {\"id\": \"c5\", \"ten\": \"khóa luận viết bằng ngoại ngữ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Khóa luận được viết bằng ngoại ngữ (được khuyến khích)\", \"toan_tu\": \"co\"}, {\"id\": \"c6\", \"ten\": \"có bản tóm tắt nội dung bằng ngoại ngữ tối thiểu 2 trang khổ A4\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Nếu viết bằng tiếng Việt thì phải có bản tóm tắt nội dung bằng ngoại ngữ gồm ít nhất 2 trang khổ A4\", \"min\": 2, \"min_incl\": true, \"don_vi\": \"trang khổ A4\"}, {\"id\": \"c7\", \"ten\": \"hội đồng chấm khóa luận có tối thiểu 5 thành viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Hội đồng chấm khóa luận tốt nghiệp tối thiểu gồm 5 người\", \"min\": 5, \"min_incl\": true, \"don_vi\": \"người\"}, {\"id\": \"c8\", \"ten\": \"hội đồng có tối thiểu 2 phản biện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d39.k5\"], \"mo_ta\": \"Trong hội đồng chấm khóa luận có 2 phản biện\", \"min\": 2, \"min_incl\": true, \"don_vi\": \"người phản biện\"}], \"HeQua\": [], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c4\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g3\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c5\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c6\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"XET\", \"from\": \"c6\", \"to\": \"k2\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"YEU_CAU\", \"from\": \"h2\", \"to\": \"g2\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c7\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c8\", \"nguon\": \"qc3626.d39.k5\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"h2\", \"to\": \"o2\", \"nguon\": \"qc3626.d39.k5\", \"noi_dung\": \"ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"h2\", \"to\": \"o3\", \"nguon\": \"qc3626.d39.k5\", \"noi_dung\": \"ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp khi được thủ trưởng đơn vị đào tạo ủy quyền\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "đề tài nghiên cứu khoa học của giảng viên hướng dẫn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "k2",
+     "ten": "bản tóm tắt nội dung bằng ngoại ngữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o2",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o3",
+     "ten": "chủ nhiệm khoa/bộ môn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "chuc_danh"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "làm khóa luận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "sinh viên chương trình đào tạo tài năng, chất lượng cao thực hiện khóa luận tốt nghiệp"
+    },
+    {
+     "id": "h2",
+     "ten": "thành lập hội đồng chấm khóa luận tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "yêu cầu đối với khóa luận tốt nghiệp của sinh viên chương trình tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Khóa luận phải đáp ứng đồng thời các yêu cầu về đề tài, nội dung và công bố; yêu cầu về ngôn ngữ thực hiện theo nhóm con"
+    },
+    {
+     "id": "g2",
+     "ten": "thành phần hội đồng chấm khóa luận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Hội đồng phải có tối thiểu 5 người, trong đó có 2 phản biện"
+    },
+    {
+     "id": "g3",
+     "ten": "hình thức ngôn ngữ của khóa luận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Khuyến khích viết bằng ngoại ngữ; nếu viết bằng tiếng Việt thì phải có bản tóm tắt bằng ngoại ngữ, suy luận thành lựa chọn một trong hai"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "đề tài đặt mục đích giải quyết vấn đề có ý nghĩa lý luận hoặc thực tiễn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Đề tài khóa luận phải đặt mục đích giải quyết một vấn đề có ý nghĩa lý luận hoặc thực tiễn trong lĩnh vực khoa học liên quan",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "đề tài gắn với đề tài nghiên cứu khoa học của giảng viên hướng dẫn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Đề tài khóa luận phải gắn với đề tài nghiên cứu khoa học của giảng viên hướng dẫn",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "khóa luận có yếu tố mới, sáng tạo và độ tin cậy cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Khóa luận phải chứa đựng yếu tố mới và sáng tạo, đảm bảo độ chính xác và tin cậy cao, trình bày mạch lạc, rõ ràng",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "khóa luận có thể công bố hoặc báo cáo khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Khóa luận có thể công bố trên tạp chí khoa học hoặc báo cáo ở hội nghị khoa học",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c5",
+     "ten": "khóa luận viết bằng ngoại ngữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Khóa luận được viết bằng ngoại ngữ (được khuyến khích)",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c6",
+     "ten": "có bản tóm tắt nội dung bằng ngoại ngữ tối thiểu 2 trang khổ A4",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Nếu viết bằng tiếng Việt thì phải có bản tóm tắt nội dung bằng ngoại ngữ gồm ít nhất 2 trang khổ A4",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "trang khổ A4"
+    },
+    {
+     "id": "c7",
+     "ten": "hội đồng chấm khóa luận có tối thiểu 5 thành viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Hội đồng chấm khóa luận tốt nghiệp tối thiểu gồm 5 người",
+     "min": 5,
+     "min_incl": true,
+     "don_vi": "người"
+    },
+    {
+     "id": "c8",
+     "ten": "hội đồng có tối thiểu 2 phản biện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Trong hội đồng chấm khóa luận có 2 phản biện",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "người phản biện"
+    }
+   ],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c4",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g3",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c5",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c6",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "XET",
+     "from": "c6",
+     "to": "k2",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h2",
+     "to": "g2",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c7",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c8",
+     "nguon": "qc3626.d39.k5"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h2",
+     "to": "o2",
+     "nguon": "qc3626.d39.k5",
+     "noi_dung": "ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h2",
+     "to": "o3",
+     "nguon": "qc3626.d39.k5",
+     "noi_dung": "ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp khi được thủ trưởng đơn vị đào tạo ủy quyền"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d39.k5",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.de_tai_nghien_cuu_khoa_hoc_cua_giang_vien_huong_dan",
+    "k2": "sem.KhaiNiem.ban_tom_tat_noi_dung_bang_ngoai_ngu",
+    "o1": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "o2": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o3": "sem.DoiTuong.chu_nhiem_khoa_bo_mon",
+    "h1": "sem.HoatDong.lam_khoa_luan_tot_nghiep",
+    "h2": "sem.HoatDong.thanh_lap_hoi_dong_cham_khoa_luan_tot_nghiep",
+    "g1": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d39.k5.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d39.k5.g3",
+    "c1": "sem.DieuKien.qc3626.d39.k5.c1",
+    "c2": "sem.DieuKien.qc3626.d39.k5.c2",
+    "c3": "sem.DieuKien.qc3626.d39.k5.c3",
+    "c4": "sem.DieuKien.qc3626.d39.k5.c4",
+    "c5": "sem.DieuKien.qc3626.d39.k5.c5",
+    "c6": "sem.DieuKien.qc3626.d39.k5.c6",
+    "c7": "sem.DieuKien.qc3626.d39.k5.c7",
+    "c8": "sem.DieuKien.qc3626.d39.k5.c8"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.de_tai_nghien_cuu_khoa_hoc_cua_giang_vien_huong_dan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.de_tai_nghien_cuu_khoa_hoc_cua_giang_vien_huong_dan",
+     "ten": "đề tài nghiên cứu khoa học của giảng viên hướng dẫn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.ban_tom_tat_noi_dung_bang_ngoai_ngu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ban_tom_tat_noi_dung_bang_ngoai_ngu",
+     "ten": "bản tóm tắt nội dung bằng ngoại ngữ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chu_nhiem_khoa_bo_mon",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chu_nhiem_khoa_bo_mon",
+     "ten": "chủ nhiệm khoa/bộ môn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.HoatDong.lam_khoa_luan_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.lam_khoa_luan_tot_nghiep",
+     "ten": "làm khóa luận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "sinh viên chương trình đào tạo tài năng, chất lượng cao thực hiện khóa luận tốt nghiệp"
+    }
+   },
+   {
+    "id": "sem.HoatDong.thanh_lap_hoi_dong_cham_khoa_luan_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.thanh_lap_hoi_dong_cham_khoa_luan_tot_nghiep",
+     "ten": "thành lập hội đồng chấm khóa luận tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+     "ten": "yêu cầu đối với khóa luận tốt nghiệp của sinh viên chương trình tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Khóa luận phải đáp ứng đồng thời các yêu cầu về đề tài, nội dung và công bố; yêu cầu về ngôn ngữ thực hiện theo nhóm con"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d39.k5.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d39.k5.g2",
+     "ten": "thành phần hội đồng chấm khóa luận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Hội đồng phải có tối thiểu 5 người, trong đó có 2 phản biện"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d39.k5.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d39.k5.g3",
+     "ten": "hình thức ngôn ngữ của khóa luận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Khuyến khích viết bằng ngoại ngữ; nếu viết bằng tiếng Việt thì phải có bản tóm tắt bằng ngoại ngữ, suy luận thành lựa chọn một trong hai"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c1",
+     "ten": "đề tài đặt mục đích giải quyết vấn đề có ý nghĩa lý luận hoặc thực tiễn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Đề tài khóa luận phải đặt mục đích giải quyết một vấn đề có ý nghĩa lý luận hoặc thực tiễn trong lĩnh vực khoa học liên quan",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c2",
+     "ten": "đề tài gắn với đề tài nghiên cứu khoa học của giảng viên hướng dẫn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Đề tài khóa luận phải gắn với đề tài nghiên cứu khoa học của giảng viên hướng dẫn",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c3",
+     "ten": "khóa luận có yếu tố mới, sáng tạo và độ tin cậy cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Khóa luận phải chứa đựng yếu tố mới và sáng tạo, đảm bảo độ chính xác và tin cậy cao, trình bày mạch lạc, rõ ràng",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c4",
+     "ten": "khóa luận có thể công bố hoặc báo cáo khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Khóa luận có thể công bố trên tạp chí khoa học hoặc báo cáo ở hội nghị khoa học",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c5",
+     "ten": "khóa luận viết bằng ngoại ngữ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Khóa luận được viết bằng ngoại ngữ (được khuyến khích)",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c6",
+     "ten": "có bản tóm tắt nội dung bằng ngoại ngữ tối thiểu 2 trang khổ A4",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Nếu viết bằng tiếng Việt thì phải có bản tóm tắt nội dung bằng ngoại ngữ gồm ít nhất 2 trang khổ A4",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "trang khổ A4"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c7",
+     "ten": "hội đồng chấm khóa luận có tối thiểu 5 thành viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Hội đồng chấm khóa luận tốt nghiệp tối thiểu gồm 5 người",
+     "min": 5,
+     "min_incl": true,
+     "don_vi": "người"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d39.k5.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d39.k5.c8",
+     "ten": "hội đồng có tối thiểu 2 phản biện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d39.k5"
+     ],
+     "mo_ta": "Trong hội đồng chấm khóa luận có 2 phản biện",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "người phản biện"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.lam_khoa_luan_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "to": "sem.DieuKien.qc3626.d39.k5.c1",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "to": "sem.DieuKien.qc3626.d39.k5.c2",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "to": "sem.DieuKien.qc3626.d39.k5.c3",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "to": "sem.DieuKien.qc3626.d39.k5.c4",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g1",
+    "to": "sem.NhomDieuKien.qc3626.d39.k5.g3",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g3",
+    "to": "sem.DieuKien.qc3626.d39.k5.c5",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g3",
+    "to": "sem.DieuKien.qc3626.d39.k5.c6",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d39.k5.c2",
+    "to": "sem.KhaiNiem.de_tai_nghien_cuu_khoa_hoc_cua_giang_vien_huong_dan",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d39.k5.c6",
+    "to": "sem.KhaiNiem.ban_tom_tat_noi_dung_bang_ngoai_ngu",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.thanh_lap_hoi_dong_cham_khoa_luan_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d39.k5.g2",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g2",
+    "to": "sem.DieuKien.qc3626.d39.k5.c7",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d39.k5.g2",
+    "to": "sem.DieuKien.qc3626.d39.k5.c8",
+    "props": {
+     "nguon": "qc3626.d39.k5"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.thanh_lap_hoi_dong_cham_khoa_luan_tot_nghiep",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d39.k5",
+     "noi_dung": "ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.thanh_lap_hoi_dong_cham_khoa_luan_tot_nghiep",
+    "to": "sem.DoiTuong.chu_nhiem_khoa_bo_mon",
+    "props": {
+     "nguon": "qc3626.d39.k5",
+     "noi_dung": "ra quyết định thành lập hội đồng chấm khóa luận tốt nghiệp khi được thủ trưởng đơn vị đào tạo ủy quyền"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d39.k5",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "0e3daee6f52179f2071204df4416464972fbb4a91c8d58971c4116945a2dd736",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16185,
+  "output_tokens": 7657,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgttNciPsUSzfC4YvVcot'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:53:08+07:00",
+  "latency_s": 28.953,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

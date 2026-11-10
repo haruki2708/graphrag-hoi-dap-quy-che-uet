@@ -1,0 +1,402 @@
+{
+ "format": 1,
+ "unit": "qc3626.d47.k6",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"hạng tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"loai\": \"khac\"}, {\"id\": \"k2\", \"ten\": \"kết quả học tập các học phần được bảo lưu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"loai\": \"dai_luong\"}, {\"id\": \"k3\", \"ten\": \"kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên học văn bằng thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"loai\": \"nguoi\"}, {\"id\": \"o2\", \"ten\": \"sinh viên học cùng lúc hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"xét hạng tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"mo_ta\": \"xét hạng tốt nghiệp cho sinh viên học văn bằng thứ hai hoặc học cùng lúc hai chương trình đào tạo theo kết quả học tập các học phần được bảo lưu và kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"kết quả học tập làm căn cứ xét hạng tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Hạng tốt nghiệp được xét đồng thời theo kết quả học tập các học phần được bảo lưu và kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai (suy luận: cả hai nguồn kết quả cùng được sử dụng)\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"có kết quả học tập các học phần được bảo lưu\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"mo_ta\": \"Có kết quả học tập các học phần được bảo lưu của chương trình đào tạo thứ nhất\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"có kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d47.k6\"], \"mo_ta\": \"Có kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai\", \"toan_tu\": \"co\"}], \"HeQua\": [], \"edges\": [{\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o1\", \"nguon\": \"qc3626.d47.k6\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o2\", \"nguon\": \"qc3626.d47.k6\"}, {\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d47.k6\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d47.k6\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d47.k6\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k2\", \"nguon\": \"qc3626.d47.k6\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k3\", \"nguon\": \"qc3626.d47.k6\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "k2",
+     "ten": "kết quả học tập các học phần được bảo lưu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k3",
+     "ten": "kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên học văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o2",
+     "ten": "sinh viên học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "xét hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "mo_ta": "xét hạng tốt nghiệp cho sinh viên học văn bằng thứ hai hoặc học cùng lúc hai chương trình đào tạo theo kết quả học tập các học phần được bảo lưu và kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "kết quả học tập làm căn cứ xét hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Hạng tốt nghiệp được xét đồng thời theo kết quả học tập các học phần được bảo lưu và kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai (suy luận: cả hai nguồn kết quả cùng được sử dụng)"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "có kết quả học tập các học phần được bảo lưu",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "mo_ta": "Có kết quả học tập các học phần được bảo lưu của chương trình đào tạo thứ nhất",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "có kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "mo_ta": "Có kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o1",
+     "nguon": "qc3626.d47.k6"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o2",
+     "nguon": "qc3626.d47.k6"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d47.k6"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d47.k6"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d47.k6"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k2",
+     "nguon": "qc3626.d47.k6"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k3",
+     "nguon": "qc3626.d47.k6"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d47.k6",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hang_tot_nghiep",
+    "k2": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_bao_luu",
+    "k3": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_tich_luy_trong_thoi_gian_hoc_chuong_trinh_dao_tao_thu_hai",
+    "o1": "sem.DoiTuong.sinh_vien_hoc_van_bang_thu_hai",
+    "o2": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "h1": "sem.HoatDong.xet_hang_tot_nghiep",
+    "g1": "sem.NhomDieuKien.qc3626.d47.k6.g1",
+    "c1": "sem.DieuKien.qc3626.d47.k6.c1",
+    "c2": "sem.DieuKien.qc3626.d47.k6.c2"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hang_tot_nghiep",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hang_tot_nghiep",
+     "ten": "hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_bao_luu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_bao_luu",
+     "ten": "kết quả học tập các học phần được bảo lưu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_tich_luy_trong_thoi_gian_hoc_chuong_trinh_dao_tao_thu_hai",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_tich_luy_trong_thoi_gian_hoc_chuong_trinh_dao_tao_thu_hai",
+     "ten": "kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien_hoc_van_bang_thu_hai",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien_hoc_van_bang_thu_hai",
+     "ten": "sinh viên học văn bằng thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+     "ten": "sinh viên học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_hang_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_hang_tot_nghiep",
+     "ten": "xét hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "mo_ta": "xét hạng tốt nghiệp cho sinh viên học văn bằng thứ hai hoặc học cùng lúc hai chương trình đào tạo theo kết quả học tập các học phần được bảo lưu và kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d47.k6.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d47.k6.g1",
+     "ten": "kết quả học tập làm căn cứ xét hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Hạng tốt nghiệp được xét đồng thời theo kết quả học tập các học phần được bảo lưu và kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai (suy luận: cả hai nguồn kết quả cùng được sử dụng)"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k6.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k6.c1",
+     "ten": "có kết quả học tập các học phần được bảo lưu",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "mo_ta": "Có kết quả học tập các học phần được bảo lưu của chương trình đào tạo thứ nhất",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d47.k6.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d47.k6.c2",
+     "ten": "có kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d47.k6"
+     ],
+     "mo_ta": "Có kết quả học tập các học phần được tích lũy trong thời gian học chương trình đào tạo thứ hai",
+     "toan_tu": "co"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.xet_hang_tot_nghiep",
+    "to": "sem.DoiTuong.sinh_vien_hoc_van_bang_thu_hai",
+    "props": {
+     "nguon": "qc3626.d47.k6"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.xet_hang_tot_nghiep",
+    "to": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d47.k6"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.xet_hang_tot_nghiep",
+    "to": "sem.NhomDieuKien.qc3626.d47.k6.g1",
+    "props": {
+     "nguon": "qc3626.d47.k6"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k6.g1",
+    "to": "sem.DieuKien.qc3626.d47.k6.c1",
+    "props": {
+     "nguon": "qc3626.d47.k6"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d47.k6.g1",
+    "to": "sem.DieuKien.qc3626.d47.k6.c2",
+    "props": {
+     "nguon": "qc3626.d47.k6"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k6.c1",
+    "to": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_bao_luu",
+    "props": {
+     "nguon": "qc3626.d47.k6"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d47.k6.c2",
+    "to": "sem.KhaiNiem.ket_qua_hoc_tap_cac_hoc_phan_duoc_tich_luy_trong_thoi_gian_hoc_chuong_trinh_dao_tao_thu_hai",
+    "props": {
+     "nguon": "qc3626.d47.k6"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d47.k6",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "40b32076b235d75a9a2fc587c2fe973c42fb723bb249100d34edf6a574f58a88",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15828,
+  "output_tokens": 3815,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtte9F7KJGKzq9HU12f4'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:56:39+07:00",
+  "latency_s": 15.055,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

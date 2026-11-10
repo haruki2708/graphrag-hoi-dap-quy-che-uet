@@ -1,0 +1,766 @@
+{
+ "format": 1,
+ "unit": "qc3626.d44.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[11] XET 'c3'->'kn3': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[12] XET 'c4'->'kn4': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[14] XET 'c6'->'kn6': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"kn1\", \"ten\": \"số lần cảnh báo kết quả học tập\", \"bi_danh\": [\"cảnh báo kết quả học tập\"], \"nguon\": [\"qc3626.d44.k2.a\"], \"loai\": \"dai_luong\"}, {\"id\": \"kn2\", \"ten\": \"thời gian tối đa được phép học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"kn3\", \"ten\": \"kỷ luật sinh viên\", \"bi_danh\": [\"kỷ luật\"], \"nguon\": [\"qc3626.d44.k2.c\"], \"loai\": \"khac\"}, {\"id\": \"kn4\", \"ten\": \"mức xóa tên khỏi danh sách sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.c\"], \"loai\": \"khac\"}, {\"id\": \"kn5\", \"ten\": \"số học kỳ liên tiếp không đăng ký học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.d\"], \"loai\": \"dai_luong\"}, {\"id\": \"kn6\", \"ten\": \"đơn xin học trở lại\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.đ\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"dt1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.a\"], \"loai\": \"chuc_danh\"}, {\"id\": \"dt2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2\"], \"loai\": \"nguoi\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"các trường hợp bị buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sau mỗi học kỳ, sinh viên bị buộc thôi học khi thuộc một trong các trường hợp a, b, c, d, đ\"}, {\"id\": \"g2\", \"ten\": \"bị kỷ luật lần thứ hai vì thi hộ hoặc bị kỷ luật ở mức xóa tên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.c\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Thuộc một trong hai trường hợp: kỷ luật lần thứ hai vì thi hộ/nhờ người thi hộ, hoặc kỷ luật ở mức xóa tên khỏi danh sách sinh viên (lựa chọn OR theo 'hoặc')\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"số lần cảnh báo kết quả học tập vượt giới hạn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.a\"], \"mo_ta\": \"Số lần cảnh báo kết quả học tập vượt quá giới hạn theo quy định của thủ trưởng đơn vị đào tạo\"}, {\"id\": \"c2\", \"ten\": \"vượt quá thời gian tối đa được phép học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.b\"], \"mo_ta\": \"Vượt quá thời gian tối đa được phép học quy định tại khoản 1, Điều 17 của Quy chế này\"}, {\"id\": \"c3\", \"ten\": \"bị kỷ luật lần thứ hai vì thi hộ hoặc nhờ người thi hộ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.c\"], \"mo_ta\": \"Bị kỷ luật lần thứ hai vì lý do thi hộ hoặc nhờ người thi hộ theo quy định tại điểm d, khoản 4, Điều 35 của Quy chế này\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.c\"], \"mo_ta\": \"Bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên của đơn vị đào tạo\", \"toan_tu\": \"la\"}, {\"id\": \"c5\", \"ten\": \"không đăng ký học 2 học kỳ liên tiếp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.d\"], \"mo_ta\": \"Không đăng ký học 2 học kỳ liên tiếp\", \"min\": 2, \"min_incl\": true, \"don_vi\": \"học kỳ\"}, {\"id\": \"c6\", \"ten\": \"sau khi hết hạn nghỉ học tạm thời không có đơn xin học trở lại\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2.đ\"], \"mo_ta\": \"Sau khi hết hạn nghỉ học tạm thời, sinh viên không có đơn xin học trở lại theo quy định tại khoản 3, Điều 36 của Quy chế này\", \"toan_tu\": \"co\", \"phu_dinh\": true, \"moc\": \"sau khi hết hạn nghỉ học tạm thời\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"bị buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d44.k2\"], \"loai\": \"trang_thai\", \"mo_ta\": \"Sinh viên bị buộc thôi học\"}], \"edges\": [{\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d44.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d44.k2.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d44.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c5\", \"nguon\": \"qc3626.d44.k2.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c6\", \"nguon\": \"qc3626.d44.k2.đ\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d44.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d44.k2.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d44.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"dt2\", \"nguon\": \"qc3626.d44.k2\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"kn1\", \"nguon\": \"qc3626.d44.k2.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"kn2\", \"nguon\": \"qc3626.d44.k2.b\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"kn3\", \"nguon\": \"qc3626.d44.k2.c\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"kn4\", \"nguon\": \"qc3626.d44.k2.c\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"kn5\", \"nguon\": \"qc3626.d44.k2.d\"}, {\"type\": \"XET\", \"from\": \"c6\", \"to\": \"kn6\", \"nguon\": \"qc3626.d44.k2.đ\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"c1\", \"to\": \"dt1\", \"nguon\": \"qc3626.d44.k2.a\", \"noi_dung\": \"giới hạn số lần cảnh báo kết quả học tập\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "kn1",
+     "ten": "số lần cảnh báo kết quả học tập",
+     "bi_danh": [
+      "cảnh báo kết quả học tập"
+     ],
+     "nguon": [
+      "qc3626.d44.k2.a"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "kn2",
+     "ten": "thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "kn3",
+     "ten": "kỷ luật sinh viên",
+     "bi_danh": [
+      "kỷ luật"
+     ],
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "kn4",
+     "ten": "mức xóa tên khỏi danh sách sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "loai": "khac"
+    },
+    {
+     "id": "kn5",
+     "ten": "số học kỳ liên tiếp không đăng ký học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.d"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "kn6",
+     "ten": "đơn xin học trở lại",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.đ"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "dt1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.a"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "dt2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "các trường hợp bị buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sau mỗi học kỳ, sinh viên bị buộc thôi học khi thuộc một trong các trường hợp a, b, c, d, đ"
+    },
+    {
+     "id": "g2",
+     "ten": "bị kỷ luật lần thứ hai vì thi hộ hoặc bị kỷ luật ở mức xóa tên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong hai trường hợp: kỷ luật lần thứ hai vì thi hộ/nhờ người thi hộ, hoặc kỷ luật ở mức xóa tên khỏi danh sách sinh viên (lựa chọn OR theo 'hoặc')"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "số lần cảnh báo kết quả học tập vượt giới hạn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.a"
+     ],
+     "mo_ta": "Số lần cảnh báo kết quả học tập vượt quá giới hạn theo quy định của thủ trưởng đơn vị đào tạo"
+    },
+    {
+     "id": "c2",
+     "ten": "vượt quá thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.b"
+     ],
+     "mo_ta": "Vượt quá thời gian tối đa được phép học quy định tại khoản 1, Điều 17 của Quy chế này"
+    },
+    {
+     "id": "c3",
+     "ten": "bị kỷ luật lần thứ hai vì thi hộ hoặc nhờ người thi hộ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "mo_ta": "Bị kỷ luật lần thứ hai vì lý do thi hộ hoặc nhờ người thi hộ theo quy định tại điểm d, khoản 4, Điều 35 của Quy chế này",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "mo_ta": "Bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên của đơn vị đào tạo",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c5",
+     "ten": "không đăng ký học 2 học kỳ liên tiếp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.d"
+     ],
+     "mo_ta": "Không đăng ký học 2 học kỳ liên tiếp",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "học kỳ"
+    },
+    {
+     "id": "c6",
+     "ten": "sau khi hết hạn nghỉ học tạm thời không có đơn xin học trở lại",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2.đ"
+     ],
+     "mo_ta": "Sau khi hết hạn nghỉ học tạm thời, sinh viên không có đơn xin học trở lại theo quy định tại khoản 3, Điều 36 của Quy chế này",
+     "toan_tu": "co",
+     "phu_dinh": true,
+     "moc": "sau khi hết hạn nghỉ học tạm thời"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "bị buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d44.k2"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "Sinh viên bị buộc thôi học"
+    }
+   ],
+   "edges": [
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d44.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d44.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d44.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c5",
+     "nguon": "qc3626.d44.k2.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c6",
+     "nguon": "qc3626.d44.k2.đ"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d44.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d44.k2.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d44.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "dt2",
+     "nguon": "qc3626.d44.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "kn1",
+     "nguon": "qc3626.d44.k2.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "kn2",
+     "nguon": "qc3626.d44.k2.b"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "kn3",
+     "nguon": "qc3626.d44.k2.c"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "kn4",
+     "nguon": "qc3626.d44.k2.c"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "kn5",
+     "nguon": "qc3626.d44.k2.d"
+    },
+    {
+     "type": "XET",
+     "from": "c6",
+     "to": "kn6",
+     "nguon": "qc3626.d44.k2.đ"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "c1",
+     "to": "dt1",
+     "nguon": "qc3626.d44.k2.a",
+     "noi_dung": "giới hạn số lần cảnh báo kết quả học tập"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d44.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "kn1": "sem.KhaiNiem.so_lan_canh_bao_ket_qua_hoc_tap",
+    "kn2": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "kn3": "sem.KhaiNiem.ky_luat_sinh_vien",
+    "kn4": "sem.KhaiNiem.muc_xoa_ten_khoi_danh_sach_sinh_vien",
+    "kn5": "sem.KhaiNiem.so_hoc_ky_lien_tiep_khong_dang_ky_hoc",
+    "kn6": "sem.KhaiNiem.don_xin_hoc_tro_lai",
+    "dt1": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "dt2": "sem.DoiTuong.sinh_vien",
+    "g1": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d44.k2.g2",
+    "c1": "sem.DieuKien.qc3626.d44.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d44.k2.c2",
+    "c3": "sem.DieuKien.qc3626.d44.k2.c3",
+    "c4": "sem.DieuKien.qc3626.d44.k2.c4",
+    "c5": "sem.DieuKien.qc3626.d44.k2.c5",
+    "c6": "sem.DieuKien.qc3626.d44.k2.c6",
+    "q1": "sem.HeQua.bi_buoc_thoi_hoc"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.so_lan_canh_bao_ket_qua_hoc_tap",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.so_lan_canh_bao_ket_qua_hoc_tap",
+     "ten": "số lần cảnh báo kết quả học tập",
+     "bi_danh": [
+      "cảnh báo kết quả học tập"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.a"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+     "ten": "thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.ky_luat_sinh_vien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.ky_luat_sinh_vien",
+     "ten": "kỷ luật sinh viên",
+     "bi_danh": [
+      "kỷ luật"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.muc_xoa_ten_khoi_danh_sach_sinh_vien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.muc_xoa_ten_khoi_danh_sach_sinh_vien",
+     "ten": "mức xóa tên khỏi danh sách sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.so_hoc_ky_lien_tiep_khong_dang_ky_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.so_hoc_ky_lien_tiep_khong_dang_ky_hoc",
+     "ten": "số học kỳ liên tiếp không đăng ký học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.d"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.don_xin_hoc_tro_lai",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.don_xin_hoc_tro_lai",
+     "ten": "đơn xin học trở lại",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.đ"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.a"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+     "ten": "các trường hợp bị buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sau mỗi học kỳ, sinh viên bị buộc thôi học khi thuộc một trong các trường hợp a, b, c, d, đ"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d44.k2.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d44.k2.g2",
+     "ten": "bị kỷ luật lần thứ hai vì thi hộ hoặc bị kỷ luật ở mức xóa tên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Thuộc một trong hai trường hợp: kỷ luật lần thứ hai vì thi hộ/nhờ người thi hộ, hoặc kỷ luật ở mức xóa tên khỏi danh sách sinh viên (lựa chọn OR theo 'hoặc')"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k2.c1",
+     "ten": "số lần cảnh báo kết quả học tập vượt giới hạn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.a"
+     ],
+     "mo_ta": "Số lần cảnh báo kết quả học tập vượt quá giới hạn theo quy định của thủ trưởng đơn vị đào tạo"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k2.c2",
+     "ten": "vượt quá thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.b"
+     ],
+     "mo_ta": "Vượt quá thời gian tối đa được phép học quy định tại khoản 1, Điều 17 của Quy chế này"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k2.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k2.c3",
+     "ten": "bị kỷ luật lần thứ hai vì thi hộ hoặc nhờ người thi hộ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "mo_ta": "Bị kỷ luật lần thứ hai vì lý do thi hộ hoặc nhờ người thi hộ theo quy định tại điểm d, khoản 4, Điều 35 của Quy chế này",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k2.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k2.c4",
+     "ten": "bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.c"
+     ],
+     "mo_ta": "Bị kỷ luật ở mức xóa tên khỏi danh sách sinh viên của đơn vị đào tạo",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k2.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k2.c5",
+     "ten": "không đăng ký học 2 học kỳ liên tiếp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.d"
+     ],
+     "mo_ta": "Không đăng ký học 2 học kỳ liên tiếp",
+     "min": 2,
+     "min_incl": true,
+     "don_vi": "học kỳ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d44.k2.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d44.k2.c6",
+     "ten": "sau khi hết hạn nghỉ học tạm thời không có đơn xin học trở lại",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2.đ"
+     ],
+     "mo_ta": "Sau khi hết hạn nghỉ học tạm thời, sinh viên không có đơn xin học trở lại theo quy định tại khoản 3, Điều 36 của Quy chế này",
+     "toan_tu": "co",
+     "phu_dinh": true,
+     "moc": "sau khi hết hạn nghỉ học tạm thời"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_buoc_thoi_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_buoc_thoi_hoc",
+     "ten": "bị buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d44.k2"
+     ],
+     "loai": "trang_thai",
+     "mo_ta": "Sinh viên bị buộc thôi học"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "to": "sem.DieuKien.qc3626.d44.k2.c1",
+    "props": {
+     "nguon": "qc3626.d44.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "to": "sem.DieuKien.qc3626.d44.k2.c2",
+    "props": {
+     "nguon": "qc3626.d44.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "to": "sem.NhomDieuKien.qc3626.d44.k2.g2",
+    "props": {
+     "nguon": "qc3626.d44.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "to": "sem.DieuKien.qc3626.d44.k2.c5",
+    "props": {
+     "nguon": "qc3626.d44.k2.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "to": "sem.DieuKien.qc3626.d44.k2.c6",
+    "props": {
+     "nguon": "qc3626.d44.k2.đ"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g2",
+    "to": "sem.DieuKien.qc3626.d44.k2.c3",
+    "props": {
+     "nguon": "qc3626.d44.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g2",
+    "to": "sem.DieuKien.qc3626.d44.k2.c4",
+    "props": {
+     "nguon": "qc3626.d44.k2.c"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d44.k2.g1",
+    "to": "sem.HeQua.bi_buoc_thoi_hoc",
+    "props": {
+     "nguon": "qc3626.d44.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.bi_buoc_thoi_hoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d44.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k2.c1",
+    "to": "sem.KhaiNiem.so_lan_canh_bao_ket_qua_hoc_tap",
+    "props": {
+     "nguon": "qc3626.d44.k2.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k2.c2",
+    "to": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "props": {
+     "nguon": "qc3626.d44.k2.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k2.c3",
+    "to": "sem.KhaiNiem.ky_luat_sinh_vien",
+    "props": {
+     "nguon": "qc3626.d44.k2.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k2.c4",
+    "to": "sem.KhaiNiem.muc_xoa_ten_khoi_danh_sach_sinh_vien",
+    "props": {
+     "nguon": "qc3626.d44.k2.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k2.c5",
+    "to": "sem.KhaiNiem.so_hoc_ky_lien_tiep_khong_dang_ky_hoc",
+    "props": {
+     "nguon": "qc3626.d44.k2.d"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d44.k2.c6",
+    "to": "sem.KhaiNiem.don_xin_hoc_tro_lai",
+    "props": {
+     "nguon": "qc3626.d44.k2.đ"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.DieuKien.qc3626.d44.k2.c1",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d44.k2.a",
+     "noi_dung": "giới hạn số lần cảnh báo kết quả học tập"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d44.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "ea57ac2dfe21a33ef9b99404fa8cfd8fa5b3d74ab4089b90a7d028371e49be88",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16283,
+  "output_tokens": 7465,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgfdtZopUzoegEX63N5AS'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:55:30+07:00",
+  "latency_s": 30.311,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

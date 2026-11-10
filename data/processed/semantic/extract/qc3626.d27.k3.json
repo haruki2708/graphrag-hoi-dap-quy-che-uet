@@ -1,0 +1,935 @@
+{
+ "format": 1,
+ "unit": "qc3626.d27.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học phần nâng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\", \"qc3626.d27.k3.b\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k2\", \"ten\": \"học phần bổ sung\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\", \"qc3626.d27.k3.b\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k3\", \"ten\": \"điểm học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\", \"qc3626.d27.k3.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"k4\", \"ten\": \"điểm trung bình chung các học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.b\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o2\", \"ten\": \"chương trình đào tạo chuẩn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3\"], \"loai\": \"chuong_trinh\"}, {\"id\": \"o3\", \"ten\": \"chính quy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3\"], \"loai\": \"hinh_thuc\"}, {\"id\": \"o4\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"loai\": \"nguoi\"}, {\"id\": \"o5\", \"ten\": \"chương trình đào tạo tài năng, chất lượng cao\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3\"], \"loai\": \"chuong_trinh\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"chuyển sinh viên sang chương trình đào tạo chuẩn chính quy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3\", \"qc3626.d27.k3.a\"], \"mo_ta\": \"chuyển sinh viên đang học chương trình đào tạo tài năng, chất lượng cao sang học chương trình đào tạo chuẩn chính quy của ngành học tương ứng\"}, {\"id\": \"h2\", \"ten\": \"chuyển đổi học phần nâng cao, bổ sung\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.b\"], \"mo_ta\": \"chuyển đổi các học phần nâng cao, bổ sung khi sinh viên chuyển sang chương trình đào tạo chuẩn chính quy\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"vi phạm một trong các trường hợp phải chuyển chương trình\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên vi phạm một trong ba trường hợp liệt kê (học phần nâng cao, bổ sung đạt F; điểm trung bình chung dưới 2,5; bị kỷ luật từ khiển trách trở lên)\"}, {\"id\": \"g2\", \"ten\": \"chưa bị buộc thôi học và vi phạm một trong các trường hợp phải chuyển\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên chưa bị buộc thôi học và thuộc một trong các trường hợp vi phạm; cụm 'chưa bị buộc thôi học' đứng cùng nhóm vi phạm theo nghĩa phải đủ cả hai\"}], \"DieuKien\": [{\"id\": \"c_cbt\", \"ten\": \"chưa bị buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"mo_ta\": \"Chưa bị buộc thôi học\", \"toan_tu\": \"la\", \"phu_dinh\": true}, {\"id\": \"c1\", \"ten\": \"có học phần nâng cao, bổ sung đạt điểm F\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"mo_ta\": \"Có một học phần nâng cao, bổ sung đạt điểm F\", \"min\": 1, \"min_incl\": true, \"max\": 1, \"max_incl\": true, \"thang\": \"diem_chu\"}, {\"id\": \"c2\", \"ten\": \"điểm trung bình chung các học phần dưới 2,5\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"mo_ta\": \"Điểm trung bình chung các học phần tính đến thời điểm xét đạt dưới 2,5\", \"max\": 2.5, \"max_incl\": false, \"thang\": \"thang_4\", \"moc\": \"tính đến thời điểm xét\"}, {\"id\": \"c3\", \"ten\": \"bị kỷ luật trong thời gian học từ mức khiển trách trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"mo_ta\": \"Bị kỷ luật trong thời gian học từ mức khiển trách trở lên\", \"toan_tu\": \"la\", \"moc\": \"trong thời gian học\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"phải chuyển sang chương trình đào tạo chuẩn chính quy của ngành học tương ứng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Sinh viên phải chuyển sang học chương trình đào tạo chuẩn chính quy của ngành học tương ứng\"}, {\"id\": \"q2\", \"ten\": \"điểm học phần nâng cao được giữ nguyên khi chuyển\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.b\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Điểm học phần nâng cao được giữ nguyên, số tín chỉ được quy đổi theo chương trình đào tạo chuẩn\"}, {\"id\": \"q3\", \"ten\": \"học phần bổ sung được thay thế hoặc xác nhận là học phần tự chọn tự do\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.b\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Học phần bổ sung có thể được thay thế bằng học phần khác trong chương trình đào tạo chuẩn hoặc được xác nhận là học phần tự chọn tự do\"}, {\"id\": \"q4\", \"ten\": \"bị kỷ luật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"loai\": \"trang_thai\"}, {\"id\": \"q5\", \"ten\": \"bị buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k3.a\"], \"loai\": \"trang_thai\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g2\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o2\", \"nguon\": \"qc3626.d27.k3\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"h1\", \"to\": \"o3\", \"nguon\": \"qc3626.d27.k3\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c_cbt\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"g1\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"XET\", \"from\": \"c_cbt\", \"to\": \"q5\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k3\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k4\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"q4\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q1\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g2\", \"to\": \"o5\", \"nguon\": \"qc3626.d27.k3\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o4\", \"nguon\": \"qc3626.d27.k3.a\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"h2\", \"to\": \"o1\", \"nguon\": \"qc3626.d27.k3.b\", \"noi_dung\": \"xem xét cho phép thay thế học phần bổ sung bằng học phần khác trong chương trình đào tạo chuẩn hoặc xác nhận là học phần tự chọn tự do\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o4\", \"nguon\": \"qc3626.d27.k3.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o4\", \"nguon\": \"qc3626.d27.k3.b\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học phần nâng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a",
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k2",
+     "ten": "học phần bổ sung",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a",
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a",
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k4",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o2",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3"
+     ],
+     "loai": "chuong_trinh"
+    },
+    {
+     "id": "o3",
+     "ten": "chính quy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3"
+     ],
+     "loai": "hinh_thuc"
+    },
+    {
+     "id": "o4",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "nguoi"
+    },
+    {
+     "id": "o5",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3"
+     ],
+     "loai": "chuong_trinh"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "chuyển sinh viên sang chương trình đào tạo chuẩn chính quy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3",
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "chuyển sinh viên đang học chương trình đào tạo tài năng, chất lượng cao sang học chương trình đào tạo chuẩn chính quy của ngành học tương ứng"
+    },
+    {
+     "id": "h2",
+     "ten": "chuyển đổi học phần nâng cao, bổ sung",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "mo_ta": "chuyển đổi các học phần nâng cao, bổ sung khi sinh viên chuyển sang chương trình đào tạo chuẩn chính quy"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "vi phạm một trong các trường hợp phải chuyển chương trình",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên vi phạm một trong ba trường hợp liệt kê (học phần nâng cao, bổ sung đạt F; điểm trung bình chung dưới 2,5; bị kỷ luật từ khiển trách trở lên)"
+    },
+    {
+     "id": "g2",
+     "ten": "chưa bị buộc thôi học và vi phạm một trong các trường hợp phải chuyển",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chưa bị buộc thôi học và thuộc một trong các trường hợp vi phạm; cụm 'chưa bị buộc thôi học' đứng cùng nhóm vi phạm theo nghĩa phải đủ cả hai"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c_cbt",
+     "ten": "chưa bị buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Chưa bị buộc thôi học",
+     "toan_tu": "la",
+     "phu_dinh": true
+    },
+    {
+     "id": "c1",
+     "ten": "có học phần nâng cao, bổ sung đạt điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Có một học phần nâng cao, bổ sung đạt điểm F",
+     "min": 1,
+     "min_incl": true,
+     "max": 1,
+     "max_incl": true,
+     "thang": "diem_chu"
+    },
+    {
+     "id": "c2",
+     "ten": "điểm trung bình chung các học phần dưới 2,5",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Điểm trung bình chung các học phần tính đến thời điểm xét đạt dưới 2,5",
+     "max": 2.5,
+     "max_incl": false,
+     "thang": "thang_4",
+     "moc": "tính đến thời điểm xét"
+    },
+    {
+     "id": "c3",
+     "ten": "bị kỷ luật trong thời gian học từ mức khiển trách trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Bị kỷ luật trong thời gian học từ mức khiển trách trở lên",
+     "toan_tu": "la",
+     "moc": "trong thời gian học"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "phải chuyển sang chương trình đào tạo chuẩn chính quy của ngành học tương ứng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên phải chuyển sang học chương trình đào tạo chuẩn chính quy của ngành học tương ứng"
+    },
+    {
+     "id": "q2",
+     "ten": "điểm học phần nâng cao được giữ nguyên khi chuyển",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Điểm học phần nâng cao được giữ nguyên, số tín chỉ được quy đổi theo chương trình đào tạo chuẩn"
+    },
+    {
+     "id": "q3",
+     "ten": "học phần bổ sung được thay thế hoặc xác nhận là học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Học phần bổ sung có thể được thay thế bằng học phần khác trong chương trình đào tạo chuẩn hoặc được xác nhận là học phần tự chọn tự do"
+    },
+    {
+     "id": "q4",
+     "ten": "bị kỷ luật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q5",
+     "ten": "bị buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "trang_thai"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g2",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o2",
+     "nguon": "qc3626.d27.k3"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "h1",
+     "to": "o3",
+     "nguon": "qc3626.d27.k3"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c_cbt",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "g1",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "XET",
+     "from": "c_cbt",
+     "to": "q5",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k3",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k4",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "q4",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q1",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g2",
+     "to": "o5",
+     "nguon": "qc3626.d27.k3"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o4",
+     "nguon": "qc3626.d27.k3.a"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h2",
+     "to": "o1",
+     "nguon": "qc3626.d27.k3.b",
+     "noi_dung": "xem xét cho phép thay thế học phần bổ sung bằng học phần khác trong chương trình đào tạo chuẩn hoặc xác nhận là học phần tự chọn tự do"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o4",
+     "nguon": "qc3626.d27.k3.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o4",
+     "nguon": "qc3626.d27.k3.b"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d27.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_phan_nang_cao",
+    "k2": "sem.KhaiNiem.hoc_phan_bo_sung",
+    "k3": "sem.KhaiNiem.diem_hoc_phan",
+    "k4": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "o1": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o2": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "o3": "sem.DoiTuong.chinh_quy",
+    "o4": "sem.DoiTuong.sinh_vien",
+    "o5": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "h1": "sem.HoatDong.chuyen_sinh_vien_sang_chuong_trinh_dao_tao_chuan_chinh_quy",
+    "h2": "sem.HoatDong.chuyen_doi_hoc_phan_nang_cao_bo_sung",
+    "g1": "sem.NhomDieuKien.qc3626.d27.k3.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+    "c_cbt": "sem.DieuKien.qc3626.d27.k3.c_cbt",
+    "c1": "sem.DieuKien.qc3626.d27.k3.c1",
+    "c2": "sem.DieuKien.qc3626.d27.k3.c2",
+    "c3": "sem.DieuKien.qc3626.d27.k3.c3",
+    "q1": "sem.HeQua.phai_chuyen_sang_chuong_trinh_dao_tao_chuan_chinh_quy_cua_nganh_hoc_tuong_ung",
+    "q2": "sem.HeQua.diem_hoc_phan_nang_cao_duoc_giu_nguyen_khi_chuyen",
+    "q3": "sem.HeQua.hoc_phan_bo_sung_duoc_thay_the_hoac_xac_nhan_la_hoc_phan_tu_chon_tu_do",
+    "q4": "sem.HeQua.bi_ky_luat",
+    "q5": "sem.HeQua.bi_buoc_thoi_hoc"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_phan_nang_cao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_nang_cao",
+     "ten": "học phần nâng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a",
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_bo_sung",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_bo_sung",
+     "ten": "học phần bổ sung",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a",
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a",
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+     "ten": "chương trình đào tạo chuẩn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chinh_quy",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chinh_quy",
+     "ten": "chính quy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3"
+     ],
+     "loai": "hinh_thuc"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+     "ten": "chương trình đào tạo tài năng, chất lượng cao",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3"
+     ],
+     "loai": "chuong_trinh"
+    }
+   },
+   {
+    "id": "sem.HoatDong.chuyen_sinh_vien_sang_chuong_trinh_dao_tao_chuan_chinh_quy",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.chuyen_sinh_vien_sang_chuong_trinh_dao_tao_chuan_chinh_quy",
+     "ten": "chuyển sinh viên sang chương trình đào tạo chuẩn chính quy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3",
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "chuyển sinh viên đang học chương trình đào tạo tài năng, chất lượng cao sang học chương trình đào tạo chuẩn chính quy của ngành học tương ứng"
+    }
+   },
+   {
+    "id": "sem.HoatDong.chuyen_doi_hoc_phan_nang_cao_bo_sung",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.chuyen_doi_hoc_phan_nang_cao_bo_sung",
+     "ten": "chuyển đổi học phần nâng cao, bổ sung",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "mo_ta": "chuyển đổi các học phần nâng cao, bổ sung khi sinh viên chuyển sang chương trình đào tạo chuẩn chính quy"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d27.k3.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d27.k3.g1",
+     "ten": "vi phạm một trong các trường hợp phải chuyển chương trình",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên vi phạm một trong ba trường hợp liệt kê (học phần nâng cao, bổ sung đạt F; điểm trung bình chung dưới 2,5; bị kỷ luật từ khiển trách trở lên)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+     "ten": "chưa bị buộc thôi học và vi phạm một trong các trường hợp phải chuyển",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chưa bị buộc thôi học và thuộc một trong các trường hợp vi phạm; cụm 'chưa bị buộc thôi học' đứng cùng nhóm vi phạm theo nghĩa phải đủ cả hai"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d27.k3.c_cbt",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d27.k3.c_cbt",
+     "ten": "chưa bị buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Chưa bị buộc thôi học",
+     "toan_tu": "la",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d27.k3.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d27.k3.c1",
+     "ten": "có học phần nâng cao, bổ sung đạt điểm F",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Có một học phần nâng cao, bổ sung đạt điểm F",
+     "min": 1,
+     "min_incl": true,
+     "max": 1,
+     "max_incl": true,
+     "thang": "diem_chu"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d27.k3.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d27.k3.c2",
+     "ten": "điểm trung bình chung các học phần dưới 2,5",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Điểm trung bình chung các học phần tính đến thời điểm xét đạt dưới 2,5",
+     "max": 2.5,
+     "max_incl": false,
+     "thang": "thang_4",
+     "moc": "tính đến thời điểm xét"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d27.k3.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d27.k3.c3",
+     "ten": "bị kỷ luật trong thời gian học từ mức khiển trách trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "mo_ta": "Bị kỷ luật trong thời gian học từ mức khiển trách trở lên",
+     "toan_tu": "la",
+     "moc": "trong thời gian học"
+    }
+   },
+   {
+    "id": "sem.HeQua.phai_chuyen_sang_chuong_trinh_dao_tao_chuan_chinh_quy_cua_nganh_hoc_tuong_ung",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.phai_chuyen_sang_chuong_trinh_dao_tao_chuan_chinh_quy_cua_nganh_hoc_tuong_ung",
+     "ten": "phải chuyển sang chương trình đào tạo chuẩn chính quy của ngành học tương ứng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sinh viên phải chuyển sang học chương trình đào tạo chuẩn chính quy của ngành học tương ứng"
+    }
+   },
+   {
+    "id": "sem.HeQua.diem_hoc_phan_nang_cao_duoc_giu_nguyen_khi_chuyen",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.diem_hoc_phan_nang_cao_duoc_giu_nguyen_khi_chuyen",
+     "ten": "điểm học phần nâng cao được giữ nguyên khi chuyển",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Điểm học phần nâng cao được giữ nguyên, số tín chỉ được quy đổi theo chương trình đào tạo chuẩn"
+    }
+   },
+   {
+    "id": "sem.HeQua.hoc_phan_bo_sung_duoc_thay_the_hoac_xac_nhan_la_hoc_phan_tu_chon_tu_do",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.hoc_phan_bo_sung_duoc_thay_the_hoac_xac_nhan_la_hoc_phan_tu_chon_tu_do",
+     "ten": "học phần bổ sung được thay thế hoặc xác nhận là học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Học phần bổ sung có thể được thay thế bằng học phần khác trong chương trình đào tạo chuẩn hoặc được xác nhận là học phần tự chọn tự do"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_ky_luat",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_ky_luat",
+     "ten": "bị kỷ luật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_buoc_thoi_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_buoc_thoi_hoc",
+     "ten": "bị buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k3.a"
+     ],
+     "loai": "trang_thai"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.chuyen_sinh_vien_sang_chuong_trinh_dao_tao_chuan_chinh_quy",
+    "to": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.chuyen_sinh_vien_sang_chuong_trinh_dao_tao_chuan_chinh_quy",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_chuan",
+    "props": {
+     "nguon": "qc3626.d27.k3"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HoatDong.chuyen_sinh_vien_sang_chuong_trinh_dao_tao_chuan_chinh_quy",
+    "to": "sem.DoiTuong.chinh_quy",
+    "props": {
+     "nguon": "qc3626.d27.k3"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+    "to": "sem.DieuKien.qc3626.d27.k3.c_cbt",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+    "to": "sem.NhomDieuKien.qc3626.d27.k3.g1",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d27.k3.g1",
+    "to": "sem.DieuKien.qc3626.d27.k3.c1",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d27.k3.g1",
+    "to": "sem.DieuKien.qc3626.d27.k3.c2",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d27.k3.g1",
+    "to": "sem.DieuKien.qc3626.d27.k3.c3",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d27.k3.c_cbt",
+    "to": "sem.HeQua.bi_buoc_thoi_hoc",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d27.k3.c1",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d27.k3.c2",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d27.k3.c3",
+    "to": "sem.HeQua.bi_ky_luat",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+    "to": "sem.HeQua.phai_chuyen_sang_chuong_trinh_dao_tao_chuan_chinh_quy_cua_nganh_hoc_tuong_ung",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d27.k3.g2",
+    "to": "sem.DoiTuong.chuong_trinh_dao_tao_tai_nang_chat_luong_cao",
+    "props": {
+     "nguon": "qc3626.d27.k3"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.phai_chuyen_sang_chuong_trinh_dao_tao_chuan_chinh_quy_cua_nganh_hoc_tuong_ung",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d27.k3.a"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.chuyen_doi_hoc_phan_nang_cao_bo_sung",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d27.k3.b",
+     "noi_dung": "xem xét cho phép thay thế học phần bổ sung bằng học phần khác trong chương trình đào tạo chuẩn hoặc xác nhận là học phần tự chọn tự do"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.diem_hoc_phan_nang_cao_duoc_giu_nguyen_khi_chuyen",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d27.k3.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.hoc_phan_bo_sung_duoc_thay_the_hoac_xac_nhan_la_hoc_phan_tu_chon_tu_do",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d27.k3.b"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d27.k3",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "d557e2f44f64d065db0d5371f19c793b98a9d27190a2e8fe9fdffe6cd724ac2e",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16246,
+  "output_tokens": 9113,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtsgcshs3KmLwLMiCA4G'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:44:05+07:00",
+  "latency_s": 32.981,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

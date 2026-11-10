@@ -1,0 +1,258 @@
+{
+ "format": 1,
+ "unit": "qc3626.d32.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[1] XET 'c1'->'k1': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"giải thưởng nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k3\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k3\"], \"loai\": \"nguoi\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"sinh viên đạt nhiều giải thưởng nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k3\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp; nhóm chỉ có một điều kiện nên ghi AND\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k3\"], \"mo_ta\": \"Đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"cộng điểm thưởng một lần ở mức giải cao nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k3\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Chỉ cộng điểm thưởng một lần ở mức giải cao nhất\"}], \"edges\": [{\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d32.k3\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d32.k3\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d32.k3\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d32.k3\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "giải thưởng nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "sinh viên đạt nhiều giải thưởng nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp; nhóm chỉ có một điều kiện nên ghi AND"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "mo_ta": "Đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "cộng điểm thưởng một lần ở mức giải cao nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Chỉ cộng điểm thưởng một lần ở mức giải cao nhất"
+    }
+   ],
+   "edges": [
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d32.k3"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d32.k3"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d32.k3"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d32.k3"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d32.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.giai_thuong_nghien_cuu_khoa_hoc",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "g1": "sem.NhomDieuKien.qc3626.d32.k3.g1",
+    "c1": "sem.DieuKien.qc3626.d32.k3.c1",
+    "q1": "sem.HeQua.cong_diem_thuong_mot_lan_o_muc_giai_cao_nhat"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.giai_thuong_nghien_cuu_khoa_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.giai_thuong_nghien_cuu_khoa_hoc",
+     "ten": "giải thưởng nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d32.k3.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d32.k3.g1",
+     "ten": "sinh viên đạt nhiều giải thưởng nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp; nhóm chỉ có một điều kiện nên ghi AND"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d32.k3.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d32.k3.c1",
+     "ten": "đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "mo_ta": "Đạt nhiều giải thưởng nghiên cứu khoa học ở các cấp",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.cong_diem_thuong_mot_lan_o_muc_giai_cao_nhat",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.cong_diem_thuong_mot_lan_o_muc_giai_cao_nhat",
+     "ten": "cộng điểm thưởng một lần ở mức giải cao nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d32.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Chỉ cộng điểm thưởng một lần ở mức giải cao nhất"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d32.k3.g1",
+    "to": "sem.DieuKien.qc3626.d32.k3.c1",
+    "props": {
+     "nguon": "qc3626.d32.k3"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d32.k3.c1",
+    "to": "sem.KhaiNiem.giai_thuong_nghien_cuu_khoa_hoc",
+    "props": {
+     "nguon": "qc3626.d32.k3"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d32.k3.g1",
+    "to": "sem.HeQua.cong_diem_thuong_mot_lan_o_muc_giai_cao_nhat",
+    "props": {
+     "nguon": "qc3626.d32.k3"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d32.k3.g1",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d32.k3"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d32.k3",
+  "role": "extract",
+  "run": 1,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "c20089cf17b4c81a3fe6e65cc6b435fcb383881f9b9859bd58bb38edffa5cd64",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15773,
+  "output_tokens": 2017,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtukWVZmGd5w5MdixY4M'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T15:11:12+07:00",
+  "latency_s": 8.897,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

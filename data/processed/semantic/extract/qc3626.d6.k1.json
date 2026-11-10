@@ -1,0 +1,114 @@
+{
+ "format": 1,
+ "unit": "qc3626.d6.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"Chương trình đào tạo đại học thể hiện mục tiêu, phạm vi và cấu trúc nội dung đào tạo đại học; quy định chuẩn đầu ra về kiến thức, kỹ năng, mức tự chủ và trách nhiệm, phương pháp và hình thức đào tạo, cách thức đánh giá kết quả học tập\"}, {\"id\": \"k2\", \"ten\": \"chuẩn đầu ra\", \"bi_danh\": [], \"nguon\": [\"qc3626.d6.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"Yêu cầu về kiến thức, kỹ năng, mức tự chủ và trách nhiệm mà người học đạt được khi hoàn thành chương trình đào tạo\"}], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": []}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Chương trình đào tạo đại học thể hiện mục tiêu, phạm vi và cấu trúc nội dung đào tạo đại học; quy định chuẩn đầu ra về kiến thức, kỹ năng, mức tự chủ và trách nhiệm, phương pháp và hình thức đào tạo, cách thức đánh giá kết quả học tập"
+    },
+    {
+     "id": "k2",
+     "ten": "chuẩn đầu ra",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d6.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Yêu cầu về kiến thức, kỹ năng, mức tự chủ và trách nhiệm mà người học đạt được khi hoàn thành chương trình đào tạo"
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": []
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d6.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.chuong_trinh_dao_tao",
+    "k2": "sem.KhaiNiem.chuan_dau_ra"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.chuong_trinh_dao_tao",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.chuong_trinh_dao_tao",
+     "ten": "chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Chương trình đào tạo đại học thể hiện mục tiêu, phạm vi và cấu trúc nội dung đào tạo đại học; quy định chuẩn đầu ra về kiến thức, kỹ năng, mức tự chủ và trách nhiệm, phương pháp và hình thức đào tạo, cách thức đánh giá kết quả học tập"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.chuan_dau_ra",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.chuan_dau_ra",
+     "ten": "chuẩn đầu ra",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d6.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Yêu cầu về kiến thức, kỹ năng, mức tự chủ và trách nhiệm mà người học đạt được khi hoàn thành chương trình đào tạo"
+    }
+   }
+  ],
+  "edges": []
+ },
+ "metadata": {
+  "unit": "qc3626.d6.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "dda46105cbf159d220d75d9b0072737f5345f29d28174618a340453c47b924e3",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15901,
+  "output_tokens": 911,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtrhcRLCzXzB6doSXG9J'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:31:11+07:00",
+  "latency_s": 6.048,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

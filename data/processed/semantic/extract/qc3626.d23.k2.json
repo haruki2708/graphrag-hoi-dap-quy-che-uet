@@ -1,0 +1,647 @@
+{
+ "format": 1,
+ "unit": "qc3626.d23.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"thời hạn rút bớt học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"rút bớt học phần đã đăng ký\", \"bi_danh\": [\"rút bớt học phần\"], \"nguon\": [\"qc3626.d23.k2\"], \"mo_ta\": \"sinh viên rút bớt học phần đã đăng ký trong phiếu đăng ký học\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"rút bớt trong thời hạn quy định\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Việc rút bớt được chấp nhận khi thực hiện trong 2 tuần đầu học kỳ chính hoặc 1 tuần đầu học kỳ phụ; hai thời hạn áp dụng cho hai loại học kỳ khác nhau nên suy luận là OR\"}, {\"id\": \"g2\", \"ten\": \"rút bớt ngoài thời hạn và sinh viên không học học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Ngoài thời hạn rút bớt và sinh viên không học học phần đã đăng ký thì học phần vẫn được giữ nguyên và sinh viên chịu hệ quả tương ứng\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"rút bớt trong 2 tuần kể từ đầu học kỳ chính\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"mo_ta\": \"Rút bớt học phần trong 2 tuần kể từ đầu học kỳ chính\", \"max\": 2, \"max_incl\": true, \"don_vi\": \"tuần\", \"moc\": \"kể từ đầu học kỳ chính\"}, {\"id\": \"c2\", \"ten\": \"rút bớt trong 1 tuần kể từ đầu học kỳ phụ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"mo_ta\": \"Rút bớt học phần trong 1 tuần kể từ đầu học kỳ phụ\", \"max\": 1, \"max_incl\": true, \"don_vi\": \"tuần\", \"moc\": \"kể từ đầu học kỳ phụ\"}, {\"id\": \"c3\", \"ten\": \"rút bớt ngoài thời hạn quy định\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"mo_ta\": \"Rút bớt học phần ngoài thời hạn quy định\", \"toan_tu\": \"la\"}, {\"id\": \"c4\", \"ten\": \"sinh viên không học học phần đã đăng ký\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"mo_ta\": \"Sinh viên không học học phần đã đăng ký\", \"toan_tu\": \"co\", \"phu_dinh\": true}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được trả lại học phí\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Học phí của học phần rút bớt được trả lại\"}, {\"id\": \"q2\", \"ten\": \"học phần được giữ nguyên trong phiếu đăng ký học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"loai\": \"trang_thai\"}, {\"id\": \"q3\", \"ten\": \"nhận điểm F đối với học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"loai\": \"trang_thai\"}, {\"id\": \"q4\", \"ten\": \"không được trả lại học phí\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k2\"], \"loai\": \"che_tai\", \"mo_ta\": \"Không được trả lại học phí của học phần đã đăng ký\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q2\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q3\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q4\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o1\", \"nguon\": \"qc3626.d23.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o1\", \"nguon\": \"qc3626.d23.k2\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "thời hạn rút bớt học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "rút bớt học phần đã đăng ký",
+     "bi_danh": [
+      "rút bớt học phần"
+     ],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "sinh viên rút bớt học phần đã đăng ký trong phiếu đăng ký học"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "rút bớt trong thời hạn quy định",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Việc rút bớt được chấp nhận khi thực hiện trong 2 tuần đầu học kỳ chính hoặc 1 tuần đầu học kỳ phụ; hai thời hạn áp dụng cho hai loại học kỳ khác nhau nên suy luận là OR"
+    },
+    {
+     "id": "g2",
+     "ten": "rút bớt ngoài thời hạn và sinh viên không học học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Ngoài thời hạn rút bớt và sinh viên không học học phần đã đăng ký thì học phần vẫn được giữ nguyên và sinh viên chịu hệ quả tương ứng"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "rút bớt trong 2 tuần kể từ đầu học kỳ chính",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Rút bớt học phần trong 2 tuần kể từ đầu học kỳ chính",
+     "max": 2,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "moc": "kể từ đầu học kỳ chính"
+    },
+    {
+     "id": "c2",
+     "ten": "rút bớt trong 1 tuần kể từ đầu học kỳ phụ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Rút bớt học phần trong 1 tuần kể từ đầu học kỳ phụ",
+     "max": 1,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "moc": "kể từ đầu học kỳ phụ"
+    },
+    {
+     "id": "c3",
+     "ten": "rút bớt ngoài thời hạn quy định",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Rút bớt học phần ngoài thời hạn quy định",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c4",
+     "ten": "sinh viên không học học phần đã đăng ký",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Sinh viên không học học phần đã đăng ký",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được trả lại học phí",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Học phí của học phần rút bớt được trả lại"
+    },
+    {
+     "id": "q2",
+     "ten": "học phần được giữ nguyên trong phiếu đăng ký học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q3",
+     "ten": "nhận điểm F đối với học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q4",
+     "ten": "không được trả lại học phí",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "che_tai",
+     "mo_ta": "Không được trả lại học phí của học phần đã đăng ký"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q2",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q3",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q4",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o1",
+     "nguon": "qc3626.d23.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o1",
+     "nguon": "qc3626.d23.k2"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d23.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.thoi_han_rut_bot_hoc_phan",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+    "g1": "sem.NhomDieuKien.qc3626.d23.k2.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+    "c1": "sem.DieuKien.qc3626.d23.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d23.k2.c2",
+    "c3": "sem.DieuKien.qc3626.d23.k2.c3",
+    "c4": "sem.DieuKien.qc3626.d23.k2.c4",
+    "q1": "sem.HeQua.duoc_tra_lai_hoc_phi",
+    "q2": "sem.HeQua.hoc_phan_duoc_giu_nguyen_trong_phieu_dang_ky_hoc",
+    "q3": "sem.HeQua.nhan_diem_f_doi_voi_hoc_phan",
+    "q4": "sem.HeQua.khong_duoc_tra_lai_hoc_phi"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.thoi_han_rut_bot_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.thoi_han_rut_bot_hoc_phan",
+     "ten": "thời hạn rút bớt học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+     "ten": "rút bớt học phần đã đăng ký",
+     "bi_danh": [
+      "rút bớt học phần"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "sinh viên rút bớt học phần đã đăng ký trong phiếu đăng ký học"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d23.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d23.k2.g1",
+     "ten": "rút bớt trong thời hạn quy định",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Việc rút bớt được chấp nhận khi thực hiện trong 2 tuần đầu học kỳ chính hoặc 1 tuần đầu học kỳ phụ; hai thời hạn áp dụng cho hai loại học kỳ khác nhau nên suy luận là OR"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+     "ten": "rút bớt ngoài thời hạn và sinh viên không học học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Ngoài thời hạn rút bớt và sinh viên không học học phần đã đăng ký thì học phần vẫn được giữ nguyên và sinh viên chịu hệ quả tương ứng"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k2.c1",
+     "ten": "rút bớt trong 2 tuần kể từ đầu học kỳ chính",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Rút bớt học phần trong 2 tuần kể từ đầu học kỳ chính",
+     "max": 2,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "moc": "kể từ đầu học kỳ chính"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k2.c2",
+     "ten": "rút bớt trong 1 tuần kể từ đầu học kỳ phụ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Rút bớt học phần trong 1 tuần kể từ đầu học kỳ phụ",
+     "max": 1,
+     "max_incl": true,
+     "don_vi": "tuần",
+     "moc": "kể từ đầu học kỳ phụ"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k2.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k2.c3",
+     "ten": "rút bớt ngoài thời hạn quy định",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Rút bớt học phần ngoài thời hạn quy định",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k2.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k2.c4",
+     "ten": "sinh viên không học học phần đã đăng ký",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "mo_ta": "Sinh viên không học học phần đã đăng ký",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tra_lai_hoc_phi",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tra_lai_hoc_phi",
+     "ten": "được trả lại học phí",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Học phí của học phần rút bớt được trả lại"
+    }
+   },
+   {
+    "id": "sem.HeQua.hoc_phan_duoc_giu_nguyen_trong_phieu_dang_ky_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.hoc_phan_duoc_giu_nguyen_trong_phieu_dang_ky_hoc",
+     "ten": "học phần được giữ nguyên trong phiếu đăng ký học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.nhan_diem_f_doi_voi_hoc_phan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.nhan_diem_f_doi_voi_hoc_phan",
+     "ten": "nhận điểm F đối với học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.khong_duoc_tra_lai_hoc_phi",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.khong_duoc_tra_lai_hoc_phi",
+     "ten": "không được trả lại học phí",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k2"
+     ],
+     "loai": "che_tai",
+     "mo_ta": "Không được trả lại học phí của học phần đã đăng ký"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+    "to": "sem.NhomDieuKien.qc3626.d23.k2.g1",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g1",
+    "to": "sem.DieuKien.qc3626.d23.k2.c1",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g1",
+    "to": "sem.DieuKien.qc3626.d23.k2.c2",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d23.k2.c1",
+    "to": "sem.KhaiNiem.thoi_han_rut_bot_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d23.k2.c2",
+    "to": "sem.KhaiNiem.thoi_han_rut_bot_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d23.k2.c3",
+    "to": "sem.KhaiNiem.thoi_han_rut_bot_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g1",
+    "to": "sem.HeQua.duoc_tra_lai_hoc_phi",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_tra_lai_hoc_phi",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+    "to": "sem.DieuKien.qc3626.d23.k2.c3",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+    "to": "sem.DieuKien.qc3626.d23.k2.c4",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+    "to": "sem.HeQua.hoc_phan_duoc_giu_nguyen_trong_phieu_dang_ky_hoc",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+    "to": "sem.HeQua.nhan_diem_f_doi_voi_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d23.k2.g2",
+    "to": "sem.HeQua.khong_duoc_tra_lai_hoc_phi",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.nhan_diem_f_doi_voi_hoc_phan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.khong_duoc_tra_lai_hoc_phi",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d23.k2"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d23.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "c54303aa799dada7d85d0f646c9ce1867fcb5b7d33535a85fdcafb8488d6b668",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15841,
+  "output_tokens": 5420,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsT7bxp9ju4FNgJg93J'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:41:02+07:00",
+  "latency_s": 22.031,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

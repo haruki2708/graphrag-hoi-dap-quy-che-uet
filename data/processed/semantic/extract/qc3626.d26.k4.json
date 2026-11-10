@@ -1,0 +1,340 @@
+{
+ "format": 1,
+ "unit": "qc3626.d26.k4",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k4\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"học cùng lúc hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k4\"], \"mo_ta\": \"sinh viên học cùng lúc hai chương trình đào tạo, tích lũy các học phần chung, tương đương và các học phần còn lại của cả hai chương trình\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"tích lũy đủ học phần và số tín chỉ của cả hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k4\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên phải tích lũy đủ các học phần còn lại và đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo (điều kiện đồng thời)\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"tích lũy đủ các học phần còn lại của hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k4\"], \"mo_ta\": \"Tích lũy đủ các học phần còn lại của hai chương trình đào tạo\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"tích lũy đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k4\"], \"mo_ta\": \"Tích lũy đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được cấp hai bằng khi tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k4\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Khi tốt nghiệp, sinh viên được cấp hai bằng\"}, {\"id\": \"q2\", \"ten\": \"chỉ cần tích lũy một lần các học phần chung, tương đương\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k4\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Trong quá trình học cùng lúc hai chương trình, chỉ cần tích lũy một lần các học phần chung và tương đương\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d26.k4\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d26.k4\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d26.k4\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d26.k4\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d26.k4\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d26.k4\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "mo_ta": "sinh viên học cùng lúc hai chương trình đào tạo, tích lũy các học phần chung, tương đương và các học phần còn lại của cả hai chương trình"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "tích lũy đủ học phần và số tín chỉ của cả hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải tích lũy đủ các học phần còn lại và đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo (điều kiện đồng thời)"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "tích lũy đủ các học phần còn lại của hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "mo_ta": "Tích lũy đủ các học phần còn lại của hai chương trình đào tạo",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "tích lũy đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "mo_ta": "Tích lũy đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được cấp hai bằng khi tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Khi tốt nghiệp, sinh viên được cấp hai bằng"
+    },
+    {
+     "id": "q2",
+     "ten": "chỉ cần tích lũy một lần các học phần chung, tương đương",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Trong quá trình học cùng lúc hai chương trình, chỉ cần tích lũy một lần các học phần chung và tương đương"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d26.k4"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d26.k4"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d26.k4"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d26.k4"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d26.k4"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d26.k4"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d26.k4",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "g1": "sem.NhomDieuKien.qc3626.d26.k4.g1",
+    "c1": "sem.DieuKien.qc3626.d26.k4.c1",
+    "c2": "sem.DieuKien.qc3626.d26.k4.c2",
+    "q1": "sem.HeQua.duoc_cap_hai_bang_khi_tot_nghiep",
+    "q2": "sem.HeQua.chi_can_tich_luy_mot_lan_cac_hoc_phan_chung_tuong_duong"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.hoc_cung_luc_hai_chuong_trinh_dao_tao",
+     "ten": "học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "mo_ta": "sinh viên học cùng lúc hai chương trình đào tạo, tích lũy các học phần chung, tương đương và các học phần còn lại của cả hai chương trình"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k4.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k4.g1",
+     "ten": "tích lũy đủ học phần và số tín chỉ của cả hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên phải tích lũy đủ các học phần còn lại và đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo (điều kiện đồng thời)"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k4.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k4.c1",
+     "ten": "tích lũy đủ các học phần còn lại của hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "mo_ta": "Tích lũy đủ các học phần còn lại của hai chương trình đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k4.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k4.c2",
+     "ten": "tích lũy đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "mo_ta": "Tích lũy đủ số tín chỉ theo yêu cầu của cả hai chương trình đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_cap_hai_bang_khi_tot_nghiep",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_cap_hai_bang_khi_tot_nghiep",
+     "ten": "được cấp hai bằng khi tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Khi tốt nghiệp, sinh viên được cấp hai bằng"
+    }
+   },
+   {
+    "id": "sem.HeQua.chi_can_tich_luy_mot_lan_cac_hoc_phan_chung_tuong_duong",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.chi_can_tich_luy_mot_lan_cac_hoc_phan_chung_tuong_duong",
+     "ten": "chỉ cần tích lũy một lần các học phần chung, tương đương",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k4"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Trong quá trình học cùng lúc hai chương trình, chỉ cần tích lũy một lần các học phần chung và tương đương"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "to": "sem.NhomDieuKien.qc3626.d26.k4.g1",
+    "props": {
+     "nguon": "qc3626.d26.k4"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k4.g1",
+    "to": "sem.DieuKien.qc3626.d26.k4.c1",
+    "props": {
+     "nguon": "qc3626.d26.k4"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k4.g1",
+    "to": "sem.DieuKien.qc3626.d26.k4.c2",
+    "props": {
+     "nguon": "qc3626.d26.k4"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d26.k4.g1",
+    "to": "sem.HeQua.duoc_cap_hai_bang_khi_tot_nghiep",
+    "props": {
+     "nguon": "qc3626.d26.k4"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_cap_hai_bang_khi_tot_nghiep",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d26.k4"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.chi_can_tich_luy_mot_lan_cac_hoc_phan_chung_tuong_duong",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d26.k4"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d26.k4",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "a80b85ae37e3ee3aa677e956a36afbe03917a2b56afea84bcc5b826f9502d0d3",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15845,
+  "output_tokens": 2419,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgfdfMASmqmU1fxSwe4Ri'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:52:31+07:00",
+  "latency_s": 10.127,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

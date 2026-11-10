@@ -1,0 +1,1145 @@
+{
+ "format": 1,
+ "unit": "qc3626.d24.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.b\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"tạm hoãn học giáo dục quốc phòng - an ninh\", \"bi_danh\": [\"tạm hoãn học\"], \"nguon\": [\"qc3626.d24.k1.d\"], \"mo_ta\": \"Thủ trưởng đơn vị đào tạo chấp thuận cho sinh viên thuộc các đối tượng tạm hoãn học học phần giáo dục quốc phòng - an ninh\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"đối tượng được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.a\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên thuộc một trong các trường hợp được miễn học toàn bộ học phần (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)\"}, {\"id\": \"g2\", \"ten\": \"miễn học, miễn thi học phần, nội dung nhờ giấy xác nhận kết quả đạt từ 5,0 điểm\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên có giấy xác nhận kết quả học tập và điểm đạt từ 5,0 trở lên theo thang điểm 10 thì được miễn học, miễn thi học phần, nội dung đó\"}, {\"id\": \"g3\", \"ten\": \"đối tượng được miễn học các nội dung thực hành kỹ năng quân sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.c\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên thuộc một trong các trường hợp được miễn học các nội dung thực hành kỹ năng quân sự (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)\"}, {\"id\": \"g4\", \"ten\": \"đối tượng được tạm hoãn học giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên thuộc một trong các trường hợp thuộc đối tượng tạm hoãn học (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)\"}, {\"id\": \"g5\", \"ten\": \"điều kiện tạm hoãn học giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên thuộc đối tượng tạm hoãn học và được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học (suy luận từ câu 'nếu được ... chấp thuận cho tạm hoãn học')\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"có bằng tốt nghiệp học viện, trường sĩ quan quân đội, công an\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.a\"], \"mo_ta\": \"Sinh viên có bằng tốt nghiệp học viện, trường sĩ quan quân đội, công an\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"đã có chứng chỉ giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.a\"], \"mo_ta\": \"Sinh viên đã có chứng chỉ giáo dục quốc phòng - an ninh\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"là người nước ngoài\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.a\"], \"mo_ta\": \"Sinh viên là người nước ngoài\", \"toan_tu\": \"la\"}, {\"id\": \"c4\", \"ten\": \"có giấy xác nhận kết quả học tập các học phần, nội dung\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.b\"], \"mo_ta\": \"Sinh viên có giấy xác nhận kết quả học tập các học phần, nội dung đó\", \"toan_tu\": \"co\"}, {\"id\": \"c5\", \"ten\": \"điểm học phần đạt từ 5,0 điểm trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.b\"], \"mo_ta\": \"Kết quả học phần, nội dung đạt từ 5,0 điểm trở lên theo thang điểm 10\", \"min\": 5.0, \"min_incl\": true, \"thang\": \"thang_10\"}, {\"id\": \"c6\", \"ten\": \"là tu sỹ thuộc các tôn giáo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.c\"], \"mo_ta\": \"Sinh viên là tu sỹ thuộc các tôn giáo\", \"toan_tu\": \"la\"}, {\"id\": \"c7\", \"ten\": \"là người khuyết tật có giấy xác nhận khuyết tật\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.c\"], \"mo_ta\": \"Sinh viên là người khuyết tật, có giấy xác nhận khuyết tật theo quy định của pháp luật về người khuyết tật\", \"toan_tu\": \"la\"}, {\"id\": \"c8\", \"ten\": \"không đủ sức khỏe về thể lực hoặc mắc bệnh lý thuộc diện miễn nghĩa vụ quân sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.c\"], \"mo_ta\": \"Sinh viên không đủ sức khỏe về thể lực hoặc mắc những bệnh lý thuộc diện miễn làm nghĩa vụ quân sự theo quy định hiện hành\", \"toan_tu\": \"co\"}, {\"id\": \"c9\", \"ten\": \"đã hoàn thành nghĩa vụ quân sự, công an nhân dân\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.c\"], \"mo_ta\": \"Sinh viên đã hoàn thành nghĩa vụ quân sự, công an nhân dân\", \"toan_tu\": \"co\"}, {\"id\": \"c10\", \"ten\": \"nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"mo_ta\": \"Nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành\", \"toan_tu\": \"co\"}, {\"id\": \"c11\", \"ten\": \"dừng học dài hạn để điều trị vì lý do sức khỏe\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"mo_ta\": \"Sinh viên vì lý do sức khỏe phải dừng học trong thời gian dài để điều trị, có giấy xác nhận của bệnh viện nơi sinh viên điều trị\", \"toan_tu\": \"co\"}, {\"id\": \"c12\", \"ten\": \"bị thiên tai, hỏa hoạn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"mo_ta\": \"Sinh viên bị thiên tai, hỏa hoạn\", \"toan_tu\": \"co\"}, {\"id\": \"c13\", \"ten\": \"được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"mo_ta\": \"Các đối tượng tạm hoãn học được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.a\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh\"}, {\"id\": \"q2\", \"ten\": \"được miễn học, miễn thi học phần, nội dung trong chương trình giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.b\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Được miễn học, miễn thi học phần, nội dung trong chương trình giáo dục quốc phòng - an ninh\"}, {\"id\": \"q3\", \"ten\": \"được miễn học các nội dung thực hành kỹ năng quân sự\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.c\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Được miễn học các nội dung thực hành kỹ năng quân sự\"}, {\"id\": \"q4\", \"ten\": \"được tạm hoãn học giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Được tạm hoãn học học phần giáo dục quốc phòng - an ninh trong thời hạn được chấp thuận\"}, {\"id\": \"q5\", \"ten\": \"phải tiếp tục học những nội dung còn thiếu sau khi hết thời hạn tạm hoãn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k1.d\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Sau khi hết thời hạn tạm hoãn phải tiếp tục học những nội dung còn thiếu theo quy định\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g5\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g5\", \"to\": \"g4\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g5\", \"to\": \"c13\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c10\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c11\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c12\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"DAN_DEN\", \"from\": \"g5\", \"to\": \"q4\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d24.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d24.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d24.k1.a\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d24.k1.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d24.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c5\", \"nguon\": \"qc3626.d24.k1.b\"}, {\"type\": \"XET\", \"from\": \"c5\", \"to\": \"k1\", \"nguon\": \"qc3626.d24.k1.b\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q2\", \"nguon\": \"qc3626.d24.k1.b\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c6\", \"nguon\": \"qc3626.d24.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c7\", \"nguon\": \"qc3626.d24.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c8\", \"nguon\": \"qc3626.d24.k1.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c9\", \"nguon\": \"qc3626.d24.k1.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q3\", \"nguon\": \"qc3626.d24.k1.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d24.k1.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d24.k1.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o1\", \"nguon\": \"qc3626.d24.k1.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o1\", \"nguon\": \"qc3626.d24.k1.d\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q5\", \"to\": \"o1\", \"nguon\": \"qc3626.d24.k1.d\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [
+      "tạm hoãn học"
+     ],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Thủ trưởng đơn vị đào tạo chấp thuận cho sinh viên thuộc các đối tượng tạm hoãn học học phần giáo dục quốc phòng - an ninh"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "đối tượng được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp được miễn học toàn bộ học phần (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)"
+    },
+    {
+     "id": "g2",
+     "ten": "miễn học, miễn thi học phần, nội dung nhờ giấy xác nhận kết quả đạt từ 5,0 điểm",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên có giấy xác nhận kết quả học tập và điểm đạt từ 5,0 trở lên theo thang điểm 10 thì được miễn học, miễn thi học phần, nội dung đó"
+    },
+    {
+     "id": "g3",
+     "ten": "đối tượng được miễn học các nội dung thực hành kỹ năng quân sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp được miễn học các nội dung thực hành kỹ năng quân sự (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)"
+    },
+    {
+     "id": "g4",
+     "ten": "đối tượng được tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp thuộc đối tượng tạm hoãn học (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)"
+    },
+    {
+     "id": "g5",
+     "ten": "điều kiện tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên thuộc đối tượng tạm hoãn học và được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học (suy luận từ câu 'nếu được ... chấp thuận cho tạm hoãn học')"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "có bằng tốt nghiệp học viện, trường sĩ quan quân đội, công an",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "mo_ta": "Sinh viên có bằng tốt nghiệp học viện, trường sĩ quan quân đội, công an",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "đã có chứng chỉ giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "mo_ta": "Sinh viên đã có chứng chỉ giáo dục quốc phòng - an ninh",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "là người nước ngoài",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "mo_ta": "Sinh viên là người nước ngoài",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c4",
+     "ten": "có giấy xác nhận kết quả học tập các học phần, nội dung",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "mo_ta": "Sinh viên có giấy xác nhận kết quả học tập các học phần, nội dung đó",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c5",
+     "ten": "điểm học phần đạt từ 5,0 điểm trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "mo_ta": "Kết quả học phần, nội dung đạt từ 5,0 điểm trở lên theo thang điểm 10",
+     "min": 5.0,
+     "min_incl": true,
+     "thang": "thang_10"
+    },
+    {
+     "id": "c6",
+     "ten": "là tu sỹ thuộc các tôn giáo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên là tu sỹ thuộc các tôn giáo",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c7",
+     "ten": "là người khuyết tật có giấy xác nhận khuyết tật",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên là người khuyết tật, có giấy xác nhận khuyết tật theo quy định của pháp luật về người khuyết tật",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c8",
+     "ten": "không đủ sức khỏe về thể lực hoặc mắc bệnh lý thuộc diện miễn nghĩa vụ quân sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên không đủ sức khỏe về thể lực hoặc mắc những bệnh lý thuộc diện miễn làm nghĩa vụ quân sự theo quy định hiện hành",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c9",
+     "ten": "đã hoàn thành nghĩa vụ quân sự, công an nhân dân",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên đã hoàn thành nghĩa vụ quân sự, công an nhân dân",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c10",
+     "ten": "nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c11",
+     "ten": "dừng học dài hạn để điều trị vì lý do sức khỏe",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Sinh viên vì lý do sức khỏe phải dừng học trong thời gian dài để điều trị, có giấy xác nhận của bệnh viện nơi sinh viên điều trị",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c12",
+     "ten": "bị thiên tai, hỏa hoạn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Sinh viên bị thiên tai, hỏa hoạn",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c13",
+     "ten": "được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Các đối tượng tạm hoãn học được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh"
+    },
+    {
+     "id": "q2",
+     "ten": "được miễn học, miễn thi học phần, nội dung trong chương trình giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được miễn học, miễn thi học phần, nội dung trong chương trình giáo dục quốc phòng - an ninh"
+    },
+    {
+     "id": "q3",
+     "ten": "được miễn học các nội dung thực hành kỹ năng quân sự",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được miễn học các nội dung thực hành kỹ năng quân sự"
+    },
+    {
+     "id": "q4",
+     "ten": "được tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được tạm hoãn học học phần giáo dục quốc phòng - an ninh trong thời hạn được chấp thuận"
+    },
+    {
+     "id": "q5",
+     "ten": "phải tiếp tục học những nội dung còn thiếu sau khi hết thời hạn tạm hoãn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sau khi hết thời hạn tạm hoãn phải tiếp tục học những nội dung còn thiếu theo quy định"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g5",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g5",
+     "to": "g4",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g5",
+     "to": "c13",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c10",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c11",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c12",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g5",
+     "to": "q4",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d24.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d24.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d24.k1.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d24.k1.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d24.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c5",
+     "nguon": "qc3626.d24.k1.b"
+    },
+    {
+     "type": "XET",
+     "from": "c5",
+     "to": "k1",
+     "nguon": "qc3626.d24.k1.b"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q2",
+     "nguon": "qc3626.d24.k1.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c6",
+     "nguon": "qc3626.d24.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c7",
+     "nguon": "qc3626.d24.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c8",
+     "nguon": "qc3626.d24.k1.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c9",
+     "nguon": "qc3626.d24.k1.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q3",
+     "nguon": "qc3626.d24.k1.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d24.k1.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d24.k1.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o1",
+     "nguon": "qc3626.d24.k1.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o1",
+     "nguon": "qc3626.d24.k1.d"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q5",
+     "to": "o1",
+     "nguon": "qc3626.d24.k1.d"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d24.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_hoc_phan",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+    "g1": "sem.NhomDieuKien.qc3626.d24.k1.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d24.k1.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d24.k1.g4",
+    "g5": "sem.NhomDieuKien.qc3626.d24.k1.g5",
+    "c1": "sem.DieuKien.qc3626.d24.k1.c1",
+    "c2": "sem.DieuKien.qc3626.d24.k1.c2",
+    "c3": "sem.DieuKien.qc3626.d24.k1.c3",
+    "c4": "sem.DieuKien.qc3626.d24.k1.c4",
+    "c5": "sem.DieuKien.qc3626.d24.k1.c5",
+    "c6": "sem.DieuKien.qc3626.d24.k1.c6",
+    "c7": "sem.DieuKien.qc3626.d24.k1.c7",
+    "c8": "sem.DieuKien.qc3626.d24.k1.c8",
+    "c9": "sem.DieuKien.qc3626.d24.k1.c9",
+    "c10": "sem.DieuKien.qc3626.d24.k1.c10",
+    "c11": "sem.DieuKien.qc3626.d24.k1.c11",
+    "c12": "sem.DieuKien.qc3626.d24.k1.c12",
+    "c13": "sem.DieuKien.qc3626.d24.k1.c13",
+    "q1": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "q2": "sem.HeQua.duoc_mien_hoc_mien_thi_hoc_phan_noi_dung_trong_chuong_trinh_giao_duc_quoc_phong_an_ninh",
+    "q3": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_ky_nang_quan_su",
+    "q4": "sem.HeQua.duoc_tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+    "q5": "sem.HeQua.phai_tiep_tuc_hoc_nhung_noi_dung_con_thieu_sau_khi_het_thoi_han_tam_hoan"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+     "ten": "tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [
+      "tạm hoãn học"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Thủ trưởng đơn vị đào tạo chấp thuận cho sinh viên thuộc các đối tượng tạm hoãn học học phần giáo dục quốc phòng - an ninh"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k1.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k1.g1",
+     "ten": "đối tượng được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp được miễn học toàn bộ học phần (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k1.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k1.g2",
+     "ten": "miễn học, miễn thi học phần, nội dung nhờ giấy xác nhận kết quả đạt từ 5,0 điểm",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên có giấy xác nhận kết quả học tập và điểm đạt từ 5,0 trở lên theo thang điểm 10 thì được miễn học, miễn thi học phần, nội dung đó"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+     "ten": "đối tượng được miễn học các nội dung thực hành kỹ năng quân sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp được miễn học các nội dung thực hành kỹ năng quân sự (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k1.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k1.g4",
+     "ten": "đối tượng được tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp thuộc đối tượng tạm hoãn học (liệt kê các gạch đầu dòng, mỗi trường hợp độc lập)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k1.g5",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k1.g5",
+     "ten": "điều kiện tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên thuộc đối tượng tạm hoãn học và được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học (suy luận từ câu 'nếu được ... chấp thuận cho tạm hoãn học')"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c1",
+     "ten": "có bằng tốt nghiệp học viện, trường sĩ quan quân đội, công an",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "mo_ta": "Sinh viên có bằng tốt nghiệp học viện, trường sĩ quan quân đội, công an",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c2",
+     "ten": "đã có chứng chỉ giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "mo_ta": "Sinh viên đã có chứng chỉ giáo dục quốc phòng - an ninh",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c3",
+     "ten": "là người nước ngoài",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "mo_ta": "Sinh viên là người nước ngoài",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c4",
+     "ten": "có giấy xác nhận kết quả học tập các học phần, nội dung",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "mo_ta": "Sinh viên có giấy xác nhận kết quả học tập các học phần, nội dung đó",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c5",
+     "ten": "điểm học phần đạt từ 5,0 điểm trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "mo_ta": "Kết quả học phần, nội dung đạt từ 5,0 điểm trở lên theo thang điểm 10",
+     "min": 5.0,
+     "min_incl": true,
+     "thang": "thang_10"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c6",
+     "ten": "là tu sỹ thuộc các tôn giáo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên là tu sỹ thuộc các tôn giáo",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c7",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c7",
+     "ten": "là người khuyết tật có giấy xác nhận khuyết tật",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên là người khuyết tật, có giấy xác nhận khuyết tật theo quy định của pháp luật về người khuyết tật",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c8",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c8",
+     "ten": "không đủ sức khỏe về thể lực hoặc mắc bệnh lý thuộc diện miễn nghĩa vụ quân sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên không đủ sức khỏe về thể lực hoặc mắc những bệnh lý thuộc diện miễn làm nghĩa vụ quân sự theo quy định hiện hành",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c9",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c9",
+     "ten": "đã hoàn thành nghĩa vụ quân sự, công an nhân dân",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "mo_ta": "Sinh viên đã hoàn thành nghĩa vụ quân sự, công an nhân dân",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c10",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c10",
+     "ten": "nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c11",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c11",
+     "ten": "dừng học dài hạn để điều trị vì lý do sức khỏe",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Sinh viên vì lý do sức khỏe phải dừng học trong thời gian dài để điều trị, có giấy xác nhận của bệnh viện nơi sinh viên điều trị",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c12",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c12",
+     "ten": "bị thiên tai, hỏa hoạn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Sinh viên bị thiên tai, hỏa hoạn",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k1.c13",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k1.c13",
+     "ten": "được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "mo_ta": "Các đối tượng tạm hoãn học được thủ trưởng đơn vị đào tạo chấp thuận cho tạm hoãn học",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan_giao_duc_quoc_phong_an_ninh",
+     "ten": "được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.a"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được miễn học toàn bộ học phần giáo dục quốc phòng - an ninh"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_mien_hoc_mien_thi_hoc_phan_noi_dung_trong_chuong_trinh_giao_duc_quoc_phong_an_ninh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_mien_hoc_mien_thi_hoc_phan_noi_dung_trong_chuong_trinh_giao_duc_quoc_phong_an_ninh",
+     "ten": "được miễn học, miễn thi học phần, nội dung trong chương trình giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được miễn học, miễn thi học phần, nội dung trong chương trình giáo dục quốc phòng - an ninh"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_ky_nang_quan_su",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_ky_nang_quan_su",
+     "ten": "được miễn học các nội dung thực hành kỹ năng quân sự",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.c"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được miễn học các nội dung thực hành kỹ năng quân sự"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+     "ten": "được tạm hoãn học giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được tạm hoãn học học phần giáo dục quốc phòng - an ninh trong thời hạn được chấp thuận"
+    }
+   },
+   {
+    "id": "sem.HeQua.phai_tiep_tuc_hoc_nhung_noi_dung_con_thieu_sau_khi_het_thoi_han_tam_hoan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.phai_tiep_tuc_hoc_nhung_noi_dung_con_thieu_sau_khi_het_thoi_han_tam_hoan",
+     "ten": "phải tiếp tục học những nội dung còn thiếu sau khi hết thời hạn tạm hoãn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k1.d"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Sau khi hết thời hạn tạm hoãn phải tiếp tục học những nội dung còn thiếu theo quy định"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+    "to": "sem.NhomDieuKien.qc3626.d24.k1.g5",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g5",
+    "to": "sem.NhomDieuKien.qc3626.d24.k1.g4",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g5",
+    "to": "sem.DieuKien.qc3626.d24.k1.c13",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g4",
+    "to": "sem.DieuKien.qc3626.d24.k1.c10",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g4",
+    "to": "sem.DieuKien.qc3626.d24.k1.c11",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g4",
+    "to": "sem.DieuKien.qc3626.d24.k1.c12",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g5",
+    "to": "sem.HeQua.duoc_tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g1",
+    "to": "sem.DieuKien.qc3626.d24.k1.c1",
+    "props": {
+     "nguon": "qc3626.d24.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g1",
+    "to": "sem.DieuKien.qc3626.d24.k1.c2",
+    "props": {
+     "nguon": "qc3626.d24.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g1",
+    "to": "sem.DieuKien.qc3626.d24.k1.c3",
+    "props": {
+     "nguon": "qc3626.d24.k1.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g1",
+    "to": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "props": {
+     "nguon": "qc3626.d24.k1.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g2",
+    "to": "sem.DieuKien.qc3626.d24.k1.c4",
+    "props": {
+     "nguon": "qc3626.d24.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g2",
+    "to": "sem.DieuKien.qc3626.d24.k1.c5",
+    "props": {
+     "nguon": "qc3626.d24.k1.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d24.k1.c5",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d24.k1.b"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g2",
+    "to": "sem.HeQua.duoc_mien_hoc_mien_thi_hoc_phan_noi_dung_trong_chuong_trinh_giao_duc_quoc_phong_an_ninh",
+    "props": {
+     "nguon": "qc3626.d24.k1.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+    "to": "sem.DieuKien.qc3626.d24.k1.c6",
+    "props": {
+     "nguon": "qc3626.d24.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+    "to": "sem.DieuKien.qc3626.d24.k1.c7",
+    "props": {
+     "nguon": "qc3626.d24.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+    "to": "sem.DieuKien.qc3626.d24.k1.c8",
+    "props": {
+     "nguon": "qc3626.d24.k1.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+    "to": "sem.DieuKien.qc3626.d24.k1.c9",
+    "props": {
+     "nguon": "qc3626.d24.k1.c"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k1.g3",
+    "to": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_ky_nang_quan_su",
+    "props": {
+     "nguon": "qc3626.d24.k1.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k1.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_mien_hoc_mien_thi_hoc_phan_noi_dung_trong_chuong_trinh_giao_duc_quoc_phong_an_ninh",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k1.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_ky_nang_quan_su",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k1.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_tam_hoan_hoc_giao_duc_quoc_phong_an_ninh",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.phai_tiep_tuc_hoc_nhung_noi_dung_con_thieu_sau_khi_het_thoi_han_tam_hoan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k1.d"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d24.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "ad8ba1fc0460e2695555a373b56d4ffe814516f9465c54d2ce6a49d7ec87562f",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16567,
+  "output_tokens": 9478,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsVvATqQgg3BM6HUSWr'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:41:40+07:00",
+  "latency_s": 34.421,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

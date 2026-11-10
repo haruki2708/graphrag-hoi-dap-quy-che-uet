@@ -1,0 +1,873 @@
+{
+ "format": 1,
+ "unit": "qc3626.d24.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[10] XET 'c1'->'k1': to KhaiNiem has loai 'khac'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học phần giáo dục thể chất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.a\"], \"loai\": \"khac\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.a\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"miễn học học phần giáo dục thể chất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2\", \"qc3626.d24.k2.a\", \"qc3626.d24.k2.b\"], \"mo_ta\": \"miễn học toàn bộ học phần hoặc các nội dung thực hành của học phần giáo dục thể chất\"}, {\"id\": \"h2\", \"ten\": \"tạm hoãn học học phần giáo dục thể chất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2\", \"qc3626.d24.k2.c\"], \"mo_ta\": \"tạm hoãn học học phần giáo dục thể chất đối với các đối tượng được tạm hoãn\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo\"}, {\"id\": \"g2\", \"ten\": \"thương tật, dị tật bẩm sinh hạn chế vận động có giấy chứng nhận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên có thương tật, dị tật bẩm sinh làm hạn chế chức năng vận động và có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên\"}, {\"id\": \"g3\", \"ten\": \"thuộc diện được tạm hoãn học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên thuộc một trong các trường hợp: bị ốm đau, tai nạn, thiên tai, hỏa hoạn; hoặc là nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản\"}, {\"id\": \"g4\", \"ten\": \"nữ sinh viên đang mang thai hoặc nghỉ thai sản\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Là nữ sinh viên và đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.a\"], \"mo_ta\": \"Đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"có thương tật, dị tật bẩm sinh hạn chế chức năng vận động\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.b\"], \"mo_ta\": \"Có thương tật, dị tật bẩm sinh làm hạn chế chức năng vận động\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.b\"], \"mo_ta\": \"Có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên\", \"toan_tu\": \"co\"}, {\"id\": \"c4\", \"ten\": \"bị ốm đau, tai nạn, thiên tai, hỏa hoạn\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"mo_ta\": \"Sinh viên bị ốm đau, tai nạn, thiên tai, hỏa hoạn\", \"toan_tu\": \"co\"}, {\"id\": \"c5\", \"ten\": \"là nữ sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"mo_ta\": \"Là nữ sinh viên\", \"toan_tu\": \"la\"}, {\"id\": \"c6\", \"ten\": \"đang mang thai hoặc trong thời gian nghỉ thai sản\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"mo_ta\": \"Đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"tiếp tục học những nội dung còn thiếu trong học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Hết thời gian tạm hoãn, sinh viên tiếp tục học những nội dung còn thiếu trong học phần theo quy định\"}, {\"id\": \"q2\", \"ten\": \"được tạm hoãn học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.c\"], \"loai\": \"quyen_loi\"}, {\"id\": \"q3\", \"ten\": \"được miễn học toàn bộ học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.a\"], \"loai\": \"quyen_loi\"}, {\"id\": \"q4\", \"ten\": \"được miễn học các nội dung thực hành hoặc chọn nội dung đặc thù\", \"bi_danh\": [], \"nguon\": [\"qc3626.d24.k2.b\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được miễn học các nội dung thực hành hoặc có thể lựa chọn nội dung đặc thù dành cho người khuyết tật\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d24.k2.a\"}, {\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g2\", \"nguon\": \"qc3626.d24.k2.b\"}, {\"type\": \"YEU_CAU\", \"from\": \"h2\", \"to\": \"g3\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d24.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d24.k2.b\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d24.k2.b\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c4\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"g4\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c5\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"GOM\", \"from\": \"g4\", \"to\": \"c6\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d24.k2.a\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q3\", \"nguon\": \"qc3626.d24.k2.a\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q4\", \"nguon\": \"qc3626.d24.k2.b\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q2\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q1\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o2\", \"nguon\": \"qc3626.d24.k2.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o2\", \"nguon\": \"qc3626.d24.k2.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o2\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o2\", \"nguon\": \"qc3626.d24.k2.c\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"h2\", \"to\": \"o1\", \"nguon\": \"qc3626.d24.k2.c\", \"noi_dung\": \"xem xét quyết định cho các đối tượng được tạm hoãn học\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "loai": "khac"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "miễn học học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2",
+      "qc3626.d24.k2.a",
+      "qc3626.d24.k2.b"
+     ],
+     "mo_ta": "miễn học toàn bộ học phần hoặc các nội dung thực hành của học phần giáo dục thể chất"
+    },
+    {
+     "id": "h2",
+     "ten": "tạm hoãn học học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2",
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "tạm hoãn học học phần giáo dục thể chất đối với các đối tượng được tạm hoãn"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo"
+    },
+    {
+     "id": "g2",
+     "ten": "thương tật, dị tật bẩm sinh hạn chế vận động có giấy chứng nhận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên có thương tật, dị tật bẩm sinh làm hạn chế chức năng vận động và có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên"
+    },
+    {
+     "id": "g3",
+     "ten": "thuộc diện được tạm hoãn học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp: bị ốm đau, tai nạn, thiên tai, hỏa hoạn; hoặc là nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản"
+    },
+    {
+     "id": "g4",
+     "ten": "nữ sinh viên đang mang thai hoặc nghỉ thai sản",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Là nữ sinh viên và đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "mo_ta": "Đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "có thương tật, dị tật bẩm sinh hạn chế chức năng vận động",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "mo_ta": "Có thương tật, dị tật bẩm sinh làm hạn chế chức năng vận động",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "mo_ta": "Có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c4",
+     "ten": "bị ốm đau, tai nạn, thiên tai, hỏa hoạn",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "Sinh viên bị ốm đau, tai nạn, thiên tai, hỏa hoạn",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c5",
+     "ten": "là nữ sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "Là nữ sinh viên",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c6",
+     "ten": "đang mang thai hoặc trong thời gian nghỉ thai sản",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "Đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "tiếp tục học những nội dung còn thiếu trong học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Hết thời gian tạm hoãn, sinh viên tiếp tục học những nội dung còn thiếu trong học phần theo quy định"
+    },
+    {
+     "id": "q2",
+     "ten": "được tạm hoãn học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "loai": "quyen_loi"
+    },
+    {
+     "id": "q3",
+     "ten": "được miễn học toàn bộ học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "loai": "quyen_loi"
+    },
+    {
+     "id": "q4",
+     "ten": "được miễn học các nội dung thực hành hoặc chọn nội dung đặc thù",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được miễn học các nội dung thực hành hoặc có thể lựa chọn nội dung đặc thù dành cho người khuyết tật"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d24.k2.a"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g2",
+     "nguon": "qc3626.d24.k2.b"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h2",
+     "to": "g3",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d24.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d24.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d24.k2.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c4",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "g4",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c5",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g4",
+     "to": "c6",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d24.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q3",
+     "nguon": "qc3626.d24.k2.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q4",
+     "nguon": "qc3626.d24.k2.b"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q2",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q1",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o2",
+     "nguon": "qc3626.d24.k2.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o2",
+     "nguon": "qc3626.d24.k2.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o2",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o2",
+     "nguon": "qc3626.d24.k2.c"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "h2",
+     "to": "o1",
+     "nguon": "qc3626.d24.k2.c",
+     "noi_dung": "xem xét quyết định cho các đối tượng được tạm hoãn học"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d24.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "o1": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "o2": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.mien_hoc_hoc_phan_giao_duc_the_chat",
+    "h2": "sem.HoatDong.tam_hoan_hoc_hoc_phan_giao_duc_the_chat",
+    "g1": "sem.NhomDieuKien.qc3626.d24.k2.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d24.k2.g2",
+    "g3": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+    "g4": "sem.NhomDieuKien.qc3626.d24.k2.g4",
+    "c1": "sem.DieuKien.qc3626.d24.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d24.k2.c2",
+    "c3": "sem.DieuKien.qc3626.d24.k2.c3",
+    "c4": "sem.DieuKien.qc3626.d24.k2.c4",
+    "c5": "sem.DieuKien.qc3626.d24.k2.c5",
+    "c6": "sem.DieuKien.qc3626.d24.k2.c6",
+    "q1": "sem.HeQua.tiep_tuc_hoc_nhung_noi_dung_con_thieu_trong_hoc_phan",
+    "q2": "sem.HeQua.duoc_tam_hoan_hoc",
+    "q3": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan",
+    "q4": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_hoac_chon_noi_dung_dac_thu"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+     "ten": "học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "loai": "khac"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "loai": "chuc_danh"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.mien_hoc_hoc_phan_giao_duc_the_chat",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.mien_hoc_hoc_phan_giao_duc_the_chat",
+     "ten": "miễn học học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2",
+      "qc3626.d24.k2.a",
+      "qc3626.d24.k2.b"
+     ],
+     "mo_ta": "miễn học toàn bộ học phần hoặc các nội dung thực hành của học phần giáo dục thể chất"
+    }
+   },
+   {
+    "id": "sem.HoatDong.tam_hoan_hoc_hoc_phan_giao_duc_the_chat",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.tam_hoan_hoc_hoc_phan_giao_duc_the_chat",
+     "ten": "tạm hoãn học học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2",
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "tạm hoãn học học phần giáo dục thể chất đối với các đối tượng được tạm hoãn"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k2.g1",
+     "ten": "đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k2.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k2.g2",
+     "ten": "thương tật, dị tật bẩm sinh hạn chế vận động có giấy chứng nhận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên có thương tật, dị tật bẩm sinh làm hạn chế chức năng vận động và có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+     "ten": "thuộc diện được tạm hoãn học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên thuộc một trong các trường hợp: bị ốm đau, tai nạn, thiên tai, hỏa hoạn; hoặc là nữ sinh viên đang mang thai hoặc trong thời gian nghỉ thai sản"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d24.k2.g4",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d24.k2.g4",
+     "ten": "nữ sinh viên đang mang thai hoặc nghỉ thai sản",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Là nữ sinh viên và đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k2.c1",
+     "ten": "đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "mo_ta": "Đã hoàn thành học phần giáo dục thể chất phù hợp với trình độ đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k2.c2",
+     "ten": "có thương tật, dị tật bẩm sinh hạn chế chức năng vận động",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "mo_ta": "Có thương tật, dị tật bẩm sinh làm hạn chế chức năng vận động",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k2.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k2.c3",
+     "ten": "có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "mo_ta": "Có giấy chứng nhận của bệnh viện cấp huyện và tương đương trở lên",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k2.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k2.c4",
+     "ten": "bị ốm đau, tai nạn, thiên tai, hỏa hoạn",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "Sinh viên bị ốm đau, tai nạn, thiên tai, hỏa hoạn",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k2.c5",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k2.c5",
+     "ten": "là nữ sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "Là nữ sinh viên",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d24.k2.c6",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d24.k2.c6",
+     "ten": "đang mang thai hoặc trong thời gian nghỉ thai sản",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "mo_ta": "Đang mang thai hoặc trong thời gian nghỉ thai sản theo quy định hiện hành",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.tiep_tuc_hoc_nhung_noi_dung_con_thieu_trong_hoc_phan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.tiep_tuc_hoc_nhung_noi_dung_con_thieu_trong_hoc_phan",
+     "ten": "tiếp tục học những nội dung còn thiếu trong học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Hết thời gian tạm hoãn, sinh viên tiếp tục học những nội dung còn thiếu trong học phần theo quy định"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_tam_hoan_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_tam_hoan_hoc",
+     "ten": "được tạm hoãn học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.c"
+     ],
+     "loai": "quyen_loi"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan",
+     "ten": "được miễn học toàn bộ học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.a"
+     ],
+     "loai": "quyen_loi"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_hoac_chon_noi_dung_dac_thu",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_hoac_chon_noi_dung_dac_thu",
+     "ten": "được miễn học các nội dung thực hành hoặc chọn nội dung đặc thù",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d24.k2.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được miễn học các nội dung thực hành hoặc có thể lựa chọn nội dung đặc thù dành cho người khuyết tật"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.mien_hoc_hoc_phan_giao_duc_the_chat",
+    "to": "sem.NhomDieuKien.qc3626.d24.k2.g1",
+    "props": {
+     "nguon": "qc3626.d24.k2.a"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.mien_hoc_hoc_phan_giao_duc_the_chat",
+    "to": "sem.NhomDieuKien.qc3626.d24.k2.g2",
+    "props": {
+     "nguon": "qc3626.d24.k2.b"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.tam_hoan_hoc_hoc_phan_giao_duc_the_chat",
+    "to": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g1",
+    "to": "sem.DieuKien.qc3626.d24.k2.c1",
+    "props": {
+     "nguon": "qc3626.d24.k2.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g2",
+    "to": "sem.DieuKien.qc3626.d24.k2.c2",
+    "props": {
+     "nguon": "qc3626.d24.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g2",
+    "to": "sem.DieuKien.qc3626.d24.k2.c3",
+    "props": {
+     "nguon": "qc3626.d24.k2.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+    "to": "sem.DieuKien.qc3626.d24.k2.c4",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+    "to": "sem.NhomDieuKien.qc3626.d24.k2.g4",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g4",
+    "to": "sem.DieuKien.qc3626.d24.k2.c5",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g4",
+    "to": "sem.DieuKien.qc3626.d24.k2.c6",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d24.k2.c1",
+    "to": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "props": {
+     "nguon": "qc3626.d24.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g1",
+    "to": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d24.k2.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g2",
+    "to": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_hoac_chon_noi_dung_dac_thu",
+    "props": {
+     "nguon": "qc3626.d24.k2.b"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+    "to": "sem.HeQua.duoc_tam_hoan_hoc",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d24.k2.g3",
+    "to": "sem.HeQua.tiep_tuc_hoc_nhung_noi_dung_con_thieu_trong_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_mien_hoc_toan_bo_hoc_phan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k2.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_mien_hoc_cac_noi_dung_thuc_hanh_hoac_chon_noi_dung_dac_thu",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k2.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_tam_hoan_hoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.tiep_tuc_hoc_nhung_noi_dung_con_thieu_trong_hoc_phan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d24.k2.c"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.HoatDong.tam_hoan_hoc_hoc_phan_giao_duc_the_chat",
+    "to": "sem.DoiTuong.thu_truong_don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d24.k2.c",
+     "noi_dung": "xem xét quyết định cho các đối tượng được tạm hoãn học"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d24.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "47318e087a62eaebb0cddf68e5d99649473e4288b1a152a95b74cf71809f8d85",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16233,
+  "output_tokens": 6963,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsYRLTEhEN4MVAE14WV'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:42:14+07:00",
+  "latency_s": 24.372,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

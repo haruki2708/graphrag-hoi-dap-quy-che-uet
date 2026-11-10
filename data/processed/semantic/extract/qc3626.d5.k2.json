@@ -1,0 +1,634 @@
+{
+ "format": 1,
+ "unit": "qc3626.d5.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[8] XET 'c1'->'k7': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học phần bắt buộc\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.a\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"học phần sinh viên bắt buộc phải tích lũy\"}, {\"id\": \"k2\", \"ten\": \"học phần tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.b\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"học phần sinh viên được tự chọn theo hướng dẫn của đơn vị đào tạo\"}, {\"id\": \"k3\", \"ten\": \"học phần tự chọn tự do\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.c\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"học phần sinh viên tự chọn theo nhu cầu cá nhân phù hợp các yêu cầu học tập\"}, {\"id\": \"k4\", \"ten\": \"học phần tiên quyết\", \"bi_danh\": [\"học phần tiên quyết của một học phần\"], \"nguon\": [\"qc3626.d5.k2.d\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"học phần sinh viên phải tích lũy trước khi học học phần đó\"}, {\"id\": \"k5\", \"ten\": \"khóa luận, đồ án tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.đ\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"học phần thuộc khối kiến thức bắt buộc, có thời lượng từ 5 đến 10 tín chỉ được quy định cụ thể trong chương trình đào tạo\"}, {\"id\": \"k6\", \"ten\": \"thực tập, thực tế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.e\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"thực tập, thực tế (nếu có) là một học phần bắt buộc\"}, {\"id\": \"k7\", \"ten\": \"học phần điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.g\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"các học phần giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ\"}, {\"id\": \"k8\", \"ten\": \"học phần ngoại ngữ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.h\"], \"loai\": \"loai_hoc_phan\", \"dinh_nghia\": \"học phần ngoại ngữ trong chương trình đào tạo mà sinh viên bắt buộc phải tích lũy\"}, {\"id\": \"k9\", \"ten\": \"điểm trung bình chung học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.g\"], \"loai\": \"dai_luong\"}, {\"id\": \"k10\", \"ten\": \"điểm trung bình chung các học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.g\"], \"loai\": \"dai_luong\"}, {\"id\": \"k11\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.g\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.b\"], \"loai\": \"don_vi\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"hoàn thành học phần điều kiện để xét tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.g\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Kết quả học phần điều kiện được xem là điều kiện để xét tốt nghiệp khi sinh viên hoàn thành các học phần điều kiện\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"hoàn thành học phần điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.g\"], \"mo_ta\": \"Hoàn thành các học phần điều kiện (giáo dục thể chất, giáo dục quốc phòng - an ninh, kỹ năng bổ trợ)\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"đủ điều kiện xét tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d5.k2.g\"], \"loai\": \"trang_thai\"}], \"edges\": [{\"type\": \"LA_MOT\", \"from\": \"k5\", \"to\": \"k1\", \"nguon\": \"qc3626.d5.k2.đ\"}, {\"type\": \"LA_MOT\", \"from\": \"k6\", \"to\": \"k1\", \"nguon\": \"qc3626.d5.k2.e\"}, {\"type\": \"LA_MOT\", \"from\": \"k8\", \"to\": \"k1\", \"nguon\": \"qc3626.d5.k2.h\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"k2\", \"to\": \"o1\", \"nguon\": \"qc3626.d5.k2.b\", \"noi_dung\": \"hướng dẫn tự chọn học phần tự chọn có điều kiện\"}, {\"type\": \"TINH_VAO\", \"from\": \"k7\", \"to\": \"k9\", \"nguon\": \"qc3626.d5.k2.g\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k7\", \"to\": \"k10\", \"nguon\": \"qc3626.d5.k2.g\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k7\", \"to\": \"k11\", \"nguon\": \"qc3626.d5.k2.g\", \"co\": false, \"boi_canh\": null}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d5.k2.g\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k7\", \"nguon\": \"qc3626.d5.k2.g\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d5.k2.g\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học phần bắt buộc",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.a"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên bắt buộc phải tích lũy"
+    },
+    {
+     "id": "k2",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.b"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên được tự chọn theo hướng dẫn của đơn vị đào tạo"
+    },
+    {
+     "id": "k3",
+     "ten": "học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.c"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên tự chọn theo nhu cầu cá nhân phù hợp các yêu cầu học tập"
+    },
+    {
+     "id": "k4",
+     "ten": "học phần tiên quyết",
+     "bi_danh": [
+      "học phần tiên quyết của một học phần"
+     ],
+     "nguon": [
+      "qc3626.d5.k2.d"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên phải tích lũy trước khi học học phần đó"
+    },
+    {
+     "id": "k5",
+     "ten": "khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.đ"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần thuộc khối kiến thức bắt buộc, có thời lượng từ 5 đến 10 tín chỉ được quy định cụ thể trong chương trình đào tạo"
+    },
+    {
+     "id": "k6",
+     "ten": "thực tập, thực tế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.e"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "thực tập, thực tế (nếu có) là một học phần bắt buộc"
+    },
+    {
+     "id": "k7",
+     "ten": "học phần điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "các học phần giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ"
+    },
+    {
+     "id": "k8",
+     "ten": "học phần ngoại ngữ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.h"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần ngoại ngữ trong chương trình đào tạo mà sinh viên bắt buộc phải tích lũy"
+    },
+    {
+     "id": "k9",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k10",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k11",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.b"
+     ],
+     "loai": "don_vi"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "hoàn thành học phần điều kiện để xét tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Kết quả học phần điều kiện được xem là điều kiện để xét tốt nghiệp khi sinh viên hoàn thành các học phần điều kiện"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "hoàn thành học phần điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "mo_ta": "Hoàn thành các học phần điều kiện (giáo dục thể chất, giáo dục quốc phòng - an ninh, kỹ năng bổ trợ)",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "đủ điều kiện xét tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "trang_thai"
+    }
+   ],
+   "edges": [
+    {
+     "type": "LA_MOT",
+     "from": "k5",
+     "to": "k1",
+     "nguon": "qc3626.d5.k2.đ"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "k6",
+     "to": "k1",
+     "nguon": "qc3626.d5.k2.e"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "k8",
+     "to": "k1",
+     "nguon": "qc3626.d5.k2.h"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "k2",
+     "to": "o1",
+     "nguon": "qc3626.d5.k2.b",
+     "noi_dung": "hướng dẫn tự chọn học phần tự chọn có điều kiện"
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k7",
+     "to": "k9",
+     "nguon": "qc3626.d5.k2.g",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k7",
+     "to": "k10",
+     "nguon": "qc3626.d5.k2.g",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k7",
+     "to": "k11",
+     "nguon": "qc3626.d5.k2.g",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d5.k2.g"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k7",
+     "nguon": "qc3626.d5.k2.g"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d5.k2.g"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d5.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "k2": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "k3": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "k4": "sem.KhaiNiem.hoc_phan_tien_quyet",
+    "k5": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+    "k6": "sem.KhaiNiem.thuc_tap_thuc_te",
+    "k7": "sem.KhaiNiem.hoc_phan_dieu_kien",
+    "k8": "sem.KhaiNiem.hoc_phan_ngoai_ngu",
+    "k9": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "k10": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "k11": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "o1": "sem.DoiTuong.don_vi_dao_tao",
+    "g1": "sem.NhomDieuKien.qc3626.d5.k2.g1",
+    "c1": "sem.DieuKien.qc3626.d5.k2.c1",
+    "q1": "sem.HeQua.du_dieu_kien_xet_tot_nghiep"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_bat_buoc",
+     "ten": "học phần bắt buộc",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.a"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên bắt buộc phải tích lũy"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.b"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên được tự chọn theo hướng dẫn của đơn vị đào tạo"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon_tu_do",
+     "ten": "học phần tự chọn tự do",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.c"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên tự chọn theo nhu cầu cá nhân phù hợp các yêu cầu học tập"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tien_quyet",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tien_quyet",
+     "ten": "học phần tiên quyết",
+     "bi_danh": [
+      "học phần tiên quyết của một học phần"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.d"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần sinh viên phải tích lũy trước khi học học phần đó"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+     "ten": "khóa luận, đồ án tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.đ"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần thuộc khối kiến thức bắt buộc, có thời lượng từ 5 đến 10 tín chỉ được quy định cụ thể trong chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.thuc_tap_thuc_te",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.thuc_tap_thuc_te",
+     "ten": "thực tập, thực tế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.e"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "thực tập, thực tế (nếu có) là một học phần bắt buộc"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_dieu_kien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_dieu_kien",
+     "ten": "học phần điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "các học phần giáo dục thể chất, giáo dục quốc phòng - an ninh và kỹ năng bổ trợ"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_ngoai_ngu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_ngoai_ngu",
+     "ten": "học phần ngoại ngữ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.h"
+     ],
+     "loai": "loai_hoc_phan",
+     "dinh_nghia": "học phần ngoại ngữ trong chương trình đào tạo mà sinh viên bắt buộc phải tích lũy"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.don_vi_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.don_vi_dao_tao",
+     "ten": "đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.b"
+     ],
+     "loai": "don_vi"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d5.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d5.k2.g1",
+     "ten": "hoàn thành học phần điều kiện để xét tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Kết quả học phần điều kiện được xem là điều kiện để xét tốt nghiệp khi sinh viên hoàn thành các học phần điều kiện"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d5.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d5.k2.c1",
+     "ten": "hoàn thành học phần điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "mo_ta": "Hoàn thành các học phần điều kiện (giáo dục thể chất, giáo dục quốc phòng - an ninh, kỹ năng bổ trợ)",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.du_dieu_kien_xet_tot_nghiep",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.du_dieu_kien_xet_tot_nghiep",
+     "ten": "đủ điều kiện xét tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d5.k2.g"
+     ],
+     "loai": "trang_thai"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.khoa_luan_do_an_tot_nghiep",
+    "to": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "props": {
+     "nguon": "qc3626.d5.k2.đ"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.thuc_tap_thuc_te",
+    "to": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "props": {
+     "nguon": "qc3626.d5.k2.e"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.hoc_phan_ngoai_ngu",
+    "to": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "props": {
+     "nguon": "qc3626.d5.k2.h"
+    }
+   },
+   {
+    "type": "GIAO_QUY_DINH",
+    "from": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "to": "sem.DoiTuong.don_vi_dao_tao",
+    "props": {
+     "nguon": "qc3626.d5.k2.b",
+     "noi_dung": "hướng dẫn tự chọn học phần tự chọn có điều kiện"
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_dieu_kien",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d5.k2.g",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_dieu_kien",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d5.k2.g",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_dieu_kien",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d5.k2.g",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d5.k2.g1",
+    "to": "sem.DieuKien.qc3626.d5.k2.c1",
+    "props": {
+     "nguon": "qc3626.d5.k2.g"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d5.k2.c1",
+    "to": "sem.KhaiNiem.hoc_phan_dieu_kien",
+    "props": {
+     "nguon": "qc3626.d5.k2.g"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d5.k2.g1",
+    "to": "sem.HeQua.du_dieu_kien_xet_tot_nghiep",
+    "props": {
+     "nguon": "qc3626.d5.k2.g"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d5.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "341d90bcebfd843665893db8b0bf9ee6adbdc6fdf10ad9cb52ba3ab0b7b9c1e1",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16410,
+  "output_tokens": 5487,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgtrdwbdagdjme1jUG9v2'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:30:22+07:00",
+  "latency_s": 22.217,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

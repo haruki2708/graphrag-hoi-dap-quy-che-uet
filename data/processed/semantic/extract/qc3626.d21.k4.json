@@ -1,0 +1,676 @@
+{
+ "format": 1,
+ "unit": "qc3626.d21.k4",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[4] XET 'c1'->'k1': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']",
+  "edges[10] XET 'c3'->'k2': to KhaiNiem has loai 'loai_hoc_phan'; schema 2.2 expects ['dai_luong', 'muc_phan_loai']"
+ ],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"học phần bắt buộc\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k2\", \"ten\": \"học phần tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.b\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k3\", \"ten\": \"điểm học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\", \"qc3626.d21.k4.b\"], \"loai\": \"dai_luong\"}, {\"id\": \"k4\", \"ten\": \"điểm F\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\", \"qc3626.d21.k4.b\"], \"loai\": \"muc_phan_loai\", \"thang\": \"diem_chu\", \"gia_tri\": 1}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\", \"qc3626.d21.k4.b\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký học lại học phần\", \"bi_danh\": [\"đăng ký học lại\"], \"nguon\": [\"qc3626.d21.k4\", \"qc3626.d21.k4.a\", \"qc3626.d21.k4.b\"], \"mo_ta\": \"sinh viên đăng ký học lại học phần bị điểm F\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"học phần bắt buộc bị điểm F\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học phần bắt buộc và sinh viên bị điểm F ở học phần đó thì sinh viên phải đăng ký học lại học phần đó\"}, {\"id\": \"g2\", \"ten\": \"học phần tự chọn có điều kiện bị điểm F\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.b\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học phần tự chọn có điều kiện và sinh viên bị điểm F ở học phần đó thì sinh viên đăng ký học lại hoặc học học phần tự chọn khác cùng khối kiến thức để thay thế\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"học phần thuộc loại bắt buộc\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\"], \"mo_ta\": \"Học phần thuộc loại bắt buộc\", \"toan_tu\": \"la\"}, {\"id\": \"c2\", \"ten\": \"bị điểm F\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\"], \"mo_ta\": \"Bị điểm F ở học phần\", \"toan_tu\": \"la\"}, {\"id\": \"c3\", \"ten\": \"học phần thuộc loại tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.b\"], \"mo_ta\": \"Học phần tự chọn có điều kiện\", \"toan_tu\": \"la\"}, {\"id\": \"c4\", \"ten\": \"bị điểm F ở học phần tự chọn có điều kiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.b\"], \"mo_ta\": \"Bị điểm F ở học phần tự chọn có điều kiện\", \"toan_tu\": \"la\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"phải đăng ký học lại học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.a\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"phải đăng ký học lại học phần bắt buộc đó\"}, {\"id\": \"q2\", \"ten\": \"được đăng ký học lại hoặc học học phần tự chọn khác để thay thế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d21.k4.b\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được đăng ký học lại học phần đó hoặc đăng ký học học phần tự chọn khác cùng khối kiến thức để thay thế\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d21.k4.a\"}, {\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g2\", \"nguon\": \"qc3626.d21.k4.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d21.k4.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d21.k4.a\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d21.k4.a\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"k4\", \"nguon\": \"qc3626.d21.k4.a\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d21.k4.a\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k4.a\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d21.k4.b\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d21.k4.b\"}, {\"type\": \"XET\", \"from\": \"c3\", \"to\": \"k2\", \"nguon\": \"qc3626.d21.k4.b\"}, {\"type\": \"XET\", \"from\": \"c4\", \"to\": \"k4\", \"nguon\": \"qc3626.d21.k4.b\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q2\", \"nguon\": \"qc3626.d21.k4.b\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d21.k4.b\"}, {\"type\": \"LA_MOT\", \"from\": \"k4\", \"to\": \"k3\", \"nguon\": \"qc3626.d21.k4.a\"}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "học phần bắt buộc",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k2",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "dai_luong"
+    },
+    {
+     "id": "k4",
+     "ten": "điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "gia_tri": 1
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký học lại học phần",
+     "bi_danh": [
+      "đăng ký học lại"
+     ],
+     "nguon": [
+      "qc3626.d21.k4",
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "mo_ta": "sinh viên đăng ký học lại học phần bị điểm F"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "học phần bắt buộc bị điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần bắt buộc và sinh viên bị điểm F ở học phần đó thì sinh viên phải đăng ký học lại học phần đó"
+    },
+    {
+     "id": "g2",
+     "ten": "học phần tự chọn có điều kiện bị điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần tự chọn có điều kiện và sinh viên bị điểm F ở học phần đó thì sinh viên đăng ký học lại hoặc học học phần tự chọn khác cùng khối kiến thức để thay thế"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "học phần thuộc loại bắt buộc",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "mo_ta": "Học phần thuộc loại bắt buộc",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c2",
+     "ten": "bị điểm F",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "mo_ta": "Bị điểm F ở học phần",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c3",
+     "ten": "học phần thuộc loại tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "mo_ta": "Học phần tự chọn có điều kiện",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c4",
+     "ten": "bị điểm F ở học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "mo_ta": "Bị điểm F ở học phần tự chọn có điều kiện",
+     "toan_tu": "la"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "phải đăng ký học lại học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "phải đăng ký học lại học phần bắt buộc đó"
+    },
+    {
+     "id": "q2",
+     "ten": "được đăng ký học lại hoặc học học phần tự chọn khác để thay thế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được đăng ký học lại học phần đó hoặc đăng ký học học phần tự chọn khác cùng khối kiến thức để thay thế"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d21.k4.a"
+    },
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g2",
+     "nguon": "qc3626.d21.k4.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d21.k4.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d21.k4.a"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d21.k4.a"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "k4",
+     "nguon": "qc3626.d21.k4.a"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d21.k4.a"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d21.k4.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d21.k4.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d21.k4.b"
+    },
+    {
+     "type": "XET",
+     "from": "c3",
+     "to": "k2",
+     "nguon": "qc3626.d21.k4.b"
+    },
+    {
+     "type": "XET",
+     "from": "c4",
+     "to": "k4",
+     "nguon": "qc3626.d21.k4.b"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q2",
+     "nguon": "qc3626.d21.k4.b"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d21.k4.b"
+    },
+    {
+     "type": "LA_MOT",
+     "from": "k4",
+     "to": "k3",
+     "nguon": "qc3626.d21.k4.a"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d21.k4",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "k2": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "k3": "sem.KhaiNiem.diem_hoc_phan",
+    "k4": "sem.KhaiNiem.diem_f",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.dang_ky_hoc_lai_hoc_phan",
+    "g1": "sem.NhomDieuKien.qc3626.d21.k4.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d21.k4.g2",
+    "c1": "sem.DieuKien.qc3626.d21.k4.c1",
+    "c2": "sem.DieuKien.qc3626.d21.k4.c2",
+    "c3": "sem.DieuKien.qc3626.d21.k4.c3",
+    "c4": "sem.DieuKien.qc3626.d21.k4.c4",
+    "q1": "sem.HeQua.phai_dang_ky_hoc_lai_hoc_phan",
+    "q2": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_hoc_hoc_phan_tu_chon_khac_de_thay_the"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_bat_buoc",
+     "ten": "học phần bắt buộc",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+     "ten": "học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_hoc_phan",
+     "ten": "điểm học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_f",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_f",
+     "ten": "điểm F",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "muc_phan_loai",
+     "thang": "diem_chu",
+     "gia_tri": 1
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_lai_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_lai_hoc_phan",
+     "ten": "đăng ký học lại học phần",
+     "bi_danh": [
+      "đăng ký học lại"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4",
+      "qc3626.d21.k4.a",
+      "qc3626.d21.k4.b"
+     ],
+     "mo_ta": "sinh viên đăng ký học lại học phần bị điểm F"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k4.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k4.g1",
+     "ten": "học phần bắt buộc bị điểm F",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần bắt buộc và sinh viên bị điểm F ở học phần đó thì sinh viên phải đăng ký học lại học phần đó"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d21.k4.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d21.k4.g2",
+     "ten": "học phần tự chọn có điều kiện bị điểm F",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần tự chọn có điều kiện và sinh viên bị điểm F ở học phần đó thì sinh viên đăng ký học lại hoặc học học phần tự chọn khác cùng khối kiến thức để thay thế"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k4.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k4.c1",
+     "ten": "học phần thuộc loại bắt buộc",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "mo_ta": "Học phần thuộc loại bắt buộc",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k4.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k4.c2",
+     "ten": "bị điểm F",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "mo_ta": "Bị điểm F ở học phần",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k4.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k4.c3",
+     "ten": "học phần thuộc loại tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "mo_ta": "Học phần tự chọn có điều kiện",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d21.k4.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d21.k4.c4",
+     "ten": "bị điểm F ở học phần tự chọn có điều kiện",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "mo_ta": "Bị điểm F ở học phần tự chọn có điều kiện",
+     "toan_tu": "la"
+    }
+   },
+   {
+    "id": "sem.HeQua.phai_dang_ky_hoc_lai_hoc_phan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.phai_dang_ky_hoc_lai_hoc_phan",
+     "ten": "phải đăng ký học lại học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.a"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "phải đăng ký học lại học phần bắt buộc đó"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_hoc_hoc_phan_tu_chon_khac_de_thay_the",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_hoc_hoc_phan_tu_chon_khac_de_thay_the",
+     "ten": "được đăng ký học lại hoặc học học phần tự chọn khác để thay thế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d21.k4.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được đăng ký học lại học phần đó hoặc đăng ký học học phần tự chọn khác cùng khối kiến thức để thay thế"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_lai_hoc_phan",
+    "to": "sem.NhomDieuKien.qc3626.d21.k4.g1",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   },
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_hoc_lai_hoc_phan",
+    "to": "sem.NhomDieuKien.qc3626.d21.k4.g2",
+    "props": {
+     "nguon": "qc3626.d21.k4.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k4.g1",
+    "to": "sem.DieuKien.qc3626.d21.k4.c1",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k4.g1",
+    "to": "sem.DieuKien.qc3626.d21.k4.c2",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k4.c1",
+    "to": "sem.KhaiNiem.hoc_phan_bat_buoc",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k4.c2",
+    "to": "sem.KhaiNiem.diem_f",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d21.k4.g1",
+    "to": "sem.HeQua.phai_dang_ky_hoc_lai_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.phai_dang_ky_hoc_lai_hoc_phan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k4.g2",
+    "to": "sem.DieuKien.qc3626.d21.k4.c3",
+    "props": {
+     "nguon": "qc3626.d21.k4.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d21.k4.g2",
+    "to": "sem.DieuKien.qc3626.d21.k4.c4",
+    "props": {
+     "nguon": "qc3626.d21.k4.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k4.c3",
+    "to": "sem.KhaiNiem.hoc_phan_tu_chon_co_dieu_kien",
+    "props": {
+     "nguon": "qc3626.d21.k4.b"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d21.k4.c4",
+    "to": "sem.KhaiNiem.diem_f",
+    "props": {
+     "nguon": "qc3626.d21.k4.b"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d21.k4.g2",
+    "to": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_hoc_hoc_phan_tu_chon_khac_de_thay_the",
+    "props": {
+     "nguon": "qc3626.d21.k4.b"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_dang_ky_hoc_lai_hoac_hoc_hoc_phan_tu_chon_khac_de_thay_the",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d21.k4.b"
+    }
+   },
+   {
+    "type": "LA_MOT",
+    "from": "sem.KhaiNiem.diem_f",
+    "to": "sem.KhaiNiem.diem_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d21.k4.a"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d21.k4",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "cfb745f09654f5b22364b4822f14b37a167299db338e26c67cba2d67b098366c",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15886,
+  "output_tokens": 5402,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsDsjuiwzeAzT8N7cj4'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:38:02+07:00",
+  "latency_s": 21.592,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

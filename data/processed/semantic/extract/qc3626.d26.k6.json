@@ -1,0 +1,466 @@
+{
+ "format": 1,
+ "unit": "qc3626.d26.k6",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [\"điểm trung bình chung tích luỹ\"], \"nguon\": [\"qc3626.d26.k6\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên học cùng lúc hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"loai\": \"nguoi\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"sinh viên học cùng lúc hai chương trình bị dừng học chương trình thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Trong quá trình học cùng lúc hai chương trình, khi chương trình thứ nhất đạt điểm trung bình chung tích lũy dưới điểm trung bình hoặc thuộc diện cảnh báo kết quả học tập thì phải dừng học chương trình thứ hai\"}, {\"id\": \"g2\", \"ten\": \"điểm trung bình chung tích lũy dưới điểm trung bình hoặc thuộc diện cảnh báo kết quả học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Một trong hai trường hợp: điểm trung bình chung tích lũy của chương trình thứ nhất dưới điểm trung bình, hoặc thuộc diện cảnh báo kết quả học tập (chọn OR theo nghĩa 'hoặc')\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"điểm trung bình chung tích lũy dưới điểm trung bình\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"mo_ta\": \"Điểm trung bình chung tích lũy của chương trình đào tạo thứ nhất đạt dưới điểm trung bình\", \"so_voi\": \"điểm trung bình\"}, {\"id\": \"c2\", \"ten\": \"thuộc diện cảnh báo kết quả học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"mo_ta\": \"Thuộc diện cảnh báo kết quả học tập\", \"toan_tu\": \"thuoc\"}, {\"id\": \"c3\", \"ten\": \"đang học cùng lúc hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"mo_ta\": \"Trong quá trình sinh viên học cùng lúc hai chương trình\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"dừng học chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"Phải dừng học chương trình đào tạo thứ hai ở học kỳ tiếp theo\"}, {\"id\": \"q2\", \"ten\": \"bị loại khỏi danh sách học chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"loai\": \"trang_thai\"}, {\"id\": \"q3\", \"ten\": \"cảnh báo kết quả học tập\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k6\"], \"loai\": \"trang_thai\"}], \"edges\": [{\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"g2\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c1\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c2\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"k1\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"XET\", \"from\": \"c2\", \"to\": \"q3\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d26.k6\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"g1\", \"to\": \"o1\", \"nguon\": \"qc3626.d26.k6\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "sinh viên học cùng lúc hai chương trình bị dừng học chương trình thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Trong quá trình học cùng lúc hai chương trình, khi chương trình thứ nhất đạt điểm trung bình chung tích lũy dưới điểm trung bình hoặc thuộc diện cảnh báo kết quả học tập thì phải dừng học chương trình thứ hai"
+    },
+    {
+     "id": "g2",
+     "ten": "điểm trung bình chung tích lũy dưới điểm trung bình hoặc thuộc diện cảnh báo kết quả học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Một trong hai trường hợp: điểm trung bình chung tích lũy của chương trình thứ nhất dưới điểm trung bình, hoặc thuộc diện cảnh báo kết quả học tập (chọn OR theo nghĩa 'hoặc')"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "điểm trung bình chung tích lũy dưới điểm trung bình",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy của chương trình đào tạo thứ nhất đạt dưới điểm trung bình",
+     "so_voi": "điểm trung bình"
+    },
+    {
+     "id": "c2",
+     "ten": "thuộc diện cảnh báo kết quả học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "mo_ta": "Thuộc diện cảnh báo kết quả học tập",
+     "toan_tu": "thuoc"
+    },
+    {
+     "id": "c3",
+     "ten": "đang học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "mo_ta": "Trong quá trình sinh viên học cùng lúc hai chương trình",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "dừng học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Phải dừng học chương trình đào tạo thứ hai ở học kỳ tiếp theo"
+    },
+    {
+     "id": "q2",
+     "ten": "bị loại khỏi danh sách học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "trang_thai"
+    },
+    {
+     "id": "q3",
+     "ten": "cảnh báo kết quả học tập",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "trang_thai"
+    }
+   ],
+   "edges": [
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "g2",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c1",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c2",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "k1",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "XET",
+     "from": "c2",
+     "to": "q3",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d26.k6"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "g1",
+     "to": "o1",
+     "nguon": "qc3626.d26.k6"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d26.k6",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "o1": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "g1": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d26.k6.g2",
+    "c1": "sem.DieuKien.qc3626.d26.k6.c1",
+    "c2": "sem.DieuKien.qc3626.d26.k6.c2",
+    "c3": "sem.DieuKien.qc3626.d26.k6.c3",
+    "q1": "sem.HeQua.dung_hoc_chuong_trinh_dao_tao_thu_hai",
+    "q2": "sem.HeQua.bi_loai_khoi_danh_sach_hoc_chuong_trinh_dao_tao_thu_hai",
+    "q3": "sem.HeQua.canh_bao_ket_qua_hoc_tap"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+     "ten": "sinh viên học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+     "ten": "sinh viên học cùng lúc hai chương trình bị dừng học chương trình thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Trong quá trình học cùng lúc hai chương trình, khi chương trình thứ nhất đạt điểm trung bình chung tích lũy dưới điểm trung bình hoặc thuộc diện cảnh báo kết quả học tập thì phải dừng học chương trình thứ hai"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k6.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k6.g2",
+     "ten": "điểm trung bình chung tích lũy dưới điểm trung bình hoặc thuộc diện cảnh báo kết quả học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Một trong hai trường hợp: điểm trung bình chung tích lũy của chương trình thứ nhất dưới điểm trung bình, hoặc thuộc diện cảnh báo kết quả học tập (chọn OR theo nghĩa 'hoặc')"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k6.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k6.c1",
+     "ten": "điểm trung bình chung tích lũy dưới điểm trung bình",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "mo_ta": "Điểm trung bình chung tích lũy của chương trình đào tạo thứ nhất đạt dưới điểm trung bình",
+     "so_voi": "điểm trung bình"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k6.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k6.c2",
+     "ten": "thuộc diện cảnh báo kết quả học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "mo_ta": "Thuộc diện cảnh báo kết quả học tập",
+     "toan_tu": "thuoc"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k6.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k6.c3",
+     "ten": "đang học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "mo_ta": "Trong quá trình sinh viên học cùng lúc hai chương trình",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.dung_hoc_chuong_trinh_dao_tao_thu_hai",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.dung_hoc_chuong_trinh_dao_tao_thu_hai",
+     "ten": "dừng học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "Phải dừng học chương trình đào tạo thứ hai ở học kỳ tiếp theo"
+    }
+   },
+   {
+    "id": "sem.HeQua.bi_loai_khoi_danh_sach_hoc_chuong_trinh_dao_tao_thu_hai",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.bi_loai_khoi_danh_sach_hoc_chuong_trinh_dao_tao_thu_hai",
+     "ten": "bị loại khỏi danh sách học chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "trang_thai"
+    }
+   },
+   {
+    "id": "sem.HeQua.canh_bao_ket_qua_hoc_tap",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.canh_bao_ket_qua_hoc_tap",
+     "ten": "cảnh báo kết quả học tập",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k6"
+     ],
+     "loai": "trang_thai"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+    "to": "sem.NhomDieuKien.qc3626.d26.k6.g2",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+    "to": "sem.DieuKien.qc3626.d26.k6.c3",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k6.g2",
+    "to": "sem.DieuKien.qc3626.d26.k6.c1",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k6.g2",
+    "to": "sem.DieuKien.qc3626.d26.k6.c2",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k6.c1",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k6.c2",
+    "to": "sem.HeQua.canh_bao_ket_qua_hoc_tap",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+    "to": "sem.HeQua.dung_hoc_chuong_trinh_dao_tao_thu_hai",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+    "to": "sem.HeQua.bi_loai_khoi_danh_sach_hoc_chuong_trinh_dao_tao_thu_hai",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.NhomDieuKien.qc3626.d26.k6.g1",
+    "to": "sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d26.k6"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d26.k6",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "5d5b8b3a15cf838c0bc18f50beb04225d53c6b543ac1565ca64306b6f06bfcb0",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15959,
+  "output_tokens": 4433,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgfdh3gGspJMrhjTZyLoV'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:52:54+07:00",
+  "latency_s": 18.544,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

@@ -1,0 +1,263 @@
+{
+ "format": 1,
+ "unit": "qc3626.d32.k2",
+ "status": "invalid",
+ "errors": [
+  "edges[0] YEU_CAU 'q1'->'g1': HeQua -> NhomDieuKien is not allowed for YEU_CAU (HoatDong -> NhomDieuKien)"
+ ],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm thưởng thành tích nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\", \"qc3626.d32.k2.a\", \"qc3626.d32.k2.b\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm cộng cho sinh viên đạt thành tích nghiên cứu khoa học\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"thủ trưởng đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"chuc_danh\"}, {\"id\": \"o2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"nguoi\"}], \"HoatDong\": [], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"đạt giải thưởng nghiên cứu khoa học cấp ĐHQGHN, cấp Bộ hoặc cấp đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\", \"qc3626.d32.k2.a\", \"qc3626.d32.k2.b\"], \"ket_hop\": \"OR\", \"mo_ta\": \"Sinh viên được thưởng điểm khi thuộc một trong hai trường hợp: đạt giải cấp ĐHQGHN hoặc cấp Bộ GDĐT (điểm a), hoặc đạt giải cấp đơn vị đào tạo (điểm b). Suy luận OR theo nghĩa các cấp giải là các trường hợp thay thế.\"}, {\"id\": \"g2\", \"ten\": \"công trình nghiên cứu do nhiều sinh viên cùng thực hiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Công trình do nhiều sinh viên cùng thực hiện thì điểm thưởng được chia đều\"}, {\"id\": \"g3\", \"ten\": \"có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên có công bố quốc tế, trong nước hoặc bằng sở hữu trí tuệ thì được cộng điểm không quá 0,2 điểm\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"đạt giải thưởng cấp Đại học Quốc gia Hà Nội hoặc cấp Bộ Giáo dục và Đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2.a\"], \"mo_ta\": \"Đạt giải thưởng cấp Đại học Quốc gia Hà Nội, cấp Bộ Giáo dục và Đào tạo\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"đạt giải thưởng cấp đơn vị đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2.b\"], \"mo_ta\": \"Đạt giải thưởng cấp đơn vị đào tạo\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"mo_ta\": \"Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện\", \"toan_tu\": \"la\"}, {\"id\": \"c4\", \"ten\": \"có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"mo_ta\": \"Sinh viên có công bố quốc tế, công bố trong nước, bằng sở hữu trí tuệ\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được cộng điểm thưởng thành tích nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\", \"qc3626.d32.k2.a\", \"qc3626.d32.k2.b\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Sinh viên được cộng điểm thưởng thành tích nghiên cứu khoa học\"}, {\"id\": \"q2\", \"ten\": \"điểm thưởng được chia đều cho số sinh viên cùng tham gia\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Điểm thưởng được chia đều cho số sinh viên cùng tham gia công trình\"}, {\"id\": \"q3\", \"ten\": \"được cộng không quá 0,2 điểm thưởng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d32.k2\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Được cộng không quá 0,2 điểm\", \"gia_tri\": 0.2, \"don_vi\": \"điểm\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"q1\", \"to\": \"g1\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d32.k2.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d32.k2.b\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c3\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q2\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GOM\", \"from\": \"g3\", \"to\": \"c4\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"DAN_DEN\", \"from\": \"g3\", \"to\": \"q3\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o2\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o2\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o2\", \"nguon\": \"qc3626.d32.k2\"}, {\"type\": \"GIAO_QUY_DINH\", \"from\": \"k1\", \"to\": \"o1\", \"nguon\": \"qc3626.d32.k2\", \"noi_dung\": \"mức điểm cụ thể cộng thêm đối với sinh viên có công bố quốc tế, công bố trong nước, bằng sở hữu trí tuệ\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm thưởng thành tích nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2",
+      "qc3626.d32.k2.a",
+      "qc3626.d32.k2.b"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm cộng cho sinh viên đạt thành tích nghiên cứu khoa học"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "thủ trưởng đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "chuc_danh"
+    },
+    {
+     "id": "o2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "đạt giải thưởng nghiên cứu khoa học cấp ĐHQGHN, cấp Bộ hoặc cấp đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2",
+      "qc3626.d32.k2.a",
+      "qc3626.d32.k2.b"
+     ],
+     "ket_hop": "OR",
+     "mo_ta": "Sinh viên được thưởng điểm khi thuộc một trong hai trường hợp: đạt giải cấp ĐHQGHN hoặc cấp Bộ GDĐT (điểm a), hoặc đạt giải cấp đơn vị đào tạo (điểm b). Suy luận OR theo nghĩa các cấp giải là các trường hợp thay thế."
+    },
+    {
+     "id": "g2",
+     "ten": "công trình nghiên cứu do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Công trình do nhiều sinh viên cùng thực hiện thì điểm thưởng được chia đều"
+    },
+    {
+     "id": "g3",
+     "ten": "có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên có công bố quốc tế, trong nước hoặc bằng sở hữu trí tuệ thì được cộng điểm không quá 0,2 điểm"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "đạt giải thưởng cấp Đại học Quốc gia Hà Nội hoặc cấp Bộ Giáo dục và Đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2.a"
+     ],
+     "mo_ta": "Đạt giải thưởng cấp Đại học Quốc gia Hà Nội, cấp Bộ Giáo dục và Đào tạo",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "đạt giải thưởng cấp đơn vị đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2.b"
+     ],
+     "mo_ta": "Đạt giải thưởng cấp đơn vị đào tạo",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Công trình nghiên cứu khoa học do nhiều sinh viên cùng thực hiện",
+     "toan_tu": "la"
+    },
+    {
+     "id": "c4",
+     "ten": "có công bố quốc tế, công bố trong nước hoặc bằng sở hữu trí tuệ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "mo_ta": "Sinh viên có công bố quốc tế, công bố trong nước, bằng sở hữu trí tuệ",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được cộng điểm thưởng thành tích nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2",
+      "qc3626.d32.k2.a",
+      "qc3626.d32.k2.b"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Sinh viên được cộng điểm thưởng thành tích nghiên cứu khoa học"
+    },
+    {
+     "id": "q2",
+     "ten": "điểm thưởng được chia đều cho số sinh viên cùng tham gia",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Điểm thưởng được chia đều cho số sinh viên cùng tham gia công trình"
+    },
+    {
+     "id": "q3",
+     "ten": "được cộng không quá 0,2 điểm thưởng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d32.k2"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Được cộng không quá 0,2 điểm",
+     "gia_tri": 0.2,
+     "don_vi": "điểm"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "q1",
+     "to": "g1",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d32.k2.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d32.k2.b"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c3",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q2",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GOM",
+     "from": "g3",
+     "to": "c4",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g3",
+     "to": "q3",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o2",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o2",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o2",
+     "nguon": "qc3626.d32.k2"
+    },
+    {
+     "type": "GIAO_QUY_DINH",
+     "from": "k1",
+     "to": "o1",
+     "nguon": "qc3626.d32.k2",
+     "noi_dung": "mức điểm cụ thể cộng thêm đối với sinh viên có công bố quốc tế, công bố trong nước, bằng sở hữu trí tuệ"
+    }
+   ]
+  }
+ },
+ "fragment": null,
+ "metadata": {
+  "unit": "qc3626.d32.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "02fcb23cf3151a175bb491dcc6c184289ba6711af7b3ed67d9d8d8ca75a27e34",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16221,
+  "output_tokens": 5352,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsqzNmhqJVz3EEwW79D'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:46:13+07:00",
+  "latency_s": 20.98,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

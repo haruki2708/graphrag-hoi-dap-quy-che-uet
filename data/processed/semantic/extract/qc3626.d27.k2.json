@@ -1,0 +1,446 @@
+{
+ "format": 1,
+ "unit": "qc3626.d27.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o2\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.e\", \"qc3626.d27.k2.g\", \"qc3626.d27.k2.h\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"đăng ký tự học học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.e\"], \"mo_ta\": \"sinh viên đăng ký tự học học phần chuyên môn thuộc khối kiến thức cơ bản trùng với học phần đã đạt giải quốc gia, quốc tế\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện được tự học và không lên lớp thường xuyên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.e\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên đã đạt giải quốc gia, quốc tế với học phần trùng và được thủ trưởng đơn vị đào tạo đồng ý thì được tự học và không lên lớp thường xuyên\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"học phần trùng với học phần đã đạt giải quốc gia, quốc tế\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.e\"], \"mo_ta\": \"Học phần chuyên môn thuộc khối kiến thức cơ bản trùng với học phần mà sinh viên đã đạt giải quốc gia, quốc tế\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"được thủ trưởng đơn vị đào tạo đồng ý\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.e\"], \"mo_ta\": \"Được thủ trưởng đơn vị đào tạo đồng ý\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"không lên lớp thường xuyên học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.e\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"sinh viên có thể không lên lớp thường xuyên đối với học phần đăng ký tự học\"}, {\"id\": \"q2\", \"ten\": \"dự thi tích lũy học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.e\"], \"loai\": \"nghia_vu\", \"mo_ta\": \"sinh viên phải dự thi tích lũy học phần tự học\"}, {\"id\": \"q3\", \"ten\": \"được một giảng viên hướng dẫn nghiên cứu khoa học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.g\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"mỗi sinh viên được một giảng viên hướng dẫn nghiên cứu khoa học, chậm nhất từ học kỳ thứ tư\"}, {\"id\": \"q4\", \"ten\": \"được khuyến khích tham gia trao đổi sinh viên với trường đại học nước ngoài\", \"bi_danh\": [], \"nguon\": [\"qc3626.d27.k2.h\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được khuyến khích tham gia chương trình trao đổi sinh viên với các trường đại học nước ngoài ít nhất 1 học kỳ\", \"gia_tri\": 1, \"don_vi\": \"học kỳ\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d27.k2.e\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d27.k2.e\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d27.k2.e\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q1\", \"nguon\": \"qc3626.d27.k2.e\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d27.k2.e\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o2\", \"nguon\": \"qc3626.d27.k2.e\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o2\", \"nguon\": \"qc3626.d27.k2.e\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q3\", \"to\": \"o2\", \"nguon\": \"qc3626.d27.k2.g\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q4\", \"to\": \"o2\", \"nguon\": \"qc3626.d27.k2.h\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o2",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.e",
+      "qc3626.d27.k2.g",
+      "qc3626.d27.k2.h"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "đăng ký tự học học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "mo_ta": "sinh viên đăng ký tự học học phần chuyên môn thuộc khối kiến thức cơ bản trùng với học phần đã đạt giải quốc gia, quốc tế"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện được tự học và không lên lớp thường xuyên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đã đạt giải quốc gia, quốc tế với học phần trùng và được thủ trưởng đơn vị đào tạo đồng ý thì được tự học và không lên lớp thường xuyên"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "học phần trùng với học phần đã đạt giải quốc gia, quốc tế",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "mo_ta": "Học phần chuyên môn thuộc khối kiến thức cơ bản trùng với học phần mà sinh viên đã đạt giải quốc gia, quốc tế",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "được thủ trưởng đơn vị đào tạo đồng ý",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "mo_ta": "Được thủ trưởng đơn vị đào tạo đồng ý",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "không lên lớp thường xuyên học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên có thể không lên lớp thường xuyên đối với học phần đăng ký tự học"
+    },
+    {
+     "id": "q2",
+     "ten": "dự thi tích lũy học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "sinh viên phải dự thi tích lũy học phần tự học"
+    },
+    {
+     "id": "q3",
+     "ten": "được một giảng viên hướng dẫn nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.g"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "mỗi sinh viên được một giảng viên hướng dẫn nghiên cứu khoa học, chậm nhất từ học kỳ thứ tư"
+    },
+    {
+     "id": "q4",
+     "ten": "được khuyến khích tham gia trao đổi sinh viên với trường đại học nước ngoài",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d27.k2.h"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được khuyến khích tham gia chương trình trao đổi sinh viên với các trường đại học nước ngoài ít nhất 1 học kỳ",
+     "gia_tri": 1,
+     "don_vi": "học kỳ"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d27.k2.e"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d27.k2.e"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d27.k2.e"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q1",
+     "nguon": "qc3626.d27.k2.e"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d27.k2.e"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o2",
+     "nguon": "qc3626.d27.k2.e"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o2",
+     "nguon": "qc3626.d27.k2.e"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q3",
+     "to": "o2",
+     "nguon": "qc3626.d27.k2.g"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q4",
+     "to": "o2",
+     "nguon": "qc3626.d27.k2.h"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d27.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o2": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.dang_ky_tu_hoc_hoc_phan",
+    "g1": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+    "c1": "sem.DieuKien.qc3626.d27.k2.c1",
+    "c2": "sem.DieuKien.qc3626.d27.k2.c2",
+    "q1": "sem.HeQua.khong_len_lop_thuong_xuyen_hoc_phan",
+    "q2": "sem.HeQua.du_thi_tich_luy_hoc_phan",
+    "q3": "sem.HeQua.duoc_mot_giang_vien_huong_dan_nghien_cuu_khoa_hoc",
+    "q4": "sem.HeQua.duoc_khuyen_khich_tham_gia_trao_doi_sinh_vien_voi_truong_dai_hoc_nuoc_ngoai"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.e",
+      "qc3626.d27.k2.g",
+      "qc3626.d27.k2.h"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_tu_hoc_hoc_phan",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_tu_hoc_hoc_phan",
+     "ten": "đăng ký tự học học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "mo_ta": "sinh viên đăng ký tự học học phần chuyên môn thuộc khối kiến thức cơ bản trùng với học phần đã đạt giải quốc gia, quốc tế"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+     "ten": "điều kiện được tự học và không lên lớp thường xuyên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên đã đạt giải quốc gia, quốc tế với học phần trùng và được thủ trưởng đơn vị đào tạo đồng ý thì được tự học và không lên lớp thường xuyên"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d27.k2.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d27.k2.c1",
+     "ten": "học phần trùng với học phần đã đạt giải quốc gia, quốc tế",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "mo_ta": "Học phần chuyên môn thuộc khối kiến thức cơ bản trùng với học phần mà sinh viên đã đạt giải quốc gia, quốc tế",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d27.k2.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d27.k2.c2",
+     "ten": "được thủ trưởng đơn vị đào tạo đồng ý",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "mo_ta": "Được thủ trưởng đơn vị đào tạo đồng ý",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.khong_len_lop_thuong_xuyen_hoc_phan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.khong_len_lop_thuong_xuyen_hoc_phan",
+     "ten": "không lên lớp thường xuyên học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "sinh viên có thể không lên lớp thường xuyên đối với học phần đăng ký tự học"
+    }
+   },
+   {
+    "id": "sem.HeQua.du_thi_tich_luy_hoc_phan",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.du_thi_tich_luy_hoc_phan",
+     "ten": "dự thi tích lũy học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.e"
+     ],
+     "loai": "nghia_vu",
+     "mo_ta": "sinh viên phải dự thi tích lũy học phần tự học"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_mot_giang_vien_huong_dan_nghien_cuu_khoa_hoc",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_mot_giang_vien_huong_dan_nghien_cuu_khoa_hoc",
+     "ten": "được một giảng viên hướng dẫn nghiên cứu khoa học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.g"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "mỗi sinh viên được một giảng viên hướng dẫn nghiên cứu khoa học, chậm nhất từ học kỳ thứ tư"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_khuyen_khich_tham_gia_trao_doi_sinh_vien_voi_truong_dai_hoc_nuoc_ngoai",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_khuyen_khich_tham_gia_trao_doi_sinh_vien_voi_truong_dai_hoc_nuoc_ngoai",
+     "ten": "được khuyến khích tham gia trao đổi sinh viên với trường đại học nước ngoài",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d27.k2.h"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được khuyến khích tham gia chương trình trao đổi sinh viên với các trường đại học nước ngoài ít nhất 1 học kỳ",
+     "gia_tri": 1,
+     "don_vi": "học kỳ"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.dang_ky_tu_hoc_hoc_phan",
+    "to": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+    "props": {
+     "nguon": "qc3626.d27.k2.e"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+    "to": "sem.DieuKien.qc3626.d27.k2.c1",
+    "props": {
+     "nguon": "qc3626.d27.k2.e"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+    "to": "sem.DieuKien.qc3626.d27.k2.c2",
+    "props": {
+     "nguon": "qc3626.d27.k2.e"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+    "to": "sem.HeQua.khong_len_lop_thuong_xuyen_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d27.k2.e"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d27.k2.g1",
+    "to": "sem.HeQua.du_thi_tich_luy_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d27.k2.e"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.khong_len_lop_thuong_xuyen_hoc_phan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d27.k2.e"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.du_thi_tich_luy_hoc_phan",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d27.k2.e"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_mot_giang_vien_huong_dan_nghien_cuu_khoa_hoc",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d27.k2.g"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_khuyen_khich_tham_gia_trao_doi_sinh_vien_voi_truong_dai_hoc_nuoc_ngoai",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d27.k2.h"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d27.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "5c40ecee11c80a828b6a1345e3d44165fc63bc7cc5006a46bf9cdfebb56e1a9e",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 17289,
+  "output_tokens": 4576,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsfGLuWRcv5rkfbgGEu'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:43:47+07:00",
+  "latency_s": 18.36,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

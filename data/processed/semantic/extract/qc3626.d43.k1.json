@@ -1,0 +1,206 @@
+{
+ "format": 1,
+ "unit": "qc3626.d43.k1",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm trung bình chung học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k1\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm trung bình chung tính theo học kỳ, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số\"}, {\"id\": \"k2\", \"ten\": \"điểm trung bình chung các học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k1\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm trung bình chung tính trên các học phần, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số\"}, {\"id\": \"k3\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [\"điểm trung bình chung tích luỹ\"], \"nguon\": [\"qc3626.d43.k1\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm trung bình chung tính trên các học phần đã tích lũy, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số\"}, {\"id\": \"k4\", \"ten\": \"điểm chữ\", \"bi_danh\": [\"mức điểm chữ\"], \"nguon\": [\"qc3626.d43.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"Mức điểm đánh giá học phần theo thang chữ, được quy đổi thành điểm số khi tính điểm trung bình chung\"}, {\"id\": \"k5\", \"ten\": \"điểm số\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k1\"], \"loai\": \"khac\", \"dinh_nghia\": \"Điểm số tương ứng với mức điểm chữ, dùng để tính điểm trung bình chung\"}], \"DoiTuong\": [], \"HoatDong\": [], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": []}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tính theo học kỳ, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số"
+    },
+    {
+     "id": "k2",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tính trên các học phần, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tính trên các học phần đã tích lũy, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số"
+    },
+    {
+     "id": "k4",
+     "ten": "điểm chữ",
+     "bi_danh": [
+      "mức điểm chữ"
+     ],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Mức điểm đánh giá học phần theo thang chữ, được quy đổi thành điểm số khi tính điểm trung bình chung"
+    },
+    {
+     "id": "k5",
+     "ten": "điểm số",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Điểm số tương ứng với mức điểm chữ, dùng để tính điểm trung bình chung"
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": []
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d43.k1",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "k2": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "k3": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "k4": "sem.KhaiNiem.diem_chu",
+    "k5": "sem.KhaiNiem.diem_so"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tính theo học kỳ, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tính trên các học phần, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [
+      "điểm trung bình chung tích luỹ"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tính trên các học phần đã tích lũy, với mức điểm chữ của mỗi học phần được quy đổi thành điểm số"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_chu",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_chu",
+     "ten": "điểm chữ",
+     "bi_danh": [
+      "mức điểm chữ"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Mức điểm đánh giá học phần theo thang chữ, được quy đổi thành điểm số khi tính điểm trung bình chung"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_so",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_so",
+     "ten": "điểm số",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k1"
+     ],
+     "loai": "khac",
+     "dinh_nghia": "Điểm số tương ứng với mức điểm chữ, dùng để tính điểm trung bình chung"
+    }
+   }
+  ],
+  "edges": []
+ },
+ "metadata": {
+  "unit": "qc3626.d43.k1",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "fc2372ab83adc4c6d12758f9f13d56e75b23262bdf96d42e9df6e2f7c76cbb31",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15964,
+  "output_tokens": 1324,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgfdo533cUvuQtC8aszmW'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:54:16+07:00",
+  "latency_s": 6.555,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

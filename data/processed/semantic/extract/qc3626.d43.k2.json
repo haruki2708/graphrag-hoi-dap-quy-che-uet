@@ -1,0 +1,719 @@
+{
+ "format": 1,
+ "unit": "qc3626.d43.k2",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"điểm trung bình chung học kỳ\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm trung bình chung học kỳ, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần trong học kỳ, làm tròn đến 2 chữ số thập phân\"}, {\"id\": \"k2\", \"ten\": \"điểm trung bình chung các học phần\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm trung bình chung các học phần, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần tính từ đầu khóa học tới thời điểm xem xét, làm tròn đến 2 chữ số thập phân\"}, {\"id\": \"k3\", \"ten\": \"điểm trung bình chung tích lũy\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"loai\": \"dai_luong\", \"dinh_nghia\": \"Điểm trung bình chung tích lũy, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần đã tích lũy, làm tròn đến 2 chữ số thập phân\"}, {\"id\": \"k4\", \"ten\": \"học phần giáo dục quốc phòng - an ninh\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"loai\": \"loai_hoc_phan\"}, {\"id\": \"k5\", \"ten\": \"học phần giáo dục thể chất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"loai\": \"loai_hoc_phan\"}], \"DoiTuong\": [], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"xét cảnh báo học vụ\", \"bi_danh\": [\"cảnh báo học tập\"], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"xét cảnh báo học vụ sinh viên\"}, {\"id\": \"h2\", \"ten\": \"xét buộc thôi học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"xét buộc thôi học đối với sinh viên\"}, {\"id\": \"h3\", \"ten\": \"xét nghỉ học tạm thời\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"xét nghỉ học tạm thời đối với sinh viên\"}, {\"id\": \"h4\", \"ten\": \"xếp loại học lực\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"xếp loại học lực sinh viên sau mỗi học kỳ\"}, {\"id\": \"h5\", \"ten\": \"xét học bổng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"xét học bổng sau mỗi học kỳ\"}, {\"id\": \"h6\", \"ten\": \"xét khen thưởng\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"xét khen thưởng sau mỗi học kỳ\"}, {\"id\": \"h7\", \"ten\": \"đăng ký học cùng lúc chương trình đào tạo thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"đăng ký học cùng lúc chương trình đào tạo thứ hai\"}, {\"id\": \"h8\", \"ten\": \"chuyển đổi sinh viên giữa các chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"chuyển đổi sinh viên giữa các chương trình đào tạo\"}, {\"id\": \"h9\", \"ten\": \"xếp hạng tốt nghiệp\", \"bi_danh\": [], \"nguon\": [\"qc3626.d43.k2\"], \"mo_ta\": \"xếp hạng tốt nghiệp của sinh viên\"}], \"NhomDieuKien\": [], \"DieuKien\": [], \"HeQua\": [], \"edges\": [{\"type\": \"TINH_VAO\", \"from\": \"k4\", \"to\": \"k1\", \"nguon\": \"qc3626.d43.k2\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k4\", \"to\": \"k2\", \"nguon\": \"qc3626.d43.k2\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k4\", \"to\": \"k3\", \"nguon\": \"qc3626.d43.k2\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k5\", \"to\": \"k1\", \"nguon\": \"qc3626.d43.k2\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k5\", \"to\": \"k2\", \"nguon\": \"qc3626.d43.k2\", \"co\": false, \"boi_canh\": null}, {\"type\": \"TINH_VAO\", \"from\": \"k5\", \"to\": \"k3\", \"nguon\": \"qc3626.d43.k2\", \"co\": false, \"boi_canh\": null}, {\"type\": \"DUNG_DE\", \"from\": \"k1\", \"to\": \"h1\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k1\", \"to\": \"h2\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k1\", \"to\": \"h3\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k1\", \"to\": \"h4\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k1\", \"to\": \"h5\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k1\", \"to\": \"h6\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k2\", \"to\": \"h7\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k2\", \"to\": \"h8\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k3\", \"to\": \"h1\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k3\", \"to\": \"h2\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}, {\"type\": \"DUNG_DE\", \"from\": \"k3\", \"to\": \"h9\", \"nguon\": \"qc3626.d43.k2\", \"co\": true}]}",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung học kỳ, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần trong học kỳ, làm tròn đến 2 chữ số thập phân"
+    },
+    {
+     "id": "k2",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung các học phần, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần tính từ đầu khóa học tới thời điểm xem xét, làm tròn đến 2 chữ số thập phân"
+    },
+    {
+     "id": "k3",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tích lũy, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần đã tích lũy, làm tròn đến 2 chữ số thập phân"
+    },
+    {
+     "id": "k4",
+     "ten": "học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "loai_hoc_phan"
+    },
+    {
+     "id": "k5",
+     "ten": "học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   ],
+   "DoiTuong": [],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "xét cảnh báo học vụ",
+     "bi_danh": [
+      "cảnh báo học tập"
+     ],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét cảnh báo học vụ sinh viên"
+    },
+    {
+     "id": "h2",
+     "ten": "xét buộc thôi học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét buộc thôi học đối với sinh viên"
+    },
+    {
+     "id": "h3",
+     "ten": "xét nghỉ học tạm thời",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét nghỉ học tạm thời đối với sinh viên"
+    },
+    {
+     "id": "h4",
+     "ten": "xếp loại học lực",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xếp loại học lực sinh viên sau mỗi học kỳ"
+    },
+    {
+     "id": "h5",
+     "ten": "xét học bổng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét học bổng sau mỗi học kỳ"
+    },
+    {
+     "id": "h6",
+     "ten": "xét khen thưởng",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét khen thưởng sau mỗi học kỳ"
+    },
+    {
+     "id": "h7",
+     "ten": "đăng ký học cùng lúc chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "đăng ký học cùng lúc chương trình đào tạo thứ hai"
+    },
+    {
+     "id": "h8",
+     "ten": "chuyển đổi sinh viên giữa các chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "chuyển đổi sinh viên giữa các chương trình đào tạo"
+    },
+    {
+     "id": "h9",
+     "ten": "xếp hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xếp hạng tốt nghiệp của sinh viên"
+    }
+   ],
+   "NhomDieuKien": [],
+   "DieuKien": [],
+   "HeQua": [],
+   "edges": [
+    {
+     "type": "TINH_VAO",
+     "from": "k4",
+     "to": "k1",
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k4",
+     "to": "k2",
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k4",
+     "to": "k3",
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k5",
+     "to": "k1",
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k5",
+     "to": "k2",
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "TINH_VAO",
+     "from": "k5",
+     "to": "k3",
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k1",
+     "to": "h1",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k1",
+     "to": "h2",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k1",
+     "to": "h3",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k1",
+     "to": "h4",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k1",
+     "to": "h5",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k1",
+     "to": "h6",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k2",
+     "to": "h7",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k2",
+     "to": "h8",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k3",
+     "to": "h1",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k3",
+     "to": "h2",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    },
+    {
+     "type": "DUNG_DE",
+     "from": "k3",
+     "to": "h9",
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d43.k2",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "k2": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "k3": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "k4": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "k5": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "h1": "sem.HoatDong.xet_canh_bao_hoc_vu",
+    "h2": "sem.HoatDong.xet_buoc_thoi_hoc",
+    "h3": "sem.HoatDong.xet_nghi_hoc_tam_thoi",
+    "h4": "sem.HoatDong.xep_loai_hoc_luc",
+    "h5": "sem.HoatDong.xet_hoc_bong",
+    "h6": "sem.HoatDong.xet_khen_thuong",
+    "h7": "sem.HoatDong.dang_ky_hoc_cung_luc_chuong_trinh_dao_tao_thu_hai",
+    "h8": "sem.HoatDong.chuyen_doi_sinh_vien_giua_cac_chuong_trinh_dao_tao",
+    "h9": "sem.HoatDong.xep_hang_tot_nghiep"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+     "ten": "điểm trung bình chung học kỳ",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung học kỳ, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần trong học kỳ, làm tròn đến 2 chữ số thập phân"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+     "ten": "điểm trung bình chung các học phần",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung các học phần, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần tính từ đầu khóa học tới thời điểm xem xét, làm tròn đến 2 chữ số thập phân"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+     "ten": "điểm trung bình chung tích lũy",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "dai_luong",
+     "dinh_nghia": "Điểm trung bình chung tích lũy, tính theo công thức A = Σ(a_i × n_i) / Σn_i với n là tổng số học phần đã tích lũy, làm tròn đến 2 chữ số thập phân"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+     "ten": "học phần giáo dục quốc phòng - an ninh",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+     "ten": "học phần giáo dục thể chất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "loai": "loai_hoc_phan"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_canh_bao_hoc_vu",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_canh_bao_hoc_vu",
+     "ten": "xét cảnh báo học vụ",
+     "bi_danh": [
+      "cảnh báo học tập"
+     ],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét cảnh báo học vụ sinh viên"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_buoc_thoi_hoc",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_buoc_thoi_hoc",
+     "ten": "xét buộc thôi học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét buộc thôi học đối với sinh viên"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_nghi_hoc_tam_thoi",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_nghi_hoc_tam_thoi",
+     "ten": "xét nghỉ học tạm thời",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét nghỉ học tạm thời đối với sinh viên"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xep_loai_hoc_luc",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xep_loai_hoc_luc",
+     "ten": "xếp loại học lực",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xếp loại học lực sinh viên sau mỗi học kỳ"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_hoc_bong",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_hoc_bong",
+     "ten": "xét học bổng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét học bổng sau mỗi học kỳ"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xet_khen_thuong",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xet_khen_thuong",
+     "ten": "xét khen thưởng",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xét khen thưởng sau mỗi học kỳ"
+    }
+   },
+   {
+    "id": "sem.HoatDong.dang_ky_hoc_cung_luc_chuong_trinh_dao_tao_thu_hai",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.dang_ky_hoc_cung_luc_chuong_trinh_dao_tao_thu_hai",
+     "ten": "đăng ký học cùng lúc chương trình đào tạo thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "đăng ký học cùng lúc chương trình đào tạo thứ hai"
+    }
+   },
+   {
+    "id": "sem.HoatDong.chuyen_doi_sinh_vien_giua_cac_chuong_trinh_dao_tao",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.chuyen_doi_sinh_vien_giua_cac_chuong_trinh_dao_tao",
+     "ten": "chuyển đổi sinh viên giữa các chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "chuyển đổi sinh viên giữa các chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.HoatDong.xep_hang_tot_nghiep",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.xep_hang_tot_nghiep",
+     "ten": "xếp hạng tốt nghiệp",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d43.k2"
+     ],
+     "mo_ta": "xếp hạng tốt nghiệp của sinh viên"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "TINH_VAO",
+    "from": "sem.KhaiNiem.hoc_phan_giao_duc_the_chat",
+    "to": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": false,
+     "boi_canh": null
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "to": "sem.HoatDong.xet_canh_bao_hoc_vu",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "to": "sem.HoatDong.xet_buoc_thoi_hoc",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "to": "sem.HoatDong.xet_nghi_hoc_tam_thoi",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "to": "sem.HoatDong.xep_loai_hoc_luc",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "to": "sem.HoatDong.xet_hoc_bong",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_hoc_ky",
+    "to": "sem.HoatDong.xet_khen_thuong",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "to": "sem.HoatDong.dang_ky_hoc_cung_luc_chuong_trinh_dao_tao_thu_hai",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_cac_hoc_phan",
+    "to": "sem.HoatDong.chuyen_doi_sinh_vien_giua_cac_chuong_trinh_dao_tao",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "to": "sem.HoatDong.xet_canh_bao_hoc_vu",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "to": "sem.HoatDong.xet_buoc_thoi_hoc",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   },
+   {
+    "type": "DUNG_DE",
+    "from": "sem.KhaiNiem.diem_trung_binh_chung_tich_luy",
+    "to": "sem.HoatDong.xep_hang_tot_nghiep",
+    "props": {
+     "nguon": "qc3626.d43.k2",
+     "co": true
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d43.k2",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "638969d89e55517634a670916e58f85c886257866d76e04e4bacd62b117ad67a",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 16273,
+  "output_tokens": 4771,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgfdoZ2JRrqis4qGGMdQz'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:54:22+07:00",
+  "latency_s": 18.125,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}

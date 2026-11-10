@@ -1,0 +1,418 @@
+{
+ "format": 1,
+ "unit": "qc3626.d23.k3",
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"rút bớt học phần đã đăng ký\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3\"], \"mo_ta\": \"sinh viên xin rút bớt các học phần đã đăng ký sau khi có danh sách lớp chính thức\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"điều kiện rút bớt học phần đã đăng ký\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3.a\", \"qc3626.d23.k3.b\", \"qc3626.d23.k3.c\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Rút bớt học phần phải đồng thời đáp ứng các điều kiện a, b, c (liệt kê các điều kiện nên suy luận là đủ cả ba)\"}, {\"id\": \"g2\", \"ten\": \"giảng viên đã nhận giấy báo của Phòng Đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Sinh viên chỉ được không lên lớp khi giảng viên phụ trách học phần đã nhận giấy báo của Phòng Đào tạo\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"sinh viên tự viết đơn gửi Phòng Đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3.a\"], \"mo_ta\": \"Sinh viên phải tự viết đơn gửi Phòng Đào tạo\", \"toan_tu\": \"co\"}, {\"id\": \"c2\", \"ten\": \"được thủ trưởng đơn vị đào tạo chấp nhận\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3.b\"], \"mo_ta\": \"Được thủ trưởng đơn vị đào tạo chấp nhận\", \"toan_tu\": \"co\"}, {\"id\": \"c3\", \"ten\": \"vi phạm quy định tại khoản 1, Điều 21\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3.c\"], \"mo_ta\": \"Vi phạm quy định tại khoản 1, Điều 21 của Quy chế này\", \"toan_tu\": \"co\", \"phu_dinh\": true}, {\"id\": \"c4\", \"ten\": \"giảng viên phụ trách nhận giấy báo của Phòng Đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3\"], \"mo_ta\": \"Giảng viên phụ trách học phần nhận được giấy báo của Phòng Đào tạo\", \"toan_tu\": \"co\", \"moc\": \"sau khi giảng viên phụ trách học phần nhận được giấy báo của Phòng Đào tạo\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"được không lên lớp đối với học phần xin rút bớt\", \"bi_danh\": [], \"nguon\": [\"qc3626.d23.k3\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"được không lên lớp đối với học phần xin rút bớt\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h1\", \"to\": \"g1\", \"nguon\": \"qc3626.d23.k3\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d23.k3.a\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c2\", \"nguon\": \"qc3626.d23.k3.b\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c3\", \"nguon\": \"qc3626.d23.k3.c\"}, {\"type\": \"GOM\", \"from\": \"g2\", \"to\": \"c4\", \"nguon\": \"qc3626.d23.k3\"}, {\"type\": \"DAN_DEN\", \"from\": \"g2\", \"to\": \"q1\", \"nguon\": \"qc3626.d23.k3\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d23.k3\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "rút bớt học phần đã đăng ký",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "mo_ta": "sinh viên xin rút bớt các học phần đã đăng ký sau khi có danh sách lớp chính thức"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "điều kiện rút bớt học phần đã đăng ký",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3.a",
+      "qc3626.d23.k3.b",
+      "qc3626.d23.k3.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Rút bớt học phần phải đồng thời đáp ứng các điều kiện a, b, c (liệt kê các điều kiện nên suy luận là đủ cả ba)"
+    },
+    {
+     "id": "g2",
+     "ten": "giảng viên đã nhận giấy báo của Phòng Đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chỉ được không lên lớp khi giảng viên phụ trách học phần đã nhận giấy báo của Phòng Đào tạo"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "sinh viên tự viết đơn gửi Phòng Đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3.a"
+     ],
+     "mo_ta": "Sinh viên phải tự viết đơn gửi Phòng Đào tạo",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c2",
+     "ten": "được thủ trưởng đơn vị đào tạo chấp nhận",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3.b"
+     ],
+     "mo_ta": "Được thủ trưởng đơn vị đào tạo chấp nhận",
+     "toan_tu": "co"
+    },
+    {
+     "id": "c3",
+     "ten": "vi phạm quy định tại khoản 1, Điều 21",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3.c"
+     ],
+     "mo_ta": "Vi phạm quy định tại khoản 1, Điều 21 của Quy chế này",
+     "toan_tu": "co",
+     "phu_dinh": true
+    },
+    {
+     "id": "c4",
+     "ten": "giảng viên phụ trách nhận giấy báo của Phòng Đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "mo_ta": "Giảng viên phụ trách học phần nhận được giấy báo của Phòng Đào tạo",
+     "toan_tu": "co",
+     "moc": "sau khi giảng viên phụ trách học phần nhận được giấy báo của Phòng Đào tạo"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "được không lên lớp đối với học phần xin rút bớt",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được không lên lớp đối với học phần xin rút bớt"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h1",
+     "to": "g1",
+     "nguon": "qc3626.d23.k3"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d23.k3.a"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c2",
+     "nguon": "qc3626.d23.k3.b"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c3",
+     "nguon": "qc3626.d23.k3.c"
+    },
+    {
+     "type": "GOM",
+     "from": "g2",
+     "to": "c4",
+     "nguon": "qc3626.d23.k3"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g2",
+     "to": "q1",
+     "nguon": "qc3626.d23.k3"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d23.k3"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d23.k3",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+    "g1": "sem.NhomDieuKien.qc3626.d23.k3.g1",
+    "g2": "sem.NhomDieuKien.qc3626.d23.k3.g2",
+    "c1": "sem.DieuKien.qc3626.d23.k3.c1",
+    "c2": "sem.DieuKien.qc3626.d23.k3.c2",
+    "c3": "sem.DieuKien.qc3626.d23.k3.c3",
+    "c4": "sem.DieuKien.qc3626.d23.k3.c4",
+    "q1": "sem.HeQua.duoc_khong_len_lop_doi_voi_hoc_phan_xin_rut_bot"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+     "ten": "rút bớt học phần đã đăng ký",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "mo_ta": "sinh viên xin rút bớt các học phần đã đăng ký sau khi có danh sách lớp chính thức"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d23.k3.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d23.k3.g1",
+     "ten": "điều kiện rút bớt học phần đã đăng ký",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3.a",
+      "qc3626.d23.k3.b",
+      "qc3626.d23.k3.c"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Rút bớt học phần phải đồng thời đáp ứng các điều kiện a, b, c (liệt kê các điều kiện nên suy luận là đủ cả ba)"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d23.k3.g2",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d23.k3.g2",
+     "ten": "giảng viên đã nhận giấy báo của Phòng Đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Sinh viên chỉ được không lên lớp khi giảng viên phụ trách học phần đã nhận giấy báo của Phòng Đào tạo"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k3.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k3.c1",
+     "ten": "sinh viên tự viết đơn gửi Phòng Đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3.a"
+     ],
+     "mo_ta": "Sinh viên phải tự viết đơn gửi Phòng Đào tạo",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k3.c2",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k3.c2",
+     "ten": "được thủ trưởng đơn vị đào tạo chấp nhận",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3.b"
+     ],
+     "mo_ta": "Được thủ trưởng đơn vị đào tạo chấp nhận",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k3.c3",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k3.c3",
+     "ten": "vi phạm quy định tại khoản 1, Điều 21",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3.c"
+     ],
+     "mo_ta": "Vi phạm quy định tại khoản 1, Điều 21 của Quy chế này",
+     "toan_tu": "co",
+     "phu_dinh": true
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d23.k3.c4",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d23.k3.c4",
+     "ten": "giảng viên phụ trách nhận giấy báo của Phòng Đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "mo_ta": "Giảng viên phụ trách học phần nhận được giấy báo của Phòng Đào tạo",
+     "toan_tu": "co",
+     "moc": "sau khi giảng viên phụ trách học phần nhận được giấy báo của Phòng Đào tạo"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_khong_len_lop_doi_voi_hoc_phan_xin_rut_bot",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_khong_len_lop_doi_voi_hoc_phan_xin_rut_bot",
+     "ten": "được không lên lớp đối với học phần xin rút bớt",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d23.k3"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "được không lên lớp đối với học phần xin rút bớt"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.rut_bot_hoc_phan_da_dang_ky",
+    "to": "sem.NhomDieuKien.qc3626.d23.k3.g1",
+    "props": {
+     "nguon": "qc3626.d23.k3"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k3.g1",
+    "to": "sem.DieuKien.qc3626.d23.k3.c1",
+    "props": {
+     "nguon": "qc3626.d23.k3.a"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k3.g1",
+    "to": "sem.DieuKien.qc3626.d23.k3.c2",
+    "props": {
+     "nguon": "qc3626.d23.k3.b"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k3.g1",
+    "to": "sem.DieuKien.qc3626.d23.k3.c3",
+    "props": {
+     "nguon": "qc3626.d23.k3.c"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d23.k3.g2",
+    "to": "sem.DieuKien.qc3626.d23.k3.c4",
+    "props": {
+     "nguon": "qc3626.d23.k3"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d23.k3.g2",
+    "to": "sem.HeQua.duoc_khong_len_lop_doi_voi_hoc_phan_xin_rut_bot",
+    "props": {
+     "nguon": "qc3626.d23.k3"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_khong_len_lop_doi_voi_hoc_phan_xin_rut_bot",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d23.k3"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d23.k3",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "0c51144b3511ce6629ec24ee7d41000834c541822ca8311b76b843d6744edf9f",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15990,
+  "output_tokens": 3770,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011CgtsUjt3c19fKwzXwjGBH'}",
+  "from_cache": false,
+  "called_at": "2026-11-10T14:41:24+07:00",
+  "latency_s": 15.599,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": false
+ }
+}

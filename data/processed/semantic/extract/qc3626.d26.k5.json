@@ -1,0 +1,367 @@
+{
+ "format": 1,
+ "unit": "qc3626.d26.k5",
+ "status": "ok",
+ "errors": [],
+ "warnings": [
+  "edges[5] XET 'c1'->'q2': to HeQua has loai 'quyen_loi'; schema 2.2 expects ['trang_thai']"
+ ],
+ "raw": {
+  "text": "```json\n{\"KhaiNiem\": [{\"id\": \"k1\", \"ten\": \"thời gian tối đa được phép học\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"loai\": \"dai_luong\"}], \"DoiTuong\": [{\"id\": \"o1\", \"ten\": \"sinh viên\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"loai\": \"nguoi\"}], \"HoatDong\": [{\"id\": \"h1\", \"ten\": \"học cùng lúc hai chương trình đào tạo\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"mo_ta\": \"sinh viên học cùng lúc hai chương trình đào tạo\"}, {\"id\": \"h2\", \"ten\": \"công nhận kết quả học phần khi học chương trình thứ hai\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"mo_ta\": \"khi học chương trình thứ hai, sinh viên được công nhận kết quả của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất\"}], \"NhomDieuKien\": [{\"id\": \"g1\", \"ten\": \"học phần tương đương trong chương trình thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"ket_hop\": \"AND\", \"mo_ta\": \"Học phần được công nhận kết quả khi có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất\"}], \"DieuKien\": [{\"id\": \"c1\", \"ten\": \"học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"mo_ta\": \"Học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất\", \"toan_tu\": \"co\"}], \"HeQua\": [{\"id\": \"q1\", \"ten\": \"thời gian tối đa học cùng lúc hai chương trình bằng thời gian tối đa của chương trình thứ nhất\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"loai\": \"gioi_han\", \"mo_ta\": \"Thời gian tối đa được phép học đối với sinh viên học cùng lúc hai chương trình là thời gian tối đa quy định cho chương trình thứ nhất\"}, {\"id\": \"q2\", \"ten\": \"được công nhận kết quả học phần tương đương\", \"bi_danh\": [], \"nguon\": [\"qc3626.d26.k5\"], \"loai\": \"quyen_loi\", \"mo_ta\": \"Được công nhận kết quả của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất\"}], \"edges\": [{\"type\": \"YEU_CAU\", \"from\": \"h2\", \"to\": \"g1\", \"nguon\": \"qc3626.d26.k5\"}, {\"type\": \"GOM\", \"from\": \"g1\", \"to\": \"c1\", \"nguon\": \"qc3626.d26.k5\"}, {\"type\": \"DAN_DEN\", \"from\": \"g1\", \"to\": \"q2\", \"nguon\": \"qc3626.d26.k5\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q1\", \"to\": \"o1\", \"nguon\": \"qc3626.d26.k5\"}, {\"type\": \"AP_DUNG_CHO\", \"from\": \"q2\", \"to\": \"o1\", \"nguon\": \"qc3626.d26.k5\"}, {\"type\": \"XET\", \"from\": \"c1\", \"to\": \"q2\", \"nguon\": \"qc3626.d26.k5\"}]}\n```",
+  "parsed": {
+   "KhaiNiem": [
+    {
+     "id": "k1",
+     "ten": "thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "dai_luong"
+    }
+   ],
+   "DoiTuong": [
+    {
+     "id": "o1",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "nguoi"
+    }
+   ],
+   "HoatDong": [
+    {
+     "id": "h1",
+     "ten": "học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "mo_ta": "sinh viên học cùng lúc hai chương trình đào tạo"
+    },
+    {
+     "id": "h2",
+     "ten": "công nhận kết quả học phần khi học chương trình thứ hai",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "mo_ta": "khi học chương trình thứ hai, sinh viên được công nhận kết quả của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất"
+    }
+   ],
+   "NhomDieuKien": [
+    {
+     "id": "g1",
+     "ten": "học phần tương đương trong chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần được công nhận kết quả khi có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất"
+    }
+   ],
+   "DieuKien": [
+    {
+     "id": "c1",
+     "ten": "học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "mo_ta": "Học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất",
+     "toan_tu": "co"
+    }
+   ],
+   "HeQua": [
+    {
+     "id": "q1",
+     "ten": "thời gian tối đa học cùng lúc hai chương trình bằng thời gian tối đa của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian tối đa được phép học đối với sinh viên học cùng lúc hai chương trình là thời gian tối đa quy định cho chương trình thứ nhất"
+    },
+    {
+     "id": "q2",
+     "ten": "được công nhận kết quả học phần tương đương",
+     "bi_danh": [],
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được công nhận kết quả của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất"
+    }
+   ],
+   "edges": [
+    {
+     "type": "YEU_CAU",
+     "from": "h2",
+     "to": "g1",
+     "nguon": "qc3626.d26.k5"
+    },
+    {
+     "type": "GOM",
+     "from": "g1",
+     "to": "c1",
+     "nguon": "qc3626.d26.k5"
+    },
+    {
+     "type": "DAN_DEN",
+     "from": "g1",
+     "to": "q2",
+     "nguon": "qc3626.d26.k5"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q1",
+     "to": "o1",
+     "nguon": "qc3626.d26.k5"
+    },
+    {
+     "type": "AP_DUNG_CHO",
+     "from": "q2",
+     "to": "o1",
+     "nguon": "qc3626.d26.k5"
+    },
+    {
+     "type": "XET",
+     "from": "c1",
+     "to": "q2",
+     "nguon": "qc3626.d26.k5"
+    }
+   ]
+  }
+ },
+ "fragment": {
+  "meta": {
+   "unit": "qc3626.d26.k5",
+   "nguon_loai": "trich_xuat",
+   "id_map": {
+    "k1": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "o1": "sem.DoiTuong.sinh_vien",
+    "h1": "sem.HoatDong.hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "h2": "sem.HoatDong.cong_nhan_ket_qua_hoc_phan_khi_hoc_chuong_trinh_thu_hai",
+    "g1": "sem.NhomDieuKien.qc3626.d26.k5.g1",
+    "c1": "sem.DieuKien.qc3626.d26.k5.c1",
+    "q1": "sem.HeQua.thoi_gian_toi_da_hoc_cung_luc_hai_chuong_trinh_bang_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat",
+    "q2": "sem.HeQua.duoc_cong_nhan_ket_qua_hoc_phan_tuong_duong"
+   },
+   "merge_conflicts": []
+  },
+  "nodes": [
+   {
+    "id": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+    "labels": [
+     "KhaiNiem"
+    ],
+    "props": {
+     "id": "sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc",
+     "ten": "thời gian tối đa được phép học",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "dai_luong"
+    }
+   },
+   {
+    "id": "sem.DoiTuong.sinh_vien",
+    "labels": [
+     "DoiTuong"
+    ],
+    "props": {
+     "id": "sem.DoiTuong.sinh_vien",
+     "ten": "sinh viên",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "nguoi"
+    }
+   },
+   {
+    "id": "sem.HoatDong.hoc_cung_luc_hai_chuong_trinh_dao_tao",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.hoc_cung_luc_hai_chuong_trinh_dao_tao",
+     "ten": "học cùng lúc hai chương trình đào tạo",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "mo_ta": "sinh viên học cùng lúc hai chương trình đào tạo"
+    }
+   },
+   {
+    "id": "sem.HoatDong.cong_nhan_ket_qua_hoc_phan_khi_hoc_chuong_trinh_thu_hai",
+    "labels": [
+     "HoatDong"
+    ],
+    "props": {
+     "id": "sem.HoatDong.cong_nhan_ket_qua_hoc_phan_khi_hoc_chuong_trinh_thu_hai",
+     "ten": "công nhận kết quả học phần khi học chương trình thứ hai",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "mo_ta": "khi học chương trình thứ hai, sinh viên được công nhận kết quả của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất"
+    }
+   },
+   {
+    "id": "sem.NhomDieuKien.qc3626.d26.k5.g1",
+    "labels": [
+     "NhomDieuKien"
+    ],
+    "props": {
+     "id": "sem.NhomDieuKien.qc3626.d26.k5.g1",
+     "ten": "học phần tương đương trong chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "ket_hop": "AND",
+     "mo_ta": "Học phần được công nhận kết quả khi có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất"
+    }
+   },
+   {
+    "id": "sem.DieuKien.qc3626.d26.k5.c1",
+    "labels": [
+     "DieuKien"
+    ],
+    "props": {
+     "id": "sem.DieuKien.qc3626.d26.k5.c1",
+     "ten": "học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "mo_ta": "Học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất",
+     "toan_tu": "co"
+    }
+   },
+   {
+    "id": "sem.HeQua.thoi_gian_toi_da_hoc_cung_luc_hai_chuong_trinh_bang_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.thoi_gian_toi_da_hoc_cung_luc_hai_chuong_trinh_bang_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat",
+     "ten": "thời gian tối đa học cùng lúc hai chương trình bằng thời gian tối đa của chương trình thứ nhất",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "gioi_han",
+     "mo_ta": "Thời gian tối đa được phép học đối với sinh viên học cùng lúc hai chương trình là thời gian tối đa quy định cho chương trình thứ nhất"
+    }
+   },
+   {
+    "id": "sem.HeQua.duoc_cong_nhan_ket_qua_hoc_phan_tuong_duong",
+    "labels": [
+     "HeQua"
+    ],
+    "props": {
+     "id": "sem.HeQua.duoc_cong_nhan_ket_qua_hoc_phan_tuong_duong",
+     "ten": "được công nhận kết quả học phần tương đương",
+     "bi_danh": [],
+     "nguon_loai": "trich_xuat",
+     "nguon": [
+      "qc3626.d26.k5"
+     ],
+     "loai": "quyen_loi",
+     "mo_ta": "Được công nhận kết quả của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "type": "YEU_CAU",
+    "from": "sem.HoatDong.cong_nhan_ket_qua_hoc_phan_khi_hoc_chuong_trinh_thu_hai",
+    "to": "sem.NhomDieuKien.qc3626.d26.k5.g1",
+    "props": {
+     "nguon": "qc3626.d26.k5"
+    }
+   },
+   {
+    "type": "GOM",
+    "from": "sem.NhomDieuKien.qc3626.d26.k5.g1",
+    "to": "sem.DieuKien.qc3626.d26.k5.c1",
+    "props": {
+     "nguon": "qc3626.d26.k5"
+    }
+   },
+   {
+    "type": "DAN_DEN",
+    "from": "sem.NhomDieuKien.qc3626.d26.k5.g1",
+    "to": "sem.HeQua.duoc_cong_nhan_ket_qua_hoc_phan_tuong_duong",
+    "props": {
+     "nguon": "qc3626.d26.k5"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.thoi_gian_toi_da_hoc_cung_luc_hai_chuong_trinh_bang_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d26.k5"
+    }
+   },
+   {
+    "type": "AP_DUNG_CHO",
+    "from": "sem.HeQua.duoc_cong_nhan_ket_qua_hoc_phan_tuong_duong",
+    "to": "sem.DoiTuong.sinh_vien",
+    "props": {
+     "nguon": "qc3626.d26.k5"
+    }
+   },
+   {
+    "type": "XET",
+    "from": "sem.DieuKien.qc3626.d26.k5.c1",
+    "to": "sem.HeQua.duoc_cong_nhan_ket_qua_hoc_phan_tuong_duong",
+    "props": {
+     "nguon": "qc3626.d26.k5"
+    }
+   }
+  ]
+ },
+ "metadata": {
+  "unit": "qc3626.d26.k5",
+  "role": "extract",
+  "run": 0,
+  "model_requested": "claude-haiku-5-5",
+  "prompt_version": "extract_v1",
+  "prompt_sha256": "7f63ec62c2089ae13d83872ca1b54eb77b6855d1214d71c9ebc94b67b6a009a3",
+  "schema_sha256": "1fc4052ed09a8aa395f3ea02571527a75df71d80444a45c527186decdb56466a",
+  "input_sha256": "fd7178fa59235f9ecbd881e07bd888c09775de5eef8e716add000033c2593612",
+  "provider": "anthropic",
+  "model_served": "claude-haiku-5-5",
+  "input_tokens": 15819,
+  "output_tokens": 3127,
+  "finish_reason": "end_turn",
+  "truncated": false,
+  "structured_output": false,
+  "structured_fallback_reason": "anthropic HTTP 400: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.'}, 'request_id': 'req_011Cgfdg6Xf3aRG9ayoqLWcz'}",
+  "from_cache": false,
+  "called_at": "2026-11-03T14:52:41+07:00",
+  "latency_s": 12.708,
+  "attempts": 1,
+  "params": {
+   "effort": "medium"
+  },
+  "reused_record": true
+ }
+}
