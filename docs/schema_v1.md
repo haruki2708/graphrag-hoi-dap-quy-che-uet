@@ -163,7 +163,7 @@ Bỏ nhãn `Nguong` của PLAN: ngưỡng thành thuộc tính khoảng của `D
 **A. Một dòng bảng: `d17.k2` (tr. 14–15), CLC, 40–80 tín chỉ → năm thứ hai**
 
 ```
-(n:NhomDieuKien {ket_hop:"AND"}) -[:AP_DUNG_CHO]-> (:DoiTuong {ten:"CTĐT chất lượng cao", loai:"chuong_trinh"})
+(n:NhomDieuKien {ket_hop:"AND"}) -[:AP_DUNG_CHO]-> (:DoiTuong {ten:"chương trình đào tạo chất lượng cao", loai:"chuong_trinh"})
 (n) -[:GOM]-> (:DieuKien {mo_ta:"Từ 40 – 80 tín chỉ", min:40, max:80, min_incl:true, max_incl:true, thang:"tin_chi"})
                  -[:XET]-> (sotc:KhaiNiem {ten:"số tín chỉ tích lũy", loai:"dai_luong"})
 (n) -[:DAN_DEN]-> (nam2:KhaiNiem {ten:"năm thứ hai", loai:"muc_phan_loai", thang:"nam_dao_tao", thu_tu:2})
@@ -197,6 +197,18 @@ Một nhóm (năm thứ hai):
 (p:NhomDieuKien {ket_hop:"OR"}) -[:GOM]-> (m), cùng 3 nhóm năm còn lại của điểm a và các nhóm của điểm b, c   ← p -[:NGUON]-> d44.k1
 (p) -[:GIAO_QUY_DINH {noi_dung:"chọn 1–2 trong 3 điều kiện…", nguon:"qc3626.d44.k1"}]-> (:DoiTuong {ten:"thủ trưởng đơn vị đào tạo"})
 ```
+**Quy ước thực tế (23/11/2026, đối chiếu `combined_v1.json`): hệ quả có thể nằm ở nhóm tổ tiên.** Mẫu trên gắn `DAN_DEN` vào từng nhóm AND theo năm. Bản trích thật của `d44.k1` lại có thêm một tầng OR và đặt hệ quả, giao quyền ở nhóm trên cùng:
+```
+(g1:NhomDieuKien {ket_hop:"OR"})  -[:NGUON]-> d44.k1     -[:DAN_DEN]-> (cb)   -[:GIAO_QUY_DINH]-> (thủ trưởng đơn vị đào tạo)
+(g1) -[:GOM]-> (g2:NhomDieuKien {ket_hop:"OR"})          ← điểm a, NGUON d44.k1.a (g3: điểm b, g4: điểm c)
+(g2) -[:GOM]-> (g5…g8:NhomDieuKien {ket_hop:"AND"})      ← 4 nhóm năm như bảng trên, không có DAN_DEN riêng
+```
+Quy tắc đọc (chủ dự án chốt 23/11/2026, phương án a; không sửa dữ liệu, không sửa prompt trích xuất):
+- Nhóm `r` nhận `DAN_DEN` và `GIAO_QUY_DINH` của chính nó, hoặc của một nhóm tổ tiên nối xuống `r` qua `GOM`, **với điều kiện mọi nhóm trên đường đi (trừ `r`) có `ket_hop = "OR"`**.
+- Tổ tiên OR: hệ quả đúng với từng phương án con, nên kế thừa được.
+- Tổ tiên AND: hệ quả cần đủ các thành phần khác của nhóm, nên **không** kế thừa (đường đi bị chặn). Ví dụ: các nhóm con của AND `d26.k1` (mẫu C).
+- Số liệu trên `combined_v1.json`: có 211 nhóm, 125 nhóm có `DAN_DEN` riêng. 33 nhóm không có `DAN_DEN` riêng nhưng có tổ tiên mang `DAN_DEN`: 19 nhóm kế thừa được qua chuỗi toàn OR (trong đó có `d44.k1.g5`–`g8`), 14 nhóm bị chặn bởi AND.
+
 **Cầu nối nhiều bước là `thu_tu` của năm đào tạo.** Câu hỏi chỉ nêu số tín chỉ và điểm TBC. Vector search dễ lấy được `d44.k1` nhưng không lấy `d17.k2`.
 - Bằng Cypher (2.4): mẫu A cho ra mức có `thu_tu`, mẫu B so `thu_tu` với khoảng `min`/`max`, nên chạy cho **mọi năm**, kể cả "các năm tiếp theo" vốn không có nút mức riêng.
 - Bằng duyệt đồ thị (không Cypher): `d44.k1.a` → (`XET`) "năm đào tạo" ← (`LA_MOT`) "năm thứ hai" ← (`DAN_DEN`) dòng bảng → (`NGUON`) `d17.k2`.
@@ -220,35 +232,43 @@ Một nhóm (năm thứ hai):
 ```
 "Cảnh báo học tập" (`d28.k1.d`), "cảnh báo học vụ" (`d44.k1`) và "cảnh báo kết quả học tập" (`d44.k1.c`, `d26.k6`) phải gộp về cùng nút `cb` (Q6). Nếu không gộp, cầu nối từ chuyển ngành sang xử lý học vụ bị đứt.
 
-### 2.4. Truy vấn minh họa cho câu thử 7 (chưa chạy, sẽ kiểm ở T4)
+### 2.4. Truy vấn cho câu thử 7 (đã chạy 23/11/2026 trên `combined_v1.json`)
+
+Mã nguồn: `QUERY7` trong `src/kg/queries.py` (khối dưới đây trùng với mã, thêm chú thích). Chạy bằng `python scripts/check_query7.py`; khi một ca không đạt, script chạy lần lượt các bước của `QUERY7_STEPS` để chỉ ra chỗ đứt.
 
 ```cypher
-// Sinh viên CLC, 50 tín chỉ tích lũy, TBC tích lũy 1,35: có bị cảnh báo học vụ không?
-// tc là số tín chỉ đã trừ các học phần TINH_VAO {co:false, boi_canh: "xếp năm đào tạo"}; truy vấn không tự trừ.
-WITH 50 AS tc, 1.35 AS tbc, "CTĐT chất lượng cao" AS ct
+// Sinh viên chương trình đào tạo chất lượng cao, 50 tín chỉ tích lũy, TBC tích lũy 1,35: có bị cảnh báo học vụ không?
+// Tham số: $tc = 50, $tbc = 1.35, $ct = "chương trình đào tạo chất lượng cao" (ten thật của nút DoiTuong).
+// $tc là số tín chỉ đã trừ các học phần TINH_VAO {co:false, boi_canh: "xếp năm đào tạo"}; truy vấn không tự trừ.
 // Bước 1: xếp năm đào tạo theo bảng d17.k2 (mẫu A)
-MATCH (r1:NhomDieuKien)-[:AP_DUNG_CHO]->(:DoiTuong {ten: ct}),
+MATCH (r1:NhomDieuKien)-[:AP_DUNG_CHO]->(:DoiTuong {ten: $ct}),
       (r1)-[:GOM]->(c1:DieuKien)-[:XET]->(:KhaiNiem {ten: "số tín chỉ tích lũy"}),
       (r1)-[:DAN_DEN]->(nam:KhaiNiem {loai: "muc_phan_loai", thang: "nam_dao_tao"})
-WHERE (c1.min IS NULL OR tc > c1.min OR (c1.min_incl AND tc = c1.min))
-  AND (c1.max IS NULL OR tc < c1.max OR (c1.max_incl AND tc = c1.max))
-// Bước 2: nhóm có điều kiện năm chứa nam.thu_tu và ngưỡng TBC thỏa (mẫu B)
+WHERE (c1.min IS NULL OR $tc > c1.min OR (c1.min_incl AND $tc = c1.min))
+  AND (c1.max IS NULL OR $tc < c1.max OR (c1.max_incl AND $tc = c1.max))
+// Bước 2: nhóm r2 có điều kiện năm chứa nam.thu_tu và ngưỡng TBC thỏa (mẫu B)
 MATCH (r2:NhomDieuKien)-[:GOM]->(cn:DieuKien {thang: "nam_dao_tao"}),
-      (r2)-[:GOM]->(c2:DieuKien)-[:XET]->(:KhaiNiem {ten: "điểm trung bình chung tích lũy"}),
-      (r2)-[:DAN_DEN]->(hq:HeQua)
+      (r2)-[:GOM]->(c2:DieuKien)-[:XET]->(:KhaiNiem {ten: "điểm trung bình chung tích lũy"})
 WHERE (cn.min IS NULL OR nam.thu_tu > cn.min OR (cn.min_incl AND nam.thu_tu = cn.min))
   AND (cn.max IS NULL OR nam.thu_tu < cn.max OR (cn.max_incl AND nam.thu_tu = cn.max))
-  AND c2.max IS NOT NULL AND (tbc < c2.max OR (c2.max_incl AND tbc = c2.max))
-OPTIONAL MATCH (p:NhomDieuKien)-[:GOM]->(r2), (p)-[g:GIAO_QUY_DINH]->(ai:DoiTuong)
+  AND c2.max IS NOT NULL AND ($tbc < c2.max OR (c2.max_incl AND $tbc = c2.max))
+// Bước 3: hệ quả của r2 hoặc của tổ tiên nối qua toàn nhóm OR (quy ước thực tế, mục 2.3 mẫu B).
+// nodes(path)[..-1] = các nhóm trên đường đi trừ r2 (rỗng khi h = r2)
+MATCH inh = (h:NhomDieuKien)-[:GOM*0..]->(r2), (h)-[:DAN_DEN]->(hq:HeQua)
+WHERE all(x IN nodes(inh)[..-1] WHERE x.ket_hop = "OR")
+OPTIONAL MATCH dq = (p:NhomDieuKien)-[:GOM*0..]->(r2), (p)-[g:GIAO_QUY_DINH]->(ai:DoiTuong)
+  WHERE all(x IN nodes(dq)[..-1] WHERE x.ket_hop = "OR")
 MATCH (r1)-[:NGUON]->(s1), (r2)-[:NGUON]->(s2)
-RETURN nam.ten, nam.thu_tu, cn.min, cn.max, c2.max, hq.ten, g.noi_dung, ai.ten, s1.id, s2.id
+RETURN nam.ten AS nam, nam.thu_tu AS thu_tu, r2.id AS nhom, cn.min AS cn_min, cn.max AS cn_max, c2.max AS nguong, h.id AS nhom_he_qua, hq.ten AS he_qua, p.id AS nhom_giao_quyen, g.noi_dung AS giao_quyen, ai.ten AS giao_cho, s1.id AS nguon_1, s2.id AS nguon_2
 ```
-Kết quả mong đợi:
+Kết quả mong đợi và kết quả chạy 23/11/2026 (mỗi ca đúng 1 dòng, cả 2 ca ĐẠT):
 
 | Đầu vào | Năm (`thu_tu`) | Nhóm khớp | Ngưỡng | Kết luận | Nguồn |
 | --- | --- | --- | --- | --- | --- |
-| `tc = 50, tbc = 1.35` | năm thứ hai (2) | `min 2, max 2` | 1.40 | bị cảnh báo học vụ, kèm ghi chú giao quyền | `d17.k2`, `d44.k1.a` |
-| `tc = 130, tbc = 1.75` | năm thứ tư (4; CLC 116–155) | "các năm tiếp theo" `min 4` | 1.80 | bị cảnh báo học vụ, kèm ghi chú giao quyền | `d17.k2`, `d44.k1.a` |
+| `tc = 50, tbc = 1.35` | năm thứ hai (2) | `d44.k1.g6` `min 2, max 2` | 1.40 | bị cảnh báo học vụ, kèm ghi chú giao quyền cho thủ trưởng đơn vị đào tạo (cả hai kế thừa từ `d44.k1.g1` qua OR `g2`) | `d17.k2`, `d44.k1.a` |
+| `tc = 130, tbc = 1.75` | năm thứ tư (4; CLC 116–155) | `d44.k1.g8` "các năm tiếp theo" `min 4` | 1.80 | bị cảnh báo học vụ, kèm ghi chú giao quyền (kế thừa từ `d44.k1.g1`) | `d17.k2`, `d44.k1.a` |
+
+Bản 2.4 trước (chỉ lấy `(r2)-[:DAN_DEN]` trực tiếp, giao quyền từ nhóm cha liền kề) trả về 0 dòng ở cả 2 ca, đứt ở bước `(r2)-[:DAN_DEN]->(hq:HeQua)`.
 
 ### 2.5. Chưa biểu diễn ở v1 (chấp nhận, ghi lại để khỏi quên)
 
@@ -361,3 +381,4 @@ Tổng: 22 cụm = 21 nội bộ (**31 cạnh**) + 1 ra ngoài. Cụm 11 và 21 
 | 02/11/2026 | v1, định nghĩa bộ ba đúng | Định nghĩa "bộ ba đúng" cho tiêu chí T4 (cạnh ngữ nghĩa nút – cạnh – nút; đúng loại và tên hai nút, đúng cạnh, đúng thuộc tính quan trọng gồm `ket_hop` của nhóm cha, đúng `nguon`; sai một thuộc tính số là sai cả bộ ba): xem `docs/PLAN.md` mục 5 |
 | 03/11/2026 | v1, thang `bac_ngoai_ngu` | Chủ dự án chốt: thêm thang `bac_ngoai_ngu` cho `DieuKien`; `so_voi` giữ chuỗi tự do; `THAM_QUYEN` vẫn để sau |
 | 03/11/2026 | v1 sửa sau chạy thử | Chủ dự án chốt: `GIAO_QUY_DINH` nhận `DieuKien` làm nút đầu, sau lượt chạy thử đầu tiên (`d46.k1.e`: nội dung được giao là một điều kiện cụ thể). Mục 2.2: thêm `DieuKien` vào cột Từ và ví dụ `d46.k1.e` |
+| 23/11/2026 | v1, kế thừa hệ quả qua OR (T4 PR 5b) | Câu thử 7 chạy trên `combined_v1.json` ra 0 dòng: hệ quả và giao quyền của `d44.k1` nằm ở nhóm OR trên cùng, cách nhóm năm hai tầng `GOM`. Chủ dự án chốt phương án (a), không sửa dữ liệu và prompt: mục 2.3 mẫu B ghi quy ước thực tế (nhóm nhận `DAN_DEN`/`GIAO_QUY_DINH` của chính nó hoặc của tổ tiên nối qua toàn nhóm OR; tổ tiên AND chặn). Số liệu: 211 nhóm, 33 nhóm có hệ quả ở tổ tiên, 19 kế thừa qua OR, 14 bị AND chặn. Mục 2.4 thay bằng `QUERY7` (tham số `$tc`, `$tbc`, `$ct`), 2 ca ĐẠT. Tên `ten` trong mẫu A và 2.4 đổi "CTĐT chất lượng cao" thành "chương trình đào tạo chất lượng cao" |

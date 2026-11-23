@@ -1,1 +1,47 @@
 label,id_giu,id_bo,quyet_dinh,ghi_chu
+DoiTuong,sem.DoiTuong.bang_tot_nghiep,sem.DoiTuong.bang_tot_nghiep_dai_hoc,gop,bằng tốt nghiệp đại học -> bằng tốt nghiệp
+DoiTuong,sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_dai_hoc_quoc_gia_ha_noi_va_doi_tac_nuoc_ngoai_cung_cap_bang,sem.DoiTuong.chuong_trinh_dao_tao_lien_ket_voi_co_so_giao_duc_nuoc_ngoai_do_doi_tac_nuoc_ngoai_va_dai_hoc_quoc_gia_ha_noi_cung_cap_bang,gop,chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do đối tác nước ngoài và Đại học Quốc gia Hà Nội cùng cấp bằng -> chương trình đào tạo liên kết với cơ sở giáo dục nước ngoài do Đại học Quốc gia Hà Nội và đối tác nước ngoài cùng cấp bằng
+DoiTuong,sem.DoiTuong.dao_tao_vua_lam_vua_hoc,sem.DoiTuong.hinh_thuc_dao_tao_vua_lam_vua_hoc,gop,hình thức đào tạo vừa làm vừa học -> đào tạo vừa làm vừa học
+DoiTuong,sem.DoiTuong.dao_tao_vua_lam_vua_hoc,sem.DoiTuong.vua_lam_vua_hoc,gop,vừa làm vừa học -> đào tạo vừa làm vừa học
+DoiTuong,sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy,sem.DoiTuong.chinh_quy,gop,chính quy -> hình thức đào tạo chính quy
+DoiTuong,sem.DoiTuong.hinh_thuc_dao_tao_chinh_quy,sem.DoiTuong.dao_tao_chinh_quy,gop,đào tạo chính quy -> hình thức đào tạo chính quy
+DoiTuong,sem.DoiTuong.sinh_vien,sem.DoiTuong.nguoi_hoc,gop,người học -> sinh viên
+DoiTuong,sem.DoiTuong.sinh_vien_hoc_cung_luc_hai_chuong_trinh_dao_tao,sem.DoiTuong.khoa_hoc_dong_thoi_hai_chuong_trinh_dao_tao,gop,khóa học đồng thời hai chương trình đào tạo -> sinh viên học cùng lúc hai chương trình đào tạo
+DoiTuong,sem.DoiTuong.sinh_vien_nguoi_nuoc_ngoai,sem.DoiTuong.sinh_vien_la_nguoi_nuoc_ngoai,gop,sinh viên là người nước ngoài -> sinh viên người nước ngoài
+DoiTuong,sem.DoiTuong.sinh_vien_tai_nang_chat_luong_cao,sem.DoiTuong.sinh_vien_chuong_trinh_dao_tao_tai_nang_chat_luong_cao,gop,"sinh viên chương trình đào tạo tài năng, chất lượng cao -> sinh viên tài năng, chất lượng cao"
+HeQua,sem.HeQua.bi_canh_bao_hoc_vu,sem.HeQua.bi_canh_bao_hoc_tap,gop,bị cảnh báo học tập -> bị cảnh báo học vụ
+HeQua,sem.HeQua.bi_canh_bao_hoc_vu,sem.HeQua.canh_bao_ket_qua_hoc_tap,gop,cảnh báo kết quả học tập -> bị cảnh báo học vụ
+HeQua,sem.HeQua.bi_xem_xet_ky_luat,sem.HeQua.bi_xet_thi_hanh_ky_luat,gop,bị xét thi hành kỷ luật -> bị xem xét kỷ luật
+HeQua,sem.HeQua.du_dieu_kien_tot_nghiep,sem.HeQua.du_dieu_kien_xet_tot_nghiep,gop,đủ điều kiện xét tốt nghiệp -> đủ điều kiện tốt nghiệp
+HeQua,sem.HeQua.duoc_cong_nhan_tot_nghiep,sem.HeQua.duoc_cong_nhan_tot_nghiep_va_cap_bang,gop,được công nhận tốt nghiệp và cấp bằng -> được công nhận tốt nghiệp
+HeQua,sem.HeQua.duoc_cong_nhan_tot_nghiep,sem.HeQua.duoc_cong_nhan_tot_nghiep_va_cap_bang_dai_hoc,gop,được công nhận tốt nghiệp và cấp bằng đại học -> được công nhận tốt nghiệp
+HeQua,sem.HeQua.duoc_du_ky_thi_phu,sem.HeQua.thi_bo_sung_vao_ky_thi_phu,gop,thi bổ sung vào kỳ thi phụ -> được dự kỳ thi phụ
+HeQua,sem.HeQua.thoi_gian_toi_da_hoc_cung_luc_hai_chuong_trinh_bang_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat,sem.HeQua.thoi_gian_khoa_hoc_dong_thoi_hai_chuong_trinh_khong_vuot_qua_thoi_gian_toi_da_cua_chuong_trinh_thu_nhat,gop,thời gian khóa học đồng thời hai chương trình không vượt quá thời gian tối đa của chương trình thứ nhất -> thời gian tối đa học cùng lúc hai chương trình bằng thời gian tối đa của chương trình thứ nhất
+HoatDong,sem.HoatDong.canh_bao_hoc_vu,sem.HoatDong.xet_canh_bao_hoc_vu,gop,xét cảnh báo học vụ -> cảnh báo học vụ
+HoatDong,sem.HoatDong.chuyen_truong_ve_dai_hoc_quoc_gia_ha_noi,sem.HoatDong.chuyen_truong_ve_hoc_tai_dai_hoc_quoc_gia_ha_noi,gop,chuyển trường về học tại Đại học Quốc gia Hà Nội -> chuyển trường về Đại học Quốc gia Hà Nội
+HoatDong,sem.HoatDong.cong_nhan_va_chuyen_doi_tin_chi,sem.HoatDong.cong_nhan_ket_qua_hoc_tap_va_chuyen_doi_tin_chi,gop,công nhận kết quả học tập và chuyển đổi tín chỉ -> công nhận và chuyển đổi tín chỉ
+HoatDong,sem.HoatDong.cong_nhan_va_chuyen_doi_tin_chi,sem.HoatDong.cong_nhan_va_chuyen_doi_ket_qua_hoc_tap_sang_tin_chi,gop,công nhận và chuyển đổi kết quả học tập sang tín chỉ -> công nhận và chuyển đổi tín chỉ
+HoatDong,sem.HoatDong.dang_ky_hoc_phan_thay_the_khoa_luan_do_an_tot_nghiep,sem.HoatDong.dang_ky_hoc_hoc_phan_thay_the,gop,"đăng ký học học phần thay thế -> đăng ký học phần thay thế khóa luận, đồ án tốt nghiệp"
+HoatDong,sem.HoatDong.dang_ky_hoc_them_chuong_trinh_dao_tao_thu_hai,sem.HoatDong.dang_ky_hoc_cung_luc_chuong_trinh_dao_tao_thu_hai,gop,đăng ký học cùng lúc chương trình đào tạo thứ hai -> đăng ký học thêm chương trình đào tạo thứ hai
+HoatDong,sem.HoatDong.rut_bot_hoc_phan_da_dang_ky,sem.HoatDong.rut_bot_hoc_phan,gop,rút bớt học phần -> rút bớt học phần đã đăng ký
+HoatDong,sem.HoatDong.thanh_lap_hoi_dong_cham_khoa_luan_tot_nghiep,sem.HoatDong.thanh_lap_hoi_dong_bao_ve_va_danh_gia_khoa_luan_do_an_tot_nghiep,gop,"thành lập hội đồng bảo vệ và đánh giá khóa luận, đồ án tốt nghiệp -> thành lập hội đồng chấm khóa luận tốt nghiệp"
+HoatDong,sem.HoatDong.tro_lai_hoc_tiep_sau_khi_nghi_hoc_tam_thoi,sem.HoatDong.de_nghi_hoc_tiep_sau_thoi_gian_nghi_hoc_tam_thoi,gop,đề nghị học tiếp sau thời gian nghỉ học tạm thời -> trở lại học tiếp sau khi nghỉ học tạm thời
+HoatDong,sem.HoatDong.xep_hang_tot_nghiep,sem.HoatDong.xet_hang_tot_nghiep,gop,xét hạng tốt nghiệp -> xếp hạng tốt nghiệp
+HoatDong,sem.HoatDong.xet_cong_nhan_tot_nghiep,sem.HoatDong.cong_nhan_tot_nghiep_va_cap_bang_dai_hoc,gop,công nhận tốt nghiệp và cấp bằng đại học -> xét công nhận tốt nghiệp
+HoatDong,sem.HoatDong.xet_cong_nhan_tot_nghiep,sem.HoatDong.xet_cong_nhan_tot_nghiep_va_cap_bang_dai_hoc,gop,xét công nhận tốt nghiệp và cấp bằng đại học -> xét công nhận tốt nghiệp
+KhaiNiem,sem.KhaiNiem.chuan_dau_ra,sem.KhaiNiem.chuan_dau_ra_cua_chuong_trinh_dao_tao,gop,chuẩn đầu ra của chương trình đào tạo -> chuẩn đầu ra
+KhaiNiem,sem.KhaiNiem.diem_danh_gia_bo_phan,sem.KhaiNiem.diem_kiem_tra_danh_gia_bo_phan,gop,điểm kiểm tra đánh giá bộ phận -> điểm đánh giá bộ phận
+KhaiNiem,sem.KhaiNiem.diem_thi_ket_thuc_hoc_phan,sem.KhaiNiem.diem_danh_gia_ket_thuc_hoc_phan,gop,điểm đánh giá kết thúc học phần -> điểm thi kết thúc học phần
+KhaiNiem,sem.KhaiNiem.diem_thi_ket_thuc_hoc_phan,sem.KhaiNiem.ket_qua_thi_ket_thuc_hoc_phan,gop,kết quả thi kết thúc học phần -> điểm thi kết thúc học phần
+KhaiNiem,sem.KhaiNiem.dieu_kien_trung_tuyen,sem.KhaiNiem.dieu_kien_trung_tuyen_cua_nganh,gop,điều kiện trúng tuyển của ngành -> điều kiện trúng tuyển
+KhaiNiem,sem.KhaiNiem.giai_thuong_nghien_cuu_khoa_hoc_cua_sinh_vien,sem.KhaiNiem.giai_thuong_nghien_cuu_khoa_hoc,gop,giải thưởng nghiên cứu khoa học -> giải thưởng nghiên cứu khoa học của sinh viên
+KhaiNiem,sem.KhaiNiem.hoc_phan_giao_duc_quoc_phong_an_ninh,sem.KhaiNiem.giao_duc_quoc_phong_an_ninh,gop,giáo dục quốc phòng - an ninh -> học phần giáo dục quốc phòng - an ninh
+KhaiNiem,sem.KhaiNiem.hoc_phan_giao_duc_the_chat,sem.KhaiNiem.giao_duc_the_chat,gop,giáo dục thể chất -> học phần giáo dục thể chất
+KhaiNiem,sem.KhaiNiem.hoc_phan_ky_nang_bo_tro,sem.KhaiNiem.ky_nang_bo_tro,gop,kỹ năng bổ trợ -> học phần kỹ năng bổ trợ
+KhaiNiem,sem.KhaiNiem.hoc_phi,sem.KhaiNiem.so_hoc_phi_phai_nop,gop,số học phí phải nộp -> học phí
+KhaiNiem,sem.KhaiNiem.khoi_luong_hoc_tap_toi_thieu_cua_hoc_ky,sem.KhaiNiem.khoi_luong_hoc_tap_toi_thieu_moi_hoc_ky,gop,khối lượng học tập tối thiểu mỗi học kỳ -> khối lượng học tập tối thiểu của học kỳ
+KhaiNiem,sem.KhaiNiem.khoi_luong_kien_thuc_cua_chuong_trinh_dao_tao,sem.KhaiNiem.tong_khoi_luong_chuong_trinh_dao_tao,gop,tổng khối lượng chương trình đào tạo -> khối lượng kiến thức của chương trình đào tạo
+KhaiNiem,sem.KhaiNiem.so_tin_chi_tich_luy,sem.KhaiNiem.khoi_luong_kien_thuc_tich_luy,gop,khối lượng kiến thức tích lũy -> số tín chỉ tích lũy
+KhaiNiem,sem.KhaiNiem.so_tin_chi_tich_luy,sem.KhaiNiem.tin_chi_tich_luy,gop,tín chỉ tích lũy -> số tín chỉ tích lũy
+KhaiNiem,sem.KhaiNiem.thoi_gian_toi_da_duoc_phep_hoc,sem.KhaiNiem.thoi_gian_hoc_tap_toi_da_cua_khoa_hoc,gop,thời gian học tập tối đa của khóa học -> thời gian tối đa được phép học
+KhaiNiem,sem.KhaiNiem.thuc_tap_thuc_te,sem.KhaiNiem.hoc_phan_thuc_tap_thuc_te,gop,"học phần thực tập thực tế -> thực tập, thực tế"

@@ -9,3 +9,6 @@ data/processed/qc3626_graph.json text eol=lf
 data/processed/*.jsonl text eol=lf
 # Semantic-layer extraction records and triplet CSVs (src/kg/extract.py, export_triplets.py) are written with LF.
 data/processed/semantic/** eol=lf
+# Owner-approved manual lists (data/manual): LF, because combine.py records the sha256 of gop_thuc_the_v1.csv in
+# meta.merge_list of combined_v1.json, which must match the committed blob on every checkout.
+data/manual/*.csv text eol=lf
