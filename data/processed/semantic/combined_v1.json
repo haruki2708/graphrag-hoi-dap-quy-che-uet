@@ -26,7 +26,7 @@
    "path": "data/manual/gop_thuc_the_v1.csv",
    "exists": true,
    "n_rows": 46,
-   "sha256": "6e2e827b2599b71a851bfbb67f314dc910f17d83351cf03102a4d9e7bc5cc8e5",
+   "sha256": "e70fa947d6ddc2cbe84dc723ae8dc4f26338e1fe18baa679c7a13ec768b61079",
    "skipped_rows": {}
   },
   "counts": {

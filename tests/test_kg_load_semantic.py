@@ -1,12 +1,18 @@
-"""Tests for src/kg/load_semantic.py with a fake session (no Neo4j) and the shared semantic queries.
-Run from the repo root:  python -m pytest tests/test_kg_load_semantic.py
+"""Tests for src/kg/load_semantic.py with a fake session (no Neo4j), the shared semantic queries and
+scripts/check_query7.py. Run from the repo root:  python -m unittest discover -s tests -t .
+
+Query7InheritanceNeo4jTests runs QUERY7 on the local Neo4j and is skipped unless RUN_NEO4J_TESTS=1: it creates a
+small graph inside a transaction that is rolled back, so nothing is written.
 """
 
 import copy
+import importlib.util
 import json
+import os
 import re
 import unittest
 from collections import Counter
+from pathlib import Path
 
 from src.kg import load_semantic as ls
 from src.kg import queries as q
@@ -255,6 +261,128 @@ class SemanticQueriesTests(unittest.TestCase):
         last = q.QUERY7_STEPS[-1][1]
         self.assertTrue(last.startswith(q.QUERY7.rsplit("\nRETURN", 1)[0]))
         self.assertTrue(all("RETURN count(*) AS n" in query for _, query in q.QUERY7_STEPS))
+
+    def test_query7_inherits_consequence_and_delegation_through_or_ancestors_only(self):
+        self.assertNotIn("(r2)-[:DAN_DEN]", q.QUERY7)
+        self.assertIn("MATCH inh = (h:NhomDieuKien)-[:GOM*0..]->(r2), (h)-[:DAN_DEN]->(hq:HeQua)", q.QUERY7)
+        self.assertIn('WHERE all(x IN nodes(inh)[..-1] WHERE x.ket_hop = "OR")', q.QUERY7)
+        self.assertIn("OPTIONAL MATCH dq = (p:NhomDieuKien)-[:GOM*0..]->(r2), (p)-[g:GIAO_QUY_DINH]->(ai:DoiTuong)",
+                      q.QUERY7)
+        self.assertIn('WHERE all(x IN nodes(dq)[..-1] WHERE x.ket_hop = "OR")', q.QUERY7)
+
+
+def load_check_query7():
+    path = Path(__file__).resolve().parents[1] / "scripts" / "check_query7.py"
+    spec = importlib.util.spec_from_file_location("check_query7", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class CheckQuery7JudgeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.cq = load_check_query7()
+        cls.case = cls.cq.CASES[0]
+        cls.good = {"nam": "năm thứ hai", "thu_tu": 2, "nhom": "g6", "cn_min": 2, "cn_max": 2, "nguong": 1.4,
+                    "nhom_he_qua": "g1", "he_qua": "bị cảnh báo học vụ", "nhom_giao_quyen": "g1",
+                    "giao_quyen": "chọn 1–2 trong 3 điều kiện", "giao_cho": "thủ trưởng đơn vị đào tạo",
+                    "nguon_1": "qc3626.d17.k2", "nguon_2": "qc3626.d44.k1.a"}
+
+    def test_one_expected_row_passes(self):
+        self.assertEqual(self.cq.judge(self.case, [self.good]), (True, []))
+
+    def test_more_than_one_row_is_reported_not_filtered(self):
+        ok, reasons = self.cq.judge(self.case, [self.good, dict(self.good)])
+        self.assertFalse(ok)
+        self.assertIn("2 dòng", reasons[0])
+
+    def test_missing_delegation_or_wrong_threshold_fails(self):
+        self.assertFalse(self.cq.judge(self.case, [{**self.good, "giao_quyen": None, "giao_cho": None}])[0])
+        self.assertFalse(self.cq.judge(self.case, [{**self.good, "nguong": 1.6}])[0])
+        self.assertEqual(self.cq.judge(self.case, []), (False, ["truy vấn trả về 0 dòng"]))
+
+
+# Synthetic groups for QUERY7, all with year condition [2, 2] and a GPA threshold < 10 (real thresholds are <= 1.8,
+# so with tbc = 9.5 only these groups can match):
+#   leaf_direct: its own DAN_DEN                                  -> row
+#   leaf_or:     OR top (DAN_DEN, GIAO_QUY_DINH) -> OR mid -> leaf -> row, inherited through two OR groups
+#   leaf_and:    AND top (DAN_DEN, GIAO_QUY_DINH) -> leaf          -> no row, blocked by the AND parent
+#   leaf_mix:    OR top (DAN_DEN) -> AND mid -> leaf                -> no row, blocked by the AND group on the path
+Q7_LEAVES = ("leaf_direct", "leaf_or", "leaf_and", "leaf_mix")
+Q7_FIXTURE = """
+CREATE (ct:DoiTuong {id: 'test.q7.ct', ten: $ct, loai: 'chuong_trinh'})
+CREATE (tc:KhaiNiem {id: 'test.q7.tc', ten: 'số tín chỉ tích lũy', loai: 'dai_luong'})
+CREATE (tbc:KhaiNiem {id: 'test.q7.tbc', ten: 'điểm trung bình chung tích lũy', loai: 'dai_luong'})
+CREATE (nam:KhaiNiem {id: 'test.q7.nam', ten: 'năm thử', loai: 'muc_phan_loai', thang: 'nam_dao_tao', thu_tu: 2})
+CREATE (unit:Khoan {id: 'test.q7.unit'})
+CREATE (ai:DoiTuong {id: 'test.q7.ai', ten: 'người được giao', loai: 'chuc_danh'})
+CREATE (r1:NhomDieuKien {id: 'test.q7.r1', ket_hop: 'AND'})-[:AP_DUNG_CHO]->(ct)
+CREATE (r1)-[:GOM]->(:DieuKien {id: 'test.q7.r1.c', min: 0, max: 1000, min_incl: true, max_incl: true,
+                               thang: 'tin_chi'})-[:XET]->(tc)
+CREATE (r1)-[:DAN_DEN]->(nam), (r1)-[:NGUON]->(unit)
+""" + "".join(f"""
+CREATE ({name}:NhomDieuKien {{id: 'test.q7.{name}', ket_hop: 'AND'}})-[:NGUON]->(unit)
+CREATE ({name})-[:GOM]->(:DieuKien {{id: 'test.q7.{name}.nam', min: 2, max: 2, min_incl: true, max_incl: true,
+                                     thang: 'nam_dao_tao'}})
+CREATE ({name})-[:GOM]->(:DieuKien {{id: 'test.q7.{name}.tbc', max: 10.0, max_incl: false,
+                                     thang: 'thang_4'}})-[:XET]->(tbc)""" for name in Q7_LEAVES) + """
+CREATE (leaf_direct)-[:DAN_DEN]->(:HeQua {id: 'test.q7.hq_direct', ten: 'hq_direct', loai: 'trang_thai'})
+CREATE (or_top:NhomDieuKien {id: 'test.q7.or_top', ket_hop: 'OR'})-[:GOM]->
+       (:NhomDieuKien {id: 'test.q7.or_mid', ket_hop: 'OR'})-[:GOM]->(leaf_or)
+CREATE (or_top)-[:DAN_DEN]->(:HeQua {id: 'test.q7.hq_or', ten: 'hq_or', loai: 'trang_thai'})
+CREATE (or_top)-[:GIAO_QUY_DINH {noi_dung: 'gq_or'}]->(ai)
+CREATE (and_top:NhomDieuKien {id: 'test.q7.and_top', ket_hop: 'AND'})-[:GOM]->(leaf_and)
+CREATE (and_top)-[:DAN_DEN]->(:HeQua {id: 'test.q7.hq_and', ten: 'hq_and', loai: 'trang_thai'})
+CREATE (and_top)-[:GIAO_QUY_DINH {noi_dung: 'gq_and'}]->(ai)
+CREATE (mix_top:NhomDieuKien {id: 'test.q7.mix_top', ket_hop: 'OR'})-[:GOM]->
+       (:NhomDieuKien {id: 'test.q7.mix_mid', ket_hop: 'AND'})-[:GOM]->(leaf_mix)
+CREATE (mix_top)-[:DAN_DEN]->(:HeQua {id: 'test.q7.hq_mix', ten: 'hq_mix', loai: 'trang_thai'})
+WITH 1 AS done
+MATCH (leaf:NhomDieuKien) WHERE leaf.id IN [x IN $leaves | 'test.q7.' + x]
+RETURN count(leaf) AS n
+"""
+Q7_TEST_PROGRAMME = "__q7 test programme__"
+
+
+@unittest.skipUnless(os.getenv("RUN_NEO4J_TESTS") == "1",
+                     "set RUN_NEO4J_TESTS=1 to run QUERY7 on the local Neo4j (inside a rolled-back transaction)")
+class Query7InheritanceNeo4jTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from src.kg.load_neo4j import neo4j_driver
+
+        cls.driver = neo4j_driver()
+        cls.session = cls.driver.session()
+        cls.tx = cls.session.begin_transaction()
+        try:
+            cls.created = cls.tx.run(Q7_FIXTURE, {"ct": Q7_TEST_PROGRAMME, "leaves": list(Q7_LEAVES)}).single()["n"]
+            cls.rows = [r.data() for r in cls.tx.run(q.QUERY7, {"tc": 50, "tbc": 9.5, "ct": Q7_TEST_PROGRAMME})]
+        except Exception:
+            cls.tearDownClass()  # tearDownClass is not called when setUpClass fails
+            raise
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tx.rollback()
+        cls.session.close()
+        cls.driver.close()
+
+    def test_fixture_built_four_leaves(self):
+        self.assertEqual(self.created, 4)
+
+    def test_only_the_synthetic_groups_match(self):
+        self.assertTrue(all(r["nhom"].startswith("test.q7.") for r in self.rows), self.rows)
+
+    def test_direct_consequence_and_or_inheritance(self):
+        got = sorted((r["nhom"], r["nhom_he_qua"], r["he_qua"], r["giao_quyen"]) for r in self.rows)
+        self.assertEqual(got, [("test.q7.leaf_direct", "test.q7.leaf_direct", "hq_direct", None),
+                               ("test.q7.leaf_or", "test.q7.or_top", "hq_or", "gq_or")])
+
+    def test_and_ancestor_blocks_inheritance(self):
+        blocked = {"test.q7.leaf_and", "test.q7.leaf_mix"}
+        self.assertFalse(blocked & {r["nhom"] for r in self.rows})
+        self.assertFalse({"hq_and", "hq_mix", "gq_and"} & {v for r in self.rows for v in r.values()})
 
 
 if __name__ == "__main__":

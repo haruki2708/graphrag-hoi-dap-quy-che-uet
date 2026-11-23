@@ -52,25 +52,34 @@ SEMANTIC_EDGES_WITHOUT_NGUON = ("MATCH (a)-[r]->(b) WHERE type(r) IN $types AND 
 
 # Test question 7 (schema 2.4), with parameters $tc (credits, already net of the TINH_VAO {co: false} courses),
 # $tbc (cumulative GPA) and $ct (programme name). The query does not subtract anything itself.
-# Step 1 places the student in a training year with the d17.k2 table (pattern A); step 2 finds the groups whose year
-# condition contains that year's thu_tu and whose GPA threshold holds (pattern B).
+# Step 1 places the student in a training year with the d17.k2 table (pattern A); step 2 finds the groups r2 whose
+# year condition contains that year's thu_tu and whose GPA threshold holds (pattern B).
+# Inheritance (schema 2.3 pattern B, decision of 23/11/2026): the consequence (DAN_DEN) and the delegation
+# (GIAO_QUY_DINH) are taken from r2 itself or from an ancestor group reached through GOM, provided every group on
+# that path except r2 is an OR group. An OR ancestor's consequence holds for each of its alternatives; an AND
+# ancestor's consequence needs its other members too, so it is not inherited (the path is blocked).
 _Q7_STEP1_MATCH = ('MATCH (r1:NhomDieuKien)-[:AP_DUNG_CHO]->(:DoiTuong {ten: $ct}),\n'
                    '      (r1)-[:GOM]->(c1:DieuKien)-[:XET]->(:KhaiNiem {ten: "số tín chỉ tích lũy"}),\n'
                    '      (r1)-[:DAN_DEN]->(nam:KhaiNiem {loai: "muc_phan_loai", thang: "nam_dao_tao"})')
 _Q7_STEP1_WHERE = ('WHERE (c1.min IS NULL OR $tc > c1.min OR (c1.min_incl AND $tc = c1.min))\n'
                    '  AND (c1.max IS NULL OR $tc < c1.max OR (c1.max_incl AND $tc = c1.max))')
 _Q7_STEP2_MATCH = ('MATCH (r2:NhomDieuKien)-[:GOM]->(cn:DieuKien {thang: "nam_dao_tao"}),\n'
-                   '      (r2)-[:GOM]->(c2:DieuKien)-[:XET]->(:KhaiNiem {ten: "điểm trung bình chung tích lũy"}),\n'
-                   '      (r2)-[:DAN_DEN]->(hq:HeQua)')
+                   '      (r2)-[:GOM]->(c2:DieuKien)-[:XET]->(:KhaiNiem {ten: "điểm trung bình chung tích lũy"})')
 _Q7_STEP2_WHERE_YEAR = ('WHERE (cn.min IS NULL OR nam.thu_tu > cn.min OR (cn.min_incl AND nam.thu_tu = cn.min))\n'
                         '  AND (cn.max IS NULL OR nam.thu_tu < cn.max OR (cn.max_incl AND nam.thu_tu = cn.max))')
 _Q7_STEP2_AND_GPA = '  AND c2.max IS NOT NULL AND ($tbc < c2.max OR (c2.max_incl AND $tbc = c2.max))'
-_Q7_TAIL = ('OPTIONAL MATCH (p:NhomDieuKien)-[:GOM]->(r2), (p)-[g:GIAO_QUY_DINH]->(ai:DoiTuong)\n'
+# nodes(path)[..-1] = the groups on the path except r2 (empty when h = r2)
+_Q7_CONSEQUENCE_MATCH = 'MATCH inh = (h:NhomDieuKien)-[:GOM*0..]->(r2), (h)-[:DAN_DEN]->(hq:HeQua)'
+_Q7_OR_ONLY = 'WHERE all(x IN nodes(inh)[..-1] WHERE x.ket_hop = "OR")'
+_Q7_TAIL = ('OPTIONAL MATCH dq = (p:NhomDieuKien)-[:GOM*0..]->(r2), (p)-[g:GIAO_QUY_DINH]->(ai:DoiTuong)\n'
+            '  WHERE all(x IN nodes(dq)[..-1] WHERE x.ket_hop = "OR")\n'
             'MATCH (r1)-[:NGUON]->(s1), (r2)-[:NGUON]->(s2)')
 QUERY7 = "\n".join([
-    _Q7_STEP1_MATCH, _Q7_STEP1_WHERE, _Q7_STEP2_MATCH, _Q7_STEP2_WHERE_YEAR, _Q7_STEP2_AND_GPA, _Q7_TAIL,
-    "RETURN nam.ten AS nam, nam.thu_tu AS thu_tu, cn.min AS cn_min, cn.max AS cn_max, c2.max AS nguong, "
-    "hq.ten AS he_qua, g.noi_dung AS giao_quyen, ai.ten AS giao_cho, s1.id AS nguon_1, s2.id AS nguon_2",
+    _Q7_STEP1_MATCH, _Q7_STEP1_WHERE, _Q7_STEP2_MATCH, _Q7_STEP2_WHERE_YEAR, _Q7_STEP2_AND_GPA,
+    _Q7_CONSEQUENCE_MATCH, _Q7_OR_ONLY, _Q7_TAIL,
+    "RETURN nam.ten AS nam, nam.thu_tu AS thu_tu, r2.id AS nhom, cn.min AS cn_min, cn.max AS cn_max, "
+    "c2.max AS nguong, h.id AS nhom_he_qua, hq.ten AS he_qua, p.id AS nhom_giao_quyen, g.noi_dung AS giao_quyen, "
+    "ai.ten AS giao_cho, s1.id AS nguon_1, s2.id AS nguon_2",
 ])
 
 
@@ -78,9 +87,12 @@ def _q7_count(*parts: str, sample: str) -> str:
     return "\n".join([*parts, f"RETURN count(*) AS n, collect(DISTINCT {sample})[..8] AS mau"])
 
 
+_Q7_STEPS_1_2 = (_Q7_STEP1_MATCH, _Q7_STEP1_WHERE, _Q7_STEP2_MATCH, _Q7_STEP2_WHERE_YEAR, _Q7_STEP2_AND_GPA)
+
 # QUERY7 cut into cumulative pieces, to find where it breaks when it returns nothing (name, query); each returns
 # n (rows) and mau (a sample). Same pieces as QUERY7, so a step that drops to 0 points at the missing node, edge or
-# WHERE condition.
+# WHERE condition. The step marked "chẩn đoán" drops the OR-only condition, to show consequences that an AND
+# ancestor blocks; it is not part of QUERY7.
 QUERY7_STEPS = (
     ("B1.0 DoiTuong {ten: $ct}", "MATCH (d:DoiTuong {ten: $ct}) RETURN count(*) AS n, collect(d.id) AS mau"),
     ("B1.0 KhaiNiem 'số tín chỉ tích lũy'",
@@ -95,15 +107,14 @@ QUERY7_STEPS = (
      'MATCH (k:KhaiNiem {ten: "điểm trung bình chung tích lũy"}) RETURN count(*) AS n, collect(k.id) AS mau'),
     ("B2.1 r2 -GOM-> cn {thang: nam_dao_tao}",
      _q7_count('MATCH (r2:NhomDieuKien)-[:GOM]->(cn:DieuKien {thang: "nam_dao_tao"})', sample="r2.id")),
-    ("B2.2 + r2 -GOM-> c2 -XET-> 'điểm TBC tích lũy'",
-     _q7_count(_Q7_STEP2_MATCH.rsplit(",\n", 1)[0], sample="r2.id")),
-    ("B2.3 + r2 -DAN_DEN-> HeQua", _q7_count(_Q7_STEP2_MATCH, sample="hq.ten")),
-    ("B2.4 bước 1 + bước 2, WHERE năm chứa nam.thu_tu",
-     _q7_count(_Q7_STEP1_MATCH, _Q7_STEP1_WHERE, _Q7_STEP2_MATCH, _Q7_STEP2_WHERE_YEAR, sample="r2.id")),
-    ("B2.5 + WHERE ngưỡng TBC thỏa $tbc",
-     _q7_count(_Q7_STEP1_MATCH, _Q7_STEP1_WHERE, _Q7_STEP2_MATCH, _Q7_STEP2_WHERE_YEAR, _Q7_STEP2_AND_GPA,
-               sample="r2.id")),
-    ("B3 + giao quyền (OPTIONAL) và NGUON",
-     _q7_count(_Q7_STEP1_MATCH, _Q7_STEP1_WHERE, _Q7_STEP2_MATCH, _Q7_STEP2_WHERE_YEAR, _Q7_STEP2_AND_GPA, _Q7_TAIL,
-               sample="s2.id")),
+    ("B2.2 + r2 -GOM-> c2 -XET-> 'điểm TBC tích lũy'", _q7_count(_Q7_STEP2_MATCH, sample="r2.id")),
+    ("B2.3 bước 1 + bước 2, WHERE năm chứa nam.thu_tu",
+     _q7_count(*_Q7_STEPS_1_2[:4], sample="r2.id")),
+    ("B2.4 + WHERE ngưỡng TBC thỏa $tbc", _q7_count(*_Q7_STEPS_1_2, sample="r2.id")),
+    ("B2.5 (chẩn đoán) + DAN_DEN từ r2 hoặc tổ tiên bất kỳ, chưa lọc OR",
+     _q7_count(*_Q7_STEPS_1_2, _Q7_CONSEQUENCE_MATCH, sample="h.id")),
+    ("B2.6 + chỉ kế thừa qua tổ tiên OR",
+     _q7_count(*_Q7_STEPS_1_2, _Q7_CONSEQUENCE_MATCH, _Q7_OR_ONLY, sample="hq.ten")),
+    ("B3 + giao quyền (OPTIONAL, qua tổ tiên OR) và NGUON",
+     _q7_count(*_Q7_STEPS_1_2, _Q7_CONSEQUENCE_MATCH, _Q7_OR_ONLY, _Q7_TAIL, sample="s2.id")),
 )

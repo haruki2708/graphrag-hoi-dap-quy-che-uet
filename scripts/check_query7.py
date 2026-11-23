@@ -3,11 +3,13 @@
 Run from the repo root, after  python src/kg/load_semantic.py :
     python scripts/check_query7.py [--diagnose]
 
-Two cases of a student of "chương trình đào tạo chất lượng cao" (the node's real ten; schema 2.4 writes
-"CTĐT chất lượng cao"). A case passes when one returned row has the expected year, thu_tu, threshold and
-consequence, and the sources include d17.k2 and d44.k1 (or a unit inside it). When a case fails (or with --diagnose)
-the cumulative steps of queries.QUERY7_STEPS are run one by one, to show where the chain breaks: a node that is not
-found, a missing edge, or a WHERE condition that drops every row. Nothing is written. Exit code 0 only if both pass.
+Two cases of a student of "chương trình đào tạo chất lượng cao" (the node's real ten). The consequence and the
+delegation may sit on the matched group or on an ancestor reached through OR groups only (queries.QUERY7).
+A case passes when the query returns exactly one row (distinct or not: rows are never filtered here) and that row
+has the expected year, thu_tu, threshold, consequence and a delegation note, with sources d17.k2 and d44.k1 (or a
+unit inside it). When a case fails (or with --diagnose) the cumulative steps of queries.QUERY7_STEPS are run one by
+one, to show where the chain breaks: a node that is not found, a missing edge, or a WHERE condition that drops every
+row. Nothing is written. Exit code 0 only if both cases pass.
 """
 
 import argparse
@@ -28,7 +30,8 @@ CASES = (
 )
 SOURCE_1 = "qc3626.d17.k2"
 SOURCE_2 = "qc3626.d44.k1"
-COLUMNS = ("nam", "thu_tu", "cn_min", "cn_max", "nguong", "he_qua", "giao_quyen", "giao_cho", "nguon_1", "nguon_2")
+COLUMNS = ("nam", "thu_tu", "nhom", "cn_min", "cn_max", "nguong", "nhom_he_qua", "he_qua", "nhom_giao_quyen",
+           "giao_quyen", "giao_cho", "nguon_1", "nguon_2")
 
 
 def _in_unit(unit_id: str | None, parent: str) -> bool:
@@ -36,26 +39,30 @@ def _in_unit(unit_id: str | None, parent: str) -> bool:
 
 
 def judge(case: dict, rows: list[dict]) -> tuple[bool, list[str]]:
-    """(passed, reasons it failed)."""
+    """(passed, reasons it failed). rows are the raw rows of QUERY7."""
     if not rows:
         return False, ["truy vấn trả về 0 dòng"]
+    reasons = []
+    if len(rows) > 1:
+        reasons.append(f"trả về {len(rows)} dòng (mong đợi đúng 1; không lọc)")
     hits = [r for r in rows if r["nam"] == case["nam"] and r["thu_tu"] == case["thu_tu"]
             and r["nguong"] is not None and abs(r["nguong"] - case["nguong"]) < 1e-9 and r["he_qua"] == CONSEQUENCE]
-    reasons = []
     if not hits:
         reasons.append(f"không dòng nào có nam={case['nam']!r}, thu_tu={case['thu_tu']}, nguong={case['nguong']}, "
                        f"he_qua={CONSEQUENCE!r}")
-    elif not any(r["nguon_1"] == SOURCE_1 for r in hits):
-        reasons.append(f"nguồn bước 1 không có {SOURCE_1} (có: {sorted({r['nguon_1'] for r in hits})})")
-    elif not any(_in_unit(r["nguon_2"], SOURCE_2) for r in hits):
-        reasons.append(f"nguồn bước 2 không nằm trong {SOURCE_2} (có: {sorted({r['nguon_2'] for r in hits})})")
+    else:
+        if not any(r["giao_quyen"] and r["giao_cho"] for r in hits):
+            reasons.append("thiếu ghi chú giao quyền (GIAO_QUY_DINH)")
+        if not any(r["nguon_1"] == SOURCE_1 for r in hits):
+            reasons.append(f"nguồn bước 1 không có {SOURCE_1} (có: {sorted({r['nguon_1'] for r in hits})})")
+        if not any(_in_unit(r["nguon_2"], SOURCE_2) for r in hits):
+            reasons.append(f"nguồn bước 2 không nằm trong {SOURCE_2} (có: {sorted({r['nguon_2'] for r in hits})})")
     return not reasons, reasons
 
 
 def run_case(session, case: dict) -> list[dict]:
     params = {"tc": case["tc"], "tbc": case["tbc"], "ct": PROGRAMME}
-    rows = [dict(r) for r in session.run(q.QUERY7, params)]
-    return [dict(t) for t in dict.fromkeys(tuple((c, r[c]) for c in COLUMNS) for r in rows)]
+    return [{c: r[c] for c in COLUMNS} for r in session.run(q.QUERY7, params)]
 
 
 def diagnose(session, case: dict) -> None:
@@ -81,10 +88,11 @@ def main(argv=None) -> int:
     passed_all = True
     with driver, driver.session() as session:
         for case in CASES:
-            print(f"Ca tc={case['tc']}, tbc={case['tbc']}, ct={PROGRAMME!r} "
-                  f"(mong đợi: {case['nam']}, ngưỡng {case['nguong']}, {CONSEQUENCE}, nguồn {SOURCE_1} + {SOURCE_2}…)")
+            print(f"Ca tc={case['tc']}, tbc={case['tbc']}, ct={PROGRAMME!r} (mong đợi: {case['nam']}, ngưỡng "
+                  f"{case['nguong']}, {CONSEQUENCE}, có giao quyền, nguồn {SOURCE_1} + {SOURCE_2}…)")
             rows = run_case(session, case)
-            print(f"  {len(rows)} dòng khác nhau:")
+            n_distinct = len({tuple(r.values()) for r in rows})
+            print(f"  {len(rows)} dòng ({n_distinct} dòng khác nhau):")
             for r in rows:
                 print("   ", " | ".join(f"{c}={r[c]}" for c in COLUMNS))
             ok, reasons = judge(case, rows)
